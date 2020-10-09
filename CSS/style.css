@@ -1,0 +1,102 @@
+/* Alignments*/
+.div-c{
+    text-align: center;    
+}
+
+.div-l{
+    text-align: left;
+}
+
+.div-r{
+    text-align: right;
+}
+
+/* Grid */
+.row-25, .row-50, .row-75, .row-100 {
+    float: left;
+    position: relative;
+    padding: 15px;
+}
+
+.row-25 {
+    width: 25%;
+}
+
+.row-50 {
+    width: 50%;
+}
+
+.row-75 {
+    width: 75%;
+}
+
+.row-100 {
+    width: 100%;
+}
+
+/* Navigation */
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+.navigation .left-nav{
+    float: left;
+}
+
+.navigation .right-nav{
+    float: right;
+}
+
+.navigation li {
+    float: left;
+    margin-bottom: 30px;
+}
+
+.navigation li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 30px;
+    text-decoration: none;
+}
+
+.navigation li a:hover:not(.active) {/* Current colour does not change when hover */
+    background-color: #111;
+}
+
+.navigation .active {
+    background-color: #060653;
+}
+
+
+/* Colors*/
+.bg-grey{
+    background-color: #333;
+}
+
+.font-grey{
+    color: #333;
+}
+
+.bg-green{
+    background-color: #060653;
+}
+
+.font-green{
+    color: #060653;
+}
+
+.bg-white{
+    background-color: #FFF;
+}
+
+.font-white{
+    color: #FFF;
+}
+
+.font-red{
+   color: #F00; 
+}

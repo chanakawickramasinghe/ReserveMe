@@ -9,28 +9,28 @@
 }
 
 .search-feild{
-    height: 30px;
-    padding: 8px;
+    height: 4vh;
+    padding: 0.6vh;
     border:none;
     border-radius:20px;
     outline:none;
 }
 
 .restaurant{
-    width: 400px;
+    width: 25vw;
 }
 
 .location{
-    width: 100px;
+    width: 7vw;
 }
 
 .search-type{
-    width:110px;
+    width:8vw;
 }
 
 .search-btn{
-    width:100px;
-    height: 30px;
+    width:7vw;
+    height: 4vh;
     background: #ffeb3b;
     border: none;
     color:rgb(0, 0, 0);
@@ -43,6 +43,6 @@
 }
 
 .form-box{
-    background: rgba(0,0,0,0.5);
-    padding:20px;
+    background: rgba(0,0,0, 0.5);
+    padding:15px;
 }

@@ -1,5 +1,5 @@
-<?php include('includes/connection.php') ?>
-<?php include('includes/session.php') ?>
+<?php include('../../includes/connection.php') ?>
+<!-- <?php include('../../includes/session.php') ?> -->
 
 <html>
     <head>
@@ -18,35 +18,42 @@
                 <li><a href="../../index.php">Logout</a></li> 
             </ul>
         </nav>
-
-        <h1 class="div-c">Welcome User</h1>
-
+        
+                
+        <!-- Adding the table with current user details -->
         <?php
-    
         echo "<table border=1 class=\"user\">";
     
-        $userID = "111";
+        $userID = "111"; //have to add session id
+        echo"<h1 class=div-c>Welcome " .$userID."</h1>";
         $sql = "SELECT * FROM customer WHERE cusId='$userID'";
         $userquery = mysqli_query($connection,$sql);
         while($row = mysqli_fetch_assoc($userquery)){
 
             echo "<tr>
-                    <th>User ID</th><td>".$row['userID']."</td>
+                <th>Cus ID</th><td>".$row['cusId']."</td>
                   </tr>
                   <tr>                  
-                    <th>Name</th><td>".$row['name']."</td>
+                    <th>Name</th><td>".$row['cusName']."</td>
                   </tr>
                   <tr>
-                    <th>Email</th><td>".$row['email']."</td>
+                    <th>Email</th><td>".$row['cusAddress']."</td>
                   </tr>
                   <tr>
-                    <th>Contact No</th><td>".$row['contact']."</td>
+                    <th>Contact No</th><td>".$row['cusContactNo']."</td>
                   </tr>";
-
         } 
-
         echo "</table>";
-
         ?>
+
+        <!-- edit details button -->
+        <div class="header">
+            <form>
+                <div class="form-box">
+                    <button name="edit" class="btn" type="button">Edit Details</button>
+                    <button name="deactivate" class="btn" type="button">Deactivate Account</button>
+                </div>
+            </form>
+        </div>
     </body>
 </html> 

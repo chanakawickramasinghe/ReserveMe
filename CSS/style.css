@@ -100,3 +100,58 @@
 .font-red{
    color: #F00; 
 }
+
+/*User Tables */
+.user{
+    width: 1100px;
+    margin: 0 auto;
+    table-layout: auto;
+    border-collapse: collapse;
+    
+}
+.user th {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.user td{
+    border: 1px solid #ddd;
+    padding: 8px;    
+    text-align: center;
+}
+
+/* button */
+
+.btn{
+    width:10vw;
+    height: 4vh;
+    background: #ffeb3b;
+    border: none;
+    color:rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+.btn:hover{
+    background: #ffc107;
+    cursor: pointer;
+}
+
+/* form box around button */
+
+.form-box{
+    background: rgba(0,0,0, 0.5);
+    padding:15px;
+}
+
+/* header class */
+.header {
+    height: 20vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}

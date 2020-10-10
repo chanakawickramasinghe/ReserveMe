@@ -6,12 +6,12 @@
         <title>My Profile</title>
         <link rel="stylesheet" href="../../CSS/style.css">
         <link rel="stylesheet" href="../../CSS/nav.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 
     </head>
     <body>
         <nav>
-            <label class="logo"><a href="www.fb.com"><img src="../../images/test.jpg" height=800%></a></label>
+            <label class="logo"><a href="customer-home.php"><img src="../../images/test.jpg" height=800%></a></label>
             <ul>
                 <li><a>Table Reservations</a></li>
                 <li><a>Hall Reservations</a></li>
@@ -45,12 +45,12 @@
         } 
         echo "</table>";
         ?>
-
+        </br>
         <!-- edit details button -->
-        <div class="header">
+        <div class="btn-header">
             <form>
                 <div class="form-box">
-                    <button name="edit" class="btn" type="button">Edit Details</button>
+                    <button name="edit" class="btn" type="button" onclick="window.location.href='customer-profile-edit.php'">Edit Details</button>
                     <button name="deactivate" class="btn" type="button">Deactivate Account</button>
                 </div>
             </form>

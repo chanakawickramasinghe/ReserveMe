@@ -9,5 +9,7 @@ $dbname="reserveme";
 
 $connection = mysqli_connect($servername,$username,$password,$dbname);
 
-
+if(!$connection){
+    die("Connection Failed:".mysqli_connect_error());
+}
 ?>

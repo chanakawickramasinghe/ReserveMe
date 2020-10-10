@@ -8,8 +8,8 @@
         <nav>
             <label class="logo"><a href="www.fb.com"><img src="../../images/test.jpg" height=800% ></a></label>
             <ul>
-                <li><a>Table Reservations</a></li>
-                <li><a>Hall Reservations</a></li>
+                <li><a href="">Table Reservations</a></li>
+                <li><a href="">Hall Reservations</a></li>
                 <li><a href="customer-profile.php">My Profile</a></li>
                 <li><a href="../../index.php">Logout</a></li>
                 <!-- <li><a href="register.php"><img src="../../images/profile.png" height=10px width=10px ></img></a></li>    -->

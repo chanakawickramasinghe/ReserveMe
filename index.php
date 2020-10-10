@@ -11,8 +11,8 @@
             <ul>
                 <li><a>Table Reservations</a></li>
                 <li><a>Hall Reservations</a></li>
-                <li><a href="users/customer/customer-home.php">Login</a></li>
-                <li><a href="register.php">Register</a></li>   
+                <li><a href="includes/login.php">Login</a></li>
+                <li><a href="users/user-type.php">Register</a></li>   
             </ul>
         </nav>
         <br/>

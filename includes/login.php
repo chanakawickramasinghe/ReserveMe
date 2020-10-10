@@ -1,19 +1,19 @@
-<?php include('includes/connection.php') ?>
-<?php include('includes/session.php') ?>
+<?php include('connection.php') ?>
+<!-- <?php include('includes/session.php') ?> -->
 
 <!DOCTYPE html>
 <html>
     
 <head>
-    <title>Login page</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">  
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">  
 </head>
     
 <body class="login-body">
     <div class="row-100">  
         <div class="login-box">
 
-        <h3 class="error-msg"><?php include('includes/message.php'); ?></h3>
+        <h3 class="error-msg"><?php include('message.php'); ?></h3>
 
        <!--  <img src="images/logins.png" class="avatar">-->
             <h1>Login Here</h1>

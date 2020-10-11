@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 09, 2020 at 06:17 PM
+-- Generation Time: Oct 10, 2020 at 07:01 AM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -19,30 +19,32 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `reserveme.lk`
+-- Database: `reserveme`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `restaurant`
+-- Table structure for table `customer`
 --
 
-DROP TABLE IF EXISTS `restaurant`;
-CREATE TABLE IF NOT EXISTS `restaurant` (
-  `res_id` int(10) NOT NULL AUTO_INCREMENT,
-  `res_name` varchar(100) NOT NULL,
-  `res_email` varchar(100) NOT NULL,
-  `res_address` varchar(255) NOT NULL,
-  `res_location` varchar(255) NOT NULL,
-  `res_tel` int(10) NOT NULL,
-  `res_floor` varchar(255) NOT NULL,
-  `res_menue` varchar(255) NOT NULL,
-  `res_password` varchar(8) NOT NULL,
-  `preorder_available` tinyint(1) NOT NULL,
-  `res_rate` varchar(509) NOT NULL,
-  PRIMARY KEY (`res_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 ;
+DROP TABLE IF EXISTS `customer`;
+CREATE TABLE IF NOT EXISTS `customer` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `contact_no` int(12) NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`user_id`, `user_name`, `email`, `password`, `contact_no`) VALUES
+(1, 'Aamir', 'aamirshafeek123@gmail.com', '5623', 768921288),
+(2, 'Aamir', 'msaamirali123@gmail.com', '5623', 768921288);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

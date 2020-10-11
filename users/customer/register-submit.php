@@ -28,15 +28,13 @@ if(isset($_POST['submit'])){
             
             if (mysqli_query($connection,$registrationQuery) === TRUE) {
                 $message = base64_encode(urlencode("Registration Successful"));
-                header('Location:login.php?msg=' . $message);
-                echo "Testing 3";
+                header('Location:../../includes/login.php?msg=' . $message);
 				exit();
             } 
             
             else {
                 $message = base64_encode(urlencode("SQL Error while Registering"));
-                //header('Location:index.php?msg=' . $message);
-                echo "Testing 4";
+                header('Location:customerReg.php?msg=' . $message);
 				exit();
             }
         }

@@ -1,7 +1,7 @@
 <?php
 
-include('includes/connection.php');
-include('includes/session.php');
+include('connection.php');
+// include('includes/session.php');
 
 if(isset($_POST['submit'])){
 	
@@ -10,17 +10,19 @@ if(isset($_POST['submit'])){
 	$password = sha1($_POST['password']);
     
     //Select User from database
-    $userQuery = "SELECT * FROM users WHERE email ='$email' and password='$password'";
-    $userResult= mysqli_query($connection, $userQuery);
+    $userQueryCustomer = "SELECT * FROM customer WHERE email ='$email' and password='$password'";
+    $userQueryRes="SELECT * FROM restaurant WHERE email='$email' and password='$password'";
+    $userResult1= mysqli_query($connection, $userQueryCustomer);
+    $userResult2=mysqli_query($connection, $userQueryRes);
     //print_r($userResult);
     
     //User Exists
-    if (mysqli_num_rows($userResult) == 1) {
-            $userRow = mysqli_fetch_array($userResult);
+    if (mysqli_num_rows($userResult1) == 1) {
+            $userRow = mysqli_fetch_array($userResult1);
             //print_r($userRow);
-            
+            header( "Location:../users/customer/customer-home.php" );
             //Creating Session
-            checkSession();  
+          /*  checkSession();  
             $_SESSION["name"] = $userRow['name'];
             $_SESSION["userID"] = $userRow['userID'];
             $_SESSION["usertype"] = $userRow['usertype'];
@@ -36,9 +38,13 @@ if(isset($_POST['submit'])){
             }
             elseif ($usertype='v'){
                 header( "Location:vendor-dashboard.php" );
-            }
+            }*/
     }
-    else{        
+    else if(mysqli_num_rows($userResult2) == 1){        
+        $userRow = mysqli_fetch_array($userResult1);
+            //print_r($userRow);
+            header( "Location:../users/restaurant-home.php" );
+    } else {
         $message = base64_encode(urlencode("Invalid Email or Password"));
         header('Location:login.php?msg=' . $message);
         exit();

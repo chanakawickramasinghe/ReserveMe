@@ -7,10 +7,10 @@ if(isset($_POST['submit'])){
 	
     //Assign data from login form to variables
 	$email = $_POST['email'];
-	$password = sha1($_POST['password']);
+	$password = ($_POST['password']);
     
     //Select User from database
-    $userQuery = "SELECT * FROM users WHERE email ='$email' and password='$password'";
+    $userQuery = "SELECT * FROM customer WHERE cusEmail ='$email' and cusPassword='$password'";
     $userResult= mysqli_query($connection, $userQuery);
     //print_r($userResult);
     
@@ -21,8 +21,8 @@ if(isset($_POST['submit'])){
             
             //Creating Session
             checkSession();  
-            $_SESSION["name"] = $userRow['name'];
-            $_SESSION["userID"] = $userRow['userID'];
+            $_SESSION["name"] = $userRow['cusName'];
+            $_SESSION["userID"] = $userRow['cusId'];
             $_SESSION["usertype"] = $userRow['usertype'];
         
             $usertype= $userRow['usertype'];

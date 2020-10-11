@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <?php include('includes/res_registration.php'); ?>
     <form id="formRestSignup" action="index.html" method="post">
 
         //tabs are used to open the separate parts in separate pages.

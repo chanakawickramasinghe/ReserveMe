@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3308
--- Generation Time: Oct 09, 2020 at 06:17 PM
+-- Generation Time: Oct 11, 2020 at 04:12 AM
 -- Server version: 8.0.18
 -- PHP Version: 7.3.12
 
@@ -25,17 +25,20 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `preorder_menu`
+-- Table structure for table `restaurant_category`
 --
 
-DROP TABLE IF EXISTS `preorder_menu`;
-CREATE TABLE IF NOT EXISTS `preorder_menu` (
-  `res_id` int(10) NOT NULL AUTO_INCREMENT,
-  `menu_id` int(10) NOT NULL,
-  `dish_name` varchar(255) NOT NULL,
-  `dish_price` int(5) NOT NULL,
-  `dish_quantity` int(50) NOT NULL,
-  PRIMARY KEY (`res_id`,`menu_id`)
+DROP TABLE IF EXISTS `restaurant_category`;
+CREATE TABLE IF NOT EXISTS `restaurant_category` (
+  `res_id` int(11) NOT NULL,
+  `Arabic` tinyint(1) NOT NULL,
+  `Chinese` tinyint(1) NOT NULL,
+  `Italian` tinyint(1) NOT NULL,
+  `Mongolian` tinyint(1) NOT NULL,
+  `Sri Lankan` tinyint(1) NOT NULL,
+  `Thai` tinyint(1) NOT NULL,
+  `Sri Lankan Street Food` tinyint(1) NOT NULL,
+  PRIMARY KEY (`res_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 COMMIT;
 

@@ -15,7 +15,7 @@
             <h1>Sign Up As</h1>
             <h2> Select user Type here </h2>
             
-                <button onclick="location.herf='restaurentReg'" type="button" > Restaurent </button>
+                <button onclick="location.herf='restaurant/restaurant-register.php'" type="button" > Restaurant </button>
                 <button onclick="location.href='customer/customerReg.php'" type="button" > Customer </button>
                 
         </div>

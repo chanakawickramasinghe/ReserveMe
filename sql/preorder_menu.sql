@@ -32,7 +32,6 @@ DROP TABLE IF EXISTS `preorder_menu`;
 CREATE TABLE IF NOT EXISTS `preorder_menu` (
   `res_id` int(10) NOT NULL AUTO_INCREMENT,
   `menu_id` int(10) NOT NULL,
-  `menu_category` varchar(255) NOT NULL,
   `dish_name` varchar(255) NOT NULL,
   `dish_price` int(5) NOT NULL,
   `dish_quantity` int(50) NOT NULL,

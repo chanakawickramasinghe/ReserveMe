@@ -8,14 +8,17 @@
         <link rel="stylesheet" href="../../CSS/style.css">
     </head>
     <body>
-        <nav>
-            <label class="logo"><a href="customer-home.php"><img src="../../images/test.jpg" height=800%></a></label>
-            <ul>
-                <li><a>Table Reservations</a></li>
-                <li><a>Hall Reservations</a></li>
-                <li><a href="../../index.php">Logout</a></li> 
-            </ul>
-        </nav>
+        <!--Start of nav-->
+        <div class="topnav" id="myTopnav">
+            <a href="#logout">Logout</a>
+            <a href="customer-profile.php">My Profile</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <img class = "logo" src="../../images/test.jpg">
+        </div>
         </br>
         <div class="row-100"><h2 class="error-msg"><?php include_once('../../includes/message.php'); ?></h2></div>
 

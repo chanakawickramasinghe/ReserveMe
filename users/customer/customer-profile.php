@@ -6,18 +6,23 @@
         <title>My Profile</title>
         <link rel="stylesheet" href="../../CSS/style.css">
         <link rel="stylesheet" href="../../CSS/nav.css">
+        <link rel="stylesheet" href="../../CSS/main.css">
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 
     </head>
     <body>
-        <nav>
-            <label class="logo"><a href="customer-home.php"><img src="../../images/test.jpg" height=800%></a></label>
-            <ul>
-                <li><a>Table Reservations</a></li>
-                <li><a>Hall Reservations</a></li>
-                <li><a href="../../index.php">Logout</a></li> 
-            </ul>
-        </nav>
+        <!--Start of nav-->
+        <div class="topnav" id="myTopnav">
+            <a href="#logout">Logout</a>
+            <a href="customer-profile.php">My Profile</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <img class = "logo" src="../../images/test.jpg">
+        </div>
+    <!--End of nav-->
         
                 
         <!-- Adding the table with current user details -->

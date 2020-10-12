@@ -10,8 +10,9 @@ if(isset($_POST['submit'])){
     // $location = $_POST['res_location'];
     // $tele = $_POST['res_tel'];
     // $menu = $_POST['res_menue'];
-    $password = ($_POST['res_password']);
+    $password = $_POST['res_password'];
     $preorder = $_POST['preorder'];
+    $res_type = $_POST['res_type'];
     // $dish = $_POST['dish_name'];
     // $price = $_POST['dish_price'];
     

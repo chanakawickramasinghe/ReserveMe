@@ -14,13 +14,8 @@
             <h2 align="center"> Select user Type here </h2>
             <br>
            <div class="imgcenter">
-<<<<<<< HEAD
            <a href="restaurant/res_reg.php"><img style="border-radius:10px;width:300px;height:430px;" src="../images/RestaurantSignUp.png"></a>
            <a href="customer/customerReg.php">  <img style="border-radius:10px;width:300px;height:430px;" src="../images/UserSignUp.png"></a>
-=======
-                <a href="restaurant/res_reg.php"><img width="300px" hieght="430px" src="../images/RestaurantSignUp.png"></a>
-                <a href="customer/customerReg.php"><img width="300px" hieght="430px" src="../images/UserSignUp.png"></a>
->>>>>>> ca72ccffeb87f644caf47b36c07ad4f6e2a2ad32
 </div>
 
 

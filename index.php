@@ -6,13 +6,14 @@
     <title>ReserveMe</title>
     <link rel="stylesheet" href="CSS/main.css">
     <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="CSS/nav.css">
+	<link rel="stylesheet" type="text/css" href="CSS/nav.css">
     <link rel="stylesheet" href="CSS/search.css">
     <link rel="stylesheet" href="CSS/footer.css">
 </head>
 <body>
     <!--Start of nav-->
     <div class="topnav" id="myTopnav">
+    
         <a href="users/user-type.php">Register</a>
         <a href="includes/login.php">Login</a>
         <a href="#contact">Contact</a>

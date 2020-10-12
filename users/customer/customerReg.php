@@ -5,10 +5,10 @@
 
 </head>
     
-<body class="register-body">
+<body class="login-body">
 
         <div class="row-100">
-            <div class="login-box">
+            <div class="login-box" >
                 <br>
             <img src="../../images/profile.png" class="avatar">
             <br>
@@ -19,23 +19,24 @@
             <h2 class="error-msg"><?php include_once('../../includes/message.php'); ?></h2>
 
                 <form action="register-submit.php" method="post">                   
-                    <p>Name</p>
+                <div>   
+                <p><b>Name</p>
                     <input type="text" class="type-feild" name="name" placeholder="Your name" required>    
 
                     <p>Email address</p>
                     <input type="email" name="email" class="type-feild" placeholder="your email" required >
 
                     <p>Password</p>
-                    <input type="password" name="password" class="type-feild" placeholder="Enter Password" id="password" onkeyup='check()' required>
+                    <input type="password" name="password" class="type-feild" placeholder="Enter Password" id="password"  required>
 
                     <p>Confirm Password</p>
                     <input type="password" name="password2" class="type-feild" placeholder="Re-Enter Password" id="confirm_password" onkeyup='check()' required>
-                    <span id='message' ></span>
+                    <P id='message' ></P>
 
                     <p>Contact number</p>
                     <input type="text" name="contact" class="type-feild" placeholder="Mobile number">            
-
-                    <input type="submit" name="submit"  class="btn" value="Register" onclick="alertbox()" required>
+</div> <br>
+                   <p align="center"> <input type="submit" name="submit"  class="search-btn hover" value="Register"  onclick="alertbox()" required></p>
                 </form>        
             </div>
         </div>
@@ -48,7 +49,7 @@
             } 
             else{
                 document.getElementById('message').style.color = 'red';
-                document.getElementById('message').style.backgroundColor = 'white';
+                // document.getElementById('message').style.backgroundColor = 'initial';
                 document.getElementById('message').innerHTML = 'Password does not match';
             }
         }

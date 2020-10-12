@@ -59,5 +59,9 @@ if(isset($_POST['submit'])){
 
 }
 
+<<<<<<< HEAD
+mysqli_close($connection); 
+=======
 // mysqli_close($connection); 
+>>>>>>> ca72ccffeb87f644caf47b36c07ad4f6e2a2ad32
 ?>

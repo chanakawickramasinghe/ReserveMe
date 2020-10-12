@@ -12,7 +12,7 @@
         <form id="formRestSignup" action="res_reg_submit.php" method="post">
     
             <!--tabs are used to open the separate parts in separate pages.-->
-            <!-- <div class="tab"> -->
+            <div class="tab">
                 <h1>Sign Up</h1>
                 <h2>Restaurant Details</h2>
                 
@@ -69,7 +69,7 @@
                 <p><h3>Password</h3>
                     <input type="password" name="res_password" placeholder="Password" class="inp" required>    
                 </p>
-            <!-- </div> -->
+            </div>
     
             <div class = "tab">
                 <h2>Menu</h2>
@@ -105,8 +105,8 @@
             <div style="text-align:center;margin-top:40px;">
                 <span class="step"></span>
                 <span class="step"></span>
-                <span class="step"></span>
-                <span class="step"></span>
+                <!-- <span class="step"></span>
+                <span class="step"></span> -->
             </div>
     
 </form>

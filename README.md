@@ -7,4 +7,3 @@ Chathuranga
 Amir
 
 Online Reservation System
-checking push

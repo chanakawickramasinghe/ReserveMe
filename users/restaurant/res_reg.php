@@ -71,7 +71,7 @@
             <div class = "tab">
                 <h2>Menu</h2>
                 <p><h3>Insert the images of the Restaurant Menu (Maximum 05)</h3>
-                    <input type="file" id="res_menue" name="res_menu">
+                    <input type="file" id="res_menue" name="res_menu" muliple>
                 </p>
             </div>
     

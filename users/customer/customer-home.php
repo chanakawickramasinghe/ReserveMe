@@ -1,23 +1,31 @@
 <html>
-    <head> 
-        <title>ReserveMe</title>
-        <link rel="stylesheet" href="../../CSS/nav.css">
-        <link rel="stylesheet" href="../../CSS/search.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReserveMe</title>
+    <link rel="stylesheet" href="../../CSS/main.css">
+    <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="../../CSS/nav.css">
+    <link rel="stylesheet" href="../../CSS/search.css">
+    <link rel="stylesheet" href="../../CSS/footer.css">
+</head>
     <body>
-        <nav>
-            <label class="logo"><a href="customer-home.php"><img src="../../images/test.jpg" height=800% ></a></label>
-            <ul>
-                <li><a>Table Reservations</a></li>
-                <li><a>Hall Reservations</a></li>
-                <li><a href="customer-profile.php">My Profile</a></li>
-                <li><a href="../../index.php">Logout</a></li>
-                <!-- <li><a href="register.php"><img src="../../images/profile.png" height=10px width=10px ></img></a></li>    -->
-            </ul>
-            <!-- <label class="logo"><a href="www.fb.com"><img src="../../images/test.jpg" height=50% ></a></label> -->
-        </nav>
-        <br/>
-        <div class="header">
+        <!--Start of nav-->
+        <div class="topnav" id="myTopnav">
+        <a href="#logout">Logout</a>
+        <a href="customer-profile.php">My Profile</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <img class = "logo" src="../../images/test.jpg">
+    </div>
+    <!--End of nav-->
+    
+    <!--Start of Header-->
+    <header class="header">
+        <div class="search">
             <form>
                 <div class="form-box">
                     <input type="text" class="search-feild restaurant" placeholder="Search for Restaurant...">
@@ -30,8 +38,13 @@
                         <option value="restaurant">Restaurant</option>
                         <option value="dish">Dish</option>
                     </select>
-                    <button name="search" class="search-btn" type="button">Search</button>
+                    <a href="#" class="search-button pulsate">Search<i class="fas fa-search"></i></a>
                 </div>
+            </form>            
+        </div>		
+    </header>
+    <!--End of Header-->
+
             </form>
         </div>
     </body>

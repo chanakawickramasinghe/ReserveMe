@@ -14,7 +14,7 @@
             <h2 align="center"> Select user Type here </h2>
             <br>
            <div class="imgcenter">
-                <a href="restaurant/restaurant-register.php"><img width="300px" hieght="430px" src="../images/RestaurantSignUp.png"></a>
+                <a href="restaurant/res_reg.php"><img width="300px" hieght="430px" src="../images/RestaurantSignUp.png"></a>
                 <a href="customer/customerReg.php"><img width="300px" hieght="430px" src="../images/UserSignUp.png"></a>
 </div>
        

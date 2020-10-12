@@ -51,4 +51,5 @@ if(isset($_POST['submit'])){
 
 }
 
-mysqli_close($connection); ?>
+mysqli_close($connection); 
+?>

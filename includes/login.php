@@ -13,7 +13,7 @@
     <div class="row-100">  
     
         <div class="login-box" style="width:350px">
-
+        <br>
         <h3 class="logged-in-msg"><?php include('message.php'); ?></h3>
         
         <img src="../images/profile.png" class="avatar">

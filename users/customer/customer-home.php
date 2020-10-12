@@ -12,7 +12,7 @@
     <body>
         <!--Start of nav-->
         <div class="topnav" id="myTopnav">
-        <a href="#logout">Logout</a>
+        <a href="../../index.php">Logout</a>
         <a href="customer-profile.php">My Profile</a>
         <a href="#contact">Contact</a>
         <a href="#about">About</a>

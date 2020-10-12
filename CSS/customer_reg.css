@@ -4,7 +4,8 @@
     /* margin-right: auto; */ 
      width: 50%; 
     position: center;
-    /* border: olivedrab 10px solid; */
+     /* border: rgb(45, 29, 139) 10px solid;  */
+
   }
   
   .login-box{
@@ -16,7 +17,7 @@
     box-sizing: border-box;
     padding: 70px 30px;
     position: center;
-    border: #47ff66 4px solid;
+    border: #250779 4px solid;
     border-radius: 10px;
     
     
@@ -24,9 +25,10 @@
 .type-feild{
     height: 4vh;
     padding: 0.6vh;
-    border:none;
+    border-color: khaki;
     border-radius:20px;
     outline:none;
+    width: 200px;
 }
 
 .btn{
@@ -57,14 +59,15 @@
     background-color: #FFF;
 }
 .login-body{
-    background: url(../../images/reg-bg.jpg);
+    background-image: url('../images/reg-bg.jpg');
     background-size: cover;
 }
 .error-msg{
     font-size: 18px;
     color: #F00;
     text-align: center;
-    
+    background-color: initial;
+}    
 
 /* Logged in Message */
 .logged-in-msg{
@@ -72,5 +75,19 @@
     color: #30b441;
     text-align:  right;
     margin: 0;
+}
+
+.search-btn{
+    width:100px;
+    height: 30px;
+    background: #ffeb3b;
+    border: none;
+    color:rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+.search-btn:hover{
+    background: #ffc107;
+    cursor: pointer;
 }
 

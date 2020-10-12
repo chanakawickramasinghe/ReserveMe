@@ -10,8 +10,8 @@ if(isset($_POST['submit'])){
     // $location = $_POST['res_location'];
     // $tele = $_POST['res_tel'];
     // $menu = $_POST['res_menue'];
-    // $password = ($_POST['res_password']);
-    // $preorder = $_POST['preorder_available'];
+    $password = ($_POST['res_password']);
+    $preorder = $_POST['preorder'];
     // $dish = $_POST['dish_name'];
     // $price = $_POST['dish_price'];
     
@@ -31,7 +31,8 @@ if(isset($_POST['submit'])){
     else {
         // $registrationQuery = "INSERT INTO restaurant (res_name, res_email, res_address, res_location, res_tel, res_password, preorder_available) VALUES ('$name', '$email', '$address', '$location', '$tele', '$password', '$preorder')";
         
-        $registrationQuery = "INSERT INTO restaurant (res_name, res_email) VALUES ('$name', '$email')";
+        $registrationQuery = "INSERT INTO restaurant (res_name, res_email, res_password, preorder_available) 
+        VALUES ('$name', '$email','$password','$preorder')";
 
            /* if (mysqli_Query($conection,$preorder) == '0'){
                 //If preorder isn't available we take the photos

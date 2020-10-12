@@ -46,13 +46,16 @@
                 </p> -->
                 <br>
     
-                <!-- <p><h3>Preorder Facility</h3>
-                    <input type="radio" id="Yes" name="preorder" value="Yes">Yes<br>
-                    <input type="radio" id="No" name="preorder" value="No">No
+                <p><h3>Preorder Facility</h3>
+                <select name="preorder">
+					<option disabled selected value> -- Select Option -- </option>
+					<option>Yes</option>
+					<option>No</option>
+				    </select>
                 </p>
                 <br>
     
-                <p><h3>Restaurant Category</h3>
+                <!-- <p><h3>Restaurant Category</h3>
                     <input type="checkbox" name="res_type1" value="Arabic">Arabic<br>
                     <input type="checkbox" name="res_type2" value="Chinese">Chinese<br>
                     <input type="checkbox" name="res_type1" value="Italian">Italian<br>
@@ -94,7 +97,7 @@
             <!-- <div class="tab"><p> -->
                 <h2>Confirm Registration</h2>
                 <input type="submit" name="submit"  class="btn" value="Register" required>
-                </p>
+                <!-- </p> -->
             <!-- </div> -->
             
     

@@ -8,73 +8,105 @@
 </head>
 
 <body>
-    <?php include('res_reg_submit.php'); ?>
-    <form id="formRestSignup" action="index.html" method="post">
-
-        <!--tabs are used to open the separate parts in separate pages.-->
-        <div class="tab"><h1>Sign Up</h1>
-
-            <p>Name</p>
-                <input type="text" name="res_name" placeholder="Restaurant Name" class="inp" required>
-            
-            <p>Email</p>
-                <input type="Email" name="res_email" placeholder="Email" class="inp" required>
-            
-            <p>Address</p>
-                <input type="text" name="res_address"  placeholder="Address" class="inp" required>
-
-            <p>Location</p>
-                <input type="url" name="res_location" placeholder="Location" class="inp" required>
-
-            <p>Telephone No</p>
-                <input type="tel" name="res_tel" placeholder="Telephone No" class="inp" required>
-
-            <p>Floor Plan</p>
-                <input type="image" name="res_floor" placeholder="Floor Plan" class="inp" required>
-
-            <p>Preorder Facility</p>
-                <input type="radio" name="" placeholder="Floor Plan" class="inp" required>
-
-            <input type="checkbox" style="border:2px dotted #00f;display:block;background:#ff0000;"/>
-            <p>Restaurant Category</p>
-                <input type="checkbox" name="res_type1" value="Arabic"><br>
-                <input type="checkbox" name="res_type2" value="Chinese"><br>
-                <input type="checkbox" name="res_type1" value="Italian"><br>
-                <input type="checkbox" name="res_type1" value="Mongolian"><br>
-                <input type="checkbox" name="res_type1" value="Sri Lankan"><br>
-                <input type="checkbox" name="res_type1" value="Thai"><br>
-                <input type="checkbox" name="res_type1" value="Sri Lankan Street Food"><br>
-
-            <p>Password</p>
-                <input type="password" name="res_password" placeholder="Password" class="inp" required>          
-        </div>
-
-        <div class="tab"><h2>Menu</h2>
-            <p>Insert the images of your Restaurant Menu
-                <input type="file" name="res_menu" placeholder="Menu" class="inp" required>
-            </p>
-        </div>
-
-        <div class="tab"><h2>Preordering Menue</h2>
-            <input type="text" name="dish_name" placeholder="Dish Name"> 
-            <input type="text" name="dish_price" placeholder="Dish Price"> 
-        </div>
-
-        <div style="overflow:auto;">
-            <div style="float:right;"><h2>Confirm Registration</h2>
-              <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-              <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+        <?php include('res_reg_submit.php'); ?>
+        <form id="formRestSignup" action="index.html" method="post">
+    
+            <!--tabs are used to open the separate parts in separate pages.-->
+            <div class="tab">
+                <h1>Sign Up</h1>
+                <h2>Restaurant Details</h2>
+                
+                <p><h3>Name</h3>
+                    <input type="text" name="res_name" placeholder="Restaurant Name" class="inp" required>
+                </p>
+                <br>
+    
+                <p><h3>Email</h3>
+                    <input type="Email" name="res_email" placeholder="Email" class="inp" required>
+                </p>
+                <br>
+    
+                <p><h3>Address</h3>
+                    <input type="text" name="res_address"  placeholder="Address" class="inp" required>
+                </p>
+                <br>
+    
+                <p><h3>Location</h3>
+                    <input type="url" name="res_location" placeholder="Location" class="inp" required>
+                </p>
+                <br>
+    
+                <p><h3>Telephone No</h3>
+                    <input type="tel" name="res_tel" placeholder="Telephone No" class="inp" required>
+                </p>
+                <br>
+    
+                <p><h3>Floor Plan</h3>
+                    <input type="file" id="res_floor" name="res_floor">
+                </p>
+                <br>
+    
+                <p><h3>Preorder Facility</h3>
+                    <input type="radio" id="Yes" name="preorder" value="Yes">Yes<br>
+                    <input type="radio" id="No" name="preorder" value="No">No
+                </p>
+                <br>
+    
+                <p><h3>Restaurant Category</h3>
+                    <input type="checkbox" name="res_type1" value="Arabic">Arabic<br>
+                    <input type="checkbox" name="res_type2" value="Chinese">Chinese<br>
+                    <input type="checkbox" name="res_type1" value="Italian">Italian<br>
+                    <input type="checkbox" name="res_type1" value="Mongolian">Mongolian<br>
+                    <input type="checkbox" name="res_type1" value="Sri Lankan">Sri Lankan<br>
+                    <input type="checkbox" name="res_type1" value="Thai">Thai<br>
+                    <input type="checkbox" name="res_type1" value="Sri Lankan Street Food">Sri Lankan Street Food<br>
+                </p>
+                <br>
+    
+                <p><h3>Password</h3>
+                    <input type="password" name="res_password" placeholder="Password" class="inp" required>    
+                </p>
             </div>
-        </div>
-
-        <!--To show that there are 4 steps in the registartion process.-->
-        <div style="text-align:center;margin-top:40px;">
-            <span class="step"></span>
-            <span class="step"></span>
-            <span class="step"></span>
-            <span class="step"></span>
-        </div>
-    </form>
+    
+            <div class = "tab">
+                <h2>Menu</h2>
+                <p><h3>Insert the images of the Restaurant Menu (Maximum 05)</h3>
+                    <input type="file" id="res_menue" name="res_menu">
+                </p>
+            </div>
+    
+            <div class="tab">
+                <h2>Preordering Menue</h2>
+                <p><h3>Dish Name</h3>
+                <input type="text" name="dish_name" placeholder="Dish Name"><br>
+                <h3>Dish Price</h3>
+                <input type="text" name="dish_price" placeholder="Dish Price"><br>
+                
+            </div>
+    
+            <div style="overflow:auto;">
+            <div style="float:center;">
+                  <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                  <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                </div>
+            </div>
+    
+            <div class="tab"><p>
+                <h2>Confirm Registration</h2>
+                <button type="submit" value="Submit">Submit</button>
+                </p>
+            </div>
+            
+    
+            <!--To show that there are 4 steps in the registartion process-->
+            <div style="text-align:center;margin-top:40px;">
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+            </div>
+    
+</form>
 
     <script>
         var currentTab = 0; //First tab to be showed(0)

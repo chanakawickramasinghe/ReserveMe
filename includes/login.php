@@ -11,12 +11,13 @@
     
 <body class="login-body">
     <div class="row-100">  
+    
         <div class="login-box" style="width:350px">
 
         <h3 class="error-msg"><?php include('message.php'); ?></h3>
-
-        <img src="../images/profile.png" class="avatar">
         
+        <img src="../images/profile.png" class="avatar">
+        <br>
             <h1 align="center">Login Here</h1>
                 <form action="login-submit.php" method="post">
                     <p><b>E-mail</b></p>

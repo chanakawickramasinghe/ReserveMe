@@ -13,8 +13,8 @@
 <body>
     <!--Start of nav-->
     <div class="topnav" id="myTopnav">
-        <a href="#register">Register</a>
-        <a href="#logon">Login</a>
+        <a href="users/user-type.php">Register</a>
+        <a href="includes/login.php">Login</a>
         <a href="#contact">Contact</a>
         <a href="#about">About</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">

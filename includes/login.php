@@ -14,7 +14,7 @@
     
         <div class="login-box" style="width:350px">
 
-        <h3 class="error-msg"><?php include('message.php'); ?></h3>
+        <h3 class="logged-in-msg"><?php include('message.php'); ?></h3>
         
         <img src="../images/profile.png" class="avatar">
         <br>

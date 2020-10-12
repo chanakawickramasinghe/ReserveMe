@@ -60,3 +60,18 @@
     background: url(../../images/reg-bg.jpg);
     background-size: cover;
 }
+.error-msg{
+    font-size: 18px;
+    color: #F00;
+    text-align: center;
+    background-color: #FFF;
+}
+
+/* Logged in Message */
+.logged-in-msg{
+    font-size: 12px;
+    color: #FFF;
+    text-align:  right;
+    margin: 0;
+}
+

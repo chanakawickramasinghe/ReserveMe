@@ -8,8 +8,8 @@
 <body class="login-body">
 
         <div class="row-100">
-            <div class="login-box" >
-                <br>
+            <div class="login-box" style="width:600px">
+               
             <img src="../../images/profile.png" class="avatar">
             <br>
                 <h1 align="center">Register Here</h1>
@@ -20,6 +20,8 @@
 
                 <form action="register-submit.php" method="post">                   
                 <div>   
+                <table style="width:500px">
+                <tr><td>
                 <p><b>Name</p>
                     <input type="text" class="type-feild" name="name" placeholder="Your name" required>    
 
@@ -34,10 +36,27 @@
                     <P id='message' ></P>
 
                     <p>Contact number</p>
-                    <input type="text" name="contact" class="type-feild" placeholder="Mobile number">            
-</div> <br>
+                    <input type="text" name="contact" class="type-feild" placeholder="Mobile number"> </td>
+
+                    <td margin-left="30px">
+                    <p><b>Date of birth</p>
+                    <input type="date" name="dob" class="type-feild"> 
+                    
+                    <p>Address<p>
+                    <p> No: </p>
+                    <input type="text" name="no" class="type-feild" placeholder="no:"> 
+
+                    <p>Street</p>
+                    <input type="text" name="street" class="type-feild" placeholder="street"> 
+
+                    <p>City</p>
+                    <input type="text" name="city" class="type-feild" placeholder="city"> </td></tr> 
+                    </table>          
+ <br>
+                   
                    <p align="center"> <input type="submit" name="submit"  class="search-btn hover" value="Register"  onclick="alertbox()" required></p>
-                </form>        
+                   </div>
+                </form>    
             </div>
         </div>
     

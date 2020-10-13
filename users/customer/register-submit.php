@@ -10,6 +10,12 @@ if(isset($_POST['submit'])){
     $password = sha1($_POST['password']);
 	$password2 = sha1($_POST['password2']);
     $contact = $_POST['contact'];
+    $dob = $_POST['dob'];
+    $no = $_POST['no'];
+    $street = $_POST['street'];
+    $city = $_POST['city'];
+    
+    
    
         //Check if email already exists
         $selectmail= "SELECT * FROM customer WHERE email ='$email' " ;
@@ -28,7 +34,7 @@ if(isset($_POST['submit'])){
         
         //Insert to Database
         else {
-            $registrationQuery = "INSERT INTO customer (user_name,email,password,contact_no) VALUES ('$name', '$email', '$password','$contact')";
+            $registrationQuery = "INSERT INTO customer (user_name,email,password,contact_no,no,street,city) VALUES ('$name', '$email', '$password','$contact','$no','$street','$city' )";
             
             if (mysqli_query($connection,$registrationQuery) === TRUE) {
                 $message = base64_encode(urlencode("Registration Successful"));

@@ -12,7 +12,7 @@
         <form id="formRestSignup" action="res_reg_submit.php" method="post">
     
             <!--tabs are used to open the separate parts in separate pages.-->
-            <!-- <div class="tab"> -->
+            <div class="tab">
                 <h1>Sign Up</h1>
                 <h2>Restaurant Details</h2>
                 
@@ -56,27 +56,27 @@
                 <br>
     
                 <!-- <p><h3>Restaurant Category</h3>
-                    <input type="checkbox" name="res_type1" value="Arabic">Arabic<br>
-                    <input type="checkbox" name="res_type2" value="Chinese">Chinese<br>
-                    <input type="checkbox" name="res_type1" value="Italian">Italian<br>
-                    <input type="checkbox" name="res_type1" value="Mongolian">Mongolian<br>
-                    <input type="checkbox" name="res_type1" value="Sri Lankan">Sri Lankan<br>
-                    <input type="checkbox" name="res_type1" value="Thai">Thai<br>
-                    <input type="checkbox" name="res_type1" value="Sri Lankan Street Food">Sri Lankan Street Food<br>
+                    <input type="checkbox" name="res_type" value="Arabic">Arabic<br>
+                    <input type="checkbox" name="res_type" value="Chinese">Chinese<br>
+                    <input type="checkbox" name="res_type" value="Italian">Italian<br>
+                    <input type="checkbox" name="res_type" value="Mongolian">Mongolian<br>
+                    <input type="checkbox" name="res_type" value="Sri Lankan">Sri Lankan<br>
+                    <input type="checkbox" name="res_type" value="Thai">Thai<br>
+                    <input type="checkbox" name="res_type" value="Sri Lankan Street Food">Sri Lankan Street Food<br>
                 </p> -->
                 <br>
     
                 <p><h3>Password</h3>
                     <input type="password" name="res_password" placeholder="Password" class="inp" required>    
                 </p>
-            <!-- </div> -->
+            </div>
     
-            <!-- <div class = "tab">
+            <div class = "tab">
                 <h2>Menu</h2>
                 <p><h3>Insert the images of the Restaurant Menu (Maximum 05)</h3>
                     <input type="file" name="res_menu" multiple>
                 </p>
-            </div> -->
+            </div>
     
             <!-- <div class="tab">
                 <h2>Preordering Menue</h2>
@@ -87,12 +87,12 @@
                 
             </div> -->
     
-            <!-- <div style="overflow:auto;">
+            <div style="overflow:auto;">
             <div style="float:center;">
                   <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
                   <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
                 </div>
-            </div> -->
+            </div>
     
             <!-- <div class="tab"><p> -->
                 <h2>Confirm Registration</h2>
@@ -102,12 +102,12 @@
             
     
             <!--To show that there are 4 steps in the registartion process-->
-            <!-- <div style="text-align:center;margin-top:40px;">
+            <div style="text-align:center;margin-top:40px;">
                 <span class="step"></span>
                 <span class="step"></span>
-                <span class="step"></span>
-                <span class="step"></span>
-            </div> -->
+                <!-- <span class="step"></span>
+                <span class="step"></span> -->
+            </div>
     
 </form>
 

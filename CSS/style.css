@@ -159,12 +159,12 @@
 /* form-box to show editable results*/
 .form-edit{
     width: 30vw;
-    height: 75vh;
+    height: 90vh;
     margin: auto;
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
     box-sizing: border-box;
-    padding: 5vh 5vw 5vh 5vw;
+    padding: 3vh 5vw 5vh 5vw;
     justify-content: center;
     align-items: center;
 

@@ -7,11 +7,11 @@ if(isset($_POST['submit'])){
     // Assign input data from form to variables
 	$name = $_POST['name'];
 	$email = $_POST['email'];
-    $password = ($_POST['password']);
-	$password2 = ($_POST['password2']);
+    $password = md5($_POST['password']);
+	$password2 = md5($_POST['password2']);
     $contact = $_POST['contact'];
     $dob = $_POST['dob'];
-    $number = $_POST['number'];
+    $pnumber = $_POST['pnumber'];
     $street = $_POST['street'];
     $city = $_POST['city'];
     
@@ -36,7 +36,8 @@ if(isset($_POST['submit'])){
         else {
 
             //echo "testing 123";
-            $registrationQuery = "INSERT INTO customer (user_name,email,password,contact_no,number,street,city,active_status) VALUES ('$name', '$email', '$password','$contact','$no','$street','$city',1)";
+            $registrationQuery = "INSERT INTO customer (user_id,user_name,email,password,contact_no,postal_number,street,city,active_status) 
+            VALUES (NULL,'$name', '$email', '$password','$contact','$pnumber','$street','$city',1)";
             // $registrationQuery = "INSERT INTO customer (user_name, email, password, contact_no, no) VALUES ('$name', '$email', '$password', '$contact', '$no')";
             if (mysqli_query($connection,$registrationQuery) == TRUE) {
                 //echo "inside TRUE";

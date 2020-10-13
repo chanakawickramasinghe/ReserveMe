@@ -44,7 +44,7 @@
                     
                     <p>Address<p>
                     <p> Number </p>
-                    <input type="text" name="number" class="type-feild" placeholder="Number"> 
+                    <input type="text" name="pnumber" class="type-feild" placeholder="Number"> 
 
                     <p>Street</p>
                     <input type="text" name="street" class="type-feild" placeholder="Street"> 

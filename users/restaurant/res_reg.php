@@ -9,7 +9,7 @@
 
 <body>
         <?php include('res_reg_submit.php'); ?>
-        <form id="formRestSignup" action="index.html" method="post">
+        <form id="formRestSignup" action="res_reg_submit.php" method="post">
     
             <!--tabs are used to open the separate parts in separate pages.-->
             <div class="tab">
@@ -26,7 +26,7 @@
                 </p>
                 <br>
     
-                <p><h3>Address</h3>
+                <!-- <p><h3>Address</h3>
                     <input type="text" name="res_address"  placeholder="Address" class="inp" required>
                 </p>
                 <br>
@@ -43,24 +43,27 @@
     
                 <p><h3>Floor Plan</h3>
                     <input type="file" id="res_floor" name="res_floor">
-                </p>
+                </p> -->
                 <br>
     
                 <p><h3>Preorder Facility</h3>
-                    <input type="radio" id="Yes" name="preorder" value="Yes">Yes<br>
-                    <input type="radio" id="No" name="preorder" value="No">No
+                <select name="preorder">
+					<option disabled selected value> -- Select Option -- </option>
+					<option>Yes</option>
+					<option>No</option>
+				    </select>
                 </p>
                 <br>
     
-                <p><h3>Restaurant Category</h3>
-                    <input type="checkbox" name="res_type1" value="Arabic">Arabic<br>
-                    <input type="checkbox" name="res_type2" value="Chinese">Chinese<br>
-                    <input type="checkbox" name="res_type1" value="Italian">Italian<br>
-                    <input type="checkbox" name="res_type1" value="Mongolian">Mongolian<br>
-                    <input type="checkbox" name="res_type1" value="Sri Lankan">Sri Lankan<br>
-                    <input type="checkbox" name="res_type1" value="Thai">Thai<br>
-                    <input type="checkbox" name="res_type1" value="Sri Lankan Street Food">Sri Lankan Street Food<br>
-                </p>
+                <!-- <p><h3>Restaurant Category</h3>
+                    <input type="checkbox" name="res_type" value="Arabic">Arabic<br>
+                    <input type="checkbox" name="res_type" value="Chinese">Chinese<br>
+                    <input type="checkbox" name="res_type" value="Italian">Italian<br>
+                    <input type="checkbox" name="res_type" value="Mongolian">Mongolian<br>
+                    <input type="checkbox" name="res_type" value="Sri Lankan">Sri Lankan<br>
+                    <input type="checkbox" name="res_type" value="Thai">Thai<br>
+                    <input type="checkbox" name="res_type" value="Sri Lankan Street Food">Sri Lankan Street Food<br>
+                </p> -->
                 <br>
     
                 <p><h3>Password</h3>
@@ -71,18 +74,18 @@
             <div class = "tab">
                 <h2>Menu</h2>
                 <p><h3>Insert the images of the Restaurant Menu (Maximum 05)</h3>
-                    <input type="file" id="res_menue" name="res_menu">
+                    <input type="file" name="res_menu" multiple>
                 </p>
             </div>
     
-            <div class="tab">
+            <!-- <div class="tab">
                 <h2>Preordering Menue</h2>
                 <p><h3>Dish Name</h3>
                 <input type="text" name="dish_name" placeholder="Dish Name"><br>
                 <h3>Dish Price</h3>
                 <input type="text" name="dish_price" placeholder="Dish Price"><br>
                 
-            </div>
+            </div> -->
     
             <div style="overflow:auto;">
             <div style="float:center;">
@@ -91,19 +94,19 @@
                 </div>
             </div>
     
-            <div class="tab"><p>
+            <!-- <div class="tab"><p> -->
                 <h2>Confirm Registration</h2>
-                <button type="submit" value="Submit">Submit</button>
-                </p>
-            </div>
+                <input type="submit" name="submit"  class="btn" value="Register" required>
+                <!-- </p> -->
+            <!-- </div> -->
             
     
             <!--To show that there are 4 steps in the registartion process-->
             <div style="text-align:center;margin-top:40px;">
                 <span class="step"></span>
                 <span class="step"></span>
-                <span class="step"></span>
-                <span class="step"></span>
+                <!-- <span class="step"></span>
+                <span class="step"></span> -->
             </div>
     
 </form>

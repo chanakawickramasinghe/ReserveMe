@@ -1,13 +1,13 @@
 <?php
 
 include('connection.php');
-// include('includes/session.php');
+include('session.php');
 
 if(isset($_POST['submit'])){
 	
     //Assign data from login form to variables
 	$email = $_POST['email'];
-	$password = sha1($_POST['password']);
+	$password = ($_POST['password']);
     
     //Select User from database
     $userQueryCustomer = "SELECT * FROM customer WHERE email ='$email' and password='$password'";

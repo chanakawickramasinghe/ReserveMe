@@ -49,13 +49,13 @@
                 <th>ContactNo</th><td>".$row['res_tel']."</td>
                 </tr>
                 <tr>
-                <th>Address Line 01</th><td>".$row['res_add_line1']."</td>
+                <th>Postal Number</th><td>".$row['pnumber']."</td>
                 </tr>
                 <tr>
-                <th>Address Line 02</th><td>".$row['res_add_line2']."</td>
+                <th>Street</th><td>".$row['street']."</td>
                 </tr>
                 <tr>
-                <th>City</th><td>".$row['res_add_line3']."</td>
+                <th>City</th><td>".$row['city']."</td>
                 </tr>
                 <tr>
                 <th>Location</th><td>".$row['res_location']."</td>

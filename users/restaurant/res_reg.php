@@ -3,59 +3,75 @@
 
 <head>
     <title>Restaurant Registration</title>
-    <link rel="stylesheet" href="../../CSS/res_reg.css">
+    <link rel="stylesheet" href="../../CSS/customer_reg.css">
+    <link rel="stylesheet" href="../../CSS/res_reg.css"
     <meta name="view port" content ="width=device-width", meta charset="utf-8">
 </head>
 
-<body>
-        <?php include('res_reg_submit.php'); ?>
+<body class="login-body">
+<div class="tab" >
+            <div class="login-box" style="height:600px;padding:10px 30px">
+
+           <h2 class="error-msg"><?php include_once('../../includes/message.php'); ?></h2>    
         <form id="formRestSignup" action="res_reg_submit.php" method="post">
+    <!--tabs are used to open the separate parts in separate pages.-->
+            
+                <h1 align="center">Sign Up</h1>
+                <h2 align="center">Restaurant Details</h2>
+               <b>
+                <p>Name</p>
+                    <input type="text" class="type-feild"   name="res_name" placeholder="Restaurant Name" required>
     
-            <!--tabs are used to open the separate parts in separate pages.-->
-            <div class="tab">
-                <h1>Sign Up</h1>
-                <h2>Restaurant Details</h2>
+                <p>Email</p>
+                    <input type="email"  class="type-feild" name="res_email" placeholder="Email" required>
+
+                    <p>Telephone No</p>
+                    <input type="tel" class="type-feild" name="res_tel" placeholder="Telephone No" required>
+                    
+                <p>Password</p>
+                    <input type="password" class="type-feild" name="res_password" placeholder="Password" class="type-feild" id="res_password" required>    
                 
-                <p><h3>Name</h3>
-                    <input type="text" name="res_name" placeholder="Restaurant Name" class="inp" required>
-                </p>
+                    <p>Confirm Password</p>
+                    <input type="password" class="type-feild" name="password2" class="type-feild" placeholder="Re-Enter Password" id="confirm_password" onkeyup='check()' required>
+                    <p style="font-size:16px" id='message' ></p>
+        
+                   <button style="margin-left:220px;margin-top:10px;position:sticky;top:0;"type="button" class="search-btn hover" onclick="nextPrev(1)">Next</button>
                 <br>
-    
-                <p><h3>Email</h3>
-                    <input type="Email" name="res_email" placeholder="Email" class="inp" required>
-                </p>
-                <br>
-    
-                <!-- <p><h3>Address</h3>
-                    <input type="text" name="res_address"  placeholder="Address" class="inp" required>
-                </p>
-                <br>
-    
-                <p><h3>Location</h3>
-                    <input type="url" name="res_location" placeholder="Location" class="inp" required>
-                </p>
-                <br>
-    
-                <p><h3>Telephone No</h3>
-                    <input type="tel" name="res_tel" placeholder="Telephone No" class="inp" required>
-                </p>
-                <br>
-    
-                <p><h3>Floor Plan</h3>
+                </div>
+                
+            </div>          
+ 
+              
+            <div class = "tab">
+            <div class="login-box" style="height:650px;padding:10px 30px">
+            <p>Address: <p>
+                    <p> Number </p>
+                    <input type="text" name="pnumber" class="type-feild" placeholder="Number"> 
+
+                    <p>Street</p>
+                    <input type="text" name="street" class="type-feild" placeholder="Street"> 
+
+                    <p>City</p>
+                    <input type="text" name="city" class="type-feild" placeholder="City"> 
+
+                    <p>Location</p>
+                    <input type="url" class="type-feild" name="res_location" placeholder="Google map link" class="inp" required>
+
+                    <h2>Profile image</h2>
+                <p>Insert the images for Restaurant Display profile</p>
+                    <input type="file" name="fileToUpload" id="fileToUpload">
+
+                    <button type="button" class="search-btn hover" style="width:80px;height:25px " onclick="nextPrev(-1)">Previous</button>
+                <h3>Confirm Registration</h3>
+               <button type="submit" name="submit" style="margin-left:220px;margin-top:-25px" class="search-btn hover" >Register</button>
+            </div>
+        </div>
+
+                  <!-- <p><p>Floor Plan</p>
                     <input type="file" id="res_floor" name="res_floor">
-                </p> -->
-                <br>
-    
-                <p><h3>Preorder Facility</h3>
-                <select name="preorder">
-					<option disabled selected value> -- Select Option -- </option>
-					<option>Yes</option>
-					<option>No</option>
-				    </select>
-                </p>
-                <br>
-    
-                <!-- <p><h3>Restaurant Category</h3>
+                </p>  -->
+
+                <!-- <p><p>Restaurant Category</p>
                     <input type="checkbox" name="res_type" value="Arabic">Arabic<br>
                     <input type="checkbox" name="res_type" value="Chinese">Chinese<br>
                     <input type="checkbox" name="res_type" value="Italian">Italian<br>
@@ -64,42 +80,34 @@
                     <input type="checkbox" name="res_type" value="Thai">Thai<br>
                     <input type="checkbox" name="res_type" value="Sri Lankan Street Food">Sri Lankan Street Food<br>
                 </p> -->
-                <br>
-    
-                <p><h3>Password</h3>
-                    <input type="password" name="res_password" placeholder="Password" class="inp" required>    
-                </p>
-            </div>
-    
-            <div class = "tab">
-                <h2>Menu</h2>
-                <p><h3>Insert the images of the Restaurant Menu (Maximum 05)</h3>
+             
+                <!-- <h2>Menu</h2>
+                <p>Insert the images of the Restaurant Menu (Maximum 05)</p>
                     <input type="file" name="res_menu" multiple>
-                </p>
-            </div>
-    
+                    <p>Preorder Facility</p>
+
+                <select name="preorder" class="type-feild">
+                
+					<option  disabled selected value> -- Select Option -- </option>
+					<option>Yes</option>
+					<option>No</option>
+                   </select>                 -->
+                
             <!-- <div class="tab">
                 <h2>Preordering Menue</h2>
-                <p><h3>Dish Name</h3>
+                <p><p>Dish Name</p>
                 <input type="text" name="dish_name" placeholder="Dish Name"><br>
-                <h3>Dish Price</h3>
+                <p>Dish Price</p>
                 <input type="text" name="dish_price" placeholder="Dish Price"><br>
                 
             </div> -->
     
             <div style="overflow:auto;">
             <div style="float:center;">
-                  <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                  <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                  
+                 
                 </div>
             </div>
-    
-            <!-- <div class="tab"><p> -->
-                <h2>Confirm Registration</h2>
-                <input type="submit" name="submit"  class="btn" value="Register" required>
-                <!-- </p> -->
-            <!-- </div> -->
-            
     
             <!--To show that there are 4 steps in the registartion process-->
             <div style="text-align:center;margin-top:40px;">
@@ -110,6 +118,8 @@
             </div>
     
 </form>
+</div>
+
 
     <script>
         var currentTab = 0; //First tab to be showed(0)
@@ -177,6 +187,21 @@
             x[n].className += " active";
         }
 </script>
+
+<script>
+        var check = function() {
+            if (document.getElementById('res_password').value == document.getElementById('confirm_password').value){
+                    document.getElementById('message').style.color = 'green';
+                    document.getElementById('message').innerHTML = 'Password is matching';
+            } 
+            else{
+                document.getElementById('message').style.color = 'red';
+                // document.getElementById('message').style.backgroundColor = 'initial';
+                document.getElementById('message').innerHTML = 'Password does not match';
+            }
+        }
+    
+        </script>
     
 </body>
 </html>

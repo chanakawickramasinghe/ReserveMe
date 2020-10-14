@@ -1,13 +1,13 @@
 <?php include('../../includes/connection.php') ?>
-<?php include('../../includes/session.php') ?> 
+<?php include('../../includes/session.php') ?>
 
 <html>
     <head>
-        <title>Restaurant Home</title>
+        <title>My Profile</title>
         <link rel="stylesheet" href="../../CSS/style.css">
         <link rel="stylesheet" href="../../CSS/nav.css">
         <link rel="stylesheet" href="../../CSS/main.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     </head>
     <body>
@@ -26,15 +26,16 @@
                 
         <!-- Adding the table with current user details -->
         <?php
+        checkSession();
         echo "<table border=1 class=\"user\">";
     
-        $res_id = "111"; 
-        //have to add session id
-        echo"<h1 class = div-c> ".$res_id."</h1>";
-        $sql = "SELECT * FROM restaurant WHERE res_id='$res_id'";
+        $res_id = $_SESSION["res_id"]; //have to add session id
+        echo"</br></br><h1 class=div-c>Welcome " .$_SESSION["res_name"]."</h1>";
+        $sql = "SELECT * FROM restaurant WHERE resid='$res_id'";
         $userquery = mysqli_query($connection,$sql);
-            while($row = mysqli_fetch_assoc($userquery)){
+        while($row = mysqli_fetch_assoc($userquery)){
 
+            echo "
                 </br>
                 <tr>
                 <th>Res ID</th><td>".$row['res_id']."</td>
@@ -46,16 +47,10 @@
                 <th>Email</th><td>".$row['res_email']."</td>
                 </tr>
                 <tr>
-                <th>ContactNo</th><td>".$row['res_tel']."</td>
+                <th>Contact No</th><td>".$row['res_tel']."</td>
                 </tr>
                 <tr>
-                <th>Address Line 01</th><td>".$row['res_add_line1']."</td>
-                </tr>
-                <tr>
-                <th>Address Line 02</th><td>".$row['res_add_line2']."</td>
-                </tr>
-                <tr>
-                <th>City</th><td>".$row['res_add_line3']."</td>
+                <th>Address</th><td>".$row['res_add_line1']."</td><br><td>".$row['res_add_line2']."</td><br><td>".$row['res_add_line3']."</td>
                 </tr>
                 <tr>
                 <th>Location</th><td>".$row['res_location']."</td>
@@ -68,19 +63,9 @@
                 </tr>
                 <tr>
                 <th>Preorder Availability</th><td>".$row['preorder_available']."</td>
-                </tr>;
-            } 
-
-        //    $sql = "SELECT * FROM restaurant_category WHERE res_id='$res_id'";
-        //    $userquery = mysqli_query($connection,$sql);
-        //         while($row = mysqli_fetch_assoc($userquery)){
-    
-        //             //should include the db connecting row
-        //             echo "<tr>
-        //             <th> Restaurant Category </th><td>".$row['']." </td> 
-        //             </tr>";
-        //         }    
-        
+                </tr>
+            ";
+        }
         echo "</table>";
         ?>
         </br>
@@ -88,11 +73,11 @@
         <div class="btn-header">
             <form>
                 <div class="form-box">
-                    <button type="button" name="edit" class="btn" onclick="window.location.href='restaurant-profile-edit.php'">Edit Details</button>
-                    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                    <button type="button" name="deactivate" class="btn" >Deactivate Account</button>
+                    <button name="edit" class="btn" type="button" onclick="window.location.href='restaurant-profile-edit.php'">Edit Profile</button>
+                    <button name="deactivate" class="btn" type="button">Deactivate Account</button>
                 </div>
             </form>
         </div>
     </body>
-</html> 
+</html>
+ 

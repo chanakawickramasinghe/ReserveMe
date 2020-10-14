@@ -11,15 +11,15 @@ if(isset($_POST['submit'])){
     
     //Select User from database
     $userQueryCustomer = "SELECT * FROM customer WHERE email ='$email' and password='$password'";
-    $userQueryRes="SELECT * FROM restaurant WHERE email='$email' and password='$password'";
+    $userQueryRes="SELECT * FROM restaurant WHERE res_email='$email' and res_password='$password'";
     $userResult1= mysqli_query($connection, $userQueryCustomer);
     $userResult2=mysqli_query($connection, $userQueryRes);
     //print_r($userResult);
     
     //User Exists
     if (mysqli_num_rows($userResult1) == 1) {
-            $userRow = mysqli_fetch_array($userResult1);
-            // print_r($userRow);
+            // $userRow = mysqli_fetch_array($userResult1);
+            //print_r($userRow);
             header( "Location:../users/customer/customer-home.php" );
             
             //Creating Session
@@ -33,7 +33,7 @@ if(isset($_POST['submit'])){
             }
     
     else if(mysqli_num_rows($userResult2) == 1){        
-        $userRow = mysqli_fetch_array($userResult1);
+        // $userRow = mysqli_fetch_array($userResult1);
             //print_r($userRow);
             header( "Location:../users/restaurant/restaurant-home.php" );
     } else {

@@ -1,40 +1,70 @@
 <?php
 include('../../includes/connection.php');
+
 include('../../includes/message.php');
 
+
+
+$target_dir = "../../images/Restaurant_Dp/";
+$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$uploadOk = 1;
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+// Check if file already exists
+if (file_exists($target_file)) {
+    echo "Sorry, image is already exists.";
+    $uploadOk = 0;
+}
+// if everything is ok, try to upload file
+else {
+    if (move_uploaded_file($_FILES["fileToUpload"]["temp_name"], $target_file)) {
+        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+    } 
+    else {
+        $message = base64_encode(urlencode("Sorry, there was an error uploading your file."));
+        header('Location:vendor-product-add.php?msg=' . $message);
+        exit();
+    }
+}
+
 if(isset($_POST['submit'])){
+
+$imageName = $_FILES["fileToUpload"]["name"];
+$imageData = $_FILES["fileToUpload"]["tmp_name"];
+$imageType = $_FILES["fileToUpload"]["type"];
+
     //Assign data from the registartion form to variables
     $name = $_POST['res_name'];
     $email = $_POST['res_email'];
-    // $address = $_POST['res_address'];
-    // $location = $_POST['res_location'];
-    // $tele = $_POST['res_tel'];
-    // $menu = $_POST['res_menue'];
+    $tel = $_POST['res_tel'];
     $password = $_POST['res_password'];
-    $preorder = $_POST['preorder'];
-    $res_type = $_POST['res_type'];
+    $pnumber = $_POST['pnumber'];
+    $street = $_POST['street'];
+    $city = $_POST['city'];
+    $location = $_POST['res_location'];    
+    // $preorder = $_POST['preorder'];
+    // $res_type = $_POST['res_type'];
     // $dish = $_POST['dish_name'];
     // $price = $_POST['dish_price'];
+    // $menu = $_POST['res_menue'];
     
     //Check if email already exists
-    $selectmail = "SELECT * FROM resaturant WHERE email ='$res_email'";
+    $selectmail = "SELECT * FROM restaurant WHERE res_email ='$email'";
     $allmailquery= mysqli_query($connection, $selectmail);
     $num = mysqli_num_rows($allmailquery);
     //print_r($userResult);
     
     if($num > 0){
         $message = base64_encode(urlencode("Email already exists"));
-        header('Location:register.php?msg=' . $message);
+        header('Location:res_reg.php?msg=' . $message);
         exit();
     } 
 
     //Insert to Database
     else {
-        // $registrationQuery = "INSERT INTO restaurant (res_name, res_email, res_address, res_location, res_tel, res_password, preorder_available) VALUES ('$name', '$email', '$address', '$location', '$tele', '$password', '$preorder')";
+        $registrationQuery = "INSERT INTO restaurant (res_name, res_email, res_tel, res_password, pnumber, street, city, res_location, res_dp)\
+         VALUES ('$name', '$email','$tel','$password','$pnumber', '$street','$city','$location','$imagename')";
         
-        $registrationQuery = "INSERT INTO restaurant (res_name, res_email, res_password, preorder_available) 
-        VALUES ('$name', '$email','$password','$preorder')";
-
            /* if (mysqli_Query($conection,$preorder) == '0'){
                 //If preorder isn't available we take the photos
                 $registrationQuery = "INSERT INTO restaurant (res_menu) VALUE ('$menu')"; 
@@ -60,6 +90,6 @@ if(isset($_POST['submit'])){
 }
 
 
-// mysqli_close($connection); 
+ mysqli_close($connection); 
 
 ?>

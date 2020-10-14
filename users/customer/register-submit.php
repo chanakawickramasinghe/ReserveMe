@@ -43,13 +43,13 @@ if(isset($_POST['submit'])){
                 //echo "inside TRUE";
                 $message = base64_encode(urlencode("Registration Successful"));
                 header('Location:../../includes/login.php?msg=' . $message);
+        
 				exit();
             } 
             
             else {
-                // echo "Inside FALSE";
-                $message = base64_encode(urlencode("SQL Error while Registering"));
-                header('Location:customerReg.php?msg=' . $message);
+                 $message = base64_encode(urlencode("SQL Error while Registering"));
+                 header('Location:customerReg.php?msg=' . $message);
 				exit();
             }
         }

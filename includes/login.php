@@ -6,7 +6,8 @@
     
 <head>
     <title>Login Page</title>
-    <link rel="stylesheet" type="text/css" href="../CSS/customer_reg.css">  
+    <link rel="stylesheet" type="text/css" href="../CSS/customer_reg.css"> 
+  
 </head>
 
 <body class="login-body">
@@ -16,7 +17,8 @@
         <div class="login-box" style="width:350px">
         <br>
         <br>
-        <h3 class="error-msg"><?php include('message.php'); ?></h3>
+         <h3 class="error-msg"><?php include_once('message.php'); ?></h3> 
+        
         
         <img src="../images/profile.png" class="avatar">
 

@@ -36,7 +36,7 @@
                     <P id='message' ></P>
 
                     <p>Contact number</p>
-                    <input type="text" name="contact" class="type-feild" placeholder="Mobile number"> </td>
+                    <input type="tel" name="contact" class="type-feild" placeholder="Mobile number"> </td>
 
                     <td margin-left="30px">
                     <p><b>Date of birth</p>

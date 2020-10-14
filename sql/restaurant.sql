@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 14, 2020 at 11:54 AM
+-- Generation Time: Oct 14, 2020 at 12:18 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.33
 
@@ -37,7 +37,7 @@ CREATE TABLE `restaurant` (
   `res_location` varchar(255) NOT NULL,
   `res_tel` int(10) NOT NULL,
   `res_floor` varchar(255) NOT NULL,
-  `res_menue` varchar(255) NOT NULL,
+  `res_menu` varchar(255) NOT NULL,
   `res_password` varchar(8) NOT NULL,
   `preorder_available` varchar(11) NOT NULL,
   `res_rate` varchar(509) NOT NULL
@@ -47,7 +47,7 @@ CREATE TABLE `restaurant` (
 -- Dumping data for table `restaurant`
 --
 
-INSERT INTO `restaurant` (`res_id`, `res_name`, `res_email`, `res_add_line1`, `res_add_line2`, `res_add_line3`, `res_location`, `res_tel`, `res_floor`, `res_menue`, `res_password`, `preorder_available`, `res_rate`) VALUES
+INSERT INTO `restaurant` (`res_id`, `res_name`, `res_email`, `res_add_line1`, `res_add_line2`, `res_add_line3`, `res_location`, `res_tel`, `res_floor`, `res_menu`, `res_password`, `preorder_available`, `res_rate`) VALUES
 (1, 'cinnamon ', 'lol@gmail.com', '', '', '0', '', 0, '', '', '', '0', ''),
 (10, 'cinnamon ', '2018is093@stu.ucsc.cmb.ac.lk', '', '', '0', '', 0, '', '', '12', 'Yes', ''),
 (11, 'cinnamon ', '2018is093bh@stu.ucsc.cmb.ac.lk', '', '', '0', '', 0, '', '', '123', 'Yes', ''),

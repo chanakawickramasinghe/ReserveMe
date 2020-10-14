@@ -32,7 +32,7 @@
         
         $userID = $_SESSION["userID"]; //have to add session id
         $sql = "SELECT * FROM customer WHERE user_id='$userID'";
-        echo "test $userID";
+        
         $userquery = mysqli_query($connection,$sql);
         while($row = mysqli_fetch_assoc($userquery)){
         echo"</br></br><h1 class=div-c>Welcome " .$row['user_name']."</h1>";

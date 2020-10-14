@@ -45,62 +45,27 @@
             <div class = "tab">
             <div class="login-box" style="height:650px;padding:10px 30px">
             <p>Address: <p>
-                    <p> Number </p>
+                    <p> Address Line 1 </p>
                     <input type="text" name="pnumber" class="type-feild" placeholder="Number"> 
 
-                    <p>Street</p>
+                    <p> Address Line 2</p>
                     <input type="text" name="street" class="type-feild" placeholder="Street"> 
 
                     <p>City</p>
                     <input type="text" name="city" class="type-feild" placeholder="City"> 
 
-                    <p>Location</p>
+                    <p>Google map Location</p>
                     <input type="url" class="type-feild" name="res_location" placeholder="Google map link" class="inp" required>
 
-                    <h2>Profile image</h2>
-                <p>Insert the images for Restaurant Display profile</p>
-                    <input type="file" name="fileToUpload" id="fileToUpload">
+                    <!-- <h2>Profile image</h2>
+                    <p>Insert the images for Restaurant Display profile</p>
+                    <input type="file" name="fileToUpload" id="fileToUpload"> -->
 
                     <button type="button" class="search-btn hover" style="width:80px;height:25px " onclick="nextPrev(-1)">Previous</button>
                 <h3>Confirm Registration</h3>
                <button type="submit" name="submit" style="margin-left:220px;margin-top:-25px" class="search-btn hover" >Register</button>
             </div>
         </div>
-
-                  <!-- <p><p>Floor Plan</p>
-                    <input type="file" id="res_floor" name="res_floor">
-                </p>  -->
-
-                <!-- <p><p>Restaurant Category</p>
-                    <input type="checkbox" name="res_type" value="Arabic">Arabic<br>
-                    <input type="checkbox" name="res_type" value="Chinese">Chinese<br>
-                    <input type="checkbox" name="res_type" value="Italian">Italian<br>
-                    <input type="checkbox" name="res_type" value="Mongolian">Mongolian<br>
-                    <input type="checkbox" name="res_type" value="Sri Lankan">Sri Lankan<br>
-                    <input type="checkbox" name="res_type" value="Thai">Thai<br>
-                    <input type="checkbox" name="res_type" value="Sri Lankan Street Food">Sri Lankan Street Food<br>
-                </p> -->
-             
-                <!-- <h2>Menu</h2>
-                <p>Insert the images of the Restaurant Menu (Maximum 05)</p>
-                    <input type="file" name="res_menu" multiple>
-                    <p>Preorder Facility</p>
-
-                <select name="preorder" class="type-feild">
-                
-					<option  disabled selected value> -- Select Option -- </option>
-					<option>Yes</option>
-					<option>No</option>
-                   </select>                 -->
-                
-            <!-- <div class="tab">
-                <h2>Preordering Menue</h2>
-                <p><p>Dish Name</p>
-                <input type="text" name="dish_name" placeholder="Dish Name"><br>
-                <p>Dish Price</p>
-                <input type="text" name="dish_price" placeholder="Dish Price"><br>
-                
-            </div> -->
     
             <div style="overflow:auto;">
             <div style="float:center;">

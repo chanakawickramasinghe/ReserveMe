@@ -1,3 +1,5 @@
+<?php include('../../includes/session.php') ?>
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -23,6 +25,7 @@
     </div>
     <!--End of nav-->
     
+    
     <!--Start of Header-->
     <header class="header">
         <div class="search">
@@ -44,8 +47,12 @@
         </div>		
     </header>
     <!--End of Header-->
-
             </form>
         </div>
+    <?php 
+        checkSession();
+        $name= $_SESSION["name"];
+        echo "$name";
+    ?>
     </body>
 </html>

@@ -18,7 +18,7 @@ if(isset($_POST['submit'])){
     
     //User Exists
     if (mysqli_num_rows($userResult1) == 1) {
-            // $userRow = mysqli_fetch_array($userResult1);
+            $userRow = mysqli_fetch_array($userResult1);
             //print_r($userRow);
             header( "Location:../users/customer/customer-home.php" );
             
@@ -29,10 +29,11 @@ if(isset($_POST['submit'])){
             $_SESSION["active_status"] = $userRow['active_status'];
         
             $active_status= $userRow['active_status'];
-            
+            echo "test session";
             }
     
-    else if(mysqli_num_rows($userResult2) == 1){        
+    else if(mysqli_num_rows($userResult2) == 1){ 
+             
         // $userRow = mysqli_fetch_array($userResult1);
             //print_r($userRow);
             header( "Location:../users/restaurant/restaurant-home.php" );

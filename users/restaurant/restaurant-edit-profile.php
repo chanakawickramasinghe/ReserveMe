@@ -72,7 +72,7 @@
             } 
 
         //    $sql = "SELECT * FROM restaurant_category WHERE res_id='$res_id'";
-        //     $userquery = mysqli_query($connection,$sql);
+        //    $userquery = mysqli_query($connection,$sql);
         //         while($row = mysqli_fetch_assoc($userquery)){
     
         //             //should include the db connecting row
@@ -88,9 +88,9 @@
         <div class="btn-header">
             <form>
                 <div class="form-box">
-                    <button name="edit" class="btn" type="button" onclick="window.location.href='restaurant-profile-edit.php'">Edit Details</button>
+                    <button type="button" name="edit" class="btn" onclick="window.location.href='restaurant-profile-edit.php'">Edit Details</button>
                     <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                    <button name="deactivate" class="btn" type="button">Deactivate Account</button>
+                    <button type="button" name="deactivate" class="btn" >Deactivate Account</button>
                 </div>
             </form>
         </div>

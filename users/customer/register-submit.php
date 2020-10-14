@@ -34,17 +34,18 @@ if(isset($_POST['submit'])){
         
         //Insert to Database
         else {
-            $registrationQuery = "INSERT INTO customer (user_name,email,password,contact_no,no,street,city) VALUES ('$name', '$email', '$password','$contact','$no','$street','$city' )";
+            $registrationQuery = "INSERT INTO customer(user_name, email, password, contact_no, dob, no, street, city, rankings) VALUES ('$name','$email','$password','$contact','$dob','$no','$street','$city',null)";
             
             if (mysqli_query($connection,$registrationQuery) === TRUE) {
-                $message = base64_encode(urlencode("Registration Successful"));
+                // $message = base64_encode(urlencode("Registration Successful"));
                 header('Location:../../includes/login.php?msg=' . $message);
+        
 				exit();
             } 
             
             else {
-                $message = base64_encode(urlencode("SQL Error while Registering"));
-                header('Location:customerReg.php?msg=' . $message);
+                 $message = base64_encode(urlencode("SQL Error while Registering"));
+                 header('Location:customerReg.php?msg=' . $message);
 				exit();
             }
         }

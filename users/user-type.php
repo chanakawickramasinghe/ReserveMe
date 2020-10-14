@@ -10,7 +10,7 @@
         <!-- <h3 class="error-msg"><?php include('includes/message.php'); ?></h3> -->
 
     <!-- <img src="images/logins.png" class="avatar"> -->
-            <h1 align="center" style="color:green">Sign Up As</h1>
+            <h1 align="center" style="color:blue;margin-top:50px">Sign Up As</h1>
             <h2 align="center"> Select user Type here </h2>
             <br>
            <div class="imgcenter">

@@ -54,7 +54,7 @@
                     </table>          
  <br>
                    
-                   <p align="center"> <input type="submit" name="submit"  class="search-btn hover" value="Register"  onclick="alertbox()" required></p>
+                   <p align="center"> <input type="submit" name="submit"  class="search-btn hover" value="Register"  onclick="myfunction()" required></p>
                    </div>
                 </form>    
             </div>

@@ -18,7 +18,7 @@ if(isset($_POST['submit'])){
     
     //User Exists
     if (mysqli_num_rows($userResult1) == 1) {
-            $userRow = mysqli_fetch_array($userResult1);
+            // $userRow = mysqli_fetch_array($userResult1);
             //print_r($userRow);
             header( "Location:../users/customer/customer-home.php" );
             //Creating Session
@@ -41,7 +41,7 @@ if(isset($_POST['submit'])){
             }*/
     }
     else if(mysqli_num_rows($userResult2) == 1){        
-        $userRow = mysqli_fetch_array($userResult1);
+        // $userRow = mysqli_fetch_array($userResult1);
             //print_r($userRow);
             header( "Location:../users/restaurant-home.php" );
     } else {

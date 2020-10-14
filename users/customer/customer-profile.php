@@ -31,10 +31,11 @@
         echo "<table border=1 class=\"user\">";
     
         $userID = $_SESSION["userID"]; //have to add session id
-        echo"</br></br><h1 class=div-c>Welcome " .$_SESSION["name"]."</h1>";
         $sql = "SELECT * FROM customer WHERE user_id='$userID'";
+        
         $userquery = mysqli_query($connection,$sql);
         while($row = mysqli_fetch_assoc($userquery)){
+        echo"</br></br><h1 class=div-c>Welcome " .$row['user_name']."</h1>";
 
             echo "
                 </br>
@@ -49,6 +50,9 @@
                 </tr>
                 <tr>
                 <th>Contact No</th><td>".$row['contact_no']."</td>
+                </tr>
+                <tr>
+                <th>DOB</th><td>".$row['dob']."</td>
                 </tr>
                 <tr>
                 <th>Postal Number</th><td>".$row['postal_number']."</td>
@@ -68,7 +72,7 @@
             <form>
                 <div class="form-box">
                     <button name="edit" class="btn" type="button" onclick="window.location.href='customer-profile-edit.php'">Edit Details</button>
-                    <button name="deactivate" class="btn" type="button">Deactivate Account</button>
+                    <button name="deactivate" class="btn" type="button" onclick="window.location.href='customer-confirm-deactivate.php'">Deactivate Account</button>
                 </div>
             </form>
         </div>

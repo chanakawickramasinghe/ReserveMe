@@ -1,7 +1,9 @@
 <!---Start of footer-->
+
+
 <footer class="footer-distributed">
     <div class="footer-left">
-        <img src="images/test.jpg">
+        <img src="../../images/test.jpg">
 		<h3>Reserve<span>Me</span></h3>
         <p class="footer-links">
 			<a href="#">Home</a>

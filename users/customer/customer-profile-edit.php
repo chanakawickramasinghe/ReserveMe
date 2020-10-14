@@ -6,6 +6,7 @@
         <title>Edit My Profile</title>
         <link rel="stylesheet" href="../../CSS/nav.css">
         <link rel="stylesheet" href="../../CSS/style.css">
+        <link rel="stylesheet" href="../../CSS/main.css">
     </head>
     <body>
         <!--Start of nav-->
@@ -45,6 +46,9 @@
 
                                 <p>Contact number</p>
                                 <input type=\"text\" name=\"EditContact\" placeholder=\"Enter Contact No.\" value=\"{$row['contact_no']}\" required>
+
+                                <p>DOB</p>
+                                <input type=\"date\" name=\"EditDOB\" value=\"{$row['dob']}\" required>
 
                                 <p>Postal Number</p>
                                 <input type=\"text\" name=\"EditPostalNumber\" placeholder=\"Enter Postal Number\" value=\"{$row['postal_number']}\" required>    

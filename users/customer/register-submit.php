@@ -36,8 +36,8 @@ if(isset($_POST['submit'])){
         else {
 
             //echo "testing 123";
-            $registrationQuery = "INSERT INTO customer (user_id,user_name,email,password,contact_no,postal_number,street,city,active_status) 
-            VALUES (NULL,'$name', '$email', '$password','$contact','$pnumber','$street','$city',1)";
+            $registrationQuery = "INSERT INTO customer (user_id,user_name,email,password,contact_no,dob,postal_number,street,city,active_status) 
+            VALUES (NULL,'$name', '$email', '$password','$contact', '$dob', '$pnumber','$street','$city',1)";
             // $registrationQuery = "INSERT INTO customer (user_name, email, password, contact_no, no) VALUES ('$name', '$email', '$password', '$contact', '$no')";
             if (mysqli_query($connection,$registrationQuery) == TRUE) {
                 //echo "inside TRUE";

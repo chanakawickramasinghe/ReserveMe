@@ -173,3 +173,30 @@
 .form-edit input{
     width: 20vw;
 }
+
+/* for deactivate confirmation */
+.btn-red{
+    width:15vw;
+    height: 4vh;
+    background: #f36a48;
+    border: none;
+    color:rgb(0, 0, 0);
+}
+
+.btn-grey{
+    width:15vw;
+    height: 4vh;
+    background: #c8cec6;
+    border: none;
+    color:rgb(0, 0, 0);
+}
+
+.btn-grey:hover{
+    background: #a5a4a0;
+    cursor: pointer;
+}
+
+.btn-red:hover{
+    background: #ca4c2d;
+    cursor: pointer;
+}

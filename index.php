@@ -13,36 +13,22 @@
 <body>
     <!--Start of nav-->
     <div class="topnav" id="myTopnav">
-    
+    <img class = "logo" src="images/test.jpg">
         <a href="users/user-type.php">Register</a>
         <a href="includes/login.php">Login</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <a href="includes/contact.php">Contact</a>
+        <a href="includes/about.php">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="onClickNav()">
             <i class="fa fa-bars"></i>
-        </a>
-        <img class = "logo" src="images/test.jpg">
+        </a>       
     </div>
     <!--End of nav-->
     
     <!--Start of Header-->
     <header class="header">
         <div class="search">
-            <form>
-                <div class="form-box">
-                    <input type="text" class="search-feild restaurant" placeholder="Search for Restaurant...">
-                    <select name="location" class="search-feild location">
-                        <option value="colombo">Colombo</option>
-                        <option value="kandy">Kandy</option>
-                        <option value="gampaha">Gampaha</option>
-                    </select>
-                    <select name="search-type" class="search-feild search-type">
-                        <option value="restaurant">Restaurant</option>
-                        <option value="dish">Dish</option>
-                    </select>
-                    <a href="#" class="search-button pulsate">Search<i class="fas fa-search"></i></a>
-                </div>
-            </form>            
+            <h1 class="title">Foodie</h1>
+            <button class="search-button pulsate" type="submit" name="submit"><a href="search_result.php">Search<i class="fas fa-search"></i></a></button>
         </div>		
     </header>
     <!--End of Header-->
@@ -161,60 +147,6 @@
         <!--End of the article4-->
     </section>
     <!--End of Number Section-->
-
-    <!--Start of Card Sectio-->
-    <section id="food">
-        <div>
-            <h2 class="title-text"> Food Fusion</h2>
-        </div>
-        <!--======Card Start ----============-->
-        <div class="food-container">       
-            <article class="food-card">
-                <img src="images/img2.jpg" class="food-img"alt="">
-                <div class="img-text">
-                    <h1>Breakfast</h1>
-                </div>
-                <div class="img-footer">
-                    <div class="footer-icon">
-                        <i class="fas fa-dollar-sign">25</i>
-                    </div>
-                    <div class="footer-btn">
-                        <button type="button"class="food-btn">Order Now</button>  
-                    </div>
-                </div>
-            </article>
-            <article class="food-card">
-                <img src="images/img4.jpg" class="food-img"alt="">
-                <div class="img-text">
-                    <h1>Lunch</h1>
-                </div>
-                <div class="img-footer">
-                    <div class="footer-icon">
-                        <i class="fas fa-dollar-sign">35</i>
-                    </div>
-                    <div class="footer-btn">
-                        <button type="button"class="food-btn">Order Now</button>  
-                    </div>
-                </div>
-            </article>
-            <article class="food-card">
-                <img src="images/img3.jpg" class="food-img"alt="">
-                <div class="img-text">
-                    <h1>Dinner</h1>
-                </div>
-                <div class="img-footer">
-                    <div class="footer-icon">
-                        <i class="fas fa-dollar-sign">45</i>
-                    </div>
-                    <div class="footer-btn">
-                        <button type="button"class="food-btn">Order Now</button>  
-                    </div>
-                </div>
-            </article>
-        </div>
-        <!--======End of Card =========-->
-    </section>
-    <!--End of Card Section-->
 
     <!--Start of Gallery Section-->
     <section id="gallery">

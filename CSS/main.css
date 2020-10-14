@@ -43,14 +43,16 @@ body{
     background: orange;
     color: #fff;
     cursor: pointer;
-    border: 2px solid orange;
+    
     margin-top: 10px;
 }
-
+ a{
+     color: black;
+ }
 .search-button:hover{
     background: #fff;
     color: orange;
-    border: none;
+    
 }
 
 .pulsate{
@@ -242,7 +244,7 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 4s;
 }
 
@@ -263,6 +265,7 @@ body{
 .img-text h1{
     font-size: 30px;
     margin-bottom: 10px;
+    opacity: 0.4;
 }
 
 .food-card:hover img{

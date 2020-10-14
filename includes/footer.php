@@ -32,20 +32,5 @@
 			<i class="fa fa-envelope"></i>
 			<p><a href="mailto:reserveme@gmail.com">reserveme@gmail.com</a></p>
 		</div>
-    </div>
-    
-	<div class="footer-right">
-        <div class="footer-section contact-form">
-            <h2>Contact Us</h2>
-            <br>
-            <form action="index.php" method="post">
-                <input type="email" name="email" class="text-input contact-input" placeholder="Your email address">
-                <textarea name="message" class="text-input contact-input" placeholder="Your message"></textarea>
-                <button type="submit" class="btn btn-big">
-                    <i class="fas fa-envelope"></i>
-                    <b>SEND</b>
-                </button>
-            </form>
-        </div>
-	</div>
+    </div>	
 </footer>

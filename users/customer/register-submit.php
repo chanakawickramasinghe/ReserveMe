@@ -7,17 +7,17 @@ if(isset($_POST['submit'])){
     // Assign input data from form to variables
 	$name = $_POST['name'];
 	$email = $_POST['email'];
-    $password = sha1($_POST['password']);
-	$password2 = sha1($_POST['password2']);
+    $password = md5($_POST['password']);
+	$password2 = md5($_POST['password2']);
     $contact = $_POST['contact'];
     $dob = $_POST['dob'];
-    $no = $_POST['no'];
+    $pnumber = $_POST['pnumber'];
     $street = $_POST['street'];
     $city = $_POST['city'];
     
     
-   
-        //Check if email already exists
+    //echo "test 1";
+        //Check if email already exists in both tables
         $selectmail= "SELECT * FROM customer WHERE email ='$email' " ;
         $allmailquery = mysqli_query($connection, $selectmail ) ;  
         $num = mysqli_num_rows($allmailquery);

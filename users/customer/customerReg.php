@@ -2,7 +2,7 @@
 <head>
     <title>Customer Registration</title>
     <link rel="stylesheet" type="text/css" href="../../CSS/customer_Reg.css">   
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
     
 <body class="login-body">
@@ -43,14 +43,14 @@
                     <input type="date" name="dob" class="type-feild"> 
                     
                     <p>Address<p>
-                    <p> No: </p>
-                    <input type="text" name="no" class="type-feild" placeholder="no:"> 
+                    <p> Number </p>
+                    <input type="text" name="pnumber" class="type-feild" placeholder="Number"> 
 
                     <p>Street</p>
-                    <input type="text" name="street" class="type-feild" placeholder="street"> 
+                    <input type="text" name="street" class="type-feild" placeholder="Street"> 
 
                     <p>City</p>
-                    <input type="text" name="city" class="type-feild" placeholder="city"> </td></tr> 
+                    <input type="text" name="city" class="type-feild" placeholder="City"> </td></tr> 
                     </table>          
  <br>
                    

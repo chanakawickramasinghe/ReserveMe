@@ -34,7 +34,7 @@ if(isset($_POST['submit'])){
         
         //Insert to Database
         else {
-            $registrationQuery = "INSERT INTO customer(user_name, email, password, contact_no, dob, no, street, city, rankings) VALUES ('$name','$email','$password','$contact','$dob','$no','$street','$city',null)";
+            $registrationQuery = "INSERT INTO customer(user_name, email, password, contact_no, dob, pnumber, street, city, rankings) VALUES ('$name','$email','$password','$contact','$dob','$no','$street','$city',null)";
             
             if (mysqli_query($connection,$registrationQuery) === TRUE) {
                 //$message = base64_encode(urlencode("Registration Successful"));

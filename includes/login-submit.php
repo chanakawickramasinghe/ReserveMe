@@ -11,7 +11,7 @@ if(isset($_POST['submit'])){
     
     //Select User from database
     $userQueryCustomer = "SELECT * FROM customer WHERE email ='$email' and password='$password'";
-    $userQueryRes="SELECT * FROM restaurant WHERE email='$email' and password='$password'";
+    $userQueryRes="SELECT * FROM restaurant WHERE res_email='$email' and res_password='$password'";
     $userResult1= mysqli_query($connection, $userQueryCustomer);
     $userResult2=mysqli_query($connection, $userQueryRes);
     //print_r($userResult);

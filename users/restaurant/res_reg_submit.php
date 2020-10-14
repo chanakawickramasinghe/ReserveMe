@@ -1,7 +1,9 @@
 <?php
 include('../../includes/connection.php');
-includes('../../includes/session.php')
+
 include('../../includes/message.php');
+
+
 
 $target_dir = "../../images/Restaurant_Dp/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -15,7 +17,7 @@ if (file_exists($target_file)) {
 }
 // if everything is ok, try to upload file
 else {
-    if (move_uploaded_file($_FILES["fileToUpload"]["name"], $target_file)) {
+    if (move_uploaded_file($_FILES["fileToUpload"]["temp_name"], $target_file)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
     } 
     else {
@@ -39,11 +41,7 @@ $imageType = $_FILES["fileToUpload"]["type"];
     $pnumber = $_POST['pnumber'];
     $street = $_POST['street'];
     $city = $_POST['city'];
-    $location = $_POST['res_location'];
-    
-    
-    
-    
+    $location = $_POST['res_location'];    
     // $preorder = $_POST['preorder'];
     // $res_type = $_POST['res_type'];
     // $dish = $_POST['dish_name'];

@@ -35,7 +35,7 @@
                     <input type="password" class="type-feild" name="password2" class="type-feild" placeholder="Re-Enter Password" id="confirm_password" onkeyup='check()' required>
                     <p style="font-size:16px" id='message' ></p>
         
-                    <p float="right"><button style="margin-left:220px;margin-top:10px;position:sticky;top:0;"type="button" class="search-btn hover" onclick="nextPrev(1)">Next</button></p> 
+                   <button style="margin-left:220px;margin-top:10px;position:sticky;top:0;"type="button" class="search-btn hover" onclick="nextPrev(1)">Next</button>
                 <br>
                 </div>
                 
@@ -43,8 +43,8 @@
  
               
             <div class = "tab">
-            <div class="login-box" style="height:500px;padding:10px 30px">
-            <p>Address<p>
+            <div class="login-box" style="height:650px;padding:10px 30px">
+            <p>Address: <p>
                     <p> Number </p>
                     <input type="text" name="pnumber" class="type-feild" placeholder="Number"> 
 
@@ -58,12 +58,12 @@
                     <input type="url" class="type-feild" name="res_location" placeholder="Google map link" class="inp" required>
 
                     <h2>Profile image</h2>
-                <p>Insert the images of the Restaurant Display profile</p>
+                <p>Insert the images for Restaurant Display profile</p>
                     <input type="file" name="fileToUpload" id="fileToUpload">
 
-                    <button type="button" class="search-btn hover" onclick="nextPrev(-1)">Previous</button>
+                    <button type="button" class="search-btn hover" style="width:80px;height:25px " onclick="nextPrev(-1)">Previous</button>
                 <h3>Confirm Registration</h3>
-                <span align ="center" ><button type="submit" name="submit"  class="search-btn hover" >Register</button></span>
+               <button type="submit" name="submit" style="margin-left:220px;margin-top:-25px" class="search-btn hover" >Register</button>
             </div>
         </div>
 

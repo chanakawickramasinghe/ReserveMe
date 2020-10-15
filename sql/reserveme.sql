@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 14, 2020 at 05:49 AM
+-- Generation Time: Oct 15, 2020 at 07:38 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.33
 
@@ -34,6 +34,7 @@ CREATE TABLE `customer` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `contact_no` int(12) NOT NULL,
+  `dob` date DEFAULT NULL,
   `postal_number` varchar(10) NOT NULL,
   `street` varchar(30) NOT NULL,
   `city` varchar(20) NOT NULL,
@@ -46,20 +47,24 @@ CREATE TABLE `customer` (
 -- Dumping data for table `customer`
 --
 
-INSERT INTO `customer` (`user_id`, `user_name`, `email`, `password`, `contact_no`, `postal_number`, `street`, `city`, `rankings`, `no_of_rates`, `active_status`) VALUES
-(1, 'Aamir', 'aamirshafeek123@gmail.com', '5623', 768921288, '', '', '', 0, 0, 0),
-(2, 'Aamir', 'msaamirali123@gmail.com', '5623', 768921288, '', '', '', 0, 0, 0),
-(3, 'Aamir ali', 'msaamirali13@gmail.com', '9a75eaf808610f8c47a22c862fc67c653fc8e97b', 768921288, '', '', '', 0, 0, 0),
-(4, 'Aamir', 'admin@admin.com', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 67555555, '', '', '', 0, 0, 0),
-(5, 'Nuwan', 'nuwan@gmail.com', 'eda965b2ae257c6554c87582ac4c6598ee6db676', 754896253, '', '', '', 0, 0, 0),
-(6, 'chanaka', 'chanaka@gmail.com', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 119, '', '', '', 0, 0, 0),
-(7, 'Aamir ali', 'aamirali123@gmail.com', '9a75eaf808610f8c47a22c862fc67c653fc8e97b', 768921288, '', '', '', 0, 0, 0),
-(8, 'Book', 'book@gmail.com', 'e7e694c58cd50e0324ec96918800bc35cd17629b', 789456123, '', '', '', 0, 0, 0),
-(9, 'Bilal', 'bilal@gmail.com', '9a75eaf808610f8c47a22c862fc67c653fc8e97b', 78956123, '', '', '', 0, 0, 0),
-(10, 'ghc', 'gfc@hjgkbuhj.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 485, '', '', '', 0, 0, 0),
-(22, 'Chanaka ', 'cmwickramasinghe@gmail.com', '6512bd43d9caa6e02c990b0a82652dca', 2147483647, '111110', 'kandy', 'Kandy 11', 0, 0, 1),
-(21, 'Chanaka', '2018is093@stu.ucsc.cmb.ac.lk', '202cb962ac59075b964b07152d234b70', 771570227, '10011', 'Reid Avenue, Colombo111', 'Kandy 111', 0, 0, 1),
-(23, 'Chanaka Wickramasinghe', '2018is0913@stu.ucsc.cmb.ac.lk', 'c20ad4d76fe97759aa27a0c99bff6710', 771570227, '123', 'Reid Avenue, Colombo', 'Colombo', 0, 0, 1);
+INSERT INTO `customer` (`user_id`, `user_name`, `email`, `password`, `contact_no`, `dob`, `postal_number`, `street`, `city`, `rankings`, `no_of_rates`, `active_status`) VALUES
+(3, 'Chanaka Wickramasinghe', '2018is093@stu.ucsc.cmb.ac.lk', '202cb962ac59075b964b07152d234b70', 771570227, '2020-09-11', '10000', 'Reid Avenue, Colombo', 'Colombo', 0, 0, 1),
+(2, 'Chanaka Wickramasinghe', 'cmwickramasinghe703@gmail.com', '202cb962ac59075b964b07152d234b70', 771570227, '2020-08-06', '10000', 'Reid Avenue, Colombo', 'Colombo', 0, 0, 1),
+(4, 'Chanaka Wickramasinghe', '2018is093@stu.ucsc.cmb', '202cb962ac59075b964b07152d234b70', 771570227, '2020-10-08', '123', 'Reid Avenue, Colombo', 'Colombo', 0, 0, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `employee`
+--
+
+CREATE TABLE `employee` (
+  `emp_id` int(10) NOT NULL,
+  `res_id` int(10) NOT NULL,
+  `emp_name` varchar(255) NOT NULL,
+  `emp_mobile` int(10) NOT NULL,
+  `emp_password` varchar(8) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -71,28 +76,24 @@ CREATE TABLE `restaurant` (
   `res_id` int(10) NOT NULL,
   `res_name` varchar(100) NOT NULL,
   `res_email` varchar(100) NOT NULL,
-  `res_address` varchar(255) NOT NULL,
+  `res_add_line1` varchar(255) NOT NULL,
+  `res_add_line2` varchar(255) NOT NULL,
+  `city` varchar(255) NOT NULL,
   `res_location` varchar(255) NOT NULL,
   `res_tel` int(10) NOT NULL,
   `res_floor` varchar(255) NOT NULL,
-  `res_menue` varchar(255) NOT NULL,
-  `res_password` varchar(8) NOT NULL,
-  `preorder_available` tinyint(1) NOT NULL,
-  `res_rate` varchar(509) NOT NULL,
-  `res_status` tinyint(1) NOT NULL
+  `res_menu` varchar(255) NOT NULL,
+  `res_password` varchar(255) NOT NULL,
+  `preorder_available` varchar(11) NOT NULL,
+  `res_rate` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `restaurant`
 --
 
-INSERT INTO `restaurant` (`res_id`, `res_name`, `res_email`, `res_address`, `res_location`, `res_tel`, `res_floor`, `res_menue`, `res_password`, `preorder_available`, `res_rate`, `res_status`) VALUES
-(1, 'Fab', 'fab@gmail.com', 'Colombo', 'Colombo', 1234567890, '', '', '1234', 1, '5', 1),
-(2, 'Kfc', 'kfc@gmail.com', 'Colombo', 'Colombo', 2147483647, '', '', '2345', 0, '4', 1),
-(3, 'Mac', 'mac@gmail.com', 'Matara', 'Matara', 2147483647, '', '', '3456', 0, '3', 0),
-(4, 'Kfc', 'kfc@gmail.com', 'Kandy', 'Kandy', 2147483647, '', '', '4567', 1, '2', 1),
-(5, 'Cinnamon', 'cinnamon@gmail.com', 'Colombo', 'Colombo', 2147483647, '', '', '5678', 0, '5', 0),
-(6, 'Rio', 'rio@gmail.com', 'Matara', 'Matara', 2147483647, '', '', '6789', 0, '4', 1);
+INSERT INTO `restaurant` (`res_id`, `res_name`, `res_email`, `res_add_line1`, `res_add_line2`, `city`, `res_location`, `res_tel`, `res_floor`, `res_menu`, `res_password`, `preorder_available`, `res_rate`) VALUES
+(4, 'Chanaka Wickramasinghe', 'bla@stu.ucsc.cmb.ac.lk', 'Reid Avenue, Colombo', 'Pilimathalawa', 'Colombo', 'https://url.com', 771570227, '', '', '202cb962ac59075b964b07152d234b70', '', 0);
 
 -- --------------------------------------------------------
 
@@ -179,6 +180,12 @@ ALTER TABLE `customer`
   ADD PRIMARY KEY (`user_id`);
 
 --
+-- Indexes for table `employee`
+--
+ALTER TABLE `employee`
+  ADD PRIMARY KEY (`emp_id`,`res_id`);
+
+--
 -- Indexes for table `restaurant`
 --
 ALTER TABLE `restaurant`
@@ -210,13 +217,19 @@ ALTER TABLE `tokens`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `employee`
+--
+ALTER TABLE `employee`
+  MODIFY `emp_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `restaurant`
 --
 ALTER TABLE `restaurant`
-  MODIFY `res_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `res_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tokens`

@@ -36,7 +36,7 @@
                     <P id='message' ></P>
 
                     <p>Contact number</p>
-                    <input type="text" name="contact" class="type-feild" placeholder="Mobile number"> </td>
+                    <input type="tel" name="contact" class="type-feild" placeholder="Mobile number"> </td>
 
                     <td margin-left="30px">
                     <p><b>Date of birth</p>
@@ -44,7 +44,7 @@
                     
                     <p>Address<p>
                     <p> Number </p>
-                    <input type="text" name="number" class="type-feild" placeholder="Number"> 
+                    <input type="text" name="pnumber" class="type-feild" placeholder="Number"> 
 
                     <p>Street</p>
                     <input type="text" name="street" class="type-feild" placeholder="Street"> 
@@ -54,7 +54,7 @@
                     </table>          
  <br>
                    
-                   <p align="center"> <input type="submit" name="submit"  class="search-btn hover" value="Register"  onclick="alertbox()" required></p>
+                   <p align="center"> <input type="submit" name="submit"  class="search-btn hover" value="Register"  onclick="myfunction()" required></p>
                    </div>
                 </form>    
             </div>

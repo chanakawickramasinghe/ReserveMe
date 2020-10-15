@@ -1,4 +1,6 @@
 <!---Start of footer-->
+
+
 <footer class="footer-distributed">
     <div class="footer-left">
         <img src="images/logo.png">

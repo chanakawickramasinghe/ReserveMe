@@ -22,48 +22,50 @@
             </a>
             <img class = "logo" src="../../images/test.jpg">
         </div>
-    <!--End of nav-->
-        
+        <!--End of nav-->
                 
         <!-- Adding the table with current user details -->
         <?php
         checkSession();
         echo "<table border=1 class=\"user\">";
-        
-        $userID = $_SESSION["userID"]; //have to add session id
-        $sql = "SELECT * FROM customer WHERE user_id='$userID'";
-        
+    
+        $res_id = $_SESSION["res_id"]; //have to add session id
+        echo"</br></br><h1 class=div-c>Welcome " .$_SESSION["res_name"]."</h1>";
+        $sql = "SELECT * FROM restaurant WHERE resid='$res_id'";
         $userquery = mysqli_query($connection,$sql);
         while($row = mysqli_fetch_assoc($userquery)){
-        echo"</br></br><h1 class=div-c>Welcome " .$row['user_name']."</h1>";
 
             echo "
                 </br>
                 <tr>
-                <th>Cus ID</th><td>".$row['user_id']."</td>
+                <th>Res ID</th><td>".$row['res_id']."</td>
                 </tr>
                 <tr>                  
-                <th>Name</th><td>".$row['user_name']."</td>
+                <th>Name</th><td>".$row['res_name']."</td>
                 </tr>
                 <tr>
-                <th>Email</th><td>".$row['email']."</td>
+                <th>Email</th><td>".$row['res_email']."</td>
                 </tr>
                 <tr>
-                <th>Contact No</th><td>".$row['contact_no']."</td>
+                <th>Contact No</th><td>".$row['res_tel']."</td>
                 </tr>
                 <tr>
-                <th>DOB</th><td>".$row['dob']."</td>
+                <th>Address</th><td>".$row['res_add_line1']."</td><br><td>".$row['res_add_line2']."</td><br><td>".$row['res_add_line3']."</td>
                 </tr>
                 <tr>
-                <th>Postal Number</th><td>".$row['postal_number']."</td>
+                <th>Location</th><td>".$row['res_location']."</td>
                 </tr>
                 <tr>
-                <th>Street</th><td>".$row['street']."</td>
+                <th>Floor Plan</th><td>".$row['res_floor']."</td>
                 </tr>
                 <tr>
-                <th>City</th><td>".$row['city']."</td>
-                </tr>";
-        } 
+                <th>Menu</th><td>".$row['res_menu']."</td>
+                </tr>
+                <tr>
+                <th>Preorder Availability</th><td>".$row['preorder_available']."</td>
+                </tr>
+            ";
+        }
         echo "</table>";
         ?>
         </br>
@@ -71,10 +73,11 @@
         <div class="btn-header">
             <form>
                 <div class="form-box">
-                    <button name="edit" class="btn" type="button" onclick="window.location.href='customer-profile-edit.php'">Edit Details</button>
+                    <button name="edit" class="btn" type="button" onclick="window.location.href='restaurant-profile-edit.php'">Edit Profile</button>
                     <button name="deactivate" class="btn" type="button">Deactivate Account</button>
                 </div>
             </form>
         </div>
     </body>
-</html> 
+</html>
+ 

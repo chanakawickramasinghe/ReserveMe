@@ -35,22 +35,44 @@
         $userquery = mysqli_query($connection,$sql);
             while($row = mysqli_fetch_assoc($userquery)){
 
-                echo "<tr>
-                        <th> Res ID </th><td>".$row['res_id']." </td>
-                    </tr>
-                    <tr>                  
-                        <th> Name </th><td>".$row['res_name']." </td>
-                    </tr>
-                    <tr>
-                        <th> Email </th><td>".$row['res_add']." </td>
-                    </tr>
-                    <tr>
-                        <th> Contact No </th><td>".$row['res_tel']."</td>
-                    </tr>";
+                </br>
+                <tr>
+                <th>Res ID</th><td>".$row['res_id']."</td>
+                </tr>
+                <tr>                  
+                <th>Name</th><td>".$row['res_name']."</td>
+                </tr>
+                <tr>
+                <th>Email</th><td>".$row['res_email']."</td>
+                </tr>
+                <tr>
+                <th>ContactNo</th><td>".$row['res_tel']."</td>
+                </tr>
+                <tr>
+                <th>Postal Number</th><td>".$row['pnumber']."</td>
+                </tr>
+                <tr>
+                <th>Street</th><td>".$row['street']."</td>
+                </tr>
+                <tr>
+                <th>City</th><td>".$row['city']."</td>
+                </tr>
+                <tr>
+                <th>Location</th><td>".$row['res_location']."</td>
+                </tr>
+                <tr>
+                <th>Floor Plan</th><td>".$row['res_floor']."</td>
+                </tr>
+                <tr>
+                <th>Menu</th><td>".$row['res_menu']."</td>
+                </tr>
+                <tr>
+                <th>Preorder Availability</th><td>".$row['preorder_available']."</td>
+                </tr>;
             } 
 
         //    $sql = "SELECT * FROM restaurant_category WHERE res_id='$res_id'";
-        //     $userquery = mysqli_query($connection,$sql);
+        //    $userquery = mysqli_query($connection,$sql);
         //         while($row = mysqli_fetch_assoc($userquery)){
     
         //             //should include the db connecting row
@@ -66,9 +88,9 @@
         <div class="btn-header">
             <form>
                 <div class="form-box">
-                    <button name="edit" class="btn" type="button" onclick="window.location.href='restaurant-profile-edit.php'">Edit Details</button>
+                    <button type="button" name="edit" class="btn" onclick="window.location.href='restaurant-profile-edit.php'">Edit Details</button>
                     <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                    <button name="deactivate" class="btn" type="button">Deactivate Account</button>
+                    <button type="button" name="deactivate" class="btn" >Deactivate Account</button>
                 </div>
             </form>
         </div>

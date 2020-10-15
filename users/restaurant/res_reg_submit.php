@@ -2,39 +2,66 @@
 include('../../includes/connection.php');
 include('../../includes/message.php');
 
+
+
+// $target_dir = "../../images/Restaurant_Dp/";
+// $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+// $uploadOk = 1;
+// $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+// Check if file already exists
+// if (file_exists($target_file)) {
+//     echo "Sorry, image is already exists.";
+//     $uploadOk = 0;
+// }
+// // if everything is ok, try to upload file
+// else {
+//     if (move_uploaded_file($_FILES["fileToUpload"]["temp_name"], $target_file)) {
+//         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+//     } 
+//     else {
+//         $message = base64_encode(urlencode("Sorry, there was an error uploading your file."));
+//         header('Location:vendor-product-add.php?msg=' . $message);
+//         exit();
+//     }
+// }
+
 if(isset($_POST['submit'])){
+
+// $imageName = $_FILES["fileToUpload"]["name"]; 
+// $imageData = $_FILES["fileToUpload"]["tmp_name"];
+// $imageType = $_FILES["fileToUpload"]["type"];
+
     //Assign data from the registartion form to variables
     $name = $_POST['res_name'];
     $email = $_POST['res_email'];
-    // $address = $_POST['res_address'];
-    // $location = $_POST['res_location'];
-    // $tele = $_POST['res_tel'];
-    // $menu = $_POST['res_menue'];
-    $password = $_POST['res_password'];
-    $preorder = $_POST['preorder'];
-    $res_type = $_POST['res_type'];
-    // $dish = $_POST['dish_name'];
-    // $price = $_POST['dish_price'];
-    
+    $tel = $_POST['res_tel'];
+    $password = md5($_POST['res_password']);
+    $password2 = md5($_POST['password2']);
+    $pnumber = $_POST['pnumber'];
+    $street = $_POST['street'];
+    $city = $_POST['city'];
+    $location = $_POST['res_location'];    
+        
     //Check if email already exists
-    $selectmail = "SELECT * FROM resaturant WHERE email ='$res_email'";
-    $allmailquery= mysqli_query($connection, $selectmail);
-    $num = mysqli_num_rows($allmailquery);
-    //print_r($userResult);
-    
-    if($num > 0){
+    $selectmail= "SELECT * FROM customer WHERE email ='$email' " ;
+        $allmailquery = mysqli_query($connection, $selectmail ) ;  
+        $num = mysqli_num_rows($allmailquery);
+
+        $selectmail2="SELECT * FROM restaurant WHERE email='$email'";
+        $allmailquery2 = mysqli_query($connection, $selectmail2 ) ;  
+        $num2 = mysqli_num_rows($allmailquery2);
+        
+        if($num > 0 || $num2 > 0){
         $message = base64_encode(urlencode("Email already exists"));
-        header('Location:register.php?msg=' . $message);
+        header('Location:res_reg.php?msg=' . $message);
         exit();
-    } 
+        }
 
     //Insert to Database
     else {
-        // $registrationQuery = "INSERT INTO restaurant (res_name, res_email, res_address, res_location, res_tel, res_password, preorder_available) VALUES ('$name', '$email', '$address', '$location', '$tele', '$password', '$preorder')";
+        $registrationQuery = "INSERT INTO restaurant (res_name, res_email, res_add_line1, res_add_line2, city, res_location, res_tel, res_password) VALUES ('$name', '$email','$pnumber','$street','$city','$location','$tel','$password')";
         
-        $registrationQuery = "INSERT INTO restaurant (res_name, res_email, res_password, preorder_available) 
-        VALUES ('$name', '$email','$password','$preorder')";
-
            /* if (mysqli_Query($conection,$preorder) == '0'){
                 //If preorder isn't available we take the photos
                 $registrationQuery = "INSERT INTO restaurant (res_menu) VALUE ('$menu')"; 
@@ -52,7 +79,7 @@ if(isset($_POST['submit'])){
             exit();
         } else {
             $message = base64_encode(urlencode("SQL Error while Registering"));
-            header('Location:res_reg.php?msg=' . $message);
+            header('Location:res_reg.php?msg2=' . $message);
             exit();
         }
     }
@@ -60,6 +87,6 @@ if(isset($_POST['submit'])){
 }
 
 
-// mysqli_close($connection); 
+ mysqli_close($connection); 
 
 ?>

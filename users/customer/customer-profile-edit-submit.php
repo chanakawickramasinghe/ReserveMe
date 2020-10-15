@@ -4,10 +4,14 @@ include('../../includes/connection.php');
 
 $id= $_POST['EditID'];
 $newName = $_POST['EditName'];
-$newAddress = $_POST['EditAddress'];
-$newPassword = sha1($_POST['EditPassword']);
-$newPassword2 = sha1($_POST['EditPassword2']);
+$newEmail = $_POST['EditEmail'];
+$newPassword = md5($_POST['EditPassword']);
+$newPassword2 = md5($_POST['EditPassword2']);
 $newContact = $_POST['EditContact'];
+$newDOB = $_POST['EditDOB'];
+$newPNo = $_POST['EditPostalNumber'];
+$newStreet = $_POST['EditStreet'];
+$newCity = $_POST['EditCity'];
 
      if ($newPassword != $newPassword2){
         $message = base64_encode(urlencode("Passwords Do Not Match"));
@@ -15,9 +19,10 @@ $newContact = $_POST['EditContact'];
         exit();
     }
     else{
-        $EditQuery= "UPDATE customer SET cusName = '$newName', cusAddress ='$newAddress', cusPassword = '$newPassword', cusContactNo = '$newContact' WHERE cusId = '$id' ";
-
+        $EditQuery= "UPDATE customer SET user_name = '$newName', email ='$newEmail', password = '$newPassword', contact_no = '$newContact', dob ='$newDOB', postal_number = '$newPNo', street = '$newStreet', city = '$newCity' WHERE user_id = '$id' ";
+        
         if (mysqli_query($connection,$EditQuery) === TRUE) {
+                $_SESSION["name"] = $newName;
                 $message = base64_encode(urlencode("Successfully Edited!"));
 				header('Location:customer-profile.php?msg=' . $message);
 				exit();

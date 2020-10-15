@@ -48,16 +48,7 @@
     top: 18px;
     left: calc(50% - 50px);
 }
-.register-body{
-    background: url(../../images/reg-bg.jpg);
-    background-size: cover;
-}
-.error-msg{
-    font-size: 12px;
-    color: #F00;
-    text-align: center;
-    background-color: #FFF;
-}
+
 .login-body{
     background-image: url('../images/img4.jpg');
     background-size: cover;
@@ -71,9 +62,9 @@
 
 /* Logged in Message */
 .logged-in-msg{
-    font-size: 12px;
+    font-size: 18px;
     color: #30b441;
-    text-align:  right;
+    text-align: center;
     margin: 0;
 }
 

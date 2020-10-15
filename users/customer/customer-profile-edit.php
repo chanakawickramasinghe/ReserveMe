@@ -1,16 +1,17 @@
 <?php include('../../includes/connection.php') ?>
-<!-- <?php include('includes/session.php') ?> -->
+<?php include('../../includes/session.php') ?>
 
 <html>
     <head>
         <title>Edit My Profile</title>
         <link rel="stylesheet" href="../../CSS/nav.css">
         <link rel="stylesheet" href="../../CSS/style.css">
+        <link rel="stylesheet" href="../../CSS/main.css">
     </head>
     <body>
         <!--Start of nav-->
         <div class="topnav" id="myTopnav">
-            <a href="#logout">Logout</a>
+            <a href="../../index.php">Logout</a>
             <a href="customer-profile.php">My Profile</a>
             <a href="#contact">Contact</a>
             <a href="#about">About</a>
@@ -23,9 +24,9 @@
         <div class="row-100"><h2 class="error-msg"><?php include_once('../../includes/message.php'); ?></h2></div>
 
         <?php
-            
-            $userID = "111"; //$_SESSION["userID"];
-            $selectusers = "SELECT * FROM customer WHERE cusId='$userID'";
+            checkSession();
+            $userID = $_SESSION["userID"];
+            $selectusers = "SELECT * FROM customer WHERE user_id='$userID'";
 
             $userquery = mysqli_query($connection,$selectusers);
 
@@ -38,13 +39,25 @@
                         <div class=\"form-edit\">
                             <form action=\"customer-profile-edit-submit.php\" method=\"post\">                   
                                 <p>Name</p>
-                                <input type=\"text\" name=\"EditName\" placeholder=\"Enter Name\" value=\"{$row['cusName']}\" required>    
+                                <input type=\"text\" name=\"EditName\" placeholder=\"Enter Name\" value=\"{$row['user_name']}\" required>    
 
                                 <p>Address</p>
-                                <input type=\"text\" name=\"EditAddress\" placeholder=\"Enter Address\" value=\"{$row['cusAddress']}\" required>
+                                <input type=\"text\" name=\"EditEmail\" placeholder=\"Enter Email\" value=\"{$row['email']}\" required>
 
                                 <p>Contact number</p>
-                                <input type=\"text\" name=\"EditContact\" placeholder=\"Enter Contact No.\" value=\"{$row['cusContactNo']}\">
+                                <input type=\"text\" name=\"EditContact\" placeholder=\"Enter Contact No.\" value=\"{$row['contact_no']}\" required>
+
+                                <p>DOB</p>
+                                <input type=\"date\" name=\"EditDOB\" value=\"{$row['dob']}\" required>
+
+                                <p>Postal Number</p>
+                                <input type=\"text\" name=\"EditPostalNumber\" placeholder=\"Enter Postal Number\" value=\"{$row['postal_number']}\" required>    
+
+                                <p>Street Name</p>
+                                <input type=\"text\" name=\"EditStreet\" placeholder=\"Enter Street Name\" value=\"{$row['street']}\" required>
+
+                                <p>City</p>
+                                <input type=\"text\" name=\"EditCity\" placeholder=\"Enter City\" value=\"{$row['city']}\" required>
 
                                 <p>Password</p>
                                 <input type=\"password\" name=\"EditPassword\" placeholder=\"Enter Password\" id=\"password\" onkeyup='check()' required>
@@ -55,7 +68,7 @@
 
                                 <p></p>
                                 <center> 
-                                    <input type=\"hidden\" value=" .$row['cusId']. " name=\"EditID\">  
+                                    <input type=\"hidden\" value=" .$row['user_id']. " name=\"EditID\">  
                                     <button type=\"submit\" name=\"btn-Update\" class=\"btn\" required > Update Details </button>
                                 </center>
                                 

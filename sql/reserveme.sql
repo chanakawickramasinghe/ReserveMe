@@ -62,6 +62,7 @@ CREATE TABLE `employee` (
   `emp_id` int(10) NOT NULL,
   `res_id` int(10) NOT NULL,
   `emp_name` varchar(255) NOT NULL,
+  `emp_email` varchar(255) NOT NULL,
   `emp_mobile` int(10) NOT NULL,
   `emp_password` varchar(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

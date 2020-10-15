@@ -1,6 +1,5 @@
 <?php
 include('../../includes/connection.php');
-
 include('../../includes/message.php');
 
 
@@ -61,8 +60,7 @@ if(isset($_POST['submit'])){
 
     //Insert to Database
     else {
-        $registrationQuery = "INSERT INTO restaurant (res_name, res_email, res_add_line1, res_add_line2, city, res_location, res_tel, res_password)
-         VALUES ('$name', '$email','$pnumber','$street','$city','$location','$tel','$password')";
+        $registrationQuery = "INSERT INTO restaurant (res_name, res_email, res_add_line1, res_add_line2, city, res_location, res_tel, res_password) VALUES ('$name', '$email','$pnumber','$street','$city','$location','$tel','$password')";
         
            /* if (mysqli_Query($conection,$preorder) == '0'){
                 //If preorder isn't available we take the photos
@@ -81,7 +79,7 @@ if(isset($_POST['submit'])){
             exit();
         } else {
             $message = base64_encode(urlencode("SQL Error while Registering"));
-            header('Location:res_reg.php?msg=' . $message);
+            header('Location:res_reg.php?msg2=' . $message);
             exit();
         }
     }

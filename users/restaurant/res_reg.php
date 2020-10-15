@@ -12,8 +12,9 @@
 <div class="tab" >
             <div class="login-box" style="height:600px;padding:10px 30px">
 
-           <h2 class="error-msg"><?php include_once('../../includes/message.php'); ?></h2>    
+            
         <form id="formRestSignup" action="res_reg_submit.php" method="post">
+        <h2 class="error-msg" style="font-size:14px"><?php include_once('../../includes/message.php'); ?></h2>
     <!--tabs are used to open the separate parts in separate pages.-->
             
                 <h1 align="center">Sign Up</h1>
@@ -30,12 +31,12 @@
                     
                 <p>Password</p>
                     <input type="password" class="type-feild" name="res_password" placeholder="Password" class="type-feild" id="res_password" required>    
-                
+                    <h2 class="error-msg" style="font-size:14px"><?php include_once('../../includes/message.php'); ?></h2>  
                     <p>Confirm Password</p>
                     <input type="password" class="type-feild" name="password2" class="type-feild" placeholder="Re-Enter Password" id="confirm_password" onkeyup='check()' required>
-                    <p style="font-size:16px" id='message' ></p>
+                    <p style="font-size:14px" id='message' ></p>
         
-                   <button style="margin-left:220px;margin-top:10px;position:sticky;top:0;"type="button" class="search-btn hover" onclick="nextPrev(1)">Next</button>
+                   <button style="margin-left:220px;margin-top:-45px;position:sticky;top:0;"type="button" class="search-btn hover" onclick="nextPrev(1)">Next</button>
                 <br>
                 </div>
                 

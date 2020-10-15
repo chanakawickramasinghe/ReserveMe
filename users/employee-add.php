@@ -16,12 +16,15 @@
         
             <h2 class="error-msg"><?php include_once('../../includes/message.php'); ?></h2>
 
-                <form action="register-submit.php" method="post">                   
+                <form action="employee-add-submit.php" method="post">                   
                 <div>   
                     <table style="width:500px">
                         <td>
                             <p><b>Name</p>
-                            <input type="text" class="type-feild" name="name" placeholder="Your name" required>    
+                            <input type="text" class="type-feild" name="name" placeholder="Your name" required>   
+
+                            <p><b>Email</p>
+                            <input type="text" class="type-feild" name="Email" placeholder="Email Address" required> 
 
                             <p>Contact number</p>
                             <input type="text" name="contact" class="type-feild" placeholder="Mobile number" required>
@@ -36,8 +39,8 @@
                     </table>          
                     <br>
                    
-                   <p align="center"> <input type="submit" name="submit"  class="search-btn hover" value="Register"  onclick="alertbox()" required></p>
-                   </div>
+                <p align="center"> <input type="submit" name="submit"  class="search-btn hover" value="Register"  onclick="alertbox()" required></p>
+                </div>
                 </form>    
             </div>
         </div>

@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="CSS/nav.css">
     <link rel="stylesheet" href="CSS/search.css">
     <link rel="stylesheet" href="CSS/footer.css">
-    <link rel="stylesheet" href="CSS/style.css">
+    
 </head>
 <body>
     <!--Start of nav-->

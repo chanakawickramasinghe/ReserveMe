@@ -49,9 +49,10 @@
                 <br><br>
 
                 <div class="form-box"><c>
-                    <a href="#" class="search-button pulsate">Pre - Order Availability</a>
+                    <a href="#" class="search-button pulsate">Pre - Order Menu</a>
                     <a href="#" class="search-button pulsate">Update the Menu</a>
-                    <a href="#" class="search-button pulsate">Reception Hall Availability</a>
+                    <a href="#" class="search-button pulsate">Add Employee</a>
+                    <a href="#" class="search-button pulsate">Reception Hall</a>
                 </c></div>
             </form>            
         </div>		

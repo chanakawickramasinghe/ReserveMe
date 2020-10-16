@@ -28,7 +28,7 @@
     <!--Start of Header-->
     <header class="header">
         <div class="search">
-        <img class = "logo" src="../../images/chef.jpg" width="50" height="250">
+        <img class = "image" src="../../images/chef.jpg" width="115" height="115">
         <br>
         <h1 style= "color:white;"><c><b>Restaurant Home<b><c></h1>
         <br><br><br>

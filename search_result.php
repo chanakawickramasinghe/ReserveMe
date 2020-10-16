@@ -6,16 +6,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReserveMe</title>
+    <link href="images/logo.png" rel="shortcut icon"/>
     <link rel="stylesheet" href="CSS/main.css">
     <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="CSS/nav.css">
     <link rel="stylesheet" href="CSS/search.css">
     <link rel="stylesheet" href="CSS/footer.css">
+    
 </head>
 <body>
     <!--Start of nav-->
     <div class="topnav" id="myTopnav">
-    <img class = "logo" src="images/test.jpg">
+    <img class = "logo" src="images/logo.png">
         <a href="users/user-type.php">Register</a>
         <a href="includes/login.php">Login</a>
         <a href="#contact">Contact</a>
@@ -122,6 +124,7 @@
             $retrieveProduct = "SELECT * FROM `restaurant`"; //Selecting all data from Table
             $resultProduct = mysqli_query($connection, $retrieveProduct); //Passing SQL
             echo"<section id=\"food\">
+            <div class=\"row-25 product-box\">
             <div>
                 <h2 class=\"title-text\"> Food Fusion</h2>
             </div>";           
@@ -144,12 +147,13 @@
                     </div>
                 </article>           
 
+            </div>
             </div>";
               }       
             echo"</section>";
             }
              
-    ?>   
+    ?>
     <!--End of Card Section-->
 
     <!--Include footer.php-->

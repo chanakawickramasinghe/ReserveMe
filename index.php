@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReserveMe</title>
+    <!--web-icon-->
+    <link href="images/logo.png" rel="shortcut icon"/>
     <link rel="stylesheet" href="CSS/main.css">
     <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="CSS/nav.css">
@@ -27,8 +29,10 @@
     <!--Start of Header-->
     <header class="header">
         <div class="search">
-            <h1 class="title">Foodie</h1>
-            <button class="search-button pulsate" type="submit" name="submit"><a href="search_result.php">Search<i class="fas fa-search"></i></a></button>
+            <h1 class="title">ReserveMe</h1>
+            <h3 class="title">Reservation at your fingertip</h3>
+            <button class="search-button pulsate" type="submit" name="submit"><a href="search_result.php">Table Reservation<i class="fas fa-search"></i></a></button>
+            <button class="search-button pulsate" type="submit" name=""><a href="hall_result.php">Hall Reservation<i class="fas fa-search"></i></a></button>
         </div>		
     </header>
     <!--End of Header-->

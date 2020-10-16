@@ -173,7 +173,7 @@ a:hover {
             
             //send token to the email
             $to=$email;
-            $from='vegemartucsc@gmail.com';
+            $from='info.reserve.lk@gmail.com';
             $subject="Password reset token";
             $message='We have got your request to reset your password.<br>';
             $message.='Please follow the url and reset your password.The link will only be valid for one time use only.<br>';

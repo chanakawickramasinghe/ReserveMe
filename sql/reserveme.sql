@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 15, 2020 at 07:38 AM
+-- Generation Time: Oct 15, 2020 at 09:42 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.33
 
@@ -85,7 +85,7 @@ CREATE TABLE `restaurant` (
   `res_menu` varchar(255) NOT NULL,
   `res_password` varchar(255) NOT NULL,
   `preorder_available` varchar(11) NOT NULL,
-  `res_rate` int(11) NOT NULL
+  `res_rate` double NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -93,7 +93,7 @@ CREATE TABLE `restaurant` (
 --
 
 INSERT INTO `restaurant` (`res_id`, `res_name`, `res_email`, `res_add_line1`, `res_add_line2`, `city`, `res_location`, `res_tel`, `res_floor`, `res_menu`, `res_password`, `preorder_available`, `res_rate`) VALUES
-(4, 'Chanaka Wickramasinghe', 'bla@stu.ucsc.cmb.ac.lk', 'Reid Avenue, Colombo', 'Pilimathalawa', 'Colombo', 'https://url.com', 771570227, '', '', '202cb962ac59075b964b07152d234b70', '', 0);
+(4, 'Chanaka Wickramasinghe', 'bla@stu.ucsc.cmb.ac.lk', 'Reid Avenue, Colombo', 'Pilimathalawa', 'Colombo', 'https://url.com', 771570227, '', '', '202cb962ac59075b964b07152d234b70', '', 4.5);
 
 -- --------------------------------------------------------
 

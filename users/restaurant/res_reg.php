@@ -4,8 +4,9 @@
 <head>
     <title>Restaurant Registration</title>
     <link rel="stylesheet" href="../../CSS/customer_reg.css">
-    <link rel="stylesheet" href="../../CSS/res_reg.css"
-    <meta name="view port" content ="width=device-width", meta charset="utf-8">
+    <link rel="stylesheet" href="../../CSS/res_reg.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body class="login-body">
@@ -13,7 +14,7 @@
             <div class="login-box" style="height:600px;padding:10px 30px">
 
             
-        <form id="formRestSignup" action="res_reg_submit.php" method="post">
+        <form name="formRestSignup" action="res_reg_submit.php" method="post" enctype="multipart/form-data">
         <h2 class="error-msg" style="font-size:14px"><?php include_once('../../includes/message.php'); ?></h2>
     <!--tabs are used to open the separate parts in separate pages.-->
             
@@ -58,13 +59,13 @@
                     <p>Google map Location</p>
                     <input type="url" class="type-feild" name="res_location" placeholder="Google map link" class="inp" required>
 
-                    <!-- <h2>Profile image</h2>
+                    <h2>Profile image</h2>
                     <p>Insert the images for Restaurant Display profile</p>
-                    <input type="file" name="fileToUpload" id="fileToUpload"> -->
+                    <input type="file" name="res_image" id="res_image">
 
                     <button type="button" class="search-btn hover" style="width:80px;height:25px " onclick="nextPrev(-1)">Previous</button>
-                <h3>Confirm Registration</h3>
-               <button type="submit" name="submit" style="margin-left:220px;margin-top:-25px" class="search-btn hover" >Register</button>
+                    <h3>Confirm Registration</h3>
+                    <input type="submit" name="submit" style="margin-left:220px;margin-top:-25px" class="search-btn hover" value="Register" required>
             </div>
         </div>
     
@@ -162,7 +163,6 @@
             } 
             else{
                 document.getElementById('message').style.color = 'red';
-                // document.getElementById('message').style.backgroundColor = 'initial';
                 document.getElementById('message').innerHTML = 'Password does not match';
             }
         }

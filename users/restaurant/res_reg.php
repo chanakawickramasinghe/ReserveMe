@@ -28,7 +28,7 @@
                     <input type="email"  class="type-feild" name="res_email" placeholder="Email" required>
 
                     <p>Telephone No</p>
-                    <input type="tel" class="type-feild" name="res_tel" placeholder="Telephone No" required>
+                    <input type="tel" class="type-feild" name="res_tel" placeholder="Telephone No" pattern='^\+?\d{0,13}' required>
                     
                 <p>Password</p>
                     <input type="password" class="type-feild" name="res_password" placeholder="Password" class="type-feild" id="res_password" required>    

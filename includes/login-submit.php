@@ -29,7 +29,7 @@ if(isset($_POST['submit'])){
             $_SESSION["active_status"] = $userRow['active_status'];
         
             $active_status= $userRow['active_status'];
-            echo "test session";
+            // echo "test session";
             }
     
     else if(mysqli_num_rows($userResult2) == 1){ 

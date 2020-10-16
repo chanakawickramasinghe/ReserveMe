@@ -2,27 +2,21 @@
 
 include('../../includes/connection.php');
 
-if(isset($_POST['submit'])){
+    if(isset($_POST['submit'])){
 	
     // Assign input data from form to variables
-	$name = $_POST['name'];
-	$email = $_POST['email'];
+    $name = $_POST['name'];
+    $email= $_POST['email'];
+    $contact = $_POST['contact'];
     $password = md5($_POST['password']);
 	$password2 = md5($_POST['password2']);
-    $contact = $_POST['contact'];
-    $dob = $_POST['dob'];
-    $pnumber = $_POST['pnumber'];
-    $street = $_POST['street'];
-    $city = $_POST['city'];
     
-    
-    //echo "test 1";
         //Check if email already exists in both tables
-        $selectmail= "SELECT * FROM customer WHERE email ='$email' " ;
+        $selectmail= "SELECT * FROM employee WHERE email ='$email' " ;
         $allmailquery = mysqli_query($connection, $selectmail ) ;  
         $num = mysqli_num_rows($allmailquery);
 
-        $selectmail2="SELECT * FROM restaurant WHERE res_email='$email'";
+        $selectmail2="SELECT * FROM restaurant WHERE email='$email'";
         $allmailquery2 = mysqli_query($connection, $selectmail2 ) ;  
         $num2 = mysqli_num_rows($allmailquery2);
         
@@ -35,30 +29,21 @@ if(isset($_POST['submit'])){
         //Insert to Database
         else {
 
-            //echo "testing 123";
-            $registrationQuery = "INSERT INTO customer (user_id,user_name,email,password,contact_no,dob,postal_number,street,city,active_status) 
-            VALUES (NULL,'$name', '$email', '$password','$contact', '$dob', '$pnumber','$street','$city',1)";
-            // $registrationQuery = "INSERT INTO customer (user_name, email, password, contact_no, no) VALUES ('$name', '$email', '$password', '$contact', '$no')";
+            $registrationQuery = "INSERT INTO employee (emp_id,emp_name,emp_email,emp_mobile,emp_password) VALUES (NULL,'$name','$email','$contact','$password')";
             if (mysqli_query($connection,$registrationQuery) == TRUE) {
                 //echo "inside TRUE";
                 $message = base64_encode(urlencode("Registration Successful"));
                 header('Location:../../includes/login.php?msg=' . $message);
-        
 				exit();
             } 
             
             else {
-                 $message = base64_encode(urlencode("SQL Error while Registering"));
-                 header('Location:customerReg.php?msg=' . $message);
+                // echo "Inside FALSE";
+                $message = base64_encode(urlencode("SQL Error while Registering"));
+                header('Location:customerReg.php?msg=' . $message);
 				exit();
             }
         }
-
-}
-
-
+    }
 mysqli_close($connection);
-   
-
-
 ?>

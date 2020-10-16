@@ -174,7 +174,7 @@
     width: 20vw;
 }
 
-/* for deactivate confirmation */
+/* for deactivate and activate confirmation */
 .btn-red{
     width:15vw;
     height: 4vh;
@@ -198,5 +198,18 @@
 
 .btn-red:hover{
     background: #ca4c2d;
+    cursor: pointer;
+}
+
+.btn-blue{
+    width:20vw;
+    height: 4vh;
+    background: #5a7ee2;
+    border: none;
+    color:rgb(0, 0, 0);
+}
+
+.btn-blue:hover{
+    background: #304bc4;
     cursor: pointer;
 }

@@ -33,6 +33,8 @@
                 </div>
                 <br>
                    <p align="center"> <input type="submit" name="submit" class="search-btn hover" value="Login"> </p>
+                </br>
+                    <p> <a href="../reset/email_verify.php">Forget Password? Click Here!</a></p>
                 </form>  
 
         </div>

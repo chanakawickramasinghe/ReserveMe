@@ -72,7 +72,7 @@
             <form>
                 <div class="form-box">
                     <button name="edit" class="btn" type="button" onclick="window.location.href='customer-profile-edit.php'">Edit Details</button>
-                    <button name="deactivate" class="btn" type="button">Deactivate Account</button>
+                    <button name="deactivate" class="btn" type="button" onclick="window.location.href='customer-confirm-deactivate.php'">Deactivate Account</button>
                 </div>
             </form>
         </div>

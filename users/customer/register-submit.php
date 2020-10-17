@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
         $allmailquery = mysqli_query($connection, $selectmail ) ;  
         $num = mysqli_num_rows($allmailquery);
 
-        $selectmail2="SELECT * FROM restaurant WHERE email='$email'";
+        $selectmail2="SELECT * FROM restaurant WHERE res_email='$email'";
         $allmailquery2 = mysqli_query($connection, $selectmail2 ) ;  
         $num2 = mysqli_num_rows($allmailquery2);
         

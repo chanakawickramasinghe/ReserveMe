@@ -36,12 +36,22 @@
                     <P id='message' ></P>
 
                     <p>Contact number</p>
-                    <input type="tel" name="contact" class="type-feild" placeholder="Mobile number"> </td>
+                    <input type="tel" name="contact" class="type-feild" placeholder="Mobile number" pattern='^\+?\d{0,13}' > </td>
 
-                    <td margin-left="30px">
+                    <td>
                     <p><b>Date of birth</p>
-                    <input type="date" name="dob" class="type-feild"> 
-                    
+                    <input type="date" name="dob" id='dob' class="type-feild" onkeyup='getAge(dob)' required> 
+                    <P id='message2' ></P>
+<!-- 
+                    <?php
+                    $dob=$_POST['dob'];
+if (time() < strtotime('+18 years', strtotime($dob))) {
+    echo 'Client is under 18 years of age.';
+    exit;
+ }
+                    ?> -->
+
+
                     <p>Address<p>
                     <p> Number </p>
                     <input type="text" name="pnumber" class="type-feild" placeholder="Number"> 
@@ -54,12 +64,12 @@
                     </table>          
  <br>
                    
-                   <p align="center"> <input type="submit" name="submit"  class="search-btn hover" value="Register"  onclick="myfunction()" required></p>
+                   <p align="center"> <input type="submit" name="submit"  class="search-btn hover" value="Register" required></p>
                    </div>
                 </form>    
             </div>
         </div>
-    
+        
         <script>
         var check = function() {
             if (document.getElementById('password').value == document.getElementById('confirm_password').value){
@@ -72,6 +82,21 @@
                 document.getElementById('message').innerHTML = 'Password does not match';
             }
         }
+
+        function getAge(birthDateString) {
+    var today = new Date();
+    var birthDate = new Date(birthDateString);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    return age;
+}
+
+if(age<16) {
+    alert("You have under 16 year old");
+} 
     
         </script>
 </body>

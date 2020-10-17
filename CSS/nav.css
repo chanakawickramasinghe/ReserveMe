@@ -16,7 +16,8 @@
 
 .logo{
   height:50px;
-  weight: 50px;
+  width: 50px;
+  align-items:left;
 }
 
 .topnav a:hover {

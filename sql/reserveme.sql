@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Generation Time: Oct 15, 2020 at 09:42 AM
+=======
+-- Generation Time: Oct 16, 2020 at 10:06 PM
+>>>>>>> 03bdd9231d274fc500795ee6c5b4d480abba4e32
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.33
 
@@ -21,6 +25,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `reserveme`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admins`
+--
+
+CREATE TABLE `admins` (
+  `admin_name` varchar(50) NOT NULL,
+  `admin_password` varchar(50) NOT NULL,
+  `admin_email` varchar(60) NOT NULL,
+  `admin_type` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admins`
+--
+
+INSERT INTO `admins` (`admin_name`, `admin_password`, `admin_email`, `admin_type`) VALUES
+('Admin', '202cb962ac59075b964b07152d234b70', 'admin@123', 'admin');
 
 -- --------------------------------------------------------
 
@@ -81,7 +105,7 @@ CREATE TABLE `restaurant` (
   `city` varchar(255) NOT NULL,
   `res_location` varchar(255) NOT NULL,
   `res_tel` int(10) NOT NULL,
-  `res_floor` varchar(255) NOT NULL,
+  `res_image` varchar(255) NOT NULL,
   `res_menu` varchar(255) NOT NULL,
   `res_password` varchar(255) NOT NULL,
   `preorder_available` varchar(11) NOT NULL,
@@ -92,8 +116,15 @@ CREATE TABLE `restaurant` (
 -- Dumping data for table `restaurant`
 --
 
+<<<<<<< HEAD
 INSERT INTO `restaurant` (`res_id`, `res_name`, `res_email`, `res_add_line1`, `res_add_line2`, `city`, `res_location`, `res_tel`, `res_floor`, `res_menu`, `res_password`, `preorder_available`, `res_rate`) VALUES
 (4, 'Chanaka Wickramasinghe', 'bla@stu.ucsc.cmb.ac.lk', 'Reid Avenue, Colombo', 'Pilimathalawa', 'Colombo', 'https://url.com', 771570227, '', '', '202cb962ac59075b964b07152d234b70', '', 4.5);
+=======
+INSERT INTO `restaurant` (`res_id`, `res_name`, `res_email`, `res_add_line1`, `res_add_line2`, `city`, `res_location`, `res_tel`, `res_image`, `res_menu`, `res_password`, `preorder_available`, `res_rate`) VALUES
+(4, 'Chanaka Wickramasinghe', 'bla@stu.ucsc.cmb.ac.lk', 'Reid Avenue, Colombo', 'Pilimathalawa', 'Colombo', 'https://url.com', 771570227, '', '', '202cb962ac59075b964b07152d234b70', '', 4.5),
+(9, 'KFC', 'BLA123@stu.ucsc.cmb.ac.lk', 'K/ Susila kanista vidyalaya', 'K/ Susila kanista vidyalaya, Pilimathalawa', 'Kandy', 'https://kfc.com', 771570227, 'WhatsApp Image 2020-10-05 at 13.37.25.jpeg', '', '202cb962ac59075b964b07152d234b70', '', 0),
+(8, 'KFC', 'kfc@stu.ucsc.cmb.ac.lk', 'K/ Susila kanista vidyalaya', 'K/ Susila kanista vidyalaya, Pilimathalawa', 'Kandy', 'https://kfc.com', 771570227, 'WhatsApp Image 2020-10-05 at 13.37.25.jpeg', '', '202cb962ac59075b964b07152d234b70', '', 0);
+>>>>>>> 03bdd9231d274fc500795ee6c5b4d480abba4e32
 
 -- --------------------------------------------------------
 
@@ -131,6 +162,23 @@ INSERT INTO `res_location` (`id`, `res_location`) VALUES
 (1, 'Colombo'),
 (2, 'Kandy'),
 (3, 'Matara');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `test`
+--
+
+CREATE TABLE `test` (
+  `image` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `test`
+--
+
+INSERT INTO `test` (`image`) VALUES
+('WhatsApp Image 2020-10-05 at 13.37.25.jpeg');
 
 -- --------------------------------------------------------
 
@@ -229,13 +277,13 @@ ALTER TABLE `employee`
 -- AUTO_INCREMENT for table `restaurant`
 --
 ALTER TABLE `restaurant`
-  MODIFY `res_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `res_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tokens`
 --
 ALTER TABLE `tokens`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

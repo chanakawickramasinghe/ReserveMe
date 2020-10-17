@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="../../CSS/nav.css">
     <link rel="stylesheet" href="../../CSS/search.css">
     <link rel="stylesheet" href="../../CSS/footer.css">
+    <link href="../../images/logo.png" rel="shortcut icon"/> 
 </head>
     <body>
         <!--Start of nav-->
@@ -21,7 +22,7 @@
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
-        <img class = "logo" src="../../images/test.jpg">
+        <img class = "logo" src="../../images/logo.png">
     </div>
     <!--End of nav-->
     
@@ -54,5 +55,11 @@
         $name= $_SESSION["name"];
         echo "$name";
     ?>
+
+     <!--Include footer.php-->
+   <div><?php include "../../includes/footer.php" ?></div>
+    
+    <!--script for onClickNav() for the navigation menu-->
+    <script src="../../js/onClickNav.js"></script>
     </body>
 </html>

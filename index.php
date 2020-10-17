@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReserveMe</title>
     <!--web-icon-->
-    <link href="images/logo.png" rel="shortcut icon"/>
-    
+    <link href="images/logo.png" rel="shortcut icon"/>    
     <!--FontAwesome-------->
     <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
     <!--stylesheet-------------------->

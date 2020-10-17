@@ -23,7 +23,7 @@
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
-            <a href= "customer-home.php"><img class = "logo" src="../../images/logo.png"></a>
+            <img class = "logo" src="../../images/logo.png">
         </div>
 
         <div>

@@ -18,7 +18,7 @@
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
-            <img class = "logo" src="../../images/test.jpg">
+            <img class = "logo" src="../../images/logo.png">
         </div>
         </br>
         <div class="row-100"><h2 class="error-msg"><?php include_once('../../includes/message.php'); ?></h2></div>

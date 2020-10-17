@@ -46,7 +46,7 @@
                             <h4><i class=\"fas fa-star-half-alt\">". $rowProduct['res_rate'] ."</i></h4>
                             <br>
                             <h4><i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i></h4>
-                            <button class=\"reserve-button pulsate\" type=\"submit\" name=\"submit\">Search<i class=\"fas fa-search\"></i></button>
+                            <button class=\"reserve-button pulsate\" type=\"submit\" name=\"submit\">Reserve<i class=\"fas fa-search\"></i></button>
 	                    </div>	
 	                </section>";
             }

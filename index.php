@@ -6,11 +6,14 @@
     <title>ReserveMe</title>
     <!--web-icon-->
     <link href="images/logo.png" rel="shortcut icon"/>
-    <link rel="stylesheet" href="CSS/main.css">
+    
+    <!--FontAwesome-------->
     <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
+    <!--stylesheet-------------------->
 	<link rel="stylesheet" type="text/css" href="CSS/nav.css">
     <link rel="stylesheet" href="CSS/search.css">
     <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/main.css">
 </head>
 <body>
     <!--Start of nav-->

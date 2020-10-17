@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 17, 2020 at 05:08 PM
+-- Generation Time: Oct 17, 2020 at 05:19 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.33
 
@@ -31,6 +31,7 @@ CREATE TABLE `employee` (
   `emp_id` int(10) NOT NULL,
   `res_id` int(10) NOT NULL,
   `emp_name` varchar(255) NOT NULL,
+  `emp_email` varchar(255) NOT NULL,
   `emp_mobile` int(10) NOT NULL,
   `emp_password` varchar(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

@@ -51,8 +51,8 @@
 
                 <div class="form-box"><c>
                     <a href="#" class="search-button pulsate">Pre - Order Menu</a>
-                    <a href="#" class="search-button pulsate">Update the Menu</a>
-                    <a href="#" class="search-button pulsate">Add Employee</a>
+                    <a href="add-menu.php" class="search-button pulsate">Update the Menu</a>
+                    <a href="../employee/employee-add.php" class="search-button pulsate">Add Employee</a>
                     <a href="#" class="search-button pulsate">Reception Hall</a>
                 </c></div>
             </form>            

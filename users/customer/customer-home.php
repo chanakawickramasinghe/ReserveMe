@@ -50,12 +50,7 @@
     <!--End of Header-->
             </form>
         </div>
-    <?php 
-        checkSession();
-        $name= $_SESSION["name"];
-        echo "$name";
-    ?>
-
+  
      <!--Include footer.php-->
    <div><?php include "../../includes/footer.php" ?></div>
     

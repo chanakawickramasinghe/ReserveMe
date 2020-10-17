@@ -40,7 +40,7 @@ include('../../includes/connection.php');
             else {
                 // echo "Inside FALSE";
                 $message = base64_encode(urlencode("SQL Error while Registering"));
-                header('Location:customerReg.php?msg=' . $message);
+                header('Location:employee-add.php?msg=' . $message);
 				exit();
             }
         }

@@ -20,7 +20,7 @@
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
-            <img class = "logo" src="../../images/test.jpg">
+            <img class = "logo" src="../../images/logo.png">
         </div>
     <!--End of nav-->
         

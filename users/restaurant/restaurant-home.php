@@ -15,13 +15,13 @@
     <!--Start of nav-->
     <div class="topnav" id="myTopnav">
         <a href="../../index.php">Logout</a>
-        <a href="customer-profile.php">My Profile</a>
+        <a href="restaurant-profile.php">Profile</a>
         <a href="#contact">Contact</a>
         <a href="#about">About</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
         </a>
-        <img class = "logo" src="../../images/test.jpg">
+        <img class = "logo" src="../../images/logo.png">
     </div>
     <!--End of nav-->
 
@@ -51,7 +51,7 @@
                 <div class="form-box"><c>
                     <a href="#" class="search-button pulsate">Pre - Order Menu</a>
                     <a href="#" class="search-button pulsate">Update the Menu</a>
-                    <a href="#" class="search-button pulsate">Add Employee</a>
+                    <a href="../employee/employee-add.php" class="search-button pulsate">Manage Employee</a>
                     <a href="#" class="search-button pulsate">Reception Hall</a>
                 </c></div>
             </form>            

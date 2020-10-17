@@ -21,13 +21,13 @@
                     <table style="width:500px">
                         <td>
                             <p><b>Name</p>
-                            <input type="text" class="type-feild" name="name" placeholder="Your name" required>   
+                            <input type="text" class="type-feild" name="name" placeholder="Employee name" required>   
 
                             <p><b>Email</p>
-                            <input type="text" class="type-feild" name="Email" placeholder="Email Address" required> 
+                            <input type="email" class="type-feild" name="email" placeholder="Email Address" required> 
 
                             <p>Contact number</p>
-                            <input type="text" name="contact" class="type-feild" placeholder="Mobile number" required>
+                            <input type="tel" name="contact" class="type-feild" placeholder="Mobile number" pattern='^\+?\d{0,13}' required>
 
                             <p>Password</p>
                             <input type="password" name="password" class="type-feild" placeholder="Enter Password" id="password"  required>

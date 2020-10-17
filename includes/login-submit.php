@@ -13,9 +13,13 @@ if(isset($_POST['submit'])){
     $userQueryCustomer = "SELECT * FROM customer WHERE email ='$email' and password='$password'";
     $userQueryRes="SELECT * FROM restaurant WHERE res_email='$email' and res_password='$password'";
     $userQueryAdmin="SELECT * FROM admins WHERE admin_email='$email' and admin_password='$password'";
+    $userQueryEmployee="SELECT * FROM employee WHERE emp_email='$email' and emp_password='$password'";
+
     $userResult1= mysqli_query($connection, $userQueryCustomer);
     $userResult2=mysqli_query($connection, $userQueryRes);
     $userResult3=mysqli_query($connection, $userQueryAdmin);
+    $userResult4=mysqli_query($connection, $userQueryEmployee);
+
     //print_r($userResult);
     
     //User Exists
@@ -44,8 +48,14 @@ if(isset($_POST['submit'])){
     
     else if(mysqli_num_rows($userResult3) == 1){
 
-        $userRow = mysqli_fetch_array($userResult2);
+        $userRow = mysqli_fetch_array($userResult3);
         header( "Location:../users/admin/admin-home.php");
+
+    }
+    else if(mysqli_num_rows($userResult4) == 1){
+
+        $userRow = mysqli_fetch_array($userResult4);
+        header( "Location:../users/employee/employee-home.php");
 
     }
     else {

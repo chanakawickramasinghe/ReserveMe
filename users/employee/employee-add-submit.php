@@ -12,15 +12,21 @@ include('../../includes/connection.php');
 	$password2 = md5($_POST['password2']);
     
         //Check if email already exists in both tables
-        $selectmail= "SELECT * FROM employee WHERE email ='$email' " ;
+        $selectmail= "SELECT * FROM customer WHERE email ='$email' " ;
         $allmailquery = mysqli_query($connection, $selectmail ) ;  
         $num = mysqli_num_rows($allmailquery);
 
-        $selectmail2="SELECT * FROM restaurant WHERE email='$email'";
+        $selectmail2="SELECT * FROM restaurant WHERE res_email='$email'";
         $allmailquery2 = mysqli_query($connection, $selectmail2 ) ;  
         $num2 = mysqli_num_rows($allmailquery2);
+
+        $selectmail3="SELECT * FROM  employee WHERE emp_email='$email'";
+        $allmailquery3 = mysqli_query($connection, $selectmail3 ) ;  
+        $num3 = mysqli_num_rows($allmailquery3);
+
+
         
-        if($num > 0 || $num2 > 0){
+        if($num > 0 || $num2 > 0 || $num3 >0){
         $message = base64_encode(urlencode("Email already exists"));
         header('Location:customerReg.php?msg=' . $message);
         exit();
@@ -28,8 +34,7 @@ include('../../includes/connection.php');
         
         //Insert to Database
         else {
-
-            $registrationQuery = "INSERT INTO employee (emp_id,emp_name,emp_email,emp_mobile,emp_password) VALUES (NULL,'$name','$email','$contact','$password')";
+            $registrationQuery = "INSERT INTO employee (emp_id, emp_name, emp_email, emp_mobile, emp_password) VALUES (NULL,'$name','$email','$contact','$password')";
             if (mysqli_query($connection,$registrationQuery) == TRUE) {
                 //echo "inside TRUE";
                 $message = base64_encode(urlencode("Registration Successful"));
@@ -40,7 +45,7 @@ include('../../includes/connection.php');
             else {
                 // echo "Inside FALSE";
                 $message = base64_encode(urlencode("SQL Error while Registering"));
-                header('Location:customerReg.php?msg=' . $message);
+                header('Location:employee-add.php?msg=' . $message);
 				exit();
             }
         }

@@ -14,13 +14,13 @@
         <!--Start of nav-->
         <div class="topnav" id="myTopnav">
             <a href="#logout">Logout</a>
-            <a href="customer-profile.php">My Profile</a>
+            <a href="customer-profile.php">Profile</a>
             <a href="#contact">Contact</a>
             <a href="#about">About</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
-            <img class = "logo" src="../../images/test.jpg">
+            <img class = "logo" src="../../images/logo.png">
         </div>
         <!--End of nav-->
                 
@@ -29,12 +29,12 @@
         checkSession();
         echo "<table border=1 class=\"user\">";
     
-        $res_id = $_SESSION["res_id"]; //have to add session id
-        echo"</br></br><h1 class=div-c>Welcome " .$_SESSION["res_name"]."</h1>";
-        $sql = "SELECT * FROM restaurant WHERE resid='$res_id'";
+        $res_id = $_SESSION["userID"]; //have to add session id
+        // echo"</br></br><h1 class=div-c>Welcome " .$_SESSION["res_name"]."</h1>";
+        $sql = "SELECT * FROM restaurant WHERE res_id='$res_id'";
         $userquery = mysqli_query($connection,$sql);
         while($row = mysqli_fetch_assoc($userquery)){
-
+            echo"</br></br><h1 class=div-c>Welcome " .$row['res_name']."</h1>";
             echo "
                 </br>
                 <tr>

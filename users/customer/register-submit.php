@@ -25,8 +25,13 @@ if(isset($_POST['submit'])){
         $selectmail2="SELECT * FROM restaurant WHERE res_email='$email'";
         $allmailquery2 = mysqli_query($connection, $selectmail2 ) ;  
         $num2 = mysqli_num_rows($allmailquery2);
+
+        $selectmail3="SELECT * FROM  employee WHERE emp_email='$email'";
+        $allmailquery3 = mysqli_query($connection, $selectmail3 ) ;  
+        $num3 = mysqli_num_rows($allmailquery3);
+
         
-        if($num > 0 || $num2 > 0){
+        if($num > 0 || $num2 > 0 || $num3 >0){
         $message = base64_encode(urlencode("Email already exists"));
         header('Location:customerReg.php?msg=' . $message);
         exit();

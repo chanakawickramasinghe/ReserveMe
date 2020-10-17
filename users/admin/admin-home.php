@@ -10,6 +10,7 @@
 	    <link rel="stylesheet" href="../../CSS/nav.css">
         <link rel="stylesheet" href="../../CSS/search.css">
         <link rel="stylesheet" href="../../CSS/footer.css">
+        <link href="../../images/logo.png" rel="shortcut icon"/> 
     </head>
     <body>
 
@@ -27,8 +28,11 @@
         <!--End of nav-->
 
 
-        <!-- Footer -->
-        <div><?php include "../../includes/footer.php" ?></div>
+        <!--Include footer.php-->
+   <div><?php include "../../includes/footer.php" ?></div>
+    
+    <!--script for onClickNav() for the navigation menu-->
+    <script src="../../js/onClickNav.js"></script>
     
     </body>
 </html>

@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
+-- Generation Time: Oct 15, 2020 at 09:42 AM
+=======
 -- Generation Time: Oct 16, 2020 at 10:06 PM
+>>>>>>> 03bdd9231d274fc500795ee6c5b4d480abba4e32
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.33
 
@@ -112,10 +116,15 @@ CREATE TABLE `restaurant` (
 -- Dumping data for table `restaurant`
 --
 
+<<<<<<< HEAD
+INSERT INTO `restaurant` (`res_id`, `res_name`, `res_email`, `res_add_line1`, `res_add_line2`, `city`, `res_location`, `res_tel`, `res_floor`, `res_menu`, `res_password`, `preorder_available`, `res_rate`) VALUES
+(4, 'Chanaka Wickramasinghe', 'bla@stu.ucsc.cmb.ac.lk', 'Reid Avenue, Colombo', 'Pilimathalawa', 'Colombo', 'https://url.com', 771570227, '', '', '202cb962ac59075b964b07152d234b70', '', 4.5);
+=======
 INSERT INTO `restaurant` (`res_id`, `res_name`, `res_email`, `res_add_line1`, `res_add_line2`, `city`, `res_location`, `res_tel`, `res_image`, `res_menu`, `res_password`, `preorder_available`, `res_rate`) VALUES
 (4, 'Chanaka Wickramasinghe', 'bla@stu.ucsc.cmb.ac.lk', 'Reid Avenue, Colombo', 'Pilimathalawa', 'Colombo', 'https://url.com', 771570227, '', '', '202cb962ac59075b964b07152d234b70', '', 4.5),
 (9, 'KFC', 'BLA123@stu.ucsc.cmb.ac.lk', 'K/ Susila kanista vidyalaya', 'K/ Susila kanista vidyalaya, Pilimathalawa', 'Kandy', 'https://kfc.com', 771570227, 'WhatsApp Image 2020-10-05 at 13.37.25.jpeg', '', '202cb962ac59075b964b07152d234b70', '', 0),
 (8, 'KFC', 'kfc@stu.ucsc.cmb.ac.lk', 'K/ Susila kanista vidyalaya', 'K/ Susila kanista vidyalaya, Pilimathalawa', 'Kandy', 'https://kfc.com', 771570227, 'WhatsApp Image 2020-10-05 at 13.37.25.jpeg', '', '202cb962ac59075b964b07152d234b70', '', 0);
+>>>>>>> 03bdd9231d274fc500795ee6c5b4d480abba4e32
 
 -- --------------------------------------------------------
 

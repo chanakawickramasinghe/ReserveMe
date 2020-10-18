@@ -11,6 +11,8 @@
     <link href="../css/footer.css" rel="stylesheet" type="text/css"/>
     <link href="images/logo.png" rel="shortcut icon"/> 
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body class="login-body">
@@ -31,11 +33,10 @@
     
         <div class="login-box" style="width:350px">
         <br>
-        <br>
-         <h3 class="error-msg"><?php include_once('message.php'); ?></h3> 
-        
+        <br>      
         
         <img src="../images/profile.png" class="avatar">
+        <h3 class="error-msg"><?php include_once('message.php'); ?></h3> 
 
             <h1 align="center">Login Here</h1>
                 <form action="login-submit.php" method="post">

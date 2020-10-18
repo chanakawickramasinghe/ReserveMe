@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
     $userQueryAdmin="SELECT * FROM admins WHERE admin_email='$email' and admin_password='$password'";
     $userQueryEmployee="SELECT * FROM employee WHERE emp_email='$email' and emp_password='$password'";
 
-    $userResult1= mysqli_query($connection, $userQueryCustomer);
+    $userResult1=mysqli_query($connection, $userQueryCustomer);
     $userResult2=mysqli_query($connection, $userQueryRes);
     $userResult3=mysqli_query($connection, $userQueryAdmin);
     $userResult4=mysqli_query($connection, $userQueryEmployee);
@@ -67,6 +67,5 @@ if(isset($_POST['submit'])){
 }
 
 mysqli_close($connection);
-    
-    
+     
 ?>

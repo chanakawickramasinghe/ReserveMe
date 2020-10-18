@@ -15,7 +15,7 @@
     background: #dad5d5b2;
     color: #000000;
     box-sizing: border-box;
-    padding: 70px 30px;
+    padding: 30px;
     position: center;
     border: #250779 4px solid;
     border-radius: 10px;
@@ -23,12 +23,12 @@
     
   }
 .type-feild{
-    height: 4vh;
+    height: 3vh;
     padding: 0.6vh;
     border-color: khaki;
     border-radius:10px;
     outline:none;
-    width: 200px;
+    
 }
 
 .btn{
@@ -44,8 +44,9 @@
     width: 100px;
     height: 100px;
     border-radius: 30%;
-    position: absolute;
-    top: 18px;
+    position: relative;
+    margin-top: 1vh;
+    padding-top: 1vh;
     left: calc(50% - 50px);
 }
 

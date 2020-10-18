@@ -46,7 +46,7 @@
                             <h4><i class=\"fas fa-star-half-alt\">". $rowProduct['res_rate'] ."</i></h4>
                             <br>
                             <h4><i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i></h4>
-                            <button class=\"reserve-button pulsate\" type=\"submit\" name=\"submit\">Reserve<i class=\"fas fa-search\"></i></button>
+                            <button class=\"reserve-button pulsate\" type=\"submit\" name=\"submit\">Reserve</button>
 	                    </div>	
 	                </section>";
             }
@@ -59,13 +59,18 @@
 	    <div class="content-container">	
 	        <div class="select">
 		        <ul class="select-menu">
-			        <li><a href="#">Menu</a></li>
-			        <li><a href="#">Seeting</a></li>
-			        <li><a href="#">Directions</a></li>
-			        <li><a href="#">Reviews</a></li>
+			        <li><a href="menu_view.php" target="iframe">Menu</a></li>
+			        <li><a href="floorplan_view.php" target="iframe">Seeting</a></li>
+			        <li><a href="direction.php" target="iframe">Directions</a></li>
+			        <li><a href="review.php" target="iframe">Reviews</a></li>
 		        </ul>
 	        </div>
 	    </div>	
+        <div>
+            <iframe src="index.php.html" style="border: none;" height="300px" name = "iframe" scrolling="no" class="iframe">
+                <p>hiiiii</p>
+            </iframe>
+        </div>
 	</section>
 	<!--End of product-container-->
 		

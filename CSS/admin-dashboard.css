@@ -1,0 +1,80 @@
+  .sidebar {
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    height: 100%;
+    background-color: #f1f1f1;
+    position: relative;
+    float: left;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+   
+  .sidebar a.active {
+    background-color: #1980d4;
+    color: white;
+  }
+  
+  .sidebar a:hover:not(.active) {
+    background-color: rgb(53, 120, 129);
+    color: white;
+  }
+  
+  div.content {
+    margin-top: 50px;
+    margin-left: 200px;
+    padding: 100px 16px;
+    height: 1000px;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 20%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      width: 20%;
+      text-align: center;
+      float: none;
+    }
+  }
+
+  .content-div{
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    background-color: #ffffff;
+    position: relative;
+    height: auto;
+    overflow: auto;
+    float: right;
+  }
+
+  /* welcome message */
+  h2 {
+      text-align: center;
+      color: #1980d4;
+    }
+
+
+/* for manage users */
+.row-33 {
+    float: left;
+    position: relative;
+    padding: 15px;
+    width: 33%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;    
+}

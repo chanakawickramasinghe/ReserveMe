@@ -29,8 +29,8 @@
         
         <div class="sidebar">
             </br></br>
-            <a class="active" href="#home">Home</a>
-            <a href="manage-users.php">Manage Users</a>
+            <a href="admin-home.php">Home</a>
+            <a href="#users" class="active">Manage Users</a>
             <a href="#complaints">Complaints</a>
             <a href="#messages">Messages</a>
             <a href="#promotions">Promotions</a>
@@ -41,7 +41,17 @@
         </div>
         <div class="content-div">
             <br><br>        
-            <h2>Welcome Chanaka!</h2>
+            <h2>Users of the system</h2></h2>
+
+            <div class="row-33">
+                <p>Hello 1</p>
+            </div>
+            <div class="row-33">
+                <p>Hello 1</p>
+            </div>
+            <div class="row-33">
+                <p>Hello 1</p>
+            </div>
         </div>
 
 

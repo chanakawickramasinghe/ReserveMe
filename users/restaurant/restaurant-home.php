@@ -40,18 +40,15 @@
                         <option value="kandy">Kandy</option>
                         <option value="gampaha">Gampaha</option>
                     </select>
-                    <select name="search-type" class="search-feild search-type">
-                        <option value="restaurant">Restaurant</option>
-                        <option value="dish">Dish</option>
-                    </select>
+                    
                     <a href="#" class="search-button pulsate">Search<i class="fas fa-search"></i></a>
                 </div>
                 <br><br>
 
                 <div class="form-box"><c>
-                    <a href="#" class="search-button pulsate">Pre - Order Menu</a>
-                    <a href="#" class="search-button pulsate">Update the Menu</a>
-                    <a href="#" class="search-button pulsate">Add Employee</a>
+                    <a href="add-preordermenu.php" class="search-button pulsate">Pre - Order Menu</a>
+                    <a href="add-menu.php" class="search-button pulsate">Update the Menu</a>
+                    <a href="../employee/employee-add.php" class="search-button pulsate">Add Employee</a>
                     <a href="#" class="search-button pulsate">Reception Hall</a>
                 </c></div>
             </form>            

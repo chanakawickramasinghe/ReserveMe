@@ -48,7 +48,7 @@
                     <i class="fas fa-mug-hot"></i>
                 </div>
                 <div class="about-text">
-                    <h2 class="about-subtitle">Drinks</h2>
+                    <h2 class="about-subtitle"><a href="category/arabic.php">Drinks</a></h2>
                     <p class="about-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis corporis </p>
                 </div>
             </article>

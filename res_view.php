@@ -54,25 +54,98 @@
     ?>
     <!--End of main-section-->
 
-	<!--Start of product-container-->
-    <section class="ccontent">
-	    <div class="content-container">	
-	        <div class="select">
-		        <ul class="select-menu">
-			        <li><a href="menu_view.php" target="iframe">Menu</a></li>
-			        <li><a href="floorplan_view.php" target="iframe">Seeting</a></li>
-			        <li><a href="direction.php" target="iframe">Directions</a></li>
-			        <li><a href="review.php" target="iframe">Reviews</a></li>
-		        </ul>
-	        </div>
-	    </div>	
-        <div>
-            <iframe src="index.php.html" style="border: none;" height="300px" name = "iframe" scrolling="no" class="iframe">
-                <p>hiiiii</p>
-            </iframe>
-        </div>
-	</section>
-	<!--End of product-container-->
+    <!--Start of pop up login page-->
+
+    <!--End of pop up login page-->
+
+    <!--Start of Menu content-->
+    <section class="content">
+        <div class="p-heading">
+		    <h3>Menu</h3>
+	    </div>
+        <section id="gallery">    
+            <div id="gallery-center">
+                <?php 
+                    if(isset($_GET['res_id'])){
+                        $retriewMenu = "SELECT * FROM menu WHERE res_id = ".$_GET['res_id'];
+                        $resultMenu = mysqli_query($connection,$retriewMenu);
+                        while($rowProduct  = mysqli_fetch_assoc($resultMenu)){  
+                            echo"<article class=\"gallery-item\">
+                                    <a href=\"images/restaurant/{$rowProduct['res_id']}/menu/{$rowProduct['menu_id']}.jpg\">
+                                    <img class=\"food-img\" src= \"images/restaurant/{$rowProduct['res_id']}/menu/{$rowProduct['menu_id']}.jpg\">
+                                    </a>";
+                        }
+                        echo"</article>";
+                    }
+                ?>
+            </div>
+        </section>    
+    </section>
+    <!--End of Menu content-->
+
+    <!--Start of Floorplan content-->
+    <section class="content">
+        <div class="p-heading">
+		    <h3>Floorplan </h3>
+	    </div>
+        <section id="gallery">    
+            <div id="gallery-center">
+                <?php 
+                    if(isset($_GET['res_id'])){
+                        $retriewMenu = "SELECT * FROM floorplan WHERE res_id = ".$_GET['res_id'];
+                        $resultMenu = mysqli_query($connection,$retriewMenu);
+                        while($rowProduct  = mysqli_fetch_assoc($resultMenu)){  
+                            echo"<article class=\"gallery-item\">
+                                    <a href=\"images/restaurant/{$rowProduct['res_id']}/menu/{$rowProduct['floorplan_id']}.jpg\">
+                                    <img class=\"food-img\" src= \"images/restaurant/{$rowProduct['res_id']}/floorplan/{$rowProduct['floorplan_id']}.jpg\">
+                                </a>";
+                        }
+                        echo"</article>";
+                    }
+                ?>    
+            </div>
+        </section>   
+    </section>
+    <!--End of floorplan content-->
+
+    <!--Start of Map-->
+    <section class="content">
+        <div class="p-heading">
+		    <h3>Floorplan </h3>
+	    </div>
+        <section id="gallery">    
+            <div id="gallery-center">
+                <?php 
+                    if(isset($_GET['res_id'])){
+                        $retriewMenu = "SELECT * FROM restaurant WHERE res_id = ".$_GET['res_id'];
+                        $resultMenu = mysqli_query($connection,$retriewMenu);
+                        while($rowProduct  = mysqli_fetch_assoc($resultMenu)){  
+                            echo"<div class=\"mapouter\">
+                                    <div class=\"gmap_canvas\">
+                                        <iframe width=\"600\" height=\"500\" id=\"gmap_canvas\" src=\"{$rowProduct['res_location']}\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\"></iframe>                               
+                                    </div>
+                                </div>";
+                        }
+                        echo"</article>";
+                    }
+                ?>    
+            </div>
+        </section>   
+    </section>
+    <!--End of Map-->
+
+    <!--Start of Review-->
+    <section class="content">
+        <div class="p-heading">
+		    <h3>Review</h3>
+	    </div>
+        <section id="gallery">    
+            <div id="gallery-center">         
+                <iframe width="600" height="500" id="gmap_canvas" src="review/index.html?res_id=4" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>                               
+            </div>
+        </section>    
+    </section>
+    <!--End of Review-->
 		
 	<!--Include footer.php-->
     <div><?php include "includes/footer.php" ?></div>

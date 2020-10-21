@@ -25,6 +25,12 @@
     </div>
     <!--End of nav-->
 
+    <?php   
+    
+include('../../includes/connection.php');
+include('../../includes/session.php');
+    checkSession();  //create sessions
+       ?>
     <!--Start of Header-->
     <header class="header">
         <div class="search">
@@ -48,7 +54,7 @@
                 <div class="form-box"><c>
                     <a href="add-preordermenu.php" class="search-button pulsate">Pre - Order Menu</a>
                     <a href="add-menu.php" class="search-button pulsate">Update the Menu</a>
-                    <a href="../employee/employee-add.php" class="search-button pulsate">Add Employee</a>
+                    <a href="../employee/employee-add.php" class="search-button pulsate">Manage Employee</a>
                     <a href="#" class="search-button pulsate">Reception Hall</a>
                 </c></div>
             </form>            

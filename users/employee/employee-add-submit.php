@@ -36,8 +36,9 @@ include('../../includes/session.php');
         //Insert to Database
         else {
 
-            $_SESSION['res_id']=['']
-            $registrationQuery = "INSERT INTO employee (emp_id, emp_name, emp_email, emp_mobile, emp_password) VALUES (NULL,'$name','$email','$contact','$password')";
+            checkSession(); 
+            $res_id=$_SESSION['resID'];
+            $registrationQuery = "INSERT INTO employee (emp_id, res_id, emp_name, emp_email, emp_mobile, emp_password) VALUES (NULL,$res_id,'$name','$email','$contact','$password')";
             if (mysqli_query($connection,$registrationQuery) == TRUE) {
                 //echo "inside TRUE";
                 $message = base64_encode(urlencode("Registration Successful"));

@@ -1,6 +1,7 @@
 <?php
 
 include('../../includes/connection.php');
+include('../../includes/session.php');
 
     if(isset($_POST['submit'])){
 	
@@ -34,6 +35,8 @@ include('../../includes/connection.php');
         
         //Insert to Database
         else {
+
+            $_SESSION['res_id']=['']
             $registrationQuery = "INSERT INTO employee (emp_id, emp_name, emp_email, emp_mobile, emp_password) VALUES (NULL,'$name','$email','$contact','$password')";
             if (mysqli_query($connection,$registrationQuery) == TRUE) {
                 //echo "inside TRUE";

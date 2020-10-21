@@ -26,9 +26,8 @@
     <div class="topnav" id="myTopnav">
         <a href="../../index.php">Logout</a>
         <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-       
-        <img class = "logo" src="../../images/logo.png">
+        <a href="#about">About</a>       
+        <img class="logo" style="margin-right:1080px" src="../../images/logo.png">
         
     </div>
     <!--End of nav-->
@@ -78,6 +77,7 @@
                
             </form>            
     </div>
+    <?php include('../../includes/footer.php'); ?>
     </body>
 </html>
     

@@ -27,7 +27,7 @@
         <div class="row-100">
             <div class="login-box" style="width:400px" style="height:">
                
-            <img src="../../images/profile.png" class="avatar">
+            <img src="../../images/profile.png" style="margin-top:50px"class="avatar">
             <br><br>
             <h1 align="center">Employee Registration</h1>
         

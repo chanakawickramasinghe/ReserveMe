@@ -10,9 +10,9 @@
 			|
 			<a href="#">Blog</a>
 			|
-			<a href="#">About</a>
+			<a href="about.php">About</a>
 			|
-			<a href="#">Contact</a>
+			<a href="../users/admin/help-desk.php">Contact</a>
         </p>
         <div class="footer-icons">
 			<a href="#"><i class="fa fa-facebook"></i></a>

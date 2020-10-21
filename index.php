@@ -20,7 +20,7 @@
     <img class = "logo" src="images/logo.png">
         <a href="users/user-type.php">Register</a>
         <a href="includes/login.php">Login</a>
-        <a href="includes/contact.php">Contact</a>
+        <a href="users/admin/help-desk.php">Contact</a>
         <a href="includes/about.php">About</a>
         <a href="javascript:void(0);" class="icon" onclick="onClickNav()">
             <i class="fa fa-bars"></i>

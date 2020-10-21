@@ -35,7 +35,7 @@
         <br>
         <br>      
         
-        <img src="../images/profile.png" class="avatar">
+        <img src="../images/profile.png" style="margin-top:70px" class="avatar">
         <h3 class="error-msg"><?php include_once('message.php'); ?></h3> 
 
             <h1 align="center">Login Here</h1>

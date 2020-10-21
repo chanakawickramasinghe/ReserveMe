@@ -41,7 +41,7 @@ include('../../includes/session.php');
             if (mysqli_query($connection,$registrationQuery) == TRUE) {
                 //echo "inside TRUE";
                 $message = base64_encode(urlencode("Registration Successful"));
-                header('Location:../../includes/login.php?msg=' . $message);
+                header('Location:../restaurant/restaurant-home.php?msg=' . $message);
 				exit();
             } 
             

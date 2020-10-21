@@ -22,59 +22,35 @@
 </head>
 
 <body>
-    <!--Start of nav-->
+   <!--Start of nav-->
     <div class="topnav" id="myTopnav">
         <a href="../../index.php">Logout</a>
+        <a href="customer-profile.php">My Profile</a>
         <a href="#contact">Contact</a>
-        <a href="#about">About</a>       
-        <img class="logo" style="margin-right:1080px" src="../../images/logo.png">
-        
+        <a href="#about">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+        </a>
+        <img class = "logo" src="../../images/logo.png">
     </div>
     <!--End of nav-->
 
-<h1 style= "color:white" align="center"><b>Employee Home<b></h1>
+    <!--Start of options-->
+    <header class="header">
+        <div class="search">
+        <img class = "image" src="../../images/employee.png" width="125" height="125">
+        <h1 style= "color:white;"><c><b>Employee Home<b><c></h1>
         <br><br><br>
-   
-         <!-- Adding the table with current user details -->
-         <?php
-        checkSession();
-        echo "<table border=1 class=\"user\">";
-        
-        $userID = $_SESSION["userID"]; //have to add session id
-        $sql = "SELECT * FROM employee WHERE emp_id='$userID'";
-        
-        $userquery = mysqli_query($connection,$sql);
-        while($row = mysqli_fetch_assoc($userquery)){
-        echo"</br></br><h1 class=div-c>Welcome " .$row['emp_name']."</h1>";
-
-            echo "
-                </br>
-                
-                <tr>                  
-                <th>Name</th><td>".$row['emp_name']."</td>
-                </tr>
-                <tr>
-                <th>Email</th><td>".$row['emp_email']."</td>
-                </tr>
-                <tr>
-                <th>Contact No</th><td>".$row['emp_mobile']."</td>
-                </tr>";
-        } 
-        echo "</table>";
-        ?>
-        </br>
-        <!-- edit details button -->
-       
-        <div class="employee-nav">
             <form>
-
-               
-                    <a href="#" class="search-button pulsate">confirm Table Reservation</a><br>
-                    <a href="#" class="search-button pulsate">Confirm Pre- Order</a><br>
-                    <a href="../employee/employee-add.php" class="search-button pulsate">Notification</a>
-                    <br>
+                
+                <div class="form-box"><c>
+                    <a href="#" class="search-button pulsate">Pre - Order Menu</a>
+                    <a href="#" class="search-button pulsate">Customer Queries</a>
+                    <a href="#" class="search-button pulsate">Reports</a>
+                    <a href="#" class="search-button pulsate">Manage Reservation</a>
                     <a href="#" class="search-button pulsate">Reception Hall</a>
-               
+                </c></div>
+
             </form>            
     </div>
     <?php include('../../includes/footer.php'); ?>
@@ -83,3 +59,4 @@
     
 </body>
 </html>
+    

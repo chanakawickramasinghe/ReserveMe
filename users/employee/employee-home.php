@@ -21,7 +21,7 @@
 
 </head>
 
-<body>
+<body style="padding:0px">
    <!--Start of nav-->
     <div class="topnav" id="myTopnav">
         <a href="../../index.php">Logout</a>
@@ -31,7 +31,7 @@
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
         </a>
-        <img class = "logo" src="../../images/logo.png">
+        <img style="margin-right:1000px"class = "logo" src="../../images/logo.png">
     </div>
     <!--End of nav-->
 
@@ -53,6 +53,7 @@
 
             </form>            
     </div>
+    </header>
     <?php include('../../includes/footer.php'); ?>
     </body>
 </html>

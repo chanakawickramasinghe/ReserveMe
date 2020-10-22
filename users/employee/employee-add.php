@@ -45,13 +45,13 @@
 
             echo "          
                 <tr>
-                <td>".$row['emp_email']."</td><td>".$row['emp_name']."</td><td>".$row['emp_mobile']."</td> <td><button value=\"delete\" >Delete </button></td> <td><button value=\"delete\" >Edit</button></td>
+                <td>".$row['emp_email']."</td><td>".$row['emp_name']."</td><td>".$row['emp_mobile']."</td> <td><button type=\"button\" name=\"dlt\" class=\"delete\" >Delete </button></td> <td><button value=\"delete\" >Edit</button></td>
                 </tr>
                 ";
         } 
         echo "</table>";
         ?>
-
+       
         <div class="row-100">
             <div class="login-box" style="width:400px" style="height:">
                
@@ -91,8 +91,7 @@
         </div>
         <?php
 
-// include('../../includes/connection.php');
-// include('../../includes/session.php');
+
 
     if(isset($_POST['submit'])){
 	
@@ -127,20 +126,19 @@
         //Insert to Database
         else {
 
-            // checkSession(); 
-            // $res_id=$_SESSION['resID'];
+            
             $registrationQuery = "INSERT INTO employee (emp_id, res_id, emp_name, emp_email, emp_mobile, emp_password) VALUES (NULL,$resID,'$name','$email','$contact','$password')";
             if (mysqli_query($connection,$registrationQuery) == TRUE) {
-                //echo "inside TRUE";
+                
                 $message = base64_encode(urlencode("Registration Successful"));
                 header('Location:employee-add.php?msg=' . $message);
 				exit();
             } 
             
             else {
-                // echo "Inside FALSE";
+                
                 $message = base64_encode(urlencode("SQL Error while Registering"));
-                // header('Location:employee-add.php?msg=' . $message);
+                header('Location:employee-add.php?msg=' . $message);
 				exit();
             }
         }

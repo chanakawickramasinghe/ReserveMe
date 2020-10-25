@@ -1,3 +1,4 @@
+
 <html>  
 <head>
     <title>Add Employee</title>
@@ -10,7 +11,8 @@
         <link href="../../images/logo.png" rel="shortcut icon"/> 
 </head>
     
-<body class="login-body">
+<body >
+
 
     <!--Start of nav-->
     <div class="topnav" id="myTopnav">
@@ -24,16 +26,42 @@
             <img class = "logo" src="../../images/logo.png">
         </div>
         <!--End of nav-->
+
+        <?php
+        include('../../includes/connection.php');
+        include('../../includes/session.php');
+        checkSession();
+        echo "<table border=1 class=\"user\">";
+        
+        $resID = $_SESSION["resID"]; //have to add session id
+        $sql = "SELECT * FROM employee WHERE res_id='$resID'";
+        
+        $userquery = mysqli_query($connection,$sql);
+        echo " <b><tr>                  
+                <th>Name</th><th>Email</th><th>Contact No</th>
+                </tr></b>";
+        while($row = mysqli_fetch_assoc($userquery)){
+        // echo"</br></br><h1 class=div-c>Welcome " .$row['emp_name']."</h1>";
+
+            echo "          
+                <tr>
+                <td>".$row['emp_email']."</td><td>".$row['emp_name']."</td><td>".$row['emp_mobile']."</td> <td><button type=\"button\" name=\"dlt\" class=\"delete\" >Delete </button></td> <td><button value=\"delete\" >Edit</button></td>
+                </tr>
+                ";
+        } 
+        echo "</table>";
+        ?>
+       
         <div class="row-100">
             <div class="login-box" style="width:400px" style="height:">
                
-            <img src="../../images/profile.png" class="avatar">
+            <img src="../../images/profile.png" style="margin-top:50px"class="avatar">
             <br><br>
             <h1 align="center">Employee Registration</h1>
         
             <h2 class="error-msg"><?php include_once('../../includes/message.php'); ?></h2>
 
-                <form action="employee-add-submit.php" method="post">                   
+                <form action="employee-add.php" method="post">                   
                 <div>   
                     <table style="width:500px">
                         <td>
@@ -61,6 +89,62 @@
                 </form>    
             </div>
         </div>
+        <?php
+
+
+
+    if(isset($_POST['submit'])){
+	
+    // Assign input data from form to variables
+    $name = $_POST['name'];
+    $email= $_POST['email'];
+    $contact = $_POST['contact'];
+    $password = md5($_POST['password']);
+	$password2 = md5($_POST['password2']);
+    
+        //Check if email already exists in both tables
+        $selectmail= "SELECT * FROM customer WHERE email ='$email' " ;
+        $allmailquery = mysqli_query($connection, $selectmail ) ;  
+        $num = mysqli_num_rows($allmailquery);
+
+        $selectmail2="SELECT * FROM restaurant WHERE res_email='$email'";
+        $allmailquery2 = mysqli_query($connection, $selectmail2 ) ;  
+        $num2 = mysqli_num_rows($allmailquery2);
+
+        $selectmail3="SELECT * FROM  employee WHERE emp_email='$email'";
+        $allmailquery3 = mysqli_query($connection, $selectmail3 ) ;  
+        $num3 = mysqli_num_rows($allmailquery3);
+
+
+        
+        if($num > 0 || $num2 > 0 || $num3 >0){
+        $message = base64_encode(urlencode("Email already exists"));
+        header('Location:employee-add.php?msg=' . $message);
+        exit();
+        }
+        
+        //Insert to Database
+        else {
+
+            
+            $registrationQuery = "INSERT INTO employee (emp_id, res_id, emp_name, emp_email, emp_mobile, emp_password) VALUES (NULL,$resID,'$name','$email','$contact','$password')";
+            if (mysqli_query($connection,$registrationQuery) == TRUE) {
+                
+                $message = base64_encode(urlencode("Registration Successful"));
+                header('Location:employee-add.php?msg=' . $message);
+				exit();
+            } 
+            
+            else {
+                
+                $message = base64_encode(urlencode("SQL Error while Registering"));
+                header('Location:employee-add.php?msg=' . $message);
+				exit();
+            }
+        }
+    }
+mysqli_close($connection);
+?>
     
         <script>
         var check = function() {

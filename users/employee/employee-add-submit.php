@@ -1,6 +1,7 @@
 <?php
 
 include('../../includes/connection.php');
+include('../../includes/session.php');
 
     if(isset($_POST['submit'])){
 	
@@ -34,11 +35,14 @@ include('../../includes/connection.php');
         
         //Insert to Database
         else {
-            $registrationQuery = "INSERT INTO employee (emp_id, emp_name, emp_email, emp_mobile, emp_password) VALUES (NULL,'$name','$email','$contact','$password')";
+
+            checkSession(); 
+            $res_id=$_SESSION['resID'];
+            $registrationQuery = "INSERT INTO employee (emp_id, res_id, emp_name, emp_email, emp_mobile, emp_password) VALUES (NULL,$res_id,'$name','$email','$contact','$password')";
             if (mysqli_query($connection,$registrationQuery) == TRUE) {
                 //echo "inside TRUE";
                 $message = base64_encode(urlencode("Registration Successful"));
-                header('Location:../../includes/login.php?msg=' . $message);
+                header('Location:../restaurant/restaurant-home.php?msg=' . $message);
 				exit();
             } 
             

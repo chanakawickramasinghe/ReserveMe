@@ -1,5 +1,9 @@
 <?php include('../../includes/session.php') ?>
+<<<<<<< HEAD
 <?php include('../../includes/connection.php'); ?>
+=======
+<?php include('../../includes/connection.php') ?>
+>>>>>>> e00bcb58875dc08019f82e011f8e2a2b9d0eb4d8
 
 <html>
 <head>
@@ -26,8 +30,15 @@
         </a>       
     </div>
     <!--End of nav-->
+<<<<<<< HEAD
     <!--Start of Header-->
     <header class="header">
+=======
+    
+    
+        <!--Start of Header-->
+        <header class="header">
+>>>>>>> e00bcb58875dc08019f82e011f8e2a2b9d0eb4d8
         <div class="search">
             <form action="" method="post">
                 <div class="form-box">
@@ -49,7 +60,12 @@
         </div>		
     </header>
     <!--End of Header-->
+<<<<<<< HEAD
      <!--Start of Card Section-->
+=======
+
+    <!--Start of Card Section-->
+>>>>>>> e00bcb58875dc08019f82e011f8e2a2b9d0eb4d8
     <?php 
         if(isset($_POST["submit"])){
             $location = $_POST["location"];
@@ -136,7 +152,11 @@
                     while($rowProduct  = mysqli_fetch_assoc($resultProduct)){                                           
                         echo"<div class=\"food-container\">       
                                 <article class=\"food-card\">
+<<<<<<< HEAD
                                     <img class=\"food-img\" src= \"../../images/{$rowProduct['res_id']}.jpg\">
+=======
+                                    <img class=\"food-img\" src= \"images/{$rowProduct['res_id']}.jpg\">
+>>>>>>> e00bcb58875dc08019f82e011f8e2a2b9d0eb4d8
                                     <div class=\"img-text\">
                                         <h1 class=\"name\">". $rowProduct['res_name'] ."</h1> 
                                     </div>
@@ -147,7 +167,11 @@
                                             <i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i>
                                         </div>
                                         <div class=\"footer-btn\">
+<<<<<<< HEAD
                                             <button type=\"button\"class=\"food-btn\" onclick=\"location.href='../../res_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
+=======
+                                            <button type=\"button\"class=\"food-btn\" onclick=\"location.href='res_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
+>>>>>>> e00bcb58875dc08019f82e011f8e2a2b9d0eb4d8
                                         </div>
                                     </div>
                                 </article>           
@@ -159,8 +183,14 @@
         }            
     ?>
     <!--End of Card Section-->
+<<<<<<< HEAD
 
     <div><?php include "../../includes/footer.php" ?></div>
+=======
+            </form>
+        </div>
+  
+>>>>>>> e00bcb58875dc08019f82e011f8e2a2b9d0eb4d8
      <!--Include footer.php-->
    <div><p>My reservations</p></div>
     

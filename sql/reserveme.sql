@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 18, 2020 at 09:31 PM
+-- Generation Time: Oct 21, 2020 at 05:37 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.33
 
@@ -84,8 +84,38 @@ CREATE TABLE `employee` (
   `emp_name` varchar(255) NOT NULL,
   `emp_email` varchar(255) NOT NULL,
   `emp_mobile` int(10) NOT NULL,
-  `emp_password` varchar(8) NOT NULL
+  `emp_password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `employee`
+--
+
+INSERT INTO `employee` (`emp_id`, `res_id`, `emp_name`, `emp_email`, `emp_mobile`, `emp_password`) VALUES
+(3, 0, 'Siri', 'emp@gmail.com', 119, '202cb962ac59075b964b07152d234b70'),
+(4, 0, 'nuwan', 'nuwan@123', 119, '202cb962ac59075b964b07152d234b70');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `floorplan`
+--
+
+CREATE TABLE `floorplan` (
+  `res_id` int(10) NOT NULL,
+  `floorplan_id` int(10) NOT NULL,
+  `floorplan_image` varchar(225) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `floorplan`
+--
+
+INSERT INTO `floorplan` (`res_id`, `floorplan_id`, `floorplan_image`) VALUES
+(4, 1, '1'),
+(4, 2, '2'),
+(5, 1, '1'),
+(5, 2, '2');
 
 -- --------------------------------------------------------
 
@@ -98,6 +128,15 @@ CREATE TABLE `menu` (
   `menu_id` int(10) NOT NULL,
   `menu_image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `menu`
+--
+
+INSERT INTO `menu` (`res_id`, `menu_id`, `menu_image`) VALUES
+(4, 1, '1'),
+(5, 1, '1'),
+(4, 2, '2');
 
 -- --------------------------------------------------------
 
@@ -184,6 +223,41 @@ INSERT INTO `res_location` (`id`, `res_location`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `reviews`
+--
+
+CREATE TABLE `reviews` (
+  `review_id` int(11) NOT NULL,
+  `res_id` int(11) NOT NULL,
+  `customer_name` varchar(255) NOT NULL,
+  `content` text NOT NULL,
+  `rating` tinyint(1) NOT NULL,
+  `submit_date` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `reviews`
+--
+
+INSERT INTO `reviews` (`review_id`, `res_id`, `customer_name`, `content`, `rating`, `submit_date`) VALUES
+(1, 4, 'David Deacon', 'Nice', 5, '2020-01-09 20:43:02'),
+(2, 4, 'John Doe', 'Great website, great content, and great support!', 4, '2020-01-09 21:00:41'),
+(3, 1, 'Robert Billings', 'ok', 3, '2020-01-09 21:10:16'),
+(4, 1, 'Daniel Callaghan', 'Great!', 5, '2020-01-09 23:51:05'),
+(5, 4, 'Bobby', 'Not much content.', 2, '2020-01-14 21:54:24'),
+(6, 4, 'Joshua Kennedy', 'Fantasic website', 5, '2020-01-16 17:34:27'),
+(7, 1, 'Johannes Hansen', 'Really like this website, helps me out a lot!', 5, '2020-01-16 17:35:12'),
+(8, 1, 'Wit Kwiatkowski', 'Please provide more quality content.', 5, '2020-01-16 17:36:03'),
+(9, 4, 'Óli Þórðarson', 'Thanks', 5, '2020-01-16 17:36:34'),
+(10, 1, 'Jaroslava Beránková', '', 5, '2020-01-16 17:37:48'),
+(11, 1, 'Naomi Holt', 'Appreciate', 5, '2020-01-16 17:39:17'),
+(12, 4, 'Isobel Whitehead', 'Thank you for providing this', 5, '2020-01-16 17:40:28'),
+(13, 1, 'Warren Mills', 'Everything is awesome!', 5, '2020-01-16 19:34:08'),
+(14, 1, 'Larry Johnson', 'Brilliant,', 5, '2020-01-29 18:40:36');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tokens`
 --
 
@@ -235,6 +309,12 @@ ALTER TABLE `employee`
   ADD PRIMARY KEY (`emp_id`,`res_id`);
 
 --
+-- Indexes for table `floorplan`
+--
+ALTER TABLE `floorplan`
+  ADD PRIMARY KEY (`res_id`,`floorplan_id`);
+
+--
 -- Indexes for table `menu`
 --
 ALTER TABLE `menu`
@@ -265,6 +345,12 @@ ALTER TABLE `res_location`
   ADD KEY `Index 1` (`id`);
 
 --
+-- Indexes for table `reviews`
+--
+ALTER TABLE `reviews`
+  ADD PRIMARY KEY (`review_id`);
+
+--
 -- Indexes for table `tokens`
 --
 ALTER TABLE `tokens`
@@ -284,19 +370,25 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-  MODIFY `emp_id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `emp_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `menu_id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `menu_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `restaurant`
 --
 ALTER TABLE `restaurant`
   MODIFY `res_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `reviews`
+--
+ALTER TABLE `reviews`
+  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `tokens`

@@ -17,7 +17,7 @@
 <body>
     <!--Start of nav-->
     <div class="topnav" id="myTopnav">
-    <img class = "logo" src="images/logo.png">
+        <img class = "logo" src="images/logo.png">
         <a href="users/user-type.php">Register</a>
         <a href="includes/login.php">Login</a>
         <a href="includes/contact.php">Contact</a>
@@ -33,9 +33,21 @@
         <div class="search">
             <h1 class="title">ReserveMe</h1>
             <h3 class="title">Reservation at your fingertip</h3>
-            <button class="search-button pulsate" type="submit" name="submit"><a href="search_result.php">Table Reservation<i class="fas fa-search"></i></a></button>
-            <button class="search-button pulsate" type="submit" name=""><a href="hall_result.php">Hall Reservation<i class="fas fa-search"></i></a></button>
-        </div>		
+            <div>
+            <button class="search-button pulsate" type="submit" name="submit"><a href="search_result.php">Table Reservation <i class="fas fa-table"></i></a></button>
+            <button class="search-button pulsate" type="submit" name=""><a href="hall_result.php">Hall Reservation <i class="fas fa-building"></i></a></button>
+            </div>
+            
+        </div>	
+        </div>
+	    <!--Start of side social-------->
+		<div class="social">
+	        <a href="#"><i class="fab fa-facebook-f"></i></a>
+	        <a href="#"><i class="fab fa-twitter"></i></a>
+	        <a href="#"><i class="fab fa-instagram"></i></a>
+	        <a href="#"><i class="fab fa-youtube"></i></a>	
+        </div>	
+        <!--End of side social-------->     
     </header>
     <!--End of Header-->
 
@@ -48,7 +60,7 @@
                     <i class="fas fa-mug-hot"></i>
                 </div>
                 <div class="about-text">
-                    <h2 class="about-subtitle"><a href="category/arabic.php">Drinks</a></h2>
+                    <a class="about-subtitle" href="category/arabic.php?Catogory=Arabic">Drinks</a>
                     <p class="about-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis corporis </p>
                 </div>
             </article>
@@ -59,7 +71,7 @@
                     <i class="fas fa-utensils"></i>
                 </div>
                 <div class="about-text">
-                    <h2 class="about-subtitle">Healthy Food</h2>
+                    <a class="about-subtitle" href="category/arabic.php">Healthy Food</a>
                     <p class="about-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis corporis </p>
                 </div>
             </article>
@@ -70,7 +82,7 @@
                     <i class="fas fa-mortar-pestle"></i>
                 </div>
                 <div class="about-text">
-                    <h2 class="about-subtitle">Organic Food</h2>
+                    <a class="about-subtitle" href="category/arabic.php">Organic Food</a>
                     <p class="about-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis corporis </p>
                 </div>
             </article>
@@ -81,7 +93,7 @@
                     <i class="fas fa-ice-cream"></i>
                 </div>
                 <div class="about-text">
-                    <h2 class="about-subtitle">Desserts</h2>
+                    <a class="about-subtitle" href="category/arabic.php">Desserts</a>
                     <p class="about-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis corporis </p>
                 </div>
             </article>
@@ -92,7 +104,7 @@
                     <i class="fas fa-fish"></i>
                 </div>
                 <div class="about-text">
-                    <h2 class="about-subtitle">Sea Food</h2>
+                    <a class="about-subtitle" href="category/arabic.php">Sea Food</a>
                     <p class="about-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis corporis </p>
                 </div>
             </article>
@@ -103,7 +115,7 @@
                     <i class="fas fa-pepper-hot"></i>
                 </div>
                 <div class="about-text">
-                    <h2 class="about-subtitle">Hot & Spicy</h2>
+                    <a class="about-subtitle" href="category/arabic.php">Hot & Spicy</a>
                     <p class="about-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis corporis </p>
                 </div>
             </article>
@@ -111,15 +123,6 @@
         </div>
     </section>
     <!--End of About-->
-
-    <!--Start of Social icon-->
-    <section id="social-icons">
-        <a href="#"><i class="fab fa-facebook facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram instagram"></i></a>
-        <a href="#"><i class="fab fa-google-plus plus"></i></a>
-    </section>
-    <!--End of Social icon-->
 
     <!--Start of Number Section-->
     <section id="numbers">
@@ -154,55 +157,7 @@
     </section>
     <!--End of Number Section-->
 
-    <!--Start of Gallery Section-->
-    <section id="gallery">
-        <div>
-            <h2 class="title-text">Main Cuisines</h2>
-        </div>
-        <div id="gallery-center">
-            <article class="gallery-item">
-                <a href="images/img3.jpg">
-                    <img src="images/img3.jpg" alt="">
-                </a>
-            </article>
-            <article class="gallery-item">
-                <a href="images/img4.jpg">
-                    <img src="images/img4.jpg" alt="">
-                </a>
-            </article>
-            <article class="gallery-item">
-                <a href="images/img3.jpg">
-                    <img src="images/img3.jpg" alt="">
-                </a>
-            </article>
-            <article class="gallery-item">
-                <a href="images/img4.jpg">
-                    <img src="images/img4.jpg" alt="">
-                </a>
-            </article>
-            <article class="gallery-item">
-                <a href="images/img2.jpg">
-                    <img src="images/img2.jpg" alt="">
-                </a>
-            </article>
-            <article class="gallery-item">
-                <a href="images/img1.jpg">
-                    <img src="images/img1.jpg">
-                </a>
-            </article>
-            <article class="gallery-item">
-                <a href="images/img2.jpg">
-                    <img src="images/img2.jpg" alt="">
-                </a>
-            </article>
-            <article class="gallery-item">
-                <a href="images/img1.jpg">
-                    <img src="images/img1.jpg" alt="">
-                </a>
-            </article>
-        </div>
-    </section>
-    <!---End of Gallery Section-->
+    
 
     <!--Include footer.php-->
     <div><?php include "includes/footer.php" ?></div>

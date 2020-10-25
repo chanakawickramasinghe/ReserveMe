@@ -35,7 +35,7 @@
     <!--Start of Card Section-->
 
     <?php
-$sql = "SELECT * FROM restaurant,restaurant_category where restaurant_category.Arabic=1";
+$sql = "SELECT res_id FROM restaurant_category where Arabic=1";
 mysqli_query($connection, $sql);
 $result = mysqli_query($connection,$sql);
 

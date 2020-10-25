@@ -18,7 +18,7 @@ body{
 .header{
     min-height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)),
-    url(../images/img1.jpg) center/cover no-repeat fixed;
+    url(images/img1.jpg) center/cover no-repeat fixed;
     margin-top: auto;
 }
 
@@ -43,16 +43,16 @@ body{
     background: orange;
     color: #fff;
     cursor: pointer;
-    
+    border: none;
     margin-top: 10px;
 }
  a{
-     color: black;
+     color: black;  
+    text-decoration:none;
  }
 .search-button:hover{
     background: #fff;
-    color: orange;
-    
+    color: orange;   
 }
 
 .pulsate{
@@ -61,6 +61,47 @@ body{
     opacity: .3;
     color: #000000;
 }
+
+/*Start of Social Icons*/
+.social a{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 15px;
+}
+
+.social{
+	position:fixed;
+	left: 30px;
+	top: 30%;
+	transform: translateY(-50%);
+	border-radius: 20px;
+	background-color: #FFFFFF;
+	box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+	padding: 5px 0px;
+}
+
+.social a i{
+	color:rgba(39,39,39,0.80);
+}
+ 
+.social a:hover .fa-facebook-f{
+	color: #3b5998;
+}
+
+.social a:hover .fa-twitter{
+	color: #00acee ;
+}
+
+.social a:hover .fa-instagram{
+	color:  #3f729b ;
+}
+
+.social a:hover .fa-youtube{
+    color: 	#FF0000;
+}
+/*End of Social Icons*/
 
 @-webkit-keyframes pulsate{
     0%{
@@ -121,51 +162,12 @@ body{
     }
 }
 
-@media screen and (min-width:972px){
+@media screen and (max-width:972px){
     .about{
         flex: 0 0 calc(33.3% - 16px);
     }
 }
 /*End of About us*/
-
-/*Start of Social Icons*/
-#social-icons{
-    height: 150px;
-    background: #fff;
-    text-align: center;
-    padding: 50px 0 50px 0;
-}
-
-#social-icons a{
-    display: inline-block;
-    padding: 5px 10px;
-    margin: 0 5px;
-    font-size: 40px;
-    border-radius: 5px;
-    transition: transform 2s ease, color 2s ease;
-}
-
-#social-icons a:hover{
-    transition: translateY(-20px);
-}
-
-.facebook{
-    color: #3b5998;
-}
-
-.twitter{
-    color: #38a1f3;
-}
-
-.instagram{
-    color: #e1306c;
-}
-
-.plus{
-    color: #db4a39;
-}
-
-/*End of Social Icons*/
 
 /*Start of Numbers Section*/
 .number{

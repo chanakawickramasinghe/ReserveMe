@@ -30,11 +30,11 @@
     </div>
     <!--End of nav-->
 
-	<!--Start of main-section-->
+    <!--Start of main-section-->
     <?php 
         if(isset($_GET['res_id'])){
-            $sql = "SELECT * FROM restaurant WHERE res_id = ".$_GET['res_id'];
-            $resultProduct = mysqli_query($connection,$sql);
+            $mainsql = "SELECT * FROM restaurant WHERE res_id = ".$_GET['res_id'];
+            $resultProduct = mysqli_query($connection,$mainsql);
             while($rowProduct  = mysqli_fetch_assoc($resultProduct)){  
                 echo"<section class=\"main\">
                         <div class=\"m-img\">       
@@ -46,7 +46,7 @@
                             <h4><i class=\"fas fa-star-half-alt\">". $rowProduct['res_rate'] ."</i></h4>
                             <br>
                             <h4><i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i></h4>
-                            <button class=\"reserve-button pulsate\" type=\"submit\" name=\"submit\">Reserve</button>
+                            <button class=\"reserve-button pulsate\" onclick=\"onClickOpenForm()\" type=\"submit\" name=\"submit\">Reserve</button>
 	                    </div>	
 	                </section>";
             }
@@ -55,7 +55,25 @@
     <!--End of main-section-->
 
     <!--Start of pop up login page-->
+    <div class="form-popup" id="myForm">
+        <form action="login_submit.php" method="post" class="form-container">
+            <h1>Login</h1>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+            <div class="pass">
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="onClickCloseForm()">Close</button>
+            <div class="signup">Don't have account?
+                <a href="#">Signup Now</a>
+            </div>
+        </form>
+    </div>
 
+    <script src="./js/onClickOpenForm.js"></script>
     <!--End of pop up login page-->
 
     <!--Start of Menu content-->
@@ -98,20 +116,18 @@
                             echo"<article class=\"gallery-item\">
                                     <a href=\"images/restaurant/{$rowProduct['res_id']}/menu/{$rowProduct['floorplan_id']}.jpg\">
                                     <img class=\"food-img\" src= \"images/restaurant/{$rowProduct['res_id']}/floorplan/{$rowProduct['floorplan_id']}.jpg\">
-                                </a>";
+                                </a></article></div>";
                         }
-                        echo"</article>";
+                        echo"</section>";
                     }
+                    echo"</section>";
                 ?>    
-            </div>
-        </section>   
-    </section>
     <!--End of floorplan content-->
 
     <!--Start of Map-->
     <section class="content">
         <div class="p-heading">
-		    <h3>Floorplan </h3>
+		    <h3>Map </h3>
 	    </div>
         <section id="gallery">    
             <div id="gallery-center">
@@ -122,7 +138,7 @@
                         while($rowProduct  = mysqli_fetch_assoc($resultMenu)){  
                             echo"<div class=\"mapouter\">
                                     <div class=\"gmap_canvas\">
-                                        <iframe width=\"600\" height=\"500\" id=\"gmap_canvas\" src=\"{$rowProduct['res_location']}\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\"></iframe>                               
+                                        <iframe width=\"100%\" height=\"100%\" id=\"gmap_canvas\" src=\"{$rowProduct['res_location']}\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\"></iframe>
                                     </div>
                                 </div>";
                         }
@@ -140,8 +156,21 @@
 		    <h3>Review</h3>
 	    </div>
         <section id="gallery">    
-            <div id="gallery-center">         
-                <iframe width="600" height="500" id="gmap_canvas" src="review/index.html?res_id=4" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>                               
+            <div id="gallery-center">    
+                <?php 
+                    if(isset($_GET['res_id'])){
+                        $retriewMenu = "SELECT * FROM restaurant WHERE res_id = ".$_GET['res_id'];
+                        $resultMenu = mysqli_query($connection,$retriewMenu);
+                        while($rowProduct  = mysqli_fetch_assoc($resultMenu)){  
+                            echo"<div class=\"mapouter\">
+                                    <div class=\"gmap_canvas\">
+                                        <iframe width=\"600\" height=\"500\" id=\"gmap_canvas\" src=\"review/index.html?res_id={$rowProduct['res_id']}\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\"></iframe>                               
+                                    </div>
+                                </div>";
+                        }
+                        echo"</article>";
+                    }
+                ?>    
             </div>
         </section>    
     </section>

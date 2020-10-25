@@ -41,8 +41,14 @@ if(isset($_POST['submit'])){
     }
     
     else if(mysqli_num_rows($userResult2) == 1){ 
-             
+
         $userRow = mysqli_fetch_array($userResult2);
+        checkSession();  //create sessions
+        $_SESSION["name"] = $userRow['res_name'];
+        $_SESSION["resID"] = $userRow['res_id'];
+        $_SESSION["userType"] = 'Restaurant';
+        
+
         header( "Location:../users/restaurant/restaurant-home.php" );
     }
     

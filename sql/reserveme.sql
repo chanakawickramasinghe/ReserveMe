@@ -166,7 +166,9 @@ CREATE TABLE `reception_hall` (
   `hall_addline01` varchar(255) NOT NULL,
   `hall_addline02` varchar(255) NOT NULL,
   `hall_addline03` varchar(255) NOT NULL,
-  `hall_charge` int(10) NOT NULL
+  `hall_capacity` int(10) NOT NULL,
+  `hall_charge` int(10) NOT NULL,
+  `hall_image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------

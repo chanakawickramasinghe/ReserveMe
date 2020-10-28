@@ -6,7 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ReserveMe - Admin</title>
         <link rel="stylesheet" href="../../CSS/main.css">
-        <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
+        <!-- <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script> -->
+        <script src="https://kit.fontawesome.com/35ce5899a5.js" crossorigin="anonymous"></script>
 	    <link rel="stylesheet" href="../../CSS/nav.css">
         <!-- <link rel="stylesheet" href="../../CSS/footer.css"> -->
         <link href="../../images/logo.png" rel="shortcut icon"/>
@@ -21,7 +22,7 @@
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
-            <img class = "logo" src="../../images/logo.png">
+            <span class="logo"><a href="../../index.php"><img class="logo" src="../../images/logo.png"></a></span>
         </div>
         <!--End of nav-->
 
@@ -44,7 +45,7 @@
             <h2>Users of the system</h2></h2>
 
             <div class="row-33">
-                <p>Hello 1</p>
+                <a href><i class="fas fa-users"></i></a>
             </div>
             <div class="row-33">
                 <p>Hello 1</p>

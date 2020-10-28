@@ -8,7 +8,7 @@
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 15px 16px;
   text-decoration: none;
   font-size: 17px;
   text-transform: uppercase;
@@ -17,7 +17,14 @@
 .logo{
   height:50px;
   width: 50px;
-  align-items:left;
+  align-items:center;
+  justify-content: center;
+  float: left;
+  margin-left: 2vw;
+  margin-bottom: 20px;
+  margin-top: 0px;
+  padding-top: 0px;
+  
 }
 
 .topnav a:hover {
@@ -30,11 +37,19 @@
   display: none;
 }
 
+
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
+  }
+
+  .logo {
+    margin-left: 5vw;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    padding-top: 0px;
   }
 }
 
@@ -46,8 +61,15 @@
     top: 0;
   }
   .topnav.responsive a {
-    float: none;
+    float: center;
     display: block;
-    text-align: left;
+    text-align: center;
+  }
+
+  .logo {
+    margin-left: 5vw;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    padding-top: 0px;
   }
 }

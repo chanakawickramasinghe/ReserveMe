@@ -32,13 +32,13 @@
                 <div>   
                 <table style="width:400px">
                 <tr><td>
-                <p><b>Hall Name</p>
+                <h2><b>Hall Name</h2>
                     <input type="text" class="type-feild" name="name" placeholder="Hall Name" required>    
 
-                    <p>Contact number</p>
+                    <h2>Contact number</h2>
                     <input type="tel" name="contact" class="type-feild" placeholder="Telephone number" pattern='^\+?\d{0,13}'>
 
-                    <p>Address<p>
+                    <h2>Address</h2>
                     <p> Number </p>
                     <input type="text" name="pnumber" class="type-feild" placeholder="Number"> 
 
@@ -48,13 +48,21 @@
                     <p>City</p>
                     <input type="text" name="city" class="type-feild" placeholder="City">
 
-                    <p>Charge</p>
-                    <input type="text" name="city" class="type-feild" placeholder="Per day charge"> </td></tr> 
-                    </table>          
+                    <h2>Capacity</h2>
+                    <input type="text" name="capacity" class="type-feild" placeholder="Capacity">
+
+                    <h2>Charge</h2>
+                    <input type="text" name="charge" class="type-feild" placeholder="Per day charge"> 
+
+                    <h2>Profile image</h2>
+                    <p>Insert the images of the Hall to be display</p>
+                    <input type="file" name="res_image" id="res_image">
+
+                    </td></tr> 
+                    </table>      
                     <br>
-                   
-                   <p align="center"> <input type="submit" name="submit"  class="search-btn hover" value="Submit" required></p>
-                   </div>
+                    <input type="submit" name="submit" style="margin-left:220px;margin-top:-25px" class="search-btn hover" value="Register" required>
+                </div>
                 </form>    
             </div>
         </div>

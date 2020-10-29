@@ -17,7 +17,8 @@
 <body>
     <!--Start of nav-->
     <div class="topnav" id="myTopnav">
-    <img class = "logo" src="images/logo.png">
+    <span class="logo"><a href="./index.php"><img class="logo" src="images/logo.png"></a></span>
+    <!-- <img class = "logo" src="images/logo.png"> -->
         <a href="users/user-type.php">Register</a>
         <a href="includes/login.php">Login</a>
         <a href="users/admin/help-desk.php">Contact</a>

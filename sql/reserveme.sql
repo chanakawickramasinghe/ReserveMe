@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 21, 2020 at 05:37 AM
+-- Generation Time: Oct 26, 2020 at 04:03 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.33
 
@@ -150,6 +150,25 @@ CREATE TABLE `preorder_menu` (
   `item_name` varchar(255) NOT NULL,
   `item_price` int(10) NOT NULL,
   `availability` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `reception_hall`
+--
+
+CREATE TABLE `reception_hall` (
+  `res_id` int(10) NOT NULL,
+  `hall_id` int(10) NOT NULL,
+  `hall_name` varchar(255) NOT NULL,
+  `hall_tel` int(10) NOT NULL,
+  `hall_addline01` varchar(255) NOT NULL,
+  `hall_addline02` varchar(255) NOT NULL,
+  `hall_addline03` varchar(255) NOT NULL,
+  `hall_capacity` int(10) NOT NULL,
+  `hall_charge` int(10) NOT NULL,
+  `hall_image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -327,6 +346,12 @@ ALTER TABLE `preorder_menu`
   ADD PRIMARY KEY (`res_id`,`item_id`);
 
 --
+-- Indexes for table `reception_hall`
+--
+ALTER TABLE `reception_hall`
+  ADD PRIMARY KEY (`hall_id`,`res_id`);
+
+--
 -- Indexes for table `restaurant`
 --
 ALTER TABLE `restaurant`
@@ -377,6 +402,12 @@ ALTER TABLE `employee`
 --
 ALTER TABLE `menu`
   MODIFY `menu_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `reception_hall`
+--
+ALTER TABLE `reception_hall`
+  MODIFY `hall_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `restaurant`

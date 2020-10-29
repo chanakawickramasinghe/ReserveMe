@@ -81,7 +81,7 @@
                                                 <i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i>
                                             </div>
                                             <div class=\"footer-btn\">
-                                                <button type=\"button\"class=\"food-btn\" onclick=\"location.href='res_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
+                                                <button type=\"button\"class=\"food-btn\" onclick=\"location.href='res_view/res_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
                                             </div>
                                         </div>
                                     </article>           
@@ -112,7 +112,7 @@
                                             <i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i>
                                         </div>
                                         <div class=\"footer-btn\">
-                                            <button type=\"button\"class=\"food-btn\" onclick=\"location.href='res_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
+                                            <button type=\"button\"class=\"food-btn\" onclick=\"location.href='res_view/res_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
                                         </div>
                                     </div>
                                 </article>           
@@ -152,7 +152,7 @@
                                             <i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i>
                                         </div>
                                         <div class=\"footer-btn\">
-                                            <button type=\"button\"class=\"food-btn\" onclick=\"location.href='res_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
+                                            <button type=\"button\"class=\"food-btn\" onclick=\"location.href='res_view/res_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
                                         </div>
                                     </div>
                                 </article>           

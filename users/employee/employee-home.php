@@ -43,12 +43,12 @@
         <br><br><br>
             <form>
                 
-                <div class="form-box"><c>
-                    <a href="#" class="search-button pulsate">Pre - Order Menu</a>
-                    <a href="#" class="search-button pulsate">Customer Queries</a>
-                    <a href="#" class="search-button pulsate">Reports</a>
-                    <a href="#" class="search-button pulsate">Manage Reservation</a>
-                    <a href="#" class="search-button pulsate">Reception Hall</a>
+                <div ><c>
+                    <a href="#" class="search-button ">Pre - Order Menu</a>
+                    <a href="#" class="search-button ">Customer Queries</a>
+                    <a href="#" class="search-button ">Reports</a>
+                    <a href="#" class="search-button ">Manage Reservation</a>
+                    <a href="#" class="search-button ">Reception Hall</a>
                 </c></div>
 
             </form>            

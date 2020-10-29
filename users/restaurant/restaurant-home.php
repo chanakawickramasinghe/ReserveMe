@@ -30,6 +30,7 @@
 include('../../includes/connection.php');
 include('../../includes/session.php');
     checkSession();  //create sessions
+    
        ?>
     <!--Start of Header-->
     <header class="header">

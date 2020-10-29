@@ -3,39 +3,38 @@
     
 <head>
     <title>About | ReserveMe</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    
-    <style>
-            .navigation .facilities-active {
-                background-color: #060653;
-            }
-        
-            .navigation li a:hover:not(.facilities-active) {/* Current colour does not change when hover */
-                background-color: #111;
-            }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/nav.css">
+    <link rel="stylesheet" href="../CSS/search.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/main.css">
 </head>
     
 <body>
+    <div class="topnav" id="myTopnav">
+    <img style="margin-right:950px" class = "logo" src="../images/logo.png">
+        <a href="users/user-type.php">Register</a>
+        <a href="includes/login.php">Login</a>
+        <a href="users/admin/help-desk.php">Contact</a>
+        <a href="includes/about.php">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="onClickNav()">
+            <i class="fa fa-bars"></i>
+        </a>       
+    </div>
     
     
-    <div class="row-100 div-c bg-green"> 
         <h1>Facilities</h1>
-    </div>
-    <div class="row-25">
-        <img src="images/logo1.jpg" class="tiles" >
-        <img src="images/us.jpg"   class="tiles" width="628px">
-    </div>
-    <div class="row-50" style="margin-left:300px">
+    
+   
+    
         <p>
            A product description is the marketing copy that explains what a product is and why it’s worth purchasing. 
 		   The purpose of a product description is to supply customers with important information about the features and benefits of the product so they’re compelled to buy.
         </p>
-    </div>
     
-    <div class="row-100 main p-t-0 " style="margin-left:300px">
-        <hr>
-        <div class="row">
+    
+   
+        
             <div class="column">
                 <div class="content">
                     <img src="images/d1.jpg" style="width:100%">
@@ -71,11 +70,13 @@
                     <p>Designer</p>
                 </div>
             </div>
-        </div>
-    </div>
+    <?php include('footer.php'); ?>
+     
     
    
     
+
+
 </body>
     
 </html>

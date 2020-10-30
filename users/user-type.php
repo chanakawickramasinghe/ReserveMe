@@ -13,10 +13,9 @@
      <!--Start of nav-->
     <div class="topnav" id="myTopnav">
         <img class = "logo" src="../images/logo.png">
-        <a href="users/user-type.php">Register</a>
-        <a href="includes/login.php">Login</a>
-        <a href="#contact">Contact</a>
-        <a href="#aboutus">About</a>
+        <a href="../includes/login.php">Login</a>
+        <a href="admin/contact.php">Contact</a>
+        <a href="../incudes/about.php">About</a>
         <a href="javascript:void(0);" class="icon" onclick="onClickNav()">
             <i class="fa fa-bars"></i>
         </a>       

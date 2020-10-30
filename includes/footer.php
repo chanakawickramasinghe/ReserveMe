@@ -3,7 +3,7 @@
 
 <footer class="footer-distributed">
     <div class="footer-left">
-        <img src="../images/logo.png">
+		<img src="../images/6.png" alt="logo">
 		<h3>Reserve<span>Me</span></h3>
         <p class="footer-links">
 			<a href="#">Home</a>
@@ -13,6 +13,7 @@
 			<a href="about.php">About</a>
 			|
 			<a href="admin/contact.php">Contact</a>
+			
         </p>
         <div class="footer-icons">
 			<a href="#"><i class="fa fa-facebook"></i></a>

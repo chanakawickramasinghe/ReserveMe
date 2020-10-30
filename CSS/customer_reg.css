@@ -19,7 +19,7 @@
     position: center;
     border: #250779 4px solid;
     border-radius: 10px;
-    
+ 
     
   }
 .type-feild{
@@ -34,11 +34,15 @@
 .btn{
     width:7vw;
     height: 4vh;
-    background: #ffeb3b;
+    background: #000000;
     border: none;
-    color:rgb(0, 0, 0);
+    color:#ffffff;
     border-radius: 10px;
     font-size: large;
+}
+.btn:hover{
+    background: #290391;
+    cursor: pointer;
 }
 .avatar{
     width: 100px;

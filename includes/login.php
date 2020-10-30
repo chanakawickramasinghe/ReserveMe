@@ -19,10 +19,9 @@
     <!--Start of nav-->
     <div class="topnav" id="myTopnav">
         <img class = "logo" src="../images/logo.png">
-        <a href="users/user-type.php">Register</a>
-        <a href="includes/login.php">Login</a>
-        <a href="#contact">Contact</a>
-        <a href="#aboutus">About</a>
+        <a href="../users/user-type.php">Register</a>
+        <a href="../users/admin/contact.php">Contact</a>
+        <a href="about.php">About</a>
         <a href="javascript:void(0);" class="icon" onclick="onClickNav()">
             <i class="fa fa-bars"></i>
         </a>       
@@ -48,7 +47,7 @@
                    
                 </div>
                 <br>
-                   <p align="center"> <input type="submit" name="submit" class="search-btn hover" value="Login"> </p>
+                   <p align="center"> <input type="submit" name="submit" class="btn hover" value="Login"> </p>
                 </br>
                     <p> <a href="../reset/email_verify.php">Forget Password? Click Here!</a></p>
                 </form>  

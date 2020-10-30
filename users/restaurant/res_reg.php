@@ -17,10 +17,10 @@
 <!--Start of nav-->
 <div class="topnav" id="myTopnav">
         <img class = "logo" src="../../images/logo.png">
-        <a href="users/user-type.php">Register</a>
-        <a href="includes/login.php">Login</a>
-        <a href="#contact">Contact</a>
-        <a href="#aboutus">About</a>
+        <a href="../user-type.php">Register</a>
+        <a href="../../includes/login.php">Login</a>
+        <a href="../admin/contact.php">Contact</a>
+        <a href="../../includes/about.php">About</a>
         <a href="javascript:void(0);" class="icon" onclick="onClickNav()">
             <i class="fa fa-bars"></i>
         </a>       
@@ -52,7 +52,7 @@
                     <p>Confirm Password</p>
                     <input type="password" class="type-feild" name="password2" class="type-feild" placeholder="Re-Enter Password" id="confirm_password" onkeyup='check()' required>
                     <p style="font-size:14px" id='message' ></p>
-        
+                    <br><br><br>
                    <button style="margin-left:220px;margin-top:-45px;position:sticky;top:0;"type="button" class="search-btn hover" onclick="nextPrev(1)">Next</button>
                 <br>
                 </div>

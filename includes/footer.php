@@ -12,7 +12,7 @@
 			|
 			<a href="about.php">About</a>
 			|
-			<a href="../users/admin/help-desk.php">Contact</a>
+			<a href="admin/contact.php">Contact</a>
         </p>
         <div class="footer-icons">
 			<a href="#"><i class="fa fa-facebook"></i></a>

@@ -1,3 +1,361 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Baloo Chettan 2', cursive;
+    line-height: 1.5;
+}
+
+.title-text{
+    font-size: 40px;
+    text-align: center;
+}
+
+/*Start of Header*/
+.header{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)),
+    url(images/img1.jpg) center/cover no-repeat fixed;
+    margin-top: auto;
+}
+
+.search{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.search-button{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border-radius: 200px;
+    font-weight: bold;
+    background: orange;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+}
+
+a{
+    color: black;  
+    text-decoration:none;
+ }
+
+.search-button:hover{
+    background: #fff;
+    color: orange;   
+    border:none;
+}
+
+.pulsate{
+    animation: pulsate 3s ease-in-out;
+    animation-iteration-count: infinite;
+    opacity: .3;
+    color: #000000;
+}
+
+/*Start of Social Icons*/
+.social a{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 15px;
+}
+
+.social{
+	position:fixed;
+	left: 30px;
+	top: 30%;
+	transform: translateY(-50%);
+	border-radius: 20px;
+	background-color: #FFFFFF;
+	box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+	padding: 5px 0px;
+}
+
+.social a i{
+	color:rgba(39,39,39,0.80);
+}
+ 
+.social a:hover .fa-facebook-f{
+	color: #3b5998;
+}
+
+.social a:hover .fa-twitter{
+	color: #00acee ;
+}
+
+.social a:hover .fa-instagram{
+	color:  #3f729b ;
+}
+
+.social a:hover .fa-youtube{
+    color: 	#FF0000;
+}
+/*End of Social Icons*/
+
+@-webkit-keyframes pulsate{
+    0%{
+        opacity: .3;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: .3;
+    }
+}
+/*End of Header*/
+
+/*Start of About us*/
+#about{
+    padding: 40px;
+}
+
+.about{
+    margin: 30px 0;
+    display: flex;
+}
+
+.about-icon .fas{
+    font-size: 60px;
+    color: orange;
+    margin-right: 20px;
+}
+
+.about-subtitle{
+    text-transform: capitalize;
+    color: orange;
+    font-size: 25px;
+}
+
+.about-info{
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.about-icon:hover .fas,
+.about-subtitle:hover{
+    transition: transform 2s ease, color 2s ease;
+    transform: translateY(-10px);
+    color: #cd6100;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 576px){
+    .about-center{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .about{
+        flex: 0 0 calc(50% - 16px);
+    }
+}
+
+@media screen and (max-width:972px){
+    .about{
+        flex: 0 0 calc(33.3% - 16px);
+    }
+}
+/*End of About us*/
+
+/*Start of Numbers Section*/
+.number{
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)),
+    url(../images/img2.jpg)center/cover no-repeat fixed;
+    padding: 60px 0;
+    color: #fff;
+}
+
+.number p{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.number:hover{
+    color: orange;
+}
+
+.number .fas{
+    font-size: 60px;
+    margin: 20px 0;
+}
+
+.number h3{
+    text-transform: uppercase;
+}
+
+@media screen and (min-width:56px){
+    #numbers{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width:992px){
+    #numbers{
+        grid-template-columns: repeat(8, 1fr);/*4.............................*/
+    }
+}
+
+/*End of Numbers Section*/
+
+/*Start of Cards Section*/
+.food{
+	width: 85%;
+	background-color: #FFFFFF;
+	box-shadow: 2px 2px 30px rgba(167, 158, 245, 0.2);
+	margin:30px auto;
+	padding:40px 20px;
+	margin-top: -60px;
+	background-size:1000px;
+	background-position: center;
+	border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 20rem);
+    justify-content: center;
+}
+ 
+.food-heading h3{
+	font-family: myriad pro;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-align: center;
+	font-size:2rem;
+	color:#323543;
+ 
+}
+
+.food-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 10px 0px;
+    width:100%;
+    height: 330px;
+    overflow: hidden;
+    box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
+    background-color: white;
+    text-align: center;
+    border-radius: 1rem;
+    position: relative;
+    margin: 0.5rem;
+}
+
+.food-box{
+	width:250px;
+	height: 300px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 4px;
+	margin: 10px 30px;
+}
+
+.food-box img{
+	height:180px;
+}
+
+.food-box p{
+	color:#4d4d4d70;
+	font-family: myriad pro;
+	font-size: 0.9rem;
+	letter-spacing: 0.5;
+}
+
+.price{
+	color:#2c2c2c;
+	font-family: poppins;
+	font-size: 1rem;;
+}
+
+.food-btn{
+	position: relative;
+	width:140px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family:calibri;
+	left: 50%;
+	bottom: -10px;
+	transform: translateX(-50%);
+	border-radius: 15% 15% 15% 15% / 50% 50% 50% 50%;
+	background:linear-gradient(120deg,#f09e05 20%,#945706);
+    color:#FFFFFF;
+    border: none;
+    animation: fade 0.2s;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+}
+
+.food-box:hover .food-btn{
+    display: flex;
+    border: none;
+}
+
+.food-box:hover{
+	box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+	background-color:#FFFFFF;
+}
+
+.food-box:hover .price{
+	color:#6b60ec;
+	transition: all ease 0.2s;
+}
+/*End of Cards Section*/
+
+/*Start of Gallery Section*/
+#gallery{
+    padding: 40px;
+    background: #fff;
+}
+
+.gallery-item{
+    background: linear-gradient(rgb(rgba(241, 161, 13)) rgb(rgb(255, 165, 0)));
+}
+
+.gallery-item img{
+    display:block;
+    width: 100%;
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+
+.gallery-item img:hover{
+    opacity: 0.5;
+}
+
+@media screen and (min-width:576px){
+    #gallery-center{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width:992px){
+    #gallery-center{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+/*End of Gallery Section*/
+
 @charset "utf-8";
 body{
 	margin:0px;

@@ -24,7 +24,7 @@
         <div class="search-user-container">
             <form>
                 <!--heading-->
-		        <h3>Search From Email or ID</h3>
+		        <h3>Search From Name , Email or ID</h3>
 		        <!--Input-------->
 		        <div class="search-input">
                     <input type="text" id="myInput" onkeyup="myFunctionCustomer()" 
@@ -32,6 +32,12 @@
                 </div>
                 <br/>
 
+                <h3>Details of Selected Customer</h3>
+                
+                <div class="">
+                    <p>Customer ID : <input type="text" placeholder="Customer Name" id="cus_name"></p>
+                </div>
+                
             </form>
         </div>
         <br/>
@@ -83,6 +89,22 @@
         
         </div>
 
+<script>
+    var table = document.getElementById('myTable');
+                
+        for(var i = 1; i < table.rows.length; i++)
+        {
+            table.rows[i].onclick = function()
+            {
+                document.getElementById("cus_name").value = this.cells[1].innerHTML;
+                //  document.getElementById("lname").value = this.cells[1].innerHTML;
+                //  document.getElementById("age").value = this.cells[2].innerHTML;
+            };
+        }
+
+</script>
+        
+                  
        
 
     </body>

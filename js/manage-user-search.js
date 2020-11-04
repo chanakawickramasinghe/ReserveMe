@@ -18,3 +18,8 @@ function myFunctionCustomer() {
         }
       }
     } 
+
+
+
+
+               

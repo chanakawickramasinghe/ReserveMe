@@ -3,8 +3,10 @@
 
 <head>
     <title>Restaurant Registration</title>
+    <link rel="stylesheet" href="../../CSS/login.css">
     <link rel="stylesheet" href="../../CSS/customer_reg.css">
-    <link rel="stylesheet" href="../../CSS/res_reg.css">
+    
+    <link rel="icon" type="image/png" href="../images/logo.png" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../../css/nav.css" rel="stylesheet" type="text/css"/>
@@ -17,7 +19,7 @@
 <!--Start of nav-->
 <div class="topnav" id="myTopnav">
         <img class = "logo" src="../../images/logo.png">
-        <a href="../user-type.php">Register</a>
+        
         <a href="../../includes/login.php">Login</a>
         <a href="../admin/contact.php">Contact</a>
         <a href="../../includes/about.php">About</a>

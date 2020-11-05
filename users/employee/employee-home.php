@@ -41,7 +41,7 @@
       $userquery = mysqli_query($connection,$sql);
       $row = mysqli_fetch_assoc($userquery);
       echo
-      " <img class = \"image\" src=\"../../images/restaurant/".$row['res_image']."\" alt=\"Restaurent logo\">";
+      " <img class = \"image\" src=\"../../images/restaurant/".$row['res_image']."\" width=\"300px\" height=\"300px\" alt=\"Restaurent logo\">";
       ?>
 
       <div class="topnav"  >

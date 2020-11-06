@@ -34,8 +34,35 @@
 
                 <h3>Details of Selected Customer</h3>
                 
-                <div class="">
-                    <p>Customer ID : <input type="text" placeholder="Customer Name" id="cus_name"></p>
+                <div class="update-box">
+                    <p>
+                    Customer ID : <input class="input-s" type="text" placeholder="Cus. ID" id="cus_id" readonly="true" required>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                    Customer Name : <input class="input-l" type="text" placeholder="Customer Name" id="cus_name" readonly="true" required>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    Customer Email : <input class="input-l" type="text" placeholder="Customer Email" id="email" readonly="true" required>
+                    </p>
+                    <p>
+                    Contact No.&nbsp; : <input class="input-m" type="text" placeholder="Contact" id="contact_number" readonly="true" required>
+                    &nbsp; &nbsp; &nbsp; &nbsp; 
+                    Postal Code &nbsp;&nbsp;: <input class="input-s" type="text" placeholder="Postbox" id="postal_number" readonly="true" required>
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                    DoB : <input class="input-m" type="text" placeholder="yyyy-mm-dd" id="dob" readonly="true" required>
+                    &nbsp; &nbsp; &nbsp; 
+                    Street : <input class="input-l" type="text" placeholder="Street" id="street" readonly="true" required>
+                    </p>
+                    <p>
+                    City : <input class="input-m" type="text" placeholder="City" id="city" readonly="true" required>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                    Active Status : <input class="input-s" type="text" placeholder="Status" id="active_status" readonly="true" required>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    Ranking : <input class="input-s" type="text" placeholder="Postcode" id="rankings" readonly="true" required>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                    </p>
+                    <p>
+                    
+                    </p>
+
                 </div>
                 
             </form>
@@ -72,7 +99,7 @@
                 <tr>                  
                     <td>".$row['user_id']."</td>
                     <td>".$row['user_name']."</td>
-                    <td><a href=\"mailto:".$row['email']."\">".$row['email']."</a></td>
+                    <td>".$row['email']."</td>
                     <td>".$row['contact_no']."</td>
                     <td>".$row['dob']."</td>
                     <td>".$row['postal_number']."</td>
@@ -97,8 +124,15 @@
             table.rows[i].onclick = function()
             {
                 document.getElementById("cus_name").value = this.cells[1].innerHTML;
-                //  document.getElementById("lname").value = this.cells[1].innerHTML;
-                //  document.getElementById("age").value = this.cells[2].innerHTML;
+                document.getElementById("cus_id").value = this.cells[0].innerHTML;
+                document.getElementById("email").value = this.cells[2].innerHTML;
+                document.getElementById("dob").value = this.cells[4].innerHTML;
+                document.getElementById("contact_number").value = this.cells[3].innerHTML;
+                document.getElementById("street").value = this.cells[6].innerHTML;
+                document.getElementById("postal_number").value = this.cells[5].innerHTML;
+                document.getElementById("city").value = this.cells[7].innerHTML;
+                document.getElementById("active_status").value = this.cells[9].innerHTML;
+                document.getElementById("rankings").value = this.cells[8].innerHTML;
             };
         }
 

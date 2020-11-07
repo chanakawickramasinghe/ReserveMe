@@ -5,13 +5,14 @@
 <html lang="en">
 <head>
 <title>Login </title>
+<link rel="icon" type="image/png" href="../images/logo.png" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Link the style sheets -->
 <link rel="stylesheet" type="text/css" href="../CSS/login.css"> 
-<link rel="icon" type="image/png" href="../images/logo.png" />
 <link href="../CSS/main.css" rel="stylesheet" type="text/css"/>
-	<link href="../CSS/nav.css" rel="stylesheet" type="text/css"/>
-	<link href="../CSS/footer.css" rel="stylesheet" type="text/css"/>
+<link href="../CSS/nav.css" rel="stylesheet" type="text/css"/>
+<link href="../CSS/footer.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 	<!--FontAwesome-------->
 	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
@@ -23,7 +24,7 @@
         <img class="logo" src="../images/logo.png"> 
         
         <a href="../users/user-type.php">Register</a>
-        <a href="users/admin/contact.php">Contact</a>
+        <a href="contact.php">Contact</a>
         <a href="about.php">About</a>
         <a href="javascript:void(0);" class="icon" onclick="onClickNav()">
             <i class="fa fa-bars"></i>

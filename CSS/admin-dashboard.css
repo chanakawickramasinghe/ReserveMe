@@ -174,3 +174,38 @@
   padding: 5px;    
   text-align: center;
 }
+
+/* details */
+.update-box{
+  font-size: large;
+}
+
+.update-box .input-s{
+  font-size: medium;
+  color: darkblue;
+  width: 5.5vw;
+  border-radius: 7px;
+  border: 2px solid grey;
+  float: center;
+  padding: 0.3vw 1vw 0.3vw 1vw;
+}
+
+.update-box .input-l{
+  font-size: medium;
+  color: darkblue;
+  width: 20vw;
+  border-radius: 7px;
+  border: 2px solid grey;
+  float: center;
+  padding: 0.3vw 1vw 0.3vw 1vw;
+}
+
+.update-box .input-m{
+  font-size: medium;
+  color: darkblue;
+  width: 8vw;
+  border-radius: 7px;
+  border: 2px solid grey;
+  float: center;
+  padding: 0.3vw 1vw 0.3vw 1vw;
+}

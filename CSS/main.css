@@ -356,7 +356,8 @@ a{
 }
 /*End of Gallery Section*/
 
-@charset "utf-8";
+/* @charset "utf-8"; */
+/* chathu take a look at above comment */
 body{
 	margin:0px;
 	padding: 0px;

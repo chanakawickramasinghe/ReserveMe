@@ -113,25 +113,50 @@
   
   
 .type-feild{
-    height: 4vh;
+    height: 6vh;
     padding: 0.6vh;
-    border-color:gold;
-    border-radius:10px;
+    border-color:rgb(100, 103, 107);
+    border-radius:3px;
     outline:none;
+    width: 500px;
+    margin: 20px;
+    box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
     
 }
+.split {
+  /* height: 100%; */
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  
+}
+
+.right {
+  right: 0;
+  background-color: #ffc107;
+}
+
+
 
 .btn{
-    width:7vw;
-    height: 4vh;
-    background: #000000;
+    width:8vw;
+    height: 6vh;
+    padding:0.6vh;
+    background: #0e1581;
     border: none;
     color:#ffffff;
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: large;
 }
 .btn:hover{
-    background: #290391;
+    background: #000000;
     cursor: pointer;
 }
 .avatar{

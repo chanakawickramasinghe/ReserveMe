@@ -16,7 +16,7 @@ if(isset($_POST['submit'])){
     $city = $_POST['city'];
     
     
-    //echo "test 1";
+    
         //Check if email already exists in both tables
         $selectmail= "SELECT * FROM customer WHERE email ='$email' " ;
         $allmailquery = mysqli_query($connection, $selectmail ) ;  
@@ -40,7 +40,6 @@ if(isset($_POST['submit'])){
         //Insert to Database
         else {
 
-            //echo "testing 123";
             $registrationQuery = "INSERT INTO customer (user_id,user_name,email,password,contact_no,dob,postal_number,street,city,active_status) 
             VALUES (NULL,'$name', '$email', '$password','$contact', '$dob', '$pnumber','$street','$city',1)";
             // $registrationQuery = "INSERT INTO customer (user_name, email, password, contact_no, no) VALUES ('$name', '$email', '$password', '$contact', '$no')";

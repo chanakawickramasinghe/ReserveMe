@@ -183,7 +183,7 @@
 .update-box .input-s{
   font-size: medium;
   color: darkblue;
-  width: 5.5vw;
+  width: 6vw;
   border-radius: 7px;
   border: 2px solid grey;
   float: center;
@@ -208,4 +208,36 @@
   border: 2px solid grey;
   float: center;
   padding: 0.3vw 1vw 0.3vw 1vw;
+}
+
+/* buttons */
+.btn-blue{
+  width:20vw;
+  height: 4vh;
+  background: #5a7ee2;
+  border: none;
+  color:rgb(0, 0, 0);
+}
+
+.btn-blue:hover{
+  background: #304bc4;
+  cursor: pointer;
+}
+
+.btn-red{
+  width:15vw;
+  height: 4vh;
+  background: #f36a48;
+  border: none;
+  color:rgb(0, 0, 0);
+}
+
+.btn-red:hover{
+  background: #ca4c2d;
+  cursor: pointer;
+}
+
+/* button box */
+.button-box{
+  float: right;
 }

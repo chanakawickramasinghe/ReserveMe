@@ -36,31 +36,33 @@
                 
                 <div class="update-box">
                     <p>
-                    Customer ID : <input class="input-s" type="text" placeholder="Cus. ID" id="cus_id" readonly="true" required>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                    Customer ID : <input class="input-s" type="text" placeholder="ID" id="cus_id" readonly="true" required>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                     Customer Name : <input class="input-l" type="text" placeholder="Customer Name" id="cus_name" readonly="true" required>
                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                     Customer Email : <input class="input-l" type="text" placeholder="Customer Email" id="email" readonly="true" required>
                     </p>
                     <p>
-                    Contact No.&nbsp; : <input class="input-m" type="text" placeholder="Contact" id="contact_number" readonly="true" required>
-                    &nbsp; &nbsp; &nbsp; &nbsp; 
-                    Postal Code &nbsp;&nbsp;: <input class="input-s" type="text" placeholder="Postbox" id="postal_number" readonly="true" required>
-                    &nbsp; &nbsp; &nbsp; &nbsp;
+                    Contact No. : <input class="input-m" type="text" placeholder="Contact" id="contact_number" readonly="true" required>
+                    &nbsp; &nbsp; &nbsp; 
+                    Postbox : <input class="input-m" type="text" placeholder="Postbox" id="postal_number" readonly="true" required>
+                    &nbsp; &nbsp; &nbsp; 
                     DoB : <input class="input-m" type="text" placeholder="yyyy-mm-dd" id="dob" readonly="true" required>
                     &nbsp; &nbsp; &nbsp; 
                     Street : <input class="input-l" type="text" placeholder="Street" id="street" readonly="true" required>
-                    </p>
-                    <p>
+                    &nbsp; &nbsp; &nbsp; 
                     City : <input class="input-m" type="text" placeholder="City" id="city" readonly="true" required>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-                    Active Status : <input class="input-s" type="text" placeholder="Status" id="active_status" readonly="true" required>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    Ranking : <input class="input-s" type="text" placeholder="Postcode" id="rankings" readonly="true" required>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
                     </p>
                     <p>
-                    
+                    Rating : <input class="input-s" type="text" id="ratings" placeholder="Rating" readonly="true" required>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                    Active Status : <input class="input-s" type="text" id="active_status" placeholder="Status" readonly="true" required>
+                    <!-- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -->
+                    </p>
+                    <p class="button-box">
+                    <button class="btn-red" type="submit">Delete Account</button>
+                    <button class="btn-red" type="submit">Suspend Account</button>
+                    <button class="btn-blue" type="submit">Suspend Account</button>
                     </p>
 
                 </div>
@@ -132,7 +134,7 @@
                 document.getElementById("postal_number").value = this.cells[5].innerHTML;
                 document.getElementById("city").value = this.cells[7].innerHTML;
                 document.getElementById("active_status").value = this.cells[9].innerHTML;
-                document.getElementById("rankings").value = this.cells[8].innerHTML;
+                document.getElementById("ratings").value = this.cells[8].innerHTML;
             };
         }
 

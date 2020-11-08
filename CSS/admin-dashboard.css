@@ -21,7 +21,7 @@
   }
   
   .sidebar a:hover:not(.active) {
-    background-color: rgb(53, 120, 129);
+    background-color: rgb(185, 72, 44);;
     color: white;
   }
   
@@ -62,7 +62,7 @@
   }
 
   /* welcome message */
-  h2 {
+  h1{
       text-align: center;
       color: #1980d4;
     }
@@ -72,9 +72,187 @@
 .row-33 {
     float: left;
     position: relative;
-    padding: 15px;
-    width: 33%;
+    padding-top: 2vw;
+    padding-left: 7vw;
+    width: 22%;
     justify-content: center;
     align-items: center;
     align-content: center;    
+}
+
+/* buttons */
+.btn-users {
+  width:15vw;
+  height: 10vh;
+  background: #1980d4;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: large;
+}
+
+.btn-users:hover{
+  background: rgb(185, 72, 44);;
+  cursor: pointer;
+}
+
+/*Start of Subscribe*/
+.search-user-container{
+
+	margin-bottom:30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+  align-items: left;
+  padding-left: 7vw;
+	border-bottom: 2px solid rgba(0,0,0,0.03);
+}
+
+.search-user-container h3{
+	padding-left: 1vw;
+  color:#53545f;
+}
+
+.search-input{
+	width:500px;
+	background-color: rgb(179, 236, 247);
+	border-radius:25px;
+	height: 1.5vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  padding:20px;
+}
+
+.search-input input{
+	width:100%;
+	/* height: 5vh; */
+	border: none;
+	outline: none;
+  background-color: transparent;
+  font-size: medium;
+}
+
+.search-btn{
+	width:120px;
+	height: 5vh;
+  background-color: #1980d4;
+  border: none;
+	border-radius: 20px;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	/* box-shadow: 2px 2px 30px rgba(0,0,0,0.1); */
+	font-size: 1rem;
+}
+
+.search-btn:hover{
+	background-color:rgb(185, 72, 44);
+	transition: all  ease 0.5s;
+}
+/*End of Subscribe*/
+
+/*User Tables */
+.user{
+  width: 90vw;
+  margin: 0 auto;
+  table-layout: auto;
+  border-collapse: collapse;
+  
+}
+.user th {
+  background-color: #cbe1ee;
+  border: 1px solid rgb(43, 106, 189);
+  padding: 5px;
+  text-align: center;
+}
+
+.user td{
+  border: 1px solid rgb(160, 154, 154);
+  padding: 5px;    
+  text-align: center;
+}
+
+/* details */
+.update-box{
+  font-size: large;
+}
+
+.update-box .input-s{
+  font-size: medium;
+  color: rgb(129, 129, 182);
+  width: 6vw;
+  border-radius: 7px;
+  border: 2px solid grey;
+  float: center;
+  padding: 0.3vw 1vw 0.3vw 1vw;
+}
+
+.update-box .input-l{
+  font-size: medium;
+  color: rgb(129, 129, 182);
+  width: 20vw;
+  border-radius: 7px;
+  border: 2px solid grey;
+  float: center;
+  padding: 0.3vw 1vw 0.3vw 1vw;
+}
+
+.update-box .input-m{
+  font-size: medium;
+  color: rgb(129, 129, 182);
+  width: 8vw;
+  border-radius: 7px;
+  border: 2px solid grey;
+  float: center;
+  padding: 0.3vw 1vw 0.3vw 1vw;
+}
+
+/* td{
+  padding-left: 2vw;
+} */
+
+.update-box th{
+  color: #5e6566;
+  padding-left: 2vw;
+  align-content: left;
+  text-align: left;
+  font-weight: 400;
+}
+
+/* buttons */
+.btn-blue{
+  width:8vw;
+  height: 4vh;
+  background: #5a7ee2;
+  border: none;
+  border-radius: 10px;
+  color:rgb(0, 0, 0);
+}
+
+.btn-blue:hover{
+  background: #304bc4;
+  cursor: pointer;
+}
+
+.btn-red{
+  width:14vw;
+  height: 4vh;
+  background: #f36a48;
+  border: none;
+  border-radius: 10px;
+  color:rgb(0, 0, 0);
+}
+
+.btn-red:hover{
+  background: #ca4c2d;
+  cursor: pointer;
+}
+
+/* button box */
+.button-box{
+  float: right;
+  padding-right: 12vw;
 }

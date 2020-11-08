@@ -5,7 +5,7 @@
 }
 
 body{
-    font-family: 'Baloo Chettan 2', cursive;
+	font-family: 'Baloo Chettan 2', cursive;
     line-height: 1.5;
 }
 
@@ -357,7 +357,6 @@ a{
 }
 /*End of Gallery Section*/
 
-@charset "utf-8";
 body{
 	margin:0px;
 	padding: 0px;

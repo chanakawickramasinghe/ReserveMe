@@ -61,6 +61,12 @@ if(isset($_POST['submit'])){
     else if(mysqli_num_rows($userResult4) == 1){
 
         $userRow = mysqli_fetch_array($userResult4);
+        checkSession();  //create sessions
+        $_SESSION["emp_name"] = $userRow['emp_name'];
+        $_SESSION["emp_id"] = $userRow['emp_id'];
+        $_SESSION["res_id"] = $userRow['res_id'];
+        $_SESSION["userType"] = 'Employee';
+
         header( "Location:../users/employee/employee-home.php");
 
     }

@@ -31,7 +31,7 @@
                     placeholder="Enter Name , Email or ID"/>
                 </div>
                 <br/>
-
+                
                 <h3>Details of Selected Customer</h3>
                 
                 <div class="update-box">
@@ -45,9 +45,9 @@
                     <p>
                     Contact No. : <input class="input-m" type="text" placeholder="Contact" id="contact_number" readonly="true" required>
                     &nbsp; &nbsp; &nbsp; 
-                    Postbox : <input class="input-m" type="text" placeholder="Postbox" id="postal_number" readonly="true" required>
-                    &nbsp; &nbsp; &nbsp; 
                     DoB : <input class="input-m" type="text" placeholder="yyyy-mm-dd" id="dob" readonly="true" required>
+                    &nbsp; &nbsp; &nbsp; 
+                    Postbox : <input class="input-m" type="text" placeholder="Postbox" id="postal_number" readonly="true" required>
                     &nbsp; &nbsp; &nbsp; 
                     Street : <input class="input-l" type="text" placeholder="Street" id="street" readonly="true" required>
                     &nbsp; &nbsp; &nbsp; 
@@ -60,9 +60,9 @@
                     <!-- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -->
                     </p>
                     <p class="button-box">
-                    <button class="btn-red" type="submit">Delete Account</button>
-                    <button class="btn-red" type="submit">Suspend Account</button>
-                    <button class="btn-blue" type="submit">Suspend Account</button>
+                    <!-- <button class="btn-red" type="button" name="btn-delete-account">Delete Account</button> -->
+                    <button class="btn-red" type="button" name="btn-suspend-account" onclick="suspendFunction()">Suspend Account</button>
+                    <button class="btn-blue" type="reset">Clear</button>
                     </p>
 
                 </div>

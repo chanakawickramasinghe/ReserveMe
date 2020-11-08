@@ -212,10 +212,11 @@
 
 /* buttons */
 .btn-blue{
-  width:20vw;
+  width:8vw;
   height: 4vh;
   background: #5a7ee2;
   border: none;
+  border-radius: 10px;
   color:rgb(0, 0, 0);
 }
 
@@ -225,10 +226,11 @@
 }
 
 .btn-red{
-  width:15vw;
+  width:14vw;
   height: 4vh;
   background: #f36a48;
   border: none;
+  border-radius: 10px;
   color:rgb(0, 0, 0);
 }
 
@@ -240,4 +242,5 @@
 /* button box */
 .button-box{
   float: right;
+  padding-right: 12vw;
 }

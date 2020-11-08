@@ -19,6 +19,18 @@ function myFunctionCustomer() {
       }
     } 
 
+    function suspendFunction() {
+      var txt;
+      var r = confirm("Are you sure want to suspend this Account?");
+      if (r == true) {
+        // txt = "You pressed OK!";
+        window.location = "admin-view-customer.php";
+        alert("Account Suspended");
+      } else {
+        // txt = "You pressed Cancel!";
+      }
+      // document.getElementById("demo").innerHTML = txt;
+    }
 
 
 

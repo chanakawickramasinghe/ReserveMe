@@ -9,7 +9,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Link the style sheets -->
-<link rel="stylesheet" type="text/css" href="../CSS/login.css"> 
+<link href="../CSS/login.css" rel="stylesheet" type="text/css" > 
 <link href="../CSS/main.css" rel="stylesheet" type="text/css"/>
 <link href="../CSS/nav.css" rel="stylesheet" type="text/css"/>
 <link href="../CSS/footer.css" rel="stylesheet" type="text/css"/>
@@ -18,7 +18,7 @@
 	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 
 </head>
-<body class="login-body">
+<body >
 	<!--Start of nav-->
     <div class="topnav" id="myTopnav">
         <img class="logo" src="../images/logo.png"> 
@@ -34,7 +34,7 @@
 	<b>
     
 <div class="limiter">
-<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+<div class="container-login100">
 <div class="wrap-login100 ">
 <img src="../images/profile.png" class="avatar">
 

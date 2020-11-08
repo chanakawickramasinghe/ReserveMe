@@ -10,6 +10,7 @@
     <title>Emploee-Home</title>  
     <link href="../../images/logo.png" rel="shortcut icon"/> 
     <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
+    <!-- Link the style sheets -->
   	<link rel="stylesheet" href="../../CSS/nav.css">   
     <link rel="stylesheet" href="../../CSS/footer.css">
 
@@ -19,7 +20,7 @@
    <!--Start of nav-->
     <div class="topnav" id="myTopnav">
         <a href="../../index.php">Logout</a>
-        <a href="../admin/contact.php">Contact</a>
+        <a href="../../includes/contact.php">Contact</a>
         <a href="../../includes/about.php">About</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>

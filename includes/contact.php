@@ -14,10 +14,25 @@
 
 	<!--FontAwesome-------->
 	<script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
+    <style>
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-family:Times;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size:50px;
+}
+</style>
 </head>
 <body>
-<!--main-section--------------->
-<section class="main">
+<!-- main-section-------------
+<section class="main"> -->
 		<!--Start of nav-->
 		<div class="topnav" id="myTopnav">
 			<img class = "logo" src="../images/logo.png">
@@ -28,12 +43,16 @@
 				<i class="fa fa-bars"></i></a>       
 		</div>
 		<!--End of nav-->
-    
-        <div><br>
-        <h1 style="text-align:center"> We would love to hear from you..!</h1>
+        <br>
+        <div class="container">
+        <img src="../images/Contact-us.jpg" alt="Contact-Us image" style="height:200px;width:100%">
+        <h1 class="centered"> We would love to hear from you..!</h1>
         </div>
 
         <div style="margin-left:10%">
+        <table>
+        <tr>
+        <td>
         <form action="contact.php" method="post" onsubmit="myFunction()">
 
         <select name="comment" id="comment" class="type-feild" default="How can we help you">
@@ -53,9 +72,18 @@
         <input type="submit" name="submit"  class="btn" value="Post" style="margin-left:30px"  required>
         </form>
         </div>
-   
+        </td>
 
-     
+        <td>
+        <img src="../images/contact-us-woman.jpg" alt="">
+        
+        
+        
+        </td>
+   
+        </tr>
+        </table>
+        </div>
 
         <!--Include footer.php-->
     <div><?php include "../includes/footer.php" ?></div>
@@ -74,7 +102,7 @@
 
         //Insert into database
 
-        $commentQuery="INSERT INTO contact(comment,name,email,mobile,message) VALUES('$comment','$name','$email','$mobile','$msg')" ;
+        $commentQuery="INSERT INTO contact_us(comment,name,email,mobile,message) VALUES('$comment','$name','$email','$mobile','$msg')" ;
         if (mysqli_query($connection,$commentQuery) == TRUE) {
             // $message = base64_encode(urlencode("Message Sent Successfully"));
             // header('Location:contact.php?msg=' . $message);

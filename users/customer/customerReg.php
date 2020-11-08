@@ -1,11 +1,15 @@
 <html>  
 <head>
-    <title>Customer Registration</title>
-    <link rel="stylesheet" type="text/css" href="../../CSS/customer_reg.css">   
+    <title>Customer Registration</title> 
+    <link href="../../images/logo.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../css/nav.css" rel="stylesheet" type="text/css"/>
-    <link href="../../css/footer.css" rel="stylesheet" type="text/css"/>
-    <link href="../../images/logo.png" rel="shortcut icon"/> 
+    <!-- Link the style sheets -->
+    <link href="../../CSS/login.css" rel="stylesheet" type="text/css" > 
+    <link href="../../CSS/nav.css" rel="stylesheet" type="text/css">
+    <link href="../../CSS/footer.css" rel="stylesheet" type="text/css">     
+    <link href="../../CSS/customer-reg.css" rel="stylesheet" type="text/css" > 
+    
+
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
 </head>
     
@@ -15,7 +19,7 @@
         <img class = "logo" src="../../images/logo.png">
         <a href="../user-type.php">Register</a>
         <a href="../../includes/login.php">Login</a>
-        <a href="../admin/contact.php">Contact</a>
+        <a href="../../includes/contact.php">Contact</a>
         <a href="../../includes/about.php">About</a>
         <a href="javascript:void(0);" class="icon" onclick="onClickNav()">
             <i class="fa fa-bars"></i>
@@ -23,70 +27,79 @@
     </div>
     <!--End of nav-->
 
-        <div class="row-100">
-            <div class="login-box" style="width:600px">
+        
+        <div class="login-box"> 
                
             <img src="../../images/profile.png" class="avatar">
             <br>
                 <h1 align="center">Register Here</h1>
-                
-              
 
             <h2 class="error-msg"><?php include_once('../../includes/message.php'); ?></h2>
 
                 <form action="register-submit.php" method="post">                   
-                <div>   
-                <table style="width:500px">
-                <tr><td>
-                <p><b>Name</p>
-                    <input type="text" class="type-feild" name="name" placeholder="Your name" required>    
+                  
+                <table style="width:500px;position:center;align-items:center">
+                <tr>
+                    <td>
+                    <label for="name">Name</label>
+                    <input type="text"  name="name" class="reg-type-feild" placeholder="Your name" required>    
 
-                    <p>Email address</p>
-                    <input type="email" name="email" class="type-feild" placeholder="your email" required >
+                    <label for="email">Email address</label>
+                    <input type="email" name="email" class="reg-type-feild" placeholder="your email" required >
 
-                    <p>Password</p>
-                    <input type="password" name="password" class="type-feild" placeholder="Enter Password" id="password"  required>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" class="reg-type-feild" placeholder="Enter Password" id="password"  required>
 
-                    <p>Confirm Password</p>
-                    <input type="password" name="password2" class="type-feild" placeholder="Re-Enter Password" id="confirm_password" onkeyup='check()' required>
+                    <label for="password2">Confirm Password</label>
+                    <input type="password2" name="password2" class="reg-type-feild" placeholder="Re-Enter Password" id="confirm_password" onkeyup='check()' required>
                     <P id='message' ></P>
 
-                    <p>Contact number</p>
-                    <input type="tel" name="contact" class="type-feild" placeholder="Mobile number" pattern='^\+?\d{0,13}' > </td>
+                    <label for="contact">Contact number</label>
+                    <input type="tel" name="contact" class="reg-type-feild" placeholder="Mobile number" pattern='^\+?\d{0,13}' > </td>
 
                     <td>
-                    <p><b>Date of birth</p>
-                    <input type="date" name="dob" id='dob' class="type-feild" onkeyup='getAge(dob)' required> 
+
+                    <label for="dob">Date of birth</label>
+                    <input type="date" name="dob" id='dob' class="reg-type-feild" onkeyup='getAge(dob)' required> 
                     <P id='message2' ></P>
-<!-- 
-                    <?php
-                    $dob=$_POST['dob'];
-if (time() < strtotime('+18 years', strtotime($dob))) {
-    echo 'Client is under 18 years of age.';
-    exit;
- }
-                    ?> -->
+                                <!-- 
+                                                    <?php
+                                //                     $dob=$_POST['dob'];
+                                // if (time() < strtotime('+18 years', strtotime($dob))) {
+                                //     echo 'Client is under 18 years of age.';
+                                //     exit;
+                                //  }
+                                                    ?> -->
 
 
-                    <p>Address<p>
-                    <p> Number </p>
-                    <input type="text" name="pnumber" class="type-feild" placeholder="Number"> 
+                    <!-- <p>Address<p> -->
+                    <label for="pnumber">Number</label>
+                    <input type="text" name="pnumber" class="reg-type-feild" placeholder="Number"> 
 
-                    <p>Street</p>
-                    <input type="text" name="street" class="type-feild" placeholder="Street"> 
+                    <label for="street">Street</label>
+                    <input type="text" name="street" class="reg-type-feild" placeholder="Street"> 
 
-                    <p>City</p>
-                    <input type="text" name="city" class="type-feild" placeholder="City"> </td></tr> 
-                    </table>          
- <br>
+                    <label for="city">City</label>
+                    <input type="text" name="city" class="reg-type-feild" placeholder="City"> 
+                    </td>
+                </tr> 
+                </table>          
+                <br>
                    
-                   <p align="center"> <input type="submit" name="submit"  class="search-btn hover" value="Register" required></p>
-                   </div>
+                   <p align="center"> <input type="submit" name="submit"  class="btn" value="Register" required></p>
+                   
                 </form>    
-            </div>
+            
         </div>
         
-        <script>
+
+
+        <!--Include footer.php-->
+   <div><?php include "../../includes/footer.php" ?></div>
+    
+    <!--script for onClickNav() for the navigation menu-->
+    <script src="../../js/onClickNav.js"></script>
+    <script>
         var check = function() {
             if (document.getElementById('password').value == document.getElementById('confirm_password').value){
                     document.getElementById('message').style.color = 'green';
@@ -115,12 +128,6 @@ if(age<16) {
 } 
     
         </script>
-
-        <!--Include footer.php-->
-   <div><?php include "../../includes/footer.php" ?></div>
-    
-    <!--script for onClickNav() for the navigation menu-->
-    <script src="../../js/onClickNav.js"></script>
 </body>
 
 </html>

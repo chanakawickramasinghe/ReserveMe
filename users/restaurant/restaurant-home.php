@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReserveMe</title>
-    <link rel="stylesheet" href="../../CSS/main.css">
+    <link href="../../images/logo.png" rel="shortcut icon"/> 
     <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
+    <!-- Link the style sheets -->
+    <link rel="stylesheet" href="../../CSS/main.css">
 	<link rel="stylesheet" href="../../CSS/nav.css">
     <link rel="stylesheet" href="../../CSS/search.css">
     <link rel="stylesheet" href="../../CSS/footer.css">
@@ -65,6 +67,9 @@ include('../../includes/session.php');
 
             </form>
         </div>
+
+        <!--Include footer.php-->
+ <div><?php include "../../includes/footer.php" ?></div>
     </body>
 </html>
     

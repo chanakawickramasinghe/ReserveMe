@@ -7,17 +7,17 @@
   }
   
   .login-box{
-    width: 350px;
+    width: 750px;
     height: 100%;
-    margin: 0 auto;
-    background: #f2f2f2;
+    margin: 30px auto;
+    background: #ffffffec;
     color: #000000;
     box-sizing: border-box;
     padding: 30px;
     position: center;
-    border: #250779 4px solid;
+    border: #a17807 1px solid;
     border-radius: 10px;
- 
+    box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
     
   }
   .container-login100 {
@@ -31,7 +31,6 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    
     background: #f2f2f2;  
   }
   
@@ -108,10 +107,7 @@
   .wrap-login100-form-btn:hover .login100-form-bgbtn {
     left: 0;
   }
-  
-  
-  
-  
+ 
 .type-feild{
     height: 6vh;
     padding: 0.6vh;
@@ -123,27 +119,17 @@
     box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
     
 }
-.split {
-  /* height: 100%; */
-  width: 50%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-
-.left {
-  left: 0;
+.reg-type-feild{
+  height: 4vh;
+  padding: 0.4vh;
+  border-color:rgb(100, 103, 107);
+  border-radius:5px;
+  outline:none;
+  width: 300px;
+  margin: 20px;
+  box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
   
 }
-
-.right {
-  right: 0;
-  background-color: #ffc107;
-}
-
-
 
 .btn{
     width:8vw;

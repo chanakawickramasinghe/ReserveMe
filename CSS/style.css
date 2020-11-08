@@ -233,9 +233,9 @@
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
+	justify-content: center; 
 	-ms-align-items: center;
-	align-items: center;
+	align-items: center; 
 }
 .login100-social-item {
     font-size: 25px;
@@ -260,4 +260,19 @@
 
   .bg2{
       background-color: rgb(44, 96, 240);
+  }
+
+  .content-box{
+    width: 300px;
+    height: 100%;
+    margin: 30px 10px;
+    background: #ffffffbb;
+    color: #000000;
+    box-sizing: border-box;
+    padding: 30px;
+    position: center;
+    /* border: #a17807 1px solid; */
+    border-radius: 10px;
+    box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
+    
   }

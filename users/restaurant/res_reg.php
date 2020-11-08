@@ -4,7 +4,7 @@
 <head>
     <title>Restaurant Registration</title>
     <link rel="stylesheet" href="../../CSS/login.css">
-    <link rel="stylesheet" href="../../CSS/customer_reg.css">
+    <link rel="stylesheet" href="../../CSS/customer-reg.css">
     
     <link rel="icon" type="image/png" href="../images/logo.png" />
     <meta charset="UTF-8">
@@ -21,7 +21,7 @@
         <img class = "logo" src="../../images/logo.png">
         
         <a href="../../includes/login.php">Login</a>
-        <a href="../admin/contact.php">Contact</a>
+        <a href="../../includes/contact.php">Contact</a>
         <a href="../../includes/about.php">About</a>
         <a href="javascript:void(0);" class="icon" onclick="onClickNav()">
             <i class="fa fa-bars"></i>
@@ -40,19 +40,19 @@
                 <h2 align="center">Restaurant Details</h2>
                <b>
                 <p>Name</p>
-                    <input type="text" class="type-feild"   name="res_name" placeholder="Restaurant Name" required>
+                    <input type="text" class="reg-type-feild"   name="res_name" placeholder="Restaurant Name" required>
     
                 <p>Email</p>
-                    <input type="email"  class="type-feild" name="res_email" placeholder="Email" required>
+                    <input type="email"  class="reg-type-feild" name="res_email" placeholder="Email" required>
 
                     <p>Telephone No</p>
-                    <input type="tel" class="type-feild" name="res_tel" placeholder="Telephone No" pattern='^\+?\d{0,13}' required>
+                    <input type="tel" class="reg-type-feild" name="res_tel" placeholder="Telephone No" pattern='^\+?\d{0,13}' required>
                     
                 <p>Password</p>
-                    <input type="password" class="type-feild" name="res_password" placeholder="Password" class="type-feild" id="res_password" required>    
+                    <input type="password" class="reg-type-feild" name="res_password" placeholder="Password"  id="res_password" required>    
                     <h2 class="error-msg" style="font-size:14px"><?php include_once('../../includes/message.php'); ?></h2>  
                     <p>Confirm Password</p>
-                    <input type="password" class="type-feild" name="password2" class="type-feild" placeholder="Re-Enter Password" id="confirm_password" onkeyup='check()' required>
+                    <input type="password" class="reg-type-feild" name="password2"  placeholder="Re-Enter Password" id="confirm_password" onkeyup='check()' required>
                     <p style="font-size:14px" id='message' ></p>
                     <br><br><br>
                    <button style="margin-left:220px;margin-top:-45px;position:sticky;top:0;"type="button" class="search-btn hover" onclick="nextPrev(1)">Next</button>
@@ -66,16 +66,16 @@
             <div class="login-box" style="height:650px;padding:10px 30px">
             <p>Address: <p>
                     <p> Address Line 1 </p>
-                    <input type="text" name="pnumber" class="type-feild" placeholder="Number"> 
+                    <input type="text" name="pnumber" class="reg-type-feild" placeholder="Number"> 
 
                     <p> Address Line 2</p>
-                    <input type="text" name="street" class="type-feild" placeholder="Street"> 
+                    <input type="text" name="street" class="reg-type-feild" placeholder="Street"> 
 
                     <p>City</p>
-                    <input type="text" name="city" class="type-feild" placeholder="City"> 
+                    <input type="text" name="city" class="reg-type-feild" placeholder="City"> 
 
                     <p>Google map Location</p>
-                    <input type="url" class="type-feild" name="res_location" placeholder="Google map link" class="inp" required>
+                    <input type="url" class="reg-type-feild" name="res_location" placeholder="Google map link" class="inp" required>
 
                     <h2>Profile image</h2>
                     <p>Insert the images for Restaurant Display profile</p>

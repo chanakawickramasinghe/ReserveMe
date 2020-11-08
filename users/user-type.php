@@ -6,20 +6,19 @@
         <link href="../css/login.css" rel="stylesheet" type="text/css"/>
         <link href="../css/nav.css" rel="stylesheet" type="text/css"/>
     <link href="../css/footer.css" rel="stylesheet" type="text/css"/>
-    <link href="images/hero.jpg" rel="shortcut icon"/>
+    <!--web-icon-->
+    <link href="../images/logo.png" rel="shortcut icon"/>
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
      </head>
     <body class="login-body">
      <div class="row-100">  
      <!--Start of nav-->
     <div class="topnav" id="myTopnav">
-        <img class = "logo" src="../images/logo.png">
-        <a href="../includes/login.php">Login</a>
-        <a href="../includes/contact.php">Contact</a>
-        <a href="../includes/about.php">About</a>
-        <a href="javascript:void(0);" class="icon" onclick="onClickNav()">
-            <i class="fa fa-bars"></i>
-        </a>       
+        <a href="../index.php"><img class = "logo" src="../images/logo.png"></a>
+        <a class="navtab" href="../includes/login.php">Login</a>
+        <a class="navtab" href="../includes/contact.php">Contact</a>
+		<a class="navtab" href="../includes/about.php">About</a>
+		<!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->     
     </div>
     <!--End of nav-->
         <!-- <h3 class="error-msg"><?php include('includes/message.php'); ?></h3> -->

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../../css/nav.css" rel="stylesheet" type="text/css"/>
     <link href="../../css/footer.css" rel="stylesheet" type="text/css"/>
-    <link href="../../images/logo.png" rel="shortcut icon"/> 
+    <link href="../../images/logo.png" rel="shortcut icon"/>
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
 </head>
 
@@ -16,12 +16,11 @@
 
 <!--Start of nav-->
     <div class="topnav" id="myTopnav">
-        <img class = "logo" src="../../images/logo.png">
-        <a href="users/user-type.php">Register</a>
-        <a href="includes/login.php">Login</a>
-        <a href="#contact">Contact</a>
-        <a href="#aboutus">About</a>
-        <a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>       
+        <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
+        <a class="navtab" href="../../includes/login.php">Login</a>
+		<a class="navtab" href="../../includes/contact.php">Contact</a>
+		<a class="navtab" href="../../includes/about.php">About</a>
+		<!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->     
     </div>
 <!--End of nav-->
 <br><br><br><br><br>

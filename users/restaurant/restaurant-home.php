@@ -16,14 +16,12 @@
 <body>
     <!--Start of nav-->
     <div class="topnav" id="myTopnav">
-        <a href="../../index.php">Logout</a>
-        <a href="customer-profile.php">My Profile</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-        </a>
-        <img class = "logo" src="../../images/logo.png">
+        <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
+        <a class="navtab" href="../../index.php">Logout</a>
+		<a class="navtab" href="restaurant-profile.php">My Profile</a>
+		<a class="navtab" href="../../includes/contact.php">Contact</a>
+		<a class="navtab" href="../../includes/about.php">About</a>
+		<!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->     
     </div>
     <!--End of nav-->
 
@@ -55,15 +53,9 @@ include('../../includes/session.php');
                 <br><br>
 
                 <div class="form-box"><c>
-<<<<<<< HEAD
-                    <a href="#" class="search-button pulsate">Pre - Order Menu</a>
-                    <a href="#" class="search-button pulsate">Update the Menu</a>
-                    <a href="#" class="search-button pulsate" >Add Employee</a>
-=======
                     <a href="add-preordermenu.php" class="search-button pulsate">Pre - Order Menu</a>
                     <a href="add-menu.php" class="search-button pulsate">Update the Menu</a>
                     <a href="../employee/employee-add.php" class="search-button pulsate">Manage Employee</a>
->>>>>>> e00bcb58875dc08019f82e011f8e2a2b9d0eb4d8
                     <a href="#" class="search-button pulsate">Reception Hall</a>
                 </c></div>
             </form>            

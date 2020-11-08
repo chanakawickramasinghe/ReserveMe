@@ -10,19 +10,18 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 	<!--FontAwesome-------->
 	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
-
+    <!--web-icon-->
+    <link href="../images/logo.png" rel="shortcut icon"/>
     
 </head>
     
 <body >
     <div class="topnav" id="myTopnav">
-    <img style="margin-right:950px" class = "logo" src="../images/logo.png">
-        <a href="../users/user-type.php">Register</a>
-        <a href="login.php">Login</a>
-        <a href="contact.php">Contact</a>
-        <a href="javascript:void(0);" class="icon" onclick="onClickNav()">
-            <i class="fa fa-bars"></i>
-        </a>       
+        <a style="margin-right:950px" href="../index.php"><img class = "logo" src="../images/logo.png"></a>
+		<a class="navtab" href="../users/user-type.php">Register</a>
+		<a class="navtab" href="login.php">Login</a>
+		<a class="navtab" href="contact.php">Contact</a>
+		<!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> --> 
     </div><br>
     
     

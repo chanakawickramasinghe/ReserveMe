@@ -1,4 +1,5 @@
 <?php include('../includes/connection.php'); ?>
+<?php include('../includes/session.php') ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,15 +20,13 @@
 <body>
     <!--Start of nav-->
     <div class="topnav" id="myTopnav">
-        <img class = "logo" src="../images/logo.png">
-        <a href="../users/user-type.php">Register</a>
-        <a href="../includes/login.php">Login</a>
-        <a href="#contact">Contact</a>
-        <a href="#aboutus">About</a>
-        <a href="javascript:void(0);" class="icon" onclick="onClickNav()">
-            <i class="fa fa-bars"></i>
-        </a>       
-    </div>
+		<a href="../index.php"><img class = "logo" src="../images/logo.png"></a>
+		<a class="navtab" href="../users/user-type.php">Register</a>
+		<a class="navtab" href="../includes/login.php">Login</a>
+		<a class="navtab" href="includes/contact.php">Contact</a>
+		<a class="navtab" href="includes/about.php">About</a>
+		<!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->
+	</div>
     <!--End of nav-->
 
 	<!--Start of main-section-->
@@ -46,7 +45,7 @@
                             <h4><i class=\"fas fa-star-half-alt\">". $rowProduct['res_rate'] ."</i></h4>
                             <br>
                             <h4><i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i></h4>
-                            <button class=\"reserve-button pulsate\" type=\"submit\" name=\"submit\" onclick=\"onClickOpenForm()\">Search<i class=\"fas fa-search\"></i></button>
+                            <button class=\"reserve-button pulsate\" type=\"submit\" name=\"submit\" onclick=\"onClickOpenForm()\">Reserve<i class=\"fas fa-search\"></i></button>
 	                    </div>	
 	                </section>";
             }
@@ -56,12 +55,13 @@
 
     <!--Start of pop up login page-->
     <div class="form-popup" id="myForm">
-        <form action="login_submit.php" method="post" class="form-container">
+        <form action="../includes/login-submit.php" method="post" class="form-container">
             <h1>Login</h1>
             <label for="email"><b>Email</b></label>
             <input type="text" placeholder="Enter Email" name="email" required>
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="password" required>
+			 <h3 class="error-msg"><?php include_once('../includes/message.php'); ?></h3> 
             <div class="pass">
                 <a href="#">Forgot Password?</a>
             </div>
@@ -104,6 +104,6 @@
     <div><?php include "../includes/footer.php" ?></div>
     
     <!--script for onClickNav() for the navigation menu-->
-    <script src=".,/js/onClickNav.js"></script>
+    <script src="../js/onClickNav.js"></script>
 </body>
 </html>

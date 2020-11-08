@@ -32,52 +32,7 @@
     
     
 
-    <!--Start of Card Section-->
-
-    <?php
-$sql = "SELECT res_id FROM restaurant_category where Arabic=1";
-mysqli_query($connection, $sql);
-$result = mysqli_query($connection,$sql);
-
-if($result){
-//echo "Sucessfull";
-}
-else{
-echo"failed";	
-}
-
-
-
-
-?>
-<section class="product">
-		<!--heading------------>
-	<div class="p-heading">
-		<h3>Arabic</h3>
-	</div>
-<?php
-		while($row=mysqli_fetch_assoc($result)){
-			?>
     
-	<!--product-container----------------->
-	<div class="product-container">
-	<!--box-1------------>
-	<div class="p-box">
-	<img alt="1" src="images/<?php echo $row['res_id'] ?>.jpg" />
-	<!--details--------->
-	<p><?php echo $row['res_name'] ?></p>
-	<!--price--->
-	<p><?php echo $row['res_rate'] ?></p>
-	<!--buy-btn-->
-	<a class="buy-btn" href="#">Reserve</a>
-    </div>
-    <?php
-	}
-	?>
-	</div>
-	
-	</section>
-    <!--End of Card Section-->
 
     <!--Include footer.php-->
     <div><?php include "../includes/footer.php" ?></div>

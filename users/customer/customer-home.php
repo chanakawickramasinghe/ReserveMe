@@ -26,15 +26,8 @@
         </a>       
     </div>
     <!--End of nav-->
-<<<<<<< HEAD
     <!--Start of Header-->
     <header class="header">
-=======
-    
-    
-        <!--Start of Header-->
-        <header class="header">
->>>>>>> e00bcb58875dc08019f82e011f8e2a2b9d0eb4d8
         <div class="search">
             <form action="" method="post">
                 <div class="form-box">
@@ -154,11 +147,7 @@
                                             <i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i>
                                         </div>
                                         <div class=\"footer-btn\">
-<<<<<<< HEAD
                                             <button type=\"button\"class=\"food-btn\" onclick=\"location.href='../../res_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
-=======
-                                            <button type=\"button\"class=\"food-btn\" onclick=\"location.href='res_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
->>>>>>> e00bcb58875dc08019f82e011f8e2a2b9d0eb4d8
                                         </div>
                                     </div>
                                 </article>           

@@ -21,15 +21,18 @@ function myFunctionCustomer() {
 
     function suspendFunction() {
       var txt;
-      var r = confirm("Are you sure want to suspend this Account?");
-      if (r == true) {
-        // txt = "You pressed OK!";
+      var x = document.forms["form-display-selected"]["id"].value;
+      if (x == "") {
+        alert("No ID entered!");
+        return false;
+      }
+      else{
+        var r = confirm("Are you sure want to suspend this Account?");
+        if (r == true) {
         window.location = "admin-view-customer.php";
         alert("Account Suspended");
-      } else {
-        // txt = "You pressed Cancel!";
+        } 
       }
-      // document.getElementById("demo").innerHTML = txt;
     }
 
 

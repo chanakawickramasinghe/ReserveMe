@@ -22,7 +22,7 @@
         <!--End of nav-->
 
         <div class="search-user-container">
-            <form>
+            <form name="form-display-selected">
                 <!--heading-->
 		        <h3>Search From Name , Email or ID</h3>
 		        <!--Input-------->
@@ -35,30 +35,44 @@
                 <h3>Details of Selected Customer</h3>
                 
                 <div class="update-box">
-                    <p>
-                    Customer ID : <input class="input-s" type="text" placeholder="ID" id="cus_id" readonly="true" required>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    Customer Name : <input class="input-l" type="text" placeholder="Customer Name" id="cus_name" readonly="true" required>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    Customer Email : <input class="input-l" type="text" placeholder="Customer Email" id="email" readonly="true" required>
-                    </p>
-                    <p>
-                    Contact No. : <input class="input-m" type="text" placeholder="Contact" id="contact_number" readonly="true" required>
-                    &nbsp; &nbsp; &nbsp; 
-                    DoB : <input class="input-m" type="text" placeholder="yyyy-mm-dd" id="dob" readonly="true" required>
-                    &nbsp; &nbsp; &nbsp; 
-                    Postbox : <input class="input-m" type="text" placeholder="Postbox" id="postal_number" readonly="true" required>
-                    &nbsp; &nbsp; &nbsp; 
-                    Street : <input class="input-l" type="text" placeholder="Street" id="street" readonly="true" required>
-                    &nbsp; &nbsp; &nbsp; 
-                    City : <input class="input-m" type="text" placeholder="City" id="city" readonly="true" required>
-                    </p>
-                    <p>
-                    Rating : <input class="input-s" type="text" id="ratings" placeholder="Rating" readonly="true" required>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-                    Active Status : <input class="input-s" type="text" id="active_status" placeholder="Status" readonly="true" required>
-                    <!-- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -->
-                    </p>
+                    
+                    <table>
+                        <tr>
+                            <th>Customer ID :</th>
+                            <td><input class="input-s" type="text" placeholder="ID" id="cus_id" name="id" readonly="true" required></td>
+                            <th>Customer Email :</th>
+                            <td><input class="input-l" type="text" placeholder="Customer Email" id="email" readonly="true" required></td>
+                            <th>Contact No. :</th>
+                            <td><input class="input-m" type="text" placeholder="Contact" id="contact_number" readonly="true" required></td>
+
+                        </tr>
+                        <tr>
+                            <th>Customer Name :</th>
+                            <td><input width="50px" class="input-l" type="text" placeholder="Customer Name" id="cus_name" readonly="true" required></td>
+                            <th>Date of Birth :</th>
+                            <td><input class="input-m" type="text" placeholder="yyyy-mm-dd" id="dob" readonly="true" required></td>
+                            <th>Rating :</th>
+                            <td><input class="input-s" type="text" id="ratings" placeholder="Rating" readonly="true" required></td>
+
+                        </tr>
+                        <tr>
+                            <th>Postbox No. :</th>
+                            <td><input class="input-m" type="text" placeholder="Postbox" id="postal_number" readonly="true" required></td>
+                            <th>Street Name :</th>
+                            <td><input class="input-l" type="text" placeholder="Street" id="street" readonly="true" required></td>
+                            <th>City :</th>
+                            <td><input class="input-m" type="text" placeholder="City" id="city" readonly="true" required></td>
+
+                        </tr>
+                        <tr>
+                            <th>Active Status :</th>
+                            <td><input class="input-s" type="text" id="active_status" placeholder="Status" readonly="true" required></td>
+                            <!-- <td></td> -->
+                            
+                        </tr>
+                    </table>
+
+                
                     <p class="button-box">
                     <!-- <button class="btn-red" type="button" name="btn-delete-account">Delete Account</button> -->
                     <button class="btn-red" type="button" name="btn-suspend-account" onclick="suspendFunction()">Suspend Account</button>

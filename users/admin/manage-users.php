@@ -27,8 +27,8 @@
         <div class="sidebar">
             </br></br>
             <a href="admin-home.php">Home</a>
-            <a href="#users" class="active">Manage Users</a>
-            <a href="#complaints">Complaints</a>
+            <a href="manage-users.php" class="active">Manage Users</a>
+            <a href="complaints.php">Complaints</a>
             <a href="#messages">Messages</a>
             <a href="#promotions">Promotions</a>
             <a href="#log">Application Log</a>

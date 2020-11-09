@@ -101,7 +101,5 @@
 	<!--Include footer.php-->
     <div><?php include "../includes/footer.php" ?></div>
     
-    <!--script for onClickNav() for the navigation menu-->
-    <script src="../js/onClickNav.js"></script>
 </body>
 </html>

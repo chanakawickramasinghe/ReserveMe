@@ -173,48 +173,6 @@ a{
 }
 /*End of About us*/
 
-/*Start of Numbers Section*/
-.number{
-    text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)),
-    url(../images/img2.jpg)center/cover no-repeat fixed;
-    padding: 60px 0;
-    color: #fff;
-}
-
-.number p{
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.number:hover{
-    color: orange;
-}
-
-.number .fas{
-    font-size: 60px;
-    margin: 20px 0;
-}
-
-.number h3{
-    text-transform: uppercase;
-}
-
-@media screen and (min-width:56px){
-    #numbers{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media screen and (min-width:992px){
-    #numbers{
-        grid-template-columns: repeat(8, 1fr);/*4.............................*/
-    }
-}
-
-/*End of Numbers Section*/
-
 /*Start of Cards Section*/
 .food{
 	width: 85%;

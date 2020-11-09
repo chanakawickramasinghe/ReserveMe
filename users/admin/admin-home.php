@@ -40,6 +40,8 @@
         <div class="content-div">
             <br><br>        
             <h1>Welcome Chanaka!</h1>
+            <br><br>
+            <p>Admin Name : </p>
         </div>
 
 

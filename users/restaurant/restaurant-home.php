@@ -55,15 +55,9 @@ include('../../includes/session.php');
                 <br><br>
 
                 <div class="form-box"><c>
-<<<<<<< HEAD
-                    <a href="#" class="search-button pulsate">Pre - Order Menu</a>
-                    <a href="#" class="search-button pulsate">Update the Menu</a>
-                    <a href="#" class="search-button pulsate" >Add Employee</a>
-=======
                     <a href="add-preordermenu.php" class="search-button pulsate">Pre - Order Menu</a>
                     <a href="add-menu.php" class="search-button pulsate">Update the Menu</a>
                     <a href="../employee/employee-add.php" class="search-button pulsate">Manage Employee</a>
->>>>>>> e00bcb58875dc08019f82e011f8e2a2b9d0eb4d8
                     <a href="#" class="search-button pulsate">Reception Hall</a>
                 </c></div>
             </form>            

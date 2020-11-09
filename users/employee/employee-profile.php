@@ -58,8 +58,5 @@
                 </div>
             </form>
         </div> 
-       
-    <!--script for onClickNav() for the navigation menu-->
-    <script src="../../js/onClickNav.js"></script>
     </body>
 </html> 

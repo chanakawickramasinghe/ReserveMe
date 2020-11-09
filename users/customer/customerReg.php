@@ -8,22 +8,17 @@
     <link href="../../CSS/nav.css" rel="stylesheet" type="text/css">
     <link href="../../CSS/footer.css" rel="stylesheet" type="text/css">     
     <link href="../../CSS/customer-reg.css" rel="stylesheet" type="text/css" > 
-    
-
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
 </head>
     
 <body class="login-body">
 <!--Start of nav-->
-<div class="topnav" id="myTopnav">
-        <img class = "logo" src="../../images/logo.png">
-        <a href="../user-type.php">Register</a>
-        <a href="../../includes/login.php">Login</a>
-        <a href="../../includes/contact.php">Contact</a>
-        <a href="../../includes/about.php">About</a>
-        <a href="javascript:void(0);" class="icon" onclick="onClickNav()">
-            <i class="fa fa-bars"></i>
-        </a>       
+    <div class="topnav" id="myTopnav">
+        <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
+        <a class="navtab" href="../../includes/login.php">Login</a>
+		<a class="navtab" href="../../includes/contact.php">Contact</a>
+		<a class="navtab" href="../../includes/about.php">About</a>
+		<!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->     
     </div>
     <!--End of nav-->
 
@@ -51,7 +46,7 @@
                     <input type="password" name="password" class="reg-type-feild" placeholder="Enter Password" id="password"  required>
 
                     <label for="password2">Confirm Password</label>
-                    <input type="password2" name="password2" class="reg-type-feild" placeholder="Re-Enter Password" id="confirm_password" onkeyup='check()' required>
+                    <input type="password" name="password2" class="reg-type-feild" placeholder="Re-Enter Password" id="confirm_password" onkeyup='check()' required>
                     <P id='message' ></P>
 
                     <label for="contact">Contact number</label>

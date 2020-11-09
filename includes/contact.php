@@ -13,7 +13,9 @@
 	<!-- <link href="../CSS/style.css" rel="stylesheet" type="text/css"/> -->
 
 	<!--FontAwesome-------->
-	<script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
+    <!--web-icon-->
+    <link href="../images/logo.png" rel="shortcut icon"/>
     <style>
 .container {
   position: relative;
@@ -35,12 +37,11 @@
 <section class="main"> -->
 		<!--Start of nav-->
 		<div class="topnav" id="myTopnav">
-			<img class = "logo" src="../images/logo.png">
-				<a href="../users/user-type.php">Register</a>
-				<a href="../includes/login.php">Login</a>
-				<a href="../includes/about.php">About</a>
-				<a href="javascript:void(0);" class="icon" onclick="onClickNav()">
-				<i class="fa fa-bars"></i></a>       
+			<a href="../index.php"><img class = "logo" src="../images/logo.png"></a>
+		    <a class="navtab" href="../users/user-type.php">Register</a>
+		    <a class="navtab" href="login.php">Login</a>
+		    <a class="navtab" href="about.php">About</a>
+		    <!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> --> 
 		</div>
 		<!--End of nav-->
         <br>

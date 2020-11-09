@@ -11,19 +11,15 @@
         <link href="../../images/logo.png" rel="shortcut icon"/> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
-
     </head>
     <body>
         <!--Start of nav-->
         <div class="topnav" id="myTopnav">
-            <a href="../../includes/logout.php">Logout</a>
-            <a href="customer-profile.php">My Profile</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-            <img class = "logo" src="../../images/logo.png">
+            <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
+            <a class="navtab" href="../../index.php">Logout</a>
+		    <a class="navtab" href="../../includes/contact.php">Contact</a>
+		    <a class="navtab" href="../../includes/about.php">About</a>
+		    <!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->     
         </div>
     <!--End of nav-->
         

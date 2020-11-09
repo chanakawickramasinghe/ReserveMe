@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../../CSS/login.css">
     <link rel="stylesheet" href="../../CSS/customer-reg.css">
     
-    <link rel="icon" type="image/png" href="../images/logo.png" />
+    <link href="../../images/logo.png" rel="shortcut icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../../css/nav.css" rel="stylesheet" type="text/css"/>
@@ -17,15 +17,12 @@
 
 <body class="login-body">
 <!--Start of nav-->
-<div class="topnav" id="myTopnav">
-        <img class = "logo" src="../../images/logo.png">
-        
-        <a href="../../includes/login.php">Login</a>
-        <a href="../../includes/contact.php">Contact</a>
-        <a href="../../includes/about.php">About</a>
-        <a href="javascript:void(0);" class="icon" onclick="onClickNav()">
-            <i class="fa fa-bars"></i>
-        </a>       
+    <div class="topnav" id="myTopnav">
+        <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
+		<a class="navtab" href="../../includes/login.php">Login</a>
+		<a class="navtab" href="../../includes/contact.php">Contact</a>
+		<a class="navtab" href="../../includes/about.php">About</a>
+		<!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->
     </div>
     <!--End of nav-->
 <div class="tab" >

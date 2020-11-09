@@ -23,7 +23,7 @@
 		<!--Start of nav-->
 		<div class="topnav" id="myTopnav">
 			<img class = "logo" src="../../images/logo.png">
-            <a class="navtab" href="../../index.php">Logout</a>
+            		<a class="navtab" href="../../index.php">Logout</a>
 			<a class="navtab" href="../../includes/contact.php">Contact</a>
 			<a class="navtab" href="../../includes/about.php">About</a>
 			<!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->

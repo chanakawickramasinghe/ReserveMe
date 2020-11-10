@@ -55,6 +55,11 @@ if(isset($_POST['submit'])){
     else if(mysqli_num_rows($userResult3) == 1){
 
         $userRow = mysqli_fetch_array($userResult3);
+        checkSession();  //create sessions
+        $_SESSION["name"] = $userRow['admin_name'];
+        $_SESSION["type"] = $userRow['admin_type'];
+        $_SESSION["email"] = $email;
+        
         header( "Location:../users/admin/admin-home.php");
 
     }

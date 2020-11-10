@@ -41,7 +41,16 @@
             <br><br>        
             <h1>Welcome Chanaka!</h1>
             <br><br>
-            <p>Admin Name : </p>
+            <div class="admin-home">
+                <?php
+                checkSession();
+                echo"
+                <p>Admin Name : ".$_SESSION["name"]."</p>
+                <p>Admin Email : ".$_SESSION["email"]."</p>
+                <p>Admin Type : ".$_SESSION["type"]."</p>";
+                ?>
+            </div>
+             
         </div>
 
 

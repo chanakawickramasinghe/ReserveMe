@@ -100,7 +100,7 @@
   cursor: pointer;
 }
 
-/*Start of Subscribe*/
+
 .search-user-container{
 
 	margin-bottom:30px;
@@ -157,8 +157,9 @@
 	background-color: #00b3b3;
 	transition: all  ease 0.5s;
 }
-/*End of Subscribe*/
 
+
+/* manage user start */
 /*User Tables */
 .user{
   width: 90vw;
@@ -266,4 +267,12 @@
 .button-box{
   float: right;
   padding-right: 12vw;
+}
+
+/* manage user end */
+
+/* admin home */
+
+.admin-home{
+  padding-left : 7vw;
 }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 26, 2020 at 04:03 AM
+-- Generation Time: Nov 09, 2020 at 05:26 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.33
 
@@ -45,6 +45,21 @@ INSERT INTO `admins` (`admin_name`, `admin_password`, `admin_email`, `admin_type
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contact_us`
+--
+
+CREATE TABLE `contact_us` (
+  `msg_id` int(255) NOT NULL,
+  `comment` varchar(255) DEFAULT NULL,
+  `name` text NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `mobile` int(15) DEFAULT NULL,
+  `message` varchar(600) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `customer`
 --
 
@@ -70,7 +85,7 @@ CREATE TABLE `customer` (
 INSERT INTO `customer` (`user_id`, `user_name`, `email`, `password`, `contact_no`, `dob`, `postal_number`, `street`, `city`, `rankings`, `no_of_rates`, `active_status`) VALUES
 (3, 'Chanaka Wickramasinghe', '2018is093@stu.ucsc.cmb.ac.lk', '202cb962ac59075b964b07152d234b70', 771570227, '2020-09-11', '10000', 'Reid Avenue, Colombo', 'Colombo', 0, 0, 1),
 (2, 'Chanaka Wickramasinghe', 'cmwickramasinghe703@gmail.com', '202cb962ac59075b964b07152d234b70', 771570227, '2020-08-06', '10000', 'Reid Avenue, Colombo', 'Colombo', 0, 0, 1),
-(4, 'Chanaka Wickramasinghe', '2018is093@stu.ucsc.cmb', '202cb962ac59075b964b07152d234b70', 771570227, '2020-10-08', '123', 'Reid Avenue, Colombo', 'Colombo', 0, 0, 1);
+(4, 'bla1234', '2018is093@stu.ucsc.cmb', '202cb962ac59075b964b07152d234b70', 771570227, '2020-10-08', '123', 'Reid Avenue, Colombo', 'Colombo', 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -166,9 +181,7 @@ CREATE TABLE `reception_hall` (
   `hall_addline01` varchar(255) NOT NULL,
   `hall_addline02` varchar(255) NOT NULL,
   `hall_addline03` varchar(255) NOT NULL,
-  `hall_capacity` int(10) NOT NULL,
-  `hall_charge` int(10) NOT NULL,
-  `hall_image` varchar(255) NOT NULL
+  `hall_charge` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -316,6 +329,12 @@ INSERT INTO `tokens` (`id`, `email`, `token`) VALUES
 --
 
 --
+-- Indexes for table `contact_us`
+--
+ALTER TABLE `contact_us`
+  ADD PRIMARY KEY (`msg_id`);
+
+--
 -- Indexes for table `customer`
 --
 ALTER TABLE `customer`
@@ -384,6 +403,12 @@ ALTER TABLE `tokens`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `contact_us`
+--
+ALTER TABLE `contact_us`
+  MODIFY `msg_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `customer`

@@ -18,6 +18,7 @@
         <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
             <a class="navtab" href="../../index.php">Logout</a>
 		    <a class="navtab" href="customer-profile.php">My Profile</a>
+			<a class="navtab" href="admin-home.php">Home</a>
 		    <!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->     
         </div>
         <!--End of nav-->

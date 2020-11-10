@@ -1,4 +1,4 @@
-  .sidebar {
+   .sidebar {
     margin: 0;
     padding: 0;
     width: 20%;
@@ -13,16 +13,19 @@
     color: black;
     padding: 16px;
     text-decoration: none;
+    font-weight: bold
   }
    
   .sidebar a.active {
-    background-color: #1980d4;
+    background-color: #00b3b3;
     color: white;
+    font-weight: bold
   }
   
   .sidebar a:hover:not(.active) {
-    background-color: rgb(185, 72, 44);;
-    color: white;
+    background-color: black;
+    color: #e6e6e6;
+    font-weight: bold
   }
   
   div.content {
@@ -65,7 +68,7 @@
   /* welcome message */
   h1{
       text-align: center;
-      color: #1980d4;
+      color:#00b3b3;
     }
 
 
@@ -85,7 +88,7 @@
 .btn-users {
   width:15vw;
   height: 10vh;
-  background: #1980d4;
+  background: #00b3b3;
   border: none;
   border-radius: 25px;
   color: #fff;
@@ -93,7 +96,7 @@
 }
 
 .btn-users:hover{
-  background: rgb(185, 72, 44);;
+  background: black;
   cursor: pointer;
 }
 
@@ -116,13 +119,14 @@
 
 .search-input{
 	width:500px;
-	background-color: rgb(179, 236, 247);
+	background-color: white;
 	border-radius:25px;
 	height: 1.5vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
   padding:20px;
+  box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
 }
 
 .search-input input{
@@ -131,13 +135,13 @@
 	border: none;
 	outline: none;
   background-color: transparent;
-  font-size: medium;
+  font-size: medium; 
 }
 
 .search-btn{
 	width:120px;
 	height: 5vh;
-  background-color: #1980d4;
+  background-color: black;
   border: none;
 	border-radius: 20px;
 	color: #fff;
@@ -145,12 +149,12 @@
 	justify-content: center;
 	align-items: center;
 	font-weight: bold;
-	/* box-shadow: 2px 2px 30px rgba(0,0,0,0.1); */
+	/**/
 	font-size: 1rem;
 }
 
 .search-btn:hover{
-	background-color:rgb(185, 72, 44);
+	background-color: #00b3b3;
 	transition: all  ease 0.5s;
 }
 /*End of Subscribe*/
@@ -224,19 +228,23 @@
   font-weight: 400;
 }
 
+::placeholder {
+  opacity: 0.7;
+}
 
 /* buttons */
 .btn-blue{
   width:8vw;
   height: 4vh;
-  background: #5a7ee2;
+  background: #00b3b3;
   border: none;
   border-radius: 10px;
   color:rgb(0, 0, 0);
+  font-weight: bold;
 }
 
 .btn-blue:hover{
-  background: #304bc4;
+  background: #009999;
   cursor: pointer;
 }
 

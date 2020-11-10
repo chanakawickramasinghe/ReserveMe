@@ -1,5 +1,4 @@
-<?php include('../includes/connection.php'); ?>
-<?php include('../includes/session.php') ?>
+<?php include('../../../includes/connection.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,24 +6,23 @@
     <meta content="IE-edge" http-equiv="X-UA-Compatible"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>ReserveMe</title>
-    <link href="../images/logo.png" rel="shortcut icon"/>
     <!--web-icon-->
-    <link href="../images/logo.png" rel="shortcut icon"/>
+    <link href="../../../images/logo.png" rel="shortcut icon"/>
     <!--stylesheet-->
-    <link href="../css/res_view.css" rel="stylesheet" type="text/css"/>
-    <link href="../css/nav.css" rel="stylesheet" type="text/css"/>
-    <link href="../css/footer.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../css/res_view.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../css/nav.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../css/footer.css" rel="stylesheet" type="text/css"/>
     <!--FontAwesome-->
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
 </head>
 <body>
     <!--Start of nav-->
     <div class="topnav" id="myTopnav">
-		<a href="../index.php"><img class = "logo" src="../images/logo.png"></a>
-		<a class="navtab" href="../users/user-type.php">Register</a>
-		<a class="navtab" href="../includes/login.php">Login</a>
-		<a class="navtab" href="../includes/contact.php">Contact</a>
-		<a class="navtab" href="../includes/about.php">About</a>
+		<a href="../customer-home.php"><img class = "logo" src="../../../images/logo.png"></a>
+		<a class="navtab" href="../../../index.php">Logout</a>
+		<a class="navtab" href="../customer-profile.php">My Profile</a>
+		<a class="navtab" href="../../../includes/logged_contact.php">Contact</a>
+		<a class="navtab" href="../../../includes/logged_about.php">About</a>
 		<!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->
 	</div>
     <!--End of nav-->
@@ -37,7 +35,7 @@
             while($rowProduct  = mysqli_fetch_assoc($resultProduct)){  
                 echo"<section class=\"main\">
                         <div class=\"m-img\">       
-                            <img class=\"food-img\" src= \"../images/{$rowProduct['res_id']}.jpg\">
+                            <img class=\"food-img\" src= \"../../../images/{$rowProduct['res_id']}.jpg\">
                         </div>
                         <div class=\"m-text\">
                             <h2>". $rowProduct['res_name'] ."</h2>
@@ -45,7 +43,7 @@
                             <h4><i class=\"fas fa-star-half-alt\">". $rowProduct['res_rate'] ."</i></h4>
                             <br>
                             <h4><i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i></h4>
-                            <button class=\"reserve-button pulsate\" type=\"submit\" name=\"submit\" onclick=\"onClickOpenForm()\">Reserve<i class=\"fas fa-search\"></i></button>
+                            <button class=\"reserve-button pulsate\" type=\"submit\" name=\"submit\" onclick=\"onClickOpenForm()\">Reserve</button>
 	                    </div>	
 	                </section>";
             }
@@ -55,13 +53,12 @@
 
     <!--Start of pop up login page-->
     <div class="form-popup" id="myForm">
-        <form action="../includes/login-submit.php" method="post" class="form-container">
+        <form action="login_submit.php" method="post" class="form-container">
             <h1>Login</h1>
             <label for="email"><b>Email</b></label>
             <input type="text" placeholder="Enter Email" name="email" required>
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="password" required>
-			 <h3 class="error-msg"><?php include_once('../includes/message.php'); ?></h3> 
             <div class="pass">
                 <a href="#">Forgot Password?</a>
             </div>
@@ -73,7 +70,7 @@
         </form>
     </div>
 
-    <script src="../js/onClickOpenForm.js"></script>
+    <script src="../../../js/onClickOpenForm.js"></script>
     <!--End of pop up login page-->
 
     <!--Start of iframe section-->
@@ -101,9 +98,7 @@
 	<!--End of iframe section-->
 
 	<!--Include footer.php-->
-    <div><?php include "../includes/footer.php" ?></div>
+    <div><?php include "../../../includes/footer.php" ?></div>
     
-    <!--script for onClickNav() for the navigation menu-->
-    <script src="../js/onClickNav.js"></script>
 </body>
 </html>

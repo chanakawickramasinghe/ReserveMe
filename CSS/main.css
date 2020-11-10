@@ -66,6 +66,9 @@ a{
     color: #000000;
 }
 
+.numbertext{
+	display:none;
+}
 /*Start of Social Icons*/
 .social a{
 	display: flex;

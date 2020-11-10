@@ -16,9 +16,20 @@
 	<footer class="footer-distributed">
 		<!--Start of footer left-->
 		<div class="footer-left">
-			<img src="./images/logo.png">
 			<h3>Reserve<span>Me</span></h3>
-			<p class="footer-company-name">© 2020 | ReserveMe.lk</p>
+			<div class="footer-icons">
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-instagram"></i></a>
+				<a href="#"><i class="fa fa-youtube"></i></a>
+			</div>
+			<p class="footer-links">
+				<a href="#">Home</a>
+				|
+				<a href="#">About</a>
+				|
+				<a href="#">Contact</a>
+			</p>
 		</div>
 		<!--End of footer left-->
 		<!--Start of footer center-->
@@ -30,28 +41,14 @@
 			<div>
 				<i class="fa fa-envelope"></i>
 				<p><a href="mailto:reserveme.com">reserveme.com</a></p>
-				<br>
-				<p class="footer-links">
-					<a href="#">Home</a>
-					|
-					<a href="#">Blog</a>
-					|
-					<a href="#">About</a>
-					|
-					<a href="#">Contact</a>
-				</p>
 			</div>
 		</div>
 		<!--End of footer center-->
 		<!--Start of footer right-->
 		<div class="footer-right">
-			<p class="footer-company-about"><span>About</span>We offer amazing user experience through digitalization of reservation.</p>
-			<div class="footer-icons">
-				<a href="#"><i class="fa fa-facebook"></i></a>
-				<a href="#"><i class="fa fa-twitter"></i></a>
-				<a href="#"><i class="fa fa-instagram"></i></a>
-				<a href="#"><i class="fa fa-youtube"></i></a>
-			</div>
+			<p class="footer-company-about"><span>About</span>We offer amazing user experience through digitalization of reservation. We offer amazing user experience through digitalization of reservation.</p>
+			<br>
+			<p class="footer-company-name">© 2020 | ReserveMe.lk</p>
 		</div>
 		<!--Start of footer center-->
 	</footer>

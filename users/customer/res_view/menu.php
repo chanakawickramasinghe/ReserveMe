@@ -1,4 +1,4 @@
-<?php include('../includes/connection.php'); ?>
+<?php include('../../../includes/connection.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,48 +6,56 @@
     <meta content="IE-edge" http-equiv="X-UA-Compatible"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <!--stylesheet-->
-    <link href="../css/menu_floorplan.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../css/menu_floorplan.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    <!--Start of floorplan-->
+    <!--Start of menu-->
 	<div id="content-wrapper">
-		<div class="column1">
+		<div class="column1">		
 			<?php 
 				if(isset($_GET['res_id'])){
 					$sql = "SELECT * FROM restaurant WHERE res_id = ".$_GET['res_id'];
 					$resultProduct = mysqli_query($connection,$sql);
 					while($rowProduct  = mysqli_fetch_assoc($resultProduct)){  
-						echo"<img id=\"featured\" class=\"thumbnail active\" src= \"../images/restaurant/{$rowProduct['res_id']}/floorplan/1.jpg\">";
+						echo"<img id=\"featured\" class=\"thumbnail active\" src= \"../../../images/restaurant/{$rowProduct['res_id']}/menu/1.jpg\">";
 					}
 				}
 			?>
 
 			<div id="slide-wrapper" >
-				<img id="slideLeft" class="arrow" src="../images/arrow-left.png">
+				<img id="slideLeft" class="arrow" src="../../../images/arrow-left.png">
 				<div id="slider">
 					<?php 
-						if(isset($_GET['res_id'])){							
-							$retriewMenu = "SELECT * FROM floorplan WHERE res_id = ".$_GET['res_id'];
+						if(isset($_GET['res_id'])){                    
+							$retriewMenu = "SELECT * FROM menu WHERE res_id = ".$_GET['res_id'];
 							$resultMenu = mysqli_query($connection,$retriewMenu);
 							while($rowProduct  = mysqli_fetch_assoc($resultMenu)){  
-								echo"<img class=\"thumbnail\" src= \"../images/restaurant/{$rowProduct['res_id']}/floorplan/{$rowProduct['floorplan_id']}.jpg\">";
-							}						  
+								echo"<img class=\"thumbnail\" src= \"../../../images/restaurant/{$rowProduct['res_id']}/menu/{$rowProduct['menu_id']}.jpg\">";
+							}
 						}
 					?>					
 				</div>
-
-				<img id="slideRight" class="arrow" src="../images/arrow-right.png">
+				
+				<img id="slideRight" class="arrow" src="../../../images/arrow-right.png">
 			</div>
 		</div>
 		
 		<div class="column2">
-			<h1>Restaurant Floorplan</h1>
+			<h1>Restaurant Menu</h1>
 			<hr>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>			
 		</div>
-
 	</div>
-	<!--End of floorplan-->
+	<!--End of menu-->
+
+	
+
+	
+	
+	
+	
+
+    
 
 	<script type="text/javascript">
 		let thumbnails = document.getElementsByClassName('thumbnail')

@@ -1,4 +1,4 @@
-<?php include('../includes/connection.php'); ?>
+<?php include('../../../includes/connection.php'); ?>
 <!--Start of Map-->
     <section class="content">
         <section id="gallery">    
@@ -10,7 +10,6 @@
                         while($rowProduct  = mysqli_fetch_assoc($resultMenu)){  
                             echo"<div class=\"mapouter\">
                                     <div class=\"gmap_canvas\">
-                                        <!--Specific url-->
                                         <iframe width=\"100%\" height=\"100%\" id=\"gmap_canvas\" src=\"{$rowProduct['res_location']}\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\"></iframe>                               
                                     </div>
                                 </div>";

@@ -1,4 +1,4 @@
-<?php include('../includes/connection.php'); ?>
+<?php include('../../../includes/connection.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +6,7 @@
     <meta content="IE-edge" http-equiv="X-UA-Compatible"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <!--stylesheet-->
-    <link href="../css/menu_floorplan.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../css/menu_floorplan.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <!--Start of menu-->
@@ -17,26 +17,26 @@
 					$sql = "SELECT * FROM restaurant WHERE res_id = ".$_GET['res_id'];
 					$resultProduct = mysqli_query($connection,$sql);
 					while($rowProduct  = mysqli_fetch_assoc($resultProduct)){  
-						echo"<img id=\"featured\" class=\"thumbnail active\" src= \"../images/restaurant/{$rowProduct['res_id']}/menu/1.jpg\">";
+						echo"<img id=\"featured\" class=\"thumbnail active\" src= \"../../../images/restaurant/{$rowProduct['res_id']}/menu/1.jpg\">";
 					}
 				}
 			?>
 
 			<div id="slide-wrapper" >
-				<img id="slideLeft" class="arrow" src="../images/arrow-left.png">
+				<img id="slideLeft" class="arrow" src="../../../images/arrow-left.png">
 				<div id="slider">
 					<?php 
 						if(isset($_GET['res_id'])){                    
 							$retriewMenu = "SELECT * FROM menu WHERE res_id = ".$_GET['res_id'];
 							$resultMenu = mysqli_query($connection,$retriewMenu);
 							while($rowProduct  = mysqli_fetch_assoc($resultMenu)){  
-								echo"<img class=\"thumbnail\" src= \"../images/restaurant/{$rowProduct['res_id']}/menu/{$rowProduct['menu_id']}.jpg\">";
+								echo"<img class=\"thumbnail\" src= \"../../../images/restaurant/{$rowProduct['res_id']}/menu/{$rowProduct['menu_id']}.jpg\">";
 							}
 						}
 					?>					
 				</div>
 				
-				<img id="slideRight" class="arrow" src="../images/arrow-right.png">
+				<img id="slideRight" class="arrow" src="../../../images/arrow-right.png">
 			</div>
 		</div>
 		

@@ -23,9 +23,10 @@
 		<!--Start of nav-->
 		<div class="topnav" id="myTopnav">
 			<img class = "logo" src="../../images/logo.png">
-            <a class="navtab" href="../../index.php">Logout</a>
-			<a class="navtab" href="../../includes/contact.php">Contact</a>
-			<a class="navtab" href="../../includes/about.php">About</a>
+			<a class="navtab" href="../../index.php">Logout</a>
+			<a class="navtab" href="customer-profile.php">My Profile</a>
+			<a class="navtab" href="../../includes/logged_contact.php">Contact</a>
+			<a class="navtab" href="../../includes/logged_about.php">About</a>
 			<!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->
 		</div>
 		<!--End of nav-->
@@ -34,21 +35,18 @@
 		<div class="m-img">
 			<div class="slideshow-container">
 				<div class="mySlides fade">
-				  <div class="numbertext">1/3</div>
-				  <img src="../../images/promos/1.jpg" style="width:100%">
-				  <div class="text"><a class="hero-button pulsate" href="res_view.php">Visit</a></div>
+				  	<img src="../../images/promos/1.jpg" style="width:100%">
+				  	<div class="text"><a class="hero-button pulsate" href="res_view.php">Visit</a></div>
 				</div>
 
 				<div class="mySlides fade">
-				  <div class="numbertext">2 / 3</div>
-				  <img src="../../images/promos/2.jpg" style="width:100%">
-				  <div class="text"><a class="hero-button pulsate" href="res_view.php">Visit</a></div>
+				  	<img src="../../images/promos/2.jpg" style="width:100%">
+				  	<div class="text"><a class="hero-button pulsate" href="res_view.php">Visit</a></div>
 				</div>
 
 				<div class="mySlides fade">
-				  <div class="numbertext">3 / 3</div>
-				  <img src="../../images/promos/3.jpg" style="width:100%">
-				  <div class="text"><a class="hero-button pulsate" href="res_view.php">Visit</a></div>
+				  	<img src="../../images/promos/3.jpg" style="width:100%">
+				  	<div class="text"><a class="hero-button pulsate" href="res_view.php">Visit</a></div>
 				</div>
 			</div>
 
@@ -87,7 +85,7 @@
 			<h4>Best places to <font>Dine in</font> </h4>
 			<!--details-->
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, sint. Non officiis, architecto exercitationem modi distinctio quaerat at aspernatur omnis nobis et voluptatibus hic veritatis excepturi vel molestias quisquam dicta.</p>
-			<a class="hero-button pulsate" href="../../search_result.php">Table Reservation</a>
+			<a class="hero-button pulsate" href="res_view/logged_search_result.php">Table Reservation</a>
 		</div>
 		<!--img-->
 		<div class="reservation-img"><img src="../../images/table.jpg" /></div>
@@ -168,7 +166,7 @@
 			<h4>Best places to <font>Enlight</font> your occasion</h4>
 			<!--details-->
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, doloremque exercitationem illum vitae earum, velit nulla pariatur est esse, ratione qui! Quis sapiente illum, et quaerat veritatis nihil numquam repellendus!</p>
-			<a class="hero-button pulsate" href="../../hall_search_result.php">Hall Reservation</a>
+			<a class="hero-button pulsate" href="hall_view/logged_hall_search_result.php">Hall Reservation</a>
 		</div>
 		</section>
 	<!--End of our-brand-section 2-->

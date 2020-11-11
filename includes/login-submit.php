@@ -59,6 +59,7 @@ if(isset($_POST['submit'])){
         $_SESSION["name"] = $userRow['admin_name'];
         $_SESSION["type"] = $userRow['admin_type'];
         $_SESSION["email"] = $email;
+        // $_SESSION["last_login"] = SELECT NOW();
         
         header( "Location:../users/admin/admin-home.php");
 

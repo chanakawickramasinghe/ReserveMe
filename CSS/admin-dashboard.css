@@ -272,7 +272,52 @@
 /* manage user end */
 
 /* admin home */
-
 .admin-home{
   padding-left : 7vw;
+}
+
+/* co-admin page */
+
+/*User Tables */
+.coadmin{
+  width: 35vw;
+  margin: 0 auto;
+  table-layout: auto;
+  border-collapse: collapse;
+  
+}
+.coadmin th {
+  background-color: #cbe1ee;
+  border: 1px solid rgb(43, 106, 189);
+  padding: 5px;
+  text-align: center;
+}
+
+.coadmin td{
+  border: 1px solid rgb(160, 154, 154);
+  padding: 5px;    
+  text-align: center;
+}
+
+.coadmin-table{
+  float: left;
+  padding-top: 40px;
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+}
+
+.coadmin-dashboard{
+  padding-top: 25px;
+  width: 39%;
+  float: right;
+  align-items: center;
+  justify-content: center;
+}
+
+.vl {
+
+  float: left;
+  border-left: 1px solid rgb(22, 7, 104);
+  height: 500px;
 }

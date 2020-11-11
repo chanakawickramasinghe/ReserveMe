@@ -28,11 +28,16 @@
             <a href="admin-home.php">Home</a>
             <a href="manage-users.php">Manage Users</a>
             <a href="complaints.php"  class="active">Complaints</a>
-            <a href="#messages">Messages</a>
-            <a href="#promotions">Promotions</a>
-            <a href="#log">Application Log</a>
+            <a href="messages.php">Messages</a>
+            <a href="promotions.php">Promotions</a>
+            <a href="log.php">Application Log</a>
             <hr>
-            <a href="#admins">Manage Co-Admins</a>
+            <a href="coadmins.php">Manage Co-Admins</a>
+        </div>
+
+        <div class="content-div">
+            
+        </div>
 
 
 

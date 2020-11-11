@@ -91,6 +91,9 @@
                         </tr>
 
                     </table>
+                    <button class="btn-coadmins" type="button" name="add-coadmins" onclick="window.location.href='coadmins-add-submit.php'">Add New</button>
+                    <button class="btn-coadmins" type="button" name="update-coadmins" onclick="window.location.href='coadmins-update-submit.php'">Update</button>
+                    <button class="btn-coadmins" type="button" name="delete-coadmins" onclick="window.location.href='coadmins-delete-submit.php'">Delete</button>
                 </form>
             </div>
         </div>

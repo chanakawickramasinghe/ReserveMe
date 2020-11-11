@@ -84,7 +84,7 @@
     align-content: center;    
 }
 
-/* buttons */
+/* buttons users*/
 .btn-users {
   width:15vw;
   height: 10vh;
@@ -319,5 +319,23 @@
 
   float: left;
   border-left: 1px solid rgb(22, 7, 104);
-  height: 500px;
+  height: 310px;
+}
+
+/* buttons coadmins*/
+.btn-coadmins {
+  width:8vw;
+  margin-left: 1.5vw;
+  margin-top: 2vw;
+  height: 5vh;
+  background: #00b3b3;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: medium;
+}
+
+.btn-coadmins:hover{
+  background: black;
+  cursor: pointer;
 }

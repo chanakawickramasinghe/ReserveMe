@@ -24,7 +24,8 @@
 
 .topnav .navtab:hover{
 	background-color: orange;
-	color: black;
+  color: black;
+  border-radius: 5px;
 }
 .topnav .icon {
   display: none;
@@ -32,7 +33,7 @@
 
 
 @media screen and (max-width: 600px){
-	.topnav .navtab:not(:first-`child){display: none;}
+	.topnav .navtab:not(:first-child){display: none;}
 	.topnav .navtab.icon{
 		float: right;
 		display: block;

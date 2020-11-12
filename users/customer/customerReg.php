@@ -9,6 +9,16 @@
     <link href="../../CSS/footer.css" rel="stylesheet" type="text/css">     
     <link href="../../CSS/customer-reg.css" rel="stylesheet" type="text/css" > 
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
+
+    <style>
+        .signin {
+            padding:10px;
+  background-color: #e9bc5c;
+  text-align: center;
+}
+    </style>
+
+
 </head>
     
 <body class="login-body">
@@ -25,7 +35,7 @@
         
         <div class="login-box"> 
                
-            <img src="../../images/profile.png" class="avatar">
+            <img src="../../images/form_icons/regform.png" class="avatar">
             <br>
                 <h1 align="center">Register Here</h1>
 
@@ -36,24 +46,30 @@
                 <table style="width:500px;position:center;align-items:center">
                 <tr>
                     <td>
-                    <label for="name">Name</label>
+                    <img src="../../images/form_icons/user.png" alt="user" class="icons">
+                    <!-- <label for="name">Name</label> -->                    
                     <input type="text"  name="name" class="reg-type-feild" placeholder="Your name" required>    
-
-                    <label for="email">Email address</label>
+                    
+                    <img src="../../images/form_icons/mail.png" alt="user" class="icons">
+                    <!-- <label for="email">Email address</label> -->
                     <input type="email" name="email" class="reg-type-feild" placeholder="your email" required >
-
-                    <label for="password">Password</label>
+                    
+                    <img src="../../images/form_icons/padlock.png" alt="user" class="icons">
+                    <!-- <label for="password">Password</label> -->
                     <input type="password" name="password" class="reg-type-feild" placeholder="Enter Password" id="password"  required>
 
-                    <label for="password2">Confirm Password</label>
+                    <img src="../../images/form_icons/password.png" alt="user" class="icons">
+                    <!-- <label for="password2">Confirm Password</label> -->
                     <input type="password" name="password2" class="reg-type-feild" placeholder="Re-Enter Password" id="confirm_password" onkeyup='check()' required>
                     <P id='message' ></P>
 
-                    <label for="contact">Contact number</label>
+                    <img src="../../images/form_icons/phone-call.png" alt="user" class="icons">
+                    <!-- <label for="contact">Contact number</label> -->
                     <input type="tel" name="contact" class="reg-type-feild" placeholder="Mobile number" pattern='^\+?\d{0,13}' > </td>
 
                     <td>
 
+                    <img src="../../images/form_icons/calendar.png" alt="user" class="icons">
                     <label for="dob">Date of birth</label>
                     <input type="date" name="dob" id='dob' class="reg-type-feild" onkeyup='getAge(dob)' required> 
                     <P id='message2' ></P>
@@ -68,6 +84,7 @@
 
 
                     <!-- <p>Address<p> -->
+                    <img src="../../images/form_icons/address.png" alt="user" class="icons">
                     <label for="pnumber">Number</label>
                     <input type="text" name="pnumber" class="reg-type-feild" placeholder="Number"> 
 
@@ -80,9 +97,14 @@
                 </tr> 
                 </table>          
                 <br>
-                   
+                <hr><br>
+                <p>By creating an account you agree to our <a href="#" style="color:blue">Terms & Privacy</a>.</p><br><br>
                    <p align="center"> <input type="submit" name="submit"  class="btn" value="Register" required></p>
-                   
+                   <br>
+
+                   <div class="signin">
+    <p>Already have an account? <a href="../../includes/login.php" style="color:blue">Sign in</a>.</p>
+  </div>
                 </form>    
             
         </div>

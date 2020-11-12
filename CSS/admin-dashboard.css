@@ -84,7 +84,7 @@
     align-content: center;    
 }
 
-/* buttons */
+/* buttons users*/
 .btn-users {
   width:15vw;
   height: 10vh;
@@ -100,7 +100,7 @@
   cursor: pointer;
 }
 
-/*Start of Subscribe*/
+
 .search-user-container{
 
 	margin-bottom:30px;
@@ -157,8 +157,9 @@
 	background-color: #00b3b3;
 	transition: all  ease 0.5s;
 }
-/*End of Subscribe*/
 
+
+/* manage user start */
 /*User Tables */
 .user{
   width: 90vw;
@@ -266,4 +267,75 @@
 .button-box{
   float: right;
   padding-right: 12vw;
+}
+
+/* manage user end */
+
+/* admin home */
+.admin-home{
+  padding-left : 7vw;
+}
+
+/* co-admin page */
+
+/*User Tables */
+.coadmin{
+  width: 35vw;
+  margin: 0 auto;
+  table-layout: auto;
+  border-collapse: collapse;
+  
+}
+.coadmin th {
+  background-color: #cbe1ee;
+  border: 1px solid rgb(43, 106, 189);
+  padding: 5px;
+  text-align: center;
+}
+
+.coadmin td{
+  border: 1px solid rgb(160, 154, 154);
+  padding: 5px;    
+  text-align: center;
+}
+
+.coadmin-table{
+  float: left;
+  padding-top: 40px;
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+}
+
+.coadmin-dashboard{
+  padding-top: 25px;
+  width: 39%;
+  float: right;
+  align-items: center;
+  justify-content: center;
+}
+
+.vl {
+
+  float: left;
+  border-left: 1px solid rgb(22, 7, 104);
+  height: 310px;
+}
+
+/* buttons coadmins*/
+.btn-coadmins {
+  width:8vw;
+  margin-left: 1.5vw;
+  margin-top: 2vw;
+  height: 5vh;
+  background: #00b3b3;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: medium;
+}
+
+.btn-coadmins:hover{
+  background: black;
+  cursor: pointer;
 }

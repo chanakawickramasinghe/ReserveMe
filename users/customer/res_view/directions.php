@@ -1,4 +1,4 @@
-<?php include('../includes/connection.php'); ?>
+<?php include('../../../includes/connection.php'); ?>
 <!--Start of Map-->
     <section class="content">
         <section id="gallery">    

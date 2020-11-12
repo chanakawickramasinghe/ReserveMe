@@ -1,4 +1,4 @@
-<?php include('includes/connection.php'); ?>
+<?php include('../../../includes/connection.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,24 +6,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReserveMe</title>
-    <link href="images/logo.png" rel="shortcut icon"/>
+    <link href="../../../images/logo.png" rel="shortcut icon"/>
     <!--fontawesome-------------------->
     <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
     <!--stylesheet-------------------->
-	<link rel="stylesheet" type="text/css" href="CSS/nav.css">
-    <link rel="stylesheet" href="CSS/search.css">
-    <link rel="stylesheet" href="CSS/footer.css">   
-    <link rel="stylesheet" href="CSS/main.css">
+	<link rel="stylesheet" type="text/css" href="../../../CSS/nav.css">
+    <link rel="stylesheet" href="../../../CSS/search.css">
+    <link rel="stylesheet" href="../../../CSS/footer.css">   
+    <link rel="stylesheet" href="../../../CSS/main.css">
 </head>
 
 <body>
     <!--Start of nav-->
     <div class="topnav" id="myTopnav">
-        <a href="index.php"><img class = "logo" src="images/logo.png"></a>
-		<a class="navtab" href="users/user-type.php">Register</a>
-		<a class="navtab" href="includes/login.php">Login</a>
-		<a class="navtab" href="includes/contact.php">Contact</a>
-		<a class="navtab" href="includes/about.php">About</a>    
+        <a href="../../../index.php"><img class = "logo" src="../../../images/logo.png"></a>
+		<a class="navtab" href="../../user-type.php">Register</a>
+		<a class="navtab" href="../../../includes/login.php">Login</a>
+		<a class="navtab" href="../../../includes/contact.php">Contact</a>
+		<a class="navtab" href="../../../includes/about.php">About</a>    
 		<!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->  
     </div>
     <!--End of nav-->
@@ -66,12 +66,12 @@
                             echo"<div class=\"food-container\">
                                 <div class=\"food-box\">
                                     <h3 class=\"name\">". $rowProduct['res_name'] ."</h3> 
-                                    <img class=\"food-img\" src= \"images/{$rowProduct['res_id']}.jpg\">
+                                    <img class=\"food-img\" src= \"../../../images/{$rowProduct['res_id']}.jpg\">
                                     <br>
                                     <i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i>
                                     <br>
                                     <i class=\"fas fa-star-half-alt\">". $rowProduct['res_rate'] ."</i>
-                                    <button type=\"button\"class=\"food-btn\" onclick=\"location.href='hall_view/hall_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
+                                    <button type=\"button\"class=\"food-btn\" onclick=\"location.href='hall_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
                                 </div>
                             </div>";
                         }       
@@ -87,12 +87,12 @@
                         echo"<div class=\"food-container\">
                             <div class=\"food-box\">
                                 <h3 class=\"name\">". $rowProduct['res_name'] ."</h3> 
-                                <img class=\"food-img\" src= \"images/{$rowProduct['res_id']}.jpg\">
+                                <img class=\"food-img\" src= \"../../../images/{$rowProduct['res_id']}.jpg\">
                                 <br>
                                 <i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i>
                                 <br>
                                 <i class=\"fas fa-star-half-alt\">". $rowProduct['res_rate'] ."</i>
-                                <button type=\"button\"class=\"food-btn\" onclick=\"location.href='hall_view/hall_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
+                                <button type=\"button\"class=\"food-btn\" onclick=\"location.href='hall_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
                             </div>
                         </div>";
                     }  
@@ -113,12 +113,12 @@
                         echo"<div class=\"food-container\">
                                 <div class=\"food-box\">
                                     <h3 class=\"name\">". $rowProduct['res_name'] ."</h3> 
-                                    <img class=\"food-img\" src= \"images/{$rowProduct['res_id']}.jpg\">
+                                    <img class=\"food-img\" src= \"../../../images/{$rowProduct['res_id']}.jpg\">
                                     <br>
                                     <i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i>
                                     <br>
                                     <i class=\"fas fa-star-half-alt\">". $rowProduct['res_rate'] ."</i>
-                                    <button type=\"button\"class=\"food-btn\" onclick=\"location.href='hall_view/hall_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
+                                    <button type=\"button\"class=\"food-btn\" onclick=\"location.href='hall_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
                                 </div>
                             </div>";
                     }       
@@ -127,17 +127,8 @@
     ?>
     <!--End of Card Section-->
 
-
-    
-	
-	
-
     <!--Include footer.php-->
-    <div><?php include "includes/footer.php" ?></div>
-    
-    <!--script for onClickNav() for the navigation menu-->
-    <script src="./js/onClickNav.js"></script>
-
-    
+    <div><?php include "../../../includes/footer.php" ?></div>
 </body>
 </html>
+

@@ -1,4 +1,4 @@
-<?php include('../includes/connection.php'); ?>
+<?php include('../../../includes/connection.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +6,7 @@
     <meta content="IE-edge" http-equiv="X-UA-Compatible"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <!--stylesheet-->
-    <link href="../css/menu_floorplan.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../css/menu_floorplan.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <!--Start of floorplan-->
@@ -17,7 +17,7 @@
 					$sql = "SELECT * FROM restaurant WHERE res_id = ".$_GET['res_id'];
 					$resultProduct = mysqli_query($connection,$sql);
 					while($rowProduct  = mysqli_fetch_assoc($resultProduct)){  
-						echo"<img id=\"featured\" class=\"thumbnail active\" src= \"../images/restaurant/{$rowProduct['res_id']}/floorplan/1.jpg\">";
+						echo"<img id=\"featured\" class=\"thumbnail active\" src= \"../../../images/restaurant/{$rowProduct['res_id']}/floorplan/1.jpg\">";
 					}
 				}
 			?>
@@ -30,13 +30,13 @@
 							$retriewMenu = "SELECT * FROM floorplan WHERE res_id = ".$_GET['res_id'];
 							$resultMenu = mysqli_query($connection,$retriewMenu);
 							while($rowProduct  = mysqli_fetch_assoc($resultMenu)){  
-								echo"<img class=\"thumbnail\" src= \"../images/restaurant/{$rowProduct['res_id']}/floorplan/{$rowProduct['floorplan_id']}.jpg\">";
+								echo"<img class=\"thumbnail\" src= \"../../../images/restaurant/{$rowProduct['res_id']}/floorplan/{$rowProduct['floorplan_id']}.jpg\">";
 							}						  
 						}
 					?>					
 				</div>
 
-				<img id="slideRight" class="arrow" src="../images/arrow-right.png">
+				<img id="slideRight" class="arrow" src="../../../images/arrow-right.png">
 			</div>
 		</div>
 		

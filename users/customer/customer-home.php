@@ -1,168 +1,196 @@
 <?php include('../../includes/session.php') ?>
 <?php include('../../includes/connection.php'); ?>
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReserveMe</title>
-    <link rel="stylesheet" href="../../CSS/main.css">
-    <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="../../CSS/nav.css">
-    <link rel="stylesheet" href="../../CSS/search.css">
-    <link rel="stylesheet" href="../../CSS/footer.css">
-    <link href="../../images/logo.png" rel="shortcut icon"/> 
+	<meta charset="utf-8"/>
+	<meta content="IE-edge" http-equiv="X-UA-Compatible"/>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+	<title>ReserveMe</title>
+	<!--web-icon------------------->
+	<link href="../../images/logo.png" rel="shortcut icon"/>
+	<!--stylesheet-------------------->
+	<link href="../../CSS/main.css" rel="stylesheet" type="text/css"/>
+	<link href="../../CSS/nav.css" rel="stylesheet" type="text/css"/>
+	<link href="../../CSS/footer.css" rel="stylesheet" type="text/css"/>
+	<!--FontAwesome-------->
+	<script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
 </head>
-    <body>
-    <!--Start of nav-->
-    <div class="topnav" id="myTopnav">
-        <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
-        <a class="navtab" href="../../index.php">Logout</a>
-		<a class="navtab" href="customer-profile.php">My Profile</a>
-		<a class="navtab" href="../../includes/contact.php">Contact</a>
-		<a class="navtab" href="../../includes/about.php">About</a>
-		<!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->     
-    </div>
-    <!--End of nav-->
-    <!--Start of Header-->
-    <header class="header">
-        <div class="search">
-            <form action="" method="post">
-                <div class="form-box">
-                    <input type="text" onkeyup="onClickSearch()" name="search" id="search" class="search-feild restaurant" placeholder="Search for Restaurant...">
-                    <select name="location" class="search-feild location">
-                        <?php
-                            $sql = "SELECT `res_location` FROM `res_location`;";
-                            $result = mysqli_query($connection,$sql);
-                            while($row = mysqli_fetch_assoc($result)){
-                        ?>
-                        <option value="<?php echo $row['res_location']; ?>"> <?php echo $row['res_location']; ?> </option>
-                        <?php
-                            }
-                        ?>
-                    </select>
-                    <button class="search-button pulsate" type="submit" name="submit">Search<i class="fas fa-search"></i></button>
+<body>
+
+	<!--main-section--------------->
+	<section class="main">
+		<!--Start of nav-->
+		<div class="topnav" id="myTopnav">
+			<img class = "logo" src="../../images/logo.png">
+			<a class="navtab" href="../../index.php">Logout</a>
+			<a class="navtab" href="customer-profile.php">My Profile</a>
+			<a class="navtab" href="../../includes/logged_contact.php">Contact</a>
+			<a class="navtab" href="../../includes/logged_about.php">About</a>
+			<!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->
+		</div>
+		<!--End of nav-->
+	
+		<!--Start of img-->
+		<div class="m-img">
+			<div class="slideshow-container">
+				<div class="mySlides fade">
+				  	<img src="../../images/promos/1.jpg" style="width:100%">
+				  	<div class="text"><a class="hero-button pulsate" href="res_view.php">Visit</a></div>
+				</div>
+
+				<div class="mySlides fade">
+				  	<img src="../../images/promos/2.jpg" style="width:100%">
+				  	<div class="text"><a class="hero-button pulsate" href="res_view.php">Visit</a></div>
+				</div>
+
+				<div class="mySlides fade">
+				  	<img src="../../images/promos/3.jpg" style="width:100%">
+				  	<div class="text"><a class="hero-button pulsate" href="res_view.php">Visit</a></div>
+				</div>
+			</div>
+
+			<div style="text-align:center">
+			  <span class="dot"></span> 
+			  <span class="dot"></span> 
+			  <span class="dot"></span> 
+			</div>
+		</div>
+		<!--End of img-->
+		
+		<!--Start of text-->
+		<div class="m-text">
+			<h2>Reserve<font>Me</font></h2>
+			<h4>Reservation at finger tip</h4>
+			<h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit ut a veritatis minus, magni pariatur. Esse illo iusto odio omnis laborum? Rem dolor accusamus repudiandae perspiciatis eveniet quasi quas eius.</h5>
+		</div>
+		<!--End of text-->
+		
+		<!--Start of social-->
+		<div class="social">
+			<a href="#"><i class="fab fa-facebook-f"></i></a>
+			<a href="#"><i class="fab fa-twitter"></i></a>
+			<a href="#"><i class="fab fa-instagram"></i></a>
+			<a href="#"><i class="fab fa-youtube"></i></a>
+		</div>
+		<!--End of social-->
+	</section>
+
+	<!--Start of our-brand-section 1-->
+	<section class="reservation">
+		<!--text-->
+		<div class="reservation-text">
+			<!--heading-->
+			<h3>Table Reservation</h3>
+			<h4>Best places to <font>Dine in</font> </h4>
+			<!--details-->
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, sint. Non officiis, architecto exercitationem modi distinctio quaerat at aspernatur omnis nobis et voluptatibus hic veritatis excepturi vel molestias quisquam dicta.</p>
+			<a class="hero-button pulsate" href="res_view/logged_search_result.php">Table Reservation</a>
+		</div>
+		<!--img-->
+		<div class="reservation-img"><img src="../../images/table.jpg" /></div>
+	</section>
+	<!--End of our-brand-section 1-->
+	
+	<!--Start of About-->
+    <section id="about">
+        <div class="about-center">
+            <!--Start of the article1-->
+            <article class="about">
+                <div class="about-icon">
+					<i class="fas fa-mug-hot"></i>
+					<h2 class="about-subtitle"><a href="../../category/arabic.php">Sri Lankan</a></h2>
+                </div>              
+            </article>
+            <!--End of the article1-->
+            <!--Start of the article2-->
+            <article class="about">
+                <div class="about-icon">
+					<i class="fas fa-hamburger"></i>
+					<h2 class="about-subtitle"><a href="../../category/arabic.php">Street Food</a></h2>
                 </div>
-            </form>            
-        </div>		
-    </header>
-    <!--End of Header-->
-     <!--Start of Card Section-->
-    <?php 
-        if(isset($_POST["submit"])){
-            $location = $_POST["location"];
-            $search = $_POST["search"];
-    
-            if($search=="" && $location=="Location"){
-                $retrieveProduct = "SELECT * FROM `restaurant` WHERE city LIKE '$location%' "; 
-                $resultProduct = mysqli_query($connection, $retrieveProduct); 
-                echo"<section id=\"food\">
-                    <div>
-                        <h2 class=\"title-text\"> Food Fusion</h2>
-                    </div>";      
-                        while($rowProduct  = mysqli_fetch_assoc($resultProduct)){                        
-                            echo"<div class=\"food-container\">       
-                                    <article class=\"food-card\">
-                                        <img class=\"food-img\" src= \"../../images/{$rowProduct['res_id']}.jpg\">
-                                        <div class=\"img-text\">
-                                            <h1 class=\"name\">". $rowProduct['res_name'] ."</h1> 
-                                        </div>
-                                        <div class=\"img-footer\">
-                                            <div class=\"footer-icon\">
-                                                <i class=\"fas fa-star-half-alt\">". $rowProduct['res_rate'] ."</i>
-                                                <br>
-                                                <i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i>
-                                            </div>
-                                            <div class=\"footer-btn\">
-                                                <button type=\"button\"class=\"food-btn\" onclick=\"location.href='../../res_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
-                                            </div>
-                                        </div>
-                                    </article>           
-                                </div>";
-                        }       
-                    echo"</section>";
-            }           
-            else{
-                $retrieveProduct = "SELECT * FROM `restaurant` WHERE res_name LIKE '$search%' AND city LIKE '$location%'";
-                $resultProduct = mysqli_query($connection, $retrieveProduct);
-                $count=mysqli_num_rows($resultProduct);
-                if($count>0){
-                    echo"<section id=\"food\">
-                        <div>
-                            <h2 class=\"title-text\"> Food Fusion</h2>
-                        </div>";     
-                    while($rowProduct  = mysqli_fetch_assoc($resultProduct)){                                
-                        echo"<div class=\"food-container\">       
-                                <article class=\"food-card\">
-                                    <img class=\"food-img\" src= \"../../images/{$rowProduct['res_id']}.jpg\">
-                                    <div class=\"img-text\">
-                                        <h1 class=\"name\">". $rowProduct['res_name'] ."</h1> 
-                                    </div>
-                                    <div class=\"img-footer\">
-                                        <div class=\"footer-icon\">
-                                            <i class=\"fas fa-star-half-alt\">". $rowProduct['res_rate'] ."</i>
-                                            <br>
-                                            <i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i>
-                                        </div>
-                                        <div class=\"footer-btn\">
-                                            <button type=\"button\"class=\"food-btn\" onclick=\"location.href='../../res_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
-                                        </div>
-                                    </div>
-                                </article>           
-                            </div>";
-                    }  
-                }else{
-                    echo"<section id=\"food\">
-                        <div>
-                            <h2 class=\"title-text\"> Food Fusion</h2>
-                        </div>
-                        <div>                                      
-                            <i class=\"far fa-file-times\"></i>                                   
-                            <h1 class=\"name\">Sorry! No matching results.</h1> 
-                        </div>";  
-                }                    
-                echo"</section>";
-            }            
-        }else{
-            $retrieveProduct = "SELECT * FROM `restaurant`";
-            $resultProduct = mysqli_query($connection, $retrieveProduct);
-            echo"<section id=\"food\">
-                    <div class=\"row-25 product-box\">
-                        <div>
-                            <h2 class=\"title-text\"> Food Fusion</h2>
-                        </div>";           
-                    while($rowProduct  = mysqli_fetch_assoc($resultProduct)){                                           
-                        echo"<div class=\"food-container\">       
-                                <article class=\"food-card\">
-                                    <img class=\"food-img\" src= \"../../images/{$rowProduct['res_id']}.jpg\">
-                                    <div class=\"img-text\">
-                                        <h1 class=\"name\">". $rowProduct['res_name'] ."</h1> 
-                                    </div>
-                                    <div class=\"img-footer\">
-                                        <div class=\"footer-icon\">
-                                            <i class=\"fas fa-star-half-alt\">". $rowProduct['res_rate'] ."</i>
-                                            <br>
-                                            <i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i>
-                                        </div>
-                                        <div class=\"footer-btn\">
-                                            <button type=\"button\"class=\"food-btn\" onclick=\"location.href='../../res_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
-                                        </div>
-                                    </div>
-                                </article>           
+            </article>
+            <!--End of the article2-->
+            <!--Start of the article3-->
+            <article class="about">
+                <div class="about-icon">
+					<i class="fas fa-mortar-pestle"></i>
+					<h2 class="about-subtitle"><a href="../../category/arabic.php">Chinese</a></h2>
+                </div>
+            </article>
+            <!--End of the article3-->
+            <!--Start of the article4-->
+            <article class="about">
+                <div class="about-icon">
+					<i class="fas fa-pizza-slice"></i>
+					<h2 class="about-subtitle"><a href="../../category/arabic.php">Italian</a></h2>
+                </div>
+            </article>
+            <!--End of the article4-->
+            <!--Start of the article5-->
+            <article class="about">
+                <div class="about-icon">
+					<i class="fas fa-fish"></i>
+					<h2 class="about-subtitle"><a href="../../category/arabic.php">Mongolian</a></h2>
+                </div>
+            </article>
+            <!--End of the article5-->
+            <!--Start of the article6-->
+            <article class="about">
+                <div class="about-icon">
+					<i class="fas fa-pepper-hot"></i>
+					<h2 class="about-subtitle"><a href="../../category/arabic.php">Arabic</a></h2>
+                </div>
+            </article>
+            <!--End of the article6-->
+			<!--Start of the article7-->
+            <article class="about">
+                <div class="about-icon">
+					<i class="fas fa-fish"></i>
+					<h2 class="about-subtitle"><a href="../../category/arabic.php">Thai</a></h2>
+                </div>
+            </article>
+            <!--End of the article7-->
+        </div>
+    </section>
+	<!--End of About-->
 
-                            </div>
-                    </div>";
-                    }       
-                    echo"</section>";
-        }            
-    ?>
-    <!--End of Card Section-->
-
+	<!--Start of our-brand-section 2-->
+	<section class="reservation">
+		<!--img-->
+		<div class="reservation-img"><img src="../../images/hall.jpg" /></div>
+		<!--text-->
+		<div class="reservation-text">
+			<!--heading-->
+			<h3>Hall Reservation</h3>
+			<h4>Best places to <font>Enlight</font> your occasion</h4>
+			<!--details-->
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, doloremque exercitationem illum vitae earum, velit nulla pariatur est esse, ratione qui! Quis sapiente illum, et quaerat veritatis nihil numquam repellendus!</p>
+			<a class="hero-button pulsate" href="hall_view/logged_hall_search_result.php">Hall Reservation</a>
+		</div>
+		</section>
+	<!--End of our-brand-section 2-->
+	
+	
+	<!--Start of subscribe-->
+	<section class="subcribe-container">
+		<!--heading-->
+		<h3>Subcribe For Enjoy Amazing Offers</h3>
+		<!--Input-------->
+		<div class="subcribe-input">
+			<input placeholder="Example@gmail.com" type="email" />
+			<a class="subcribe-btn" href="#">Send</a>
+		</div>
+	</section>
+	<!--Start of subscribe-->
+	
+	<!--Include footer.php-->
     <div><?php include "../../includes/footer.php" ?></div>
-     <!--Include footer.php-->
-   <div><p>My reservations</p></div>
-    
-    <!--script for onClickNav() for the navigation menu-->
+	
+	<!--script for slideshow-->
+    <script src="../../js/slideshow.js"></script>
+	
+	<!--script for onClickNav() for the navigation menu-->
     <script src="../../js/onClickNav.js"></script>
-    </body>
+</body>
 </html>

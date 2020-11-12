@@ -18,8 +18,17 @@
 	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 <!--web-icon-->
 <link href="../images/logo.png" rel="shortcut icon"/>
+<style>
+
+.icons{
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+</style>
+
 </head>
-<body >
+<body class="login-body">
 	<!--Start of nav-->
     <div class="topnav" id="myTopnav">
         <a href="../index.php"><img class = "logo" src="../images/logo.png"></a>
@@ -29,12 +38,12 @@
 		<!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->     
     </div>
     <!--End of nav-->
-	<b>
+	
     
 <div class="limiter">
 <div class="container-login100">
 <div class="wrap-login100 ">
-<img src="../images/profile.png" class="avatar">
+<img src="../images/form_icons/user.png" class="avatar">
 
 <form class="login100-form validate-form" action="login-submit.php" method="post">
 
@@ -42,17 +51,21 @@
 <h3 class="error-msg"><?php include_once('message.php'); ?></h3> 
 
 <div class="wrap-input100 validate-input" style="padding-top: 20px;" data-validate="Username is reauired">
-    <span class="label-input100"> Username </span>
+    <span class="label-input100"> 
+    <img src="../images/form_icons/user.png" alt="user" class="icons">
+        Username </span>
     <input class="input100" type="email" name="email" placeholder="Type your username" required>
     <span class="focus-input100" data-symbol="&#xf206;"></span>
 </div><br>
 <div class="wrap-input100 validate-input" data-validate="Password is required">
-    <span class="label-input100">Password</span>
+    <span class="label-input100">
+    <img src="../images/form_icons/password.png" alt="user" class="icons">    
+    Password</span>
     <input class="input100" type="password" name="password" placeholder="Type your password" required>
     <span class="focus-input100" data-symbol="&#xf190;"></span>
 </div>
 <div class="text-right" style="padding-top: 8px;padding-bottom: 31px;">
-    <a href="../reset/email_verify.php"> Forgot password..! </a>
+    <a href="../reset/email_verify.php" class="label-input100" > Forgot password..! </a>
 </div>
 <div class="container-login100-form-btn">
 	<div class="wrap-login100-form-btn">

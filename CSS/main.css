@@ -107,19 +107,6 @@ a{
 }
 /*End of Social Icons*/
 
-@-webkit-keyframes pulsate{
-    0%{
-        opacity: .3;
-    }
-    50%{
-        opacity: 1;
-    }
-    100%{
-        opacity: .3;
-    }
-}
-/*End of Header*/
-
 /*Start of About us*/
 #about{
     padding: 40px;
@@ -727,14 +714,14 @@ ul{
 .about{
     margin: 10px 0;
 	display: flex;
-	align: center;
+	align-items: center;
 }
 
 .about-icon .fas{
     font-size: 30px;
     color: orange;
     margin-right: 5px;
-	align-item:center;
+	align-items: center;
 }
 
 .about-subtitle a{
@@ -802,7 +789,7 @@ ul{
     color: #000000;
 }
 
-@-webkit-keyframes pulsate{
+@keyframes pulsate{
     0%{
         opacity: .3;
     }

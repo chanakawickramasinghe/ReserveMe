@@ -43,7 +43,7 @@
       " <img class = \"image\" src=\"../../images/restaurant/".$row['res_image']."\" width=\"300px\" height=\"300px\" alt=\"Restaurent logo\">";
       ?>
 
-      <div class="topnav"  >
+      <div class="topnav">
          
   <a style="float:left" href="employee-profile.php" target="iframe_a" >Employee Profile</a>
   <a style="float:left" href="pre-order-menu.php" target="iframe_a">Pre - Order Menu</a>

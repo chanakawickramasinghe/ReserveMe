@@ -64,7 +64,7 @@
             <section class="reservation-text">
                 <!--heading-->
                 <center><img src="../images/form_icons/dish.png" alt="Icon Customer" class="iconimage" ></center>
-                <h3>Restaurent Registration</h3>
+                <h3>Restaurant Registration</h3>
                 <h4>Best places to <font>Dine in</font> </h4>
                 <!--details-->
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, sint. Non officiis, architecto exercitationem modi distinctio quaerat at aspernatur omnis nobis et voluptatibus hic veritatis excepturi vel molestias quisquam dicta.</p>

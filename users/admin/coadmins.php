@@ -1,6 +1,14 @@
 <?php include('../../includes/session.php') ?>
 <?php include('../../includes/connection.php') ?>
 
+<?php
+    $name = "";
+    $email = "";
+    $contact = "";
+    $type = "";
+    $password = "";    
+?>
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -71,33 +79,57 @@
             </div>
             <div class="vl"></div>
             <div class="coadmin-dashboard">
-                <form class="update-box">
+                <form class="update-box" method="POST" action="coadmins-submit.php">
                     <table>
                         <tr>
                             <th>Admin Name : </th>
-                            <td><input class="input-l" type="text" placeholder="Admin Name" id="admin_name" required></td>
+                            <td><input class="input-l" type="text" placeholder="Admin Name" id="admin_name" name="name"  required></td>
                         </tr>
                         <tr>
                             <th>Admin Email : </th>
-                            <td><input class="input-l" type="text" placeholder="Admin Email" id="admin_email" required></td>
+                            <td><input class="input-l" type="text" placeholder="Admin Email" id="admin_email" name="email" required></td>
                         </tr>
                         <tr>
                             <th>Contact No. : </th>
-                            <td><input class="input-m" type="text" placeholder="Contact" id="contact_no" required></td>
+                            <td><input class="input-m" type="text" placeholder="Contact" id="contact_no" name="contact" required></td>
                         </tr>
                         <tr>
                             <th>Admin Type : </th>
-                            <td><input class="input-m" type="text" placeholder="Type" id="admin_type" readonly="true" required></td>
+                            <td><input class="input-m" type="text" placeholder="Type" id="admin_type" name="type"  required></td>
+                        </tr>
+                        <tr>
+                            <th>Password : </th>
+                            <td><input class="input-m" type="password" placeholder="Password" id="password" name="password" required></td>
                         </tr>
 
                     </table>
-                    <button class="btn-coadmins" type="button" name="add-coadmins" onclick="window.location.href='coadmins-add-submit.php'">Add New</button>
-                    <button class="btn-coadmins" type="button" name="update-coadmins" onclick="window.location.href='coadmins-update-submit.php'">Update</button>
-                    <button class="btn-coadmins" type="button" name="delete-coadmins" onclick="window.location.href='coadmins-delete-submit.php'">Delete</button>
+                    <input type="submit" class="btn-coadmins"  name="add" value="Add New">
+                    <input type="submit" class="btn-coadmins"  name="update" value="Update">
+                    <input type="submit" class="btn-coadmins"  name="delete" value="Delete">
                 </form>
             </div>
         </div>
         
+
+
+<script>
+    var table = document.getElementById('myTable');
+                
+        for(var i = 1; i < table.rows.length; i++)
+        {
+            table.rows[i].onclick = function()
+            {
+                document.getElementById("admin_name").value = this.cells[0].innerHTML;
+                document.getElementById("admin_email").value = this.cells[1].innerHTML;
+                document.getElementById("contact_no").value = this.cells[2].innerHTML;
+                document.getElementById("admin_type").value = this.cells[3].innerHTML;
+                // document.getElementById("password").value = this.cells[3].innerHTML;
+                
+            };
+        }
+
+</script>
+
 
     </body>
 </html>

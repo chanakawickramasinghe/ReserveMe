@@ -51,7 +51,7 @@
     <div class="sidebar"> 
       <span><a href="employee-profile.php" target="iframe_a" class="active">Employee Profile</a></span>      
       <a href="pre-order-menu.php" target="iframe_a">Pre - Order Menu</a>
-      <a href="customer-queries.php" target="iframe_a">Customer Queries</a>
+      <a href="queries&feedback.php" target="iframe_a">Queries & Reviews</a>
       <a href="reports.php" target="iframe_a">Reports</a>
       <a href="manage-reservation.php" target="iframe_a">Manage Reservation</a>
       <a href="reception-hall.php" target="iframe_a">Reception Hall</a>
@@ -60,7 +60,7 @@
   </td>
 
   <td style="width:80%">
-  <iframe src="employee-profile.php" frameborder="0px" name="iframe_a" scrolling="yes" style="width:100% ; height:100%;background-color:"></iframe> 
+  <iframe src="employee-profile.php" frameborder="0px" name="iframe_a" scrolling="yes" style="width:100% ; height:650px;"></iframe> 
   </td>  
 
   </tr>    

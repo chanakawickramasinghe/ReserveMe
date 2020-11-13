@@ -27,14 +27,15 @@
   }
    
   .sidebar a.active {
-    background-color: #00b3b3;
-    color: white;
+    background-color: #1aac32f3;
+    color: black;
     font-weight: bold
   }
   
   .sidebar a:hover:not(.active) {
     background-color: rgba(248, 179, 52, 0.897);
     font-weight: bold;
+    border-radius: 5px;
   }
   
   div.content {
@@ -92,7 +93,8 @@
         padding: 3%;
         box-shadow: 2px 2px 3px 2px gray;
         height: 100%;
-        width: 100%;
+        width: 1000px;
+        border-radius: 5px;
 
     }
 
@@ -135,7 +137,7 @@
   }
   
   input:checked + .slider {
-    background-color: black;
+    background-color: rgb(194, 207, 14);
   }
   
   input:focus + .slider {

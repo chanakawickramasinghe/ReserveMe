@@ -4,12 +4,15 @@
 <html>
     <head>
         <title>Employee Profile</title>
-        <link rel="stylesheet" href="../../CSS/nav.css">
-        <link rel="stylesheet" href="../../CSS/footer.css">
         <link href="../../images/logo.png" rel="shortcut icon"/> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
+        <!-- Link style Sheets -->
+        <link rel="stylesheet" href="../../CSS/nav.css">
+        <link rel="stylesheet" href="../../CSS/footer.css">
+        <link rel="stylesheet" href="../../CSS/employee.css">
 
+        
     </head>
     <body class="subbody">        
                 
@@ -31,6 +34,7 @@
         echo"<h1 class=div-c>Welcome ".$row['emp_name']." , Employee of ".$row2['res_name']."</h1>";
 
             echo "
+                <h3> About you.....</h3><br>
                 Name: ".$row['emp_name']." <br>
                 Email: ".$row['emp_email']." <br>
                 Contact No: ".$row['emp_mobile']." <br>
@@ -39,7 +43,7 @@
        
         ?>
         
-        <img src="" alt="">
+        <img src="../../images/deco/restaurant-staff.jpg" alt="feedback" class="revimage"><hr style="width:80%">
         </br>
         
     </body>

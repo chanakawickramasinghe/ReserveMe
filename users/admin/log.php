@@ -46,6 +46,35 @@
         <div class="content-div">
             <br><br>        
             <h1>Application Log</h1>
+
+            <!-- Adding the table with log details -->
+        
+        <table class="log" id="myTable" border="1">
+            <tr>
+                <th>User ID</th>
+                <th>User Type</th>
+                <th>Logged Date and Time</th>
+            </tr>
+        
+        <?php
+        
+        $log_sql = "SELECT * FROM log";
+        
+        $userquery = mysqli_query($connection,$log_sql);
+        while($row = mysqli_fetch_assoc($userquery)){
+        
+            echo "
+                <tr>                  
+                    <td>".$row['user_id']."</td>
+                    <td>".$row['user_type']."</td>
+                    <td>".$row['date_time']."</td>
+                    
+                </tr>";
+                
+        } 
+        echo "</table>";
+        ?>
+
         </div>
 
 

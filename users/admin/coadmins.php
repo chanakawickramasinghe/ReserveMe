@@ -99,7 +99,7 @@
                         </tr>
                         <tr>
                             <th>Password : </th>
-                            <td><input class="input-m" type="password" placeholder="Password" id="password" name="password" required></td>
+                            <td><input class="input-m" type="password" placeholder="Password" id="password" name="password"></td>
                         </tr>
 
                     </table>

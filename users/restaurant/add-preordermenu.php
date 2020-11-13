@@ -14,15 +14,7 @@
 
 <body class="login-body">
 
-<!--Start of nav-->
-    <div class="topnav" id="myTopnav">
-        <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
-        <a class="navtab" href="../../includes/login.php">Login</a>
-		<a class="navtab" href="../../includes/contact.php">Contact</a>
-		<a class="navtab" href="../../includes/about.php">About</a>
-		<!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->     
-    </div>
-<!--End of nav-->
+
 <br><br><br><br><br>
     <div class="tab" >
         <div class="login-box" style="height:450px;padding:10px 30px">

@@ -280,7 +280,7 @@
 
 /*User Tables */
 .coadmin{
-  width: 35vw;
+  width: 40vw;
   margin: 0 auto;
   table-layout: auto;
   border-collapse: collapse;
@@ -319,7 +319,7 @@
 
   float: left;
   border-left: 1px solid rgb(22, 7, 104);
-  height: 310px;
+  height: 340px;
 }
 
 /* buttons coadmins*/

@@ -64,8 +64,8 @@
     <input class="input100" type="password" name="password" placeholder="Type your password" required>
     <span class="focus-input100" data-symbol="&#xf190;"></span>
 </div>
-<div class="text-right" style="padding-top: 8px;padding-bottom: 31px;">
-    <a href="../reset/email_verify.php" class="label-input100" > Forgot password..! </a>
+<div class="text-right" style="padding-top: 8px;padding-bottom: 31px">
+    <a href="../reset/email_verify.php" class ="label-input100" style="color:blue"> Forgot password..! </a>
 </div>
 <div class="container-login100-form-btn">
 	<div class="wrap-login100-form-btn">

@@ -13,6 +13,9 @@
     <!-- Link the style sheets -->
   	<link rel="stylesheet" href="../../CSS/nav.css">   
     <link rel="stylesheet" href="../../CSS/footer.css">
+    <link rel="stylesheet" href="../../CSS/employee.css">
+
+
 
 </head>
 
@@ -31,8 +34,10 @@
 
     
     
-<table style="width:100%;border:0px solid black;height:100%"  >
-  <tr><td style="width:15%;">
+<table style="height:100%;width:100%"  >
+  <tr >
+  <td style="width:20%">
+  
     <?php 
      checkSession();
      $userID = $_SESSION["res_id"]; //have to add session id
@@ -40,22 +45,31 @@
       $userquery = mysqli_query($connection,$sql);
       $row = mysqli_fetch_assoc($userquery);
       echo
-      " <img class = \"image\" src=\"../../images/restaurant/".$row['res_image']."\" width=\"300px\" height=\"300px\" alt=\"Restaurent logo\">";
+      " <img class = \"resimage\" src=\"../../images/restaurant/".$row['res_image']."\"  alt=\"Restaurent logo\">";
       ?>
 
-      <div class="topnav">
-         
-  <a style="float:left" href="employee-profile.php" target="iframe_a" >Employee Profile</a>
-  <a style="float:left" href="pre-order-menu.php" target="iframe_a">Pre - Order Menu</a>
-  <a style="float:left" href="customer-queries.php" target="iframe_a">Customer Queries</a>
-  <a style="float:left" href="reports.php" target="iframe_a">Reports</a>
-  <a style="float:left" href="manage-reservation.php" target="iframe_a">Manage Reservation</a>
-  <a style="float:left" href="reception-hall.php" target="iframe_a">Reception Hall</a>
-      </div>
-  </td style="width:85%">
-  <td><iframe src="employee-profile.php" frameborder="0px" name="iframe_a"scrolling="yes" style="width:100% ; height:100%;background-color:">
-                                        </iframe> </td>                 
+    <div class="sidebar"> 
+      <span><a href="employee-profile.php" target="iframe_a" class="active">Employee Profile</a></span>      
+      <a href="pre-order-menu.php" target="iframe_a">Pre - Order Menu</a>
+      <a href="queries&feedback.php" target="iframe_a">Queries & Reviews</a>
+      <a href="reports.php" target="iframe_a">Reports</a>
+      <a href="manage-reservation.php" target="iframe_a">Manage Reservation</a>
+      <a href="reception-hall.php" target="iframe_a">Reception Hall</a>
+</div>
+
+  </td>
+
+  <td style="width:80%">
+  <iframe src="employee-profile.php" frameborder="0px" name="iframe_a" scrolling="yes" style="width:100% ; height:650px;"></iframe> 
+  </td>  
+
   </tr>    
+  
+  
+  
+  
+  
+  
   
   <tr><td colspan=2>
   <?php include('../../includes/footer.php'); ?>

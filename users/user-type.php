@@ -23,6 +23,7 @@
             .iconimage{
                 height:120px;
                 width:120px;
+                float: left;
             }
             .reservation{
 	display: flex;
@@ -69,13 +70,7 @@
                 <!--details-->
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, sint. Non officiis, architecto exercitationem modi distinctio quaerat at aspernatur omnis nobis et voluptatibus hic veritatis excepturi vel molestias quisquam dicta.</p>
                 <br><br>
-                <div class="container-login100-form-btn">
-                    <div class="wrap-login100-form-btn">
-                    <div class="login100-form-bgbtn"></div>
-                        <!-- <a href="uers/res_reg.php"></a><button class="login100-form-btn"> Create Account </button></a> -->
-                        <a href="restaurant/res_reg.php" type="button" class="login100-form-btn">Create Account</a>
-                    </div>
-                </div>
+                <a href="restaurant/res_reg.php" type="button" class="hero-button pulsate">Create Account</a>
             </section>
 
             </td>
@@ -91,12 +86,7 @@
 			    <!--details-->
 			    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, sint. Non officiis, architecto exercitationem modi distinctio quaerat at aspernatur omnis nobis et voluptatibus hic veritatis excepturi vel molestias quisquam dicta.</p>
                 <br><br>
-                <div class="container-login100-form-btn">
-	                <div class="wrap-login100-form-btn">
-		            <div class="login100-form-bgbtn"></div>
-                        <a href="customer/customerReg.php" type="button" class="login100-form-btn">Create Account</a>
-                    </div>
-                </div>
+                <a href="customer/customerReg.php" type="button" class="hero-button pulsate">Create Account</a>                   
 		        </div>
             </section>
 

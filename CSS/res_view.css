@@ -36,7 +36,9 @@ ul{
     background: orange;
     color: #fff;
     cursor: pointer;    
-    margin-top: 10px;
+	margin-top: 10px;
+	width:300px;
+	border-width:opx;
 }
 
 .reserve-button:hover{

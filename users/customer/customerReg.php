@@ -13,9 +13,9 @@
     <style>
         .signin {
             padding:10px;
-  background-color: #e9bc5c;
-  text-align: center;
-}
+            background-color: #e9bc5c;
+            text-align: center;
+        }
     </style>
 
 
@@ -37,13 +37,13 @@
                
             <img src="../../images/form_icons/regform.png" class="avatar">
             <br>
-                <h1 align="center">Register Here</h1>
+                <h1 align="center">Register Here..!</h1><br>
 
             <h2 class="error-msg"><?php include_once('../../includes/message.php'); ?></h2>
 
                 <form action="register-submit.php" method="post">                   
                   
-                <table style="width:500px;position:center;align-items:center">
+                <table style="width:750px;float:center;align-items:center">
                 <tr>
                     <td>
                     <img src="../../images/form_icons/user.png" alt="user" class="icons">

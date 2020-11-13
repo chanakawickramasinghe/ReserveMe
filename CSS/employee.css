@@ -1,0 +1,186 @@
+.subbody{
+    align-items: center;
+    text-align: center;
+}
+.content-left{
+    float:left;
+}
+
+/* Style of sidebar */
+.sidebar {
+    margin: 10px;
+    padding: 0;
+    width: 90%;
+    background-color: #ffffff;
+    position: relative;
+    float: left;
+    box-shadow: 2px 2px 3px 2px gray;
+    border-radius: 5px;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    font-weight: bold
+  }
+   
+  .sidebar a.active {
+    background-color: #00b3b3;
+    color: white;
+    font-weight: bold
+  }
+  
+  .sidebar a:hover:not(.active) {
+    background-color: rgba(248, 179, 52, 0.897);
+    font-weight: bold;
+  }
+  
+  div.content {
+    margin-top: 50px;
+    margin-left: 200px;
+    padding: 100px 16px;
+    height: 1000px;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 20%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      width: 20%;
+      text-align: center;
+      float: none;
+    }
+  }
+
+  .content-div{
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    background-color: #ffffff;
+    position: relative;
+    height: auto;
+    overflow: auto;
+    float: right;
+    top:15px;
+  }
+  /* End of side bar */
+
+
+  /* style of restaurantimage */
+
+  .resimage {
+        width: 200px;
+        height: 200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+
+    }
+
+    .contentbox{
+        padding: 3%;
+        box-shadow: 2px 2px 3px 2px gray;
+        height: 100%;
+        width: 100%;
+
+    }
+
+/* For toggle switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 28px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 6px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: black;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  /* End of toggle switch */
+
+  /* style of table */
+  td{
+      padding: 0.5%;
+
+  }
+
+  /* Button style */
+
+  .btn{
+    width: 140px;;
+    height: 6vh;
+    padding:0.6vh;
+    background: #0e1581;
+    border: none;
+    color:#ffffff;
+    border-radius: 5px;
+    font-size: large;
+    margin: 20px;
+}
+.btn:hover{
+    background: #000000;
+    cursor: pointer;
+}
+
+/* End of Buttons  */

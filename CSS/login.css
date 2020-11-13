@@ -334,10 +334,10 @@ iframe {
   width: 300%;
   height: 100%;
   background: orange;
-  background: -webkit-linear-gradient(right, orange, black, orange, black);
-  background: -o-linear-gradient(right, orange, black, orange, black);
-  background: -moz-linear-gradient(right, orange, black, orange, black);
-  background: linear-gradient(right, orange, black, orange, black);
+  background: -webkit-linear-gradient(right, orange, #744006, orange, #744006);
+  background: -o-linear-gradient(right, orange, #744006, orange, #744006);
+  background: -moz-linear-gradient(right, orange, #744006, orange, #744006);
+  background: linear-gradient(right, orange, #744006, orange, #744006);
   top: 0;
   left: -100%;
 

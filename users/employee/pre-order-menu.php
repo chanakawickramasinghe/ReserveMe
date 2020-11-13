@@ -6,45 +6,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Link the style sheet -->
     <title>Pre-Order Menu</title>
+    <!-- Link the style sheet -->
+    <link rel="stylesheet" href="../../CSS/employee.css">
 
 </head>
-<body>
+<body class="subbody">
+    <h1>Availability on Pre-Order Manues</h1>
 
-<?php
-        checkSession();
-        
-        $userID = $_SESSION["emp_id"]; //have to add session id
-        $sql = "SELECT * FROM employee WHERE emp_id='$userID'";
+    <div class="contentbox">
+    <table width="100%"  >
+        <tr>
+            <th>Menu</th>
+            <th>Price</th>
+            <th>Availability</th>
+        </tr>
+        <tr>
+            <td class="content-left">Fried Rice</td>
+            <td>Rs. 450.00</td>
+            <td><label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td class="content-left">Kottu</td>
+            <td>Rs. 550.00</td>
+            <td><label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td class="content-left">Chicken curry</td>
+            <td>Rs. 650.00</td>
+            <td><label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td class="content-left">Fish curry</td>
+            <td>Rs. 350.00</td>
+            <td><label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+                </label>
+            </td>
+        </tr>
+      
 
-        $resID= $_SESSION["res_id"]; //Get the Restaurent Name
-        $sql2 = "SELECT * FROM restaurant WHERE res_id='$resID'";
-
-        $resquery = mysqli_query($connection,$sql2);
-        $row2 = mysqli_fetch_assoc($resquery);
-        
-        $userquery = mysqli_query($connection,$sql);
-        $row = mysqli_fetch_assoc($userquery);
-        echo"<h1 class=div-c>Welcome ".$row['emp_name']." , Employee of ".$row2['res_name']."</h1>";
-
-            echo "
-            <table class=\"user\">
-                </br>
-                <tr>                  
-                <th>Name</th><td>".$row['emp_name']."</td>
-                </tr>
-                <tr>
-                <th>Email</th><td>".$row['emp_email']."</td>
-                </tr>
-                <tr>
-                <th>Contact No</th><td>".$row['emp_mobile']."</td>
-                </tr>
-                </table>";
+    </table>
+    </div>
     
-       
-        ?>
-        </br>
+    <input type="button" name="submit" value="Save & Update" class="btn" style="float:right;margin-right:100px" >
+
     
 </body>
 </html>

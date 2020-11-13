@@ -98,11 +98,7 @@
 	</section>
 	<!--End of iframe section-->
 
-    <!--Start of Reservation Form-->
-    <div><?php include "../../../includes/reservation_form.php" ?></div>
-    <!--End of Reservation Form-->
-
-	<!--Include footer.php-->
+    <!--Include footer.php-->
     <div><?php include "../../../includes/footer.php" ?></div>
     
 </body>

@@ -13,7 +13,6 @@
     <link href="../../../css/res_view.css" rel="stylesheet" type="text/css"/>
     <link href="../../../css/nav.css" rel="stylesheet" type="text/css"/>
     <link href="../../../css/footer.css" rel="stylesheet" type="text/css"/>
-    <link href="../../../css/reservation_form.css" rel="stylesheet" type="text/css"/>
     <!--FontAwesome-->
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
 </head>
@@ -100,11 +99,7 @@
 	</section>
     <!--End of iframe section-->
     
-    <!--Start of Reservation Form-->
-    <div><?php include "../../../includes/reservation_form.php" ?></div>
-    <!--End of Reservation Form-->
-
-	<!--Include footer.php-->
+    <!--Include footer.php-->
     <div><?php include "../../../includes/footer.php" ?></div>
 </body>
 </html>

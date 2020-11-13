@@ -50,10 +50,6 @@
         <div class="container">
         <iframe name="iframeBox" class="responsive-iframe" src="restaurant-homeframe.php"></iframe>
 
-      
-    <!--script for onClickNav() for the navigation menu-->
-    <script src="../../js/onClickNav.js"></script>
-
     <br><br><br> 
     
     </body>

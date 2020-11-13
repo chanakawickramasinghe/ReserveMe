@@ -59,13 +59,6 @@ a{
     border:none;
 }
 
-.pulsate{
-    animation: pulsate 3s ease-in-out;
-    animation-iteration-count: infinite;
-    opacity: .3;
-    color: #000000;
-}
-
 .numbertext{
 	display:none;
 }
@@ -696,7 +689,7 @@ ul{
     padding: 13px 20px;
     border-radius: 200px;
     font-weight: bold;
-    background: orange;
+    background: black;
     color: #fff;
     cursor: pointer;
     border: 2px solid orange;
@@ -704,27 +697,10 @@ ul{
 }
 
 .hero-button:hover{
-	background: #fff;
-	color: orange;
+	background: orange;
+	color: white;
 	border: none;
 }
 
-.pulsate{
-    animation: pulsate 3s ease-in-out;
-    animation-iteration-count: infinite;
-    opacity: .3;
-    color: #000000;
-}
 
-@keyframes pulsate{
-    0%{
-        opacity: .3;
-    }
-    50%{
-        opacity: 1;
-    }
-    100%{
-        opacity: .3;
-    }
-}
 /*End of button*/

@@ -1,22 +1,9 @@
-.header {
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
-}
-
 .search-feild{
     height: 30px;
     padding: 8px;
     border:none;
     border-radius:20px;
     outline:none;
-}
-
-.restaurant{
-    width: 400px;
 }
 
 .location{
@@ -27,22 +14,9 @@
     width:110px;
 }
 
-.search-btn{
-    width:100px;
-    height: 30px;
-    background: #ffeb3b;
-    border: none;
-    color:rgb(0, 0, 0);
-    border-radius: 20px;
-}
-
-.search-btn:hover{
-    background: #ffc107;
-    cursor: pointer;
-}
 
 .form-box{
     background: rgba(0,0,0,0.5);
     padding:10px;
-	border-radius: 10%;
+	border-radius: 8%;
 }

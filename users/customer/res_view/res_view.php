@@ -95,7 +95,7 @@
 					?>  
 		        </ul>
 	        </div>
-			<iframe id="iframeBox" name="iframeBox" class="iframeBox" height="500px" width="100%" title="Iframe Example" frameborder="0" marginwidth="0" marginheight="0"></iframe>
+			<iframe src="menu.php?res_id= <?php echo $_GET['res_id']?>" id="iframeBox" name="iframeBox" class="iframeBox" height="500px" width="100%" title="Iframe Example" frameborder="0" marginwidth="0" marginheight="0"><div></iframe>
 	    </div>	
 	</section>
     <!--End of iframe section-->

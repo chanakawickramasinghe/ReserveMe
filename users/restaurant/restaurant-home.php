@@ -42,7 +42,7 @@
         </div>
         <div class="content-div">
         <br>       
-            <h1>Welcome KFC, Moratuwa!</h1>
+            <h1>Welcome KFC, Kandy!</h1>
         <br>
         </div>
         <div class="search">

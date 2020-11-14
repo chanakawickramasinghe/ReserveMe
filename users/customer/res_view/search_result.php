@@ -46,7 +46,7 @@
                             }
                         ?>
                     </select>
-                    <button class="search-button pulsate" type="submit" name="submit">Search<i class="fas fa-search"></i></button>
+                    <button class="search-button" type="submit" name="submit">Search<i class="fas fa-search"></i></button>
                 </div>
             </form>            
         </div>		

@@ -33,7 +33,7 @@
             <a href="add-menu.php" target="iframeBox">Update the Menu</a>
             <a href="#promotions" target="iframeBox">Promotions</a>
             <a href="#reviews" target="iframeBox">View Reviews</a>
-            <a href="#HelpDesk" target="iframeBox">Help Desk</a>
+            <a href="contact.php" target="iframeBox">Help Desk</a>
             <br><br><br>
             <hr>
             <a href="../employee/employee-add.php" target="iframeBox">Manage Employee</a>
@@ -48,7 +48,7 @@
         <div class="search">
 
         <div class="container">
-        <iframe name="iframeBox" class="responsive-iframe" src="restaurant-homeframe.php"></iframe>
+        <iframe name="iframeBox" class="responsive-iframe" src="restaurant-homeframe.php" frameBorder="0"></iframe>
 
     <br><br><br> 
     

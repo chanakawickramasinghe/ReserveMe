@@ -30,7 +30,7 @@ function time_elapsed_string($datetime, $full = false) {
     return $string ? implode(', ', $string) . ' ago' : 'just now';
 }
 
-// Page ID needs to exist, this is used to determine which reviews are for which page.
+// Res ID needs to exist, this is used to determine which reviews are for which restaurant.
 if (isset($_GET['res_id'])) {
 if (isset($_POST['customer_name'], $_POST['rating'], $_POST['content'])) {
     // Insert a new review (user submitted form)
@@ -46,7 +46,7 @@ if (isset($_POST['customer_name'], $_POST['rating'], $_POST['content'])) {
         exit('Your review has been submitted!');
     }
     
-    // Get all reviews by the Page ID ordered by the submit date
+    // Get all reviews by the Res ID ordered by the submit date
     $stmt = $pdo->prepare('SELECT * FROM reviews WHERE res_id = ? ORDER BY submit_date DESC');
     $stmt->execute([$_GET['res_id']]);
     $reviews = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -55,7 +55,7 @@ if (isset($_POST['customer_name'], $_POST['rating'], $_POST['content'])) {
     $stmt->execute([$_GET['res_id']]);
     $reviews_info = $stmt->fetch(PDO::FETCH_ASSOC);
 } else {
-    exit('Please provide the page ID.');
+    exit('Please provide the Res ID.');
 }
 ?>
 

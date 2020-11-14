@@ -10,16 +10,7 @@
 </head>
     
 <body class="login-body">
-<!--Start of nav-->
-        <div class="topnav" id="myTopnav">
-            <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
-            <a class="navtab" href="../../index.php.php">Logout</a>
-		    <a class="navtab" href="restaurant-profile.php">My Profile</a>
-		    <a class="navtab" href="../../includes/contact.php">Contact</a>
-		    <a class="navtab" href="../../includes/about.php">About</a>
-		    <!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->     
-        </div>
-<!--End of nav-->
+
 
         <div class="row-100">
             <div class="login-box" style="width:475px">
@@ -82,10 +73,6 @@
 
         </script>
 
-<!--Include footer.php-->
-    <div><?php include "../../includes/footer.php" ?></div>
-    
-<!--script for onClickNav() for the navigation menu-->
-    <script src="../../js/onClickNav.js"></script>
+
 </body>
 </html>

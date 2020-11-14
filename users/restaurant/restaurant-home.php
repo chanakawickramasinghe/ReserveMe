@@ -28,16 +28,16 @@
         
         <div class="sidebar">
             </br></br>
-            <a class="active" href="#home">Home</a>
-            <a href="add-preordermenu.php">Pre - Order Menu</a>
-            <a href="add-menu.php">Update the Menu</a>
-            <a href="#promotions">Promotions</a>
-            <a href="#reviews">View Reviews</a>
-            <a href="">Help Desk</a>
+            <a class="active" href="#home" >Home</a>
+            <a href="add-preordermenu.php" target="iframeBox">Pre - Order Menu</a>
+            <a href="add-menu.php" target="iframeBox">Update the Menu</a>
+            <a href="#promotions" target="iframeBox">Promotions</a>
+            <a href="#reviews" target="iframeBox">View Reviews</a>
+            <a href="#HelpDesk" target="iframeBox">Help Desk</a>
             <br><br><br>
             <hr>
-            <a href="../employee/employee-add.php">Manage Employee</a>
-            <a href="../restaurant/add-hall.php">Reception Hall</a>
+            <a href="../employee/employee-add.php" target="iframeBox">Manage Employee</a>
+            <a href="add-hall.php" target="iframeBox">Reception Hall</a>
 
         </div>
         <div class="content-div">
@@ -48,11 +48,7 @@
         <div class="search">
 
         <div class="container">
-        <iframe class="responsive-iframe" src="restaurant-homeframe.php"></iframe>
-
-      
-    <!--script for onClickNav() for the navigation menu-->
-    <script src="../../js/onClickNav.js"></script>
+        <iframe name="iframeBox" class="responsive-iframe" src="restaurant-homeframe.php"></iframe>
 
     <br><br><br> 
     

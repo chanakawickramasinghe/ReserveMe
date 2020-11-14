@@ -94,15 +94,12 @@
 					?>  
 		        </ul>
 	        </div>
-			<iframe id="iframeBox" name="iframeBox" class="iframeBox" height="500px" width="100%" title="Iframe Example" frameborder="0" marginwidth="0" marginheight="0"></iframe>
+			<iframe src="menu.php?res_id= <?php echo $_GET['res_id']?>" id="iframeBox" name="iframeBox" class="iframeBox" height="500px" width="100%" title="Iframe Example" frameborder="0" marginwidth="0" marginheight="0"><div></iframe>
 	    </div>	
 	</section>
-	<!--End of iframe section-->
-
-	<!--Include footer.php-->
-    <div><?php include "../../../includes/footer.php" ?></div>
+    <!--End of iframe section-->
     
-    <!--script for onClickNav() for the navigation menu-->
-    <script src="../../../js/onClickNav.js"></script>
+    <!--Include footer.php-->
+    <div><?php include "../../../includes/footer.php" ?></div>
 </body>
 </html>

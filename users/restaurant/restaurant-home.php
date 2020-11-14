@@ -28,7 +28,7 @@
         
         <div class="sidebar">
             </br></br>
-            <a class="active" href="#home" >Home</a>
+            <a class="restaurant-homeframe.php" href="#home" >Home</a>
             <a href="add-preordermenu.php" target="iframeBox">Pre - Order Menu</a>
             <a href="add-menu.php" target="iframeBox">Update the Menu</a>
             <a href="#promotions" target="iframeBox">Promotions</a>

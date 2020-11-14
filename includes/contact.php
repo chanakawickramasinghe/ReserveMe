@@ -9,27 +9,14 @@
     <link href="../CSS/customer-reg.css" rel="stylesheet" type="text/css">
 	<link href="../CSS/main.css" rel="stylesheet" type="text/css">
 	<link href="../CSS/nav.css" rel="stylesheet" type="text/css">
-	<link href="../CSS/footer.css" rel="stylesheet" type="text/css">
-	<!-- <link href="../CSS/style.css" rel="stylesheet" type="text/css"/> -->
-
+    <link href="../CSS/footer.css" rel="stylesheet" type="text/css">
+    
 	<!--FontAwesome-------->
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
     <!--web-icon-->
     <link href="../images/logo.png" rel="shortcut icon"/>
     <style>
-.container {
-  position: relative;
-  text-align: center;
-  color: white;
-  font-family:Times;
-}
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size:50px;
-}
+
 </style>
 </head>
 <body>
@@ -45,7 +32,7 @@
 		</div>
 		<!--End of nav-->
         <br>
-        <div class="container">
+        <div class="contact-container">
         <img src="../images/Contact-us.jpg" alt="Contact-Us image" style="height:200px;width:100%">
         <h1 class="centered"> We would love to hear from you..!</h1>
         </div>
@@ -57,7 +44,7 @@
         <form action="contact.php" method="post" onsubmit="myFunction()">
 
         <select name="comment" id="comment" class="type-feild" default="How can we help you">
-        <option value="q0"></option>
+        <option value="q0" disabled selected value> -- select an option -- </option>
         <option value="q1">I found incorrect/outdated information on a page.</option>
         <option value="q2">There is a photo/review that is bothering me and I would like to report it.</option>
         <option value="q3">The website/app are not working the way they should.</option>
@@ -70,7 +57,7 @@
         <input class="type-feild" type="email" name="email" placeholder="Email Address" required><br>
         <input class="type-feild" type="tel" name="mobile" placeholder="Mobile Number(Optional)"><br>
         <textarea class="type-feild"  style="height:200px;overflow:auto" scrolling="yes" type="text" name="msg" placeholder="Type message......" ></textarea><br>
-        <input type="submit" name="submit"  class="btn" value="Post" style="margin-left:30px"  required>
+        <input type="submit" name="submit"  class="m-btn" value="Post" style="margin-left:30px"  required>
         </form>
         </div>
         </td>

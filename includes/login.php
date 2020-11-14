@@ -35,7 +35,7 @@
 		<a class="navtab" href="../users/user-type.php">Register</a>
 		<a class="navtab" href="contact.php">Contact</a>
 		<a class="navtab" href="about.php">About</a>
-		<!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->     
+		  
     </div>
     <!--End of nav-->
 	
@@ -69,8 +69,8 @@
 </div>
 <div class="container-login100-form-btn">
 	<div class="wrap-login100-form-btn">
-		<div class="login100-form-bgbtn"></div>
-<button class="login100-form-btn" name="submit"> Login </button>
+		<div class="hero-button"></div>
+<button class="hero-button" name="submit"> Login </button>
     </div>
 </div>
 <div class="txt1 text-center" style="padding-top: 54px;padding-bottom: 20px;" >

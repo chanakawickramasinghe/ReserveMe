@@ -162,7 +162,7 @@
 /* manage user start */
 /*User Tables */
 .user{
-  width: 90vw;
+  width: 100vw;
   margin: 0 auto;
   table-layout: auto;
   border-collapse: collapse;

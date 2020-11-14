@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 09, 2020 at 05:26 PM
+-- Generation Time: Nov 14, 2020 at 04:02 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.33
 
@@ -29,18 +29,20 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `admins` (
-  `admin_name` varchar(50) NOT NULL,
-  `admin_password` varchar(50) NOT NULL,
-  `admin_email` varchar(60) NOT NULL,
-  `admin_type` varchar(30) NOT NULL
+  `admin_name` varchar(40) NOT NULL,
+  `admin_email` varchar(50) NOT NULL,
+  `admin_password` varchar(255) NOT NULL,
+  `contact_no` int(11) NOT NULL,
+  `admin_type` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `admins`
 --
 
-INSERT INTO `admins` (`admin_name`, `admin_password`, `admin_email`, `admin_type`) VALUES
-('Admin', '202cb962ac59075b964b07152d234b70', 'admin@123', 'admin');
+INSERT INTO `admins` (`admin_name`, `admin_email`, `admin_password`, `contact_no`, `admin_type`) VALUES
+('Admin', 'admin@123', '202cb962ac59075b964b07152d234b70', 119, 'admin'),
+('Chanaka', 'cmw@gmail.com', '202cb962ac59075b964b07152d234b70', 771570227, 'co-admin');
 
 -- --------------------------------------------------------
 
@@ -56,6 +58,13 @@ CREATE TABLE `contact_us` (
   `mobile` int(15) DEFAULT NULL,
   `message` varchar(600) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contact_us`
+--
+
+INSERT INTO `contact_us` (`msg_id`, `comment`, `name`, `email`, `mobile`, `message`) VALUES
+(18, 'q1', 'Chanaka Wickramasinghe', '2018is093@stu.ucsc.cmb.ac.lk', 771570227, 'This area');
 
 -- --------------------------------------------------------
 
@@ -107,8 +116,8 @@ CREATE TABLE `employee` (
 --
 
 INSERT INTO `employee` (`emp_id`, `res_id`, `emp_name`, `emp_email`, `emp_mobile`, `emp_password`) VALUES
-(3, 0, 'Siri', 'emp@gmail.com', 119, '202cb962ac59075b964b07152d234b70'),
-(4, 0, 'nuwan', 'nuwan@123', 119, '202cb962ac59075b964b07152d234b70');
+(4, 9, 'nuwan', 'nuwan@123', 119, '202cb962ac59075b964b07152d234b70'),
+(3001, 4, 'Siri', 'emp@gmail.com', 119, '202cb962ac59075b964b07152d234b70');
 
 -- --------------------------------------------------------
 
@@ -131,6 +140,32 @@ INSERT INTO `floorplan` (`res_id`, `floorplan_id`, `floorplan_image`) VALUES
 (4, 2, '2'),
 (5, 1, '1'),
 (5, 2, '2');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `log`
+--
+
+CREATE TABLE `log` (
+  `login_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `user_type` varchar(20) NOT NULL,
+  `date_time` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `log`
+--
+
+INSERT INTO `log` (`login_id`, `user_id`, `user_type`, `date_time`) VALUES
+(1, 3, 'Customer', '2020-11-14 01:02:13'),
+(2, 3001, 'Employee', '2020-11-14 01:13:36'),
+(3, 4, 'Restaurant', '2020-11-14 01:18:40'),
+(4, 3, 'Customer', '2020-11-14 11:09:21'),
+(5, 4, 'Restaurant', '2020-11-14 12:41:34'),
+(6, 3001, 'Employee', '2020-11-14 12:42:56'),
+(7, 3, 'Customer', '2020-11-14 18:36:38');
 
 -- --------------------------------------------------------
 
@@ -203,17 +238,19 @@ CREATE TABLE `restaurant` (
   `res_menu` varchar(255) NOT NULL,
   `res_password` varchar(255) NOT NULL,
   `preorder_available` varchar(11) NOT NULL,
-  `res_rate` double NOT NULL
+  `res_rate` double NOT NULL,
+  `no_of_rates` int(11) NOT NULL,
+  `active_status` int(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `restaurant`
 --
 
-INSERT INTO `restaurant` (`res_id`, `res_name`, `res_email`, `res_add_line1`, `res_add_line2`, `city`, `res_location`, `res_tel`, `res_image`, `res_menu`, `res_password`, `preorder_available`, `res_rate`) VALUES
-(4, 'Chanaka Wickramasinghe', 'bla@stu.ucsc.cmb.ac.lk', 'Reid Avenue, Colombo', 'Pilimathalawa', 'Colombo', 'https://url.com', 771570227, '', '', '202cb962ac59075b964b07152d234b70', '', 4.5),
-(9, 'KFC', 'BLA123@stu.ucsc.cmb.ac.lk', 'K/ Susila kanista vidyalaya', 'K/ Susila kanista vidyalaya, Pilimathalawa', 'Kandy', 'https://kfc.com', 771570227, 'WhatsApp Image 2020-10-05 at 13.37.25.jpeg', '', '202cb962ac59075b964b07152d234b70', '', 0),
-(8, 'KFC', 'kfc@stu.ucsc.cmb.ac.lk', 'K/ Susila kanista vidyalaya', 'K/ Susila kanista vidyalaya, Pilimathalawa', 'Kandy', 'https://kfc.com', 771570227, 'WhatsApp Image 2020-10-05 at 13.37.25.jpeg', '', '202cb962ac59075b964b07152d234b70', '', 0);
+INSERT INTO `restaurant` (`res_id`, `res_name`, `res_email`, `res_add_line1`, `res_add_line2`, `city`, `res_location`, `res_tel`, `res_image`, `res_menu`, `res_password`, `preorder_available`, `res_rate`, `no_of_rates`, `active_status`) VALUES
+(4, 'Mac', 'bla@stu.ucsc.cmb.ac.lk', 'Reid Avenue, Colombo', 'Pilimathalawa', 'Colombo', 'https://url.com', 771570227, '', '', '202cb962ac59075b964b07152d234b70', '', 4.5, 0, 1),
+(9, 'KFC', 'BLA123@stu.ucsc.cmb.ac.lk', 'K/ Susila kanista vidyalaya', 'K/ Susila kanista vidyalaya, Pilimathalawa', 'Kandy', 'https://kfc.com', 771570227, 'WhatsApp Image 2020-10-05 at 13.37.25.jpeg', '', '202cb962ac59075b964b07152d234b70', '', 0, 0, 0),
+(8, 'KFC', 'kfc@stu.ucsc.cmb.ac.lk', 'K/ Susila kanista vidyalaya', 'K/ Susila kanista vidyalaya, Pilimathalawa', 'Kandy', 'https://kfc.com', 771570227, 'WhatsApp Image 2020-10-05 at 13.37.25.jpeg', '', '202cb962ac59075b964b07152d234b70', '', 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -329,6 +366,12 @@ INSERT INTO `tokens` (`id`, `email`, `token`) VALUES
 --
 
 --
+-- Indexes for table `admins`
+--
+ALTER TABLE `admins`
+  ADD PRIMARY KEY (`admin_email`);
+
+--
 -- Indexes for table `contact_us`
 --
 ALTER TABLE `contact_us`
@@ -351,6 +394,12 @@ ALTER TABLE `employee`
 --
 ALTER TABLE `floorplan`
   ADD PRIMARY KEY (`res_id`,`floorplan_id`);
+
+--
+-- Indexes for table `log`
+--
+ALTER TABLE `log`
+  ADD PRIMARY KEY (`login_id`);
 
 --
 -- Indexes for table `menu`
@@ -408,7 +457,7 @@ ALTER TABLE `tokens`
 -- AUTO_INCREMENT for table `contact_us`
 --
 ALTER TABLE `contact_us`
-  MODIFY `msg_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `msg_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `customer`
@@ -420,7 +469,13 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-  MODIFY `emp_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `emp_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3003;
+
+--
+-- AUTO_INCREMENT for table `log`
+--
+ALTER TABLE `log`
+  MODIFY `login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `menu`

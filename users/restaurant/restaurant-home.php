@@ -28,12 +28,12 @@
         
         <div class="sidebar">
             </br></br>
-            <a class="active" href="#home" >Home</a>
+            <a class="restaurant-homeframe.php" href="#home" >Home</a>
             <a href="add-preordermenu.php" target="iframeBox">Pre - Order Menu</a>
             <a href="add-menu.php" target="iframeBox">Update the Menu</a>
             <a href="#promotions" target="iframeBox">Promotions</a>
             <a href="#reviews" target="iframeBox">View Reviews</a>
-            <a href="#HelpDesk" target="iframeBox">Help Desk</a>
+            <a href="contact.php" target="iframeBox">Help Desk</a>
             <br><br><br>
             <hr>
             <a href="../employee/employee-add.php" target="iframeBox">Manage Employee</a>
@@ -42,13 +42,13 @@
         </div>
         <div class="content-div">
         <br>       
-            <h1>Welcome KFC, Moratuwa!</h1>
+            <h1>Welcome KFC, Kandy!</h1>
         <br>
         </div>
         <div class="search">
 
         <div class="container">
-        <iframe name="iframeBox" class="responsive-iframe" src="restaurant-homeframe.php"></iframe>
+        <iframe name="iframeBox" class="responsive-iframe" src="restaurant-homeframe.php" frameBorder="0"></iframe>
 
     <br><br><br> 
     

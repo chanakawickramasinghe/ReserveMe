@@ -276,6 +276,28 @@
   padding-left : 7vw;
 }
 
+/*Detail table */
+.user{
+  float: left;
+  width: 30vw;
+  margin: 0 auto;
+  table-layout: auto;
+  border-collapse: collapse;
+  
+}
+.user th {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.user td{
+  border: 1px solid #ddd;
+  padding: 8px;    
+  text-align: center;
+}
+
 /* co-admin page */
 
 /*User Tables */
@@ -338,4 +360,33 @@
 .btn-coadmins:hover{
   background: black;
   cursor: pointer;
+}
+
+
+/* log page */
+
+/* log table */
+.log{
+  width: 40vw;
+  margin: 0 auto;
+  table-layout: auto;
+  border-collapse: collapse; 
+}
+
+.log th {
+  background-color: #cbe1ee;
+  border: 1px solid rgb(43, 106, 189);
+  padding: 5px;
+  text-align: center;
+}
+
+.log td{
+  border: 1px solid rgb(160, 154, 154);
+  padding: 5px;    
+  text-align: center;
+}
+
+.img-admin{
+  width: 10vw;
+  padding-left: 7vw;
 }

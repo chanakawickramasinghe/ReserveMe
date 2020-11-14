@@ -19,20 +19,16 @@
 
 </head>
 
-<body style="padding:0px">
+<body>
    <!--Start of nav-->
     <div class="topnav" id="myTopnav">
         <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
-        <a class="navtab" href="../../index.php.php">Logout</a>
+        <a class="navtab" href="../../index.php">Logout</a>
 		    <a class="navtab" href="../../includes/contact.php">Contact</a>
 		    <a class="navtab" href="../../includes/about.php">About</a>
-		    <!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->     
     </div>
     <!--End of nav-->
-
-    <!--Start of options-->
-
-    
+   
     
 <table style="height:100%;width:100%"  >
   <tr >
@@ -47,7 +43,7 @@
       echo
       " <img class = \"resimage\" src=\"../../images/restaurant/".$row['res_image']."\"  alt=\"Restaurent logo\">";
       ?>
-
+    
     <div class="sidebar"> 
       <span><a href="employee-profile.php" target="iframe_a" class="active">Employee Profile</a></span>      
       <a href="pre-order-menu.php" target="iframe_a">Pre - Order Menu</a>
@@ -55,7 +51,7 @@
       <a href="reports.php" target="iframe_a">Reports</a>
       <a href="manage-reservation.php" target="iframe_a">Manage Reservation</a>
       <a href="reception-hall.php" target="iframe_a">Reception Hall</a>
-</div>
+    </div>
 
   </td>
 

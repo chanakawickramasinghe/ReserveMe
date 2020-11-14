@@ -29,10 +29,15 @@ if(isset($_POST['submit'])){
         checkSession();  //create sessions
         $_SESSION["name"] = $userRow['user_name'];
         $_SESSION["userID"] = $userRow['user_id'];
-        $_SESSION["userType"] = 'customer';
+        $_SESSION["userType"] = 'Customer';
         $active_status= $userRow['active_status'];
 
         if($active_status == 1){
+            $log_customer_sql = "INSERT INTO log (user_id, user_type, date_time) 
+            VALUES ('".$_SESSION["userID"]."','".$_SESSION["userType"]."',NOW())";
+
+            $execute_querry = mysqli_query($connection, $log_customer_sql);
+
             header( "Location:../users/customer/customer-home.php" );
         }
         else{
@@ -47,9 +52,19 @@ if(isset($_POST['submit'])){
         $_SESSION["name"] = $userRow['res_name'];
         $_SESSION["resID"] = $userRow['res_id'];
         $_SESSION["userType"] = 'Restaurant';
-        
+        $active_status= $userRow['active_status'];
 
-        header( "Location:../users/restaurant/restaurant-home.php" );
+        if($active_status == 1){
+            $log_res_sql = "INSERT INTO log (user_id, user_type, date_time) 
+            VALUES ('".$_SESSION["resID"]."','".$_SESSION["userType"]."',NOW())";
+
+            $execute_querry = mysqli_query($connection, $log_res_sql);
+
+            header( "Location:../users/restaurant/restaurant-home.php" );
+        }
+        else{
+            header("Location:../users/activate-account.php");
+        }    
     }
     
     else if(mysqli_num_rows($userResult3) == 1){
@@ -60,7 +75,12 @@ if(isset($_POST['submit'])){
         $_SESSION["type"] = $userRow['admin_type'];
         $_SESSION["email"] = $email;
         // $_SESSION["last_login"] = SELECT NOW();
-        
+
+        // $log_admin_sql = "INSERT INTO log (user_id, user_type, date_time) 
+        // VALUES ('".$_SESSION["emp_id"]."','".$_SESSION["type"]."',NOW())";
+
+        // $execute_querry = mysqli_query($connection, $log_admin_sql);
+
         header( "Location:../users/admin/admin-home.php");
 
     }
@@ -73,8 +93,12 @@ if(isset($_POST['submit'])){
         $_SESSION["res_id"] = $userRow['res_id'];
         $_SESSION["userType"] = 'Employee';
 
-        header( "Location:../users/employee/employee-home.php");
+            $log_emp_sql = "INSERT INTO log (user_id, user_type, date_time) 
+            VALUES ('".$_SESSION["emp_id"]."','".$_SESSION["userType"]."',NOW())";
 
+            $execute_querry = mysqli_query($connection, $log_emp_sql);
+
+            header( "Location:../users/employee/employee-home.php"); 
     }
     else {
         $message = base64_encode(urlencode("Invalid Email or Password"));

@@ -29,7 +29,7 @@
         checkSession();
         echo "<table border=1 class=\"user\">";
         
-        $userID = $_SESSION["userID"]; //have to add session id
+        $userID = $_SESSION["userID"]; //session id
         $sql = "SELECT * FROM customer WHERE user_id='$userID'";
         
         $userquery = mysqli_query($connection,$sql);

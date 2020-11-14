@@ -15,6 +15,7 @@
             padding:10px;
             background-color: #e9bc5c;
             text-align: center;
+            border-radius:5px;
         }
     </style>
 
@@ -71,7 +72,7 @@
 
                     <img src="../../images/form_icons/calendar.png" alt="user" class="icons">
                     <label for="dob">Date of birth</label>
-                    <input type="date" name="dob" id='dob' class="reg-type-feild" onkeyup='getAge(dob)' required> 
+                    <input type="date" name="dob" id='dob' class="reg-type-feild" onkeyup='getAge(dob)' placeholder="Date of Birth" required> 
                     <P id='message2' ></P>
                                 <!-- 
                                                     <?php
@@ -85,13 +86,13 @@
 
                     <!-- <p>Address<p> -->
                     <img src="../../images/form_icons/address.png" alt="user" class="icons">
-                    <label for="pnumber">Number</label>
-                    <input type="text" name="pnumber" class="reg-type-feild" placeholder="Number"> 
+                    <label for="pnumber"> Address</label>
+                    <input type="text" name="pnumber" class="reg-type-feild" placeholder="Post number"> 
 
-                    <label for="street">Street</label>
+                    <!-- <label for="street">Street</label> -->
                     <input type="text" name="street" class="reg-type-feild" placeholder="Street"> 
 
-                    <label for="city">City</label>
+                    <!-- <label for="city">City</label> -->
                     <input type="text" name="city" class="reg-type-feild" placeholder="City"> 
                     </td>
                 </tr> 

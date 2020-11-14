@@ -24,7 +24,7 @@
         <br>
         <p>Name : KFC, Kandy.</p>
         <p>Telephone No: 011 - 264 8356</p>
-        <p>Address : 1/1, Galle Road, Kandy</p>
+        <p>Address : 1, Dhalada Vidiya, Kandy</p>
         <br>
         <!-- <p>Location : https://goo.gl/maps/dkaLjUBkwzjKTXzv6 </p> -->
         <br>

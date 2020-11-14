@@ -54,8 +54,8 @@ a{
  }
 
 .search-button:hover{
-    background: #fff;
-    color: orange;   
+    background: #202020;
+    color: #fff;   
     border:none;
 }
 
@@ -238,7 +238,7 @@ a{
 	bottom: -10px;
 	transform: translateX(-50%);
 	border-radius: 15% 15% 15% 15% / 50% 50% 50% 50%;
-	background:linear-gradient(120deg,#f09e05 20%,#945706);
+	background: orange;
     color:#FFFFFF;
     border: none;
     animation: fade 0.2s;
@@ -248,6 +248,10 @@ a{
     
 }
 
+.food-btn:hover{
+	background: #202020;
+	color:#FFFFFF;
+}
 .food-box:hover .food-btn{
     display: flex;
     border: none;
@@ -256,11 +260,6 @@ a{
 .food-box:hover{
 	box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
 	background-color:#FFFFFF;
-}
-
-.food-box:hover .price{
-	color:#6b60ec;
-	transition: all ease 0.2s;
 }
 /*End of Cards Section*/
 
@@ -512,7 +511,7 @@ ul{
 .subcribe-btn{
 	width:120px;
 	height: 40px;
-	background-color: #202020;
+	background-color: orange;
 	border-radius: 20px;
 	color: #fff;
 	display: flex;
@@ -525,7 +524,8 @@ ul{
 }
 
 .subcribe-btn:hover{
-	background-color:orange;
+	background-color:#202020;
+	color: #fff;
 	transition: all  ease 0.5s;
 }
 /*End of Subscribe*/
@@ -687,17 +687,17 @@ ul{
     text-decoration: none;
     text-transform: uppercase;
     padding: 13px 20px;
-    border-radius: 200px;
     font-weight: bold;
-    background: black;
+    background: orange;
     color: #fff;
     cursor: pointer;
-    border: 2px solid orange;
-    margin-top: 10px;
+	margin-top: 10px;
+	box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+	border-radius: 15% 15% 15% 15% / 50% 50% 50% 50%;
 }
 
 .hero-button:hover{
-	background: orange;
+	background: #202020;
 	color: white;
 	border: none;
 }

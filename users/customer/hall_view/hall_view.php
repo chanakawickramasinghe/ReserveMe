@@ -28,7 +28,22 @@
     </div>
     <!--End of nav-->
 
-	<!--Start of main-section-->
+    <!--Start of main-section-->
+    <!--Stsrt of add section-->
+    <div class="add-img">
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+				<img src="../../../images/promos/3.jpg" style="width:100%">
+			</div>
+		</div>
+
+		<div style="text-align:center">
+			<span class="dot"></span> 
+			<span class="dot"></span> 
+			<span class="dot"></span> 
+		</div>
+	</div>
+    <!--End of add section-->
     <?php 
         if(isset($_GET['res_id'])){
             $sql = "SELECT * FROM restaurant WHERE res_id = ".$_GET['res_id'];
@@ -44,7 +59,7 @@
                             <h4><i class=\"fas fa-star-half-alt\">". $rowProduct['res_rate'] ."</i></h4>
                             <br>
                             <h4><i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i></h4>
-                            <button class=\"reserve-button pulsate\" type=\"submit\" name=\"submit\" onclick=\"onClickOpenForm()\">Reserve</button>
+                            <!--<button class=\"reserve-button pulsate\" type=\"submit\" name=\"submit\" onclick=\"onClickOpenForm()\">Reserve</button>-->
 	                    </div>	
 	                </section>";
             }

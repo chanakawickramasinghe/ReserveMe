@@ -4,13 +4,14 @@
 
 <?php
     checkSession();
-    $userID = $_SESSION["userID"];
+    
 
-    if($_SESSION["userType"] == 'customer'){
-
-        $deactive = "UPDATE customer SET active_status=1 WHERE user_id = $userID";
+    if($_SESSION["userType"] == 'Customer'){
+        
+        $userID = $_SESSION["userID"];
+        $active = "UPDATE customer SET active_status=1 WHERE user_id = $userID";
              
-        if(mysqli_query($connection , $deactive) === TRUE) {
+        if(mysqli_query($connection , $active) === TRUE) {
             $message = base64_encode(urlencode("Account Activated"));
             header('Location:customer/customer-home.php?msg=' . $message);
             exit();
@@ -21,7 +22,26 @@
 			exit();
         }
     }
+
+    if($_SESSION["userType"] == 'Restaurant'){
+
+        $userID = $_SESSION["resID"];
+        $active = "UPDATE restaurant SET active_status=1 WHERE res_id = $userID";
+             
+        if(mysqli_query($connection , $active) === TRUE) {
+            $message = base64_encode(urlencode("Account Activated"));
+            header('Location:restaurant/restaurant-home.php?msg=' . $message);
+            exit();
+            }
+        else{
+            $message = base64_encode(urlencode("Activation Failed"));
+            header('Location:../includes/login.php?msg=' . $message);
+			exit();
+        }
+    }
+
+
        
         
 
-?>
+?> 

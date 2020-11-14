@@ -4,14 +4,15 @@
     border:none;
     border-radius:20px;
     outline:none;
+    width:100%:/*delete*/
 }
 
 .location{
-    width: 100px;
+    width: 25%;/*100px*/
 }
 
 .search-type{
-    width:110px;
+    width:60%;/*110px*/
 }
 
 

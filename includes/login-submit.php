@@ -45,6 +45,7 @@ if(isset($_POST['submit'])){
         }      
     }
     
+    //Restaurant Login
     else if(mysqli_num_rows($userResult2) == 1){ 
 
         $userRow = mysqli_fetch_array($userResult2);
@@ -67,6 +68,7 @@ if(isset($_POST['submit'])){
         }    
     }
     
+    // Admin login
     else if(mysqli_num_rows($userResult3) == 1){
 
         $userRow = mysqli_fetch_array($userResult3);
@@ -84,6 +86,8 @@ if(isset($_POST['submit'])){
         header( "Location:../users/admin/admin-home.php");
 
     }
+
+    // Employee login
     else if(mysqli_num_rows($userResult4) == 1){
 
         $userRow = mysqli_fetch_array($userResult4);

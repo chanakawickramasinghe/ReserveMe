@@ -25,7 +25,6 @@
         <div class="topnav" id="myTopnav">
             <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
             <a class="navtab" href="../../index.php">Logout</a>
-		    <a class="navtab" href="customer-profile.php">My Profile</a>
 		</div>
         <!--End of nav-->
 

@@ -48,7 +48,7 @@
         <div class="search">
 
         <div class="container">
-        <iframe name="iframeBox" class="responsive-iframe" src="restaurant-homeframe.php"></iframe>
+        <iframe name="iframeBox" class="responsive-iframe" src="restaurant-homeframe.php" frameBorder="0"></iframe>
 
     <br><br><br> 
     

@@ -24,11 +24,11 @@
 				<a href="#"><i class="fa fa-youtube"></i></a>
 			</div>
 			<p class="footer-links">
-				<a href="#">Home</a>
+				<a href="../index.php">Home</a>
 				|
-				<a href="#">About</a>
+				<a href="about.php">About</a>
 				|
-				<a href="#">Contact</a>
+				<a href="contact.php">Contact</a>
 			</p>
 		</div>
 		<!--End of footer left-->

@@ -19,7 +19,7 @@
 
 </head>
 
-<body style="padding:0px">
+<body>
    <!--Start of nav-->
     <div class="topnav" id="myTopnav">
         <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
@@ -47,7 +47,7 @@
       echo
       " <img class = \"resimage\" src=\"../../images/restaurant/".$row['res_image']."\"  alt=\"Restaurent logo\">";
       ?>
-
+    
     <div class="sidebar"> 
       <span><a href="employee-profile.php" target="iframe_a" class="active">Employee Profile</a></span>      
       <a href="pre-order-menu.php" target="iframe_a">Pre - Order Menu</a>
@@ -55,7 +55,7 @@
       <a href="reports.php" target="iframe_a">Reports</a>
       <a href="manage-reservation.php" target="iframe_a">Manage Reservation</a>
       <a href="reception-hall.php" target="iframe_a">Reception Hall</a>
-</div>
+    </div>
 
   </td>
 

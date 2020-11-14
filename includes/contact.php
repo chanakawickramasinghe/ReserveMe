@@ -69,7 +69,7 @@
         <input class="type-feild" type="text" name="fname" placeholder="Full Name" required><br>
         <input class="type-feild" type="email" name="email" placeholder="Email Address" required><br>
         <input class="type-feild" type="tel" name="mobile" placeholder="Mobile Number(Optional)"><br>
-        <input class="type-feild"  style="height:270px;overflow:auto" type="text" name="msg" placeholder="Type message......" ><br>
+        <textarea class="type-feild"  style="height:200px;overflow:auto" scrolling="yes" type="text" name="msg" placeholder="Type message......" ></textarea><br>
         <input type="submit" name="submit"  class="btn" value="Post" style="margin-left:30px"  required>
         </form>
         </div>

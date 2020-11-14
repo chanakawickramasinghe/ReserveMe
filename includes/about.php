@@ -3,15 +3,17 @@
     
 <head>
     <title>About | ReserveMe</title>
+    <!--FontAwesome-------->
+	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <!--web-icon-->
+    <link href="../images/logo.png" rel="shortcut icon"/>
+    
     <!-- link the Style sheet -->
     <link rel="stylesheet" type="text/css" href="../CSS/style.css">
     <link rel="stylesheet" type="text/css" href="../CSS/nav.css">    
     <link rel="stylesheet" href="../CSS/footer.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-	<!--FontAwesome-------->
-	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
-    <!--web-icon-->
-    <link href="../images/logo.png" rel="shortcut icon"/>
+	
     
 </head>
     
@@ -27,24 +29,35 @@
     
     <div class="about-body"> 
         <img src="../images/aboutupdated.jpg" alt="about us picture" style="height:200px;width:100%">
-        <img src="../images/logo.png" alt="Website logo">
-        
-        <h1>Who we are?</h1>
-        <p calss="about-p">We are undergradute students of UCSC. <br>
-        This is our 2 <sup> nd </sup> Group project. We choose a web page Solution for restaurant reservation, Which you can view the restaurent details and menu
-        and the meals, Hall reservations.
         
         
         
-        </p><br>
-        <p calss="about-p">
-           A product description is the marketing copy that explains what a product is and why it’s worth purchasing. <br>
-		   The purpose of a product description is to supply customers with important information about the features and benefits of the product so they’re compelled to buy.
-        </p>
-        <table align="center">
-        <tr>
-        <td>
+        <table>
+            <tr>
+                <td colspan=2>
+                <img src="../images/logo.png" alt="Website logo" style="width:400px;height:400px">                
+                </td>
+                <td colspan=2>
 
+                <h1>Who we are?</h1>
+                    <p calss="about-p">We are undergradute students of UCSC. <br>
+                    This is our 2 <sup> nd </sup> Group project. We choose a web page Solution for restaurant reservation, Which you can view the restaurent details and menu
+                    and the meals, Hall reservations.
+        
+        
+        
+                 </p><br>
+                <p calss="about-p">
+                A product description is the marketing copy that explains what a product is and why it’s worth purchasing. <br>
+		        The purpose of a product description is to supply customers with important information about the features and benefits of the product so they’re compelled to buy.
+                </p>
+
+                </td>
+
+            </tr>
+      <tr>
+
+        <td>
         <div class="content-box"> 
                     <img src="../images/us/chanaka.jpg" style="height:200px;width:200px;border-radius:10px">
                     <h3>Chanaka</h3>
@@ -59,8 +72,8 @@
                         </a>
                     </div>
         </div>
-
         </td>
+
         <td>
         <div class="content-box">       
                     <img src="../images/us/chathuranga.jpg" style="height:200px;width:200px;border-radius:10px">
@@ -76,11 +89,7 @@
                         </a>
                     </div>
 
-        </div>
-        
-        
-        
-        
+        </div> 
         </td>
 
         <td>
@@ -102,8 +111,7 @@
 
         <td>
         <div class="content-box">      
-                
-			        <img src="../images/us/nuwan.jpg" style="height:200px;width:200px;border-radius:10px">
+                 <img src="../images/us/nuwan.jpg" style="height:200px;width:200px;border-radius:10px">
                     <h3>Nuwan</h3>
                     <p>Designer</p>
                     <div class="flex-c-m">
@@ -117,9 +125,8 @@
                     </div>
                
         </div>        
-        
         </td>
-        </tr>
+      </tr>
         </table>
         
     </div>

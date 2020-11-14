@@ -16,7 +16,7 @@
         <!--Start of nav-->
         <div class="topnav" id="myTopnav">
         <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
-            <a class="navtab" href="../../index.php">Logout</a>
+            <a class="navtab" href="admin-home.php">Logout</a>
             <a class="navtab" href="admin-home.php">Home</a>
         </div>
         <!--End of nav-->

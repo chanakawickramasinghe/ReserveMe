@@ -13,7 +13,7 @@
 
         <!--Start of nav-->
         <div class="topnav" id="myTopnav">
-            <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
+            <a href="admin-home.php"><img class = "logo" src="../../images/logo.png"></a>
             <a class="navtab" href="../../index.php">Logout</a>
         </div>
         <!--End of nav-->

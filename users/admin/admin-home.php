@@ -1,4 +1,5 @@
 <?php include('../../includes/session.php') ?>
+<?php include('../../includes/connection.php') ?>
 
 <html>
     <head>
@@ -16,7 +17,7 @@
 
         <!--Start of nav-->
         <div class="topnav" id="myTopnav">
-            <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
+            <a href="admin-home.php"><img class = "logo" src="../../images/logo.png"></a>
             <a class="navtab" href="../../index.php">Logout</a>
 		    
         </div>
@@ -46,14 +47,38 @@
             
             <br><br>
             <div class="admin-home">
-                <?php
+            <?php
+                echo "<table border=1 class=\"user\">";
+        
+        $email = $_SESSION["email"]; 
+        $admin_sql = "SELECT * FROM admins WHERE admin_email='$email'";
+        
+        $userquery = mysqli_query($connection,$admin_sql);
+        while($row = mysqli_fetch_assoc($userquery)){
+
+            echo "
+                <tr>
+                    <th>Admin Name  </th>
+                    <td>".$row['admin_name']."</td>
+                </tr>
+                <tr>
+                    <th>Admin Email  </th>
+                    <td>".$row['admin_email']."</td>
+                </tr>
+                <tr>
+                    <th>Contact No.  </th>
+                    <td>".$row['contact_no']."</td>
+                </tr>
+                <tr>
+                    <th>Admin Type  </th>
+                    <td>".$row['admin_type']."</td>
+                </tr>";
+        } 
+        echo "</table>";
+        ?>
+
+        <img class="img-admin" src="../../images/us/admin.png">
                 
-                echo"
-                <p>Admin Name : ".$_SESSION["name"]."</p>
-                <p>Admin Email : ".$_SESSION["email"]."</p>
-                <p>Admin Type : ".$_SESSION["type"]."</p>
-                <p>Login Date and Time : ".$_SESSION["last_login"]."</p>";
-                ?>
             </div>
              
         </div>

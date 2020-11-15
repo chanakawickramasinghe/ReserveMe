@@ -50,11 +50,12 @@
                     <img src="../../images/form_icons/user.png" alt="user" class="icons">
                     <label for="name">Name</label>                    
                     <input type="text"  name="name" class="reg-type-feild" placeholder="Your name" required>    
-                    
+                    <p>
                     <img src="../../images/form_icons/mail.png" alt="user" class="icons">
                     <label for="email">Email address</label>
                     <input type="email" name="email" class="reg-type-feild" placeholder="your email" required >
-                    
+                    </p>
+			    
 		    <p>    
                     <img src="../../images/form_icons/padlock.png" alt="user" class="icons">
                     <label for="password">Password</label>

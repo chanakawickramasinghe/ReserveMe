@@ -7,7 +7,7 @@
     <link href="../../CSS/login.css" rel="stylesheet" type="text/css" > 
     <link href="../../CSS/nav.css" rel="stylesheet" type="text/css">
     <link href="../../CSS/footer.css" rel="stylesheet" type="text/css">     
-    <link href="../../CSS/res_reg.css" rel="stylesheet" type="text/css" > 
+    <link href="../../CSS/add-employee.css" rel="stylesheet" type="text/css" > 
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
 
     <style>
@@ -36,27 +36,27 @@
                 <tr>
                     <td>
                     <img src="../../images/form_icons/user.png" alt="user" class="icons">
-                    <label for="name">Name</label>                   
-                    <input type="text"  name="name" class="reg-type-feild" placeholder="Your name" required>    
+                    <label for="name">Name</label><br>                   
+                    <input type="text"  name="name" class="reg-type-feild" placeholder="Employee Name" required>    
                     
                     <p>
                     <img src="../../images/form_icons/mail.png" alt="user" class="icons">
-                    <label for="email">Email address</label>
-                    <input type="email" name="email" class="reg-type-feild" placeholder="your email" required >
+                    <label for="email">Email address</label><br>
+                    <input type="email" name="email" class="reg-type-feild" placeholder="Employee Email" required >
                     </p>
 
                     <img src="../../images/form_icons/phone-call.png" alt="user" class="icons">
-                    <label for="contact">Contact number</label>
-                    <input type="tel" name="contact" class="reg-type-feild" placeholder="Mobile number" pattern='^\+?\d{0,13}' >
+                    <label for="contact">Contact number</label><br>
+                    <input type="tel" name="contact" class="reg-type-feild" placeholder="Employee Mobile Number" pattern='^\+?\d{0,13}' >
 
                     <p>
                     <img src="../../images/form_icons/padlock.png" alt="user" class="icons">
-                    <label for="password">Password</label>
+                    <label for="password">Password</label><br>
                     <input type="password" name="password" class="reg-type-feild" placeholder="Enter Password" id="password"  required>
                     </p>
                     
                     <img src="../../images/form_icons/password.png" alt="user" class="icons">
-                    <label for="password2">Confirm Password</label>
+                    <label for="password2">Confirm Password</label><br>
                     <input type="password" name="password2" class="reg-type-feild" placeholder="Re-Enter Password" id="confirm_password" onkeyup='check()' required>
                     <P id='message' ></p>
 

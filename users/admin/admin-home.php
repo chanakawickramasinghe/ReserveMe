@@ -6,10 +6,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ReserveMe - Admin</title>
-        <!-- <link rel="stylesheet" href="../../CSS/main.css"> -->
         <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
 	    <link rel="stylesheet" href="../../CSS/nav.css">
-        <!-- <link rel="stylesheet" href="../../CSS/footer.css"> -->
         <link href="../../images/logo.png" rel="shortcut icon"/>
         <link rel="stylesheet" href="../../CSS/admin-dashboard.css"/>
     </head>
@@ -48,7 +46,7 @@
             <br><br>
             <div class="admin-home">
             <?php
-                echo "<table border=1 class=\"user\">";
+                echo "<table border=1 class=\"detail-admin\">";
         
         $email = $_SESSION["email"]; 
         $admin_sql = "SELECT * FROM admins WHERE admin_email='$email'";
@@ -79,6 +77,10 @@
 
         <img class="img-admin" src="../../images/us/admin.png">
                 
+            </div>
+
+            <div class = "admin-home">
+                <button class="btn-change" type="button" onclick="window.location.href='admin-change-password.php'">Change Paasword</button>
             </div>
              
         </div>

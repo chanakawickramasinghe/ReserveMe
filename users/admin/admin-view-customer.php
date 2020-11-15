@@ -17,8 +17,7 @@
         <div class="topnav" id="myTopnav">
         <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
             <a class="navtab" href="admin-home.php">Logout</a>
-            <a class="navtab" href="admin-home.php">Home</a>
-		    <!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->     
+            <a class="navtab" href="admin-home.php">Home</a>    
         </div>
         <!--End of nav-->
 
@@ -75,7 +74,7 @@
 
                 
                     <p class="button-box">
-                    <!-- <button class="btn-red" type="button" name="btn-delete-account">Delete Account</button> -->
+                    <button class="btn-red" type="button" name="btn-activate-account">Activate Account</button>
                     <button class="btn-red" type="button" name="btn-suspend-account" onclick="suspendFunction()">Suspend Account</button>
                     <button class="btn-blue" type="reset">Clear</button>
                     </p>

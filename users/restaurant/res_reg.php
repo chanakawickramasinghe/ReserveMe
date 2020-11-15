@@ -7,7 +7,7 @@
     <link href="../../CSS/login.css" rel="stylesheet" type="text/css" > 
     <link href="../../CSS/nav.css" rel="stylesheet" type="text/css">
     <link href="../../CSS/footer.css" rel="stylesheet" type="text/css">     
-    <link href="../../CSS/customer-reg.css" rel="stylesheet" type="text/css" > 
+    <link href="../../CSS/res_reg.css" rel="stylesheet" type="text/css" > 
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
 
     <style>

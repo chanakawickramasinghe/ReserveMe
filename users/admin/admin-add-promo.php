@@ -23,7 +23,7 @@
         <!--End of nav-->
 
         <h1>Add Promotion</h1>
-        <div>
+        <div class="centered-view">
         <form class="add-promo-form" method="post" action="admin-add-promo-submit.php" enctype="multipart/form-data">
             <table class="add-promo-form">
                 <tr>
@@ -44,6 +44,7 @@
                 </tr>
 
             </table>
+            <br><br>
         </form>
         </div>
 

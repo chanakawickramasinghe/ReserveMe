@@ -56,6 +56,10 @@
 
             echo "
                 <tr>
+                    <th>Admin ID  </th>
+                    <td>".$row['admin_id']."</td>
+                </tr>
+                <tr>
                     <th>Admin Name  </th>
                     <td>".$row['admin_name']."</td>
                 </tr>
@@ -78,7 +82,7 @@
         <img class="img-admin" src="../../images/us/admin.png">
                 
             </div>
-
+            <br>
             <div class = "admin-home">
                 <button class="btn-change" type="button" onclick="window.location.href='admin-change-password.php'">Change Paasword</button>
             </div>

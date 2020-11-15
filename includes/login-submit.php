@@ -75,6 +75,7 @@ if(isset($_POST['submit'])){
         checkSession();  //create sessions
         $_SESSION["name"] = $userRow['admin_name'];
         $_SESSION["type"] = $userRow['admin_type'];
+        $_SESSION["id"] = $userRow['admin_id'];
         $_SESSION["email"] = $email;
         // $_SESSION["last_login"] = SELECT NOW();
 

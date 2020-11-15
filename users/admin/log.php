@@ -18,6 +18,7 @@
 	    <link rel="stylesheet" href="../../CSS/nav.css">
         <link href="../../images/logo.png" rel="shortcut icon"/>
         <link rel="stylesheet" href="../../CSS/admin-dashboard.css"/>
+        <script src="../../js/manage-user-search.js"></script>
     </head>
     <body>
 
@@ -45,14 +46,26 @@
         <div class="content-div">
             <br><br>        
             <h1>Application Log</h1>
-
+        
+            <div class="search-user-container">
+            <form name="form-display-selected">
+                <!--heading-->
+		        <h3>Search From ID</h3>
+		        <!--Input-------->
+		        <div class="log-input">
+                    <input type="text" id="myInput" onkeyup="myFunctionLog()"
+                    placeholder="Enter ID"/>
+                </div>
+            </div>
+                <br/>
             <!-- Adding the table with log details -->
         
         <table class="log" id="myTable" border="1">
             <tr>
                 <th>User ID</th>
                 <th>User Type</th>
-                <th>Logged Date and Time</th>
+                <th>Date and Time</th>
+                <th>Activity</th>
             </tr>
         
         <?php
@@ -67,6 +80,7 @@
                     <td>".$row['user_id']."</td>
                     <td>".$row['user_type']."</td>
                     <td>".$row['date_time']."</td>
+                    <td>".$row['activity']."</td>
                     
                 </tr>";
                 

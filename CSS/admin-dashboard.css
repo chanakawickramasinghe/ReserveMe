@@ -322,6 +322,12 @@
   justify-content: center;
   text-align: center;
   padding-top: 40px;
+  margin-left: 35vw;
+  margin-right: 35vw;
+  margin-top: 30px;
+  border-style: solid;
+  border-color: rgb(34, 8, 177);
+  border-radius: 20px;
 }
 
 .img-change{
@@ -469,4 +475,133 @@
 .img-admin{
   width: 10vw;
   padding-left: 7vw;
+}
+
+.log-input{
+	width:200px;
+	background-color: white;
+	border-radius:25px;
+	height: 1vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  padding:20px;
+  box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+}
+
+.log-input input{
+	width:100%;
+	/* height: 5vh; */
+	border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: medium; 
+}
+
+/* promo page */
+/* promo table */
+.promo{
+  width: 90%;
+  margin: 0 auto;
+  table-layout: auto;
+  border-collapse: collapse; 
+}
+
+.promo th {
+  background-color: #cbe1ee;
+  border: 1px solid rgb(43, 106, 189);
+  padding-top: 5px; 
+  padding-bottom: 5px;  
+  text-align: center;
+}
+
+.promo td{
+  border: 1px solid rgb(160, 154, 154);
+  padding-top: 5px; 
+  padding-bottom: 5px;  
+  text-align: center;
+}
+
+.img-promo{
+  width: 10vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+.btn-promo-remove {
+  width:5vw;
+  height: 5vh;
+  background: #d35842;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  font-size: medium;
+}
+
+.btn-promo-remove:hover{
+  background: rgb(160, 0, 0);
+  cursor: pointer;
+}
+
+.promo-btn-bar{
+  float: right;
+  padding-right: 5vw;
+  padding-bottom: 25px;
+}
+
+.btn-promo {
+  width:15vw;
+  height: 5vh;
+  background: #00b3b3;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: medium;
+}
+
+.btn-promo:hover{
+  background: black;
+  cursor: pointer;
+}
+
+/* add promo page */
+
+.add-promo-form{
+  font-size: large;
+  margin: auto;
+  float: center;
+}
+
+.add-promo-form .input-feild{
+  font-size: large;
+  color: rgb(129, 129, 182);
+  width: 11vw;
+  border-radius: 7px;
+  border: 2px solid grey;
+  float: center;
+  padding: 0.3vw 1vw 0.3vw 1vw;
+}
+
+.add-promo-form .input-file{
+  font-size: medium;
+  color: rgb(129, 129, 182);
+  width: 16vw;
+  border-radius: 7px;
+  border: 2px solid grey;
+  float: center;
+  padding: 0.3vw 1vw 0.3vw 1vw;
+}
+
+.add-promo-form td{ 
+  padding-top: 0.75vw;
+  padding-left: 1vw;
+}
+
+.add-promo-form th{
+  color: #5e6566;
+  padding-top: 0.75vw;
+  padding-left:  2vw;
+  align-content: left;
+  text-align: left;
+  font-weight: 400;
 }

@@ -25,7 +25,11 @@
             echo "
             <h2>Reception Halls</h2>
             
-            <p>No Reception Hall added!</p>";
+            <p>No Reception Hall added!</p>
+            
+            <button type=\"button\" name=\"btn-to-add-emp\" onclick=\"window.location.href='add-hall.php'\">Add Employee</button>";
+
+            
         }
         else{
             echo "
@@ -38,20 +42,27 @@
                 <th>Image 2</th>
                 <th>Hall Name</th>
                 <th>Contact No.</th>
-                <th>Address Line</th>
+                <th>Address</th>
                 <th>Capacity</th>
                 <th>Description</th>
                 <th>Advance Fee</th>
+            </tr>";
+            while($row = mysqli_fetch_assoc($emp_query)){
+            echo"
+            <tr> 
+                <td>".$row['main_image']."</td>
+                <td>".$row['image1']."</td>
+                <td>".$row['image2']."</td>
+                <td>".$row['hall_name']."</td>  
+                <td>".$row['contact_no']."</td>
+                <td>".$row['address']."</td>
+                <td>".$row['capacity']."</td>
+                <td>".$row['description']."</td> 
+                <td>".$row['advance_fee']."</td>             
             </tr>
-            <tr>
-                
-                <td>3</td>
-                <td>Pizza Hut Colombo</td>
-                <td>2020-10-15 22:03:02</td>
-                <td>2020-10-18 22:03:02</td>           
-            </tr>
-
+    
             ";
+            }
         }
 
     ?>

@@ -43,7 +43,7 @@ if(isset($_POST['btn-add-emp'])){
             
             if (mysqli_query($connection,$add_emp_sql) == TRUE) {
                 $message = base64_encode(urlencode("Added Successful"));
-                header('Location:./restaurant-home.php?msg=' . $message);
+                header('Location:./emp-iframe.php?msg=' . $message);
 				exit();
             } 
             

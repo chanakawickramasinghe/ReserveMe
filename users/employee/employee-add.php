@@ -46,27 +46,27 @@
                     <td>
                     <img src="../../images/form_icons/user.png" alt="user" class="icons">
                     <label for="name">Name</label><br>                   
-                    <input type="text"  name="name" class="reg-type-feild" placeholder="Employee Name" required>    
+                    <input type="text"  name="emp_name" class="reg-type-feild" placeholder="Employee Name" required>    
                     
                     <p>
                     <img src="../../images/form_icons/mail.png" alt="user" class="icons">
                     <label for="email">Email address</label><br>
-                    <input type="email" name="email" class="reg-type-feild" placeholder="Employee Email" required >
+                    <input type="email" name="emp_email" class="reg-type-feild" placeholder="Employee Email" required >
                     </p>
 
                     <img src="../../images/form_icons/phone-call.png" alt="user" class="icons">
                     <label for="contact">Contact number</label><br>
-                    <input type="tel" name="contact" class="reg-type-feild" placeholder="Employee Mobile Number" pattern='^\+?\d{0,13}' >
+                    <input type="tel" name="emp_contact" class="reg-type-feild" placeholder="Employee Mobile Number" pattern='^\+?\d{0,13}' >
 
                     <p>
                     <img src="../../images/form_icons/padlock.png" alt="user" class="icons">
                     <label for="password">Password</label><br>
-                    <input type="password" name="password" class="reg-type-feild" placeholder="Enter Password" id="password"  required>
+                    <input type="password" name="emp_password" class="reg-type-feild" placeholder="Enter Password" id="password"  required>
                     </p>
                     
                     <img src="../../images/form_icons/password.png" alt="user" class="icons">
                     <label for="password2">Confirm Password</label><br>
-                    <input type="password" name="password2" class="reg-type-feild" placeholder="Re-Enter Password" id="confirm_password" onkeyup='check()' required>
+                    <input type="password" name="emp_password2" class="reg-type-feild" placeholder="Re-Enter Password" id="confirm_password" onkeyup='check()' required>
                     <P id='message' ></p>
 
                     <p align="center"> <input type="submit" name="submit"  class="btn" value="Register " required></p>

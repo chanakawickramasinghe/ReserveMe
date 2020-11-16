@@ -33,8 +33,8 @@ if(isset($_POST['submit'])){
         $active_status= $userRow['active_status'];
 
         if($active_status == 1){
-            $log_customer_sql = "INSERT INTO log (user_id, user_type, date_time) 
-            VALUES ('".$_SESSION["userID"]."','".$_SESSION["userType"]."',NOW())";
+            $log_customer_sql = "INSERT INTO log (user_id, user_type, date_time, activity) 
+            VALUES ('".$_SESSION["userID"]."','".$_SESSION["userType"]."',NOW(),'Login Successfully')";
 
             $execute_querry = mysqli_query($connection, $log_customer_sql);
 
@@ -45,6 +45,7 @@ if(isset($_POST['submit'])){
         }      
     }
     
+    //Restaurant Login
     else if(mysqli_num_rows($userResult2) == 1){ 
 
         $userRow = mysqli_fetch_array($userResult2);
@@ -55,8 +56,8 @@ if(isset($_POST['submit'])){
         $active_status= $userRow['active_status'];
 
         if($active_status == 1){
-            $log_res_sql = "INSERT INTO log (user_id, user_type, date_time) 
-            VALUES ('".$_SESSION["resID"]."','".$_SESSION["userType"]."',NOW())";
+            $log_res_sql = "INSERT INTO log (user_id, user_type, date_time, activity) 
+            VALUES ('".$_SESSION["resID"]."','".$_SESSION["userType"]."',NOW(),'Login Successfully')";
 
             $execute_querry = mysqli_query($connection, $log_res_sql);
 
@@ -67,12 +68,14 @@ if(isset($_POST['submit'])){
         }    
     }
     
+    // Admin login
     else if(mysqli_num_rows($userResult3) == 1){
 
         $userRow = mysqli_fetch_array($userResult3);
         checkSession();  //create sessions
         $_SESSION["name"] = $userRow['admin_name'];
         $_SESSION["type"] = $userRow['admin_type'];
+        $_SESSION["id"] = $userRow['admin_id'];
         $_SESSION["email"] = $email;
         // $_SESSION["last_login"] = SELECT NOW();
 
@@ -84,6 +87,8 @@ if(isset($_POST['submit'])){
         header( "Location:../users/admin/admin-home.php");
 
     }
+
+    // Employee login
     else if(mysqli_num_rows($userResult4) == 1){
 
         $userRow = mysqli_fetch_array($userResult4);
@@ -93,8 +98,8 @@ if(isset($_POST['submit'])){
         $_SESSION["res_id"] = $userRow['res_id'];
         $_SESSION["userType"] = 'Employee';
 
-            $log_emp_sql = "INSERT INTO log (user_id, user_type, date_time) 
-            VALUES ('".$_SESSION["emp_id"]."','".$_SESSION["userType"]."',NOW())";
+            $log_emp_sql = "INSERT INTO log (user_id, user_type, date_time, activity) 
+            VALUES ('".$_SESSION["emp_id"]."','".$_SESSION["userType"]."',NOW(),'Login Successfully')";
 
             $execute_querry = mysqli_query($connection, $log_emp_sql);
 

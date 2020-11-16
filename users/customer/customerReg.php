@@ -48,24 +48,27 @@
                 <tr>
                     <td>
                     <img src="../../images/form_icons/user.png" alt="user" class="icons">
-                    <!-- <label for="name">Name</label> -->                    
+                    <label for="name">Name</label>                    
                     <input type="text"  name="name" class="reg-type-feild" placeholder="Your name" required>    
-                    
+                    <p>
                     <img src="../../images/form_icons/mail.png" alt="user" class="icons">
-                    <!-- <label for="email">Email address</label> -->
+                    <label for="email">Email address</label>
                     <input type="email" name="email" class="reg-type-feild" placeholder="your email" required >
-                    
+                    </p>
+			    
+		    <p>    
                     <img src="../../images/form_icons/padlock.png" alt="user" class="icons">
-                    <!-- <label for="password">Password</label> -->
+                    <label for="password">Password</label>
                     <input type="password" name="password" class="reg-type-feild" placeholder="Enter Password" id="password"  required>
-
+		    </p>
+			    
                     <img src="../../images/form_icons/password.png" alt="user" class="icons">
-                    <!-- <label for="password2">Confirm Password</label> -->
+                    <label for="password2">Confirm Password</label>
                     <input type="password" name="password2" class="reg-type-feild" placeholder="Re-Enter Password" id="confirm_password" onkeyup='check()' required>
                     <P id='message' ></P>
 
                     <img src="../../images/form_icons/phone-call.png" alt="user" class="icons">
-                    <!-- <label for="contact">Contact number</label> -->
+                    <label for="contact">Contact number</label>
                     <input type="tel" name="contact" class="reg-type-feild" placeholder="Mobile number" pattern='^\+?\d{0,13}' > </td>
 
                     <td>

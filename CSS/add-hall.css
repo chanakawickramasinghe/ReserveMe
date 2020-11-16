@@ -4,11 +4,11 @@
      width: 50%; 
     position: center;
 
-  }
+}
   
   .login-box{
-    width: 800px;
-    height: 850px;
+    width: 500px;
+    height: 800px;
     margin: 30px auto;
     background: #ffffffec;
     color: #000000;
@@ -19,45 +19,31 @@
     border-radius: 5px;
     box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
     
-  }
+}
 
- 
 .type-feild{
     height: 6vh;
     padding: 0.6vh;
     border-color:rgb(100, 103, 107);
     border-radius:3px;
     outline:none;
-    width: 500px;
+    width: 800px;
     margin: 20px;
     box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
     
 }
+
 .reg-type-feild{
   height: 4.5vh;
   padding: 0.4vh;
   border-radius:5px;
   outline:none;
-  width: 280px;
+  width: 350px;
   margin: 20px;
   box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
   
 }
 
-.btn{
-    width: 100px;;
-    height: 6vh;
-    padding:0.6vh;
-    background: #0e1581;
-    border: none;
-    color:#ffffff;
-    border-radius: 5px;
-    font-size: large;
-}
-.btn:hover{
-    background: #000000;
-    cursor: pointer;
-}
 .avatar{
     width: 100px;
     height: 100px;
@@ -77,8 +63,6 @@
     padding-top: 1vh;
     left: calc(50% - 50px); */
 }
-
-
 
 .login-body{
     /* background-color: #f2f2f2; */
@@ -100,26 +84,6 @@
     margin: 0;
 }
 
-.search-btn{
-    width:100px;
-    height: 30px;
-    background: #ffeb3b;
-    border: none;
-    color:rgb(0, 0, 0);
-    border-radius: 10px;
-    font-size: large;
-    
-}
-
-.search-btn:hover{
-    background: #ffc107;
-    cursor: pointer;
-}
-
-* {
-    box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
-}
 
 #regForm {
     background-color: #ffffff;

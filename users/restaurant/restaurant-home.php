@@ -49,8 +49,10 @@
 
         <div class="container">
         <iframe name="iframeBox" class="responsive-iframe" src="restaurant-homeframe.php" frameBorder="0"></iframe>
-
+	</div>
     <br><br><br> 
+    <!--Include footer.php-->
+    <div><?php include "../../includes/footer.php" ?></div>
     
     <!--script for onClickNav() for the navigation menu-->
     <script src="../../js/onClickNav.js"></script>

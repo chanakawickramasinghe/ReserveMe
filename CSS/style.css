@@ -172,7 +172,40 @@
 
 .form-edit input{
     width: 20vw;
+
 }
+
+.form-edit-profile{
+    margin: auto;
+}
+
+.form-edit-profile th{
+    float: left;
+    font-size: medium;
+    /* padding-bottom: 5px; */
+    /* padding-right: 3vw; */
+    padding: 0.3vw 2vw 0.3vw 1vw;
+
+}
+
+.form-edit-profile td{
+    font-size: medium;
+    padding-bottom: 10px;
+
+
+}
+
+.form-edit-profile input{
+    font-size: medium;
+    color: rgb(129, 129, 182);
+    width: 14vw;
+    border: 2px solid grey;
+    float: center;
+    padding: 0.3vw 1vw 0.3vw 1vw;
+    border-radius: 10px;
+}
+
+
 
 /* for deactivate and activate confirmation */
 .btn-red{

@@ -75,7 +75,7 @@
 
                 
                     <p class="button-box">
-                    <!-- <button class="btn-red" type="button" name="btn-delete-account">Delete Account</button> -->
+                    <button class="btn-red" type="button" name="btn-activate-account">Activate Account</button>
                     <button class="btn-red" type="button" name="btn-suspend-account" onclick="suspendFunction()">Suspend Account</button>
                     <button class="btn-blue" type="reset">Clear</button>
                     </p>

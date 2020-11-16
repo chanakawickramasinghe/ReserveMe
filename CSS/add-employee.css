@@ -1,65 +1,92 @@
 .imgcenter {
     display: block;
-    margin-left: 30%; 
-    /* margin-right: auto; */ 
+    margin-left: 30%;
      width: 50%; 
     position: center;
-     /* border: rgb(45, 29, 139) 10px solid;  */
 
-  }
+}
   
   .login-box{
-    width: 400px;
-    height: 100%;
-    margin: 0 auto;
-    background: #dad5d5b2;
+    width: 500px;
+    height: 800px;
+    margin: 30px auto;
+    background: #ffffffec;
     color: #000000;
     box-sizing: border-box;
-    padding: 70px 30px;
+    padding: 30px;
     position: center;
-    border: #250779 4px solid;
-    border-radius: 10px;
+    border: #a17807 1px solid;
+    border-radius: 5px;
+    box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
     
-    
-  }
+}
+
 .type-feild{
-    height: 4vh;
+    height: 6vh;
     padding: 0.6vh;
-    border-color: khaki;
-    border-radius:20px;
+    border-color:rgb(100, 103, 107);
+    border-radius:3px;
     outline:none;
-    width: 320px;
+    width: 800px;
+    margin: 20px;
+    box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
+    
+}
+
+.reg-type-feild{
+  height: 4.5vh;
+  padding: 0.4vh;
+  border-radius:5px;
+  outline:none;
+  width: 350px;
+  margin: 20px;
+  box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
+  
 }
 
 .btn{
-    width:7vw;
-    height: 4vh;
-    background: #ffeb3b;
-    border: none;
-    color:rgb(0, 0, 0);
-    border-radius: 20px;
-    font-size: large;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 13px 20px;
+    font-weight: bold;
+    background: orange;
+    color: #fff;
+    cursor: pointer;
+	margin-top: 10px;
+	box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+	border-radius: 15% 15% 15% 15% / 50% 50% 50% 50%;
+}
+
+.btn:hover{
+	background: #202020;
+	color: white;
+	border: none;
+}
 }
 .avatar{
     width: 100px;
     height: 100px;
-    border-radius: 30%;
-    position: absolute;
-    top: 18px;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 1vh;
+    padding-top: 1vh;
     left: calc(50% - 50px);
 }
-.register-body{
-    background: url(../../images/reg-bg.jpg);
-    background-size: cover;
+.icons{
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    /* border-radius: 5px; */
+    /* position: relative; */
+    /* margin-top: 1vh;
+    padding-top: 1vh;
+    left: calc(50% - 50px); */
 }
-.error-msg{
-    font-size: 12px;
-    color: #F00;
-    text-align: center;
-    background-color: #FFF;
-}
+
 .login-body{
-    background-image: url('../images/img2.jpg');
+    /* background-color: #f2f2f2; */
+    background-image: url(../images/regbg.jpg);
     background-size: cover;
 }
 .error-msg{
@@ -71,24 +98,93 @@
 
 /* Logged in Message */
 .logged-in-msg{
-    font-size: 12px;
+    font-size: 18px;
     color: #30b441;
-    text-align:  right;
+    text-align: center;
     margin: 0;
 }
 
 .search-btn{
     width:100px;
     height: 30px;
-    background: #ffc107;
-    border-color: khaki;
-    border-radius: 20px;
+    background: #ffeb3b;
+    border: none;
+    color:rgb(0, 0, 0);
+    border-radius: 10px;
     font-size: large;
     
 }
 
 .search-btn:hover{
-    background: #d68101;
+    background: #ffc107;
     cursor: pointer;
 }
 
+* {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+#regForm {
+    background-color: #ffffff;
+    margin: 100px auto;
+    padding: 40px;
+    width: 70%;
+    min-width: 300px;
+    }
+
+/* Font sizes */
+p{ 
+    font-size: 14px;
+}
+h1{
+    font-size: 32px;
+}
+h2{
+    font-size: 22px;
+}
+td{
+    padding: 10px;
+}
+
+/* Style of the input fields */
+input {
+	padding: 10px;
+	width: 100%;
+	font-size: 14px;
+	font-family: sans-serif;
+	border: 1px solid #aaaaaa;
+}
+  
+/* Mark input boxes that gets an error at validation */
+input.invalid {
+    background-color: #ffdddd;
+    background-color: #e9bc5c;
+}
+  
+/* Hide all steps by default */
+.tab {
+	display: none;
+}
+  
+/* Make those dots which indicate the steps */
+.step {
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbbbbb;
+	border: none;
+	border-radius: 50%;
+	display: inline-block;
+	opacity: 0.5;
+}
+  
+/* Mark the active step */
+.step.active {
+	opacity: 1;
+}
+  
+/* Mark the steps that are finished */
+.step.finish {
+	background-color: #4CAF50;
+}

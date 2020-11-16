@@ -274,10 +274,11 @@
 /* admin home */
 .admin-home{
   padding-left : 7vw;
+  padding-bottom: 10px;
 }
 
 /*Detail table */
-.user{
+.detail-admin{
   float: left;
   width: 30vw;
   margin: 0 auto;
@@ -285,17 +286,102 @@
   border-collapse: collapse;
   
 }
-.user th {
+.detail-admin th {
   background-color: #ffffff;
   border: 1px solid #ddd;
   padding: 8px;
   text-align: center;
 }
 
-.user td{
+.detail-admin td{
   border: 1px solid #ddd;
   padding: 8px;    
   text-align: center;
+}
+
+.btn-change {
+  width:15vw;
+  margin-left: 1.5vw;
+  margin-top: 2vw;
+  height: 5vh;
+  background: #00b3b3;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: medium;
+}
+
+.btn-change:hover{
+  background: black;
+  cursor: pointer;
+}
+
+/* admin-change password */
+.centered-view{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 40px;
+  margin-left: 35vw;
+  margin-right: 35vw;
+  margin-top: 30px;
+  border-style: solid;
+  border-color: rgb(37, 148, 192);
+  border-radius: 20px;
+}
+
+.img-change{
+  width: 8vw;
+}
+
+.form-change{
+  float: center;
+}
+
+.form-change input{
+  font-size: medium;
+  color: rgb(129, 129, 182);
+  width: 14vw;
+  border-radius: 7px;
+  border: 2px solid grey;
+  float: center;
+  padding: 0.3vw 1vw 0.3vw 1vw;
+}
+
+.btn-change-blue{
+  width:12vw;
+  margin-top: 10px;
+  height: 5vh;
+  background: rgb(255, 255, 255);
+  border: 1px solid  #287dec;
+  border-radius: 25px;
+  color: rgb(0, 11, 165);
+  font-size: medium;
+}
+
+.btn-change-blue:hover{
+  border: 1px solid rgb(0, 11, 165);
+  background: #287dec;
+  cursor: pointer;
+  color: #fff;
+}
+
+.btn-change-normal{
+  width:5vw;
+  margin-top: 10px;
+  height: 5vh;
+  background: rgb(255, 255, 255);
+  border: 1px solid  #287dec;
+  border-radius: 25px;
+  color: rgb(0, 11, 165);
+  font-size: medium;
+}
+
+.btn-change-normal:hover{
+  background: #f6f7f8;
+  border: 1px solid rgb(0, 11, 165);
+  cursor: pointer;
+  color:rgb(0, 11, 165);
 }
 
 /* co-admin page */
@@ -387,6 +473,196 @@
 }
 
 .img-admin{
-  width: 10vw;
+  width: 12vw;
   padding-left: 7vw;
+}
+
+.log-input{
+	width:200px;
+	background-color: white;
+	border-radius:25px;
+	height: 1vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  padding:20px;
+  box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+}
+
+.log-input input{
+	width:100%;
+	/* height: 5vh; */
+	border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: medium; 
+}
+
+/* promo page */
+/* promo table */
+.promo{
+  width: 90%;
+  margin: 0 auto;
+  table-layout: auto;
+  border-collapse: collapse; 
+}
+
+.promo th {
+  background-color: #cbe1ee;
+  border: 1px solid rgb(43, 106, 189);
+  padding-top: 5px; 
+  padding-bottom: 5px;  
+  text-align: center;
+}
+
+.promo td{
+  border: 1px solid rgb(160, 154, 154);
+  padding-top: 5px; 
+  padding-bottom: 5px;  
+  text-align: center;
+}
+
+.img-promo{
+  width: 10vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+.btn-promo-remove {
+  width:5vw;
+  height: 5vh;
+  background: #d35842;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  font-size: medium;
+}
+
+.btn-promo-remove:hover{
+  background: rgb(160, 0, 0);
+  cursor: pointer;
+}
+
+.promo-btn-bar{
+  float: right;
+  padding-right: 5vw;
+  padding-bottom: 25px;
+}
+
+.btn-promo {
+  width:15vw;
+  height: 5vh;
+  background: #00b3b3;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: medium;
+}
+
+.btn-promo:hover{
+  background: black;
+  cursor: pointer;
+}
+
+/* add promo page */
+
+.add-promo-form{
+  font-size: large;
+  margin: auto;
+  float: center;
+}
+
+.add-promo-form .input-feild{
+  font-size: large;
+  color: rgb(129, 129, 182);
+  width: 12vw;
+  border-radius: 7px;
+  border: 2px solid grey;
+  float: center;
+  padding: 0.3vw 1vw 0.3vw 1vw;
+}
+
+.add-promo-form .input-file{
+  font-size: medium;
+  color: rgb(129, 129, 182);
+  width: 16vw;
+  border-radius: 7px;
+  border: 2px solid grey;
+  float: center;
+  padding: 0.3vw 1vw 0.3vw 1vw;
+}
+
+.add-promo-form td{ 
+  padding-top: 0.75vw;
+  padding-left: 1vw;
+}
+
+.add-promo-form th{
+  color: #5e6566;
+  padding-top: 0.75vw;
+  padding-left:  2vw;
+  align-content: left;
+  text-align: left;
+  font-weight: 400;
+}
+
+/* message page */
+
+.message-table{
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 20px;
+  
+}
+
+.message-table th{
+  font-size: large;
+  float: left;
+  padding-bottom: 5px;
+  color: #5b5377;
+}
+
+.message-table td{
+  font-size: medium;
+  padding-bottom: 5px;
+  color: #494949;
+}
+
+.message-table b{
+  color: #287dec;
+}
+
+.reply-area{
+  width: 50vw;
+  height: 5vw;
+  border-radius: 5px;
+  border: 1px solid #287dec;
+  font-size: large;
+  color: #287dec;
+}
+
+.txt-area{
+  float: right;
+  padding-top: 0%;
+}
+
+.btn-reply {
+  width:8vw;
+  height: 5vh;
+  background: #00b3b3;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: medium;
+  margin-bottom: 5px;
+}
+
+.btn-reply:hover{
+  background: black;
+  cursor: pointer;
+}
+
+.sent-reply{
+  padding-left: 10vw;
+  padding-bottom: 15px;
 }

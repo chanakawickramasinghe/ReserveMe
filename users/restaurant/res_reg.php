@@ -42,19 +42,19 @@
 
             <h2 class="error-msg"><?php include_once('../../includes/message.php'); ?></h2>
 
-                <form action="res_reg_submit.php" method="post">                   
+                <form action="res_reg_submit.php" method="post" enctype="multipart/form-data">                   
                   
                 <table style="width:750px;float:center;align-items:center">
                 <tr>
                     <td>
                     <img src="../../images/form_icons/user.png" alt="user" class="icons">
                     <label for="name">Name</label>                   
-                    <input type="text"  name="name" class="reg-type-feild" placeholder="Your name" required>    
+                    <input type="text"  name="res_name" class="reg-type-feild" placeholder="Your name" required>    
                     
                     <p>
                     <img src="../../images/form_icons/mail.png" alt="user" class="icons">
                     <label for="email">Email address</label>
-                    <input type="email" name="email" class="reg-type-feild" placeholder="your email" required >
+                    <input type="email" name="res_email" class="reg-type-feild" placeholder="your email" required >
                     </p>
 
                     <p>
@@ -70,14 +70,14 @@
 
                     <img src="../../images/form_icons/phone-call.png" alt="user" class="icons">
                     <label for="contact">Contact number</label>
-                    <input type="tel" name="contact" class="reg-type-feild" placeholder="Mobile number" pattern='^\+?\d{0,13}' > </td>
+                    <input type="tel" name="res_tel" class="reg-type-feild" placeholder="Mobile number" pattern='^\+?\d{0,13}' > </td>
 
 
                     <td>
                     <!--Location-->
                     <img src="../../images/form_icons/map.png" alt="user" class="icons">
                     <label for="dob">Location URL</label>
-                    <input type="url" name="url" id='url' class="reg-type-feild"  placeholder="Enter Restaurant Location" required> 
+                    <input type="url" name="res_location" id='url' class="reg-type-feild"  placeholder="Enter Restaurant Location" required> 
                     
                     <p>
                     <!-- Address -->
@@ -96,7 +96,7 @@
                     <!-- Resaurant Image -->
                     <img src="../../images/form_icons/image.png" alt="user" class="icons">
                     <label for="pnumber"> Profile Image</label>
-                    <input type="file" name="res_img" class="reg-type-feild" placeholder="Upload Profile Image">
+                    <input type="file" name="res_image" class="reg-type-feild" placeholder="Upload Profile Image">
                     </p> 
                     </td>
                 </tr> 
@@ -113,7 +113,7 @@
             </form>    
             
         </div>
-
+ 
     <!--Include footer.php-->
     <div><?php include "../../includes/footer.php" ?></div>
     

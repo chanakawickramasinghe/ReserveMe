@@ -44,26 +44,6 @@
   
 }
 
-.btn{
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 13px 20px;
-    font-weight: bold;
-    background: orange;
-    color: #fff;
-    cursor: pointer;
-	margin-top: 10px;
-	box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
-	border-radius: 15% 15% 15% 15% / 50% 50% 50% 50%;
-}
-
-.btn:hover{
-	background: #202020;
-	color: white;
-	border: none;
-}
-}
 .avatar{
     width: 100px;
     height: 100px;
@@ -104,26 +84,6 @@
     margin: 0;
 }
 
-.search-btn{
-    width:100px;
-    height: 30px;
-    background: #ffeb3b;
-    border: none;
-    color:rgb(0, 0, 0);
-    border-radius: 10px;
-    font-size: large;
-    
-}
-
-.search-btn:hover{
-    background: #ffc107;
-    cursor: pointer;
-}
-
-* {
-    box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
-}
 
 #regForm {
     background-color: #ffffff;

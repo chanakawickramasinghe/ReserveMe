@@ -80,6 +80,8 @@
             </form>    
             
         </div>
+	<!--Include footer.php-->
+   	<div><?php include "../../includes/footer.php" ?></div>
 
 </body>
 </html>

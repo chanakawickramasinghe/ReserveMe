@@ -74,7 +74,7 @@ if(isset($_POST['update'])){
 
 
     $update_sql = "UPDATE admins 
-    SET admin_name = '$name', admin_email ='$email', admin_password = '$password', contact_no = '$contact', admin_type ='$type'
+    SET admin_name = '$name', admin_email ='$email', contact_no = '$contact', admin_type ='$type'
     WHERE admin_email = '$email' ";
     
     if (mysqli_query($connection,$update_sql) == TRUE) {

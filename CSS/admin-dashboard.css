@@ -309,7 +309,7 @@
   border-radius: 25px;
   color: #fff;
   font-size: medium;
-}S
+}
 
 .btn-change:hover{
   background: black;
@@ -604,4 +604,65 @@
   align-content: left;
   text-align: left;
   font-weight: 400;
+}
+
+/* message page */
+
+.message-table{
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 20px;
+  
+}
+
+.message-table th{
+  font-size: large;
+  float: left;
+  padding-bottom: 5px;
+  color: #5b5377;
+}
+
+.message-table td{
+  font-size: medium;
+  padding-bottom: 5px;
+  color: #494949;
+}
+
+.message-table b{
+  color: #287dec;
+}
+
+.reply-area{
+  width: 50vw;
+  height: 5vw;
+  border-radius: 5px;
+  border: 1px solid #287dec;
+  font-size: large;
+  color: #287dec;
+}
+
+.txt-area{
+  float: right;
+  padding-top: 0%;
+}
+
+.btn-reply {
+  width:8vw;
+  height: 5vh;
+  background: #00b3b3;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: medium;
+  margin-bottom: 5px;
+}
+
+.btn-reply:hover{
+  background: black;
+  cursor: pointer;
+}
+
+.sent-reply{
+  padding-left: 10vw;
+  padding-bottom: 15px;
 }

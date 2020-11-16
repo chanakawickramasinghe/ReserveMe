@@ -24,7 +24,6 @@
             </br></br>
             <a href="admin-home.php">Home</a>
             <a href="manage-users.php">Manage Users</a>
-            <a href="complaints.php">Complaints</a>
             <a href="messages.php">Messages</a>
             <a href="promotions.php" class="active">Promotions</a>
             <a href="log.php">Application Log</a>

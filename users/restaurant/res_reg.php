@@ -99,7 +99,7 @@
                     <input type="file" name="res_image" class="reg-type-feild" placeholder="Upload Profile Image">
                     </p> 
 
-                    <p align="center"> <input type="submit" name="submit"  class="hero-button" value="Register" required></p><br>
+                    <p align="center"> <input type="submit" name="submit"  class="new-button" value="Register" required></p><br>
                     <p>By creating an account you agree to our <a href="#" style="color:blue">Terms & Privacy</a>.</p>
                     </td>
                 </tr> 

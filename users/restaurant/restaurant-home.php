@@ -19,8 +19,7 @@
             <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
             
             <a class="navtab" href="../../index.php">Logout</a>
-		    <a class="navtab" href="restaurant-profile.php">My Profile</a>
-		    <a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>      
+		    <a class="navtab" href="restaurant-profile.php">My Profile</a>    
         </div>
         <!--End of nav-->
 
@@ -28,7 +27,7 @@
         
         <div class="sidebar">
             </br></br>
-            <a class="restaurant-homeframe.php" href="#home" >Home</a>
+            <a class="active" href="restaurant-homeframe.php" target="iframeBox" >Home</a>
             <a href="add-preordermenu.php" target="iframeBox">Pre - Order Menu</a>
             <a href="add-menu.php" target="iframeBox">Update the Menu</a>
             <a href="#promotions" target="iframeBox">Promotions</a>
@@ -36,16 +35,10 @@
             <a href="contact.php" target="iframeBox">Help Desk</a>
             <br><br><br>
             <hr>
-            <a href="../employee/employee-add.php" target="iframeBox">Manage Employee</a>
+            <a href="emp-iframe.php" target="iframeBox">Manage Employee</a>
             <a href="add-hall.php" target="iframeBox">Reception Hall</a>
 
         </div>
-        <div class="content-div">
-        <br>       
-            <h1>Welcome KFC, Kandy!</h1>
-        <br>
-        </div>
-        <div class="search">
 
         <div class="container">
         <iframe name="iframeBox" class="responsive-iframe" src="restaurant-homeframe.php" frameBorder="0"></iframe>
@@ -54,7 +47,5 @@
     <!--Include footer.php-->
     <div><?php include "../../includes/footer.php" ?></div>
     
-    <!--script for onClickNav() for the navigation menu-->
-    <script src="../../js/onClickNav.js"></script>
     </body>
 </html>

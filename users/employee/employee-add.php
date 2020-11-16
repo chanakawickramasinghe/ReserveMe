@@ -21,15 +21,6 @@
 </head>
     
 <body class="login-body">
-        <!--Start of nav-->
-        <div class="topnav" id="myTopnav">
-            <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
-            <a class="navtab" href="../../includes/login.php">Login</a>
-		    <a class="navtab" href="../../includes/contact.php">Contact</a>
-		    <a class="navtab" href="../../includes/about.php">About</a>
-		    <!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->     
-        </div>
-        <!--End of nav-->
   
         <div class="login-box"> 
                
@@ -69,6 +60,7 @@
                     <input type="password" name="password2" class="reg-type-feild" placeholder="Re-Enter Password" id="confirm_password" onkeyup='check()' required>
                     <P id='message' ></p>
 
+                    <p align="center"> <input type="submit" name="submit"  class="btn" value="Register " required></p>
                     </td>
                 </tr> 
                 </table>          

@@ -22,14 +22,15 @@
     <div class="topnav" id="myTopnav">
 		<a href="../customer-home.php"><img class = "logo" src="../../../images/logo.png"></a>
 		<a class="navtab" href="../../../index.php">Logout</a>
-		<a class="navtab" href="../customer-profile.php">My Profile</a>
+        <a class="navtab" href="../customer-profile.php">Profile</a>
+        <a class="navtab" href="../reservation_details.php">Reservations</a>
 		<a class="navtab" href="../../../includes/logged_contact.php">Contact</a>
 		<a class="navtab" href="../../../includes/logged_about.php">About</a>
-		<!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->
+		<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
 	</div>
     <!--End of nav-->
 
-	<!--Start of main-section-->
+    <!--Start of main-section-->
     <?php 
         if(isset($_GET['res_id'])){
             $sql = "SELECT * FROM restaurant WHERE res_id = ".$_GET['res_id'];
@@ -45,12 +46,27 @@
                             <h4><i class=\"fas fa-star-half-alt\">". $rowProduct['res_rate'] ."</i></h4>
                             <br>
                             <h4><i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i></h4>
-                            <button class=\"reserve-button pulsate\" type=\"submit\" name=\"submit\" onclick=\"onClickOpenForm()\">Reserve<i class=\"fas fa-search\"></i></button>
+                            <!--<button class=\"reserve-button pulsate\" type=\"submit\" name=\"submit\" onclick=\"onClickOpenForm()\">Reserve<i class=\"fas fa-search\"></i></button>-->
 	                    </div>	
 	                </section>";
             }
         }
     ?>
+    <!--Start of add section-->
+    <div class="add-img">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                   <img src="../../../images/promos/3.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+        </div>
+    </div>
+    <!--End of add section-->
     <!--End of main-section-->
 
     <!--Start of pop up login page-->
@@ -106,5 +122,8 @@
 
 	<!--Include footer.php-->
     <div><?php include "../../../includes/footer.php" ?></div>
+
+    <!--script for slideshow-->
+    <script src="../../../js/onClickNav.js"></script>
 </body>
 </html>

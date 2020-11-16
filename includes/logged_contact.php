@@ -39,9 +39,10 @@
 		<div class="topnav" id="myTopnav">
 			<a href="../users/customer/customer-home.php"><img class = "logo" src="../images/logo.png"></a>
 		    <a class="navtab" href="../index.php">Logout</a>
-			<a class="navtab" href="../users/customer/customer-profile.php">My Profile</a>
+            <a class="navtab" href="../users/customer/customer-profile.php">Profile</a>
+            <a class="navtab" href="../users/customer/reservation_details.php">Reservations</a>
 		    <a class="navtab" href="logged_about.php">About</a>
-		    <!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> --> 
+		    <a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
 		</div>
 		<!--End of nav-->
         <br>
@@ -129,7 +130,8 @@ confirm("The form was submitted");
 }
 </script>
 
-
+<!--script for slideshow-->
+<script src="../js/onClickNav.js"></script>
     
 </body>
 </html>

@@ -35,7 +35,7 @@
 		<a class="navtab" href="../users/user-type.php">Register</a>
 		<a class="navtab" href="contact.php">Contact</a>
 		<a class="navtab" href="about.php">About</a>
-		  
+		<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>    
     </div>
     <!--End of nav-->
 	

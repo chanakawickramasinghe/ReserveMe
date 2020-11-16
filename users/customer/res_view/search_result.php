@@ -25,7 +25,7 @@
 		<a class="navtab" href="../../../includes/login.php">Login</a>
 		<a class="navtab" href="../../../includes/contact.php">Contact</a>
 		<a class="navtab" href="../../../includes/about.php">About</a>    
-		<!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->
+		<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
     </div>
     <!--End of nav-->
     
@@ -119,7 +119,7 @@
                                     <i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i>
                                     <br>
                                     <i class=\"fas fa-star-half-alt\">". $rowProduct['res_rate'] ."</i>
-                                    <button type=\"button\"class=\"food-btn\" onclick=\"location.href='res_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
+                                    <button type=\"button\" class=\"food-btn\" onclick=\"location.href='res_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
                                 </div>
                             </div>";
                     }       
@@ -130,5 +130,8 @@
 
     <!--Include footer.php-->
     <div><?php include "../../../includes/footer.php" ?></div>
+
+    <!--script for onClickNav() for the navigation menu-->
+    <script src="../../../js/onClickNav.js"></script>
 </body>
 </html>

@@ -23,7 +23,7 @@
 		<a class="navtab" href="../users/user-type.php">Register</a>
 		<a class="navtab" href="login.php">Login</a>
 		<a class="navtab" href="contact.php">Contact</a>
-		<!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> --> 
+		<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
     </div><br>
     
     
@@ -133,7 +133,8 @@
 
     <?php include('footer.php'); ?>
      
-    
+    <!--script for slideshow-->
+    <script src="../js/onClickNav.js"></script>
    
     
 

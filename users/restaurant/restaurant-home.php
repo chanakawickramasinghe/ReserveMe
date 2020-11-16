@@ -20,7 +20,7 @@
             
             <a class="navtab" href="../../index.php">Logout</a>
 		    <a class="navtab" href="restaurant-profile.php">My Profile</a>
-		    <!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->     
+		    <a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>      
         </div>
         <!--End of nav-->
 
@@ -54,5 +54,7 @@
     <!--Include footer.php-->
     <div><?php include "../../includes/footer.php" ?></div>
     
+    <!--script for onClickNav() for the navigation menu-->
+    <script src="../../js/onClickNav.js"></script>
     </body>
 </html>

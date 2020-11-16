@@ -61,8 +61,8 @@
         }
         else{
             echo "
-            <h1>Manage Employee</h1><br>";
-            
+            <h1>Manage Employee</h1><br>
+            <h3>You have added an Employee and you can edit details</h3>";
             
             while($row = mysqli_fetch_assoc($emp_query)){
 

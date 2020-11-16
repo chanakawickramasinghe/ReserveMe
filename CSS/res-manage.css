@@ -21,19 +21,21 @@ h1{
     table-layout: auto;
     border-collapse: collapse; 
     text-align: center;
+    font-size: large;
+   
   }
   
   .emp-table th {
     background-color: rgb(255, 253, 163);
-    border: 1px solid rgb(49, 49, 48);
-    padding-top: 5px; 
-    padding-bottom: 5px;  
+    border: 1px solid rgb(160, 154, 154);
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
   
   .emp-table td{
     border: 1px solid rgb(160, 154, 154);
-    padding-top: 5px; 
-    padding-bottom: 5px;  
+    padding-top:8px; 
+    padding-bottom: 8px;  
     
   }
 

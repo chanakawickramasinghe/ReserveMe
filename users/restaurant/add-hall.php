@@ -17,7 +17,7 @@
             text-align: center;
             border-radius:5px;
         }
-    </style>
+    </style> 
 </head>
     
 <body class="login-body">

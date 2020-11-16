@@ -1,88 +1,98 @@
 <?php include('../../includes/session.php') ?>
 <?php include('../../includes/connection.php') ?>
 
-<?php
-    $name = "";
-    $email = "";
-    $contact = "";
-    $type = "";
-    $password = "";    
-?>
+<html>  
+<head>
+    <title>Hall Registration</title> 
+    <link href="../../images/logo.png" rel="shortcut icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link the style sheets -->   > 
+    <link href="../../CSS/add-hall.css" rel="stylesheet" type="text/css" > 
+    <link href="../../CSS/res-manage.css" rel="stylesheet" type="text/css" >
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
+ 
+</head>
+<body>
+    <?php
 
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Res-Employee-iframe</title>
-        <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
-	    <link rel="stylesheet" href="../../CSS/nav.css">
-        <link href="../../images/logo.png" rel="shortcut icon"/>
-        <link rel="stylesheet" href="../../CSS/admin-dashboard.css"/>
-    </head>
-    <body>
+        checkSession();
+        $resId = $_SESSION["resID"];
+        $hall_search = "SELECT * FROM employee WHERE res_id = '$resId'";
 
-        <div class="content-div">
-            <br><br>        
-            <h1>Employee of your Restaurant</h1>
+        $emp_query = mysqli_query($connection,$hall_search);
+        $num_emp = mysqli_num_rows($emp_query);
 
-            <div class="employee-table">
+        if ($num_emp == 0){
+            echo "
+            <h1>Manage Employee</h1>
+            
+            <h3>You have no employee Added. Please Add an Employee</h3>
+            <div class=\"emp-add-form\">
+            <form  method=\"post\" action=\"add-emp-submit.php\">
+                <table class=\"tab-add-emp\">
+                <tr>
+                    <th>Employee Name</th>
+                    <td><input type=\"text\" name=\"emp_name\" placeholder=\"Enter Name\"></td>
+                </tr>
+                <tr>
+                    <th>Employee Email</th>
+                    <td><input type=\"email\" name=\"emp_email\" placeholder=\"Enter Email\"></td>
+                </tr>
+                <tr>
+                    <th>Contact No.</th>
+                    <td><input type=\"text\" name=\"contact_no\" placeholder=\"Contact No.\" pattern='^\+?\d{0,13}'></td>
+                </tr>
+                <tr>
+                    <th>Password</th>
+                    <td><input type=\"password\" name=\"password\" placeholder=\"Password\" pattern='^\+?\d{0,13}'></td>
+                </tr>
+        
+                </table>
+                <br>
+                <button class=\"btn-emp-edit\" type=\"submit\" name=\"btn-add-emp\">Add Employee</button>
+                <button class=\"btn-emp-edit\" type=\"reset\" name=\"btn-clear\">Clear</button>
+            </form>
+            </div>
+            
+  
+            
+            
+            ";
+        }
+        else{
+            echo "
+            <h1>Manage Employee</h1><br>";
+            
+            
+            while($row = mysqli_fetch_assoc($emp_query)){
 
-            <table class="employee" id="myTable" border="1">
+            echo"
+            <table class=\"emp-table\" id=\"myTable\" border=\"1\">
             <tr>
                 <th>Employee Name</th>
-                <th>Employee Email</th>
-                <th>Contact No.</th>
+                <td>".$row['emp_name']."</td>
             </tr>
-        
-        <?php
-        
-        $admin_sql = "SELECT * FROM admins";
-        
-        $userquery = mysqli_query($connection,$admin_sql);
-        while($row = mysqli_fetch_assoc($userquery)){
-        
-            echo "
-                <tr>                  
-                    <td>".$row['admin_name']."</td>
-                    <td>".$row['admin_email']."</td>
-                    <td>".$row['contact_no']."</td>
-                    <td>".$row['admin_type']."</td>
-                    
-                </tr>";
-                
-        } 
-        echo "</table>";
-        ?>
+            <tr>
+                <th>Employee Email</th>
+                <td>".$row['emp_email']."</td>
+            </tr>
+            <tr>
+                <th>Contact No.</th>
+                <td>".$row['emp_mobile']."</td>
+            </tr>
+            </table>";
+            
+            echo"
+            <center>
+            <div class=\"btn-center\">
+                <button class=\"btn-emp-edit\" type=\"button\">Edit Details</button>
             </div>
-            <div class="vl"></div>
-            <div class="coadmin-dashboard">
-                
-                    <input type="submit" class="btn-coadmins"  name="add" value="Add New">
-                    <input type="submit" class="btn-coadmins"  name="update" value="Update">
-                    <input type="submit" class="btn-coadmins"  name="delete" value="Delete">
-                </form>
-            </div>
-        </div>
-        
-
-
-<script>
-    var table = document.getElementById('myTable');
-                
-        for(var i = 1; i < table.rows.length; i++)
-        {
-            table.rows[i].onclick = function()
-            {
-                document.getElementById("emp_name").value = this.cells[0].innerHTML;
-                document.getElementById("emp_email").value = this.cells[1].innerHTML;
-                document.getElementById("contact_no").value = this.cells[2].innerHTML;    
-            };
+            </center>";
+            
         }
+    }
 
-</script>
+    ?>
 
-
-
-
-</body>
+    </body>
 </html>

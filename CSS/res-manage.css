@@ -1,0 +1,93 @@
+/* i frame heading */
+h1{
+    padding-top: 40px;
+    text-align: center;
+    color:#343a3a;
+  }
+
+  h2,h3{
+    padding-top: 20px;
+    text-align: center;
+    color:#343a3a;
+    padding-bottom: 30px;
+  }
+
+/* employee page */
+
+/* table in manage employee */
+.emp-table{
+    width: 40%;
+    margin: 0 auto;
+    table-layout: auto;
+    border-collapse: collapse; 
+    text-align: center;
+  }
+  
+  .emp-table th {
+    background-color: rgb(255, 253, 163);
+    border: 1px solid rgb(49, 49, 48);
+    padding-top: 5px; 
+    padding-bottom: 5px;  
+  }
+  
+  .emp-table td{
+    border: 1px solid rgb(160, 154, 154);
+    padding-top: 5px; 
+    padding-bottom: 5px;  
+    
+  }
+
+  .btn-emp-edit {
+    margin-right: 2vw;
+    width:15vw;
+    height: 5vh;
+    background:  rgb(255, 253, 163);
+    border: 1px solid  rgb(0, 0, 0);
+    border-radius: 20px;
+    color: rgb(51, 47, 47);
+    font-size: medium;
+  }
+  
+  .btn-emp-edit:hover{
+    background:   #f3ba00;
+    cursor: pointer;
+    color: #fff;
+  }
+
+.btn-center{
+    justify-content: center;
+    padding-top: 20px;  
+}
+
+.emp-add-form{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: block;
+    font-size: large;
+}
+
+.emp-add-form input{ 
+    border-radius: 10px;
+    width: 20vw;
+    color: #343a3a;
+}
+
+.tab-add-emp{
+    width: 35%;
+    margin: 0 auto;
+    border: none; 
+  }
+  
+  .tab-add-emp th {
+    padding-top: 5px; 
+    padding-bottom: 5px;  
+    text-align: left;
+  }
+  
+  .tab-add-emp td{
+    padding-top: 5px; 
+    padding-bottom: 5px;  
+    text-align: center;
+  }
+

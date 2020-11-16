@@ -24,11 +24,11 @@
 				<a href="#"><i class="fa fa-youtube"></i></a>
 			</div>
 			<p class="footer-links">
-				<a href="../index.php">Home</a>
+				<a href="/index.php">Home</a>
 				|
-				<a href="about.php">About</a>
+				<a href="/includes/privacy_policy.php">Privacy Policy</a>
 				|
-				<a href="contact.php">Contact</a>
+				<a href="/includes/t&c.php">T & C</a>
 			</p>
 		</div>
 		<!--End of footer left-->
@@ -36,7 +36,7 @@
 		<div class="footer-center">
 			<div>
 				<i class="fa fa-phone"></i>
-				<p>+91 22-27782183</p>
+				<p>+94 11-2778218</p>
 			</div>
 			<div>
 				<i class="fa fa-envelope"></i>

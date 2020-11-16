@@ -12,7 +12,6 @@
     <link href="../../../css/res_view.css" rel="stylesheet" type="text/css"/>
     <link href="../../../css/nav.css" rel="stylesheet" type="text/css"/>
     <link href="../../../css/footer.css" rel="stylesheet" type="text/css"/>
-    <link href="../../../css/reservation_form.css" rel="stylesheet" type="text/css"/>
     <!--FontAwesome-->
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
 </head>
@@ -24,26 +23,11 @@
 		<a class="navtab" href="../../../includes/login.php">Login</a>
 		<a class="navtab" href="../../../includes/contact.php">Contact</a>
 		<a class="navtab" href="../../../includes/about.php">About</a>
-		<!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->    
+		<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>  
     </div>
     <!--End of nav-->
 
     <!--Start of main-section-->
-    <!--Stsrt of add section-->
-    <div class="add-img">
-		<div class="slideshow-container">
-			<div class="mySlides fade">
-				<img src="../../../images/promos/3.jpg" style="width:100%">
-			</div>
-		</div>
-
-		<div style="text-align:center">
-			<span class="dot"></span> 
-			<span class="dot"></span> 
-			<span class="dot"></span> 
-		</div>
-	</div>
-    <!--End of add section-->
     <?php 
         if(isset($_GET['res_id'])){
             $sql = "SELECT * FROM restaurant WHERE res_id = ".$_GET['res_id'];
@@ -65,6 +49,21 @@
             }
         }
     ?>
+    <!--Stsrt of add section-->
+    <div class="add-img">
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+				<img src="../../../images/promos/3.jpg" style="width:100%">
+			</div>
+		</div>
+
+		<div style="text-align:center">
+			<span class="dot"></span> 
+			<span class="dot"></span> 
+			<span class="dot"></span> 
+		</div>
+	</div>
+    <!--End of add section-->
     <!--End of main-section-->
 
     <!--Start of pop up login page-->
@@ -115,6 +114,8 @@
 
     <!--Include footer.php-->
     <div><?php include "../../../includes/footer.php" ?></div>
-    
+
+    <!--script for slideshow-->
+    <script src="../../../js/onClickNav.js"></script>
 </body>
 </html>

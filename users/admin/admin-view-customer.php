@@ -18,7 +18,7 @@
         <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
             <a class="navtab" href="admin-home.php">Logout</a>
             <a class="navtab" href="admin-home.php">Home</a>
-		    <!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->     
+		    <a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
         </div>
         <!--End of nav-->
 
@@ -156,7 +156,8 @@
 </script>
         
                   
-       
+       <!--script for onClickNav() for the navigation menu-->
+    <script src="../../js/onClickNav.js"></script>
 
     </body>
 </html>

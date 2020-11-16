@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReserveMe</title>
-    <!--web-icon-->
     <link href="../../../images/logo.png" rel="shortcut icon"/>
     <!--fontawesome-------------------->
     <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
@@ -17,7 +16,7 @@
     <link rel="stylesheet" href="../../../CSS/main.css">
 </head>
 
-<body>
+<body>   
     <!--Start of nav-->
     <div class="topnav" id="myTopnav">
         <a href="../../../index.php"><img class = "logo" src="../../../images/logo.png"></a>
@@ -28,7 +27,7 @@
 		<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
     </div>
     <!--End of nav-->
-    
+
     <!--Start of Header-->
     <header class="header">
         <div class="search">
@@ -53,6 +52,69 @@
     </header>
     <!--End of Header-->
     
+    <!--Start of About-->
+    <section id="about">
+        <div class="about-center">
+            <!--Start of the article1-->
+            <article class="about">
+                <div class="about-icon">
+					<i class="fas fa-mug-hot"></i>
+					<h2 class="about-subtitle"><a href="category.php">Sri Lankan</a></h2>
+                </div>              
+            </article>
+            <!--End of the article1-->
+            <!--Start of the article2-->
+            <article class="about">
+                <div class="about-icon">
+					<i class="fas fa-hamburger"></i>
+					<h2 class="about-subtitle"><a href="category.php">Street Food</a></h2>
+                </div>
+            </article>
+            <!--End of the article2-->
+            <!--Start of the article3-->
+            <article class="about">
+                <div class="about-icon">
+					<i class="fas fa-mortar-pestle"></i>
+					<h2 class="about-subtitle"><a href="category.php">Chinese</a></h2>
+                </div>
+            </article>
+            <!--End of the article3-->
+            <!--Start of the article4-->
+            <article class="about">
+                <div class="about-icon">
+					<i class="fas fa-pizza-slice"></i>
+					<h2 class="about-subtitle"><a href="category.php">Italian</a></h2>
+                </div>
+            </article>
+            <!--End of the article4-->
+            <!--Start of the article5-->
+            <article class="about">
+                <div class="about-icon">
+					<i class="fas fa-fish"></i>
+					<h2 class="about-subtitle"><a href="category.php">Mongolian</a></h2>
+                </div>
+            </article>
+            <!--End of the article5-->
+            <!--Start of the article6-->
+            <article class="about">
+                <div class="about-icon">
+					<i class="fas fa-pepper-hot"></i>
+					<h2 class="about-subtitle"><a href="category.php">Arabic</a></h2>
+                </div>
+            </article>
+            <!--End of the article6-->
+			<!--Start of the article7-->
+            <article class="about">
+                <div class="about-icon">
+					<i class="fas fa-fish"></i>
+					<h2 class="about-subtitle"><a href="category.php">Thai</a></h2>
+                </div>
+            </article>
+            <!--End of the article7-->
+        </div>
+    </section>
+	<!--End of About-->
+
     <!--Start of Card Section-->
     <?php 
         if(isset($_POST["submit"])){
@@ -72,7 +134,7 @@
                                     <i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i>
                                     <br>
                                     <i class=\"fas fa-star-half-alt\">". $rowProduct['res_rate'] ."</i>
-                                    <button type=\"button\"class=\"food-btn\" onclick=\"location.href='res_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
+                                    <button type=\"button\"class=\"food-btn\" onclick=\"location.href='../res_view/res_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
                                 </div>
                             </div>";
                         }       
@@ -93,7 +155,7 @@
                                 <i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i>
                                 <br>
                                 <i class=\"fas fa-star-half-alt\">". $rowProduct['res_rate'] ."</i>
-                                <button type=\"button\"class=\"food-btn\" onclick=\"location.href='res_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
+                                <button type=\"button\"class=\"food-btn\" onclick=\"location.href='../res_view/res_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
                             </div>
                         </div>";
                     }  
@@ -119,7 +181,7 @@
                                     <i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i>
                                     <br>
                                     <i class=\"fas fa-star-half-alt\">". $rowProduct['res_rate'] ."</i>
-                                    <button type=\"button\" class=\"food-btn\" onclick=\"location.href='res_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
+                                    <button type=\"button\"class=\"food-btn\" onclick=\"location.href='../res_view/res_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
                                 </div>
                             </div>";
                     }       
@@ -130,7 +192,7 @@
 
     <!--Include footer.php-->
     <div><?php include "../../../includes/footer.php" ?></div>
-
+    
     <!--script for onClickNav() for the navigation menu-->
     <script src="../../../js/onClickNav.js"></script>
 </body>

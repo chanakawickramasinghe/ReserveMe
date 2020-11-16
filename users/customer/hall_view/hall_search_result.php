@@ -24,7 +24,7 @@
 		<a class="navtab" href="../../../includes/login.php">Login</a>
 		<a class="navtab" href="../../../includes/contact.php">Contact</a>
 		<a class="navtab" href="../../../includes/about.php">About</a>    
-		<!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->  
+		<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
     </div>
     <!--End of nav-->
     
@@ -129,6 +129,9 @@
 
     <!--Include footer.php-->
     <div><?php include "../../../includes/footer.php" ?></div>
+
+    <!--script for slideshow-->
+    <script src="../../../js/onClickNav.js"></script>
 </body>
 </html>
 

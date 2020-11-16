@@ -26,7 +26,7 @@
 
                         <div class = "form-row">
                             <input type = "number" placeholder="How Many Persons?" min = "1">
-                            <button class="reserve-button pulsate" type="submit" name="submit">Reserve a Table</button>
+                            <button class="reserve-button pulsate" type="" name="submit">Reserve a Table</button>
                         </div>
                     </form>
                 </div>

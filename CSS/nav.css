@@ -27,24 +27,35 @@
   color: black;
   border-radius: 5px;
 }
-.topnav .icon {
+.topnav #icon {
   display: none;
+  color: orange;
+  font-weight: bold;
+  align-content: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
+.topnav #icon:hover{
+  background: orange;
+  color: #fff;
+  border-radius: 5px;
+}
 
 @media screen and (max-width: 600px){
 	.topnav .navtab:not(:first-child){display: none;}
-	.topnav .navtab.icon{
+	.topnav  #icon{
 		float: right;
-		display: block;
+    display: block;
 	}
 }
 
 
 @media screen and (max-width: 600px){
 	.topnav.responsive {position: relative;}
-	.topnav.responsive .icon{
-		 position: absolute;
+	.topnav.responsive #icon{
+		position: absolute;
     right: 0;
     top: 0;
 	}

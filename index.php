@@ -25,7 +25,7 @@
 			<a class="navtab" href="includes/login.php">Login</a>
 			<a class="navtab" href="includes/contact.php">Contact</a>
 			<a class="navtab" href="includes/about.php">About</a>
-			<!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->
+			<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
 		</div>
 		<!--End of nav-->
 	
@@ -97,7 +97,7 @@
             <article class="about">
                 <div class="about-icon">
 					<i class="fas fa-mug-hot"></i>
-					<h2 class="about-subtitle"><a href="category/arabic.php">Sri Lankan</a></h2>
+					<h2 class="about-subtitle"><a href="users/customer/category/category.php">Sri Lankan</a></h2>
                 </div>              
             </article>
             <!--End of the article1-->
@@ -105,7 +105,7 @@
             <article class="about">
                 <div class="about-icon">
 					<i class="fas fa-hamburger"></i>
-					<h2 class="about-subtitle"><a href="category/arabic.php">Street Food</a></h2>
+					<h2 class="about-subtitle"><a href="users/customer/category/category.php">Street Food</a></h2>
                 </div>
             </article>
             <!--End of the article2-->
@@ -113,7 +113,7 @@
             <article class="about">
                 <div class="about-icon">
 					<i class="fas fa-mortar-pestle"></i>
-					<h2 class="about-subtitle"><a href="category/arabic.php">Chinese</a></h2>
+					<h2 class="about-subtitle"><a href="users/customer/category/category.php">Chinese</a></h2>
                 </div>
             </article>
             <!--End of the article3-->
@@ -121,7 +121,7 @@
             <article class="about">
                 <div class="about-icon">
 					<i class="fas fa-pizza-slice"></i>
-					<h2 class="about-subtitle"><a href="category/arabic.php">Italian</a></h2>
+					<h2 class="about-subtitle"><a href="users/customer/category/category.php">Italian</a></h2>
                 </div>
             </article>
             <!--End of the article4-->
@@ -129,7 +129,7 @@
             <article class="about">
                 <div class="about-icon">
 					<i class="fas fa-fish"></i>
-					<h2 class="about-subtitle"><a href="category/arabic.php">Mongolian</a></h2>
+					<h2 class="about-subtitle"><a href="users/customer/category/category.php">Mongolian</a></h2>
                 </div>
             </article>
             <!--End of the article5-->
@@ -137,7 +137,7 @@
             <article class="about">
                 <div class="about-icon">
 					<i class="fas fa-pepper-hot"></i>
-					<h2 class="about-subtitle"><a href="category/arabic.php">Arabic</a></h2>
+					<h2 class="about-subtitle"><a href="users/customer/category/category.php">Arabic</a></h2>
                 </div>
             </article>
             <!--End of the article6-->
@@ -145,7 +145,7 @@
             <article class="about">
                 <div class="about-icon">
 					<i class="fas fa-fish"></i>
-					<h2 class="about-subtitle"><a href="category/arabic.php">Thai</a></h2>
+					<h2 class="about-subtitle"><a href="users/customer/category/category.php">Thai</a></h2>
                 </div>
             </article>
             <!--End of the article7-->

@@ -4,20 +4,19 @@
     border:none;
     border-radius:20px;
     outline:none;
-    width:100%:/*delete*/
 }
 
 .location{
-    width: 25%;/*100px*/
+    width: 100px;/*100px*/
 }
 
 .search-type{
-    width:60%;/*110px*/
+    width: 110px;/*110px*/
 }
 
 
 .form-box{
     background: rgba(0,0,0,0.5);
     padding:10px;
-	border-radius: 8%;
+	border-radius: 10%;
 }

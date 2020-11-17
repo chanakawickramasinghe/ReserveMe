@@ -30,13 +30,13 @@
             <a class="active" href="restaurant-homeframe.php" target="iframeBox" >Home</a>
             <a href="add-preordermenu.php" target="iframeBox">Pre - Order Menu</a>
             <a href="add-menu.php" target="iframeBox">Update the Menu</a>
-            <a href="#promotions" target="iframeBox">Promotions</a>
-            <a href="#reviews" target="iframeBox">View Reviews</a>
+            <a href="res-promo.php" target="iframeBox">Promotions</a>
+            <a href="res_view.php" target="iframeBox">View Reviews</a>
             <a href="contact.php" target="iframeBox">Help Desk</a>
             <br><br><br>
             <hr>
             <a href="emp-iframe.php" target="iframeBox">Manage Employee</a>
-            <a href="hall-details.php" target="iframeBox">Reception Hall</a>
+            <a href="add-hall.php" target="iframeBox">Reception Hall</a>
 
         </div>
 
@@ -48,4 +48,4 @@
     <div><?php include "../../includes/footer.php" ?></div>
     
     </body>
-</html> 
+</html>

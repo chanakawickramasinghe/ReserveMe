@@ -141,3 +141,68 @@
     background-image: url(../images/regbg.jpg);
     background-size: cover;
   }
+
+  .promo{
+    width: 90%;
+    margin: 0 auto;
+    table-layout: auto;
+    border-collapse: collapse; 
+  }
+  
+  .promo th {
+    background-color: #e9dfb2;
+    border: 1px solid rgb(43, 106, 189);
+    padding-top: 5px; 
+    padding-bottom: 5px;  
+    text-align: center;
+  }
+  
+  .promo td{
+    border: 1px solid rgb(160, 154, 154);
+    padding-top: 5px; 
+    padding-bottom: 5px;  
+    text-align: center;
+  }
+  
+  .img-promo{
+    width: 10vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+  }
+  
+  .btn-promo-remove {
+    width:8vw;
+    height: 5vh;
+    background: #d35842;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    font-size: medium;
+  }
+  
+  .btn-promo-remove:hover{
+    background: rgb(160, 0, 0);
+    cursor: pointer;
+  }
+  
+  .promo-btn-bar{
+    float: right;
+    padding-right: 5vw;
+    padding-bottom: 25px;
+  }
+  
+  .btn-promo {
+    width:15vw;
+    height: 5vh;
+    background: #ffd104;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: medium;
+  }
+  
+  .btn-promo:hover{
+    background: black;
+    cursor: pointer;
+  }
+  

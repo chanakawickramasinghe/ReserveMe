@@ -36,7 +36,7 @@
             <br><br><br>
             <hr>
             <a href="emp-iframe.php" target="iframeBox">Manage Employee</a>
-            <a href="add-hall.php" target="iframeBox">Reception Hall</a>
+            <a href="hall-details.php" target="iframeBox">Reception Hall</a>
 
         </div>
 

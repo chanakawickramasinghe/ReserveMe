@@ -93,3 +93,7 @@ h1{
     text-align: center;
   }
 
+  /* hall details */
+.hall-img{
+  width: 12vw;
+}

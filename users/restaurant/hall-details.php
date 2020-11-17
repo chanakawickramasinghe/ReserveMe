@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Link the style sheets -->   
     <link href="../../CSS/add-hall.css" rel="stylesheet" type="text/css" > 
+    <link href="../../CSS/res-manage.css" rel="stylesheet" type="text/css" >
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
  
 </head>
@@ -47,12 +48,12 @@
                 <th>Description</th>
                 <th>Advance Fee</th>
             </tr>";
-            while($row = mysqli_fetch_assoc($emp_query)){
+            while($row = mysqli_fetch_assoc($hallquery)){
             echo"
             <tr> 
-                <td>".$row['main_image']."</td>
-                <td>".$row['image1']."</td>
-                <td>".$row['image2']."</td>
+                <td><img class=\"hall-img\" src= \"../../images/halls/{$row['main_image']}\"></td>
+                <td><img class=\"hall-img\" src= \"../../images/halls/{$row['image1']}\"></td>
+                <td><img class=\"hall-img\" src= \"../../images/halls/{$row['image2']}\"></td>
                 <td>".$row['hall_name']."</td>  
                 <td>".$row['contact_no']."</td>
                 <td>".$row['address']."</td>

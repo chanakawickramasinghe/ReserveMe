@@ -10,27 +10,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Link the style sheets -->
 <link href="../CSS/login.css" rel="stylesheet" type="text/css" > 
-<link href="../CSS/main.css" rel="stylesheet" type="text/css"/>
+<!-- <link href="../CSS/main.css" rel="stylesheet" type="text/css"/> -->
 <link href="../CSS/nav.css" rel="stylesheet" type="text/css"/>
 <link href="../CSS/footer.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 	<!--FontAwesome-------->
 	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 <!--web-icon-->
-<link href="../images/logo.png" rel="shortcut icon"/>
-<style>
+<!-- <link href="../images/logo.png" rel="shortcut icon"/> -->
 
-.icons{
-    width: 30px;
-    height: 30px;
-    position: relative;
-}
-</style>
 
 </head>
 <body class="login-body">
 	<!--Start of nav-->
-    <div class="topnav" id="myTopnav">
+    <div class="topnav">
         <a href="../index.php"><img class = "logo" src="../images/logo.png"></a>
 		<a class="navtab" href="../users/user-type.php">Register</a>
 		<a class="navtab" href="contact.php">Contact</a>
@@ -40,28 +33,26 @@
     <!--End of nav-->
 	
     
-<div class="limiter">
-<div class="container-login100">
+
 <div class="wrap-login100 ">
 <img src="../images/form_icons/user.png" class="avatar">
 
-<form class="login100-form validate-form" action="login-submit.php" method="post">
+<form action="login-submit.php" method="post">
 
-    <span class="login100-form-title p-b-49"> Login </span>
+    <h1 class="text-center">Login</h1>
     <h3 class="error-msg"><?php include_once('message.php'); ?></h3> 
 
         <div class="wrap-input100 validate-input" style="padding-top: 20px;" data-validate="Username is reauired">
-            <span class="label-input100"> 
+            
             <img src="../images/form_icons/user.png" alt="user" class="icons"> Username 
-            </span>
+           
             <input class="input100" type="email" name="email" placeholder="Type your username" required>
             <span class="focus-input100" data-symbol="&#xf206;"></span>
         </div><br>
 
         <div class="wrap-input100 validate-input" data-validate="Password is required">
-            <span class="label-input100">
-            <img src="../images/form_icons/password.png" alt="user" class="icons">    
-            Password</span>
+            
+            <img src="../images/form_icons/password.png" alt="user" class="icons">Password
             <input class="input100" type="password" name="password" placeholder="Type your password" required>
             <span class="focus-input100" data-symbol="&#xf190;"></span>
         </div>
@@ -94,15 +85,15 @@
         </div>
 <br>
 
-        <div class="txt1" style="text-align: center;float: center;padding-bottom:17px">
+        <div class="txt1 text-center">
             Or Sign Up Using....<a href="../users/user-type.php" class="txt2"> Sign Up </a>
-        </div>
+        </div><br>
 
 
 </form>
 </div>
-</div>
-</div>
+
+
 
  <!--Include footer.php-->
  <div><?php include "footer.php" ?></div>

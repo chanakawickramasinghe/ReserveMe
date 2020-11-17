@@ -23,19 +23,20 @@
     color: black;
     padding: 16px;
     text-decoration: none;
-    font-weight: bold
+    font-weight: bold;
   }
    
   .sidebar a.active {
     background-color: #f3ba00;
     color: black;
     font-weight: bold
+
   }
   
   .sidebar a:hover:not(.active) {
     background-color: #5e6566;
     font-weight: bold;
-    border-radius: 5px;
+    color: honeydew;
   }
   
   div.content {
@@ -102,15 +103,15 @@
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 28px;
+    width: 50px;
+    height: 22px;
   }
-  
+/*   
   .switch input { 
     opacity: 0;
     width: 0;
     height: 0;
-  }
+  } */
   
   .slider {
     position: absolute;
@@ -127,17 +128,17 @@
   .slider:before {
     position: absolute;
     content: "";
-    height: 24px;
-    width: 24px;
-    left: 6px;
-    bottom: 2px;
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 1px;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
   }
   
   input:checked + .slider {
-    background-color: rgb(194, 207, 14);
+    background-color: orange;
   }
   
   input:focus + .slider {
@@ -186,3 +187,116 @@
 }
 
 /* End of Buttons  */
+
+
+.tab-emp{
+  width: 35%;
+  margin: 0 auto;
+  border:none; 
+}
+
+.tab-emp th {
+  padding-top: 5px; 
+  padding-bottom: 5px;  
+  text-align: left;
+}
+
+.tab-emp td{
+  padding-top: 5px; 
+  padding-bottom: 5px;  
+  text-align: center;
+}
+
+/* massage file */
+.content-div{
+  margin: 0;
+  padding: 0;
+  width: 80%;
+  background-color: #ffffff;
+  position: relative;
+  height: auto;
+  overflow: auto;
+  float: right;
+  top:15px;
+}
+
+
+.promo-btn-bar{
+  float: right;
+  padding-right: 5vw;
+  padding-bottom: 25px;
+}
+
+.btn-promo {
+  width:15vw;
+  height: 5vh;
+  background: orange;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: medium;
+}
+
+.btn-promo:hover{
+  background: black;
+  cursor: pointer;
+}
+.message-table{
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 20px;
+  
+}
+
+.message-table th{
+  font-size: large;
+  float: left;
+  padding-bottom: 5px;
+  color: #5b5377;
+}
+
+.message-table td{
+  font-size: medium;
+  padding-bottom: 5px;
+  color: #494949;
+}
+
+.message-table b{
+  color: #287dec;
+}
+
+.reply-area{
+  width: 50vw;
+  height: 5vw;
+  border-radius: 5px;
+  border: 1px solid orange;
+  font-size: large;
+  color: #287dec;
+}
+
+.txt-area{
+  float: right;
+  padding-top: 0%;
+}
+
+.btn-reply {
+  width:8vw;
+  height: 5vh;
+  background: orange;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: medium;
+  margin-bottom: 5px;
+}
+
+.btn-reply:hover{
+  background: black;
+  cursor: pointer;
+}
+
+.sent-reply{
+  padding-left: 10vw;
+  padding-bottom: 15px;
+}
+/*  End of massage file*/

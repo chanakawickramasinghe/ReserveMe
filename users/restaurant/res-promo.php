@@ -18,7 +18,7 @@
 
             <div class="promo-btn-bar">
                 <button type="button" class="btn-promo" onclick="window.location.href='res-add-promotions.php'">Add Promotion</button>
-                <button type="button" class="btn-promo" onclick="window.location.href='admin-past-promos.php'">View Past Promotions</button>
+                <button type="button" class="btn-promo" onclick="window.location.href='res-past-promo.php'">View Past Promotions</button>
             </div>
 
             <table class="promo" id="myTable" border="1">
@@ -35,21 +35,14 @@
                     <td><button type="button" class="btn-promo-remove">Remove</button></td>                
                 </tr>
                 <tr>
-                    <td><img class="img-promo" src="../../images/promos/2.jpg"></td>
+                    <td><img class="img-promo" src="../../images/promos/4.jpg"></td>
                     <td>2020-10-20 09:00:00</td>
                     <td>2020-10-22 09:00:00</td>
                     <td><button type="button" class="btn-promo-remove">Remove</button></td>                
                 </tr>
-                <tr>
-                    <td><img class="img-promo" src="../../images/promos/3.jpg"></td>
-                    <td>2020-11-01 00:00:00</td>
-                    <td>2020-11-08 00:00:00</td>
-                    <td><button type="button" class="btn-promo-remove">Remove</button></td>                
-                </tr>
+               
             </table>
         </div>
-
-
 
     <!--script for onClickNav() for the navigation menu-->
     <script src="../../js/onClickNav.js"></script>

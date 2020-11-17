@@ -11,10 +11,10 @@ include('../../includes/message.php');?>
     $hallname = $_POST['hall_name'];
     $address = $_POST['address'];
     $contact = $_POST['contact_no'];
-    $address= md5($_POST['address']);
+    $address= $_POST['address'];
     $capacity = $_POST['capacity'];
-    $descriptiom = $_POST['description'];
-    $advance = md5($_POST['advance']);
+    $description = $_POST['description'];
+    $advance = $_POST['advance'];
 
     $image = $_FILES['main_image']['name'];
     $image1 = $_FILES['image1']['name'];
@@ -25,17 +25,16 @@ include('../../includes/message.php');?>
 
 if(isset($_POST['btn-add-hall'])){
 
-            $add_hall_sql = "INSERT INTO reception_hall (red_id, hall_name, 
+            $add_hall_sql = "INSERT INTO reception_hall (res_id, hall_name, 
             contact_no, main_image, image1, image2, address, capacity, description, advance_fee) 
-            VALUES ('$resId','$hallname','$contact','$image','$image1','$image2','$address'
-            '$capacity','$description','$advance')";
+            VALUES ('$resId','$hallname','$contact','$image','$image1','$image2','$address','$capacity','$description','$advance')";
             
             if (mysqli_query($connection,$add_hall_sql) == TRUE) {
                 if (move_uploaded_file($_FILES['main_image']['tmp_name'], $target)) {
                     if (move_uploaded_file($_FILES['image1']['tmp_name'], $target1)) {
                         if (move_uploaded_file($_FILES['image2']['tmp_name'], $target2)) {
                             $msg = "Image uploaded successfully";
-                            header( "Location:promotions.php");
+                            header( "Location:hall-details.php");
                         }
                     }    
                 }else{
@@ -45,7 +44,7 @@ if(isset($_POST['btn-add-hall'])){
             
             else {
                  $message = base64_encode(urlencode("SQL Error while Registering"));
-                 header('Location:./emp-iframe.php?msg=' . $message);
+                 header('Location:hall-details.php?msg=' . $message);
 				 exit();
             }
 }

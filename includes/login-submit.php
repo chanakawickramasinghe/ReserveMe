@@ -67,7 +67,7 @@ if(isset($_POST['submit'])){
             header("Location:../users/activate-account.php");
         }    
     }
-    
+     
     // Admin login
     else if(mysqli_num_rows($userResult3) == 1){
 

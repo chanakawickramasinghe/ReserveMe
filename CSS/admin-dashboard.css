@@ -666,3 +666,21 @@
   padding-left: 10vw;
   padding-bottom: 15px;
 }
+
+/* not-admin page */
+/* for image and topic */
+.red{
+  text-align: center;
+}
+
+.red h1{
+  color:#c24646;
+}
+
+.red h3, p{
+  color:#333333;
+}
+
+.red-img{
+  width: 5vw;
+}

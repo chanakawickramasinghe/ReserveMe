@@ -6,7 +6,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ReserveMe - Res Add Promotion</title>
-	    <link rel="stylesheet" href="../../CSS/nav.css">
+	<link rel="stylesheet" href="../../CSS/nav.css">
+	<link href="../../CSS/footer.css" rel="stylesheet" type="text/css">  
         <link href="../../images/logo.png" rel="shortcut icon"/>
         <link rel="stylesheet" href="../../CSS/res-promo.css"/>
         <script src="../../js/manage-user-search.js"></script>
@@ -51,6 +52,7 @@
         </form>
         </div>
 </div>
-    
+    	<!--Include footer.php-->
+   	<div><?php include "../../includes/footer.php" ?></div>
     </body>
 </html>

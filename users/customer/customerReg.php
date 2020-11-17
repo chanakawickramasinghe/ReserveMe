@@ -39,40 +39,37 @@
             <br>
                 <h1 align="center">Register Here..!</h1>
 
-            <h2 class="error-msg"><?php include_once('../../includes/message.php'); ?></h2>
-
                 <form action="register-submit.php" method="post">                   
-                  <!-- style="width:750px;float:center;align-items:center" -->
                 <table style="width:100%">  
                 <tr>
                     <td>
                     <img src="../../images/form_icons/user.png" alt="user" class="icons">
-                    <!-- <label for="name">Name</label>                     -->
+                    <label for="name">Name</label>                    
                     <input type="text"  name="name" class="reg-type-feild" placeholder="Your name" required>    
                     
                     <img src="../../images/form_icons/mail.png" alt="user" class="icons">
-                    <!-- <label for="email">Email address</label> -->
+                    <label for="email">Email address</label>
                     <input type="email" name="email" class="reg-type-feild" placeholder="your email" required >
       
 			       
                     <img src="../../images/form_icons/padlock.png" alt="user" class="icons">
-                    <!-- <label for="password">Password</label> -->
+                    <label for="password">Password</label>
                     <input type="password" name="password" class="reg-type-feild" placeholder="Enter Password" id="password"  required>
 		
 			    
                     <img src="../../images/form_icons/password.png" alt="user" class="icons">
-                    <!-- <label for="password2">Confirm Password</label> -->
+                    <label for="password2">Confirm Password</label>
                     <input type="password" name="password2" class="reg-type-feild" placeholder="Re-Enter Password" id="confirm_password" onkeyup='check()' required>
                     <P id='message' ></P>
 
                     <img src="../../images/form_icons/phone-call.png" alt="user" class="icons">
-                    <!-- <label for="contact">Contact number</label> -->
+                    <label for="contact">Contact number</label>
                     <input type="tel" name="contact" class="reg-type-feild" placeholder="Mobile number" pattern='^\+?\d{0,13}' > 
                     </td>
 
                     <td>
                     <img src="../../images/form_icons/calendar.png" alt="user" class="icons">
-                    <!-- <label for="dob">Date of birth</label> -->
+                    <label for="dob">Date of birth</label>
                     <input type="date" name="dob" id='dob' class="reg-type-feild" onkeyup='getAge(dob)' placeholder="Date of Birth" required> 
                     <P id='message2' ></P>
                                 <!-- 
@@ -87,7 +84,7 @@
 
                     <!-- <p>Address<p> -->
                     <img src="../../images/form_icons/address.png" alt="user" class="icons">
-                    <!-- <label for="pnumber"> Address</label> -->
+                    <label for="pnumber"> Address</label>
                     <input type="text" name="pnumber" class="reg-type-feild" placeholder="Post number"> 
 
                     <!-- <label for="street">Street</label> -->
@@ -100,7 +97,7 @@
 
                 </table>          
                
-                <hr><br>
+                <hr>
                 <p>By creating an account you agree to our <a href="#" style="color:blue">Terms & Privacy</a>.</p>
                    <p align="center"> <input type="submit" name="submit"  class="hero-button" value="Register" required></p>
                    <br>

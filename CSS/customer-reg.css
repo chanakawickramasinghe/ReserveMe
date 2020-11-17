@@ -8,7 +8,7 @@
   
   .login-box{
     width: 800px;
-    height: 880px;
+    height: 950px;
     margin: 30px auto;
     background: #ffffffec;
     color: #000000;
@@ -22,7 +22,7 @@
   }
   
   .login-box td{
-      padding: 12px;
+      padding: 30px;
   }
 
  
@@ -43,7 +43,7 @@
   border-radius:5px;
   outline:none;
   width: 280px;
-  margin: 20px;
+  margin: 10px;
   box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
   
 }
@@ -58,7 +58,8 @@
     background: orange;
     color: #fff;
     cursor: pointer;
-	margin-top: 10px;
+    margin-top: 10px;
+    border: none;
 	box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
     border-radius: 15% 15% 15% 15% / 50% 50% 50% 50%;
     width: 150px;
@@ -83,12 +84,7 @@
 .icons{
     width: 30px;
     height: 30px;
-    margin-top: 5px;
-    /* border-radius: 5px; */
-    /* position: relative; */
-    /* margin-top: 1vh;
-    padding-top: 1vh;
-    left: calc(50% - 50px); */
+    
 }
 
 

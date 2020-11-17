@@ -2,15 +2,9 @@
 
 <html>
     <head>
-        <!-- <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ReserveMe - Admin</title>
-	    <link rel="stylesheet" href="../../CSS/nav.css">
-        <link href="../../images/logo.png" rel="shortcut icon"/>
-        <link rel="stylesheet" href="../../CSS/admin-dashboard.css"/> -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Emploee-Home</title>  
+        <title>Queries</title>  
         <link href="../../images/logo.png" rel="shortcut icon"/> 
         <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
         <!-- Link the style sheets -->
@@ -19,10 +13,10 @@
         <link rel="stylesheet" href="../../CSS/employee.css">
 
     </head>
-    <body>
+    <body class="subbody">
 
 
-        <div class="content-div">
+        <!-- <div class="content-div"> -->
             <br><br>
             <h1>New Queries</h1>
 
@@ -47,7 +41,7 @@
                 <tr><td class="txt-area"><button type="submit" class="btn-reply">Send</button></td></tr>
 
             </table>
-        </div>
+        <!-- </div> -->
 
 
 

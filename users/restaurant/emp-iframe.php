@@ -3,10 +3,10 @@
 
 <html>  
 <head>
-    <title>Hall Registration</title> 
+    <title>Employee Registration</title> 
     <link href="../../images/logo.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Link the style sheets -->   > 
+    <!-- Link the style sheets -->   
     <link href="../../CSS/add-hall.css" rel="stylesheet" type="text/css" > 
     <link href="../../CSS/res-manage.css" rel="stylesheet" type="text/css" >
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
@@ -24,9 +24,11 @@
 
         if ($num_emp == 0){
             echo "
+            <br><br><br><br>
             <h1>Manage Employee</h1>
+            <br><br>
             
-            <h3>You have no employee Added. Please Add an Employee</h3>
+            <h3>You have no employee added, Please Add an Employee.</h3>
             <div class=\"emp-add-form\">
             <form  method=\"post\" action=\"add-emp-submit.php\">
                 <table class=\"tab-add-emp\">
@@ -62,27 +64,28 @@
         else{
             echo "
             <h1>Manage Employee</h1>
-            <h3>You have added an Employee and you can edit details</h3>";
+            <h3>You have added an Employee and you can edit details.</h3>";
             
             while($row = mysqli_fetch_assoc($emp_query)){
 
             echo"
             <table class=\"emp-table\" id=\"myTable\" border=\"1\">
             <tr>
-                <th>Employee Name</th>
+                <th>Employee Name :</th>
                 <td>".$row['emp_name']."</td>
             </tr>
             <tr>
-                <th>Employee Email</th>
+                <th>Employee Email :</th>
                 <td>".$row['emp_email']."</td>
             </tr>
             <tr>
-                <th>Contact No.</th>
+                <th>Contact No. :</th>
                 <td>".$row['emp_mobile']."</td>
             </tr>
             </table>";
             
             echo"
+            <br><br><br>
             <center>
             <div class=\"btn-center\">
                 <button class=\"btn-emp-edit\" type=\"button\">Edit Details</button>

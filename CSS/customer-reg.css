@@ -8,17 +8,21 @@
   
   .login-box{
     width: 800px;
-    height: 1000px;
+    height: 880px;
     margin: 30px auto;
     background: #ffffffec;
     color: #000000;
     box-sizing: border-box;
-    padding: 30px;
+    padding: 20px;
     position: center;
     border: #a17807 1px solid;
     border-radius: 5px;
     box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
     
+  }
+  
+  .login-box td{
+      padding: 12px;
   }
 
  

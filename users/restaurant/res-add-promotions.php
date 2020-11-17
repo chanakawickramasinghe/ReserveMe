@@ -12,18 +12,9 @@
         <script src="../../js/manage-user-search.js"></script>
     </head>
     <body class="login-body">
-
-        <!--Start of nav-->
-        <div class="topnav" id="myTopnav">
-        <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
-            <a class="navtab" href="../../index.php">Logout</a>
-            <a class="navtab" href="restaurant-home.php">Home</a>
-            <a class="navtab" href="res-promotions.php">Promotions</a>
-        </div>
-        <!--End of nav-->
-        <br><br>
-  
-    <div class="login-box"> 
+	    
+	<br><br>
+    	<div class="login-box"> 
         <center><h1 style="color:#ffbb01;">Add Promotion</h1></center>
         <br><br>
         <div class="centered-view">
@@ -51,9 +42,6 @@
         </form>
         </div>
 </div>
-
-	<!--Include footer.php-->
-    <div><?php include "../../includes/footer.php" ?></div>
     
     </body>
 </html>

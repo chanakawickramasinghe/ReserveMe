@@ -28,40 +28,40 @@
         <!-- Adding the table with current user details -->
         <?php
         checkSession();
-        echo "<table border=1 class=\"user\">";
+        echo "<table class=\"user-new\">";
         
         $userID = $_SESSION["userID"]; //session id
         $sql = "SELECT * FROM customer WHERE user_id='$userID'";
         
         $userquery = mysqli_query($connection,$sql);
         while($row = mysqli_fetch_assoc($userquery)){
-        echo"</br></br><h1 class=div-c>Welcome " .$row['user_name']."</h1>";
+        echo"</br></br><h1 class=div-c>Welcome <font color=\"orange\">" .$row['user_name']."</font></h1>";
 
             echo "
                 </br>
                 <tr>
-                <th>Cus ID</th><td>".$row['user_id']."</td>
+                <th>Customer ID</th><td>".$row['user_id']."</td>
                 </tr>
                 <tr>                  
-                <th>Name</th><td>".$row['user_name']."</td>
+                <th>Customer Name</th><td>".$row['user_name']."</td>
                 </tr>
                 <tr>
-                <th>Email</th><td>".$row['email']."</td>
+                <th>Customer Email</th><td>".$row['email']."</td>
                 </tr>
                 <tr>
                 <th>Contact No</th><td>".$row['contact_no']."</td>
                 </tr>
                 <tr>
-                <th>DOB</th><td>".$row['dob']."</td>
+                <th>Date of Birth</th><td>".$row['dob']."</td>
                 </tr>
                 <tr>
                 <th>Postal Number</th><td>".$row['postal_number']."</td>
                 </tr>
                 <tr>
-                <th>Street</th><td>".$row['street']."</td>
+                <th>Street Name</th><td>".$row['street']."</td>
                 </tr>
                 <tr>
-                <th>City</th><td>".$row['city']."</td>
+                <th>Living City</th><td>".$row['city']."</td>
                 </tr>";
         } 
         echo "</table>";

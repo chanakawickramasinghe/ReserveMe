@@ -18,7 +18,7 @@
 
             <div class="promo-btn-bar">
                 <button type="button" class="btn-promo" onclick="window.location.href='res-add-promotions.php'">Add Promotion</button>
-                <button type="button" class="btn-promo" onclick="window.location.href='res-past-promos.php'">View Past Promotions</button>
+                <button type="button" class="btn-promo" onclick="window.location.href='res-past-promo.php'">View Past Promotions</button>
             </div>
 
             <table class="promo" id="myTable" border="1">

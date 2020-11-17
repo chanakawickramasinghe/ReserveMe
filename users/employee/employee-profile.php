@@ -32,17 +32,21 @@
         $userquery = mysqli_query($connection,$sql);
         $row = mysqli_fetch_assoc($userquery);
         echo"<h1 class=div-c>Welcome ".$row['emp_name']." , Employee of ".$row2['res_name']."</h1>";
-
-            echo "
-                <h3> About you.....</h3><br>
-                Name: ".$row['emp_name']." <br>
-                Email: ".$row['emp_email']." <br>
-                Contact No: ".$row['emp_mobile']." <br>
-                ";
     
        
         ?>
+        <center>
+        <table border="1px black solid" class="tab-emp">
+        <tr>
+        <td>Name</td><td><?php echo $row['emp_name'];?></td>
+        </tr>
+        <tr><td>Email</td><td><?php echo $row['emp_email'];?></td>
+        </tr>
+        <tr><td>Contact No:</td><td><?php echo $row['emp_mobile'];?></td>
+        </tr>
         
+        </table>
+        </center>
         <img src="../../images/deco/restaurant-staff.jpg" alt="feedback" class="revimage"><hr style="width:80%">
         </br>
         

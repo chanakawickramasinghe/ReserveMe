@@ -86,7 +86,7 @@
 			    <!--details-->
 			    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, sint. Non officiis, architecto exercitationem modi distinctio quaerat at aspernatur omnis nobis et voluptatibus hic veritatis excepturi vel molestias quisquam dicta.</p>
                 <br><br>
-                <a href="customer/customerReg.php" type="button" class="hero-button pulsate">Create Account</a>                   
+                <a href="customer/customerReg.php" type="button" class="hero-button">Create Account</a>                   
 		        </div>
             </section>
 

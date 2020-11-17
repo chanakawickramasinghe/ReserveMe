@@ -15,7 +15,7 @@
     <h1>Availability on Pre-Order Manues</h1>
 
     <div class="contentbox">
-    <table width="100%"  >
+    <table width="100%">
         <tr>
             <th>Menu</th>
             <th>Price</th>

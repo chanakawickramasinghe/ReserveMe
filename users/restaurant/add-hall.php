@@ -17,19 +17,57 @@
             text-align: center;
             border-radius:5px;
         }
-    </style>
+    </style> 
 </head>
+    <body>
+        <form method="post" action="add-hall-submit.php" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <th>Hall Name</th>
+                <td><input type="text" name="hall_name" placeholder="Hall Name"></td>
+            </tr>
+            <tr>
+                <th>Contact No.</th>
+                <td><input type="text" name="contact_no" placeholder="Contatc No." pattern='^\+?\d{0,13}'></td>
+            </tr>
+            <tr>
+                <th>Profile Image</th>
+                <td><input type="file" name="main_image" placeholder="Select Profile Image"></td>
+            </tr>
+            <tr>
+                <th>Image 1</th>
+                <td><input type="file" name="image1" placeholder="Image 1"></td>
+            </tr>
+            <tr>
+                <th>Image 2</th>
+                <td><input type="file" name="image2" placeholder="Image 1"></td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td><input type="text" name="address" placeholder="Address"></td>
+            </tr>
+            <tr>
+                <th>Capacity</th>
+                <td><input type="text" name="capacity" placeholder="Capacity"></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td><textarea rows="5" cols="40" name="description" placeholder="Description (below 250 words)"></textarea></td>
+            </tr>
+            <tr>
+                <th>Advance Fee</th>
+                <td><input type="text" name="advance" placeholder="Rs."></td>
+            </tr>
+        </table>
+        <button type="submit" name="btn-add-hall">Add Hall Details</button>
+        <button type="reset" name="btn-clear">Clear</button>
+        </form>
+
+        
+    </body>
     
-<body class="login-body">
-        <!--Start of nav-->
-        <div class="topnav" id="myTopnav">
-        <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
-        <a class="navtab" href="../../includes/login.php">Login</a>
-		<a class="navtab" href="../../includes/contact.php">Contact</a>
-		<a class="navtab" href="../../includes/about.php">About</a>
-		<!--<a href="javascript:void(0);" class="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> -->     
-        </div>
-        <!--End of nav-->
+<!-- <body class="login-body">
+
   
         <div class="login-box"> 
                
@@ -80,8 +118,6 @@
             </form>    
             
         </div>
-	<!--Include footer.php-->
-   	<div><?php include "../../includes/footer.php" ?></div>
 
-</body>
+</body> -->
 </html>

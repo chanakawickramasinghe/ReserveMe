@@ -3,161 +3,16 @@
 <head>
 <meta charset="utf-8">
   <title>Reset</title>
-  <style>
-body{
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background: url(../images/bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-
-}
-
-.reset{
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%,50%);
-    width: 40%;
-    padding: 45px;
-    background: rgba(0,0,0,.8);
-    box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0,0,0,.5);
-    border-radius: 10px;
-}
-
-.reset h3
-{
-    margin: 0 0 30px;
-    padding: 0;
-    color: #fff;
-    text-align: center;
-
-}
-
-.reset .inputBox
-{
-    position: relative;
-}
-
-.reset .inputBox input
-{
-    width: 100%;
-    padding: 12px 0;
-    font-size: 16px;
-    color: #fff;
-    letter-spacing: 1px;
-    margin-bottom: 16px;
-    border: none;
-    border-bottom: 1px solid #fff;
-    outline: none;
-    background: transparent;
-}
-
-.reset .inputBox label
-{
-   position: absolute;
-   top: 0;
-   left: 0;  
-   padding: 15px 0;
-   font-size: 18px; 
-   color: #fff;
-   pointer-events: none;
-   transition: .5s;
-
-}
-.reset .inputBox input:focus ~ label,
-.reset .inputBox input:valid ~ label 
-{
-    top: -20px;
-    left: 0;
-    color: #03a9f4;
-    font-size: 14px;
-
-} 
-
-.reset input[type="submit" i]
-{
-    margin-top: 8px;  
-    margin-left: 22%;
-    margin-bottom: 2px;
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #fff;
-    background: #03a9f4;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    display: inline-block;
-    font-size: 16px;
-}
-
-.reset input[type="reset" i]
-{
-    margin-top: 8px;  
-    margin-left: 15%;
-    margin-bottom: 2px;
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #fff;
-    background: #03a9f4;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    display: inline-block;
-    font-size: 16px;
-}
-.reset input[type="reset" i]:hover
-{
-    background-color: #3e8e41;
-    color: white;
-}
-.reset input[type="submit" i]:hover
-{
-    background-color: #3e8e41;
-    color: white;
-}
-.anchor{
-  display: block;
-  position: relative;
-  top: 0px;
-  margin-bottom: 15px;
-    
-}
-.message{
-    color: white;
-}
-p{
-    color: white;
-}
-a {
-  position: relative;
-  top: -15px; 
-  left: -35px; 
-  text-decoration: none;
-  display: inline-block;
-  padding: 8px 16px;
+  <link rel="stylesheet" href="../CSS/forgot-password.css"/>
+  <link rel="icon" type="image/png" href="../images/logo.png" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../CSS/nav.css" rel="stylesheet" type="text/css"/>
+<link href="../CSS/footer.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<!--FontAwesome-------->
+	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
   
-}
-
-a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.previous {
-  font-size: 18px;
-  color: white;
-}
-
-
-.round {
-  border-radius: 50%;
-}
-</style>  
 </head>
 <?php
     require '../includes/connection.php';
@@ -183,7 +38,7 @@ a:hover {
             $send_result=mail($to,$subject,$message,$header);
             if($send_result)
             echo "<script>alert('Reset Link is sent to the email');
-                  window.location = '../login.php';
+                  window.location = '../includes/login.php';
                   </script>";             
             else
                 $alert="<div class='failed'>Failed to send the mail!</div>";
@@ -195,23 +50,38 @@ a:hover {
 ?>
 
 <body>
-  <div class="reset">
-    <a href="../includes/login.php" class="previous round">&#8249;</a>
-    <h3>Reset Password</h3>        
+  <!--Start of nav-->
+  <div class="topnav">
+    <a href="../index.php"><img class = "logo" src="../images/logo.png"></a>
+    <a class="navtab" href="../users/user-type.php">Register</a>
+    <a class="navtab" href="../includes/login.php">Login</a>
+		<a class="navtab" href="../includes/contact.php">Contact</a>
+		<a class="navtab" href="../includes/about.php">About</a>
+		<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>    
+  </div>
+    <!--End of nav-->
+  <div class="reset-password">
+    <img src="../images/form_icons/change-password.png">
+    <h1>Reset Password</h1>        
     <form class="" action="" method="post">
-    <p class="message">Enter your registered email address so that we will send you an email to reset your password.</p>
+        <p>Enter your registered email address so that we will send you an email to reset your password.</p>
     <?php echo $alert;?>    
         <div class="inputBox">
-          <input type="email" name="email" required="">
-          <label>Email</label>
+          <input class="input-feild" type="email" name="email" placeholder="Enter Your Email" required="">
         </div>        
              
-          <input type="submit" name="send" value="Send">
-          <input type="reset" name="" value="Reset">          
+          <input class="orange-btn" type="submit" name="send" value="Send">
+          <input class="btn-change-normal" type="reset" name="" value="Clear">          
          
       </form>
     
   </div>
+  
+ <!--Include footer.php-->
+ <div class="footer-space"><?php include "../includes/footer.php" ?></div>
+    
+    <!--script for onClickNav() for the navigation menu-->
+    <script src="../js/onClickNav.js"></script>
 
 </body>
 </html>

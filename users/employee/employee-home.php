@@ -44,12 +44,11 @@
       echo
       " <img class = \"resimage\" src=\"../../images/restaurant/".$row['res_image']."\"  alt=\"Restaurent logo\">";
       ?>
-    
+    <br><br><br><br>
     <div class="sidebar"> 
       <span><a href="employee-profile.php" target="iframe_a" class="active">Employee Profile</a></span>      
       <a href="pre-order-menu.php" target="iframe_a">Pre - Order Menu</a>
-      <a href="queries&feedback.php" target="iframe_a">Queries & Reviews</a>
-      <a href="reports.php" target="iframe_a">Reports</a>
+      <a href="queries.php" target="iframe_a">Queries</a>
       <a href="manage-reservation.php" target="iframe_a">Manage Reservation</a>
       <a href="reception-hall.php" target="iframe_a">Reception Hall</a>
     </div>

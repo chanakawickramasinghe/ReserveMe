@@ -1,0 +1,208 @@
+/* buttons res*/
+.btn-res {
+    width:8vw;
+    margin-left: 1.5vw;
+    margin-top: 2vw;
+    height: 5vh;
+    background: #ffbb01;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: medium;
+  }
+  
+  .btn-res:hover{
+    background: black;
+    cursor: pointer;
+  }
+  
+  /* promo table */
+.promo{
+    width: 90%;
+    margin: 0 auto;
+    table-layout: auto;
+    border-collapse: collapse; 
+  }
+  
+  .promo th {
+    background-color: #cbe1ee;
+    border: 1px solid rgb(43, 106, 189);
+    padding-top: 5px; 
+    padding-bottom: 5px;  
+    text-align: center;
+  }
+  
+  .promo td{
+    border: 1px solid rgb(160, 154, 154);
+    padding-top: 5px; 
+    padding-bottom: 5px;  
+    text-align: center;
+  }
+  
+  .img-promo{
+    width: 10vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+  }
+  
+  .btn-promo-remove {
+    width:5vw;
+    height: 5vh;
+    background: #d35842;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    font-size: medium;
+  }
+  
+  .btn-promo-remove:hover{
+    background: rgb(160, 0, 0);
+    cursor: pointer;
+  }
+  
+  .promo-btn-bar{
+    float: right;
+    padding-right: 5vw;
+    padding-bottom: 25px;
+  }
+  
+  .btn-promo {
+    width:15vw;
+    height: 5vh;
+    background: #b38900;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: medium;
+  }
+  
+  .btn-promo:hover{
+    background: black;
+    cursor: pointer;
+  }
+  
+  /* add promo page */
+  
+  .add-promo-form{
+    font-size: large;
+    margin: auto;
+    float: center;
+  }
+  
+  .add-promo-form .input-feild{
+    font-size: large;
+    color: rgb(129, 129, 182);
+    width: 12vw;
+    border-radius: 7px;
+    border: 2px solid grey;
+    float: center;
+    padding: 0.3vw 1vw 0.3vw 1vw;
+  }
+  
+  .add-promo-form .input-file{
+    font-size: medium;
+    color: rgb(129, 129, 182);
+    width: 16vw;
+    border-radius: 7px;
+    border: 2px solid grey;
+    float: center;
+    padding: 0.3vw 1vw 0.3vw 1vw;
+  }
+  
+  .add-promo-form td{ 
+    padding-top: 0.75vw;
+    padding-left: 1vw;
+  }
+  
+  .add-promo-form th{
+    color: #5e6566;
+    padding-top: 0.75vw;
+    padding-left:  2vw;
+    align-content: left;
+    text-align: left;
+    font-weight: 400;
+  }
+
+  .login-box{
+    width: 550px;
+    height: 450px;
+    margin: 30px auto;
+    background: #ffffffec;
+    color: #000000;
+    box-sizing: border-box;
+    padding: 30px;
+    position: center;
+    border: #a17807 2px solid;
+    border-radius: 5px;
+    box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
+  }
+
+  .login-body{
+    background-image: url(../images/regbg.jpg);
+    background-size: cover;
+  }
+
+  .promo{
+    width: 90%;
+    margin: 0 auto;
+    table-layout: auto;
+    border-collapse: collapse; 
+  }
+  
+  .promo th {
+    background-color: #e9dfb2;
+    border: 1px solid rgb(43, 106, 189);
+    padding-top: 5px; 
+    padding-bottom: 5px;  
+    text-align: center;
+  }
+  
+  .promo td{
+    border: 1px solid rgb(160, 154, 154);
+    padding-top: 5px; 
+    padding-bottom: 5px;  
+    text-align: center;
+  }
+  
+  .img-promo{
+    width: 10vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+  }
+  
+  .btn-promo-remove {
+    width:8vw;
+    height: 5vh;
+    background: #d35842;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    font-size: medium;
+  }
+  
+  .btn-promo-remove:hover{
+    background: rgb(160, 0, 0);
+    cursor: pointer;
+  }
+  
+  .promo-btn-bar{
+    float: right;
+    padding-right: 5vw;
+    padding-bottom: 25px;
+  }
+  
+  .btn-promo {
+    width:15vw;
+    height: 5vh;
+    background: #ffd104;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: medium;
+  }
+  
+  .btn-promo:hover{
+    background: black;
+    cursor: pointer;
+  }
+  

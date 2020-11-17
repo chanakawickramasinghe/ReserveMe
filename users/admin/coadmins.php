@@ -1,6 +1,14 @@
 <?php include('../../includes/session.php') ?>
 <?php include('../../includes/connection.php') ?>
 
+<?php 
+    checkSession();
+    if ($_SESSION["type"] != "admin"){
+        header('Location:./not-admin.php');
+    }
+
+?>
+
 <?php
     $name = "";
     $email = "";

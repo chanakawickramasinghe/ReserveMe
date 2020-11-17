@@ -57,7 +57,7 @@
         <input class="type-feild" type="email" name="email" placeholder="Email Address" required><br>
         <input class="type-feild" type="tel" name="mobile" placeholder="Mobile Number(Optional)"><br>
         <textarea class="type-feild"  style="height:200px;overflow:auto" scrolling="yes" type="text" name="msg" placeholder="Type message......" ></textarea><br>
-        <input type="submit" name="submit"  class="m-btn" value="Post" style="margin-left:30px"  required>
+        <input type="submit" name="submit"  class="hero-button" value="Post" style="margin-left:30px"  required>
         </form>
         </div>
         </td>

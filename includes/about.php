@@ -17,7 +17,7 @@
     
 </head>
     
-<body >
+<body class="about-body">
     <div class="topnav" id="myTopnav">
         <a style="margin-right:950px" href="../index.php"><img class = "logo" src="../images/logo.png"></a>
 		<a class="navtab" href="../users/user-type.php">Register</a>
@@ -35,7 +35,7 @@
         <table>
             <tr>
                 <td colspan=2>
-                <img src="../images/logo.png" alt="Website logo" style="width:400px;height:400px">                
+                <img src="../images/logo.png" alt="Website logo" style="width:80wh;height:100%">                
                 </td>
                 <td colspan=2>
 
@@ -125,6 +125,7 @@
                     </div>
                
         </div>        
+        
         </td>
       </tr>
         </table>

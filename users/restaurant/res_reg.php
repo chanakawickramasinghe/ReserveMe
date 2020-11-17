@@ -98,14 +98,14 @@
                     <label for="pnumber"> Profile Image</label>
                     <input type="file" name="res_image" class="reg-type-feild" placeholder="Upload Profile Image">
                     </p> 
+
+                    <p align="center"> <input type="submit" name="submit"  class="new-button" value="Register" required></p><br>
+                    <p>By creating an account you agree to our <a href="#" style="color:blue">Terms & Privacy</a>.</p>
                     </td>
                 </tr> 
                 </table>          
                 <br>
                 <hr><br>
-                <p>By creating an account you agree to our <a href="#" style="color:blue">Terms & Privacy</a>.</p><br><br>
-                   <p align="center"> <input type="submit" name="submit"  class="btn" value="Register" required></p>
-                   <br>
 
                    <div class="signin">
                    <p>Already have an account? <a href="../../includes/login.php" style="color:blue">Sign in</a>.</p>
@@ -115,7 +115,7 @@
         </div>
  
     <!--Include footer.php-->
-    <div><?php include "../../includes/footer.php" ?></div>
+    <!-- <div><?php include "../../includes/footer.php" ?></div> -->
     
     <!--script for onClickNav() for the navigation menu-->
     <script src="../../js/onClickNav.js"></script>

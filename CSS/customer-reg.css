@@ -8,17 +8,21 @@
   
   .login-box{
     width: 800px;
-    height: 850px;
+    height: 950px;
     margin: 30px auto;
     background: #ffffffec;
     color: #000000;
     box-sizing: border-box;
-    padding: 30px;
+    padding: 20px;
     position: center;
     border: #a17807 1px solid;
     border-radius: 5px;
     box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
     
+  }
+  
+  .login-box td{
+      padding: 30px;
   }
 
  
@@ -39,25 +43,35 @@
   border-radius:5px;
   outline:none;
   width: 280px;
-  margin: 20px;
+  margin: 10px;
   box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
   
 }
 
-.btn{
-    width: 100px;;
-    height: 6vh;
-    padding:0.6vh;
-    background: #0e1581;
-    border: none;
-    color:#ffffff;
-    border-radius: 5px;
-    font-size: large;
-}
-.btn:hover{
-    background: #000000;
+/*Start of button*/
+.hero-button{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 13px 20px;
+    font-weight: bold;
+    background: orange;
+    color: #fff;
     cursor: pointer;
+    margin-top: 10px;
+    border: none;
+	box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+    border-radius: 15% 15% 15% 15% / 50% 50% 50% 50%;
+    width: 150px;
 }
+
+.hero-button:hover{
+	background: #202020;
+	color: white;
+	border: none;
+}
+/*End of button*/
+
 .avatar{
     width: 100px;
     height: 100px;
@@ -70,12 +84,7 @@
 .icons{
     width: 30px;
     height: 30px;
-    margin-top: 5px;
-    /* border-radius: 5px; */
-    /* position: relative; */
-    /* margin-top: 1vh;
-    padding-top: 1vh;
-    left: calc(50% - 50px); */
+    
 }
 
 
@@ -184,3 +193,4 @@ input.invalid {
 .step.finish {
 	background-color: #4CAF50;
 }
+

@@ -43,7 +43,7 @@
                 </tr>
                 <tr>
                     <td><input class="btn-res" type="submit" value="Add Promo" name="res-add-promo-submit"></td>
-                    <td><input class="btn-res" type="button" value="Back" onclick="window.location.href='promotions.php'"></td>
+                    <td><input class="btn-res" type="button" value="Back" onclick="window.location.href='res-promo.php'"></td>
                 </tr>
 
             </table>

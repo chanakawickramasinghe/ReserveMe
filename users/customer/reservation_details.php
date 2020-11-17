@@ -45,7 +45,7 @@
                     <h4 class="">2020 Dec 04</h4>
                     <h4 class="">8.00pm</h4>
                     <h4 class="">For 2</h4>
-                    <h4 class="">Rs.2000.00</h4>
+                    <h4 class="">Table</h4>
                     <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Cancel</button>  
                 </div>
             </div>
@@ -59,7 +59,7 @@
                     <h4 class="">2021 Feb 19</h4>
                     <h4 class="">8.00pm</h4>
                     <h4 class="">For 4</h4>
-                    <h4 class="">Rs.6000.00</h4>
+                    <h4 class="">Hall</h4>
                     <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Cancel</button>  
                 </div>
             </div>
@@ -73,8 +73,8 @@
                     <h4 class="">2020 Apr 14</h4>
                     <h4 class="">10.00am</h4>
                     <h4 class="">For 6</h4>
-                    <h4 class="">Rs.4500.00</h4>
-                    <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Delete</button>  
+                    <h4 class="">Hall</h4>
+                    <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Cancel</button>  
                 </div>
             </div>
         </section>           
@@ -95,8 +95,7 @@
                     <h4 class="">2020 Sep 14</h4>
                     <h4 class="">6.00pm</h4>
                     <h4 class="">For 2</h4>
-                    <h4 class="">Rs.2000.00</h4>
-                    <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Delete</button>  
+                    <h4 class="">Table</h4>
                 </div>
             </div>
             <div class="food-container">
@@ -109,8 +108,7 @@
                     <h4 class="">2020 Jul 18</h4>
                     <h4 class="">4.00pm</h4>
                     <h4 class="">For 4</h4>
-                    <h4 class="">Rs.6000.00</h4>
-                    <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Delete</button>  
+                    <h4 class="">Hall</h4>
                 </div>
             </div>
             <div class="food-container">
@@ -123,8 +121,7 @@
                     <h4 class="">2020 Apr 14</h4>
                     <h4 class="">10.00am</h4>
                     <h4 class="">For 6</h4>
-                    <h4 class="">Rs.4500.00</h4>
-                    <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Delete</button>  
+                    <h4 class="">Hall</h4>
                 </div>
             </div>
             <div class="food-container">
@@ -137,8 +134,7 @@
                     <h4 class="">2020 Jul 18</h4>
                     <h4 class="">4.00pm</h4>
                     <h4 class="">For 4</h4>
-                    <h4 class="">Rs.6000.00</h4>
-                    <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Delete</button>  
+                    <h4 class="">Table</h4>
                 </div>
             </div>
             <div class="food-container">
@@ -151,8 +147,7 @@
                     <h4 class="">2020 Apr 14</h4>
                     <h4 class="">10.00am</h4>
                     <h4 class="">For 6</h4>
-                    <h4 class="">Rs.4500.00</h4>
-                    <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Delete</button>  
+                    <h4 class="">Table</h4>
                 </div>
             </div>
         </section>

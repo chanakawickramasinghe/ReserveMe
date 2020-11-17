@@ -7,12 +7,7 @@
 
                 <div class = "card-content">
                     <h3>Reservation</h3>
-                    <form>
-                        <div class = "form-row">
-                            <input type = "text" placeholder="Full Name">
-                            <input type = "email" placeholder="Email">
-                        </div>
-
+                    <form action="../preorder.php">
                         <div class = "form-row">
                             <input type = "date" placeholder="Select Date">
 
@@ -26,7 +21,7 @@
 
                         <div class = "form-row">
                             <input type = "number" placeholder="How Many Persons?" min = "1">
-                            <button class="reserve-button pulsate" type="" name="submit">Reserve a Table</button>
+                            <button class="reserve-button pulsate" type="" href="../users/customer/preorder.php" name="submit">Reserve a Table</button>
                         </div>
                     </form>
                 </div>

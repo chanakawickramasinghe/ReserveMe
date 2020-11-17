@@ -37,17 +37,17 @@
 			<div class="slideshow-container">
 				<div class="mySlides fade">
 				  	<img src="../../images/promos/1.jpg" style="width:100%">
-				  	<div class="text"><a class="hero-button pulsate" href="res_view.php">Visit</a></div>
+				  	<div class="text"><a class="hero-button pulsate" href="res_view/res_view.php?res_id=10">Visit</a></div>
 				</div>
 
 				<div class="mySlides fade">
 				  	<img src="../../images/promos/2.jpg" style="width:100%">
-				  	<div class="text"><a class="hero-button pulsate" href="res_view.php">Visit</a></div>
+				  	<div class="text"><a class="hero-button pulsate" href="res_view/res_view.php?res_id=8">Visit</a></div>
 				</div>
 
 				<div class="mySlides fade">
 				  	<img src="../../images/promos/3.jpg" style="width:100%">
-				  	<div class="text"><a class="hero-button pulsate" href="res_view.php">Visit</a></div>
+				  	<div class="text"><a class="hero-button pulsate" href="res_view/res_view.php?res_id=4">Visit</a></div>
 				</div>
 			</div>
 

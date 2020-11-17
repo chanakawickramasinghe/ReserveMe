@@ -48,11 +48,9 @@
                     <button class="search-button" type="submit" name="submit">Search<i class="fas fa-search"></i></button>
                 </div>
             </form>            
-        </div>		
-    </header>
-    <!--End of Header-->
-    
-    <!--Start of About-->
+        </div>	
+        <br><br><br><br>
+        <!--Start of About-->
     <section id="about">
         <div class="about-center">
             <!--Start of the article1-->
@@ -114,6 +112,10 @@
         </div>
     </section>
 	<!--End of About-->
+    </header>
+    <!--End of Header-->
+    
+    
 
     <!--Start of Card Section-->
     <?php 
@@ -129,7 +131,7 @@
                             echo"<div class=\"food-container\">
                                 <div class=\"food-box\">
                                     <h3 class=\"name\">". $rowProduct['res_name'] ."</h3> 
-                                    <img class=\"food-img\" src= \"../../../images/{$rowProduct['res_id']}.jpg\">
+                                    <img class=\"food-img\" src= \"../../../images/{$rowProduct['res_id']}\">
                                     <br>
                                     <i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i>
                                     <br>
@@ -150,7 +152,7 @@
                         echo"<div class=\"food-container\">
                             <div class=\"food-box\">
                                 <h3 class=\"name\">". $rowProduct['res_name'] ."</h3> 
-                                <img class=\"food-img\" src= \"../../../images/{$rowProduct['res_id']}.jpg\">
+                                <img class=\"food-img\" src= \"../../../images/{$rowProduct['res_id']}\">
                                 <br>
                                 <i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i>
                                 <br>
@@ -176,7 +178,7 @@
                         echo"<div class=\"food-container\">
                                 <div class=\"food-box\">
                                     <h3 class=\"name\">". $rowProduct['res_name'] ."</h3> 
-                                    <img class=\"food-img\" src= \"../../../images/{$rowProduct['res_id']}.jpg\">
+                                    <img class=\"food-img\" src= \"../../../images/{$rowProduct['res_id']}\">
                                     <br>
                                     <i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i>
                                     <br>

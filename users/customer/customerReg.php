@@ -56,11 +56,11 @@
                     <input type="email" name="email" class="reg-type-feild" placeholder="your email" required >
                     </p>
 			    
-		    <p>    
+		            <p>    
                     <img src="../../images/form_icons/padlock.png" alt="user" class="icons">
                     <label for="password">Password</label>
                     <input type="password" name="password" class="reg-type-feild" placeholder="Enter Password" id="password"  required>
-		    </p>
+		            </p>
 			    
                     <img src="../../images/form_icons/password.png" alt="user" class="icons">
                     <label for="password2">Confirm Password</label>
@@ -102,13 +102,13 @@
                 </table>          
                 <br>
                 <hr><br>
-                <p>By creating an account you agree to our <a href="#" style="color:blue">Terms & Privacy</a>.</p><br><br>
-                   <p align="center"> <input type="submit" name="submit"  class="btn" value="Register" required></p>
+                <p>By creating an account you agree to our <a href="#" style="color:blue">Terms & Privacy</a>.</p>
+                   <p align="center"> <input type="submit" name="submit"  class="hero-button" value="Register" required></p>
                    <br>
 
-                   <div class="signin">
-    <p>Already have an account? <a href="../../includes/login.php" style="color:blue">Sign in</a>.</p>
-  </div>
+                    <div class="signin">
+                    <p>Already have an account? <a href="../../includes/login.php" style="color:blue">Sign in</a>.</p>
+                    </div>
                 </form>    
             
         </div>

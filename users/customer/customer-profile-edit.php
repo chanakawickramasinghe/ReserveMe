@@ -46,40 +46,44 @@
                         <table class=\"form-edit-profile\">
                             <tr>
                                 <th>Your Name :</th>
-                                <td><input type=\"text\" name=\"EditName\" placeholder=\"Enter Name\" value=\"{$row['user_name']}\" required></td>
+                                <td><input type=\"text\" name=\"EditName\" placeholder=\"ex: John Shelby\" value=\"{$row['user_name']}\" required pattern=\"[a-zA-Z][a-zA-Z ]{2,}\"></td>
                             </tr>
                             <tr>
                                 <th>Email Address :</th>
-                                <td><input type=\"text\" name=\"EditEmail\" placeholder=\"Enter Email\" value=\"{$row['email']}\" required></td>
+                                <td><input type=\"email\" name=\"EditEmail\" placeholder=\"ex: example@reserveme.lk\" value=\"{$row['email']}\" required=\"\" oninvalid=\"this.setCustomValidity('Please Enter valid email')\"></td>
                             </tr>
                             <tr>
                                 <th>Contact No. :</th>
-                                <td><input type=\"text\" name=\"EditContact\" placeholder=\"Enter Contact No.\" value=\"{$row['contact_no']}\" required></td>
+                                <td><input type=\"text\" name=\"EditContact\" placeholder=\"ex: +94771570227\" value=\"{$row['contact_no']}\" required pattern=\"^\+?\d{11}\"></td>
                             </tr>
                             <tr>
                                 <th>Date of Birth : </th>
-                                <td><input type=\"date\" name=\"EditDOB\" value=\"{$row['dob']}\" required>
+                                <td><input type=\"date\" name=\"EditDOB\" value=\"{$row['dob']}\" min=\"1930-01-01\" max=\"2002-12-31\" required>
                                 </td>
                             </tr>
                             <tr>
                                 <th>Postal Number :</th>
-                                <td><input type=\"text\" name=\"EditPostalNumber\" placeholder=\"Enter Postal Number\" value=\"{$row['postal_number']}\" required></td>
+                                <td><input type=\"text\" name=\"EditPostalNumber\" placeholder=\"ex : No. 120\" value=\"{$row['postal_number']}\" required></td>
                             </tr>
                             <tr>
                                 <th>Street Name : </th>
-                                <td><input type=\"text\" name=\"EditStreet\" placeholder=\"Enter Street Name\" value=\"{$row['street']}\" required></td>
+                                <td><input type=\"text\" name=\"EditStreet\" placeholder=\"ex: Wall Street\" value=\"{$row['street']}\" required></td>
                             </tr>
                             <tr>
                                 <th>Living City : </th>
-                                <td><input type=\"text\" name=\"EditCity\" placeholder=\"Enter City\" value=\"{$row['city']}\" required></td>
+                                <td><input type=\"text\" name=\"EditCity\" placeholder=\"ex: Colombo\" value=\"{$row['city']}\" required></td>
                             </tr>
                             <tr>
                                 <th>Password :</th>
-                                <td><input type=\"password\" name=\"EditPassword\" placeholder=\"Enter Password\" id=\"password\" onkeyup='check()' required></td>
+                                <td><input type=\"password\" name=\"EditPassword\" placeholder=\"Enter Password\" id=\"password\" onkeyup='check()' 
+                                pattern=\"(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$\" 
+                                oninvalid=\"this.setCustomValidity('Password must include Uppercase & Lowercase characters with Numbers or Special Characters')\"required></td>
                             </tr>
                             <tr>
                                 <th>Confirm Password :</th>
-                                <td><input type=\"password\" name=\"EditPassword2\" placeholder=\"Re-Enter Password\" id=\"confirm-password\" onkeyup='check()' required></td>
+                                <td><input type=\"password\" name=\"EditPassword2\" placeholder=\"Re-Enter Password\" id=\"confirm-password\" onkeyup='check()'
+                                pattern=\"(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$\" 
+                                oninvalid=\"this.setCustomValidity('Password must include Uppercase & Lowercase characters with Numbers or Special Characters')\"required></td>
                             </tr>
                             <tr>
                                 <td colspan=\"2\"><p><span id='message' ></span></p></td>

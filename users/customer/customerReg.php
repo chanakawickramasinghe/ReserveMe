@@ -58,7 +58,14 @@
                     <input type="password" name="password" class="reg-type-feild" placeholder="ex: John@1234" id="password" minlength="8" 
                     pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" 
                     oninvalid="this.setCustomValidity('Password must include Uppercase & Lowercase characters with Numbers or Special Characters')" required>
-		
+
+                    <!-- <div class=password-container>
+                    <img src="../../images/form_icons/padlock.png" alt="user" class="icons">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" class="reg-type-feild" placeholder="ex: John@1234" id="password" minlength="8" 
+                    pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" 
+                    oninvalid="this.setCustomValidity('Password must include Uppercase & Lowercase characters with Numbers or Special Characters')" required>
+                    </div> -->
 			    
                     <img src="../../images/form_icons/password.png" alt="user" class="icons">
                     <label for="password2">Confirm Password</label>
@@ -69,7 +76,7 @@
 
                     <img src="../../images/form_icons/phone-call.png" alt="user" class="icons">
                     <label for="contact">Contact number</label>
-                    <input type="tel" name="contact" class="reg-type-feild" placeholder="ex: +94771570227" pattern='^\+?\d{11}' > 
+                    <input type="tel" name="contact" class="reg-type-feild" placeholder="ex: +94771570227" pattern='^\+?\d{11}'> 
                     </td>
 
                     <td>
@@ -134,7 +141,7 @@
             }
         }
 
-        function getAge(birthDateString) {
+      function getAge(birthDateString) {
     var today = new Date();
     var birthDate = new Date(birthDateString);
     var age = today.getFullYear() - birthDate.getFullYear();
@@ -150,6 +157,8 @@ if(age<16) {
 } 
     
         </script>
+
+
 </body>
 
 </html>

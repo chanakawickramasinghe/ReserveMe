@@ -43,7 +43,7 @@
             <td >Aamir</td>
             <td>aamirali@gmail.com</td>
             <td>2020-11-02 08:25</td>
-            <td>0768921288</td>
+            <td>+94768921288</td>
             <td>Breakfast</td>
             <td>2</td>
             <td><input type="button" value="Ok" class="hero-button" name="submit" href=""></td>
@@ -57,7 +57,7 @@
             <td >Nuwan</td>
             <td>nuwan@gamail.com</td>
             <td>2020-11-06 12:15</td>
-            <td>89452356</td>
+            <td>+9475452356</td>
             <td>Lunch</td>
             <td>5</td>
             <td><input type="button" value="Ok" class="hero-button" name="submit" href=""></td>
@@ -71,7 +71,7 @@
             <td >Chanaka</td>
             <td>chanaka@gmail.com</td>
             <td>2020-12-03 05:30</td>
-            <td>775623845</td>
+            <td>+94775623845</td>
             <td>Dinner</td>
             <td>3</td>
             <td><input type="button" value="Ok" class="hero-button" name="submit" href=""></td>

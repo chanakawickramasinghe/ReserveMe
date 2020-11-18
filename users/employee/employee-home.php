@@ -30,11 +30,7 @@
     </div>
     <!--End of nav-->
    
-    
-<table style="height:100%;width:100%"  >
-  <tr >
-  <td style="width:20%">
-  
+  <div class="sidenavbar">
     <?php 
      checkSession();
      $userID = $_SESSION["res_id"]; //have to add session id
@@ -46,33 +42,21 @@
       ?>
     <br><br><br><br>
     <div class="sidebar"> 
-      <span><a href="employee-profile.php" target="iframe_a" class="active">Employee Home</a></span>      
+      <span><a href="employee-profile.php" target="iframe_a" >Employee Home</a></span>      
       <a href="pre-order-menu.php" target="iframe_a">Pre - Order Menu</a>
       <a href="queries.php" target="iframe_a">Queries</a>
       <a href="table-reservation.php" target="iframe_a">Manage Reservation</a>
       <a href="reception-hall.php" target="iframe_a">Reception Hall</a>
     </div>
 
-  </td>
+  </div>
 
-  <td style="width:80%">
-  <iframe src="employee-profile.php" frameborder="0px" name="iframe_a" scrolling="yes" style="width:100% ; height:40vw;"></iframe> 
-  </td>  
+  <iframe src="employee-profile.php" frameborder="0px" name="iframe_a" scrolling="yes" style="width:80% ; height:80vh;float:right"></iframe> 
 
-  </tr>    
-  
-  
-  
-  
-  
-  
-  
-  <tr><td colspan=2>
+  <table width="100%"><tr><td>
   <?php include('../../includes/footer.php'); ?>
-  </td></tr>
-  </table>                
-
-
+  </td></tr></table>
+  
 <!--script for onClickNav() for the navigation menu-->
 <script src="../../js/onClickNav.js"></script>
     

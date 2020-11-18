@@ -13,7 +13,7 @@
         <script src="../../js/manage-user-search.js"></script>
     </head>
     <body>
-
+        <br>
         <h1 style="color:orange">Past Queries</h1>
 
         <div class="promo-btn-bar">

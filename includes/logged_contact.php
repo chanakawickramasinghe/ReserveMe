@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,23 +55,23 @@
         <table>
         <tr>
         <td>
-        <form action="contact.php" method="post" onsubmit="myFunction()">
+        <form action="logged_contact.php" method="post" onsubmit="myFunction()">
 
-        <select name="comment" id="comment" class="type-feild" default="How can we help you">
-        <option value="q0"></option>
-        <option value="q1">I found incorrect/outdated information on a page.</option>
-        <option value="q2">There is a photo/review that is bothering me and I would like to report it.</option>
-        <option value="q3">The website/app are not working the way they should.</option>
-        <option value="q4">I would like to give feedback/suggestions.</option>
-        <option value="q5">I need some help with my blog.</option>
-        <option value="q5">Other.</option>
+        <select name="comment" id="comment" class="type-feild-comment" default="How can we help you">
+        <option value="q0" disabled selected value> -- select an option -- </option>
+        <option value="Incorrect/outdated information on a page.">I found incorrect/outdated information on a page.</option>
+        <option value="Photo/Review Report">There is a photo/review that is bothering me and I would like to report it.</option>
+        <option value="Website is not working">The website is not working the way they should.</option>
+        <option value="Feedback / Suggestions">I would like to give feedback / suggestions</option>
+        <option value="Complaint">Complaint</option>
+        <option value="Other">Other</option>
         </select><br>
       
-        <input class="type-feild" type="text" name="fname" placeholder="Full Name" required><br>
-        <input class="type-feild" type="email" name="email" placeholder="Email Address" required><br>
+        <!-- <input class="type-feild" type="text" name="fname" value="Chanaka" placeholder="Full Name" required><br> -->
+        <!-- <input class="type-feild" type="email" name="email" placeholder="Email Address" required><br> -->
         <input class="type-feild" type="tel" name="mobile" placeholder="Mobile Number(Optional)"><br>
-        <input class="type-feild"  style="height:270px;overflow:auto" type="text" name="msg" placeholder="Type message......" ><br>
-        <input type="submit" name="submit"  class="btn" value="Post" style="margin-left:30px"  required>
+        <textarea class="type-feild-comment"  style="height:200px;overflow:auto" scrolling="yes" type="text" name="msg" placeholder="Type message......" ></textarea><br>
+        <input type="submit" name="submit"  class="hero-button" value="Post" style="margin-left:30px"  required>
         </form>
         </div>
         </td>
@@ -91,14 +91,16 @@
     <div><?php include "../includes/footer.php" ?></div>
 
     <?php include('connection.php'); ?>
+    <?php include('session.php'); ?>
 
     <?php
      
     if(isset($_POST['submit'])){
         //Assign input data from form to variables
+        checkSession();
         $comment=$_POST['comment'];
-        $name= $_POST['fname'];
-        $email= $_POST['email'];
+        $name= $_SESSION["name"];
+        $email= $_SESSION["email"];
         $mobile= $_POST['mobile'];
         $msg= $_POST['msg'];
 

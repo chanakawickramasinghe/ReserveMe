@@ -48,6 +48,19 @@
   
 }
 
+.type-feild-comment{
+    font-size: medium;
+    height: 6vh;
+    padding: 0.6vh;
+    border-color:rgb(100, 103, 107);
+    border-radius:3px;
+    outline:none;
+    width: 500px;
+    margin: 20px;
+    box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
+    
+}
+
 /*Start of button*/
 .hero-button{
     display: inline-block;

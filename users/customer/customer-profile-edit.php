@@ -49,7 +49,7 @@
                                 <td><input type=\"text\" name=\"EditName\" placeholder=\"Enter Name\" value=\"{$row['user_name']}\" required></td>
                             </tr>
                             <tr>
-                                <th>Home Address :</th>
+                                <th>Email Address :</th>
                                 <td><input type=\"text\" name=\"EditEmail\" placeholder=\"Enter Email\" value=\"{$row['email']}\" required></td>
                             </tr>
                             <tr>

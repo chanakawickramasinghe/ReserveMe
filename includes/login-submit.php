@@ -31,6 +31,7 @@ if(isset($_POST['submit'])){
         $_SESSION["userID"] = $userRow['user_id'];
         $_SESSION["userType"] = 'Customer';
         $active_status= $userRow['active_status'];
+        $_SESSION["email"] = $email;
 
         if($active_status == 1){
             $log_customer_sql = "INSERT INTO log (user_id, user_type, date_time, activity) 
@@ -54,6 +55,7 @@ if(isset($_POST['submit'])){
         $_SESSION["resID"] = $userRow['res_id'];
         $_SESSION["userType"] = 'Restaurant';
         $active_status= $userRow['active_status'];
+        $_SESSION["email"] = $email;
 
         if($active_status == 1){
             $log_res_sql = "INSERT INTO log (user_id, user_type, date_time, activity) 

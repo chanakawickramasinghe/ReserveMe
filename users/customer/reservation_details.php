@@ -31,7 +31,7 @@
     
     <!--Start of Ongoing Card Section-->
         <div class="title_text">
-            <h3>Ongoing <font>Reservaions</font></h3>
+            <h3>Ongoing <font color="orange">Reservaions</font></h3>
         </div>
         <section class="food">
             
@@ -82,7 +82,7 @@
 
     <!--Start of Past Card Section-->
     <div class="title_text">
-        <h3>Past <font>Reservaions</font></h3>
+        <h3>Past <font color="orange">Reservaions</font></h3>
     </div>
     <section class="food">
             <div class="food-container">

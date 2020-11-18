@@ -21,9 +21,21 @@
 
                         <div class = "form-row">
                             <input type = "number" placeholder="How Many Persons?" min = "1">
-                            <button class="reserve-button pulsate" type="" href="../users/customer/preorder.php" name="submit">Reserve a Table</button>
+                            <button onclick="myFunction()" class="reserve-button pulsate" type="" href="../preorder.php" name="submit">Reserve a Table</button>
                         </div>
                     </form>
                 </div>
             </div>
         </section>
+
+        <script>
+            function myFunction() {
+                if (confirm("Do you want to preorder?")){
+                    form.action = 'preorder.php';
+                } else {
+                    form.action = 'success.php';
+                }
+            }
+        </script>
+
+

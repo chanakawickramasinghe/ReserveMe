@@ -30,40 +30,62 @@
     <!--End of nav-->
     
     <!--Start of Ongoing Card Section-->
+        <!--Start of Ongoing Card Section-->
         <div class="title_text">
-            <h3>Pre<font>Order</font></h3>
+            <h3>Reservation successfull!</h3>
+            <img class="success-img" src= "../../images/success.png">
         </div>
-        <form class="food">
+            
+        <div class="title_text">
+            <h3>Ongoing <font>Reservaions</font></h3>
+        </div>
+        <section class="food">
             <div class="food-container">
                 <div class="food-box">
-                    <h4 class="">Kottu</h4>
-                    <h4 class="">Rs.500.00</h4>
-                    <input type="number" id="quantity" name="quantity" min="1" max="5" placeholder="1">
+                    <h3 class="name">KFC</h3> 
+                    <img class="food-img" src= "../../images/4.jpg">
+                    <br>
+                    <i class="fas fa-map-marker-alt">Colombo</i>
+                    <br>
+                    <h4 class="">2020 Dec 04</h4>
+                    <h4 class="">8.00pm</h4>
+                    <h4 class="">For 2</h4>
+                    <h4 class="">Table</h4>
+                    <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Cancel</button>  
                 </div>
             </div>
             <div class="food-container">
                 <div class="food-box">
-                <h4 class="">Burger</h4>
-                    <h4 class="">Rs650.00</h4>
-                    <input type="number" id="quantity" name="quantity" min="1" max="5" placeholder="1">
+                    <h3 class="name">KFC</h3> 
+                    <img class="food-img" src= "../../images/10.jpg">
+                    <br>
+                    <i class="fas fa-map-marker-alt">Colombo</i>
+                    <br>
+                    <h4 class="">2021 Feb 19</h4>
+                    <h4 class="">8.00pm</h4>
+                    <h4 class="">For 4</h4>
+                    <h4 class="">Hall</h4>
+                    <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Cancel</button>  
                 </div>
             </div>
             <div class="food-container">
                 <div class="food-box">
-                <h4 class="">Cappuccino</h4>
-                    <h4 class="">Rs.500.00</h4>
-                    <input type="number" id="quantity" name="quantity" min="1" max="5" placeholder="1">
+                    <h3 class="name">Fab</h3> 
+                    <img class="food-img" src= "../../images/8.jpg">
+                    <br>
+                    <i class="fas fa-map-marker-alt">Negombo</i>
+                    <br>
+                    <h4 class="">2020 Apr 14</h4>
+                    <h4 class="">10.00am</h4>
+                    <h4 class="">For 6</h4>
+                    <h4 class="">Hall</h4>
+                    <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Cancel</button>  
                 </div>
             </div>
-            <div class="food-container">
-                <div class="food-box">
-                <h4 class="">Pasta</h4>
-                    <h4 class="">Rs.500.00</h4>
-                    <input type="number" id="quantity" name="quantity" min="1" max="5" placeholder="1">
-                </div>
-            </div>
-            <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Order</button>  
-        </form>           
+        </section>           
+    <!--End of Ongoing Card Section-->
+
+              
     <!--End of Ongoing Card Section-->
 
     
@@ -75,3 +97,4 @@
     <script src="../../js/onClickNav.js"></script>
 </body>
 </html>
+

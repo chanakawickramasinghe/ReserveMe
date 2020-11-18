@@ -78,6 +78,11 @@ body{
 	color:orange;
 }
 
+.title_text img{
+	margin-left: 50%;
+  	margin-right: auto;
+}
+
 .food-box p{
 	color:#4d4d4d70;
 	font-family: myriad pro;

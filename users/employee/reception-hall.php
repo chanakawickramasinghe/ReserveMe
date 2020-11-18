@@ -101,7 +101,7 @@
                 
                 <tr><td>Ball room</td>
                     <td>2020.11.19</td>
-                    <td>Lunch</td>
+                    <td>Morning</td>
                     <td><button class="hero-button">Remove</button></td>
                 </tr>
                 <tr>
@@ -109,7 +109,7 @@
                 </tr>
                 <tr><td>Party pool</td>
                     <td>2020.11.25</td>
-                    <td>Dinner</td>
+                    <td>Later in the day</td>
                     <td><button class="hero-button">Remove</button></td>
                 </tr>
                 <tr>
@@ -117,7 +117,7 @@
                 </tr>
                 <tr><td>Ball room</td>
                     <td>2020.11.23</td>
-                    <td>Breakfast</td>
+                    <td>Night</td>
                     <td><button class="hero-button">Remove</button></td>
                 </tr>
                 <tr>
@@ -125,7 +125,7 @@
                 </tr>
                 <tr><td>Party pool</td>
                     <td>2020.12.19</td>
-                    <td>All day</td>
+                    <td>Morning</td>
                     <td><button class="hero-button">Remove</button></td>
                 </tr>
                 <tr>

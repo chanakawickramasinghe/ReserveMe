@@ -31,32 +31,43 @@
     
     <!--Start of Ongoing Card Section-->
         <div class="title_text">
-            <h3>Reser<font>ve</font></h3>
+            <h3>Bo<font>ok</font></h3>
         </div>
         <form method="post" action="https://sandbox.payhere.lk/pay/checkout">  
             <table class="preorder" id="" border="0">
                 <tr>
-                    <td>Hall Name</td>
-                    <td>Rs.50 000.00</td>
+                    <th>Hall Name</th>
+                    <td>Avenra</td>
                 </tr>
                 <tr>
+                    <th>Guests</th>
                     <td>100</td>
-                    <td>4/12/2020</td>
                 </tr>
                 <tr>
+                    <th>Date</th>
+                    <td>04/12/2020</td>
+                </tr>
+                <tr>
+                    <th>From</th>
                     <td>8.00AM</td>
+                </tr>
+                <tr>
+                    <th>To</th>
                     <td>3.00PM</td>
+                </tr>
+                <tr>
+                    <th>Advance Payment</th>
+                    <td>100 000.00 LKR</td>
                 </tr>
                 <tr></tr>
                 <tr>
-                    <td></td>
-                    <td><input type="submit" value="Order"> </td>                
+                    <td><input class="food-btn" type="submit" value="Book"></td>                
                 </tr>
                
             </table>
-    
+    <div class="hidden">
     <input type="hidden" name="merchant_id" value="1215949">    <!-- Replace your Merchant ID -->
-    <input type="hidden" name="return_url" value="success.php">
+    <input type="hidden" name="return_url" value="http://localhost/ReserveMe/users/customer/success.php">
     <input type="hidden" name="cancel_url" value="preorder.php">
     <input type="hidden" name="notify_url" value="info.reserve.lk@gmail.com">  
     <br><br><br>
@@ -72,6 +83,7 @@
     <input type="hidden" name="address" value="No.1, Galle Road">
     <input type="hidden" name="city" value="Colombo">
     <input type="hidden" name="country" value="Sri Lanka"><br><br> 
+        </div>
 </form> 
 <!--Include footer.php-->
 <div><?php include "../../../includes/footer.php" ?></div>

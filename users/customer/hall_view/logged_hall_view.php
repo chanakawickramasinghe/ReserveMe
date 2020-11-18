@@ -1,6 +1,6 @@
 <?php include('../../../includes/connection.php'); ?>
 <!DOCTYPE html>
-<html>
+<html> 
 <head>
     <meta charset="utf-8"/>
     <meta content="IE-edge" http-equiv="X-UA-Compatible"/>
@@ -37,7 +37,7 @@
             while($rowProduct  = mysqli_fetch_assoc($resultProduct)){  
                 echo"<section class=\"main\">
                         <div class=\"m-img\">       
-                            <img class=\"food-img\" src= \"../../../images/{$rowProduct['res_id']}\">
+                            <img class=\"food-img\" src= \"../../../images/restaurant/{$rowProduct['res_image']}\">
                         </div>
                         <div class=\"m-text\">
                             <h2>". $rowProduct['res_name'] ."</h2>
@@ -114,9 +114,40 @@
 	</section>
 	<!--End of iframe section-->
 
-    <!--Start of Reservation Form-->
-    <div><?php include "../../../includes/reservation_form.php" ?></div>
-    <!--End of Reservation Form-->
+    <!--Start of reservationform section-->
+    <section class = "banner">
+            <h2>BOOK YOUR TABLE NOW</h2>
+            <div class = "card-container">
+                <div class = "card-img">
+                    <!-- image here -->
+                </div>
+
+                <div class = "card-content">
+                    <h3>Reservation</h3>
+                    <form action="checkout.php">
+                        <div class = "form-row">
+                            <input type = "date" placeholder="Select Date">
+
+                            <select name = "hours">
+                                <option value = "session-select">Select Session</option>
+                                <option value = "1">Breakfast</option>
+                                <option value = "1">Lunch</option>
+                                <option value = "1">Dinner</option>
+                            </select>
+                        </div>
+
+                        <div class = "form-row">
+                            <input type = "number" placeholder="How Many Persons?" min = "1">
+                            <input type = "time" placeholder="Arrival time?">
+                        </div>
+                        <div class = "form-row">
+                            <button href="checkout.php" class="reserve-button pulsate" type=""  name="submit">Reserve</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!--Start of reservationform section-->
 
 	<!--Include footer.php-->
     <div><?php include "../../../includes/footer.php" ?></div>

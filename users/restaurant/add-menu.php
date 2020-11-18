@@ -57,13 +57,13 @@
                     <br><button type="button" class="btn-promo-remove">Remove</button>
                     </td>
                     <td><img class="img-promo" src="">
-                    <br><button type="button" class="btn-promo-remove">Remove</button>
+                    <!-- <br><button type="button" class="btn-promo-remove">Remove</button> -->
                     </td>  
                     <td><img class="img-promo" src="">
-                    <br><button type="button" class="btn-promo-remove">Remove</button>
+                    <!-- <br><button type="button" class="btn-promo-remove">Remove</button> -->
                     </td> 
                     <td><img class="img-promo" src="">
-                    <br><button type="button" class="btn-promo-remove">Remove</button>
+                    <!-- <br><button type="button" class="btn-promo-remove">Remove</button> -->
                     </td>            
                 </tr>
             </table>  

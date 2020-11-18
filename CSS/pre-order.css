@@ -46,3 +46,12 @@
     padding: 0.3vw 1vw 0.3vw 1vw;
   }
   
+  .input-file{
+    font-size: medium;
+    color: rgb(129, 129, 182);
+    width: 20vw;
+    border-radius: 7px;
+    border: 2px solid grey;
+    float: center;
+    padding: 0.3vw 1vw 0.3vw 1vw;
+  }

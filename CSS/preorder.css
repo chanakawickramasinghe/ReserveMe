@@ -111,12 +111,13 @@ body{
     text-transform: uppercase;
     cursor: pointer;
 	font-weight: bold;
-	float: right;
+	left:20%;
 }
 
 .food-btn:hover{
 	background: #202020;
 	color:#FFFFFF;
+	
 }
 .food-box:hover .food-btn{
     display: flex;
@@ -130,15 +131,9 @@ body{
 /*End of Cards Section*/
 
 .preorder{
-	width:100%;
-}
-
-.preorder td{
-	width:200px;
-}
-
-.preorder{
-	left: 20px;
+	width:40%;
+	margin-left: 430px;
+  	margin-right: auto;
 }
 
 .success-img{
@@ -146,3 +141,25 @@ body{
 	width: 50px;
 }
 
+th{
+	float: left;
+}
+
+.hidden{
+	display: none;
+}
+@media(max-width:1045px){
+	.preorder{
+		width:60%;
+		margin-left: 230px;
+  		margin-right: auto;
+	}
+}
+
+@media(max-width:600px){
+	.preorder{
+		width:70%;
+		margin-left: 100px;
+  		margin-right: auto;
+	}
+}

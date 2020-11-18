@@ -11,11 +11,13 @@
         <link rel="stylesheet" href="../../CSS/nav.css">
         <link rel="stylesheet" href="../../CSS/footer.css">
         <link rel="stylesheet" href="../../CSS/employee.css">
+        <link rel="stylesheet" href="../../CSS/customer-reg.css">
+
 
         
     </head>
-    <body class="subbody">        
-                
+    <body>        
+    <div style="margin:20px">      
         <!-- Adding the table with current user details -->
         <?php
         checkSession();
@@ -31,24 +33,105 @@
         
         $userquery = mysqli_query($connection,$sql);
         $row = mysqli_fetch_assoc($userquery);
-        echo"<h1 class=div-c>Welcome ".$row['emp_name']." , Employee of ".$row2['res_name']."</h1>";
+        echo"<center><h1 class=div-c>Welcome ".$row['emp_name']." , Employee of ".$row2['res_name']."</h1></center>";
     
        
         ?>
-        <center>
-        <table border="1px black solid" class="tab-emp">
+
+        <br>
+        <table class="tab-emp">
         <tr>
-        <td>Name</td><td><?php echo $row['emp_name'];?></td>
+        <td>Name : </td>
+        <td><?php echo $row['emp_name'];?></td>
         </tr>
-        <tr><td>Email</td><td><?php echo $row['emp_email'];?></td>
+        <tr>
+            <td>Email : </td>
+            <td><?php echo $row['emp_email'];?></td>
         </tr>
-        <tr><td>Contact No:</td><td><?php echo $row['emp_mobile'];?></td>
+        <tr>
+            <td>Contact No :</td>
+            <td><?php echo $row['emp_mobile'];?></td>
         </tr>
         
         </table>
-        </center>
-        <img src="../../images/deco/restaurant-staff.jpg" alt="feedback" class="revimage"><hr style="width:80%">
-        </br>
+       
         
+        <img src="../../images/deco/restaurant-staff.jpg" alt="feedback" class="resimage"><hr style="width:90%">
+        <br> <br>
+
+
+            
+        <form action="#" method="post">
+            <h3>Not Available Reservation</h3>
+            <label for="date">Add Date</label><br>
+            <input type="date" name="date" class="reg-type-feild" placeholder="Date">
+            <br>
+
+            <label for="meal">Meal time</label><br>
+            <select name="meal" id="meal" class="reg-type-feild">
+            <option value="m0" disabled selected value> -- select meal time -- </option>
+            <option value="m1">Breakfast</option>
+            <option value="m2">Lunch</option>
+            <option value="m3">Dinner</option>
+            <option value="m4">All day</option>
+            </select>
+            <br>
+
+            <input type="button" value="Set to unavailable" class="hero-button">
+
+        </form>
+        <br>
+        <div class="subbody">
+        <h2> Table Availability </h2>
+        <h3> Not availability on</h3>
+        <div class="contentbox">
+        <table class="tab-not-available">
+                <tr>
+                    <th>Date</th>
+                    <th>Meal</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td colspan="3"><hr></td>
+                </tr>
+                
+                <tr>
+                    <td>2020.11.19</td>
+                    <td>Lunch</td>
+                    <td><button class="hero-button">Remove</button></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><hr></td>
+                </tr>
+                <tr>
+                    <td>2020.11.25</td>
+                    <td>Dinner</td>
+                    <td><button class="hero-button">Remove</button></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><hr></td>
+                </tr>
+                <tr>
+                    <td>2020.11.23</td>
+                    <td>Breakfast</td>
+                    <td><button class="hero-button">Remove</button></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><hr></td>
+                </tr>
+                <tr>
+                    <td>2020.12.19</td>
+                    <td>All day</td>
+                    <td><button class="hero-button">Remove</button></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><hr></td>
+                </tr>
+
+            </table>
+            </div>  
+        
+            </div>
+    </div>    
     </body>
 </html> 

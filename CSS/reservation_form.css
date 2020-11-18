@@ -1,5 +1,5 @@
 .banner{
-    min-height: 60vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,7 +12,7 @@
     grid-template-columns: 420px 500px;
 }
 .card-img{
-    background: url("../images/img2.jpg") center/cover no-repeat;
+    margin-top: 1cm;
 }
 .banner h2{
     padding-bottom: 40px;
@@ -34,7 +34,7 @@
     width: 90%;
     margin: 0 auto;
 }
-form select, form input{
+.reservation_form select, .reservation_form input{
     display: block;
     width: 100%;
     margin: 15px 12px;
@@ -46,17 +46,17 @@ form select, form input{
     border-bottom: 1px solid #eee;
     font-weight: 300;
 }
-form input[type = text], form input[type = number], form input[type = date], form input::placeholder, select{
+.reservation_form input[type = text], form input[type = number], form input[type = date], form input::placeholder, select{
     color: #9a9a9a;
 }
-form input[type = submit]{
+.reservation_form input[type = submit]{
     color: #fff;
     background: #f2745f;
     padding: 12px 0;
     border-radius: 4px;
     cursor: pointer;
 }
-form input[type = submit]:hover{
+.reservation_form input[type = submit]:hover{
     opacity: 0.9;
 }
 @media(max-width: 992px){
@@ -67,4 +67,38 @@ form input[type = submit]:hover{
     .card-img{
         height: 330px;
     }
+}
+
+.food-btn{
+	position: relative;
+	width:60px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family:calibri;
+	left: 50%;
+	border-radius: 200px;
+	background: orange;
+    color:#FFFFFF;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+	font-weight: bold;
+	left:20%;
+}
+
+.food-btn:hover{
+	background: #202020;
+	color:#FFFFFF;
+	
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: none;
 }

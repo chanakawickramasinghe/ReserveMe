@@ -11,24 +11,26 @@
     <!-- link the Style sheet -->
     <link rel="stylesheet" type="text/css" href="../CSS/style.css">
     <link rel="stylesheet" type="text/css" href="../CSS/nav.css">    
-    <link rel="stylesheet" href="../CSS/footer.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/footer.css">
+    <!--FontAwesome-------->
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
 	
     
 </head>
     
-<body class="about-body">
+<body>
+    <!-- Start of nav tab -->
     <div class="topnav" id="myTopnav">
-        <a style="margin-right:950px" href="../index.php"><img class = "logo" src="../images/logo.png"></a>
+        <a href="../index.php"><img class = "logo" src="../images/logo.png"></a>
 		<a class="navtab" href="../users/user-type.php">Register</a>
 		<a class="navtab" href="login.php">Login</a>
 		<a class="navtab" href="contact.php">Contact</a>
 		<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
     </div><br>
-    
+    <!-- End of nav tab -->
     
     <div class="about-body"> 
-        <img src="../images/aboutupdated.jpg" alt="about us picture" style="height:200px;width:100%">
+        <img src="../images/aboutupdated.jpg" alt="about us picture" style="height:230px;width:100%">
         
         
         

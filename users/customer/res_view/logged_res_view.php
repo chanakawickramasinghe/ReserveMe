@@ -69,29 +69,6 @@
     <!--End of add section-->
     <!--End of main-section-->
 
-    <!--Start of pop up login page-->
-    <div class="form-popup" id="myForm">
-        <form action="../includes/login-submit.php" method="post" class="form-container">
-            <h1>Login</h1>
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="password" required>
-			 <h3 class="error-msg"><?php include_once('../../../includes/message.php'); ?></h3> 
-            <div class="pass">
-                <a href="#">Forgot Password?</a>
-            </div>
-            <button type="submit" class="btn">Login</button>
-            <button type="button" class="btn cancel" onclick="onClickCloseForm()">Close</button>
-            <div class="signup">Don't have account?
-                <a href="#">Signup Now</a>
-            </div>
-        </form>
-    </div>
-
-    <script src="../../../js/onClickOpenForm.js"></script>
-    <!--End of pop up login page-->
-
     <!--Start of iframe section-->
     <section class="content">
 	    <div class="content-container">	
@@ -121,12 +98,12 @@
             <h2>BOOK YOUR TABLE NOW</h2>
             <div class = "card-container">
                 <div class = "card-img">
-                    <!-- image here -->
+                    <img src="../../../images/table.jpg" style="width:100%">
                 </div>
 
                 <div class = "card-content">
                     <h3>Reservation</h3>
-                    <form action="preorder.php">
+                    <div class="reservation_form">
                         <div class = "form-row">
                             <input type = "date" placeholder="Select Date">
 
@@ -143,13 +120,27 @@
                             <input type = "time" placeholder="Arrival time?">
                         </div>
                         <div class = "form-row">
-                            <button href="preorder.php" class="reserve-button pulsate" type=""  name="submit">Reserve</button>
+                            <button onclick="onClickOpenForm()"  class="reserve-button pulsate" type=""  name="submit">Reserve</button>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </section>
         <!--Start of reservationform section-->
+
+        <!--Start of pop up login page-->
+    <div class="form-popup" id="myForm">
+        <div class="form-container">
+            <h1>Do you want to Preorder?</h1>
+            <div class="left"><button type="submit" class="food-btn" onclick="window.location.href='preorder.php'">Yes</button></div>
+            <div class="right"><button type="submit" class="food-btn" onclick="window.location.href='../success.php'">No</button></div>
+            <button type="button" class="btn cancel" onclick="onClickCloseForm()">Close</button>
+
+                    </div>
+    </div>
+
+    <script src="../../../js/onClickOpenForm.js"></script>
+    <!--End of pop up login page-->
 
     <!--Include footer.php-->
     <div><?php include "../../../includes/footer.php" ?></div>

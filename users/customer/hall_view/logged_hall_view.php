@@ -119,11 +119,11 @@
             <h2>BOOK YOUR TABLE NOW</h2>
             <div class = "card-container">
                 <div class = "card-img">
-                    <!-- image here -->
+                <img src="../../../images/hall.jpg" style="width:100%">
                 </div>
 
                 <div class = "card-content">
-                    <h3>Reservation</h3>
+                    <h3>Book</h3>
                     <form action="checkout.php">
                         <div class = "form-row">
                             <input type = "date" placeholder="Select Date">
@@ -141,7 +141,7 @@
                             <input type = "time" placeholder="Arrival time?">
                         </div>
                         <div class = "form-row">
-                            <button href="checkout.php" class="reserve-button pulsate" type=""  name="submit">Reserve</button>
+                            <button href="checkout.php" class="reserve-button" type=""  name="submit">Book</button>
                         </div>
                     </form>
                 </div>

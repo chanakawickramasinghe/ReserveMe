@@ -18,7 +18,7 @@
     <br>
     <h1>Reservations</h1>
     <!-- <button href="table-reservation.php" target="iframe" class="hero-button">Dine in</button> -->
-    <button href="menu-order.php" class="hero-button" style="float:right">Menu</button>
+    <button href="menu-reservation.php" class="hero-button" style="float:right;margin-right:3%">Menu</button>
     <br><br>
 
     <div style="padding:10px">

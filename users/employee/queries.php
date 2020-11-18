@@ -14,14 +14,10 @@
 
     </head>
     <body class="subbody">
-
-
-        <!-- <div class="content-div"> -->
-            <br><br>
-            <h1>New Queries</h1>
+        <div class="content-div">
+            <center><h1>New Queries</h1></center>
 
             <div class="promo-btn-bar">
-                <button type="button" class="btn-promo" onclick="window.location.href='send-new-message.php'">Queries</button>
                 <button type="button" class="btn-promo" onclick="window.location.href='admin-past-messages.php'">Replied Queries</button>
             </div>
 
@@ -29,19 +25,19 @@
                 <tr><th>Shall you do for a special food order menu?</th></tr>
                 <tr><td>This is for childs party for nursary school. So we have a special food recipient to make. Can you make it?</td></tr>
                 <tr><td>from <b>John Henricks</b> on <b>2020-11-16 12:23:42</b></td></tr>
-                <tr><td class="txt-area"><textarea placeholder="Enter Your Reply..." class="reply-area"></textarea></td></tr>
-                <tr><td class="txt-area"><button type="submit" class="btn-reply">Send</button></td></tr>
+                <tr><td><textarea placeholder="Enter Your Reply..." class="reply-area"></textarea></td></tr>
+                <tr><td><button type="submit" class="btn-reply">Send</button></td></tr>
 
                 <td><hr></td>
 
                 <tr><th>Are you having the event managment?</th></tr>
                 <tr><td>We are palnning for wedding reception.So could you arrage all the needs which we want to make it better.like Sound arrangements, Decoration and all. </td></tr>
                 <tr><td>from <b>Carl Johnson</b> on <b>2020-11-10 13:20:01</b></td></tr>
-                <tr><td class="txt-area"><textarea placeholder="Enter Your Reply..." class="reply-area"></textarea></td></tr>
-                <tr><td class="txt-area"><button type="submit" class="btn-reply">Send</button></td></tr>
+                <tr><td><textarea placeholder="Enter Your Reply..." class="reply-area"></textarea></td></tr>
+                <tr><td><button type="submit" class="btn-reply">Send</button></td></tr>
 
             </table>
-        <!-- </div> -->
+        </div>
 
 
 

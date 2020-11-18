@@ -49,7 +49,7 @@
       <span><a href="employee-profile.php" target="iframe_a" class="active">Employee Profile</a></span>      
       <a href="pre-order-menu.php" target="iframe_a">Pre - Order Menu</a>
       <a href="queries.php" target="iframe_a">Queries</a>
-      <a href="manage-reservation.php" target="iframe_a">Manage Reservation</a>
+      <a href="table-reservation.php" target="iframe_a">Manage Reservation</a>
       <a href="reception-hall.php" target="iframe_a">Reception Hall</a>
     </div>
 

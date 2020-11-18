@@ -50,11 +50,21 @@
                     <th>Image 05</th>
                 </tr>
                 <tr>
-                    <td><img class="img-promo" src="../../images/restaurant/P2.jpg" width="150px" height="250px"></td>
-                    <td><img class="img-promo" src="../../images/restaurant/P3.jpg" width="150px" height="250px"></td>
-                    <td><img class="img-promo" src=""></td>  
-                    <td><img class="img-promo" src=""></td> 
-                    <td><img class="img-promo" src=""></td>            
+                    <td><img class="img-promo" src="../../images/restaurant/P2.jpg" width="150px" height="250px">
+                    <br><button type="button" class="btn-promo-remove">Remove</button>
+                    </td>
+                    <td><img class="img-promo" src="../../images/restaurant/P3.jpg" width="150px" height="250px">
+                    <br><button type="button" class="btn-promo-remove">Remove</button>
+                    </td>
+                    <td><img class="img-promo" src="">
+                    <br><button type="button" class="btn-promo-remove">Remove</button>
+                    </td>  
+                    <td><img class="img-promo" src="">
+                    <br><button type="button" class="btn-promo-remove">Remove</button>
+                    </td> 
+                    <td><img class="img-promo" src="">
+                    <br><button type="button" class="btn-promo-remove">Remove</button>
+                    </td>            
                 </tr>
             </table>  
         </form>

@@ -54,7 +54,7 @@
                 <tr>
                     <td>Total</td>
                     <td>Rs.1000.00</td>
-                    <td><input type="submit" value="Confirm"> </td>                
+                    <td><input class="food-btn" type="submit" value="Confirm"> </td>                
                 </tr>
                
             </table>

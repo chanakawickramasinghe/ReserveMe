@@ -31,7 +31,7 @@
             <a href="add-preordermenu.php" target="iframeBox">Pre - Order Menu</a>
             <a href="add-menu.php" target="iframeBox">Update the Menu</a>
             <a href="res-promo.php" target="iframeBox">Promotions</a>
-            <a href="res_view.php" target="iframeBox">View Reviews</a>
+            <a href="../customer/res_view/review/index.html?res_id=8}" target="iframeBox">View Reviews</a>
             <a href="contact.php" target="iframeBox">Help Desk</a>
             <br><br><br>
             <hr>

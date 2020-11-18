@@ -37,7 +37,7 @@ ul{
     color: #fff;
     cursor: pointer;    
 	margin-top: 10px;
-	width:300px;
+	width:100px;
 	border-width: 0px;
 }
 
@@ -297,7 +297,7 @@ ul{
   
   /* Add a red background color to the cancel button */
   .form-container .cancel {
-	background-color: red;
+	background-color: rgb(19, 19, 19);
   }
   
   /* Add some hover effects to buttons */

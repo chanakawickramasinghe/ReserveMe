@@ -54,28 +54,29 @@
                 <tr>
                     <td>Total</td>
                     <td>Rs.1000.00</td>
-                    <td><input type="submit" value="Order"> </td>                
+                    <td><input class="food-btn" type="submit" value="Order"> </td>                
                 </tr>
                
             </table>
-    
-    <input type="hidden" name="merchant_id" value="1215949">    <!-- Replace your Merchant ID -->
-    <input type="hidden" name="return_url" value="http://localhost/ReserveMe/users/customer/success.php">
-    <input type="hidden" name="cancel_url" value="preorder.php">
-    <input type="hidden" name="notify_url" value="info.reserve.lk@gmail.com">  
-    <br><br><br>
-    <input type="hidden" name="order_id" value="1">
-    <input type="hidden" name="items" value="Reservation"><br>
-    <input type="hidden" name="currency" value="LKR">
-    <input type="hidden" name="amount" value="1000">  
-    <br><br><br>
-    <input type="hidden" name="first_name" value="Saman">
-    <input type="hidden" name="last_name" value="Perera"><br>
-    <input type="hidden" name="email" value="samanp@gmail.com">
-    <input type="hidden" name="phone" value="0771234567"><br>
-    <input type="hidden" name="address" value="No.1, Galle Road">
-    <input type="hidden" name="city" value="Colombo">
-    <input type="hidden" name="country" value="Sri Lanka"><br><br> 
+    <div class="hidden">
+        <input type="hidden" name="merchant_id" value="1215949">    <!-- Replace your Merchant ID -->
+        <input type="hidden" name="return_url" value="http://localhost/ReserveMe/users/customer/success.php">
+        <input type="hidden" name="cancel_url" value="preorder.php">
+        <input type="hidden" name="notify_url" value="info.reserve.lk@gmail.com">  
+        <br><br><br>
+        <input type="hidden" name="order_id" value="1">
+        <input type="hidden" name="items" value="Reservation"><br>
+        <input type="hidden" name="currency" value="LKR">
+        <input type="hidden" name="amount" value="1000">  
+        <br><br><br>
+        <input type="hidden" name="first_name" value="Saman">
+        <input type="hidden" name="last_name" value="Perera"><br>
+        <input type="hidden" name="email" value="samanp@gmail.com">
+        <input type="hidden" name="phone" value="0771234567"><br>
+        <input type="hidden" name="address" value="No.1, Galle Road">
+        <input type="hidden" name="city" value="Colombo">
+        <input type="hidden" name="country" value="Sri Lanka"><br><br> 
+    </div>
 </form> 
 <!--Include footer.php-->
 <div><?php include "../../../includes/footer.php" ?></div>

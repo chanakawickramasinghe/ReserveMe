@@ -62,7 +62,7 @@
         <input class="type-feild" type="email" name="email" placeholder="Email Address" required><br>
         <input class="type-feild" type="tel" name="mobile" placeholder="Mobile Number(Optional)"><br>
         <input class="type-feild"  style="height:270px;overflow:auto" type="text" name="msg" placeholder="Type message......" ><br>
-        <input type="submit" name="submit"  class="btn" value="Post" style="margin-left:30px"  required>
+        <center><input type="submit" name="submit"  class="hero-button" value="Post" style="margin-left:30px"  required></center>
         </form>
         </div>
         </td>

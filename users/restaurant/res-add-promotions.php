@@ -18,7 +18,7 @@
         <center><h1 style="color:#ffbb01;">Add Promotion</h1></center>
         <br><br>
         <div class="centered-view">
-        <form class="add-promo-form" method="post" action="res-add-promotion-submit.php" enctype="multipart/form-data">
+        <form class="add-promo-form" method="post" action="res-promo.php" enctype="multipart/form-data"> <!--SHOULD BE action="res-add-promotion-submit.php"-->
             <table class="add-promo-form">
                 <tr>
                     <th>Starting Date</th>

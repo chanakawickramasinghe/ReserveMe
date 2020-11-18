@@ -141,7 +141,7 @@
 .search-btn{
 	width:120px;
 	height: 5vh;
-  background-color: black;
+  background-color:#00b3b3;
   border: none;
 	border-radius: 20px;
 	color: #fff;
@@ -154,7 +154,7 @@
 }
 
 .search-btn:hover{
-	background-color: #00b3b3;
+	background-color:black;
 	transition: all  ease 0.5s;
 }
 
@@ -177,6 +177,28 @@
 
 .user td{
   border: 1px solid rgb(160, 154, 154);
+  padding: 5px;    
+  text-align: center;
+}
+
+/* user tables restaurant */
+.user-activity{
+  width: 90vw;
+  margin: 0 auto;
+  table-layout: auto;
+  border-collapse: collapse;
+  
+}
+.user-activity th {
+  background-color: #cbe1ee;
+  border: 1px solid rgb(43, 106, 189);
+  padding: 5px;
+  text-align: center;
+}
+
+.user-activity td{
+  border: 1px solid rgb(160, 154, 154);
+  word-wrap: break-word;
   padding: 5px;    
   text-align: center;
 }
@@ -683,4 +705,34 @@
 
 .red-img{
   width: 5vw;
+}
+
+/* view user activity */
+
+h2{
+  text-align: center;
+  color:#333333;
+}
+
+
+.search-input-activity{
+  
+	width:250px;
+	background-color: white;
+	border-radius:25px;
+	height: 1.5vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  padding:20px;
+  box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+}
+
+.search-input-activity input{
+  width:100%;
+  font-size: large;
+  /* height: 5vh; */
+	border: none;
+	outline: none;
+  background-color: transparent;
 }

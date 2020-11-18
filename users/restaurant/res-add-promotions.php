@@ -29,6 +29,10 @@
                     <td><input class="input-feild" type="date" name="end_date"></td>
                 </tr>
                 <tr>
+                    <th>Category (Paid*/Unpaid*)</th>
+                    <td><input class="input-feild"  type="text" name="Category"></td>
+                </tr>
+                <tr>
                     <th>Add Image</th>
                     <td><input class="input-file"  type="file" name="promo_image"></td>
                 </tr>

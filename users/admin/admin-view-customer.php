@@ -18,6 +18,7 @@
         <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
             <a class="navtab" href="admin-home.php">Logout</a>
             <a class="navtab" href="admin-home.php">Home</a>
+            <a class="navtab" href="manage-users.php">Manage Users</a>
 		    <a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
         </div>
         <!--End of nav-->
@@ -32,15 +33,15 @@
                     placeholder="Enter Name , Email or ID"/>
                 </div>
                 <br/>
-                
+
                 <h3>Details of Selected Customer</h3>
                 
                 <div class="update-box">
-                    
+
                     <table>
                         <tr>
                             <th>Customer ID :</th>
-                            <td><input class="input-s" type="text" placeholder="ID" id="cus_id" name="id" readonly="true" required></td>
+                            <td><input class="input-s" type="text" placeholder="ID" id="id" name="id" readonly="true" required></td>
                             <th>Customer Email :</th>
                             <td><input class="input-l" type="text" placeholder="Customer Email" id="email" readonly="true" required></td>
                             <th>Contact No. :</th>
@@ -75,6 +76,7 @@
 
                 
                     <p class="button-box">
+                    <button class="btn-blue" type="button" name="btn-view-activity" onclick="window.location.href='admin-view-customer-activity.php'">View Activity</button>
                     <button class="btn-red" type="button" name="btn-activate-account">Activate Account</button>
                     <button class="btn-red" type="button" name="btn-suspend-account" onclick="suspendFunction()">Suspend Account</button>
                     <button class="btn-blue" type="reset">Clear</button>
@@ -85,7 +87,7 @@
             </form>
         </div>
         <br/>
-        
+         
         
         <div>
         

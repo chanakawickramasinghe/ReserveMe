@@ -123,6 +123,27 @@
     text-align: center;
 }
 
+.user-new{
+    width: 600px;
+    margin: 0 auto;
+    table-layout: auto;
+    border: none;
+    
+}
+.user-new th {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.user-new td{
+    border: 1px solid #ddd;
+    padding-left: 3vw;  
+    padding-right: 3vw;  
+    text-align: center;
+}
+
 
 .btn{
     width:10vw;
@@ -176,15 +197,16 @@
 }
 
 .form-edit-profile{
-    margin: auto;
+    width:26vw;
+    display: block;
+    text-align: center;
 }
 
 .form-edit-profile th{
     float: left;
     font-size: medium;
-    /* padding-bottom: 5px; */
-    /* padding-right: 3vw; */
-    padding: 0.3vw 2vw 0.3vw 1vw;
+    padding: 0.3vw 1vw 0.3vw 1vw;
+    text-align: center;
 
 }
 
@@ -205,7 +227,13 @@
     border-radius: 10px;
 }
 
+.footer1{
+    margin-top: 600px;
+}
 
+.title_text h2 font{
+	color:orange;
+}
 
 /* for deactivate and activate confirmation */
 .btn-red{

@@ -36,17 +36,17 @@
 		<div class="footer-center">
 			<div>
 				<i class="fa fa-phone"></i>
-				<p>+94 11-2778218</p>
+				<p>+94 11-2270157</p>
 			</div>
 			<div>
 				<i class="fa fa-envelope"></i>
-				<p><a href="mailto:reserveme.com">reserveme.com</a></p>
+				<p><a href="mailto:info.reserve.lk@gmail.com">info.reserve.lk@gmail.com</a></p>
 			</div>
 		</div>
 		<!--End of footer center-->
 		<!--Start of footer right-->
 		<div class="footer-right">
-			<p class="footer-company-about"><span>About</span>We offer amazing user experience through digitalization of reservation. We offer amazing user experience through digitalization of reservation.</p>
+			<p class="footer-company-about"><span>About</span>We offer amazing user experience through digitalization of reservation. <br>Place your Reservation at your fingertip</p>
 			<br>
 			<p class="footer-company-name">© 2020 | ReserveMe.lk</p>
 		</div>

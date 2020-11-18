@@ -30,11 +30,21 @@ if(isset($_POST['submit'])){
         $allmailquery3 = mysqli_query($connection, $selectmail3 ) ;  
         $num3 = mysqli_num_rows($allmailquery3);
 
+        $selectmail4="SELECT * FROM  admins WHERE admin_email='$email'";
+        $allmailquery4 = mysqli_query($connection, $selectmail4 ) ;  
+        $num3 = mysqli_num_rows($allmailquery4);
+
         
-        if($num > 0 || $num2 > 0 || $num3 >0){
-        $message = base64_encode(urlencode("Email already exists"));
+        if($num > 0 || $num2 > 0 || $num3 >0 || $num4 >0){
+        $message = base64_encode(urlencode("Email already exists!"));
         header('Location:customerReg.php?msg=' . $message);
         exit();
+        }
+        
+        else if($password != $password2){
+            $message = base64_encode(urlencode("Passwords do not match!"));
+            header('Location:customerReg.php?msg=' . $message);
+            exit();
         }
         
         //Insert to Database

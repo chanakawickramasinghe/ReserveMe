@@ -1,7 +1,7 @@
 <?php include('../../../includes/connection.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,7 +66,7 @@
                             echo"<div class=\"food-container\">
                                 <div class=\"food-box\">
                                     <h3 class=\"name\">". $rowProduct['res_name'] ."</h3> 
-                                    <img class=\"food-img\" src= \"../../../images/{$rowProduct['res_id']}\">
+                                    <img class=\"food-img\" src= \"../../../images/restaurant/{$rowProduct['res_image']}\">
                                     <br>
                                     <i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i>
                                     <br>
@@ -87,7 +87,7 @@
                         echo"<div class=\"food-container\">
                             <div class=\"food-box\">
                                 <h3 class=\"name\">". $rowProduct['res_name'] ."</h3> 
-                                <img class=\"food-img\" src= \"../../../images/{$rowProduct['res_id']}\">
+                                <img class=\"food-img\" src= \"../../../images/restaurant/{$rowProduct['res_image']}\">
                                 <br>
                                 <i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i>
                                 <br>
@@ -113,7 +113,7 @@
                         echo"<div class=\"food-container\">
                                 <div class=\"food-box\">
                                     <h3 class=\"name\">". $rowProduct['res_name'] ."</h3> 
-                                    <img class=\"food-img\" src= \"../../../images/{$rowProduct['res_id']}\">
+                                    <img class=\"food-img\" src= \"../../../images/restaurant/{$rowProduct['res_image']}\">
                                     <br>
                                     <i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i>
                                     <br>

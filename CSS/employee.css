@@ -97,7 +97,6 @@
         height: 100%;
         width: 100%;
         border-radius: 5px;
-
     }
 
 /* For toggle switch */
@@ -296,3 +295,24 @@
   padding-bottom: 15px;
 }
 /*  End of massage file*/
+
+/* Check Button */
+.tik-button{
+  width: 25px;
+  height: 25px;
+  border-radius: 2px;
+  background-color: orange;
+  color: black;
+  border: none;
+
+}
+
+.tik-button:visited{
+  background-color: gray;
+}
+.tik-button:focus{
+  background-color: gray;
+}
+.tik-button:active{
+  background-color: gray;
+}

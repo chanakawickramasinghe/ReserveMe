@@ -2,7 +2,7 @@
 h1{
     padding-top: 40px;
     text-align: center;
-    color:#343a3a;
+    color:#ffbb01;";
   }
 
   h2,h3{
@@ -26,14 +26,14 @@ h1{
   }
   
   .emp-table th {
-    background-color: rgb(255, 253, 163);
-    border: 1px solid rgb(160, 154, 154);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
     padding-top: 8px;
     padding-bottom: 8px;
   }
   
   .emp-table td{
-    border: 1px solid rgb(160, 154, 154);
+    border: 1px solid rgb(255, 255, 255);
     padding-top:8px; 
     padding-bottom: 8px;  
     
@@ -41,17 +41,17 @@ h1{
 
   .btn-emp-edit {
     margin-right: 2vw;
-    width:15vw;
+    width:17vw;
     height: 5vh;
-    background:  rgb(255, 253, 163);
-    border: 1px solid  rgb(0, 0, 0);
+    background:  rgb(255, 187, 0);
+    border: 1px solid  rgb(255, 255, 255);
     border-radius: 20px;
     color: rgb(51, 47, 47);
     font-size: medium;
   }
   
   .btn-emp-edit:hover{
-    background:   #f3ba00;
+    background:   #000000;
     cursor: pointer;
     color: #fff;
   }
@@ -93,7 +93,4 @@ h1{
     text-align: center;
   }
 
-  /* hall details */
-.hall-img{
-  width: 12vw;
-}
+ 

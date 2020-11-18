@@ -26,7 +26,7 @@
             </div>
 
             <table class="message-table">
-                <tr><th>Shall you do for a special food order manu?</th></tr>
+                <tr><th>Shall you do for a special food order menu?</th></tr>
                 <tr><td>This is for childs party for nursary school. So we have a special food recipient to make. Can you make it?</td></tr>
                 <tr><td>from <b>John Henricks</b> on <b>2020-11-16 12:23:42</b></td></tr>
                 <tr><td class="txt-area"><textarea placeholder="Enter Your Reply..." class="reply-area"></textarea></td></tr>

@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="../../CSS/nav.css">
     <link rel="stylesheet" href="../../CSS/search.css">
-    <link rel="stylesheet" href="../../CSS/footer.css">
+    <link rel="stylesheet" href="../../CSS/pre-order.css">
     <!--web-icon-->
     <link href="../../images/logo.png" rel="shortcut icon"/>
 </head>
@@ -21,19 +21,42 @@
     <div id="content">
         <form action="add-menu-submit.php" method="post" enctype="multipart/form-data">
             <h2 class="error-msg" style="font-size:14px"><?php include_once('../../includes/message.php'); ?></h2>
-
-                <h1 align="center">Add Menu</h1>
-                <br><br><br>
-                <p><h3>Insert images of your Restaurant Menu seperately.</h3></p>
-                <br><br><br>
-                <input type="file" name="size" value="1000000">
-                <div>
-                    <input type="file" name="menu_image">
-                </div>
                 <br><br>
+                <center>
+                <h1 style="color:#ffbb01;">Add Menu</h1>
+                <br>
+                <p><h3>Insert images of your Restaurant Menu seperately.</h3></p>
+                <p>(Only Five images are allowed)</p>
+                <br>
+                <!-- <h3>Rename Image</h3>
+                <br>
+                <input type="text" class="type-feild"   name="item_name" placeholder="RestaurantName_01" required>
+                <br><br> -->
+                <h3>Add Image</h3>
+                <br>
+                <input class="input-file"  type="file" name="promo_image">
                 <div>
-                    <button type="submit" name="upload" value="Upload Image">
-                </div>    
+                <br><br>
+                <input type="submit" name="submit" style="margin-left:400px; margin-top:-30px" class="btn-promo" value="Enter" required>   
+                </div>  
+               </center>
+               <br><br>
+               <table class="promo" id="myTable" border="1">
+                <tr>
+                    <th>Image 01</th>
+                    <th>Image 02</th>
+                    <th>Image 03</th>
+                    <th>Image 04</th>
+                    <th>Image 05</th>
+                </tr>
+                <tr>
+                    <td><img class="img-promo" src="../../images/restaurant/P2.jpg" width="150px" height="250px"></td>
+                    <td><img class="img-promo" src="../../images/restaurant/P3.jpg" width="150px" height="250px"></td>
+                    <td><img class="img-promo" src=""></td>  
+                    <td><img class="img-promo" src=""></td> 
+                    <td><img class="img-promo" src=""></td>            
+                </tr>
+            </table>  
         </form>
     </div>
     

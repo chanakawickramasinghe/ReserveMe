@@ -46,7 +46,7 @@
       ?>
     <br><br><br><br>
     <div class="sidebar"> 
-      <span><a href="employee-profile.php" target="iframe_a" class="active">Employee Profile</a></span>      
+      <span><a href="employee-profile.php" target="iframe_a" class="active">Employee Home</a></span>      
       <a href="pre-order-menu.php" target="iframe_a">Pre - Order Menu</a>
       <a href="queries.php" target="iframe_a">Queries</a>
       <a href="table-reservation.php" target="iframe_a">Manage Reservation</a>

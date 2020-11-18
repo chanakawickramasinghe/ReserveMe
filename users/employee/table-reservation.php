@@ -18,7 +18,7 @@
     <br>
     <h1>Reservations</h1>
     <!-- <button href="table-reservation.php" target="iframe" class="hero-button">Dine in</button> -->
-    <button href="menu-order.php" class="hero-button" style="float:right">Menu</button>
+    <button href="menu-reservation.php" class="hero-button" style="float:right;margin-right:3%">Menu</button>
     <br><br>
 
     <div style="padding:10px">
@@ -44,7 +44,8 @@
             <td>0768921288</td>
             <td>Breakfast</td>
             <td>2</td>
-            <td><a href="#"><img src="../../images/accept.png" alt="Accept" style="width:25px;height:25px"></a></td>
+            <td><input type="button" value="Ok" class="hero-button" name="submit" href=""></td>
+            <!-- <td><a href="#"><img src="../../images/accept.png" alt="Accept" style="width:25px;height:25px"></a></td> -->
             <td><a href="#"><img src="../../images/message.png" alt="Message" style="width:25px;height:25px"></a></td>
            
         </tr>
@@ -57,8 +58,8 @@
             <td>89452356</td>
             <td>Lunch</td>
             <td>5</td>
-            <!-- <td><input type="button" value="K" class="tik-button" name="submit" href=""></td> -->
-            <td><a href="#"><img src="../../images/accept.png" alt="Accept" style="width:25px;height:25px"></a></td>
+            <td><input type="button" value="Ok" class="hero-button" name="submit" href=""></td>
+            <!-- <td><a href="#"><img src="../../images/accept.png" alt="Accept" style="width:25px;height:25px"></a></td> -->
             <td><a href="#"><img src="../../images/message.png" alt="Message" style="width:25px;height:25px"></a></td>
 
         </tr>
@@ -71,7 +72,9 @@
             <td>775623845</td>
             <td>Dinner</td>
             <td>3</td>
-            <td><a href="#"><img src="../../images/accept.png" alt="Accept" style="width:25px;height:25px"></a></td>
+            <td><input type="button" value="Ok" class="hero-button" name="submit" href=""></td>
+            <!-- <td><input type="button" value="Ok" class="hero-button" style="background-color:lightgreen;color:black" name="submit" href=""></td> -->
+            <!-- <td><a href="#"><img src="../../images/accept.png" alt="Accept" style="width:25px;height:25px"></a></td> -->
             <td><a href="#"><img src="../../images/message.png" alt="Message" style="width:25px;height:25px"></a></td>
             
         </tr>
@@ -84,7 +87,8 @@
             <td>759848256</td>
             <td>Breakfast</td>
             <td>4</td>
-            <td><a href="#"><img src="../../images/accept.png" alt="Accept" style="width:25px;height:25px"></a></td>
+            <td><input type="button" value="Ok" class="hero-button" name="submit" href=""></td>
+            <!-- <td><a href="#"><img src="../../images/accept.png" alt="Accept" style="width:25px;height:25px"></a></td> -->
             <td><a href="#"><img src="../../images/message.png" alt="Message" style="width:25px;height:25px"></a></td>
         </tr>
         <tr><td colspan="9"><hr></td></tr>

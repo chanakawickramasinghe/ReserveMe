@@ -23,58 +23,71 @@
 		    <a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>    
         </div>
         <!--End of nav-->
-                
+         <center>       
+        <div class="content-div">
+        <br><br>
+            <h1 style="color:#ffbb01;">Welcome Pizza Hut, Kandy!</h1>
+        <br>
+        <img src="../../images/14.png" width="300" hight="292">
+        <br><br>   
+        <h3> Restaurant Public Details</h3>
+        <br>
+        <p>Name : Pizza Hut, Kandy.</p>
+        <p>Telephone No: 011 - 264 8356</p>
+        <p>Address : 1, Dhalada Vidiya, Kandy.</p>
+        <br>
+        </center>
         <!-- Adding the table with current user details -->
         <?php
-        checkSession();
-        echo "<table border=1 class=\"user\">";
+        //checkSession();
+        //echo "<table border=1 class=\"user\">";
     
-        $res_id = $_SESSION["userID"]; //have to add session id
-        // echo"</br></br><h1 class=div-c>Welcome " .$_SESSION["res_name"]."</h1>";
-        $sql = "SELECT * FROM restaurant WHERE res_id='$res_id'";
-        $userquery = mysqli_query($connection,$sql);
-        while($row = mysqli_fetch_assoc($userquery)){
-            echo"</br></br><h1 class=div-c>Welcome " .$row['res_name']."</h1>";
-            echo "
-                </br>
-                <tr>
-                <th>Res ID</th><td>".$row['res_id']."</td>
-                </tr>
-                <tr>                  
-                <th>Name</th><td>".$row['res_name']."</td>
-                </tr>
-                <tr>
-                <th>Email</th><td>".$row['res_email']."</td>
-                </tr>
-                <tr>
-                <th>Contact No</th><td>".$row['res_tel']."</td>
-                </tr>
-                <tr>
-                <th>Address</th><td>".$row['res_add_line1']."</td><br><td>".$row['res_add_line2']."</td><br><td>".$row['res_add_line3']."</td>
-                </tr>
-                <tr>
-                <th>Location</th><td>".$row['res_location']."</td>
-                </tr>
-                <tr>
-                <th>Floor Plan</th><td>".$row['res_floor']."</td>
-                </tr>
-                <tr>
-                <th>Menu</th><td>".$row['res_menu']."</td>
-                </tr>
-                <tr>
-                <th>Preorder Availability</th><td>".$row['preorder_available']."</td>
-                </tr>
-            ";
-        }
-        echo "</table>";
-        ?>
-        </br>
+        // $res_id = $_SESSION["userID"]; //have to add session id
+        // // echo"</br></br><h1 class=div-c>Welcome " .$_SESSION["res_name"]."</h1>";
+        // $sql = "SELECT * FROM restaurant WHERE res_id='$res_id'";
+        // $userquery = mysqli_query($connection,$sql);
+        // while($row = mysqli_fetch_assoc($userquery)){
+        //     echo"</br></br><h1 class=div-c>Welcome " .$row['res_name']."</h1>";
+        //     echo "
+        //         </br>
+        //         <tr>
+        //         <th>Res ID</th><td>".$row['res_id']."</td>
+        //         </tr>
+        //         <tr>                  
+        //         <th>Name</th><td>".$row['res_name']."</td>
+        //         </tr>
+        //         <tr>
+        //         <th>Email</th><td>".$row['res_email']."</td>
+        //         </tr>
+        //         <tr>
+        //         <th>Contact No</th><td>".$row['res_tel']."</td>
+        //         </tr>
+        //         <tr>
+        //         <th>Address</th><td>".$row['res_add_line1']."</td><br><td>".$row['res_add_line2']."</td><br><td>".$row['res_add_line3']."</td>
+        //         </tr>
+        //         <tr>
+        //         <th>Location</th><td>".$row['res_location']."</td>
+        //         </tr>
+        //         <tr>
+        //         <th>Floor Plan</th><td>".$row['res_floor']."</td>
+        //         </tr>
+        //         <tr>
+        //         <th>Menu</th><td>".$row['res_menu']."</td>
+        //         </tr>
+        //         <tr>
+        //         <th>Preorder Availability</th><td>".$row['preorder_available']."</td>
+        //         </tr>
+        //     ";
+        // }
+        // echo "</table>";
+        // ?>
         <!-- edit details button -->
         <div class="btn-header">
             <form>
-                <div class="form-box">
-                    <button name="edit" class="btn" type="button" onclick="window.location.href='restaurant-profile-edit.php'">Edit Profile</button>
-                    <button name="deactivate" class="btn" type="button">Deactivate Account</button>
+                <div>
+                    <button name="edit" class="food-btn" type="button" onclick="window.location.href='restaurant-profile-edit.php'">Edit Profile</button>
+                    <br>
+                    <a href =../../index.php><button name="deactivate" class="food-btn" type="button">Deactivate Account</button></a>
                 </div>
             </form>
         </div>

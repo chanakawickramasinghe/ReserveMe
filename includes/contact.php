@@ -15,9 +15,7 @@
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
     <!--web-icon-->
     <link href="../images/logo.png" rel="shortcut icon"/>
-    <style>
 
-</style>
 </head>
 <body>
 <!-- main-section-------------
@@ -33,7 +31,7 @@
 		<!--End of nav-->
         <br>
         <div class="contact-container">
-        <img src="../images/Contact-us.jpg" alt="Contact-Us image" style="height:200px;width:100%">
+        <img src="../images/Contact-us.jpg" alt="Contact-Us image" style="height:230px;width:100%">
         <h1 class="centered"> We would love to hear from you..!</h1>
         </div>
 

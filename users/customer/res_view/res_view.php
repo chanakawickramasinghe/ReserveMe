@@ -36,7 +36,7 @@
             while($rowProduct  = mysqli_fetch_assoc($resultProduct)){  
                 echo"<section class=\"main\">
                         <div class=\"m-img\">       
-                            <img class=\"food-img\" src= \"../../../images/{$rowProduct['res_id']}.jpg\">
+                            <img class=\"food-img\" src= \"../../../images/restaurant/{$rowProduct['res_image']}\">
                         </div>
                         <div class=\"m-text\">
                             <h2>". $rowProduct['res_name'] ."</h2>

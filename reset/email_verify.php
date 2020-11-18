@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
   <title>Reset</title>
-  <link rel="stylesheet" href="../CSS/email_verify.css"/>
+  <link rel="stylesheet" href="../CSS/forgot-password.css"/>
   <link rel="icon" type="image/png" href="../images/logo.png" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,26 +52,26 @@
 <body>
   <!--Start of nav-->
   <div class="topnav">
-        <a href="../index.php"><img class = "logo" src="../images/logo.png"></a>
-		<a class="navtab" href="../users/user-type.php">Register</a>
-		<a class="navtab" href="contact.php">Contact</a>
-		<a class="navtab" href="about.php">About</a>
+    <a href="../index.php"><img class = "logo" src="../images/logo.png"></a>
+    <a class="navtab" href="../users/user-type.php">Register</a>
+    <a class="navtab" href="../includes/login.php">Login</a>
+		<a class="navtab" href="../includes/contact.php">Contact</a>
+		<a class="navtab" href="../includes/about.php">About</a>
 		<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>    
-    </div>
+  </div>
     <!--End of nav-->
-  <div class="reset">
-    <a href="../includes/login.php" class="previous round">&#8249;</a>
-    <h3>Reset Password</h3>        
+  <div class="reset-password">
+    <img src="../images/form_icons/change-password.png">
+    <h1>Reset Password</h1>        
     <form class="" action="" method="post">
-    <p class="message">Enter your registered email address so that we will send you an email to reset your password.</p>
+        <p>Enter your registered email address so that we will send you an email to reset your password.</p>
     <?php echo $alert;?>    
         <div class="inputBox">
-          <input type="email" name="email" required="">
-          <label>Email</label>
+          <input class="input-feild" type="email" name="email" placeholder="Enter Your Email" required="">
         </div>        
              
-          <input type="submit" name="send" value="Send">
-          <input type="reset" name="" value="Clear">          
+          <input class="orange-btn" type="submit" name="send" value="Send">
+          <input class="btn-change-normal" type="reset" name="" value="Clear">          
          
       </form>
     

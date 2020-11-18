@@ -10,6 +10,7 @@
         <!--web-icon-->
         <link href="../../images/logo.png" rel="shortcut icon"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../../CSS/footer.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <!--Start of nav-->
@@ -23,7 +24,9 @@
 		    <a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>   
         </div>
         <br><br>
-        <h1 class="div-c">Edit Details</h1>
+        <div class="title_text">
+        <h1 class="div-c">Edit <font color="orange">Details</font></h1>
+        </div>
         <div class="row-100"><h2 class="error-msg"><?php include_once('../../includes/message.php'); ?></h2></div>
 
         <?php
@@ -39,13 +42,14 @@
                     
                     echo "
                     <form action=\"customer-profile-edit-submit.php\" method=\"post\"> 
+                    <center>
                         <table class=\"form-edit-profile\">
                             <tr>
-                                <th>Name :</th>
+                                <th>Your Name :</th>
                                 <td><input type=\"text\" name=\"EditName\" placeholder=\"Enter Name\" value=\"{$row['user_name']}\" required></td>
                             </tr>
                             <tr>
-                                <th>Address :</th>
+                                <th>Home Address :</th>
                                 <td><input type=\"text\" name=\"EditEmail\" placeholder=\"Enter Email\" value=\"{$row['email']}\" required></td>
                             </tr>
                             <tr>
@@ -66,7 +70,7 @@
                                 <td><input type=\"text\" name=\"EditStreet\" placeholder=\"Enter Street Name\" value=\"{$row['street']}\" required></td>
                             </tr>
                             <tr>
-                                <th>City : </th>
+                                <th>Living City : </th>
                                 <td><input type=\"text\" name=\"EditCity\" placeholder=\"Enter City\" value=\"{$row['city']}\" required></td>
                             </tr>
                             <tr>
@@ -82,6 +86,7 @@
                             </tr>
                             
                         </table>
+                        </center>
 
 
                    
@@ -114,6 +119,9 @@
         }
     </script>
 
+
+	<!--Include footer.php-->
+    <div class="footer1"><?php include "../../includes/footer.php" ?></div>
     <!--script for slideshow-->
     <script src="../../js/onClickNav.js"></script>
 

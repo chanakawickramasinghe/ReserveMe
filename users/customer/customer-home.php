@@ -37,17 +37,17 @@
 			<div class="slideshow-container">
 				<div class="mySlides fade">
 				  	<img src="../../images/promos/1.jpg" style="width:100%">
-				  	<div class="text"><a class="hero-button pulsate" href="res_view.php">Visit</a></div>
+				  	<div class="text"><a class="hero-button pulsate" href="res_view/res_view.php?res_id=10">Visit</a></div>
 				</div>
 
 				<div class="mySlides fade">
 				  	<img src="../../images/promos/2.jpg" style="width:100%">
-				  	<div class="text"><a class="hero-button pulsate" href="res_view.php">Visit</a></div>
+				  	<div class="text"><a class="hero-button pulsate" href="res_view/res_view.php?res_id=8">Visit</a></div>
 				</div>
 
 				<div class="mySlides fade">
 				  	<img src="../../images/promos/3.jpg" style="width:100%">
-				  	<div class="text"><a class="hero-button pulsate" href="res_view.php">Visit</a></div>
+				  	<div class="text"><a class="hero-button pulsate" href="res_view/res_view.php?res_id=4">Visit</a></div>
 				</div>
 			</div>
 
@@ -63,7 +63,7 @@
 		<div class="m-text">
 			<h2>Reserve<font>Me</font></h2>
 			<h4>Reservation at finger tip</h4>
-			<h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit ut a veritatis minus, magni pariatur. Esse illo iusto odio omnis laborum? Rem dolor accusamus repudiandae perspiciatis eveniet quasi quas eius.</h5>
+			<h5>Explore the curated list of top restaurants in your area to make things more and more easier. Place a reservation within few minutes with us.</h5>
 		</div>
 		<!--End of text-->
 		
@@ -85,7 +85,7 @@
 			<h3>Table Reservation</h3>
 			<h4>Best places to <font>Dine in</font> </h4>
 			<!--details-->
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, sint. Non officiis, architecto exercitationem modi distinctio quaerat at aspernatur omnis nobis et voluptatibus hic veritatis excepturi vel molestias quisquam dicta.</p>
+			<p>We have brought the fine option of placing a table reservation at your favourite restaurant to your finger tip. Explore more restaurants and place a table reservation in few minutes.</p>
 			<a class="hero-button pulsate" href="res_view/logged_search_result.php">Table Reservation</a>
 		</div>
 		<!--img-->
@@ -166,7 +166,7 @@
 			<h3>Hall Reservation</h3>
 			<h4>Best places to <font>Enlight</font> your occasion</h4>
 			<!--details-->
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, doloremque exercitationem illum vitae earum, velit nulla pariatur est esse, ratione qui! Quis sapiente illum, et quaerat veritatis nihil numquam repellendus!</p>
+			<p>Enlight your special occasion by finding the best place. You can now search and find the best venue to your weddings, birthday parties and more occasion. We provide you the facility to book it before others.</p>
 			<a class="hero-button pulsate" href="hall_view/logged_hall_search_result.php">Hall Reservation</a>
 		</div>
 		</section>

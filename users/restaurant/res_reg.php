@@ -48,49 +48,53 @@
                 <tr>
                     <td>
                     <img src="../../images/form_icons/user.png" alt="user" class="icons">
-                    <label for="name">Name</label>                   
-                    <input type="text"  name="res_name" class="reg-type-feild" placeholder="Your name" required>    
+                    <label for="name">Restaurant Name</label>                   
+                    <input type="text"  name="res_name" class="reg-type-feild" placeholder="ex: Example Restaurant" required="" pattern="[a-zA-Z][a-zA-Z ]{2,}">    
                     
                     <p>
                     <img src="../../images/form_icons/mail.png" alt="user" class="icons">
-                    <label for="email">Email address</label>
-                    <input type="email" name="res_email" class="reg-type-feild" placeholder="Your Email" required >
+                    <label for="email">Email Address</label>
+                    <input type="email" name="res_email" class="reg-type-feild" placeholder="ex: example@reserveme.lk" required="" oninvalid="this.setCustomValidity('Please Enter valid email')">
                     </p>
 
                     <p>
                     <img src="../../images/form_icons/padlock.png" alt="user" class="icons">
                     <label for="password">Password</label>
-                    <input type="password" name="password" class="reg-type-feild" placeholder="Enter Password" id="password"  required>
+                    <input type="password" name="password" class="reg-type-feild" placeholder="ex: John@1234" id="password" 
+                    pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" 
+                    oninvalid="this.setCustomValidity('Password must include Uppercase & Lowercase characters with Numbers or Special Characters')" required>
                     </p>
                     
                     <img src="../../images/form_icons/password.png" alt="user" class="icons">
                     <label for="password2">Confirm Password</label>
-                    <input type="password" name="password2" class="reg-type-feild" placeholder="Re-Enter Password" id="confirm_password" onkeyup='check()' required>
+                    <input type="password" name="password2" class="reg-type-feild" placeholder="ex: John@1234" id="confirm_password" 
+                    pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" onkeyup='check()' 
+                    oninvalid="this.setCustomValidity('Password must include Uppercase & Lowercase characters with Numbers or Special Characters')" required>
                     <P id='message' ></P>
 
                     <img src="../../images/form_icons/phone-call.png" alt="user" class="icons">
                     <label for="contact">Contact number</label>
-                    <input type="tel" name="res_tel" class="reg-type-feild" placeholder="Mobile number" pattern='^\+?\d{0,13}' > </td>
+                    <input type="tel" name="res_tel" class="reg-type-feild" placeholder="ex: +94771570227" pattern='^\+?\d{11}' > </td>
 
 
                     <td>
                     <!--Location-->
                     <img src="../../images/form_icons/map.png" alt="user" class="icons">
                     <label for="dob">Location URL</label>
-                    <input type="url" name="res_location" id='url' class="reg-type-feild"  placeholder="Enter Restaurant Location" required> 
+                    <input type="url" name="res_location" id='url' class="reg-type-feild"  placeholder="Google Map Link" required> 
                     
                     <p>
                     <!-- Address -->
                     <img src="../../images/form_icons/address.png" alt="user" class="icons">
                     <label for="pnumber"> Address</label>
-                    <input type="text" name="pnumber" class="reg-type-feild" placeholder="Post number">
+                    <input type="text" name="pnumber" class="reg-type-feild" placeholder="ex : No. 120">
                     </p> 
 
                     <!-- <label for="street">Street</label> -->
-                    <input type="text" name="street" class="reg-type-feild" placeholder="Street"> 
+                    <input type="text" name="street" class="reg-type-feild" placeholder="ex: Wall Street"> 
 
                     <!-- <label for="city">City</label> -->
-                    <input type="text" name="city" class="reg-type-feild" placeholder="City"> 
+                    <input type="text" name="city" class="reg-type-feild" placeholder="ex: Colombo"> 
 
                     <p>
                     <!-- Resaurant Image -->

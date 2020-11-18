@@ -50,17 +50,21 @@
                     
                     <img src="../../images/form_icons/mail.png" alt="user" class="icons">
                     <label for="email">Email address</label>
-                    <input type="email" name="email" class="reg-type-feild" placeholder="ex: example@reserveme.lk" required >
+                    <input type="email" name="email" class="reg-type-feild" placeholder="ex: example@reserveme.lk" required="" oninvalid="this.setCustomValidity('Please Enter valid email')" >
       
 			       
                     <img src="../../images/form_icons/padlock.png" alt="user" class="icons">
                     <label for="password">Password</label>
-                    <input type="password" name="password" class="reg-type-feild" placeholder="ex: John@1234" id="password" minlength="8" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                    <input type="password" name="password" class="reg-type-feild" placeholder="ex: John@1234" id="password" minlength="8" 
+                    pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" 
+                    oninvalid="this.setCustomValidity('Password must include Uppercase & Lowercase characters with Numbers or Special Characters')" required>
 		
 			    
                     <img src="../../images/form_icons/password.png" alt="user" class="icons">
                     <label for="password2">Confirm Password</label>
-                    <input type="password" name="password2" class="reg-type-feild" placeholder="ex: John@1234" minlength="8" id="confirm_password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" onkeyup='check()' required>
+                    <input type="password" name="password2" class="reg-type-feild" placeholder="ex: John@1234" minlength="8" id="confirm_password" 
+                    pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" onkeyup='check()' 
+                    oninvalid="this.setCustomValidity('Password must include Uppercase & Lowercase characters with Numbers or Special Characters')"required>
                     <P id='message' ></P>
 
                     <img src="../../images/form_icons/phone-call.png" alt="user" class="icons">
@@ -71,7 +75,7 @@
                     <td>
                     <img src="../../images/form_icons/calendar.png" alt="user" class="icons">
                     <label for="dob">Date of birth</label>
-                    <input type="date" name="dob" id='dob' class="reg-type-feild" onkeyup='getAge(dob)' placeholder="Date of Birth" value="2000-01-01" min="1930-01-01" max="2002-12-31"required> 
+                    <input type="date" name="dob" id='dob' class="reg-type-feild" onkeyup='getAge(dob)' placeholder="Date of Birth" min="1930-01-01" max="2002-12-31"required> 
                     <P id='message2' ></P>
                                 <!-- 
                                                     <?php

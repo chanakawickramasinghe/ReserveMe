@@ -26,21 +26,23 @@
                     <th>Promo Image</th>
                     <th>Posted Date & Time</th>
                     <th>End Date & Time</th>
+                    <th>Category</th>
                     <th>Action</th>
                 </tr>
                 <tr>
                     <td><img class="img-promo" src="../../images/promos/1.jpg"></td>
                     <td>2020-10-15 22:03:02</td>
                     <td>2020-10-22 22:03:02</td>
+                    <td>Paid</td>
                     <td><button type="button" class="btn-promo-remove">Remove</button></td>                
                 </tr>
                 <tr>
                     <td><img class="img-promo" src="../../images/promos/4.jpg"></td>
                     <td>2020-10-20 09:00:00</td>
                     <td>2020-10-22 09:00:00</td>
+                    <td>Unpaid</td>
                     <td><button type="button" class="btn-promo-remove">Remove</button></td>                
-                </tr>
-               
+                </tr>  
             </table>
         </div>
 

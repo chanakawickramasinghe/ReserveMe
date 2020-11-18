@@ -30,8 +30,7 @@
                 <input type="text"  class="type-feild" name="item_price" placeholder="Price in LKR" required>
                 <br><br><br>
                 </center>
-                <input type="submit" name="submit" style="margin-left:400px; margin-top:-30px" class="btn-promo" value="Submit" required>
-                <input type="submit" name="submit" style="margin-left:635px; margin-top:-25px" class="btn-promo" value="Complete" required>   
+                <input type="submit" name="submit" style="margin-left:500px; margin-top:-30px" class="btn-promo" value="Submit" required>   
             </form>
             <br><br>
             </div>
@@ -42,21 +41,25 @@
                     <th>Menu ID</th>
                     <th>Dish Name</th>
                     <th>Dish Price (LKR)</th>
+                    <th>Edit</th>
                 </tr>
                 <tr>
                     <td>1</td>
                     <td>Cream of Vegetable Soup</td>
-                    <td>180</td>               
+                    <td>180</td>
+                    <td><button type="button" class="btn-promo-remove">X</button></td>                   
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>Fried Rice</td>
-                    <td>250</td>             
+                    <td>250</td>  
+                    <td><button type="button" class="btn-promo-remove">X</button></td>           
                 </tr>
                 <tr>
                     <td>3</td>
                     <td>Caramel Pudding</td>
-                    <td>150</td>               
+                    <td>150</td>   
+                    <td><button type="button" class="btn-promo-remove">X</button></td>                
                 </tr>
                 </table>
             </div>

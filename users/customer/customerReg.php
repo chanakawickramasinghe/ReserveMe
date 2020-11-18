@@ -141,7 +141,7 @@
             }
         }
 
-        function getAge(birthDateString) {
+      function getAge(birthDateString) {
     var today = new Date();
     var birthDate = new Date(birthDateString);
     var age = today.getFullYear() - birthDate.getFullYear();

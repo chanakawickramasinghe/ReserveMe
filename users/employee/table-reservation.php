@@ -16,16 +16,18 @@
 </head>
 <body class="subbody">
     <br>
-    <h1>Reservations</h1>
-    <!-- <button href="table-reservation.php" target="iframe" class="hero-button">Dine in</button> -->
-    <button href="menu-reservation.php" class="hero-button" style="float:right;margin-right:3%">Menu</button>
+    <h1 style="color:orange">Table Reservations</h1>
+    
+    <div class="promo-btn-bar">
+                <button type="button" class="hero-button" onclick="window.location.href='menu-reservation.php'">Pre order</button>
+            </div>
     <br><br>
 
     <div style="padding:10px">
     <div class="contentbox">
     <table width="100%">
         <tr>
-            <th>Reservation id.</th>
+            <th width="1vw">Reservation id.</th>
             <th>Name</th>
             <th>Email</th>
             <th>Date & Time</th>
@@ -33,7 +35,7 @@
             <th>Meal</th>
             <th>Members</th>
             <th>Accept</th>
-            <th>Reply</th>
+            <!-- <th>Reply</th> -->
         </tr>
         <tr><td colspan="9"><hr></td></tr>
 
@@ -46,7 +48,7 @@
             <td>2</td>
             <td><input type="button" value="Ok" class="hero-button" name="submit" href=""></td>
             <!-- <td><a href="#"><img src="../../images/accept.png" alt="Accept" style="width:25px;height:25px"></a></td> -->
-            <td><a href="#"><img src="../../images/message.png" alt="Message" style="width:25px;height:25px"></a></td>
+            <!-- <td><a href="#"><img src="../../images/message.png" alt="Message" style="width:25px;height:25px"></a></td> -->
            
         </tr>
         <tr><td colspan="9"><hr></td></tr>
@@ -60,7 +62,7 @@
             <td>5</td>
             <td><input type="button" value="Ok" class="hero-button" name="submit" href=""></td>
             <!-- <td><a href="#"><img src="../../images/accept.png" alt="Accept" style="width:25px;height:25px"></a></td> -->
-            <td><a href="#"><img src="../../images/message.png" alt="Message" style="width:25px;height:25px"></a></td>
+            <!-- <td><a href="#"><img src="../../images/message.png" alt="Message" style="width:25px;height:25px"></a></td> -->
 
         </tr>
         <tr><td colspan="9"><hr></td></tr>
@@ -75,7 +77,7 @@
             <td><input type="button" value="Ok" class="hero-button" name="submit" href=""></td>
             <!-- <td><input type="button" value="Ok" class="hero-button" style="background-color:lightgreen;color:black" name="submit" href=""></td> -->
             <!-- <td><a href="#"><img src="../../images/accept.png" alt="Accept" style="width:25px;height:25px"></a></td> -->
-            <td><a href="#"><img src="../../images/message.png" alt="Message" style="width:25px;height:25px"></a></td>
+            <!-- <td><a href="#"><img src="../../images/message.png" alt="Message" style="width:25px;height:25px"></a></td> -->
             
         </tr>
         <tr><td colspan="9"><hr></td></tr>
@@ -89,7 +91,7 @@
             <td>4</td>
             <td><input type="button" value="Ok" class="hero-button" name="submit" href=""></td>
             <!-- <td><a href="#"><img src="../../images/accept.png" alt="Accept" style="width:25px;height:25px"></a></td> -->
-            <td><a href="#"><img src="../../images/message.png" alt="Message" style="width:25px;height:25px"></a></td>
+            <!-- <td><a href="#"><img src="../../images/message.png" alt="Message" style="width:25px;height:25px"></a></td> -->
         </tr>
         <tr><td colspan="9"><hr></td></tr>
       

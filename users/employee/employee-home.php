@@ -56,7 +56,7 @@
   </td>
 
   <td style="width:80%">
-  <iframe src="employee-profile.php" frameborder="0px" name="iframe_a" scrolling="yes" style="width:100% ; height:650px;"></iframe> 
+  <iframe src="employee-profile.php" frameborder="0px" name="iframe_a" scrolling="yes" style="width:100% ; height:40vw;"></iframe> 
   </td>  
 
   </tr>    

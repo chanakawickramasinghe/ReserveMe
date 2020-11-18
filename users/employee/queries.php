@@ -18,7 +18,7 @@
             <center><h1>New Queries</h1></center>
 
             <div class="promo-btn-bar">
-                <button type="button" class="btn-promo" onclick="window.location.href='admin-past-messages.php'">Replied Queries</button>
+                <button type="button" class="btn-promo" onclick="window.location.href='past-queries.php'">Replied Queries</button>
             </div>
 
             <table class="message-table">

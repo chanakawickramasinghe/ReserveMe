@@ -37,35 +37,17 @@
     
        
         ?>
-
-        <br>
-        <table class="tab-emp">
-        <tr>
-        <td>Name : </td>
-        <td><?php echo $row['emp_name'];?></td>
-        </tr>
-        <tr>
-            <td>Email : </td>
-            <td><?php echo $row['emp_email'];?></td>
-        </tr>
-        <tr>
-            <td>Contact No :</td>
-            <td><?php echo $row['emp_mobile'];?></td>
-        </tr>
-        
-        </table>
-       
-        
-        <img src="../../images/deco/restaurant-staff.jpg" alt="feedback" class="resimage"><hr style="width:90%">
-        <br> <br>
-
-
-            
+         
         <form action="#" method="post">
             <h3>Not Available Hall</h3>
 
             <label for="date">Hall Name</label><br>
-            <input type="text" name="hall_name" class="reg-type-feild" placeholder="Date">
+            <!-- <input type="text" name="hall_name" class="reg-type-feild" placeholder="Hall name"> -->
+            <select name="hall_name" id="hall_name" class="reg-type-feild">
+            <option value="m0" disabled selected value> -- select Hall -- </option>
+            <option value="m1">Ball room</option>
+            <option value="m2">Party Pool</option>
+            </select>
             <br>
 
             <label for="date">Add Date</label><br>
@@ -76,8 +58,7 @@
             <select name="meal" id="meal" class="reg-type-feild">
             <option value="m0" disabled selected value> -- select Session time -- </option>
             <option value="m1">Morning</option>
-            <option value="m2">Later in the day</option>
-            <option value="m3">Night</option>
+            <option value="m2">Evening</option>
             </select>
             <br>
 
@@ -109,7 +90,7 @@
                 </tr>
                 <tr><td>Party pool</td>
                     <td>2020.11.25</td>
-                    <td>Later in the day</td>
+                    <td>Evening</td>
                     <td><button class="hero-button">Remove</button></td>
                 </tr>
                 <tr>
@@ -117,7 +98,7 @@
                 </tr>
                 <tr><td>Ball room</td>
                     <td>2020.11.23</td>
-                    <td>Night</td>
+                    <td>Morning</td>
                     <td><button class="hero-button">Remove</button></td>
                 </tr>
                 <tr>
@@ -125,7 +106,7 @@
                 </tr>
                 <tr><td>Party pool</td>
                     <td>2020.12.19</td>
-                    <td>Morning</td>
+                    <td>Evening</td>
                     <td><button class="hero-button">Remove</button></td>
                 </tr>
                 <tr>

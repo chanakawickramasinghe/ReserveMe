@@ -16,9 +16,9 @@
 </head>
 
 <body class="subbody">
-    <div style="padding:10px">
+    <div style="padding-left:10vw;padding-right:10vw">
     <br>
-    <h1>Availability on Pre-Order Menu</h1>
+    <h1 style="color:orange">Availability on Pre-Order Menu</h1>
     <br>
     
     <div class="contentbox">
@@ -30,7 +30,7 @@
         </tr>
 
         <tr>
-            <td class="content-left">Fried Rice</td>
+            <td >Fried Rice</td>
             <td>Rs. 450.00</td>
             <td><label class="switch">
                 <input type="checkbox" checked>
@@ -41,7 +41,7 @@
         <tr><td colspan="3"><hr></td></tr>
        
         <tr>
-            <td class="content-left">Kottu</td>
+            <td >Kottu</td>
             <td>Rs. 550.00</td>
             <td><label class="switch">
                 <input type="checkbox" checked>
@@ -52,7 +52,7 @@
         <tr><td colspan="3"><hr></td></tr>
        
         <tr>
-            <td class="content-left">Chicken curry</td>
+            <td >Chicken curry</td>
             <td>Rs. 650.00</td>
             <td><label class="switch">
                 <input type="checkbox" checked>
@@ -63,7 +63,7 @@
         <tr><td colspan="3"><hr></td></tr>
        
         <tr>
-            <td class="content-left">Fish curry</td>
+            <td >Fish curry</td>
             <td>Rs. 350.00</td>
             <td><label class="switch">
                 <input type="checkbox" checked>
@@ -78,7 +78,7 @@
     </div>
     </div>
     
-    <input type="button" name="submit" value="Save & Update" class="hero-button" style="float:right;margin-right:100px" >
+    <input type="button" name="submit" value="Save & Update" class="hero-button" style="float:right;margin-right:15vw" >
 
     
 </body>

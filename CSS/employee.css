@@ -333,3 +333,27 @@
   border: none;
   text-align: center;  
 }
+/*Start of button*/
+.hero-button{
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 13px 20px;
+  font-weight: bold;
+  background: orange;
+  color: #fff;
+  cursor: pointer;
+margin-top: 10px;
+border: none;
+box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+border-radius: 15% 15% 15% 15% / 50% 50% 50% 50%;
+}
+
+.hero-button:hover{
+background: #202020;
+color: white;
+border: none;
+}
+
+
+/*End of button*/

@@ -16,7 +16,7 @@
 
         
     </head>
-    <body>        
+    <body class="subbody">        
     <div style="margin:20px">      
         <!-- Adding the table with current user details -->
         <?php
@@ -33,7 +33,7 @@
         
         $userquery = mysqli_query($connection,$sql);
         $row = mysqli_fetch_assoc($userquery);
-        echo"<center><h1 class=div-c>Welcome ".$row['emp_name']." , Employee of ".$row2['res_name']."</h1></center>";
+        echo"<center><h1 class=div-c>Welcome <span style=\"color:orange\"> ".$row['emp_name']." </span> , Employee of <span style=\"color:orange\"> ".$row2['res_name']." </span> </h1></center>";
     
        
         ?>
@@ -81,9 +81,10 @@
 
         </form>
         <br>
-        <div class="subbody">
+    
         <h2> Table Availability </h2>
         <h3> Not availability on</h3>
+        <div style="padding:5vw;padding-top:1vw">
         <div class="contentbox">
         <table class="tab-not-available">
                 <tr>
@@ -130,8 +131,9 @@
 
             </table>
             </div>  
-        
-            </div>
+        </div> 
+
+            
     </div>    
     </body>
 </html> 

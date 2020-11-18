@@ -1,0 +1,48 @@
+  /* promo table */
+  .promo{
+    width: 90%;
+    margin: 0 auto;
+    table-layout: auto;
+    border-collapse: collapse; 
+  }
+  
+  .promo th {
+    background-color: #e9dfb2;
+    border: 1px solid rgb(43, 106, 189);
+    padding-top: 5px; 
+    padding-bottom: 5px;  
+    text-align: center;
+  }
+  
+  .promo td{
+    border: 1px solid rgb(160, 154, 154);
+    padding-top: 5px; 
+    padding-bottom: 5px;  
+    text-align: center;
+  }
+
+  .btn-promo {
+    width:15vw;
+    height: 5vh;
+    background: #ffd104;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: medium;
+  }
+  
+  .btn-promo:hover{
+    background: black;
+    cursor: pointer;
+  }
+
+  .type-feild{
+    font-size: samll;
+    color: rgb(129, 129, 182);
+    width: 12vw;
+    border-radius: 7px;
+    border: 2px solid grey;
+    float: center;
+    padding: 0.3vw 1vw 0.3vw 1vw;
+  }
+  

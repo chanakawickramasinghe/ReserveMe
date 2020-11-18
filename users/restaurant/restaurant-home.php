@@ -32,7 +32,7 @@
             <a href="add-menu.php" target="iframeBox">Update the Menu</a>
             <a href="res-promo.php" target="iframeBox">Promotions</a>
             <a href="res_view.php" target="iframeBox">View Reviews</a>
-            <a href="contact.php" target="iframeBox">Help Desk</a>
+            <a href="res-contactus.php" target="iframeBox">Help Desk</a>
             <br><br><br>
             <hr>
             <a href="emp-iframe.php" target="iframeBox">Manage Employee</a>

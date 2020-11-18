@@ -55,5 +55,20 @@
     float: center;
     padding: 0.3vw 1vw 0.3vw 1vw;
   }
+
+  .btn-promo-remove {
+    width:5vw;
+    height: 5vh;
+    background: #d35842;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    font-size: medium;
+  }
+  
+  .btn-promo-remove:hover{
+    background: rgb(160, 0, 0);
+    cursor: pointer;
+  }
   
   

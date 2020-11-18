@@ -21,7 +21,7 @@
   }
 
   .sidebar a:hover:not(.active) {
-    background-color: #5e6566;
+    background-color: #f3ba00; /*THIS SHOULD BE #5e6566*/
     color: white;
   }
   
@@ -35,7 +35,7 @@
   @media screen and (max-width: 700px) {
     .sidebar {
       width: 20%;
-      height: auto;
+      height: 100%;
       position: relative;
     }
     .sidebar a {float: left;}

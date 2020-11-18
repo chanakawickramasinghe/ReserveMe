@@ -64,6 +64,7 @@ body{
 	align: center;
 	position: relative;
 }
+
 .title_text h3{
 	font-family: myriad pro;
 	font-weight: 700;
@@ -135,3 +136,13 @@ body{
 .preorder td{
 	width:200px;
 }
+
+.preorder{
+	left: 20px;
+}
+
+.success-img{
+	height: 50px;
+	width: 50px;
+}
+

@@ -54,27 +54,26 @@
                     <p>
                     <img src="../../images/form_icons/mail.png" alt="user" class="icons">
                     <label for="email">Email Address</label>
-                    <input type="email" name="res_email" class="reg-type-feild" placeholder="ex: example@reserveme.lk" required="" oninvalid="this.setCustomValidity('Please Enter valid email')">
+                    <input type="email" name="res_email" class="reg-type-feild" placeholder="ex: example@reserveme.lk" required="">
                     </p>
 
                     <p>
                     <img src="../../images/form_icons/padlock.png" alt="user" class="icons">
                     <label for="password">Password</label>
+                    <h6>(Must Include Uppercase, Lowercase with Numbers)</h6>
                     <input type="password" name="password" class="reg-type-feild" placeholder="ex: John@1234" id="password" 
-                    pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" 
-                    oninvalid="this.setCustomValidity('Password must include Uppercase & Lowercase characters with Numbers or Special Characters')" required>
+                    pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
                     </p>
                     
                     <img src="../../images/form_icons/password.png" alt="user" class="icons">
                     <label for="password2">Confirm Password</label>
                     <input type="password" name="password2" class="reg-type-feild" placeholder="ex: John@1234" id="confirm_password" 
-                    pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" onkeyup='check()' 
-                    oninvalid="this.setCustomValidity('Password must include Uppercase & Lowercase characters with Numbers or Special Characters')" required>
+                    pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" onkeyup='check()' required>
                     <P id='message' ></P>
 
                     <img src="../../images/form_icons/phone-call.png" alt="user" class="icons">
                     <label for="contact">Contact number</label>
-                    <input type="tel" name="res_tel" class="reg-type-feild" placeholder="ex: +94771570227" pattern='^\+?\d{11}' > </td>
+                    <input type="tel" name="res_tel" class="reg-type-feild" placeholder="ex: +94771570227" pattern='^\+?\d{11}' required> </td>
 
 
                     <td>
@@ -87,26 +86,26 @@
                     <!-- Address -->
                     <img src="../../images/form_icons/address.png" alt="user" class="icons">
                     <label for="pnumber"> Address</label>
-                    <input type="text" name="pnumber" class="reg-type-feild" placeholder="ex : No. 120">
+                    <input type="text" name="pnumber" class="reg-type-feild" placeholder="ex : No. 120" required>
                     </p> 
 
                     <!-- <label for="street">Street</label> -->
                     <input type="text" name="street" class="reg-type-feild" placeholder="ex: Wall Street"> 
 
                     <!-- <label for="city">City</label> -->
-                    <input type="text" name="city" class="reg-type-feild" placeholder="ex: Colombo"> 
+                    <input type="text" name="city" class="reg-type-feild" placeholder="ex: Colombo" required> 
 
                     <p>
                     <!-- Resaurant Image -->
                     <img src="../../images/form_icons/image.png" alt="user" class="icons">
                     <label for="pnumber"> Profile Image</label>
-                    <input type="file" name="res_image" class="reg-type-feild" placeholder="Upload Profile Image">
+                    <input type="file" name="res_image" class="reg-type-feild" placeholder="Upload Profile Image" required>
                     </p> 
                 </tr> 
                 </table> 
                 <hr>
                 <br> 
-                <p>By creating an account you agree to our <a href="#" style="color:blue">Terms & Privacy</a>.</p>
+                <!-- <p>By creating an account you agree to our <a href="#" style="color:blue">Terms & Privacy</a>.</p> -->
                 <p align="center"> <input type="submit" name="submit"  class="hero-button" value="Register" required></p><br>
                 
                    <div class="signin">

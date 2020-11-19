@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Menu</title>
+    <title>Add Floor Plan</title>
     <link rel="stylesheet" href="../../CSS/main.css">
     <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="../../CSS/nav.css">
@@ -23,18 +23,18 @@
             <h2 class="error-msg" style="font-size:14px"><?php include_once('../../includes/message.php'); ?></h2>
                 <br><br>
                 <center>
-                <h1 style="color:#ffbb01;">Add Menu</h1>
+                <h1 style="color:#ffbb01;">Add Floor Plan</h1>
                 <br>
-                <p><h3>Insert images of your Restaurant Menu seperately.</h3></p>
+                <p><h3>Insert images of your Restaurant Floor seperately.</h3></p>
                 <p>(Only Five images are allowed)</p>
                 <br>
                 <!-- <h3>Rename Image</h3>
                 <br>
                 <input type="text" class="type-feild"   name="item_name" placeholder="RestaurantName_01" required>
                 <br><br> -->
-                <h3>Add Image</h3>
+                <h3>Floor Plan</h3>
                 <br>
-                <input class="input-file"  type="file" name="promo_image">
+                <input class="input-file"  type="file" name="floor-plan">
                 <div>
                 <br><br>
                 <input type="submit" name="submit" style="margin-left:400px; margin-top:-30px" class="btn-promo" value="Enter" required>   
@@ -50,11 +50,11 @@
                     <th>Image 05</th>
                 </tr>
                 <tr>
-                    <td><img class="img-promo" src="../../images/restaurant/P2.jpg" width="150px" height="250px">
+                    <td><img class="img-promo" src="../../images/restaurant/P1.jpg" width="150px" height="250px">
                     <br><button type="button" class="btn-promo-remove">Remove</button>
                     </td>
-                    <td><img class="img-promo" src="../../images/restaurant/P3.jpg" width="150px" height="250px">
-                    <br><button type="button" class="btn-promo-remove">Remove</button>
+                    <td><img class="img-promo" src="" >
+                    <!-- <br><button type="button" class="btn-promo-remove">Remove</button> -->
                     </td>
                     <td><img class="img-promo" src="">
                     <!-- <br><button type="button" class="btn-promo-remove">Remove</button> -->

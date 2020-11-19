@@ -27,12 +27,14 @@
         
         <div class="sidebar">
             </br></br>
-            <a class="active" href="restaurant-homeframe.php" target="iframeBox" >Home</a>
+            <a href="restaurant-homeframe.php" target="iframeBox" >Home</a> <!--ADD THIS AGAIN class="active" -->
             <a href="add-preordermenu.php" target="iframeBox">Pre - Order Menu</a>
             <a href="add-menu.php" target="iframeBox">Update the Menu</a>
             <a href="res-promo.php" target="iframeBox">Promotions</a>
-            <a href="../customer/res_view/review/index.html?res_id=8}" target="iframeBox">View Reviews</a>
-            <a href="contact.php" target="iframeBox">Help Desk</a>
+            <a href="res-floor-plan.php" target="iframeBox">Floor Plan</a>
+            <a href="res-reservation.php" target="iframeBox">Reservations</a>
+            <a href="res_view.php" target="iframeBox">View Reviews</a>
+            <a href="res-contactus.php" target="iframeBox">Help Desk</a>
             <br><br><br>
             <hr>
             <a href="emp-iframe.php" target="iframeBox">Manage Employee</a>

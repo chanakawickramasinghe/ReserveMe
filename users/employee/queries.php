@@ -8,17 +8,16 @@
         <link href="../../images/logo.png" rel="shortcut icon"/> 
         <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
         <!-- Link the style sheets -->
-  	    <link rel="stylesheet" href="../../CSS/nav.css">   
-        <link rel="stylesheet" href="../../CSS/footer.css">
         <link rel="stylesheet" href="../../CSS/employee.css">
+        <link rel="stylesheet" href="../../CSS/customer-reg.css">  
 
     </head>
     <body class="subbody">
         <div class="content-div">
-            <center><h1>New Queries</h1></center>
+            <h1>New <span style="color:orange">Queries</span> </h1>
 
             <div class="promo-btn-bar">
-                <button type="button" class="btn-promo" onclick="window.location.href='admin-past-messages.php'">Replied Queries</button>
+                <button type="button" class="hero-button" onclick="window.location.href='past-queries.php'">Replied Queries</button>
             </div>
 
             <table class="message-table">
@@ -26,7 +25,7 @@
                 <tr><td>This is for childs party for nursary school. So we have a special food recipient to make. Can you make it?</td></tr>
                 <tr><td>from <b>John Henricks</b> on <b>2020-11-16 12:23:42</b></td></tr>
                 <tr><td><textarea placeholder="Enter Your Reply..." class="reply-area"></textarea></td></tr>
-                <tr><td><button type="submit" class="btn-reply">Send</button></td></tr>
+                <tr><td><button type="submit" class="hero-button">Send</button></td></tr>
 
                 <td><hr></td>
 
@@ -34,7 +33,7 @@
                 <tr><td>We are palnning for wedding reception.So could you arrage all the needs which we want to make it better.like Sound arrangements, Decoration and all. </td></tr>
                 <tr><td>from <b>Carl Johnson</b> on <b>2020-11-10 13:20:01</b></td></tr>
                 <tr><td><textarea placeholder="Enter Your Reply..." class="reply-area"></textarea></td></tr>
-                <tr><td><button type="submit" class="btn-reply">Send</button></td></tr>
+                <tr><td><button type="submit" class="hero-button">Send</button></td></tr>
 
             </table>
         </div>

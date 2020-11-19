@@ -34,7 +34,7 @@
 
         <div class="content-div">
             <br><br>        
-            <h1>Ongoing Promotions</h1>
+            <h1><font color="black">Ongoing</font> Promotions</h1>
 
             <div class="promo-btn-bar">
                 <button type="button" class="btn-promo" onclick="window.location.href='admin-add-promo.php'">Add Promotion</button>

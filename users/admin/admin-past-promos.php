@@ -22,7 +22,7 @@
         </div>
         <!--End of nav-->
 
-        <h1>Past Promotions</h1>
+        <h1><font color="black">Past</font> Promotions</h1>
 
         <div class="search-user-container">
             <!-- <form name="form-display-selected"> -->

@@ -6,15 +6,11 @@
         <title>Employee Profile</title>
         <link href="../../images/logo.png" rel="shortcut icon"/> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
+        <!-- <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script> -->
         <!-- Link style Sheets -->
-        <link rel="stylesheet" href="../../CSS/nav.css">
-        <link rel="stylesheet" href="../../CSS/footer.css">
         <link rel="stylesheet" href="../../CSS/employee.css">
         <link rel="stylesheet" href="../../CSS/customer-reg.css">
-
-
-        
+   
     </head>
     <body>        
     <div style="margin:20px">      
@@ -33,7 +29,7 @@
         
         $userquery = mysqli_query($connection,$sql);
         $row = mysqli_fetch_assoc($userquery);
-        echo"<center><h1 class=div-c>Welcome ".$row['emp_name']." , Employee of ".$row2['res_name']."</h1></center>";
+        echo"<center><h1 class=div-c>Welcome <span style=\"color:orange\"> ".$row['emp_name']." </span> , Employee of <span style=\"color:orange\"> ".$row2['res_name']." </span> </h1></center>";
     
        
         ?>
@@ -57,38 +53,52 @@
        
         
         <img src="../../images/deco/restaurant-staff.jpg" alt="feedback" class="resimage"><hr style="width:90%">
-        <br> <br>
-
-
-            
+       
+        <center><h2>Table <span style="color:orange">Availability</span></h2></center>
+        <div style="height:370px;width:400px;display:block;padding:30px">
+        <div class="contentbox" style="padding:20px">
         <form action="#" method="post">
-            <h3>Not Available Reservation</h3>
+           <center> <h3>Not Available Table Reservation</h3> </center>
+
             <label for="date">Add Date</label><br>
-            <input type="date" name="date" class="reg-type-feild" placeholder="Date">
+            <input type="date" name="date" class="reg-type-feild" placeholder="Date" min="2020-11-19">
             <br>
 
             <label for="meal">Meal time</label><br>
             <select name="meal" id="meal" class="reg-type-feild">
-            <option value="m0" disabled selected value> -- select meal time -- </option>
+            <option value="m0" disabled selected value> -- select Session time -- </option>
             <option value="m1">Breakfast</option>
             <option value="m2">Lunch</option>
             <option value="m3">Dinner</option>
-            <option value="m4">All day</option>
+            <option value="m4">All Day</option>
             </select>
             <br>
 
             <input type="button" value="Set to unavailable" class="hero-button">
-
         </form>
+        </div>
+        </div>
+        <div style="margin-left:15vw">
+        <h3>Table Reservation Visible</h3>
+        <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+        </label>
+        <h3>Pre orders Visible</h3>
+        <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+        </label>
+        </div>
         <br>
-        <div class="subbody">
-        <h2> Table Availability </h2>
-        <h3> Not availability on</h3>
+    
+        <center> <h3> Not availability on</h3> </center>
+        <div style="padding:5vw;padding-top:1vw">
         <div class="contentbox">
         <table class="tab-not-available">
                 <tr>
                     <th>Date</th>
-                    <th>Meal</th>
+                    <th>Meal time</th>
                     <th>Action</th>
                 </tr>
                 <tr>
@@ -130,8 +140,9 @@
 
             </table>
             </div>  
-        
-            </div>
+        </div> 
+
+            
     </div>    
     </body>
 </html> 

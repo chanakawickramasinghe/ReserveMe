@@ -85,7 +85,7 @@
         <div class="btn-header">
             <form>
                 <div>
-                    <button name="edit" class="food-btn" type="button" onclick="window.location.href='restaurant-profile-edit.php'">Edit Profile</button>
+                    <button name="edit" class="food-btn" type="button" onclick="window.location.href='temp-profile-edit.php'">Edit Profile</button>
                     <br>
                     <a href =../../index.php><button name="deactivate" class="food-btn" type="button">Deactivate Account</button></a>
                 </div>

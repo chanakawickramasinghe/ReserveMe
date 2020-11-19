@@ -18,6 +18,7 @@
         <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
         <a class="navtab" href="../../index.php">Logout</a>
             <a class="navtab" href="admin-home.php">Home</a>
+            <a class="navtab" href="manage-users.php">Manage Users</a>
             <a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
         </div>
         <!--End of nav-->
@@ -32,7 +33,7 @@
                     placeholder="Enter Restaurant Name , Email , City or ID"/>
                 </div>
                 <br/>
-                
+
                 <h3>Details of Selected Restaurant</h3>
                 
                 <div class="update-box">
@@ -75,7 +76,8 @@
 
                 
                     <p class="button-box">
-                    <!-- <button class="btn-red" type="button" name="btn-delete-account">Delete Account</button> -->
+                    <button class="btn-blue-l" type="button" name="btn-view-reservations" onclick="viewActivityRes()">View Reservations</button>
+                    <button class="btn-red" type="button" name="btn-activate-account" onclick="activateFunRes()">Activate Account</button>
                     <button class="btn-red" type="button" name="btn-suspend-account" onclick="suspendFunctionRes()">Suspend Account</button>
                     <button class="btn-blue" type="reset">Clear</button>
                     </p>
@@ -97,7 +99,6 @@
                 <th>Restaurant Name</th>
                 <th>Restaurant Email</th>
                 <th>Contact No.</th>
-                <th>Location Link</th>
                 <th>Address Line 1</th>
                 <th>Address Line 2</th>
                 <th>City</th>
@@ -118,7 +119,6 @@
                     <td>".$row['res_name']."</td>
                     <td>".$row['res_email']."</td>
                     <td>".$row['res_tel']."</td>
-                    <td>".$row['res_location']."</td>
                     <td>".$row['res_add_line1']."</td>
                     <td>".$row['res_add_line2']."</td>
                     <td>".$row['city']."</td>
@@ -145,11 +145,11 @@
                 document.getElementById("email").value = this.cells[2].innerHTML;
                 document.getElementById("location").value = this.cells[4].innerHTML;
                 document.getElementById("contact_number").value = this.cells[3].innerHTML;
-                document.getElementById("ratings").value = this.cells[8].innerHTML;
-                document.getElementById("a1").value = this.cells[5].innerHTML;
-                document.getElementById("a2").value = this.cells[6].innerHTML;
-                document.getElementById("city").value = this.cells[7].innerHTML;
-                document.getElementById("active_status").value = this.cells[9].innerHTML;
+                document.getElementById("ratings").value = this.cells[7].innerHTML;
+                document.getElementById("a1").value = this.cells[4].innerHTML;
+                document.getElementById("a2").value = this.cells[5].innerHTML;
+                document.getElementById("city").value = this.cells[6].innerHTML;
+                document.getElementById("active_status").value = this.cells[8].innerHTML;
                 
             };
         }

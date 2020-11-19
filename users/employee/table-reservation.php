@@ -10,22 +10,30 @@
     <link href="../../images/logo.png" rel="shortcut icon"/> 
     <!-- Link the style sheet -->
     <link rel="stylesheet" href="../../CSS/employee.css">
-    <link rel="stylesheet" href="../../CSS/main.css">
+    <link rel="stylesheet" href="../../CSS/customer-reg.css">
+    <link rel="stylesheet" href="../../CSS/main.css">  
+
 
 
 </head>
+
 <body class="subbody">
     <br>
-    <h1>Reservations</h1>
-    <!-- <button href="table-reservation.php" target="iframe" class="hero-button">Dine in</button> -->
-    <button href="menu-reservation.php" class="hero-button" style="float:right;margin-right:3%">Menu</button>
+    <h1>Table <span style="color:orange"> Reservations </span> </h1>
+    
+    <div class="promo-btn-bar">
+        <button type="button" class="hero-button" onclick="window.location.href='menu-reservation.php'">Pre orders</button>
+    </div>
+    <div class="promo-btn-bar">
+        <button type="button" class="hero-button" onclick="window.location.href='hall-reservation.php'">Hall Reservation</button>
+    </div>
     <br><br>
 
     <div style="padding:10px">
     <div class="contentbox">
     <table width="100%">
         <tr>
-            <th>Reservation id.</th>
+            <th width="1vw">Reservation id.</th>
             <th>Name</th>
             <th>Email</th>
             <th>Date & Time</th>
@@ -33,7 +41,7 @@
             <th>Meal</th>
             <th>Members</th>
             <th>Accept</th>
-            <th>Reply</th>
+            <!-- <th>Reply</th> -->
         </tr>
         <tr><td colspan="9"><hr></td></tr>
 
@@ -41,12 +49,12 @@
             <td >Aamir</td>
             <td>aamirali@gmail.com</td>
             <td>2020-11-02 08:25</td>
-            <td>0768921288</td>
+            <td>+94768921288</td>
             <td>Breakfast</td>
             <td>2</td>
             <td><input type="button" value="Ok" class="hero-button" name="submit" href=""></td>
             <!-- <td><a href="#"><img src="../../images/accept.png" alt="Accept" style="width:25px;height:25px"></a></td> -->
-            <td><a href="#"><img src="../../images/message.png" alt="Message" style="width:25px;height:25px"></a></td>
+            <!-- <td><a href="#"><img src="../../images/message.png" alt="Message" style="width:25px;height:25px"></a></td> -->
            
         </tr>
         <tr><td colspan="9"><hr></td></tr>
@@ -55,12 +63,12 @@
             <td >Nuwan</td>
             <td>nuwan@gamail.com</td>
             <td>2020-11-06 12:15</td>
-            <td>89452356</td>
+            <td>+9475452356</td>
             <td>Lunch</td>
             <td>5</td>
             <td><input type="button" value="Ok" class="hero-button" name="submit" href=""></td>
             <!-- <td><a href="#"><img src="../../images/accept.png" alt="Accept" style="width:25px;height:25px"></a></td> -->
-            <td><a href="#"><img src="../../images/message.png" alt="Message" style="width:25px;height:25px"></a></td>
+            <!-- <td><a href="#"><img src="../../images/message.png" alt="Message" style="width:25px;height:25px"></a></td> -->
 
         </tr>
         <tr><td colspan="9"><hr></td></tr>
@@ -69,13 +77,13 @@
             <td >Chanaka</td>
             <td>chanaka@gmail.com</td>
             <td>2020-12-03 05:30</td>
-            <td>775623845</td>
+            <td>+94775623845</td>
             <td>Dinner</td>
             <td>3</td>
             <td><input type="button" value="Ok" class="hero-button" name="submit" href=""></td>
             <!-- <td><input type="button" value="Ok" class="hero-button" style="background-color:lightgreen;color:black" name="submit" href=""></td> -->
             <!-- <td><a href="#"><img src="../../images/accept.png" alt="Accept" style="width:25px;height:25px"></a></td> -->
-            <td><a href="#"><img src="../../images/message.png" alt="Message" style="width:25px;height:25px"></a></td>
+            <!-- <td><a href="#"><img src="../../images/message.png" alt="Message" style="width:25px;height:25px"></a></td> -->
             
         </tr>
         <tr><td colspan="9"><hr></td></tr>
@@ -89,7 +97,7 @@
             <td>4</td>
             <td><input type="button" value="Ok" class="hero-button" name="submit" href=""></td>
             <!-- <td><a href="#"><img src="../../images/accept.png" alt="Accept" style="width:25px;height:25px"></a></td> -->
-            <td><a href="#"><img src="../../images/message.png" alt="Message" style="width:25px;height:25px"></a></td>
+            <!-- <td><a href="#"><img src="../../images/message.png" alt="Message" style="width:25px;height:25px"></a></td> -->
         </tr>
         <tr><td colspan="9"><hr></td></tr>
       

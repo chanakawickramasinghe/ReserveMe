@@ -147,6 +147,7 @@
                             <button href="checkout.php" class="reserve-button" type=""  name="submit">Book</button>
                         </div>
                     </form>
+                    <div class="check"><button   class="food-btn" type=""  name="submit">Check Availability</button></div>
                 </div>
             </div>
         </section>

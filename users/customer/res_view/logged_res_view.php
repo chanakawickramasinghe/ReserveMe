@@ -121,6 +121,7 @@
                         </div>
                         <div class = "form-row">
                             <button onclick="onClickOpenForm()"  class="reserve-button pulsate" type=""  name="submit">Reserve</button>
+                            <button   class="reserve-button pulsate" type=""  name="submit">Check Availability</button>
                         </div>
                     </div>
                 </div>

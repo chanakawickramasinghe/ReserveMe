@@ -83,14 +83,6 @@
                     <label for="dob">Date of birth</label>
                     <input type="date" name="dob" id='dob' class="reg-type-feild" onkeyup='getAge(dob)' placeholder="Date of Birth" min="1930-01-01" max="2002-12-31"> 
                     <P id='message2' ></P>
-                                <!-- 
-                                                    <?php
-                                //                     $dob=$_POST['dob'];
-                                // if (time() < strtotime('+18 years', strtotime($dob))) {
-                                //     echo 'Client is under 18 years of age.';
-                                //     exit;
-                                //  }
-                                                    ?> -->
                     
 
                     <!-- <p>Address<p> -->
@@ -140,20 +132,21 @@
             }
         }
 
-      function getAge(birthDateString) {
-    var today = new Date();
-    var birthDate = new Date(birthDateString);
-    var age = today.getFullYear() - birthDate.getFullYear();
-    var m = today.getMonth() - birthDate.getMonth();
-    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-        age--;
-    }
-    return age;
-}
+        // onkeyup='getAge(dob)'
+    // function getAge(birthDateString) {
+    // var today = new Date();
+    // var birthDate = new Date(birthDateString);
+    // var age = today.getFullYear() - birthDate.getFullYear();
+    // var m = today.getMonth() - birthDate.getMonth();
+    // if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    //     age--;
+    // }
+    // return age;
+    // }
 
-if(age<16) {
-    alert("You have under 16 year old");
-} 
+    // if(age<16) {
+    // alert("You have under 16 year old");
+    // } 
     
         </script>
 

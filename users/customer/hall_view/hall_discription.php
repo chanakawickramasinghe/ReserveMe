@@ -12,7 +12,7 @@
     <!--Start of floorplan-->
 	<div id="content-wrapper">
 		<div class="column1">
-		<h1>Restaurant Discription</h1>
+		<h1>Description</h1>
 			<hr>
 			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 			<h3>Opens : 8.00am</h3><h3>Close : 12.00pm</h3>

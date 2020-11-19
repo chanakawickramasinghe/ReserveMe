@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 19, 2020 at 03:49 AM
+-- Generation Time: Nov 19, 2020 at 07:39 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.33
 
@@ -42,8 +42,9 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`admin_id`, `admin_name`, `admin_email`, `admin_password`, `contact_no`, `admin_type`) VALUES
-(1, 'Admin', 'admin@123', '202cb962ac59075b964b07152d234b70', '119', 'admin'),
-(5, 'Chanaka', 'chanaka.admin@gmail.com', '4de93544234adffbb681ed60ffcfb941', '+94771570227', 'co-admin');
+(1, 'Admin', 'admin@123', '202cb962ac59075b964b07152d234b70', '+94771520157', 'admin'),
+(5, 'Chanaka W', 'chanaka.admin@gmail.com', '4de93544234adffbb681ed60ffcfb941', '+94778618612', 'co-admin'),
+(6, 'Nuwan Fernando', 'nuwan.admin@gmail.com', '4de93544234adffbb681ed60ffcfb941', '+94771231234', 'co-admin');
 
 -- --------------------------------------------------------
 
@@ -139,8 +140,10 @@ CREATE TABLE `floorplan` (
 INSERT INTO `floorplan` (`res_id`, `floorplan_id`, `floorplan_image`) VALUES
 (4, 1, '1'),
 (4, 2, '2'),
-(5, 1, '1'),
-(5, 2, '2');
+(8, 1, '1'),
+(8, 2, '2'),
+(22, 1, '1'),
+(22, 2, '2');
 
 -- --------------------------------------------------------
 
@@ -155,6 +158,17 @@ CREATE TABLE `log` (
   `date_time` varchar(30) NOT NULL,
   `activity` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `log`
+--
+
+INSERT INTO `log` (`log_id`, `user_id`, `user_type`, `date_time`, `activity`) VALUES
+(1, 2, 'Customer', '2020-11-19 09:06:18', 'Login Successfully'),
+(2, 2, 'Customer', '2020-11-19 10:32:50', 'Login Successfully'),
+(3, 3001, 'Employee', '2020-11-19 10:39:42', 'Login Successfully'),
+(4, 4, 'Restaurant', '2020-11-19 10:42:58', 'Login Successfully'),
+(5, 2, 'Customer', '2020-11-19 11:08:50', 'Login Successfully');
 
 -- --------------------------------------------------------
 
@@ -174,8 +188,11 @@ CREATE TABLE `menu` (
 
 INSERT INTO `menu` (`res_id`, `menu_id`, `menu_image`) VALUES
 (4, 1, '1'),
-(5, 1, '1'),
-(4, 2, '2');
+(8, 1, '1'),
+(22, 1, '1'),
+(4, 2, '2'),
+(8, 2, '2'),
+(22, 2, '2');
 
 -- --------------------------------------------------------
 
@@ -255,7 +272,7 @@ CREATE TABLE `restaurant` (
   `res_add_line2` varchar(255) NOT NULL,
   `city` varchar(255) NOT NULL,
   `res_location` varchar(255) NOT NULL,
-  `res_tel` int(10) NOT NULL,
+  `res_tel` varchar(12) NOT NULL,
   `res_image` varchar(255) NOT NULL,
   `res_menu` varchar(255) NOT NULL,
   `res_password` varchar(255) NOT NULL,
@@ -270,9 +287,9 @@ CREATE TABLE `restaurant` (
 --
 
 INSERT INTO `restaurant` (`res_id`, `res_name`, `res_email`, `res_add_line1`, `res_add_line2`, `city`, `res_location`, `res_tel`, `res_image`, `res_menu`, `res_password`, `preorder_available`, `res_rate`, `no_of_rates`, `active_status`) VALUES
-(22, 'Topaz Hotel', 'topaz@gmail.com', 'No. 10', 'Aniwatta rd,', 'Kandy', 'https://www.google.com/maps/place/Hotel+Topaz+Kandy/@7.290154,80.6227663,17z/data=!3m1!4b1!4m8!3m7!1s0x3ae3688438382c6d:0xbe605bfbd8a2aaf0!5m2!4m1!1i2!8m2!3d7.290154!4d80.624955?hl=en-US', 2147483647, 'topaz.jpg', '', 'fc240e4b4cbc40024b3d269181c1e702', '', 0, 0, 1),
-(4, 'Cinnamon Grand', 'cg@gmail.com', 'Reid Avenue, Colombo', 'Reid Avenue, Colombo', 'Colombo', 'https://kfc.com', 227, 'cinnamon-grand-main-entrance.jpg', '', '202cb962ac59075b964b07152d234b70', '', 0, 0, 1),
-(8, 'Hilton Hotel', 'hil@123', '1223', 'galle road', 'Colombo', 'httms://hilton.com', 112121212, 'hilton.webp', '', '202cb962ac59075b964b07152d234b70', '', 0, 0, 1);
+(22, 'Topaz Hotel', 'topaz@gmail.com', 'No. 10', 'Aniwatta rd,', 'Kandy', 'https://maps.google.com/maps?q=topaz%20kandy&t=&z=13&ie=UTF8&iwloc=&output=embed', '+94112271227', 'topaz.jpg', '', 'fc240e4b4cbc40024b3d269181c1e702', '', 0, 0, 1),
+(4, 'Cinnamon Grand', 'cg@gmail.com', 'Reid Avenue, Colombo', 'Reid Avenue, Colombo', 'Colombo', 'https://maps.google.com/maps?q=cinnomon%20grand%20colombo&t=&z=13&ie=UTF8&iwloc=&output=embed\r\n', '+94112271227', 'cinnamon-grand-main-entrance.jpg', '', '202cb962ac59075b964b07152d234b70', '', 0, 0, 1),
+(8, 'Hilton Hotel', 'hil@123', '1223', 'galle road', 'Colombo', 'https://maps.google.com/maps?q=hilton%20colombo&t=&z=13&ie=UTF8&iwloc=&output=embed', '+94112271227', 'hilton.webp', '', '202cb962ac59075b964b07152d234b70', '', 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -331,24 +348,24 @@ CREATE TABLE `reviews` (
 --
 
 INSERT INTO `reviews` (`review_id`, `res_id`, `customer_name`, `content`, `rating`, `submit_date`) VALUES
-(1, 4, 'David Deacon', 'Nice', 5, '2020-01-09 20:43:02'),
-(2, 4, 'John Doe', 'Great website, great content, and great support!', 4, '2020-01-09 21:00:41'),
-(3, 1, 'Robert Billings', 'ok', 3, '2020-01-09 21:10:16'),
-(4, 1, 'Daniel Callaghan', 'Great!', 5, '2020-01-09 23:51:05'),
-(5, 4, 'Bobby', 'Not much content.', 2, '2020-01-14 21:54:24'),
-(6, 4, 'Joshua Kennedy', 'Fantasic website', 5, '2020-01-16 17:34:27'),
-(7, 1, 'Johannes Hansen', 'Really like this website, helps me out a lot!', 5, '2020-01-16 17:35:12'),
-(8, 1, 'Wit Kwiatkowski', 'Please provide more quality content.', 5, '2020-01-16 17:36:03'),
-(9, 4, 'Óli Þórðarson', 'Thanks', 5, '2020-01-16 17:36:34'),
-(10, 1, 'Jaroslava Beránková', '', 5, '2020-01-16 17:37:48'),
-(11, 1, 'Naomi Holt', 'Appreciate', 5, '2020-01-16 17:39:17'),
-(12, 4, 'Isobel Whitehead', 'Thank you for providing this', 5, '2020-01-16 17:40:28'),
-(13, 1, 'Warren Mills', 'Everything is awesome!', 5, '2020-01-16 19:34:08'),
-(14, 1, 'Larry Johnson', 'Brilliant,', 5, '2020-01-29 18:40:36'),
+(1, 4, 'Aamir Ali', 'Nice', 5, '2020-01-09 20:43:02'),
+(2, 4, 'John Stewuet', 'Great website, great content, and great support!', 4, '2020-01-09 21:00:41'),
+(3, 1, 'Chathu Priya', 'ok', 3, '2020-01-09 21:10:16'),
+(4, 22, 'Aamir Ali', 'Great!', 5, '2020-01-09 23:51:05'),
+(5, 4, 'John Stewuet', 'Not much content.', 2, '2020-01-14 21:54:24'),
+(6, 4, 'John Stewuet', 'Fantasic website', 5, '2020-01-16 17:34:27'),
+(7, 22, 'Chathu Priya', 'Really like this website, helps me out a lot!', 5, '2020-01-16 17:35:12'),
+(8, 22, 'Aamir Ali', 'Please provide more quality content.', 5, '2020-01-16 17:36:03'),
+(9, 4, 'Aamir Ali', 'Thanks', 5, '2020-01-16 17:36:34'),
+(10, 22, 'John Stewuet', '', 5, '2020-01-16 17:37:48'),
+(11, 22, 'Chathu Priya', 'Appreciate', 5, '2020-01-16 17:39:17'),
+(12, 4, 'John Stewuet', 'Thank you for providing this', 5, '2020-01-16 17:40:28'),
+(13, 8, 'Aamir Ali', 'Everything is awesome!', 5, '2020-01-16 19:34:08'),
+(14, 8, 'John Stewuet', 'Brilliant,', 5, '2020-01-29 18:40:36'),
 (15, 4, 'Chanaka', 'Wonderful', 3, '2020-11-16 18:19:36'),
-(16, 4, 'John', 'Had a nice time', 4, '2020-11-16 18:20:19'),
+(16, 4, 'Chathu Priya', 'Had a nice time', 4, '2020-11-16 18:20:19'),
 (17, 8, 'Chanaka', 'This is a good service', 5, '2020-11-18 18:36:36'),
-(18, 8, 'Jonathan Darwin', 'Not satisfied with the service.', 3, '2020-11-18 20:24:15');
+(18, 8, 'Chathu Priya', 'Not satisfied with the service.', 3, '2020-11-18 20:24:15');
 
 -- --------------------------------------------------------
 
@@ -497,7 +514,7 @@ ALTER TABLE `tokens`
 -- AUTO_INCREMENT for table `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `contact_us`
@@ -521,7 +538,7 @@ ALTER TABLE `employee`
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `menu`

@@ -10,6 +10,7 @@
         <!-- Link style Sheets -->
         <link rel="stylesheet" href="../../CSS/employee.css">
         <link rel="stylesheet" href="../../CSS/customer-reg.css">
+        <link rel="stylesheet" href="../../CSS/main.css">
    
     </head>
     <body>        

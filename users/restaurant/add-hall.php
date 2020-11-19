@@ -6,8 +6,10 @@
     <!-- Link the style sheets -->
     <link href="../../CSS/login.css" rel="stylesheet" type="text/css" > 
     <link href="../../CSS/nav.css" rel="stylesheet" type="text/css">
-    <link href="../../CSS/footer.css" rel="stylesheet" type="text/css">     
-    <link href="../../CSS/add-hall.css" rel="stylesheet" type="text/css" > 
+    <link href="../../CSS/footer.css" rel="stylesheet" type="text/css">
+    <!-- <link href="../../CSS/pre-order.css" rel="stylesheet" type="text/css">     
+    <link href="../../CSS/res-promo.css" rel="stylesheet" type="text/css" >  -->
+    <link href="../../CSS/add-hall.css" rel="stylesheet" type="text/css" >
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
 
     <style>
@@ -19,8 +21,11 @@
         }
     </style> 
 </head>
-    <body>
+    <body><center>
         <form method="post" action="add-hall-submit.php" enctype="multipart/form-data">
+        <br><br>
+        <h1 style="color:#ffbb01;"> Add Hall Details</h1>
+        <br><br>
         <table>
             <tr>
                 <th>Hall Name</th>
@@ -58,10 +63,13 @@
                 <th>Advance Fee</th>
                 <td><input type="text" name="advance" placeholder="Rs."></td>
             </tr>
+            <center>
         </table>
-        <button type="submit" name="btn-add-hall">Add Hall Details</button>
-        <button type="reset" name="btn-clear">Clear</button>
-        </form>
+        <br><br><br><br>
+        <input type="submit" name="submit" style="margin-left:250px; margin-top:-30px" class="btn-promo" value="Add Hall Details" required>
+        <br><br><br><br>
+        <!-- <input type="rest" name="submit" style="margin-left:250px; margin-top:-30px" class="btn-promo" value="Clear" required>
+        </form> -->
 
         
     </body>

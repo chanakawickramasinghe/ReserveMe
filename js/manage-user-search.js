@@ -209,3 +209,16 @@ function myFunctionCustomer() {
 
               }
             }
+
+            function sendEmail() {
+              var txt;
+              var x = document.forms["form-display-selected"]["id"].value;
+              if (x == "") {
+                alert("No ID Selected!");
+                return false;
+              }
+              else{
+                window.location = "admin-send-email.php";
+
+              }
+            }

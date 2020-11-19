@@ -28,11 +28,11 @@
             <table class="add-promo-form">
                 <tr>
                     <th>Starting Date</th>
-                    <td><input class="input-feild" type="date" name="start_date"></td>
+                    <td><input class="input-feild" type="date" name="start_date" min="2020-11-19"></td>
                 </tr>
                 <tr>
                     <th>End Date</th>
-                    <td><input class="input-feild" type="date" name="end_date"></td>
+                    <td><input class="input-feild" type="date" name="end_date" min="2020-11-19"></td>
                 </tr>
                 <tr>
                     <th>Add Image</th>

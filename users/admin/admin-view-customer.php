@@ -76,6 +76,7 @@
 
                 
                     <p class="button-box">
+                    <button class="btn-blue-l" type="button" name="btn-send-email" onclick="sendEmail()">Send Email</button>
                     <button class="btn-blue-l" type="button" name="btn-view-activity" onclick="viewActivityCus()">View Activity</button>
                     <button class="btn-red" type="button" name="btn-activate-account" onclick="activateFunCus()">Activate Account</button>
                     <button class="btn-red" type="button" name="btn-suspend-account" onclick="suspendFunction()">Suspend Account</button>

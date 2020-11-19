@@ -58,17 +58,16 @@
         <option value="q5">Other.</option>
         </select><br>
       
-        <input class="type-feild" type="text" name="fname" placeholder="Full Name" required><br>
-        <input class="type-feild" type="email" name="email" placeholder="Email Address" required><br>
-        <input class="type-feild" type="tel" name="mobile" placeholder="Mobile Number(Optional)"><br>
-        <input class="type-feild"  style="height:270px;overflow:auto" type="text" name="msg" placeholder="Type message......" ><br>
+        
+
+        <input class="type-feild"  style="height:180px;overflow:auto" type="text" name="msg" placeholder="Type message......" ><br>
         <center><input type="submit" name="submit"  class="hero-button" value="Post" style="margin-left:30px"  required></center>
         </form>
         </div>
         </td>
 
         <td>
-        <img src="../../images/contact-us-woman.jpg" alt="">
+        <img width="250vw" src="../../images/contact-us-woman.jpg" alt="">
         
         
         

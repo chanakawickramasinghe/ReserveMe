@@ -14,7 +14,7 @@
 
         <div class="content-div">
             <br><br>        
-            <center><h1 style="color:#ffbb01;">Ongoing Promotions</h1></center>
+            <center><h1 style="color:#ffbb01;"><font color="black">Ongoing</font> Promotions</h1></center>
 
             <div class="promo-btn-bar">
                 <button type="button" class="btn-promo" onclick="window.location.href='res-add-promotions.php'">Add Promotion</button>

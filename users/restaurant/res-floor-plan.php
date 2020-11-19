@@ -23,7 +23,7 @@
             <h2 class="error-msg" style="font-size:14px"><?php include_once('../../includes/message.php'); ?></h2>
                 <br><br>
                 <center>
-                <h1 style="color:#ffbb01;">Add Floor Plan</h1>
+                <h1 style="color:#ffbb01;"><font color="black">Add</font> Floor Plan</h1>
                 <br>
                 <p><h3>Insert images of your Restaurant Floor seperately.</h3></p>
                 <p>(Only Five images are allowed)</p>

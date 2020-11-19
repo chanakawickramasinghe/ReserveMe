@@ -17,15 +17,15 @@
         
         <div class="content-div">
         <br><br><br>     
-            <h1 style="color:#ffbb01;">Welcome Pizza Hut, Kandy!</h1>
+            <h1 style="color:#ffbb01;"><font color="black">Welcome</font> Cinnamon Grand</h1>
         <br>
-        <img src="../../images/14.png" width="300" hight="292">
+        <img src="../../images/hilton.jpeg" width="300" hight="292">
         <br><br>   
         <h3> Restaurant Public Details</h3>
         <br>
-        <p>Name : Pizza Hut, Kandy.</p>
+        <p>Name : Hilton Hotel, Colombo.</p>
         <p>Telephone No: 011 - 264 8356</p>
-        <p>Address : 1, Dhalada Vidiya, Kandy.</p>
+        <p>Address : 1, Galle rd, Colombo.</p>
         <br>
         <br>
 

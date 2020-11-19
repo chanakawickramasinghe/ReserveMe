@@ -66,7 +66,10 @@
             <center>
         </table>
         <br><br><br><br>
-        <input type="submit" name="submit" style="margin-left:250px; margin-top:-30px" class="btn-promo" value="Add Hall Details" required>
+
+        <input type="submit" name="btn-add-hall" style="margin-left:250px; margin-top:-30px" class="btn-promo" value="Add Hall Details" required>
+
+        
         <br><br><br><br>
         <!-- <input type="rest" name="submit" style="margin-left:250px; margin-top:-30px" class="btn-promo" value="Clear" required>
         </form> -->

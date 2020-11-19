@@ -35,7 +35,7 @@
 
         <div class="content-div">
             <br><br>
-            <h1>New Messages</h1>
+            <h1><font color="black">New</font> Messages</h1>
 
             <div class="promo-btn-bar">
                 <button type="button" class="btn-promo" onclick="window.location.href='send-new-message.php'">Send Message</button>

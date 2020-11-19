@@ -52,7 +52,7 @@
         
         <div class="content-div">
             <br><br>        
-            <h1>Co-admins of the System</h1>
+            <h1><font color="black">Coadmins of</font> the System</h1>
 
             <div class="coadmin-table">
 
@@ -90,15 +90,15 @@
                     <table>
                         <tr>
                             <th>Admin Name : </th>
-                            <td><input class="input-l" type="text" placeholder="Admin Name" id="admin_name" name="name"  required></td>
+                            <td><input class="input-l" type="text" placeholder="Admin Name" id="admin_name" name="name" pattern="^[A-Za-z ]+$" required></td>
                         </tr>
                         <tr>
                             <th>Admin Email : </th>
-                            <td><input class="input-l" type="text" placeholder="Admin Email" id="admin_email" name="email" required></td>
+                            <td><input class="input-l" type="email" placeholder="Admin Email" id="admin_email" name="email" required></td>
                         </tr>
                         <tr>
                             <th>Contact No. : </th>
-                            <td><input class="input-m" type="text" placeholder="Contact" id="contact_no" name="contact" required></td>
+                            <td><input class="input-l" type="text" placeholder="Contact" id="contact_no" name="contact" pattern='^\+?\d{11}' required></td>
                         </tr>
                         <tr>
                             <th>Admin Type : </th>
@@ -106,7 +106,8 @@
                         </tr>
                         <tr>
                             <th>Password : </th>
-                            <td><input class="input-m" type="password" placeholder="Password" id="password" name="password"></td>
+                            <td><input class="input-m" type="password" placeholder="Password" id="password" name="password"
+                            pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"></td>
                         </tr>
 
                     </table>
@@ -122,7 +123,7 @@
 <script>
     var table = document.getElementById('myTable');
                 
-        for(var i = 1; i < table.rows.length; i++)
+        for(var i = 2; i < table.rows.length; i++)
         {
             table.rows[i].onclick = function()
             {

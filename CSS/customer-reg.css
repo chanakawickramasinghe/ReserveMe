@@ -8,7 +8,7 @@
   
   .login-box{
     width: 800px;
-    height: 970px;
+    height: 990px;
     margin: 30px auto;
     background: #ffffffec;
     color: #000000;
@@ -47,6 +47,24 @@
   box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
   
 }
+
+.reg-type-feild-p{
+    height: 4.5vh;
+    padding: 0.4vh 0.4vh 0 0.4vh;
+    /* padding: 0.4vh; */
+    border-radius:5px;
+    outline:none;
+    width: 280px;
+    margin: 10px 10px 0px 10px;
+    /* margin-top: 10px; */
+    box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
+    
+  }
+
+  .h6{
+      margin-top: 0px;
+      padding-top: 0px;
+  }
 
 .type-feild-comment{
     font-size: medium;

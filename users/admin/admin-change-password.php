@@ -27,11 +27,11 @@
                 <h3>Are you sure want to change your password?</h3>
                 <div class="form-change">
                     <p>Current Password : </p>
-                    <p><input type="password" name="cur_pword" placeholder="Current Password"></p>
+                    <p><input type="password" name="cur_pword" placeholder="Current Password" required></p>
                     <p>New Password : </p>
-                    <p><input type="password" name="new_pword1" placeholder="New Password"></p>
+                    <p><input type="password" name="new_pword1" placeholder="New Password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required></p>
                     <p>Re-Enter New Password : </p>
-                    <p><input type="password" name="new_pword2" placeholder="Re-Enter Password"></p>
+                    <p><input type="password" name="new_pword2" placeholder="Re-Enter Password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required></p>
 
                     <button type="submit" class="btn-change-blue" onclick="changePassword()">Change Password</button>
                     <button type="reset" class="btn-change-normal">Clear</button>

@@ -40,28 +40,16 @@
         <option value="Other">Other</option>
         </select><br>
       
-<<<<<<< HEAD
         
 
         <input class="type-feild"  style="height:180px;overflow:auto" type="text" name="msg" placeholder="Type message......" ><br>
         <center><input type="submit" name="submit"  class="hero-button" value="Post" style="margin-left:30px"  required></center>
-=======
-        <input class="type-feild" type="text" name="fname" placeholder="Full Name" required><br>
-        <input class="type-feild" type="email" name="email" placeholder="Email Address" required><br>
-        <input class="type-feild" type="tel" name="mobile" placeholder="Mobile Number(Optional)" pattern='^\+?\d{9,11}'><br>
-        <textarea class="type-feild-comment"  style="height:200px;overflow:auto" scrolling="yes" type="text" name="msg" placeholder="Type message......" ></textarea><br>
-        <input type="submit" name="submit"  class="hero-button" value="Post" style="margin-left:30px"  required>
->>>>>>> f44256d39a02eba9041f80ed31494e363f6f346b
         </form>
         </div>
         </td>
 
         <td>
-<<<<<<< HEAD
         <img width="250vw" src="../../images/contact-us-woman.jpg" alt="">
-=======
-        <img src="../../images/contact-us-woman.jpg" alt="admin vactor" style="height:45vw;width:100%">
->>>>>>> f44256d39a02eba9041f80ed31494e363f6f346b
         
         
         

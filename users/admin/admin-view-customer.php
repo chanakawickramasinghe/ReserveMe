@@ -41,7 +41,7 @@
                     <table>
                         <tr>
                             <th>Customer ID :</th>
-                            <td><input class="input-s" type="text" placeholder="ID" id="id" name="id" readonly="true" required></td>
+                            <td><input class="input-s" type="text" placeholder="ID" id="cus_id" name="id" readonly="true" required></td>
                             <th>Customer Email :</th>
                             <td><input class="input-l" type="text" placeholder="Customer Email" id="email" readonly="true" required></td>
                             <th>Contact No. :</th>
@@ -76,8 +76,8 @@
 
                 
                     <p class="button-box">
-                    <button class="btn-blue" type="button" name="btn-view-activity" onclick="window.location.href='admin-view-customer-activity.php'">View Activity</button>
-                    <button class="btn-red" type="button" name="btn-activate-account">Activate Account</button>
+                    <button class="btn-blue-l" type="button" name="btn-view-activity" onclick="viewActivityCus()">View Activity</button>
+                    <button class="btn-red" type="button" name="btn-activate-account" onclick="activateFunCus()">Activate Account</button>
                     <button class="btn-red" type="button" name="btn-suspend-account" onclick="suspendFunction()">Suspend Account</button>
                     <button class="btn-blue" type="reset">Clear</button>
                     </p>

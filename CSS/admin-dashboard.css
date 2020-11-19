@@ -271,6 +271,21 @@
   cursor: pointer;
 }
 
+.btn-blue-l{
+  width:12vw;
+  height: 4vh;
+  background: #00b3b3;
+  border: none;
+  border-radius: 10px;
+  color:rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+.btn-blue-l:hover{
+  background: #009999;
+  cursor: pointer;
+}
+
 .btn-red{
   width:14vw;
   height: 4vh;

@@ -23,7 +23,7 @@ function myFunctionCustomer() {
       var txt;
       var x = document.forms["form-display-selected"]["id"].value;
       if (x == "") {
-        alert("No ID entered!");
+        alert("No ID Selected!");
         return false;
       }
       else{
@@ -39,7 +39,7 @@ function myFunctionCustomer() {
       var txt;
       var x = document.forms["form-display-selected"]["id"].value;
       if (x == "") {
-        alert("No ID entered!");
+        alert("No ID Selected!");
         return false;
       }
       else{
@@ -147,3 +147,65 @@ function myFunctionCustomer() {
                 }
               }
             } 
+
+            function activateFunCus() {
+              var txt;
+              var x = document.forms["form-display-selected"]["id"].value;
+              if (x == "") {
+                alert("No ID Selected!");
+                return false;
+              }
+              else{
+                var r = confirm("Are you sure want to Activate this Account?");
+                if (r == true) {
+                window.location = "admin-view-customer.php";
+                alert("Account Activated");
+                }
+
+              }
+            }
+
+            function activateFunRes() {
+              var txt;
+              var x = document.forms["form-display-selected"]["id"].value;
+              if (x == "") {
+                alert("No ID Selected!");
+                return false;
+              }
+              else{
+                var r = confirm("Are you sure want to Activate this Account?");
+                if (r == true) {
+                window.location = "admin-view-restaurant.php";
+                alert("Account Activated");
+                }
+
+              }
+            }
+
+            function viewActivityCus() {
+              var txt;
+              var x = document.forms["form-display-selected"]["id"].value;
+              if (x == "") {
+                alert("No ID Selected!");
+                return false;
+              }
+              else{
+                window.location = "admin-view-customer-activity.php";
+
+              }
+            }
+
+            
+
+            function viewActivityRes() {
+              var txt;
+              var x = document.forms["form-display-selected"]["id"].value;
+              if (x == "") {
+                alert("No ID Selected!");
+                return false;
+              }
+              else{
+                window.location = "admin-view-res-reservations.php";
+
+              }
+            }

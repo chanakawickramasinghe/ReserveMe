@@ -7,8 +7,9 @@
     <link href="../../images/logo.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Link the style sheets -->   
-    <link href="../../CSS/add-hall.css" rel="stylesheet" type="text/css" > 
-    <link href="../../CSS/res-manage.css" rel="stylesheet" type="text/css" >
+    <!-- <link href="../../CSS/add-hall.css" rel="stylesheet" type="text/css" >  -->
+    <link href="../../CSS/pre-order.css" rel="stylesheet" type="text/css" >
+    <link rel="stylesheet" href="../../CSS/res-promo.css"/>
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
  
 </head>
@@ -24,19 +25,20 @@
 
         if ($num_halls == 0){
             echo "
-            <h2>Reception Halls</h2>
             
-            <p>No Reception Hall added!</p>
-            
-            <button type=\"button\" name=\"btn-to-add-emp\" onclick=\"window.location.href='add-hall.php'\">Add Employee</button>";
+            <h1 align='center' color:'#ffbb01;'>Reception Halls</h1>
+
+            <h3 align='center'>No Reception Hall added!</h3>
+            <br><br><br>
+            <button type=\"button\" name=\"btn-promo\" class=\"btn-promo\" onclick=\"window.location.href='add-hall.php'\" align=\"center\">Add Hall</button>";
 
             
         }
         else{
             echo "
-            <h2>Reception Hall Details</h2>
+            <h2 align='center' color:'#ffbb01;'>Reception Hall Details</h2>
             
-            <table class=\"promo\" id=\"myTable\" border=\"1\">
+            <table class=\"promo\" id=\"myTable\" border=\"1\" align=\"center\">
             <tr>
                 <th>Hall Main Image</th>
                 <th>Image 1</th>

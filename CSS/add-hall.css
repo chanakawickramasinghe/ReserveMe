@@ -6,7 +6,7 @@
  
 }
   
-  .login-box{
+.login-box{
     width: 500px;
     height: 800px;
     margin: 30px auto;
@@ -64,11 +64,6 @@
     left: calc(50% - 50px); */
 }
 
-.login-body{
-    /* background-color: #f2f2f2; */
-    background-image: url(../images/regbg.jpg);
-    background-size: cover;
-}
 .error-msg{
     font-size: 18px;
     color: #F00;
@@ -148,3 +143,49 @@ input.invalid {
 .step.finish {
 	background-color: #4CAF50;
 }
+
+.type-feild{
+    font-size: medium;
+    color: rgb(129, 129, 182);
+    width: 20vw;
+    border-radius: 7px;
+    border: 2px solid grey;
+    float: center;
+    padding: 0.3vw 1vw 0.3vw 1vw;
+  }
+
+.input-file{
+    font-size: medium;
+    color: rgb(129, 129, 182);
+    width: 20vw;
+    border-radius: 7px;
+    border: 2px solid grey;
+    float: center;
+    padding: 0.3vw 1vw 0.3vw 1vw;
+  }
+
+  .text{
+    font-size: medium;
+    color: rgb(129, 129, 182);
+    width: 20vw;
+    height: 20vw;
+    border-radius: 7px;
+    border: 2px solid grey;
+    float: center;
+    padding: 0.3vw 1vw 0.3vw 1vw;
+  }
+
+  .btn-promo {
+    width:15vw;
+    height: 5vh;
+    background: #ffc400;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: medium;
+  }
+  
+  .btn-promo:hover{
+    background: black;
+    cursor: pointer;
+  }

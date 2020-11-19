@@ -105,7 +105,7 @@
 							$retriewMenu = "SELECT * FROM restaurant WHERE res_id = ".$_GET['res_id'];
 							$resultMenu = mysqli_query($connection,$retriewMenu);
 							while($rowProduct  = mysqli_fetch_assoc($resultMenu)){  
-                                echo"<li><a  href=\"hall_discription.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Menu</a></li>
+                                echo"<li><a  href=\"hall_discription.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">About</a></li>
                                     <li><a  href=\"menu.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Menu</a></li>
 									<li><a  href=\"directions.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Directions</a></li>
 									<li><a  href=\"review/logged_index.html?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Reviews</a></li>";

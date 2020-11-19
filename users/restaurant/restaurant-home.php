@@ -33,7 +33,7 @@
             <a href="res-promo.php" target="iframeBox">Promotions</a>
             <a href="res-floor-plan.php" target="iframeBox">Floor Plan</a>
             <a href="res-reservation.php" target="iframeBox">Reservations</a>
-            <a href="res_view.php" target="iframeBox">View Reviews</a>
+            <a href="../customer/res_view/review/index.html?res_id=4" target="iframeBox">View Reviews</a>
             <a href="res-contactus.php" target="iframeBox">Help Desk</a>
             <br><br><br>
             <hr>

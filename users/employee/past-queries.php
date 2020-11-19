@@ -7,8 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ReserveMe - Admin</title>
         <link href="../../images/logo.png" rel="shortcut icon"/>
-        <link rel="stylesheet" href="../../CSS/employee.css"/>
-        <link rel="stylesheet" href="../../CSS/customer-reg.css">  
+        <link rel="stylesheet" href="../../CSS/employee.css">
+        <link rel="stylesheet" href="../../CSS/customer-reg.css">
+        <link rel="stylesheet" href="../../CSS/main.css"> 
         <script src="../../js/manage-user-search.js"></script>
     </head>
 

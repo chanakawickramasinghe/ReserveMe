@@ -9,7 +9,9 @@
         <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
         <!-- Link style Sheets -->
         <link rel="stylesheet" href="../../CSS/employee.css">
-        <link rel="stylesheet" href="../../CSS/customer-reg.css">  
+        <link rel="stylesheet" href="../../CSS/customer-reg.css">
+        <link rel="stylesheet" href="../../CSS/main.css">
+
     </head>
     <body>    
     <br>

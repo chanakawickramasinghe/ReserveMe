@@ -10,7 +10,8 @@
     <link href="../../images/logo.png" rel="shortcut icon"/> 
     <!-- Link the style sheet -->
     <link rel="stylesheet" href="../../CSS/employee.css">
-    <link rel="stylesheet" href="../../CSS/customer-reg.css">  
+    <link rel="stylesheet" href="../../CSS/customer-reg.css">
+    <link rel="stylesheet" href="../../CSS/main.css">
 
 </head>
 

@@ -45,7 +45,7 @@
 
         <div class="content-div">
             <br><br>        
-            <h1>Application Log</h1>
+            <h1><font color="black">Application</font> Log</h1>
         
             <div class="search-user-container">
             <form name="form-display-selected">

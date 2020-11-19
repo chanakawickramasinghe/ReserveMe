@@ -39,7 +39,7 @@
             <?php
                 checkSession();
                 echo "
-                    <h1>Welcome ".$_SESSION["name"]."!</h1>";    
+                    <h1><font color=\"black\">Welcome</font> ".$_SESSION["name"]."!</h1>";    
             ?>  
             
             <br><br>

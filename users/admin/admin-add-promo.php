@@ -22,7 +22,7 @@
         </div>
         <!--End of nav-->
 
-        <h1>Add Promotion</h1>
+        <h1><font color="black">Add</font> Promotion</h1>
         <div class="centered-view">
         <form class="add-promo-form" method="post" action="admin-add-promo-submit.php" enctype="multipart/form-data">
             <table class="add-promo-form">

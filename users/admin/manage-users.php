@@ -34,7 +34,7 @@
         </div>
         <div class="content-div">
             <br><br>        
-            <h1>Users of the system</h1>
+            <h1><font color="black">Users of</font> the system</h1>
 
             <!-- 3  buttons -->
             <div class="row-33">

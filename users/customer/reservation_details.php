@@ -37,42 +37,39 @@
             
             <div class="food-container">
                 <div class="food-box">
-                    <h3 class="name">KFC</h3> 
-                    <img class="food-img" src= "../../images/4.jpg">
+                    <h3 class="name">Cinnamon Grand</h3> 
+                    <img class="food-img" src= "../../images/restaurant/cinnamon-grand-main-entrance.jpg">
                     <br>
                     <i class="fas fa-map-marker-alt">Colombo</i>
                     <br>
                     <h4 class="">2020 Dec 04</h4>
                     <h4 class="">8.00pm</h4>
-                    <h4 class="">For 2</h4>
                     <h4 class="">Table</h4>
                     <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Cancel</button>  
                 </div>
             </div>
             <div class="food-container">
                 <div class="food-box">
-                    <h3 class="name">KFC</h3> 
-                    <img class="food-img" src= "../../images/10.jpg">
+                    <h3 class="name">Topaz Hotel</h3> 
+                    <img class="food-img" src= "../../images/restaurant/topaz.jpg">
                     <br>
-                    <i class="fas fa-map-marker-alt">Colombo</i>
+                    <i class="fas fa-map-marker-alt">Kandy</i>
                     <br>
                     <h4 class="">2021 Feb 19</h4>
                     <h4 class="">8.00pm</h4>
-                    <h4 class="">For 4</h4>
                     <h4 class="">Hall</h4>
                     <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Cancel</button>  
                 </div>
             </div>
             <div class="food-container">
                 <div class="food-box">
-                    <h3 class="name">Fab</h3> 
-                    <img class="food-img" src= "../../images/8.jpg">
+                    <h3 class="name">Hilton Hotel</h3> 
+                    <img class="food-img" src= "../../images/restaurant/hilton.jpg">
                     <br>
-                    <i class="fas fa-map-marker-alt">Negombo</i>
+                    <i class="fas fa-map-marker-alt">Colombo</i>
                     <br>
                     <h4 class="">2020 Apr 14</h4>
                     <h4 class="">10.00am</h4>
-                    <h4 class="">For 6</h4>
                     <h4 class="">Hall</h4>
                     <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Cancel</button>  
                 </div>
@@ -87,62 +84,58 @@
     <section class="food">
             <div class="food-container">
                 <div class="food-box">
-                    <h3 class="name">KFC</h3> 
-                    <img class="food-img" src= "../../images/4.jpg">
+                    <h3 class="name">Topaz Hotel</h3> 
+                    <img class="food-img" src= "../../images/restaurant/topaz.jpg">
                     <br>
-                    <i class="fas fa-map-marker-alt">Colombo</i>
+                    <i class="fas fa-map-marker-alt">Kandy</i>
                     <br>
                     <h4 class="">2020 Sep 14</h4>
                     <h4 class="">6.00pm</h4>
-                    <h4 class="">For 2</h4>
                     <h4 class="">Table</h4>
                 </div>
             </div>
             <div class="food-container">
                 <div class="food-box">
-                    <h3 class="name">Cinnomon</h3> 
-                    <img class="food-img" src= "../../images/10.jpg">
+                    <h3 class="name">Cinnamon Grand</h3> 
+                    <img class="food-img" src= "../../images/restaurant/cinnamon-grand-main-entrance.jpg">
                     <br>
                     <i class="fas fa-map-marker-alt">Colombo</i>
                     <br>
                     <h4 class="">2020 Jul 18</h4>
                     <h4 class="">4.00pm</h4>
-                    <h4 class="">For 4</h4>
                     <h4 class="">Hall</h4>
                 </div>
             </div>
             <div class="food-container">
                 <div class="food-box">
-                    <h3 class="name">Fab</h3> 
-                    <img class="food-img" src= "../../images/8.jpg">
+                    <h3 class="name">Topaz Hotel</h3> 
+                    <img class="food-img" src= "../../images/restaurant/topaz.jpg">
                     <br>
-                    <i class="fas fa-map-marker-alt">Negombo</i>
+                    <i class="fas fa-map-marker-alt">Kandy</i>
                     <br>
                     <h4 class="">2020 Apr 14</h4>
                     <h4 class="">10.00am</h4>
-                    <h4 class="">For 6</h4>
                     <h4 class="">Hall</h4>
                 </div>
             </div>
             <div class="food-container">
                 <div class="food-box">
-                    <h3 class="name">Cinnomon</h3> 
-                    <img class="food-img" src= "../../images/10.jpg">
+                    <h3 class="name">Hilton Hotel</h3> 
+                    <img class="food-img" src= "../../images/restaurant/hilton.jpg">
                     <br>
                     <i class="fas fa-map-marker-alt">Colombo</i>
                     <br>
                     <h4 class="">2020 Jul 18</h4>
                     <h4 class="">4.00pm</h4>
-                    <h4 class="">For 4</h4>
                     <h4 class="">Table</h4>
                 </div>
             </div>
             <div class="food-container">
                 <div class="food-box">
-                    <h3 class="name">Fab</h3> 
-                    <img class="food-img" src= "../../images/8.jpg">
+                    <h3 class="name">Cinnamon Grand</h3> 
+                    <img class="food-img" src= "../../images/restaurant/cinnamon-grand-main-entrance.jpg">
                     <br>
-                    <i class="fas fa-map-marker-alt">Negombo</i>
+                    <i class="fas fa-map-marker-alt">Colombo</i>
                     <br>
                     <h4 class="">2020 Apr 14</h4>
                     <h4 class="">10.00am</h4>

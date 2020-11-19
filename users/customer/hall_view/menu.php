@@ -43,7 +43,7 @@
 		<div class="column2">
 			<h1>Restaurant Menu</h1>
 			<hr>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>			
+			<p>ReserveMe offers these types of  menus which are of different varieties of meals in Sri Lanka with the collaboration of a chamber of restaurants. Those menus are available according to the restaurant specified opening hours. Those menus offered here can be used do the reservations which will give value to the user time.</p>			
 		</div>
 	</div>
 	<!--End of menu-->

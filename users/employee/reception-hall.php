@@ -8,15 +8,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
         <!-- Link style Sheets -->
-        <link rel="stylesheet" href="../../CSS/nav.css">
-        <link rel="stylesheet" href="../../CSS/footer.css">
         <link rel="stylesheet" href="../../CSS/employee.css">
-        <link rel="stylesheet" href="../../CSS/customer-reg.css">
-
-
-        
+        <link rel="stylesheet" href="../../CSS/customer-reg.css">  
     </head>
-    <body>        
+    <body>    
+    <br>
+    <center><h1>Hall <span style="color:orange"> Availability</span></h1></center>   
     <div style="margin:20px">      
         <div style="height:420px;width:400px;display:block;padding:30px">
         <div class="contentbox">
@@ -39,8 +36,8 @@
             <label for="meal">Sessions</label><br>
             <select name="meal" id="meal" class="reg-type-feild">
             <option value="m0" disabled selected value> -- select Session time -- </option>
-            <option value="m1">Morning</option>
-            <option value="m2">Evening</option>
+            <option value="m1">Day</option>
+            <option value="m2">Night</option>
             </select>
             <br>
 
@@ -59,7 +56,6 @@
 
 
         <div class="subbody">
-        <h2> Hall Availability </h2>
         <h3> Not availability on</h3>
         <div class="contentbox">
         <table class="tab-not-available">
@@ -74,7 +70,7 @@
                 
                 <tr><td>Ball room</td>
                     <td>2020.11.19</td>
-                    <td>Morning</td>
+                    <td>Day</td>
                     <td><button class="hero-button">Remove</button></td>
                 </tr>
                 <tr>
@@ -82,7 +78,7 @@
                 </tr>
                 <tr><td>Party pool</td>
                     <td>2020.11.25</td>
-                    <td>Evening</td>
+                    <td>Night</td>
                     <td><button class="hero-button">Remove</button></td>
                 </tr>
                 <tr>
@@ -90,7 +86,7 @@
                 </tr>
                 <tr><td>Ball room</td>
                     <td>2020.11.23</td>
-                    <td>Morning</td>
+                    <td>Day</td>
                     <td><button class="hero-button">Remove</button></td>
                 </tr>
                 <tr>

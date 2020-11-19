@@ -7,31 +7,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ReserveMe - Admin</title>
         <link href="../../images/logo.png" rel="shortcut icon"/>
-        <link rel="stylesheet" href="../../CSS/admin-dashboard.css"/>
         <link rel="stylesheet" href="../../CSS/employee.css"/>
-        <!-- <link rel="stylesheet" href="../../CSS/main.css"/> -->
+        <link rel="stylesheet" href="../../CSS/customer-reg.css">  
         <script src="../../js/manage-user-search.js"></script>
     </head>
-    <body>
+
+    <body class="subbody">
         <br>
-        <h1 style="color:orange">Past Queries</h1>
+        <div class="content-div">
+        <h1>Past <span style="color:orange"> Queries </span> </h1>
 
         <div class="promo-btn-bar">
                 <button type="button" class="hero-button" onclick="window.location.href='queries.php'">New Queries</button>
         </div>
 
-        <div class="search-user-container">
-            <!-- <form name="form-display-selected"> -->
-                <!--heading-->
-		        <h3>Search From Name</h3>
-		        <!--Input-------->
-		        <div class="search-input">
-                    <input type="text" id="myInput" onkeyup="myFunctionPastPromos()" 
-                    placeholder="Enter Name"/>
-                    <br>
-                </div>    
-        </div>
-
+        
+        <!-- <form name="form-display-selected"> -->
+        <!--heading-->
+		    <h3>Search From Name</h3>
+		<!--Input-------->
+         <input type="text" name="customer_name" class="reg-type-feild" placeholder="Enter name">
+         <br>
+                    
         <table class="message-table">
 
                 <tr><th>Shall you do for a special food order menu?</th></tr>
@@ -50,6 +47,6 @@
                 <tr><td class="sent-reply">Reply sent on <b>2020-11-16 13:00:00</b> by <b>Co-admin Chanaka</b><hr>
                 
         </table>
-
+        </div>
     </body>
 </html>

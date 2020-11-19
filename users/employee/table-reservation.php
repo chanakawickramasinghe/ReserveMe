@@ -10,17 +10,23 @@
     <link href="../../images/logo.png" rel="shortcut icon"/> 
     <!-- Link the style sheet -->
     <link rel="stylesheet" href="../../CSS/employee.css">
-    <link rel="stylesheet" href="../../CSS/main.css">
+    <link rel="stylesheet" href="../../CSS/customer-reg.css">
+    <link rel="stylesheet" href="../../CSS/main.css">  
+
 
 
 </head>
+
 <body class="subbody">
     <br>
-    <h1 style="color:orange">Table Reservations</h1>
+    <h1>Table <span style="color:orange"> Reservations </span> </h1>
     
     <div class="promo-btn-bar">
-                <button type="button" class="hero-button" onclick="window.location.href='menu-reservation.php'">Pre order</button>
-            </div>
+        <button type="button" class="hero-button" onclick="window.location.href='menu-reservation.php'">Pre orders</button>
+    </div>
+    <div class="promo-btn-bar">
+        <button type="button" class="hero-button" onclick="window.location.href='hall-reservation.php'">Hall Reservation</button>
+    </div>
     <br><br>
 
     <div style="padding:10px">

@@ -73,18 +73,6 @@
       float: none;
     }
   }
-
-  /* .content-div{
-    margin: 0;
-    padding: 0;
-    width: 80%;
-    background-color: #ffffff;
-    position: relative;
-    height: auto;
-    overflow: auto;
-    float: right;
-    top:15px; 
-  } */
   /* End of side bar */
 
 
@@ -194,7 +182,7 @@
 
 
 .tab-emp{
-  width: 35%;
+  width: 40%;
   /* margin: 0 auto; */
   float: right;
   border:none; 
@@ -219,7 +207,7 @@
   margin: 5%;
   margin-top: auto;
   padding: 0;
-  width: 80%;
+  width: 90%;
   background-color: #ffffff;
   position: relative;
   height: auto;
@@ -367,4 +355,15 @@ border: none;
   float: left;
   width: 20%;
   /* border: 2px black solid; */
+}
+
+.reg-type-feild{
+  height: 4.5vh;
+  padding: 0.4vh;
+  border-radius:5px;
+  outline:none;
+  width: 280px;
+  margin: 10px;
+  box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
+  
 }

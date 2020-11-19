@@ -100,7 +100,7 @@
     ?>
 <script>
 function myFunction() {
-confirm("The form was submitted");
+confirm("The form was submitted.");
 }
 </script>
 

@@ -8,14 +8,13 @@
         <link href="../../images/logo.png" rel="shortcut icon"/> 
         <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
         <!-- Link the style sheets -->
-  	    <link rel="stylesheet" href="../../CSS/nav.css">   
-        <link rel="stylesheet" href="../../CSS/footer.css">
         <link rel="stylesheet" href="../../CSS/employee.css">
+        <link rel="stylesheet" href="../../CSS/customer-reg.css">  
 
     </head>
     <body class="subbody">
         <div class="content-div">
-            <center><h1 style="color:orange">New Queries</h1></center>
+            <h1>New <span style="color:orange">Queries</span> </h1>
 
             <div class="promo-btn-bar">
                 <button type="button" class="hero-button" onclick="window.location.href='past-queries.php'">Replied Queries</button>

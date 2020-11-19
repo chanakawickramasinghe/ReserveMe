@@ -10,15 +10,14 @@
     <link href="../../images/logo.png" rel="shortcut icon"/> 
     <!-- Link the style sheet -->
     <link rel="stylesheet" href="../../CSS/employee.css">
-    <link rel="stylesheet" href="../../CSS/main.css">
-
+    <link rel="stylesheet" href="../../CSS/customer-reg.css">  
 
 </head>
 
 <body class="subbody">
     <div style="padding-left:10vw;padding-right:10vw">
     <br>
-    <h1 style="color:orange">Availability on Pre-Order Menu</h1>
+    <h1>Availability on <span style="color:orange"> Pre-Order Menu </span> </h1>
     <br>
     
     <div class="contentbox">

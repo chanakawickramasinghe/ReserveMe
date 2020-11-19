@@ -11,9 +11,10 @@
     <link href="../../images/logo.png" rel="shortcut icon"/> 
     <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
     <!-- Link the style sheets -->
-  	<link rel="stylesheet" href="../../CSS/nav.css">   
-    <link rel="stylesheet" href="../../CSS/footer.css">
     <link rel="stylesheet" href="../../CSS/employee.css">
+    <link rel="stylesheet" href="../../CSS/main.css">
+    <link rel="stylesheet" href="../../CSS/nav.css">   
+    <link rel="stylesheet" href="../../CSS/footer.css">
 
 
 

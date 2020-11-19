@@ -94,7 +94,7 @@
                     <input type="text" name="street" class="reg-type-feild" placeholder="ex: Wall Street"> 
 
                     <!-- <label for="city">City</label> -->
-                    <input type="text" name="city" class="reg-type-feild" placeholder="ex: Colombo"> 
+                    <input type="text" name="city" class="reg-type-feild" placeholder="ex: Colombo(District)"> 
 
                     <p>
                     <!-- Resaurant Image -->

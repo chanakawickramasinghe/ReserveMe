@@ -18,28 +18,10 @@
     </head>
     <body>        
     <div style="margin:20px">      
-        <!-- Adding the table with current user details -->
-        <?php
-        checkSession();
-        
-        $userID = $_SESSION["emp_id"]; //have to add session id
-        $sql = "SELECT * FROM employee WHERE emp_id='$userID'";
-
-        $resID= $_SESSION["res_id"]; //Get the Restaurent Name
-        $sql2 = "SELECT * FROM restaurant WHERE res_id='$resID'";
-
-        $resquery = mysqli_query($connection,$sql2);
-        $row2 = mysqli_fetch_assoc($resquery);
-        
-        $userquery = mysqli_query($connection,$sql);
-        $row = mysqli_fetch_assoc($userquery);
-        // echo"<center><h1 class=div-c>Welcome ".$row['emp_name']." , Employee of ".$row2['res_name']."</h1></center>";
-    
-       
-        ?>
-         
+        <div style="height:420px;width:400px;display:block;padding:30px">
+        <div class="contentbox">
         <form action="#" method="post">
-            <h3>Not Available Hall</h3>
+           <center> <h3>Not Available Hall</h3> </center>
 
             <label for="date">Hall Name</label><br>
             <!-- <input type="text" name="hall_name" class="reg-type-feild" placeholder="Hall name"> -->
@@ -51,7 +33,7 @@
             <br>
 
             <label for="date">Add Date</label><br>
-            <input type="date" name="date" class="reg-type-feild" placeholder="Date">
+            <input type="date" name="date" class="reg-type-feild" placeholder="Date" min="2020-11-19">
             <br>
 
             <label for="meal">Sessions</label><br>
@@ -65,7 +47,17 @@
             <input type="button" value="Set to unavailable" class="hero-button">
 
         </form>
+        </div>
+        </div> 
         <br>
+
+        <h3>Hall Reservation Visible</h3>
+        <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+        </label>
+
+
         <div class="subbody">
         <h2> Hall Availability </h2>
         <h3> Not availability on</h3>
@@ -99,14 +91,6 @@
                 <tr><td>Ball room</td>
                     <td>2020.11.23</td>
                     <td>Morning</td>
-                    <td><button class="hero-button">Remove</button></td>
-                </tr>
-                <tr>
-                    <td colspan="4"><hr></td>
-                </tr>
-                <tr><td>Party pool</td>
-                    <td>2020.12.19</td>
-                    <td>Evening</td>
                     <td><button class="hero-button">Remove</button></td>
                 </tr>
                 <tr>

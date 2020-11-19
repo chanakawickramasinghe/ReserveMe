@@ -54,7 +54,7 @@
                     <p>
                     <img src="../../images/form_icons/mail.png" alt="user" class="icons">
                     <label for="email">Email Address</label>
-                    <input type="email" name="res_email" class="reg-type-feild" placeholder="ex: example@reserveme.lk" required="" oninvalid="this.setCustomValidity('Please Enter valid email')">
+                    <input type="email" name="res_email" class="reg-type-feild" placeholder="ex: example@reserveme.lk" required="">
                     </p>
 
                     <p>

@@ -44,6 +44,10 @@
 	opacity: 1;
 }
 
+.column{
+	float: right;
+}
+
 #slide-wrapper{
 	max-width: 500px;
 	display: flex;
@@ -91,3 +95,4 @@
 	width: 35px;
 	height: 35px;
 }
+

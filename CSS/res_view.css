@@ -61,14 +61,14 @@ ul{
 
 .m-img{
     position:absolute;
-    left: 15%; /*70*/
-    top:  30%; 
+    left: 8%; /*70*/
+    top:  35%; 
     transform: translate(-15%,-50%);
 }
 
 .m-img img{
-	height:200px;
-	width:200px;
+	height:250px;
+	width:300px;
 }
 
 .m-text{

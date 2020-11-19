@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2020 at 04:42 AM
+-- Generation Time: Nov 19, 2020 at 03:49 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.33
 
@@ -33,7 +33,7 @@ CREATE TABLE `admins` (
   `admin_name` varchar(40) NOT NULL,
   `admin_email` varchar(50) NOT NULL,
   `admin_password` varchar(255) NOT NULL,
-  `contact_no` int(11) NOT NULL,
+  `contact_no` varchar(12) NOT NULL,
   `admin_type` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -42,9 +42,8 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`admin_id`, `admin_name`, `admin_email`, `admin_password`, `contact_no`, `admin_type`) VALUES
-(1, 'Admin', 'admin@123', '202cb962ac59075b964b07152d234b70', 119, 'admin'),
-(2, 'Chanaka', 'chanaka@123', '202cb962ac59075b964b07152d234b70', 771570227, 'co-admin'),
-(3, 'coadmin', 'coadmin@123', '202cb962ac59075b964b07152d234b70', 111231231, 'co-admin');
+(1, 'Admin', 'admin@123', '202cb962ac59075b964b07152d234b70', '119', 'admin'),
+(5, 'Chanaka', 'chanaka.admin@gmail.com', '4de93544234adffbb681ed60ffcfb941', '+94771570227', 'co-admin');
 
 -- --------------------------------------------------------
 
@@ -66,7 +65,8 @@ CREATE TABLE `contact_us` (
 --
 
 INSERT INTO `contact_us` (`msg_id`, `comment`, `name`, `email`, `mobile`, `message`) VALUES
-(18, 'q1', 'Chanaka Wickramasinghe', '2018is093@stu.ucsc.cmb.ac.lk', 771570227, 'This area');
+(2, 'Photo/Review Report', 'Chanaka Wickramasinghe', 'cmwickramasinghe703@gmail.com', 771570227, '123'),
+(6, 'Incorrect/outdated information on a page.', 'Chanaka Wickramasinghe', '2018is093@stu.ucsc.cmb.ac.lk', 771570227, 'now ok');
 
 -- --------------------------------------------------------
 
@@ -79,7 +79,7 @@ CREATE TABLE `customer` (
   `user_name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `contact_no` int(12) NOT NULL,
+  `contact_no` varchar(12) NOT NULL,
   `dob` date DEFAULT NULL,
   `postal_number` varchar(10) NOT NULL,
   `street` varchar(30) NOT NULL,
@@ -94,11 +94,9 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`user_id`, `user_name`, `email`, `password`, `contact_no`, `dob`, `postal_number`, `street`, `city`, `rankings`, `no_of_rates`, `active_status`) VALUES
-(3, 'Chanaka Wickramasinghe', '2018is093@stu.ucsc.cmb.ac.lk', '81dc9bdb52d04dc20036dbd8313ed055', 771570227, '2020-09-11', '10000', 'Reid Avenue, Colombo', 'Colombo', 0, 0, 1),
-(2, 'Chanaka Wickramasinghe', 'cmwickramasinghe703@gmail.com', '202cb962ac59075b964b07152d234b70', 771570227, '2020-08-06', '10000', 'Reid Avenue, Colombo', 'Colombo', 0, 0, 1),
-(4, 'bla1234', '2018is093@stu.ucsc.cmb', '202cb962ac59075b964b07152d234b70', 771570227, '2020-10-08', '123', 'Reid Avenue, Colombo', 'Colombo', 0, 0, 1),
-(5, 'Nuwan', 'n@123', '202cb962ac59075b964b07152d234b70', 123, '2014-01-01', 'No. 70/3 ', 'Moratuwa', 'Colombo', 0, 0, 1),
-(6, 'Chathuranga', 'chathu@123', '202cb962ac59075b964b07152d234b70', 123123, '2015-01-16', '10001', 'Reid Avenue, Colombo', 'Colombo', 0, 0, 1);
+(2, 'Chanaka Wickramasinghe', 'cmwickramasinghe703@gmail.com', '202cb962ac59075b964b07152d234b70', '771570227', '2020-08-06', '10000', 'Reid Avenue, Colombo', 'Colombo', 0, 0, 1),
+(9, 'John Stewuet', 'john@gmail.com', '52060a990660b4b8bee0327357cfa71a', '2147483647', '1998-06-30', '100', 'Pilimathalawa rd', 'Kandy', 0, 0, 1),
+(12, 'Aamir Ali', 'aamri@gmail.com', 'daf0b78bce81656bfbf5eaaf7470bf2d', '+94111231231', '1998-05-05', '100', 'galle road', 'Colombo', 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -111,7 +109,7 @@ CREATE TABLE `employee` (
   `res_id` int(10) NOT NULL,
   `emp_name` varchar(255) NOT NULL,
   `emp_email` varchar(255) NOT NULL,
-  `emp_mobile` int(10) NOT NULL,
+  `emp_mobile` varchar(12) NOT NULL,
   `emp_password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -120,9 +118,7 @@ CREATE TABLE `employee` (
 --
 
 INSERT INTO `employee` (`emp_id`, `res_id`, `emp_name`, `emp_email`, `emp_mobile`, `emp_password`) VALUES
-(4, 9, 'nuwan', 'nuwan@123', 119, '202cb962ac59075b964b07152d234b70'),
-(3001, 8, 'Siri', 'emp@gmail.com', 119, '202cb962ac59075b964b07152d234b70'),
-(3008, 21, 'hil_employee', 'hil.emp@123', 11231, '202cb962ac59075b964b07152d234b70');
+(3001, 8, 'Saman Perera', 'emp@gmail.com', '+94771212123', '202cb962ac59075b964b07152d234b70');
 
 -- --------------------------------------------------------
 
@@ -159,52 +155,6 @@ CREATE TABLE `log` (
   `date_time` varchar(30) NOT NULL,
   `activity` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `log`
---
-
-INSERT INTO `log` (`log_id`, `user_id`, `user_type`, `date_time`, `activity`) VALUES
-(1, 3, 'Customer', '2020-11-15 22:03:02', 'Login Successfully'),
-(2, 3, 'Customer', '2020-11-16 12:07:44', 'Login Successfully'),
-(3, 8, 'Restaurant', '2020-11-16 12:12:36', 'Login Successfully'),
-(4, 3, 'Customer', '2020-11-16 12:23:42', 'Login Successfully'),
-(5, 8, 'Restaurant', '2020-11-16 16:02:47', 'Login Successfully'),
-(6, 6, 'Customer', '2020-11-16 16:08:09', 'Login Successfully'),
-(7, 8, 'Restaurant', '2020-11-16 16:48:25', 'Login Successfully'),
-(8, 3001, 'Employee', '2020-11-16 17:02:31', 'Login Successfully'),
-(9, 8, 'Restaurant', '2020-11-16 17:05:34', 'Login Successfully'),
-(10, 8, 'Restaurant', '2020-11-16 17:08:21', 'Login Successfully'),
-(11, 20, 'Restaurant', '2020-11-16 17:58:06', 'Login Successfully'),
-(12, 3, 'Customer', '2020-11-16 17:59:59', 'Login Successfully'),
-(13, 3, 'Customer', '2020-11-16 18:18:54', 'Login Successfully'),
-(14, 3, 'Customer', '2020-11-16 18:28:51', 'Login Successfully'),
-(15, 3, 'Customer', '2020-11-16 18:33:15', 'Login Successfully'),
-(16, 3, 'Customer', '2020-11-16 18:40:33', 'Login Successfully'),
-(17, 8, 'Restaurant', '2020-11-16 19:01:10', 'Login Successfully'),
-(18, 3001, 'Employee', '2020-11-16 19:09:11', 'Login Successfully'),
-(19, 8, 'Restaurant', '2020-11-16 20:10:28', 'Login Successfully'),
-(20, 3, 'Customer', '2020-11-16 20:21:01', 'Login Successfully'),
-(21, 21, 'Restaurant', '2020-11-16 23:41:05', 'Login Successfully'),
-(22, 8, 'Restaurant', '2020-11-17 12:22:54', 'Login Successfully'),
-(23, 8, 'Restaurant', '2020-11-17 12:32:13', 'Login Successfully'),
-(24, 3001, 'Employee', '2020-11-17 13:10:45', 'Login Successfully'),
-(25, 8, 'Restaurant', '2020-11-17 19:08:34', 'Login Successfully'),
-(26, 3, 'Customer', '2020-11-17 19:38:18', 'Login Successfully'),
-(27, 8, 'Restaurant', '2020-11-17 20:39:14', 'Login Successfully'),
-(28, 20, 'Restaurant', '2020-11-17 21:02:57', 'Login Successfully'),
-(29, 5, 'Customer', '2020-11-17 21:12:26', 'Login Successfully'),
-(30, 3, 'Customer', '2020-11-17 21:14:32', 'Login Successfully'),
-(31, 3, 'Customer', '2020-11-17 21:27:26', 'Login Successfully'),
-(32, 3001, 'Employee', '2020-11-17 21:32:59', 'Login Successfully'),
-(33, 3, 'Customer', '2020-11-17 21:38:45', 'Login Successfully'),
-(34, 3, 'Customer', '2020-11-17 22:22:58', 'Login Successfully'),
-(35, 3, 'Customer', '2020-11-17 22:40:33', 'Login Successfully'),
-(36, 3001, 'Employee', '2020-11-17 23:10:17', 'Login Successfully'),
-(37, 8, 'Restaurant', '2020-11-17 23:40:36', 'Login Successfully'),
-(38, 3, 'Customer', '2020-11-18 07:50:09', 'Login Successfully'),
-(39, 8, 'Restaurant', '2020-11-18 07:50:38', 'Login Successfully'),
-(40, 3001, 'Employee', '2020-11-18 07:51:24', 'Login Successfully');
 
 -- --------------------------------------------------------
 
@@ -289,7 +239,6 @@ CREATE TABLE `reception_hall` (
 --
 
 INSERT INTO `reception_hall` (`hall_id`, `res_id`, `hall_name`, `contact_no`, `main_image`, `image1`, `image2`, `address`, `capacity`, `description`, `advance_fee`) VALUES
-(1, 4, 'Big ballroom', 119, 'imagemain.png', 'image1.png', 'image2.png', '119 street colombo', 100, 'This is a big Hall', 15000),
 (5, 8, 'Grand Ball', 11231, 'hilton.webp', 'image_view.PNG', 'ebay.PNG', 'dd956aae7b47b91e2404424fcac58b91', 100, 'This is a hall add.', 831);
 
 -- --------------------------------------------------------
@@ -321,11 +270,9 @@ CREATE TABLE `restaurant` (
 --
 
 INSERT INTO `restaurant` (`res_id`, `res_name`, `res_email`, `res_add_line1`, `res_add_line2`, `city`, `res_location`, `res_tel`, `res_image`, `res_menu`, `res_password`, `preorder_available`, `res_rate`, `no_of_rates`, `active_status`) VALUES
-(4, 'Mac', 'bla@stu.ucsc.cmb.ac.lk', 'Reid Avenue, Colombo', 'Pilimathalawa', 'Colombo', 'https://maps.google.com/maps?q=kfc%20pilimathalawa&t=&z=13&ie=UTF8&iwloc=&output=embed', 771570227, '', '', '202cb962ac59075b964b07152d234b70', '', 4.5, 0, 1),
-(9, 'KFC', 'BLA123@stu.ucsc.cmb.ac.lk', 'K/ Susila kanista vidyalaya', 'K/ Susila kanista vidyalaya, Pilimathalawa', 'Kandy', 'https://kfc.com', 771570227, 'WhatsApp Image 2020-10-05 at 13.37.25.jpeg', '', '202cb962ac59075b964b07152d234b70', '', 0, 0, 1),
-(8, 'KFC', 'kfc@stu.ucsc.cmb.ac.lk', 'K/ Susila kanista vidyalaya', 'K/ Susila kanista vidyalaya, Pilimathalawa', 'Kandy', 'https://kfc.com', 771570227, 'WhatsApp Image 2020-10-05 at 13.37.25.jpeg', '', '202cb962ac59075b964b07152d234b70', '', 0, 0, 1),
-(20, 'cinnamon ', 'cg@gmail.com', 'Reid Avenue, Colombo', 'Reid Avenue, Colombo', 'Colombo', 'https://kfc.com', 227, 'cinnamon-grand-main-entrance.jpg', '', '202cb962ac59075b964b07152d234b70', '', 0, 0, 1),
-(21, 'Hilton', 'hil@123', '1223', 'galle road', 'Colombo', 'httms://hilton.com', 112121212, 'hilton.webp', '', '202cb962ac59075b964b07152d234b70', '', 0, 0, 1);
+(22, 'Topaz Hotel', 'topaz@gmail.com', 'No. 10', 'Aniwatta rd,', 'Kandy', 'https://www.google.com/maps/place/Hotel+Topaz+Kandy/@7.290154,80.6227663,17z/data=!3m1!4b1!4m8!3m7!1s0x3ae3688438382c6d:0xbe605bfbd8a2aaf0!5m2!4m1!1i2!8m2!3d7.290154!4d80.624955?hl=en-US', 2147483647, 'topaz.jpg', '', 'fc240e4b4cbc40024b3d269181c1e702', '', 0, 0, 1),
+(4, 'Cinnamon Grand', 'cg@gmail.com', 'Reid Avenue, Colombo', 'Reid Avenue, Colombo', 'Colombo', 'https://kfc.com', 227, 'cinnamon-grand-main-entrance.jpg', '', '202cb962ac59075b964b07152d234b70', '', 0, 0, 1),
+(8, 'Hilton Hotel', 'hil@123', '1223', 'galle road', 'Colombo', 'httms://hilton.com', 112121212, 'hilton.webp', '', '202cb962ac59075b964b07152d234b70', '', 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -399,7 +346,9 @@ INSERT INTO `reviews` (`review_id`, `res_id`, `customer_name`, `content`, `ratin
 (13, 1, 'Warren Mills', 'Everything is awesome!', 5, '2020-01-16 19:34:08'),
 (14, 1, 'Larry Johnson', 'Brilliant,', 5, '2020-01-29 18:40:36'),
 (15, 4, 'Chanaka', 'Wonderful', 3, '2020-11-16 18:19:36'),
-(16, 4, 'John', 'Had a nice time', 4, '2020-11-16 18:20:19');
+(16, 4, 'John', 'Had a nice time', 4, '2020-11-16 18:20:19'),
+(17, 8, 'Chanaka', 'This is a good service', 5, '2020-11-18 18:36:36'),
+(18, 8, 'Jonathan Darwin', 'Not satisfied with the service.', 3, '2020-11-18 20:24:15');
 
 -- --------------------------------------------------------
 
@@ -548,19 +497,19 @@ ALTER TABLE `tokens`
 -- AUTO_INCREMENT for table `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `contact_us`
 --
 ALTER TABLE `contact_us`
-  MODIFY `msg_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `msg_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `employee`
@@ -572,7 +521,7 @@ ALTER TABLE `employee`
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `menu`
@@ -596,13 +545,13 @@ ALTER TABLE `reception_hall`
 -- AUTO_INCREMENT for table `restaurant`
 --
 ALTER TABLE `restaurant`
-  MODIFY `res_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `res_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `tokens`

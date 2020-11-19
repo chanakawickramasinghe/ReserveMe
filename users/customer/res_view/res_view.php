@@ -55,8 +55,8 @@
 			<div class="slideshow-container">
 				<div class="mySlides fade">
 				   	<img src="../../../images/promos/3.jpg" style="width:100%">
-				</div>
-			</div>
+                </div>
+            </div>
 
 			<div style="text-align:center">
 			  <span class="dot"></span> 

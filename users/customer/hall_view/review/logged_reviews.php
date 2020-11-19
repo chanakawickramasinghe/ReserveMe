@@ -80,8 +80,9 @@ if (isset($_POST['customer_name'], $_POST['rating'], $_POST['content'])) {
     <h3 class="name"><?=htmlspecialchars($review['customer_name'], ENT_QUOTES)?></h3>
     <div>
         <span class="rating"><?=str_repeat('&#9733;', $review['rating'])?></span>
-        <span class="date"><?=time_elapsed_string($review['submit_date'])?></span>
+     <!--<span class="date"><?=time_elapsed_string($review['submit_date'])?></span> HOURS AGO FUNCTION HAS TO BE LOOK AFTER FOR NOW IT DISPLAYS ONLY THE DATE TIME-->
     </div>
+    <span class="date"><?=$review['submit_date']?></span>
     <p class="content"><?=htmlspecialchars($review['content'], ENT_QUOTES)?></p>
 </div>
 <?php endforeach ?>

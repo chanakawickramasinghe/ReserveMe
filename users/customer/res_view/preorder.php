@@ -50,6 +50,10 @@
                     <td>Rs.600.00</td>
                     <td><input type="number" id="quantity" name="quantity" min="1" max="5"></td>                
                 </tr>
+                <tr>
+                    <td>Customize</td>
+                    <td colspan="3" ><input placeholder="ex:-extra source" type="text" > </td>                
+                </tr>
                 <tr></tr>
                 <tr>
                     <td>Total</td>

@@ -45,6 +45,8 @@
                             <h4><i class=\"fas fa-star-half-alt\">". $rowProduct['res_rate'] ."</i></h4>
                             <br>
                             <h4><i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i></h4>
+                            <br>
+                            <h4><i class=\"fas fa-phone-alt\">". $rowProduct['res_tel'] ."</i></h4>
                             <!--<button class=\"reserve-button pulsate\" type=\"submit\" name=\"submit\" onclick=\"onClickOpenForm()\">Reserve</button>-->
 	                    </div>	
 	                </section>";
@@ -56,6 +58,9 @@
 			<div class="slideshow-container">
 				<div class="mySlides fade">
 				   	<img src="../../../images/promos/3.jpg" style="width:100%">
+				</div>
+                <div class="mySlides fade">
+				   	<img src="../../../images/promos/2.jpg" style="width:100%">
 				</div>
 			</div>
 
@@ -100,8 +105,8 @@
 							$retriewMenu = "SELECT * FROM restaurant WHERE res_id = ".$_GET['res_id'];
 							$resultMenu = mysqli_query($connection,$retriewMenu);
 							while($rowProduct  = mysqli_fetch_assoc($resultMenu)){  
-								echo"<li><a  href=\"menu.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Menu</a></li>
-									<li><a  href=\"floorplan.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Floorplan</a></li>
+                                echo"<li><a  href=\"hall_discription.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Menu</a></li>
+                                    <li><a  href=\"menu.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Menu</a></li>
 									<li><a  href=\"directions.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Directions</a></li>
 									<li><a  href=\"review/logged_index.html?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Reviews</a></li>";
 							}               
@@ -109,7 +114,7 @@
 					?>  
 		        </ul>
 	        </div>
-			<iframe src="menu.php?res_id= <?php echo $_GET['res_id']?>" id="iframeBox" name="iframeBox" class="iframeBox" height="500px" width="100%" title="Iframe Example" frameborder="0" marginwidth="0" marginheight="0"><div></iframe>
+			<iframe src="hall_discription.php?res_id= <?php echo $_GET['res_id']?>" id="iframeBox" name="iframeBox" class="iframeBox" height="500px" width="100%" title="Iframe Example" frameborder="0" marginwidth="0" marginheight="0"><div></iframe>
 	    </div>	
 	</section>
 	<!--End of iframe section-->
@@ -124,21 +129,19 @@
 
                 <div class = "card-content">
                     <h3>Book</h3>
-                    <form action="checkout.php">
+                    <form class="reservation_form" action="checkout.php">
                         <div class = "form-row">
+                            <input type = "text" placeholder="Hall Name">
                             <input type = "date" placeholder="Select Date">
-
-                            <select name = "hours">
-                                <option value = "session-select">Select Session</option>
-                                <option value = "1">Breakfast</option>
-                                <option value = "1">Lunch</option>
-                                <option value = "1">Dinner</option>
-                            </select>
                         </div>
 
                         <div class = "form-row">
                             <input type = "number" placeholder="How Many Persons?" min = "1">
-                            <input type = "time" placeholder="Arrival time?">
+                            <select name = "hours">
+                                <option value = "session-select">Select Session</option>
+                                <option value = "1">Morning</option>
+                                <option value = "1">Evening</option>
+                            </select>
                         </div>
                         <div class = "form-row">
                             <button href="checkout.php" class="reserve-button" type=""  name="submit">Book</button>
@@ -154,5 +157,8 @@
     
     <!--script for slideshow-->
     <script src="../../../js/onClickNav.js"></script>
+
+     <!--script for slideshow-->
+     <script src="../../../js/slideshow.js"></script>
 </body>
 </html>

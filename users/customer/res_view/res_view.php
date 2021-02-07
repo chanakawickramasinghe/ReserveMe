@@ -40,11 +40,11 @@
                         </div>
                         <div class=\"m-text\">
                             <h2>". $rowProduct['res_name'] ."</h2>
-                            <br>
+                            <!--<br>
                             <h4><i class=\"fas fa-star-half-alt\">". $rowProduct['res_rate'] ."</i></h4>
                             <br>
                             <h4><i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i></h4>
-                            <!--<button class=\"reserve-button\" type=\"submit\" name=\"submit\" onclick=\"onClickOpenForm()\">Reserve<i class=\"fas fa-search\"></i></button>-->
+                            <button class=\"reserve-button\" type=\"submit\" name=\"submit\" onclick=\"onClickOpenForm()\">Reserve<i class=\"fas fa-search\"></i></button>-->
 	                    </div>	
 	                </section>";
             }
@@ -102,8 +102,8 @@
 							while($rowProduct  = mysqli_fetch_assoc($resultMenu)){  
 								echo"<li><a  href=\"menu.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Menu</a></li>
 									<li><a  href=\"floorplan.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Floorplan</a></li>
-									<li><a  href=\"directions.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Directions</a></li>
-									<li><a  href=\"review/index.html?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Reviews</a></li>";
+									<!--<li><a  href=\"directions.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Directions</a></li>
+									<li><a  href=\"review/index.html?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Reviews</a></li>-->";
 							}               
 						}
 					?>  
@@ -123,4 +123,7 @@
     <!--script for slideshow-->
     <script src="../../../js/onClickNav.js"></script>
 </body>
+
+
 </html>
+

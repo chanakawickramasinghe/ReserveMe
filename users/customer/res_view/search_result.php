@@ -29,7 +29,7 @@
     </div>
     <!--End of nav-->
     
-    <!--Start of Header-->
+    <!--Start of Header
     <header class="header">
         <div class="search">
             <form action="" method="post">
@@ -51,7 +51,7 @@
             </form>            
         </div>		
     </header>
-    <!--End of Header-->
+    End of Header-->
     
     <!--Start of Card Section-->
     <?php 
@@ -115,10 +115,6 @@
                                 <div class=\"food-box\">
                                     <h3 class=\"name\">". $rowProduct['res_name'] ."</h3> 
                                     <img class=\"food-img\" src= \"../../../images/restaurant/{$rowProduct['res_image']}\">
-                                    <br>
-                                    <i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i>
-                                    <br>
-                                    <i class=\"fas fa-star-half-alt\">". $rowProduct['res_rate'] ."</i>
                                     <button type=\"button\" class=\"food-btn\" onclick=\"location.href='res_view.php?res_id={$rowProduct['res_id']}';\" style=\"cursor: pointer;\">Visit</button>  
                                 </div>
                             </div>";
@@ -135,3 +131,4 @@
     <script src="../../../js/onClickNav.js"></script>
 </body>
 </html>
+

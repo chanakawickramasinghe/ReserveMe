@@ -34,17 +34,12 @@
 			<div class="slideshow-container">
 				<div class="mySlides fade">
 				  	<img src="images/promos/1.jpg" style="width:100%">
-				  	<div class="text"><a class="hero-button" href="users/customer/res_view/res_view.php?res_id=8">Visit</a></div>
 				</div>
-
 				<div class="mySlides fade">
-					<img src="images/promos/2.jpg" style="width:100%">
-				  	<div class="text"><a class="hero-button" href="users/customer/res_view/res_view.php?res_id=10">Visit</a></div>
+				  	<img src="images/promos/2.jpg" style="width:100%">
 				</div>
-
 				<div class="mySlides fade">
-				   	<img src="images/promos/3.jpg" style="width:100%">
-				  	<div class="text"><a class="hero-button" href="users/customer/res_view/res_view.php?res_id=4">Visit</a></div>
+				  	<img src="images/promos/3.jpg" style="width:100%">
 				</div>
 			</div>
 
@@ -74,7 +69,7 @@
 		<!--End of social-->
 	</section>
 
-	<!--Start of our-brand-section 1-->
+	<!--Start of Table reservation-->
 	<section class="reservation">
 		<!--text-->
 		<div class="reservation-text">
@@ -88,72 +83,10 @@
 		<!--img-->
 		<div class="reservation-img"><img src="images/table.jpg" /></div>
 	</section>
-	<!--End of our-brand-section 1-->
-	
-	<!--Start of About-->
-    <section id="about">
-        <div class="about-center">
-            <!--Start of the article1-->
-            <article class="about">
-                <div class="about-icon">
-					<i class="fas fa-mug-hot"></i>
-					<h2 class="about-subtitle"><a href="users/customer/category/category.php">Sri Lankan</a></h2>
-                </div>              
-            </article>
-            <!--End of the article1-->
-            <!--Start of the article2-->
-            <article class="about">
-                <div class="about-icon">
-					<i class="fas fa-hamburger"></i>
-					<h2 class="about-subtitle"><a href="users/customer/category/category.php">Street Food</a></h2>
-                </div>
-            </article>
-            <!--End of the article2-->
-            <!--Start of the article3-->
-            <article class="about">
-                <div class="about-icon">
-					<i class="fas fa-mortar-pestle"></i>
-					<h2 class="about-subtitle"><a href="users/customer/category/category.php">Chinese</a></h2>
-                </div>
-            </article>
-            <!--End of the article3-->
-            <!--Start of the article4-->
-            <article class="about">
-                <div class="about-icon">
-					<i class="fas fa-pizza-slice"></i>
-					<h2 class="about-subtitle"><a href="users/customer/category/category.php">Italian</a></h2>
-                </div>
-            </article>
-            <!--End of the article4-->
-            <!--Start of the article5-->
-            <article class="about">
-                <div class="about-icon">
-					<i class="fas fa-fish"></i>
-					<h2 class="about-subtitle"><a href="users/customer/category/category.php">Mongolian</a></h2>
-                </div>
-            </article>
-            <!--End of the article5-->
-            <!--Start of the article6-->
-            <article class="about">
-                <div class="about-icon">
-					<i class="fas fa-pepper-hot"></i>
-					<h2 class="about-subtitle"><a href="users/customer/category/category.php">Arabic</a></h2>
-                </div>
-            </article>
-            <!--End of the article6-->
-			<!--Start of the article7-->
-            <article class="about">
-                <div class="about-icon">
-					<i class="fas fa-fish"></i>
-					<h2 class="about-subtitle"><a href="users/customer/category/category.php">Thai</a></h2>
-                </div>
-            </article>
-            <!--End of the article7-->
-        </div>
-    </section>
-	<!--End of About-->
+	<!--End of Table reservation-->
 
-	<!--Start of our-brand-section 2-->
+	
+	<!--Start of Hall reservation-->
 	<section class="reservation">
 		<!--img-->
 		<div class="reservation-img"><img src="images/hall.jpg" /></div>
@@ -167,9 +100,128 @@
 			<a class="hero-button" href="users/customer/hall_view/hall_search_result.php">Hall Reservation</a>
 		</div>
 		</section>
-	<!--End of our-brand-section 2-->
+	<!--End of Hall reservation-->
 	
-	
+	<!--Start of Services section
+	<div class="serviceh"><h1>Services</h1></div>
+	<section class="service">
+		<div class="flatart"></div>
+		<div class="card">
+			<div class="about-icon">
+				<i class="fas fa-utensils"></i>
+			</div>              
+            <h3>Table Reservation</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus odio sit amet tellus mollis, ut suscipit lectus ornare. Mauris nisi mauris, scelerisque at dictum et, tempus eget erat.</p>
+		</div>
+		<div class="card">
+			<div class="about-icon">
+				<i class="fas fa-hotel"></i>
+			</div>              
+            <h3>Hall Reservation</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus odio sit amet tellus mollis, ut suscipit lectus ornare. Mauris nisi mauris, scelerisque at dictum et, tempus eget erat.</p>
+		</div>
+		<div class="card">
+			<div class="about-icon">
+				<i class="fas fa-concierge-bell"></i>
+			</div>              
+            <h3>Preorder</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus odio sit amet tellus mollis, ut suscipit lectus ornare. Mauris nisi mauris, scelerisque at dictum et, tempus eget erat.</p>
+		</div>
+	</section>             
+	End of Services section-->
+
+	<!--Start of Location section-->
+	<section class="location">
+		<!--text-->
+		<div class="location-text">
+			<!--heading-->
+			<h3>Our Location</h3>
+			<h4>Best place to <font>Enjoy</font> </h4>
+			<!--details-->
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus odio sit amet tellus mollis, ut suscipit lectus ornare. Mauris nisi mauris, scelerisque at dictum et, tempus eget erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent tristique accumsan massa. Nullam eu ante lorem. In hac habitasse platea dictumst. Pellentesque quis rutrum nisl.</p>
+		</div>
+		<!--Start of Map-->
+		<section class="content">
+        <section id="gallery">    
+            <div id="gallery-center">
+                <div class="mapouter">
+            		<div class="gmap_canvas">
+                        <iframe width="400vh" height="300vw" id="gmap_canvas" src="https://maps.google.com/maps?q=topaz%20kandy&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>                           
+                    </div>
+                </div>
+            </div>
+        </section>   
+    </section>
+	<!--End of Map-->
+	</section>
+	<!--End of Location section-->
+
+	<!--Start of chefs section
+	<section class="chef">
+		<div class="flatart"></div>
+		<div class="discription">
+			//heading
+			<h3>Kitchen Experts</h3>
+			<p>Enlight your special occasion by finding the best place. You can now search and find the best venue to your weddings, birthday parties and more occasion. We provide you the facility to book it before others.</p>
+		</div>
+		<div class="image">
+			<img src="images/chef1.jpg" />
+		</div>
+		<div class="image">
+			<img src="images/chef2.jpg" />
+		</div>
+	</section>             
+	End of chefs section-->
+
+	<!--Start of Reviews section-->
+	<div class="reviewh">
+		<h1>Customers Feedback</h1>
+	</div>
+	<section class="review">
+		<div class="flatart"></div>
+		<div class="card1">
+			<h3>Chathu</h3>
+			<p><i class="far fa-comments" id="i1"></i><br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus odio sit amet tellus mollis, ut suscipit lectus ornare. Mauris nisi mauris, scelerisque at dictum et, tempus eget erat. <br>
+			<i class="far fa-star" id="i3"></i><i class="far fa-star" id="i3"></i><i class="far fa-star" id="i3"></i><i class="far fa-star" id="i3"></i><br>
+			<i class="far fa-comments" id="i2"></i></p>
+		</div>
+		<div class="card2">
+		<img src="images/review.svg" style="height: 200px ; width: 200px"/>
+		<a class="subcribe-btn" href="users/customer/res_view/review/index.html?res_id=4">More</a>
+		</div>
+	</section>   
+	<!--End of Reviews section-->          
+
+	<!--Start of Gallery section-->
+	<section clss="Gallerysection">
+		<div class="container">
+            <div class="gallery">
+                <figure class="gallery__item gallery__item--1">
+                    <img src="images/gallery2.jpg" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--2">
+                    <img src="images/gallery5.jpg" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--3">
+                    <img src="images/gallery4.jpg" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--4">
+                    <img src="images/gallery6.jpg" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--5">
+                    <img src="images/gallery1.jpg" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--6">
+                    <img src="images/gallery3.jpg" class="gallery__img">
+				</figure>
+				<figure class="gallery__item gallery__item--7">
+                    <img src="images/gallery7.jpg" class="gallery__img">
+                </figure>
+            </div>
+        </div>
+	</section>        
+	<!--End of Gallery section-->
+
 	<!--Start of subscribe-->
 	<section class="subcribe-container">
 		<!--heading-->

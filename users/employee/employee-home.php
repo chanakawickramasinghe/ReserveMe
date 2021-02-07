@@ -4,30 +4,30 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emploee-Home</title>  
     <link href="../../images/logo.png" rel="shortcut icon"/> 
-    <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
     <!-- Link the style sheets -->
     <link rel="stylesheet" href="../../CSS/employee.css">
     <link rel="stylesheet" href="../../CSS/main.css">
     <link rel="stylesheet" href="../../CSS/nav.css">   
     <link rel="stylesheet" href="../../CSS/footer.css">
 
-
-
 </head>
 
 <body>
    <!--Start of nav-->
-    <div class="topnav" id="myTopnav">
+    <div class="topnav">
         <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
+        <a  href=""><img style="weight:50px;height:50px;float:right" src="../../images/form_icons/user.png" alt=""></a>
         <a class="navtab" href="../../index.php">Logout</a>
 		    <a class="navtab" href="../../includes/contact.php">Contact</a>
 		    <a class="navtab" href="../../includes/about.php">About</a>
-        <a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
+        
     </div>
     <!--End of nav-->
    
@@ -57,9 +57,7 @@
   <table width="100%"><tr><td>
   <?php include('../../includes/footer.php'); ?>
   </td></tr></table>
-  
-<!--script for onClickNav() for the navigation menu-->
-<script src="../../js/onClickNav.js"></script>
+
     
 </body>
 </html>

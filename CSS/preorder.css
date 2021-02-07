@@ -98,13 +98,12 @@ body{
 
 .food-btn{
 	position: relative;
-	width:60px;
+	width:100px;
 	height: 40px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-family:calibri;
-	left: 50%;
 	bottom: -10px;
 	transform: translateX(-50%);
 	border-radius: 200px;
@@ -116,7 +115,6 @@ body{
     text-transform: uppercase;
     cursor: pointer;
 	font-weight: bold;
-	left:20%;
 }
 
 .food-btn:hover{
@@ -136,8 +134,8 @@ body{
 /*End of Cards Section*/
 
 .preorder{
-	width:40%;
-	margin-left: 430px;
+	width:50%;
+	margin-left: auto;
   	margin-right: auto;
 }
 
@@ -146,8 +144,13 @@ body{
 	width: 50px;
 }
 
+td{
+	margin-left: 0px;
+	margin-right: 0px;
+}
 th{
 	float: left;
+	margin-top: 20px;
 }
 
 .hidden{

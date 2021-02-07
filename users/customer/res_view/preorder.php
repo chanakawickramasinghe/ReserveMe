@@ -31,11 +31,42 @@
     
     <!--Start of Ongoing Card Section-->
         <div class="title_text">
-            <h3>Pre<font>Order</font></h3>
+            <h3>Pre<font>Order</font> Me<font>nu</font></h3>
         </div>
         <form method="post" action="checkout.php">  
         <table class="preorder" id="" border="0">
+                
+        <?php
+
+            $search_cat = "SELECT * FROM menu_category WHERE cat_avail='1' ORDER BY cat_name ASC";
+            $result_cat = mysqli_query($connection,$search_cat);
+            while($row = mysqli_fetch_assoc($result_cat)){
+                echo "
                 <tr>
+                    <th>".$row['cat_name']."</th>               
+                </tr>";
+                
+                $search_menu = "SELECT * FROM menu WHERE item_avail='1' AND item_cat='$row[cat_name]'";
+                $result_menu = mysqli_query($connection,$search_menu);
+                while($row = mysqli_fetch_assoc($result_menu)){
+                    echo "
+                    <tr>
+                        <td>".$row['item_name']."</td>
+                        <td>".$row['item_price']."</td>
+                        <td><input type=\"number\" id=\"quantity\" name=\"quantity\" min=\"1\" max=\"5\"></td>                
+                    </tr>
+                    ";
+                }
+            }
+            echo"<tr>
+                    <td></td>
+                    <td></td>
+                    <td><input class=\"food-btn\" type=\"submit\" value=\"Confirm\"> </td>                
+                </tr>";
+
+        ?>
+                
+                <!-- <tr>
                     <td>Cappuccino</td>
                     <td>Rs.500.00</td>
                     <td><input type="number" id="quantity" name="quantity" min="1" max="5"></td>
@@ -59,7 +90,7 @@
                     <td>Total</td>
                     <td>Rs.1000.00</td>
                     <td><input class="food-btn" type="submit" value="Confirm"> </td>                
-                </tr>
+                </tr> -->
                
             </table>
     </form> 

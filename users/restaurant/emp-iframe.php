@@ -34,19 +34,19 @@
                 <table class=\"tab-add-emp\">
                 <tr>
                     <th>Employee Name</th>
-                    <td><input type=\"text\" name=\"emp_name\" placeholder=\"Enter Name\"></td>
+                    <td><input type=\"text\" name=\"emp_name\" placeholder=\"Enter Name\" required></td>
                 </tr>
                 <tr>
                     <th>Employee Email</th>
-                    <td><input type=\"email\" name=\"emp_email\" placeholder=\"Enter Email\"></td>
+                    <td><input type=\"email\" name=\"emp_email\" placeholder=\"Enter Email\" required></td>
                 </tr>
                 <tr>
                     <th>Contact No.</th>
-                    <td><input type=\"text\" name=\"contact_no\" placeholder=\"Contact No.\" pattern='^\+?\d{0,13}'></td>
+                    <td><input type=\"text\" name=\"contact_no\" placeholder=\"Contact No.\" pattern='^\+?\d{0,13}' required></td>
                 </tr>
                 <tr>
                     <th>Password</th>
-                    <td><input type=\"password\" name=\"password\" placeholder=\"Password\" pattern='^\+?\d{0,13}'></td>
+                    <td><input type=\"password\" name=\"password\" placeholder=\"Password\" required></td>
                 </tr>
         
                 </table>

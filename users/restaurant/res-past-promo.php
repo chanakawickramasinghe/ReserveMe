@@ -12,7 +12,7 @@
         <script src="../../js/manage-user-search.js"></script>
     </head>
     <body>
-        <center><h1 style="color:#ffbb01;">Past Promotions</h1><center>
+        <center><h1 style="color:#ffbb01;"><font color="black">Past</font>Promotions</h1><center>
 
         <table class="promo" id="myTable" border="1">
                 <tr>

@@ -20,7 +20,7 @@
                 <h2 class="error-msg" style="font-size:14px"><?php include_once('../../includes/message.php'); ?></h2>
                 <br>
                 <center>
-                <h1 style="color:#ffbb01;">Pre - Order Menu</h1>
+                <h1 style="color:#ffbb01;"><font color="black">Pre-Order</font> Menu</h1>
              
                 <h3 align="center">Details regarding the Menu available to place Pre-Orders</h3>
                 <br>

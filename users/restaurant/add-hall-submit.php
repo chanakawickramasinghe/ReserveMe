@@ -47,7 +47,7 @@ if(isset($_POST['btn-add-hall'])){
                  header('Location:hall-details.php?msg=' . $message);
 				 exit();
             }
-}
+} 
 
 
 mysqli_close($connection);

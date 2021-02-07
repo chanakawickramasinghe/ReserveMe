@@ -7,7 +7,7 @@
     <link href="../../images/logo.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Link the style sheets -->   
-    <!-- <link href="../../CSS/add-hall.css" rel="stylesheet" type="text/css" >  -->
+    <link href="../../CSS/new-hall-details.css" rel="stylesheet" type="text/css" > 
     <link href="../../CSS/pre-order.css" rel="stylesheet" type="text/css" >
     <link rel="stylesheet" href="../../CSS/res-promo.css"/>
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
@@ -30,7 +30,9 @@
 
             <h3 align='center'>No Reception Hall added!</h3>
             <br><br><br>
-            <button type=\"button\" name=\"btn-promo\" class=\"btn-promo\" onclick=\"window.location.href='add-hall.php'\" align=\"center\">Add Hall</button>";
+            <center>
+            <button type=\"button\" name=\"btn-promo\" class=\"btn-promo\" onclick=\"window.location.href='add-hall.php'\" align=\"center\">Add Hall</button></center>";
+            
 
             
         }
@@ -49,6 +51,7 @@
                 <th>Capacity</th>
                 <th>Description</th>
                 <th>Advance Fee</th>
+                <th>Remove</th>
             </tr>";
             while($row = mysqli_fetch_assoc($hallquery)){
             echo"
@@ -61,7 +64,8 @@
                 <td>".$row['address']."</td>
                 <td>".$row['capacity']."</td>
                 <td>".$row['description']."</td> 
-                <td>".$row['advance_fee']."</td>             
+                <td>".$row['advance_fee']."</td> 
+                <td><button type=\"button\" class=\"btn-promo-remove\">X</button></td>           
             </tr>
     
             ";

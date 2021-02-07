@@ -10,6 +10,7 @@
     
     <!-- link the Style sheet -->
     <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
     <link rel="stylesheet" type="text/css" href="../CSS/nav.css">    
     <link rel="stylesheet" type="text/css" href="../CSS/footer.css">
     <!--FontAwesome-------->
@@ -34,10 +35,10 @@
         
         
         
-        <table>
+        <table class="table_about">
             <tr>
                 <td colspan=2>
-                <img src="../images/logo.png" alt="Website logo" style="width:80wh;height:100%">                
+                <img src="../images/logo.png" alt="Website logo" class="about_logo">                
                 </td>
                 <td colspan=2>
 
@@ -57,7 +58,7 @@
                 </td>
 
             </tr>
-      <tr>
+      <!--<tr>
 
         <td>
         <div class="content-box"> 
@@ -129,11 +130,83 @@
         </div>        
         
         </td>
-      </tr>
+      </tr>-->
         </table>
         
     </div>
 
+
+    <!--Start of Services section-->
+	<div class="serviceh"><h1>Our Services</h1></div>
+	<section class="service">
+		<div class="flatart"></div>
+		<div class="card">
+			<div class="about-icon">
+				<i class="fas fa-utensils"></i>
+			</div>              
+            <h3>Table Reservation</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus odio sit amet tellus mollis, ut suscipit lectus ornare. Mauris nisi mauris, scelerisque at dictum et, tempus eget erat.</p>
+		</div>
+		<div class="card">
+			<div class="about-icon">
+				<i class="fas fa-hotel"></i>
+			</div>              
+            <h3>Hall Reservation</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus odio sit amet tellus mollis, ut suscipit lectus ornare. Mauris nisi mauris, scelerisque at dictum et, tempus eget erat.</p>
+		</div>
+		<div class="card">
+			<div class="about-icon">
+				<i class="fas fa-concierge-bell"></i>
+			</div>              
+            <h3>Preorder</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus odio sit amet tellus mollis, ut suscipit lectus ornare. Mauris nisi mauris, scelerisque at dictum et, tempus eget erat.</p>
+		</div>
+	</section>             
+	<!--End of Services section-->
+
+    <!--Start of Location section-->
+	<section class="location">
+		<!--text-->
+		<div class="location-text">
+			<!--heading-->
+			<h3>Our Location</h3>
+			<h4>Best place to <font>Enjoy</font> </h4>
+			<!--details-->
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus odio sit amet tellus mollis, ut suscipit lectus ornare. Mauris nisi mauris, scelerisque at dictum et, tempus eget erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent tristique accumsan massa. Nullam eu ante lorem. In hac habitasse platea dictumst. Pellentesque quis rutrum nisl.</p>
+		</div>
+		<!--Start of Map-->
+		<section class="content">
+        <section id="gallery">    
+            <div id="gallery-center">
+                <div class="mapouter">
+            		<div class="gmap_canvas">
+                        <iframe width="400vh" height="300vw" id="gmap_canvas" src="https://maps.google.com/maps?q=topaz%20kandy&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>                           
+                    </div>
+                </div>
+            </div>
+        </section>   
+    </section>
+	<!--End of Map-->
+	</section>
+	<!--End of Location section-->
+
+    <!--Start of chefs section-->
+	<section class="chef">
+		<div class="flatart"></div>
+		<div class="discription">
+			<!--heading-->
+			<h3>Kitchen Experts</h3>
+			<p>Enlight your special occasion by finding the best place. You can now search and find the best venue to your weddings, birthday parties and more occasion. We provide you the facility to book it before others.</p>
+		</div>
+		<div class="image">
+			<img src="../images/chef1.jpg" />
+		</div>
+		<div class="image">
+			<img src="../images/chef2.jpg" />
+		</div>
+	</section>             
+	<!--End of chefs section-->
+    
     <?php include('footer.php'); ?>
      
     <!--script for slideshow-->

@@ -23,7 +23,7 @@
    <!--Start of nav-->
     <div class="topnav">
         <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
-        <a  href=""><img style="weight:50px;height:50px;float:right" src="../../images/form_icons/user.png" alt=""></a>
+        <a  href="employee-profile.php"><img style="weight:50px;height:50px;float:right" src="../../images/form_icons/user.png" alt=""></a>
         <a class="navtab" href="../../index.php">Logout</a>
 		    <a class="navtab" href="../../includes/contact.php">Contact</a>
 		    <a class="navtab" href="../../includes/about.php">About</a>
@@ -31,37 +31,155 @@
     </div>
     <!--End of nav-->
    
-  <div class="sidenavbar">
-    <?php 
-     checkSession();
-     $userID = $_SESSION["res_id"]; //have to add session id
-     $sql = "SELECT res_image FROM restaurant WHERE res_id='$userID'";
-      $userquery = mysqli_query($connection,$sql);
-      $row = mysqli_fetch_assoc($userquery);
-      echo
-      " <img class = \"resimage\" src=\"../../images/restaurant/".$row['res_image']."\"  alt=\"Restaurent logo\">";
-      ?>
-    <br><br><br><br>
+
     <div class="sidebar"> 
-      <span><a href="employee-profile.php" target="iframe_a" >Employee Home</a></span>      
-      <a href="pre-order-menu.php" target="iframe_a">Pre - Order Menu</a>
-      <a href="queries.php" target="iframe_a">Queries</a>
-      <a href="table-reservation.php" target="iframe_a">Manage Reservation</a>
-      <a href="reception-hall.php" target="iframe_a">Reception Hall</a>
+      <span><a href="employee-home.php" >Employee Home</a></span>      
+      <a href="pre-order-menu.php">Pre - Order Menu</a>
+      <a href="queries.php">Queries</a>
+      <a href="table-reservation.php">Manage Reservation</a>
+      <a href="reception-hall.php">Reception Hall</a>
     </div>
 
-  </div>
+    <div class="content">
+    <div style="margin:20px">      
+        <!-- Adding the table with current user details -->
+        <?php
+        checkSession();
+        
+        $userID = $_SESSION["emp_id"]; //have to add session id
+        $sql = "SELECT * FROM employee WHERE emp_id='$userID'";
 
-  <iframe src="employee-profile.php" frameborder="0px" name="iframe_a" scrolling="yes" style="width:80% ; height:80vh;float:right"></iframe> 
+        $resID= $_SESSION["res_id"]; //Get the Restaurent Name
+        $sql2 = "SELECT * FROM restaurant WHERE res_id='$resID'";
 
-  <table width="100%"><tr><td>
-  <?php include('../../includes/footer.php'); ?>
-  </td></tr></table>
-
+        $resquery = mysqli_query($connection,$sql2);
+        $row2 = mysqli_fetch_assoc($resquery);
+        
+        $userquery = mysqli_query($connection,$sql);
+        $row = mysqli_fetch_assoc($userquery);
+        echo"<center><h1 class=div-c>Welcome <span style=\"color:orange\"> ".$row['emp_name']." </span> , Employee of <span style=\"color:orange\"> ".$row2['res_name']." </span> </h1></center>";
     
-</body>
-</html>
+       
+        ?>
+
+        <br>
+        <table class="tab-emp">
+        <tr>
+        <td>Name : </td>
+        <td><?php echo $row['emp_name'];?></td>
+        </tr>
+        <tr>
+            <td>Email : </td>
+            <td><?php echo $row['emp_email'];?></td>
+        </tr>
+        <tr>
+            <td>Contact No :</td>
+            <td><?php echo $row['emp_mobile'];?></td>
+        </tr>
+        
+        </table>
+       
+        
+        <img src="../../images/deco/restaurant-staff.jpg" alt="feedback" class="resimage">
+       
+        <center><h2>Table <span style="color:orange">Availability</span></h2></center>
+        <div style="height:370px;width:400px;display:block;padding:30px">
+        <div class="contentbox" style="padding:20px">
+        <form action="#" method="post">
+           <center> <h3>Not Available Table Reservation</h3> </center>
+
+            <label for="date">Add Date</label><br>
+            <input type="date" name="date" class="reg-type-feild" placeholder="Date" min="2020-11-19">
+            <br>
+
+            <label for="meal">Meal time</label><br>
+            <select name="meal" id="meal" class="reg-type-feild">
+            <option value="m0" disabled selected value> -- select Session time -- </option>
+            <option value="m1">Breakfast</option>
+            <option value="m2">Lunch</option>
+            <option value="m3">Dinner</option>
+            <option value="m4">All Day</option>
+            </select>
+            <br>
+
+            <input type="button" value="Set to unavailable" class="hero-button">
+        </form>
+        </div>
+        </div>
+        <div style="margin-left:15vw">
+        <h3>Table Reservation Visible</h3>
+        <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+        </label>
+        <h3>Pre orders Visible</h3>
+        <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+        </label>
+        </div>
+        <br>
     
+        <center> <h3> Not availability on</h3> </center>
+        <div style="padding:5vw;padding-top:1vw">
+        <div class="contentbox">
+        <table class="tab-not-available">
+                <tr>
+                    <th>Date</th>
+                    <th>Meal time</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td colspan="3"><hr></td>
+                </tr>
+                
+                <tr>
+                    <td>2020.11.19</td>
+                    <td>Lunch</td>
+                    <td><button class="hero-button">Remove</button></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><hr></td>
+                </tr>
+                <tr>
+                    <td>2020.11.25</td>
+                    <td>Dinner</td>
+                    <td><button class="hero-button">Remove</button></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><hr></td>
+                </tr>
+                <tr>
+                    <td>2020.11.23</td>
+                    <td>Breakfast</td>
+                    <td><button class="hero-button">Remove</button></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><hr></td>
+                </tr>
+                <tr>
+                    <td>2020.12.19</td>
+                    <td>All day</td>
+                    <td><button class="hero-button">Remove</button></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><hr></td>
+                </tr>
+
+            </table>
+            </div>  
+        </div> 
+
+            
+    </div>    
+
+    <?php include('../../includes/footer.php'); ?>
+  </div>  
+  <!-- content for 80% -->
+
+  
+
+
 </body>
 </html>
     

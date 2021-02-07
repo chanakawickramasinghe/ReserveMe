@@ -1,21 +1,16 @@
-.subbody{
-    align-items: center;
-    text-align: center;
-}
 .content-left{
     float:left;
 }
 
 /* Style of sidebar */
 .sidebar {
-    /* margin: 10px; */
-    padding: 0;
-    width: 100%;
-    background-color: #ffffff;
-    position: relative;
+    padding: 2%;
+    width: 20%;
+    background-color: #dbdbdbc4;
+    position: fixed;
     float: left;
-    /* box-shadow: 2px 2px 3px 2px gray; */
-    /* border-radius: 5px; */
+    height: 100%;
+    margin-top: 50px;
   }
   
   .sidebar a {
@@ -23,7 +18,7 @@
     color: black;
     padding: 16px;
     text-decoration: none;
-    font-weight: bold;
+    font-size: large;
   }
   .sidebar a:focus{
     background-color:black;
@@ -48,7 +43,11 @@
     font-weight: bold;
     color: honeydew;
   }
- 
+ .content{
+    float: right;
+    width: 80%;
+ }
+
   div.content {
     margin-top: 50px;
     margin-left: 200px;
@@ -350,12 +349,6 @@ border: none;
 /*End of button*/
 
 /* Side Navigation Bar */
-
-.sidenavbar{
-  float: left;
-  width: 20%;
-  /* border: 2px black solid; */
-}
 
 .reg-type-feild{
   height: 4.5vh;

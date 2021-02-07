@@ -6,14 +6,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Queries</title>  
         <link href="../../images/logo.png" rel="shortcut icon"/> 
-        <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
         <!-- Link the style sheets -->
         <link rel="stylesheet" href="../../CSS/employee.css">
-        <link rel="stylesheet" href="../../CSS/customer-reg.css">
         <link rel="stylesheet" href="../../CSS/main.css">
+        <link rel="stylesheet" href="../../CSS/nav.css">   
+        <link rel="stylesheet" href="../../CSS/footer.css">
 
     </head>
-    <body class="subbody">
+
+
+    <body >
+
+        <!--Start of nav-->
+        <div class="topnav">
+        <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
+        <a  href="employee-profile.php"><img style="weight:50px;height:50px;float:right" src="../../images/form_icons/user.png" alt=""></a>
+        <a class="navtab" href="../../index.php">Logout</a>
+		<a class="navtab" href="../../includes/contact.php">Contact</a>
+		<a class="navtab" href="../../includes/about.php">About</a>
+        
+        </div>
+    <!--End of nav-->
+
+    <!-- Start of sidbar -->
+    <div class="sidebar"> 
+      <span><a href="employee-home.php" >Employee Home</a></span>      
+      <a href="pre-order-menu.php">Pre - Order Menu</a>
+      <a href="queries.php">Queries</a>
+      <a href="table-reservation.php">Manage Reservation</a>
+      <a href="reception-hall.php">Reception Hall</a>
+    </div>
+    <!-- End of nav bar -->
+
+    <div class="content">
         <div class="content-div">
             <h1>New <span style="color:orange">Queries</span> </h1>
 
@@ -39,7 +64,7 @@
             </table>
         </div>
 
-
+    </div>
 
     <!--script for onClickNav() for the navigation menu-->
     <script src="../../js/onClickNav.js"></script>

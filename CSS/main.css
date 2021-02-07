@@ -6,7 +6,7 @@
 
 body{
 	font-family: 'Baloo Chettan 2', cursive;
-    line-height: 1.5;
+	line-height: 1.5;
 }
 
 .title-text{
@@ -160,17 +160,16 @@ a{
 .food{
 	width: 85%;
 	background-color: #FFFFFF;
-	box-shadow: 2px 2px 30px rgba(167, 158, 245, 0.2);
-	margin:30px auto;
+	/*box-shadow: 2px 2px 30px rgba(167, 158, 245, 0.2);*/
+	margin:50px auto auto auto;
 	padding:40px 20px;
-	margin-top: -60px;
 	background-size:1000px;
 	background-position: center;
 	border-radius: 10px;
     display: grid;
     grid-template-columns: repeat(auto-fit, 20rem);
 	justify-content: center;
-	height: 50%;
+	height: 40%;
 }
  
 .food-heading h3{
@@ -313,7 +312,7 @@ ul{
     left:15%;
     top: 65%;
 	transform: translate(-15%,-50%);
-	min-width: 800px;
+	width: 100%;
 }
 
 .m-img img{
@@ -335,8 +334,12 @@ ul{
 	font-size: 4rem;
 	text-shadow: 2px 2px 10px rgba(0,0,0,0.08);
 	letter-spacing: 3px;
-    color:#3D3D4A;
+    color:#f9f9ff;
     text-transform: none;
+}
+
+.m-text h4, h5{
+	color: rgb(231, 216, 202);
 }
 
 .m-text h1{
@@ -424,10 +427,11 @@ ul{
 .reservation{
 	display: flex;
 	width: 85%;
-	margin:30px auto;
+	margin: 60px auto;
 	justify-content: space-around;
 	align-items: center;
 	padding:30px;
+	top: auto;
 }
 
 .reservation-text{
@@ -435,7 +439,7 @@ ul{
 	font-family:myriad pro;
 }
 .reservation-img{
-	height: 500px;
+	height: 400px;
 	width: 50%;
 	box-sizing: border-box;
 }
@@ -547,13 +551,14 @@ ul{
 	}
 	
 	.m-img{
-		display:none;
+		z-index: -40;
 	}
-	
+
 	.m-text{
-		left:50%;
+		left:70%;
 		top:50%;
 		transform: translate(-50%,-50%);
+		z-index: -10;
 	}
 	.reservation{
 		flex-direction:column-reverse;
@@ -584,6 +589,7 @@ ul{
 		display: flex;
 		flex-direction: column;
 		margin:auto;
+		left: 50%;
 	}
 	
 	.m-text h1,h2{
@@ -601,6 +607,8 @@ ul{
 		margin:0px 20px;
 	}
 	
+	
+
 	.product{
 		width:88%;
 	}
@@ -622,6 +630,14 @@ ul{
 	}
 	.reservation{
 		top: 60px;
+	}
+
+	.location{
+		flex-direction:column-reverse;
+	}
+	
+	.location-text,.reservation-img{
+		width:100%;
 	}
 }
 /*End of Responsive section*/
@@ -662,6 +678,14 @@ ul{
     cursor: pointer;
 }
 
+.table_about{
+	width:90%;
+}
+
+.about_logo{
+	width:90%;
+	height:50%;
+}
 @media screen and (min-width: 576px){
     .about-center{
         display: flex;
@@ -671,13 +695,19 @@ ul{
 	
     .about{
         flex: 0 0 calc(50% - 16px);
-    }
+	}
+	
+	.about_logo{
+		width:100%;
+		height:30%;
+	}
 }
 
 @media screen and (min-width:972px){
     .about{
         flex: 0 0 calc(10% - 16px);
-    }
+	}
+	
 }
 /*End of About us*/
 
@@ -702,8 +732,6 @@ ul{
 	color: white;
 	border: none;
 }
-
-
 /*End of button*/
 
 
@@ -722,3 +750,302 @@ ul{
 	transform: translate(-50%, -50%);
 	font-size:50px;
   }
+
+/*Chef section */
+  	.chef {
+	  display: inline-grid;
+	  grid-template-columns: 0.3fr 1fr 1fr 1fr;
+	  grid-column-gap: 3px;
+	  font-family: 'Baloo Chettan 2', cursive;
+	  
+	  margin-top: 30px;
+	  text-align: center;
+	  
+  	}
+
+  	.discription{
+		width:80%;
+		font-family:myriad pro;
+		margin: auto;
+	}
+
+	.discription .image{
+		justify-content: center;
+		align-items: center;
+		margin: auto;
+	}
+
+	.discription h3{
+		color:#333333;
+		font-weight: 700;
+		font-size:3rem;
+		margin:auto;
+	}
+	
+	.discription font{
+		color: orange;
+	}
+	
+	.discription p{
+		font-size: 1rem;
+		color:#bdbdbd;
+		letter-spacing: 0.5px;
+		margin: auto;
+	}
+
+	@media screen and (max-width:600px){
+		.chef {
+			display: inline-grid;
+			grid-template-columns: 1fr;
+			grid-column-gap: 3px;
+			font-family: 'Baloo Chettan 2', cursive;
+		}
+
+		.discription{
+			justify-content: center;
+			align-items: center;
+			width: 74%;
+			
+		}
+
+		
+	}
+/*Chef section */
+
+/*Location section */
+.location{
+	display: flex;
+	width: 100%;
+	margin:30px auto;
+	justify-content: space-around;
+	align-items: center;
+	padding:30px;
+	background-color:#7e7979;
+	
+}
+
+.location-text{
+	width:40%;
+	font-family:myriad pro;
+}
+
+.location-text h3{
+	color:#fff;
+	font-weight: 700;
+	font-size:3rem;
+	margin:0px;
+}
+
+.location-text h4{
+	color: #fff;
+	font-weight: 400;
+	font-size:2rem;
+	margin:0px;
+}
+
+.location-text font{
+	color: orange;
+}
+
+.location-text p{
+	font-size: 1rem;
+	color:#bdbdbd;
+}
+/*Location section */
+
+/*Service section */
+.serviceh{
+	margin: auto;
+	text-align: center;
+	font-family: 'myriad pro';
+	color: #333333;
+	margin-top: 60px;
+}
+.service {
+	display: inline-grid;
+	grid-template-columns: 0.3fr 1fr 1fr 1fr;
+	grid-column-gap: 30px;
+	font-family: 'Baloo Chettan 2', cursive;
+	margin-left:50px;
+	margin-right: 40px;
+	text-align: center;
+	width:80%;
+	margin-bottom: 60px;
+	}
+
+	.card{
+		margin-left:auto;
+		box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+		padding: 10px;
+	}
+
+	.card i{
+		margin: auto;
+	}
+
+	.card h3{
+		color: orange;
+	}
+
+@media screen and (max-width:600px){
+	  .service {
+		  display: inline-grid;
+		  grid-template-columns: 1fr;
+		  grid-column-gap: 3px;
+		  font-family: 'Baloo Chettan 2', cursive;
+		  
+	  }
+}
+/*Service section */
+
+/*Gallery section */
+.container {
+	width: 80%;
+	margin: 2rem auto; 
+  }
+  
+  .gallery {
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(8, 4vw);
+	grid-gap: 1.5rem; 
+  }
+  
+  .gallery__img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block; 
+  }
+  
+  .gallery__item--1 {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 3;
+  }
+  
+  .gallery__item--2 {
+	grid-column-start: 3;
+	grid-column-end: 5;
+	grid-row-start: 1;
+	grid-row-end: 3;
+  }
+  
+  .gallery__item--3 {
+	grid-column-start: 5;
+	grid-column-end: 9;
+	grid-row-start: 1;
+	grid-row-end: 6;
+  }
+  
+  .gallery__item--4 {
+	grid-column-start: 1;
+	grid-column-end: 5;
+	grid-row-start: 3;
+	grid-row-end: 6;
+}
+  
+  .gallery__item--5 {
+	grid-column-start: 1;
+	grid-column-end: 5;
+	grid-row-start: 6;
+	grid-row-end: 9;
+}
+  
+  .gallery__item--6 {
+	grid-column-start: 5;
+	grid-column-end: 7;
+	grid-row-start: 6;
+	grid-row-end: 9;
+}
+
+.gallery__item--7 {
+	grid-column-start: 7;
+	grid-column-end: 9;
+	grid-row-start: 6;
+	grid-row-end: 9;
+}
+/*Gallery section */
+
+/*Review section */
+.reviewh{
+	margin: 100px auto 30px auto;
+	text-align: center;
+	font-family: 'myriad pro';
+	color: #333333;
+}
+
+.review #i1{
+	font-weight: bold;
+	font-size: 30px;
+	float: left;
+}
+
+.review #i2{
+	font-weight: bold;
+	font-size: 30px;
+	float: right;
+}
+
+.review #i3{
+	font-weight: bold;
+	font-size: 20px;
+	color: orange;
+}
+
+.review {
+	display: inline-grid;
+	grid-template-columns: 0.3fr 2fr 1fr;
+	grid-column-gap: 30px;
+	font-family: 'Baloo Chettan 2', cursive;
+	margin-left:50px;
+	margin-right: 40px;
+	margin-bottom: 80px;
+	text-align: center;
+	width:80%;
+	
+	}
+
+	.review .card1{
+		margin-left:auto;
+		padding: 10px;
+		z-index: 1;
+		background-image: url(../images/Eclipse1.svg);
+		background-size: auto ;
+		overflow: auto;
+		background-repeat: no-repeat;
+	}
+
+	.review .card2{
+		margin-left:auto;
+		padding: 10px;
+		z-index: 1;
+	}
+
+	.review .card1 i{
+		margin: auto;
+	}
+
+	.review .card1 h3{
+		color: orange;
+	}
+	
+
+@media screen and (max-width:600px){
+	  .review {
+		  display: inline-grid;
+		  grid-template-columns: 1fr;
+		  grid-column-gap: 3px;
+		  font-family: 'Baloo Chettan 2', cursive;
+	  }
+
+	  .review img{
+		  display: none;
+	  }
+	  .review .card1 img{
+		background-size: 40%;
+	}
+	  
+} 
+/*Review section */

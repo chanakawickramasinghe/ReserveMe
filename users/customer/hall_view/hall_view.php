@@ -12,6 +12,7 @@
     <link href="../../../css/res_view.css" rel="stylesheet" type="text/css"/>
     <link href="../../../css/nav.css" rel="stylesheet" type="text/css"/>
     <link href="../../../css/footer.css" rel="stylesheet" type="text/css"/>
+    
     <!--FontAwesome-->
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
 </head>
@@ -28,47 +29,20 @@
     <!--End of nav-->
 
     <!--Start of main-section-->
-    <?php 
-        if(isset($_GET['res_id'])){
-            $sql = "SELECT * FROM restaurant WHERE res_id = ".$_GET['res_id'];
-            $resultProduct = mysqli_query($connection,$sql);
-            while($rowProduct  = mysqli_fetch_assoc($resultProduct)){  
-                echo"<section class=\"main\">
-                        <div class=\"m-img\">       
-                            <img class=\"food-img\" src= \"../../../images/restaurant/{$rowProduct['res_image']}\">
-                        </div>
-                        <div class=\"m-text\">
-                            <h2>". $rowProduct['res_name'] ."</h2>
-                            <br>
-                            <h4><i class=\"fas fa-star-half-alt\">". $rowProduct['res_rate'] ."</i></h4>
-                            <br>
-                            <h4><i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i></h4>
-                            <br>
-                            <h4><i class=\"fas fa-phone-alt\">". $rowProduct['res_tel'] ."</i></h4>
-                            <!--<button class=\"reserve-button pulsate\" type=\"submit\" name=\"submit\" onclick=\"onClickOpenForm()\">Reserve</button>-->
-	                    </div>	
-	                </section>";
-            }
-        }
-    ?>
-    <!--Stsrt of add section-->
-    <div class="add-img">
-		<div class="slideshow-container">
-			<div class="mySlides fade">
-				<img src="../../../images/promos/3.jpg" style="width:100%">
-			</div>
-            <div class="mySlides fade">
-				<img src="../../../images/promos/2.jpg" style="width:100%">
-			</div>
+    <section class="reservation">
+		<!--img-->
+		<div class="reservation-img"><img src="../../../images/gallery4.jpg" /></div>
+		<!--text-->
+		<div class="reservation-text">
+			<!--heading-->
+			<h3>Oak Room</h3>
+			<!--details-->
+            <p>Opening Hours: 8 a.m - 12 p.m</p>
+            <p>Capacity: 100</p>
+            <p>Special: Ball Room Facilities</p>
+            <a class="hero-button"  onclick="onClickOpenForm()">Reserve</a>
 		</div>
-
-		<div style="text-align:center">
-			<span class="dot"></span> 
-			<span class="dot"></span> 
-			<span class="dot"></span> 
-		</div>
-	</div>
-    <!--End of add section-->
+		</section>
     <!--End of main-section-->
 
     <!--Start of pop up login page-->
@@ -82,10 +56,10 @@
             <div class="pass">
                 <a href="#">Forgot Password?</a>
             </div>
-            <button type="submit" class="btn">Login</button>
+            <button type="submit" class="btn" style="background:orange;">Login</button>
             <button type="button" class="btn cancel" onclick="onClickCloseForm()">Close</button>
             <div class="signup">Don't have account?
-                <a href="#">Signup Now</a>
+                <a href="../../user-type.php">Signup Now</a>
             </div>
         </form>
     </div>
@@ -93,29 +67,33 @@
     <script src="../../../js/onClickOpenForm.js"></script>
     <!--End of pop up login page-->
 
-    <!--Start of iframe section-->
-    <section class="content">
-	    <div class="content-container">	
-	        <div class="select">
-		        <ul class="select-menu">
-					<?php 
-						if(isset($_GET['res_id'])){
-							$retriewMenu = "SELECT * FROM restaurant WHERE res_id = ".$_GET['res_id'];
-							$resultMenu = mysqli_query($connection,$retriewMenu);
-							while($rowProduct  = mysqli_fetch_assoc($resultMenu)){  
-                                echo"<li><a  href=\"hall_discription.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">About</a></li>
-                                    <li><a  href=\"menu.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Menu</a></li>
-									<li><a  href=\"directions.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Directions</a></li>
-									<li><a  href=\"review/index.html?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Reviews</a></li>";
-							}               
-						}
-					?>  
-		        </ul>
-	        </div>
-			<iframe src="hall_discription.php?res_id= <?php echo $_GET['res_id']?>" id="iframeBox" name="iframeBox" class="iframeBox" height="500px" width="100%" title="Iframe Example" frameborder="0" marginwidth="0" marginheight="0"><div></iframe>
-	    </div>	
-	</section>
-	<!--End of iframe section-->
+    <!--Start of Description section-->
+	<div class="description">
+		<h1>Make the best memories with us</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus odio sit amet tellus mollis, ut suscipit lectus ornare. Mauris nisi mauris, scelerisque at dictum et, tempus eget erat. </p>
+	</div>   
+	<!--End of Description section--> 
+
+    <!--Start of Gallery section-->
+	<section clss="Gallerysection">
+		<div class="gallery-container">
+            <div class="gallery">
+                <figure class="gallery__item gallery__item--1">
+                    <img src="../../../images/gallery2.jpg" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--2">
+                    <img src="../../../images/gallery5.jpg" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--3">
+                    <img src="../../../images/gallery4.jpg" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--4">
+                    <img src="../../../images/gallery6.jpg" class="gallery__img">
+                </figure>
+            </div>
+        </div>
+	</section>        
+	<!--End of Gallery section-->
 
     <!--Include footer.php-->
     <div><?php include "../../../includes/footer.php" ?></div>

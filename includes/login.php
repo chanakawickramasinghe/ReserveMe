@@ -9,29 +9,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Link the style sheets -->
-<link href="../CSS/login.css" rel="stylesheet" type="text/css" > 
-<!-- <link href="../CSS/main.css" rel="stylesheet" type="text/css"/> -->
+<link href="../CSS/login.css" rel="stylesheet" type="text/css" >
 <link href="../CSS/nav.css" rel="stylesheet" type="text/css"/>
 <link href="../CSS/footer.css" rel="stylesheet" type="text/css"/>
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-	<!--FontAwesome-------->
-	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
-<!--web-icon-->
-<!-- <link href="../images/logo.png" rel="shortcut icon"/> -->
 
+<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"> -->
+	<!--FontAwesome-------->
+	<!-- <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"> -->
 
 </head>
-<body class="login-body">
+
+<body>
 	<!--Start of nav-->
     <div class="topnav">
         <a href="../index.php"><img class = "logo" src="../images/logo.png"></a>
-		<a class="navtab" href="../users/user-type.php">Register</a>
+		<a class="navtab" href="../users/customer/customerReg.php">Register</a>
 		<a class="navtab" href="contact.php">Contact</a>
 		<a class="navtab" href="about.php">About</a>
-		<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>    
     </div>
     <!--End of nav-->
-	
+    <br><br><br><br>	
     
 
 <div class="wrap-login100 ">

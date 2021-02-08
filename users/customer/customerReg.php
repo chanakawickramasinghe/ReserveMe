@@ -4,9 +4,10 @@
     <link href="../../images/logo.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Link the style sheets -->
+    <link href="../../CSS/main.css" rel="stylesheet" type="text/css">
     <link href="../../CSS/nav.css" rel="stylesheet" type="text/css">
     <link href="../../CSS/footer.css" rel="stylesheet" type="text/css">     
-    <link href="../../CSS/customer-reg.css" rel="stylesheet" type="text/css" > 
+    <link href="../../CSS/customer-reg.css" rel="stylesheet" type="text/css" >     
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
 
     <style>
@@ -21,17 +22,17 @@
 
 </head>
     
-<body class="login-body">
+<body>
 <!--Start of nav-->
     <div class="topnav">
         <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
         <a class="navtab" href="../../includes/login.php">Login</a>
 		<a class="navtab" href="../../includes/contact.php">Contact</a>
 		<a class="navtab" href="../../includes/about.php">About</a>
-		<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>   
+		<!-- <a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>    -->
     </div>
     <!--End of nav-->
-
+        <br><br><br><br>
         
         <div class="login-box"> 
                
@@ -84,25 +85,21 @@
                     <input type="date" name="dob" id='dob' class="reg-type-feild" onkeyup='getAge(dob)' placeholder="Date of Birth" min="1930-01-01" max="2002-12-31"> 
                     <P id='message2' ></P>
                     
-
-                    <!-- <p>Address<p> -->
                     <img src="../../images/form_icons/address.png" alt="user" class="icons">
                     <label for="pnumber"> Address</label>
                     <input type="text" name="pnumber" class="reg-type-feild" placeholder="ex : No. 120"> 
 
-                    <!-- <label for="street">Street</label> -->
                     <input type="text" name="street" class="reg-type-feild" placeholder="ex: Wall Street"> 
 
-                    <!-- <label for="city">City</label> -->
                     <input type="text" name="city" class="reg-type-feild" placeholder="ex: Colombo"> 
                     </td>
                 </tr> 
 
                 </table>          
                
-                <hr>
+                <hr> 
                 <!-- <p>By creating an account you agree to our <a href="#" style="color:blue">Terms & Privacy</a>.</p> -->
-                   <p align="center"> <input type="submit" name="submit"  class="hero-button" value="Register" required></p>
+                    <p align="center"> <input type="submit" name="submit"  class="hero-button" value="Register" required></p>
                    <br>
 
                     <div class="signin">

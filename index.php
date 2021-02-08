@@ -21,7 +21,7 @@
 		<!--Start of nav-->
 		<div class="topnav" id="myTopnav">
 			<img class = "logo" src="images/logo.png">
-			<a class="navtab" href="users/user-type.php">Register</a>
+			<a class="navtab" href="users/customer/customerReg.php">Register</a>
 			<a class="navtab" href="includes/login.php">Login</a>
 			<a class="navtab" href="includes/contact.php">Contact</a>
 			<a class="navtab" href="includes/about.php">About</a>

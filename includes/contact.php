@@ -18,17 +18,17 @@
 
 </head>
 <body>
-<!-- main-section-------------
-<section class="main"> -->
+
 		<!--Start of nav-->
 		<div class="topnav" id="myTopnav">
 			<a href="../index.php"><img class = "logo" src="../images/logo.png"></a>
-		    <a class="navtab" href="../users/user-type.php">Register</a>
+		    <a class="navtab" href="../users/customer/customerReg.php">Register</a>
 		    <a class="navtab" href="login.php">Login</a>
 		    <a class="navtab" href="about.php">About</a>
 		    <a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> 
 		</div>
 		<!--End of nav-->
+        
         <br>
         <div class="contact-container">
         <img src="../images/Contact-us.jpg" alt="Contact-Us image" style="height:230px;width:100%">

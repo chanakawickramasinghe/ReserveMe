@@ -738,6 +738,7 @@ ul{
 /* contact page */
 
 .contact-container {
+	margin-top: 50px;
 	position: relative;
 	text-align: center;
 	color: white;

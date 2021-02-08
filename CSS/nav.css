@@ -18,6 +18,7 @@
   font-size: 17px;
   text-transform: uppercase;
 }
+
 .logo{
   height:50px;
   width: 50px;
@@ -27,6 +28,7 @@
 
 .topnav .navtab:hover{
   color: orange;
+  font-weight: bold;
   border-radius: 3px;
   text-shadow:0 0 2px 2px #000;
 }
@@ -44,6 +46,13 @@
   background: orange;
   color: #fff;
   border-radius: 5px;
+}
+
+.profile-icon{
+  float: right;
+  height: 30px;
+  width: 30px;
+  margin-top: 10px;
 }
 
 @media screen and (max-width: 600px){
@@ -68,3 +77,5 @@
     text-align: left;
 	}
 }
+
+

@@ -6,7 +6,7 @@
 .sidebar {
     padding: 2%;
     width: 20%;
-    background-color: #dbdbdbc4;
+    background-color: #e9e9e9b0;
     position: fixed;
     float: left;
     height: 100%;
@@ -20,29 +20,30 @@
     text-decoration: none;
     font-size: large;
   }
-  .sidebar a:focus{
+
+  /* .sidebar a:focus{
     background-color:black;
     color: honeydew;
-  }
+  } */
    
   .sidebar a.active {
     background-color: #f3ba00;
     color: black;
-    font-weight: bold
-
+    font-weight: bold;
+    border-radius: 5px;
   }
-  .sidebar a.active:hover {
+
+  /* .sidebar a.active:hover {
     background-color: black;
     color: honeydew;
-    font-weight: bold
-
-  }
+    font-weight: bold;
+  } */
   
   .sidebar a:hover:not(.active) {
-    background-color: orange;
     font-weight: bold;
-    color: honeydew;
+    color: orange;
   }
+  
  .content{
     float: right;
     width: 80%;

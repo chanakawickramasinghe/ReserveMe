@@ -81,10 +81,10 @@ button:hover {
   background: rgb(255, 255, 255);
   border-radius: 10px;
   display: block;
-  /* overflow: hidden; */
+  overflow: hidden;
   padding: 15px 55px;
   margin: auto;
-  box-shadow: #333333 0 0 4px 2px;
+  box-shadow: #333333 0 0 10px 0px;
 }
 
 

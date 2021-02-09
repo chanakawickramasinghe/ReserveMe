@@ -17,26 +17,8 @@
     </head>
     <body>    
         
-    <!--Start of nav-->
-       <div class="topnav">
-        <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
-        <a  href="employee-profile.php"><img class="profile-icon" src="../../images/form_icons/user.png" alt=""></a>
-        <a class="navtab" href="../../index.php">Logout</a>
-		<a class="navtab" href="../../includes/contact.php">Contact</a>
-		<a class="navtab" href="../../includes/about.php">About</a>
-        
-        </div>
-    <!--End of nav-->
+    <?php include('navigations.php'); ?>
 
-    <!-- Start of sidbar -->
-    <div class="sidebar"> 
-      <span><a href="employee-home.php" >Employee Home</a></span>      
-      <a href="pre-order-menu.php">Pre - Order Menu</a>
-      <a href="queries.php">Queries</a>
-      <a href="table-reservation.php">Manage Reservation</a>
-      <a href="reception-hall.php">Reception Hall</a>
-    </div>
-    <!-- End of nav bar -->
     
     <div class="content">
     <?php

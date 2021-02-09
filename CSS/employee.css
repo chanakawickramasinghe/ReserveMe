@@ -10,7 +10,7 @@
     position: fixed;
     float: left;
     height: 100%;
-    margin-top: 50px;
+    margin-top: 60px;
   }
   
   .sidebar a {
@@ -27,8 +27,7 @@
   } */
    
   .sidebar a.active {
-    background-color: #f3ba00;
-    color: black;
+    color: orange;
     font-weight: bold;
     border-radius: 5px;
   }
@@ -97,62 +96,6 @@
         border-radius: 5px;
     }
 
-/* For toggle switch */
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 22px;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 3.5px;
-    bottom: 1px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: orange;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
-
-  /* End of toggle switch */
 
   /* style of table */
   td{
@@ -361,3 +304,54 @@ border: none;
   box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
   
 }
+.employee-container{
+  margin: auto;
+  width: 80%;
+  height: auto;
+  position: relative;
+  box-shadow: 0 0 8px 0px #202020;
+  border-radius: 5px;
+  padding: 2%;
+  overflow: hidden;
+  
+}
+
+.employee-container span{
+  font-weight: bold;
+  padding: 0 15px;
+  color:#555;
+  cursor: pointer;
+  width:auto;
+  display:inline-block;
+}
+
+.menu-table{
+  width: 100%;
+  margin: auto;
+
+
+}
+
+
+  #menu{
+  left: -100%;
+  }
+  
+  #preorder-menu{
+      left: 0;
+  }
+  
+  #Indicator{
+  width: 100px;
+  border: none;
+  background: #ff523b;
+  height: 3px;
+  margin-top: 8px;
+  margin-left: -60px;
+  transform: translateX(120px);
+  transition: transform 0.5s;
+  }
+
+  .form-btn{
+    display:inline-block;
+     }

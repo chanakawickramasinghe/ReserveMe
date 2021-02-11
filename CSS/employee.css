@@ -6,7 +6,7 @@
 .sidebar {
     padding: 2%;
     width: 20%;
-    background-color: #e9e9e9b0;
+    background-color: #f3f3f3;
     position: fixed;
     float: left;
     height: 100%;
@@ -43,18 +43,23 @@
     color: orange;
   }
   
- .content{
-    float: right;
-    width: 80%;
- }
 
   div.content {
-    margin-top: 50px;
+    float: right;
+    width: 80%;
+    margin-top: 70px;
     margin-left: 200px;
-    padding: 100px 16px;
-    height: 1000px;
+    padding: 0px 16px;
+    height: auto;
   }
-  
+
+  .footer{
+    float: right;
+    width: 80%;
+    margin-left: 200px;
+    padding: 0px 0px;
+  }
+
   @media screen and (max-width: 700px) {
     .sidebar {
       width: 20%;
@@ -103,27 +108,7 @@
 
   }
 
-  /* Button style */
-
-  .btn{
-    width: 140px;;
-    height: 6vh;
-    padding:0.6vh;
-    background: #0e1581;
-    border: none;
-    color:#ffffff;
-    border-radius: 5px;
-    font-size: large;
-    margin: 20px;
-}
-.btn:hover{
-    background: #000000;
-    cursor: pointer;
-}
-
-/* End of Buttons  */
-
-
+/* Table for employee profile */
 .tab-emp{
   width: 40%;
   /* margin: 0 auto; */
@@ -144,6 +129,7 @@
   padding-bottom: 5px;  
   text-align: center;
 }
+/* End of employee profile table */
 
 /* massage file */
 .content-div{
@@ -179,11 +165,14 @@
   background: black;
   cursor: pointer;
 }
-.message-table{
-  /* padding-left: 5vw; */
-  /* padding-right: 5vw; */
-  /* padding-top: 20px; */
-  width: 100%;
+
+/* Start of message file */
+
+/* .message-table{ */
+  /* padding-left: 5vw; 
+   padding-right: 5vw; 
+   padding-top: 20px; */
+  /* width: 100%;
   
 }
 
@@ -237,7 +226,7 @@
 .sent-reply{
   padding-left: 10vw;
   padding-bottom: 15px;
-}
+} */
 /*  End of massage file*/
 
 /* Check Button */
@@ -263,28 +252,30 @@
 
 .tab-not-available{
   width: 100%;
-  /* margin-right: 5%; */
   border: none;
   text-align: center;  
 }
+
 /*Start of button*/
-.hero-button{
+.emp-button{
   display: inline-block;
   text-decoration: none;
-  text-transform: uppercase;
-  padding: 13px 20px;
+  /* text-transform: uppercase; */
+  padding: 10px 15px;
   font-weight: bold;
+  font-size: 18px;
   background: orange;
   color: #fff;
   cursor: pointer;
-margin-top: 10px;
-border: none;
-box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
-border-radius: 15% 15% 15% 15% / 50% 50% 50% 50%;
+  margin-top: 10px;
+  border: none;
+  box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+  width: auto;
+  border-radius: 10px;
 }
 
-.hero-button:hover{
-background: #202020;
+.emp-button:hover{
+background: rgb(184, 126, 18);
 color: white;
 border: none;
 }
@@ -292,32 +283,25 @@ border: none;
 
 /*End of button*/
 
-/* Side Navigation Bar */
 
-.reg-type-feild{
-  height: 4.5vh;
-  padding: 0.4vh;
-  border-radius:5px;
-  outline:none;
-  width: 280px;
-  margin: 10px;
-  box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
-  
-}
+/* Menu file CSS */
+
 .employee-container{
   margin: auto;
+  margin-top: 40px;
   width: 80%;
-  height: auto;
+  height: 600px;
   position: relative;
-  box-shadow: 0 0 8px 0px #202020;
+  box-shadow: 0 0 10px 0px #8b8b8b;
   border-radius: 5px;
-  padding: 2%;
+  padding: 5%;
   overflow: hidden;
   
 }
 
 .employee-container span{
   font-weight: bold;
+  font-size: 24px;
   padding: 0 15px;
   color:#555;
   cursor: pointer;
@@ -326,19 +310,71 @@ border: none;
 }
 
 .menu-table{
-  width: 100%;
+  width: 55vw;
   margin: auto;
-
-
+  margin-left: 3vw;
 }
+
+.menu-table tr th{
+  background-color: rgb(94, 94, 255);
+  /* width:50px; */
+  color: whitesmoke;
+  padding: 0.5%
+}
+
+.menu-table tr:nth-child(even){background-color: #f2f2f2;}
+
+/* #menutab{
+  margin-left: 7vw;
+} */
+
+.form-btn{
+display:inline-block;
+}
+
+.employee-container table{
+/* max-width: 300px; */
+padding: 0 0px;
+position: absolute;
+top: 130px;
+transition: transform 0.5s;
+}
+
+/* .employee-container form{
+  max-width: 300px;
+  padding: 0 0px;
+  position: absolute;
+  top: 130px;
+  transition: transform 0.5s;
+  }
+
+form input{
+width: 100%;
+height: 30px;
+margin: 10px 0;
+padding: 0 10px;
+border:  1px solid #ccc;
+}
+
+form .btn{
+width:100%;
+border:none;
+cursor: pointer;
+margin:10px 0;
+}
+
+form .btn:focus{
+outline:none;
+} */
 
 
   #menu{
-  left: -100%;
+  left: 0;
   }
   
   #preorder-menu{
-      left: 0;
+      left: +100%;
+      margin-left: 7vw;
   }
   
   #Indicator{
@@ -347,11 +383,114 @@ border: none;
   background: #ff523b;
   height: 3px;
   margin-top: 8px;
-  margin-left: -60px;
-  transform: translateX(120px);
+  margin-left: -190px;
+  /* transform: translateX(0px); */
   transition: transform 0.5s;
   }
 
-  .form-btn{
-    display:inline-block;
-     }
+.menu-button{
+  margin-left: 60vw;
+  /* margin-top: 2vh; */
+}
+
+/* Start of toggel button */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 25px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: rgb(68, 68, 209);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(28px);
+  -ms-transform: translateX(28px);
+  transform: translateX(28px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* End of toggle button */
+
+
+/* Start of chat file */
+
+*{
+	padding:0px;
+	margin:0px;
+}
+
+.centeralised{
+	margin:10px auto;
+	width:1000px;
+	text-align:center;
+}
+
+.chathistory{
+	min-height:600px;
+	width:600px;
+	margin:10px auto;
+	padding:10px;
+	background:#f1f1f1;
+	text-align:left;
+}
+
+
+.txtarea{
+	min-height:100px;
+	width:600px;
+	margin:10px auto;
+	padding:10px;
+}
+
+.siglemessage{
+	font-size:12px;
+	padding:5px;
+	border-bottom:1px solid #b3b3b3;
+}
+/* End of text area */

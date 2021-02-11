@@ -12,6 +12,13 @@
         <link rel="stylesheet" href="../../CSS/nav.css">   
         <link rel="stylesheet" href="../../CSS/footer.css">
 
+        <!-- jquery for message -->
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+        </script>
+
     </head>
 
 
@@ -30,7 +37,7 @@
     <!-- End of sidebar -->
 
     <div class="content">
-            <h1>New <span style="color:orange">Queries</span> </h1>
+            <!-- <h1>New <span style="color:orange">Queries</span> </h1>
 
             <div class="promo-btn-bar">
                 <button type="button" class="hero-button" onclick="window.location.href='past-queries.php'">Replied Queries</button>
@@ -51,12 +58,55 @@
                 <tr><td><textarea placeholder="Enter Your Reply..." class="reply-area"></textarea></td></tr>
                 <tr><td><button type="submit" class="hero-button">Send</button></td></tr>
 
-            </table>
-            <?php include('../../includes/footer.php'); ?>
-    </div>
+            </table> -->
+        	<div class="centeralised">
+	
+                <div class="chathistory"></div>
 
+                <div class="chatbox">
+                    
+                    <form action="" method="POST">
+                        
+                        <textarea class="txtarea" id="message" name="message"></textarea>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            
+    </div>
+    
+    <div class="footer"> <?php include('../../includes/footer.php'); ?> </div>
     <!--script for onClickNav() for the navigation menu-->
     <script src="../../js/onClickNav.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            loadChat();
+        });
+        $('#message').keyup(function(e){
+            var message = $(this).val();
+            if( e.which == 13 ){
+                $.post('ajax.php?action=SendMessage&message='+message, function(response){                    
+                    loadChat();
+                    $('#message').val('');
+                });
+            }
+        });
+
+        function loadChat(){
+            $.post('ajax.php?action=getChat', function(response){                
+                $('.chathistory').html(response);
+            });
+        }
+
+        setInterval(function(){
+            loadChat();
+        }, 2000);
+
+    </script>
 
     </body>
 </html>

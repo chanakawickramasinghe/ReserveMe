@@ -6,19 +6,24 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ReserveMe - Admin</title>
-        <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
-	    <link rel="stylesheet" href="../../CSS/nav.css">
         <link href="../../images/logo.png" rel="shortcut icon"/>
+        <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
+	    <!--css style sheets-->
+        <link rel="stylesheet" href="../../CSS/admin-nav.css">
         <link rel="stylesheet" href="../../CSS/admin-dashboard.css"/>
+        <link rel="stylesheet" href="../../CSS/footer.css">
     </head>
     <body>
 
         <!--Start of nav-->
+        <span>
         <div class="topnav" id="myTopnav">
             <a href="admin-home.php"><img class = "logo" src="../../images/logo.png"></a>
             <a class="navtab" href="../../index.php">Logout</a>
 		    <a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
         </div>
+        </span>
+        
         <!--End of nav-->
 
         <!-- Admin Sidebar Dashboard -->
@@ -88,8 +93,9 @@
              
         </div>
 
+        <!-- <br>
+        <span><?php //include('../../includes/footer.php'); ?></span> -->
 
-      
     <!--script for onClickNav() for the navigation menu-->
     <script src="../../js/onClickNav.js"></script>
     

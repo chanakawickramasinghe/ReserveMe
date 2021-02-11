@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../../CSS/nav.css">   
     <link rel="stylesheet" href="../../CSS/footer.css">
 
-</head>
+</head> 
 
 <body>
     <?php include('navigations.php'); ?>

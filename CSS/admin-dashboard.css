@@ -1,8 +1,8 @@
    .sidebar {
-    margin: 0;
+    margin-top: 60px;
     padding: 0;
     width: 20%;
-    height: 94%;
+    height: 400px;
     background-color: #f1f1f1;
     position: relative;
     float: left;
@@ -29,7 +29,7 @@
   }
   
   div.content {
-    margin-top: 50px;
+    margin-top: 60px;
     margin-left: 200px;
     padding: 100px 16px;
     height: 1000px;
@@ -54,7 +54,7 @@
   }
 
   .content-div{
-    margin: 0;
+    margin-top: 6px;
     padding: 0;
     width: 80%;
     background-color: #ffffff;

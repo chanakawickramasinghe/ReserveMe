@@ -15,10 +15,31 @@
 
 
 <body class="login-body">
-<div>
+
+    <?php include('navigations.php'); ?>
+   
+    <!-- Start of side bar -->
+    <div class="sidebar"> 
+      <a href="restaurant-home.php" class="active">Home</a> 
+      <a href="add-preordermenu.php">Pre - Order Menu</a>    
+      <a href="add-menu.php">Update the Menu</a>
+      <a href="res-promo.php">Promotions</a>
+      <a href="res-floor-plan.php">Floor Plan</a> 
+      <a href="res-reservation.php">Reservations</a>
+      <a href="../customer/res_view/review/index.html?res_id=4">View Reviews</a>   
+      <a href="res-contactus.php">Help Desk</a>
+      <br>
+      <hr>
+      <a href="emp-iframe.php">Manage Employee</a>
+      <a href="hall-details.php">Reception Hall</a>
+    </div>
+    <!-- End of side bar -->
+
+    <div class="content">
+    <div style="margin:20px">   
+
             <form name="formRestSignup" action="add-preordermenu.php" method="post" enctype="multipart/form-data">
-                <h2 class="error-msg" style="font-size:14px"><?php include_once('../../includes/message.php'); ?></h2>
-                <br>
+                <h1 class="error-msg" style="font-size:14px"><?php include_once('../../includes/message.php'); ?></h1>
                 <center>
                 <h1 style="color:#ffbb01;"><font color="black">Pre-Order</font> Menu</h1>
              

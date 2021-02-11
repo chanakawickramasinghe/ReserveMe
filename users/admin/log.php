@@ -15,7 +15,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ReserveMe - Admin</title>
         <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
-	    <link rel="stylesheet" href="../../CSS/nav.css">
+	    <link rel="stylesheet" href="../../CSS/admin-nav.css">
         <link href="../../images/logo.png" rel="shortcut icon"/>
         <link rel="stylesheet" href="../../CSS/admin-dashboard.css"/>
         <script src="../../js/manage-user-search.js"></script>
@@ -28,6 +28,8 @@
             <a class="navtab" href="../../index.php">Logout</a>
             <a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
 		</div>
+ 
+        
         <!--End of nav-->
 
         <!-- Admin Sidebar Dashboard -->
@@ -44,9 +46,8 @@
         </div>
 
         <div class="content-div">
-            <br><br>        
+            <br><br>   
             <h1><font color="black">Application</font> Log</h1>
-        
             <div class="search-user-container">
             <form name="form-display-selected">
                 <!--heading-->
@@ -56,7 +57,8 @@
                     <input type="text" id="myInput" onkeyup="myFunctionLog()"
                     placeholder="Enter ID"/>
                 </div>
-            </div>
+            </div>     
+            
                 <br/>
             <!-- Adding the table with log details -->
         

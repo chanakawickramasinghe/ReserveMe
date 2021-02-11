@@ -1,11 +1,12 @@
    .sidebar {
-    margin-top: 60px;
-    padding: 0;
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     width: 20%;
     height: 400px;
     background-color: #f1f1f1;
-    position: relative;
     float: left;
+    position: fixed;
   }
   
   .sidebar a {
@@ -29,7 +30,7 @@
   }
   
   div.content {
-    margin-top: 60px;
+    margin-top: 80px;
     margin-left: 200px;
     padding: 100px 16px;
     height: 1000px;
@@ -54,13 +55,15 @@
   }
 
   .content-div{
-    margin-top: 6px;
-    padding: 0;
-    width: 80%;
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+    width: 78%;
     background-color: #ffffff;
     position: relative;
-    height: auto;
-    overflow: auto;
+    height: 580px;
+    overflow:auto;
     float: right;
     top:15px;
   }
@@ -353,6 +356,29 @@
   cursor: pointer;
 }
 
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+  align-items: center;
+}
+
+.flex-container > div {
+  background-color: rgb(68, 157, 199);
+  width: 200px;
+  height: 150px;
+  margin: 20px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 20px;
+}
+
+.flex-container :hover{
+  background-color: #333333;
+}
+
+/* admin-home end */
+
 /* admin-change password */
 .centered-view{
   align-items: center;
@@ -534,6 +560,7 @@
   background-color: transparent;
   font-size: medium; 
 }
+
 
 /* promo page */
 /* promo table */

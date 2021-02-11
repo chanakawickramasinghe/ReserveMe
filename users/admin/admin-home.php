@@ -29,7 +29,6 @@
         <!-- Admin Sidebar Dashboard -->
         
         <div class="sidebar">
-            </br></br>
             <a class="active" href="#home">Home</a>
             <a href="manage-users.php">Manage Users</a>
             <a href="messages.php">Messages</a>
@@ -39,15 +38,14 @@
             <a href="coadmins.php">Manage Co-Admins</a>
 
         </div>
-        <div class="content-div">
-            <br><br>  
+        <div class="content-div"> 
             <?php
                 checkSession();
                 echo "
                     <h1><font color=\"black\">Welcome</font> ".$_SESSION["name"]."!</h1>";    
             ?>  
             
-            <br><br>
+            
             <div class="admin-home">
             <?php
                 echo "<table border=1 class=\"detail-admin\">";
@@ -86,9 +84,19 @@
         <img class="img-admin" src="../../images/us/admin.png">
                 
             </div>
-            <br>
             <div class = "admin-home">
                 <button class="btn-change" type="button" onclick="window.location.href='admin-change-password.php'">Change Paasword</button>
+            </div>
+
+            <!-- adding container to input data -->
+            <!-- <div class="flex-container">
+                <div>Total Users</div>
+                <div>Upcoming Reservations</div>
+                <div>Past Reservations</div>  
+            </div>             -->
+
+            <div class="stats">
+                
             </div>
              
         </div>

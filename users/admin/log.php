@@ -46,9 +46,8 @@
         </div>
 
         <div class="content-div">
-            <br><br>        
+            <br><br>   
             <h1><font color="black">Application</font> Log</h1>
-        
             <div class="search-user-container">
             <form name="form-display-selected">
                 <!--heading-->
@@ -58,7 +57,8 @@
                     <input type="text" id="myInput" onkeyup="myFunctionLog()"
                     placeholder="Enter ID"/>
                 </div>
-            </div>
+            </div>     
+            
                 <br/>
             <!-- Adding the table with log details -->
         

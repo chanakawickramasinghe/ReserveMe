@@ -6,7 +6,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ReserveMe - Admin</title>
-	    <link rel="stylesheet" href="../../CSS/nav.css">
+	    <link rel="stylesheet" href="../../CSS/admin-nav.css">
         <link href="../../images/logo.png" rel="shortcut icon"/>
         <link rel="stylesheet" href="../../CSS/admin-dashboard.css"/>
         <script src="../../js/manage-user-search.js"></script>
@@ -25,16 +25,9 @@
 
         <div class="search-user-container">
             <form name="form-display-selected">
-                <!--heading-->
-		        <h3>Search From Restaurant Name , Email , City or ID</h3>
-		        <!--Input-------->
-		        <div class="search-input">
-                    <input type="text" id="myInput" onkeyup="myFunctionRestaurant()" 
-                    placeholder="Enter Restaurant Name , Email , City or ID"/>
-                </div>
-                <br/>
+                <br/><br/><br/>
 
-                <h3>Details of Selected Restaurant</h3>
+                <h3>Details of the Restaurant</h3>
                 
                 <div class="update-box">
                     
@@ -87,75 +80,6 @@
             </form>
         </div>
         <br/>
-        
-        
-        <div>
-        
-        <!-- Adding the table with customer details -->
-        
-        <table class="user" id="myTable" border="1">
-            <tr>
-                <th>Restaurant ID</th>
-                <th>Restaurant Name</th>
-                <th>Restaurant Email</th>
-                <th>Contact No.</th>
-                <th>Address Line 1</th>
-                <th>Address Line 2</th>
-                <th>City</th>
-                <th>Ranking</th>
-                <th>Status</th>
-            </tr>
-        
-        <?php
-        
-        $restaurants_sql = "SELECT * FROM restaurant";
-        
-        $userquery = mysqli_query($connection,$restaurants_sql);
-        while($row = mysqli_fetch_assoc($userquery)){
-        
-            echo "
-                <tr>                  
-                    <td>".$row['res_id']."</td>
-                    <td>".$row['res_name']."</td>
-                    <td>".$row['res_email']."</td>
-                    <td>".$row['res_tel']."</td>
-                    <td>".$row['res_add_line1']."</td>
-                    <td>".$row['res_add_line2']."</td>
-                    <td>".$row['city']."</td>
-                    <td>".$row['res_rate']."</td>
-                    <td>".$row['active_status']."</td>
-                </tr>";
-                
-        } 
-        echo "</table>";
-        ?>
-        
-        
-        </div>
-
-<script>
-    var table = document.getElementById('myTable');
-                
-        for(var i = 1; i < table.rows.length; i++)
-        {
-            table.rows[i].onclick = function()
-            {
-                document.getElementById("res_name").value = this.cells[1].innerHTML;
-                document.getElementById("res_id").value = this.cells[0].innerHTML;
-                document.getElementById("email").value = this.cells[2].innerHTML;
-                document.getElementById("location").value = this.cells[4].innerHTML;
-                document.getElementById("contact_number").value = this.cells[3].innerHTML;
-                document.getElementById("ratings").value = this.cells[7].innerHTML;
-                document.getElementById("a1").value = this.cells[4].innerHTML;
-                document.getElementById("a2").value = this.cells[5].innerHTML;
-                document.getElementById("city").value = this.cells[6].innerHTML;
-                document.getElementById("active_status").value = this.cells[8].innerHTML;
-                
-            };
-        }
-
-</script>
-        
                   
        <!--script for onClickNav() for the navigation menu-->
     <script src="../../js/onClickNav.js"></script>

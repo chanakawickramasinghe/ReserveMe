@@ -20,9 +20,9 @@
 		    
         </div>
         <!--End of nav-->
-
+        <br/><br/>
         <div class="centered-view">
-            <form>
+            <form method="POST" action="admin-change-password-submit.php">
                 <img class="img-change" src="../../images/form_icons/change-password.png">
                 <h3>Are you sure want to change your password?</h3>
                 <div class="form-change">
@@ -33,15 +33,13 @@
                     <p>Re-Enter New Password : </p>
                     <p><input type="password" name="new_pword2" placeholder="Re-Enter Password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required></p>
 
-                    <button type="submit" class="btn-change-blue" onclick="changePassword()">Change Password</button>
+                    <button type="submit" class="btn-change-blue" name="change-pword">Change Password</button>
                     <button type="reset" class="btn-change-normal">Clear</button>
                     <br>
                     <button type="button" class="btn-change-normal" onclick="window.location.href='admin-home.php'">Back</button>
                 </div>
                
-            </form>
-            
+            </form>    
         </div>
-
     </body>
 </html>

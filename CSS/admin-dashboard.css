@@ -582,12 +582,14 @@
 .promo td{
   border: 1px solid rgb(160, 154, 154);
   padding-top: 5px; 
-  padding-bottom: 5px;  
+  padding-bottom: 5px;
+  padding-left:10px;
+  padding-right:10px;
   text-align: center;
 }
 
 .img-promo{
-  width: 10vw;
+  width: 15vw;
   padding-top: 1vh;
   padding-bottom: 1vh;
 }

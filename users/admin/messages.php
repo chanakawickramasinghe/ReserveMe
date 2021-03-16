@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ReserveMe - Admin</title>
-	    <link rel="stylesheet" href="../../CSS/nav.css">
+	    <link rel="stylesheet" href="../../CSS/admin-nav.css">
         <link href="../../images/logo.png" rel="shortcut icon"/>
         <link rel="stylesheet" href="../../CSS/admin-dashboard.css"/>
     </head>
@@ -23,7 +23,7 @@
         <!-- Admin Sidebar Dashboard -->
         
         <div class="sidebar">
-            </br></br>
+
             <a href="admin-home.php">Home</a>
             <a href="manage-users.php">Manage Users</a>
             <a href="messages.php" class="active">Messages</a>

@@ -91,7 +91,6 @@
                 <td>".$row['advance_fee']."</td> 
                 <td><button type=\"button\" class=\"btn-promo-remove\">X</button></td>           
             </tr>
-    
             ";
             }
         }

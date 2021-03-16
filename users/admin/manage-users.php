@@ -49,23 +49,8 @@
 
             <!--Start of search user-->
 	        <div class="search-user-container">
-            <form>
-                <!--heading-->
-		        <h3>Search From Email</h3>
-		        <!--Input-------->
-		        <div class="search-input">
-			        <input placeholder="Example@gmail.com" type="email" />
-			        <button class="search-btn" name="search-user" type="submit">Search</button>
-                </div>
-                
-                <br/>
-                <p>Email : </p>
-                <p>User Type : </p>
-                <p>Name : </p>
-                <p>User Id :</p>
-
-            </form>
-            </div> -->
+           
+            </div>
         </div>
 
 

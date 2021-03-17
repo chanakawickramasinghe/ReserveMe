@@ -17,24 +17,25 @@
 </head>
 <body>
 
-<?php include('navigations.php'); ?>
-   
-   <!-- Start of side bar -->
-   <div class="sidebar"> 
-     <a href="restaurant-home.php">Home</a> 
-     <a href="add-preordermenu.php">Pre - Order Menu</a>    
-     <a href="add-menu.php">Update the Menu</a>
-     <a href="res-promo.php">Promotions</a>
-     <a href="res-floor-plan.php">Floor Plan</a> 
-     <a href="res-reservation.php">Reservations</a>
-     <a href="../customer/res_view/review/index.html?res_id=4">View Reviews</a>   
-     <a href="res-contactus.php">Help Desk</a>
-     <br>
-     <hr>
-     <a href="emp-iframe.php">Manage Employee</a>
-     <a href="hall-details.php" class="active">Reception Hall</a>
-   </div>
-   <!-- End of side bar -->
+      <!-- nav bar -->
+      <?php include('navigation.php'); ?>
+
+<!-- Start of side bar -->
+ <div class="sidebar"> 
+ <a href="restaurant-home.php">Home</a> 
+ <a href="add-preordermenu.php">Pre - Order Menu</a>    
+ <a href="add-menu.php">Update the Menu</a>
+ <a href="res-promo.php" >Promotions</a>
+ <a href="res-floor-plan.php" >Floor Plan</a> 
+ <a href="res-reservation.php">Reservations</a>
+ <a href="../customer/res_view/review/index.html?res_id=4">View Reviews</a>   
+ <a href="res-contactus.php" >Help Desk</a>
+ <br>
+ <hr>
+ <a href="mng-emp.php">Manage Employee</a>
+ <a href="hall-details.php" class="active">Reception Hall</a>
+</div>
+<!-- End of side bar -->
 
    
    <div class="content">
@@ -52,7 +53,7 @@
         if ($num_halls == 0){
             echo "
             
-            <h1 align='center' color:'#ffbb01;' >Reception Halls</h1>
+            <h1 align='center' >Reception Halls</h1>
 
             <h3 align='center'>No Reception Hall added!</h3>
             <br><br><br>
@@ -62,7 +63,7 @@
         }
         else{
             echo "
-            <h2 align='center' color:'#111111;'>Reception Hall Details</h2>
+            <h2 align='center' color:'black'>Reception Hall Details</h2>
             
             <table class=\"promo\" id=\"myTable\" border=\"1\" align=\"center\">
             <tr>

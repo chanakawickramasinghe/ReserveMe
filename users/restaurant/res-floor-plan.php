@@ -17,8 +17,28 @@
 
 <body>
 
+      <!-- nav bar -->
+  <?php include('navigation.php'); ?>
+
+     <!-- Start of side bar -->
+     <div class="sidebar"> 
+     <a href="restaurant-home.php">Home</a> 
+     <a href="add-preordermenu.php">Pre - Order Menu</a>    
+     <a href="add-menu.php">Update the Menu</a>
+     <a href="res-promo.php" >Promotions</a>
+     <a href="res-floor-plan.php" class="active">Floor Plan</a> 
+     <a href="res-reservation.php">Reservations</a>
+     <a href="../customer/res_view/review/index.html?res_id=4">View Reviews</a>   
+     <a href="res-contactus.php">Help Desk</a>
+     <br>
+     <hr>
+     <a href="mng-emp.php">Manage Employee</a>
+     <a href="hall-details.php">Reception Hall</a>
+   </div>
+   <!-- End of side bar -->
+
   <!--Start of getting photos-->
-    <div id="content">
+    <div class="content">
         <form action="add-menu-submit.php" method="post" enctype="multipart/form-data">
             <h2 class="error-msg" style="font-size:14px"><?php include_once('../../includes/message.php'); ?></h2>
                 <br><br>

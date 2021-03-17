@@ -12,17 +12,8 @@
     </head>
     <body>
 
-    <!--Start of nav-->
-   <div class="topnav">
-      <a href="employee-home.php"><img class = "logo" src="../../images/logo.png"></a>
-      <a href="employee-profile.php"><img class="profile-icon" src="../../images/form_icons/user.png" alt="profile"></a>
-      <a class="navtab" href="../../index.php">Logout</a>
-		  <a class="navtab" href="../../includes/contact.php">Contact</a>
-		  <a class="navtab" href="../../includes/about.php">About</a>
-      <a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
-        
-    </div>
-    <!--End of nav-->
+  <!-- nav bar -->
+  <?php include('navigation.php'); ?>
    
    <!-- Start of side bar -->
    <div class="sidebar"> 
@@ -36,7 +27,7 @@
      <a href="res-contactus.php">Help Desk</a>
      <br>
      <hr>
-     <a href="emp-iframe.php">Manage Employee</a>
+     <a href="mng-emp.php">Manage Employee</a>
      <a href="hall-details.php">Reception Hall</a>
    </div>
    <!-- End of side bar -->

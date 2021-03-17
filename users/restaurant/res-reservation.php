@@ -11,8 +11,8 @@
         <link rel="stylesheet" href="../../CSS/res-promo.css"/>
     </head>
     <body>
-
-    <?php include('navigations.php'); ?>
+    <!-- nav bar -->
+    <?php include('navigation.php'); ?>  
    
    <!-- Start of side bar -->
    <div class="sidebar"> 
@@ -26,7 +26,7 @@
      <a href="res-contactus.php">Help Desk</a>
      <br>
      <hr>
-     <a href="emp-iframe.php">Manage Employee</a>
+     <a href="mng-emp.php">Manage Employee</a>
      <a href="hall-details.php">Reception Hall</a>
    </div>
    <!-- End of side bar -->

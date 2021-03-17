@@ -18,7 +18,31 @@
 
 </head>
 <body>
+      <!-- nav bar -->
+  <?php include('navigation.php'); ?>
+
+    <!-- Start of side bar -->
+     <div class="sidebar"> 
+     <a href="restaurant-home.php">Home</a> 
+     <a href="add-preordermenu.php">Pre - Order Menu</a>    
+     <a href="add-menu.php">Update the Menu</a>
+     <a href="res-promo.php" >Promotions</a>
+     <a href="res-floor-plan.php" >Floor Plan</a> 
+     <a href="res-reservation.php">Reservations</a>
+     <a href="../customer/res_view/review/index.html?res_id=4">View Reviews</a>   
+     <a href="res-contactus.php" class="active">Help Desk</a>
+     <br>
+     <hr>
+     <a href="mng-emp.php">Manage Employee</a>
+     <a href="hall-details.php">Reception Hall</a>
+   </div>
+   <!-- End of side bar -->
+
 <!-- main-section------------->
+
+        <div class="content">
+
+
         <div class="contact-container">
         <img src="../../images/Contact-us.jpg" alt="Contact-Us image" style="height:230px;width:100%">
         <h1 class="centered"> We would love to hear from you..!</h1>
@@ -57,6 +81,8 @@
    
         </tr>
         </table>
+        </div>
+
         </div>
 
 

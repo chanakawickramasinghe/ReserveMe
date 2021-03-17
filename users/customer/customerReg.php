@@ -91,7 +91,7 @@
                             <button class="login100-form-btn" name="submit"> Register </button>
                         </div>
                     </div><br>
-                    <p>Already have an account? <a href="../../includes/login.php" style="color:blue">Sign in</a>.</p>
+                    <p>Already have an account? <a href="../../includes/login.php" style="color:blue;font-weight:bold">Sign in</a>.</p>
                 </center>
                 </form>    
             

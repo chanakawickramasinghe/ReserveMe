@@ -1,6 +1,11 @@
 <?php include('../../includes/session.php') ?>
 <?php include('../../includes/connection.php') ?>
 
+<?php
+    $user_id = "";
+     
+?>
+
 <html>
     <head>
         <meta charset="UTF-8">

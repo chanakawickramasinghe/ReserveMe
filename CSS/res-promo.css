@@ -50,10 +50,11 @@
 
 div.content {
   margin-top: 50px;
-  margin-left: 200px;
+  /* margin-left: 200px; */
   padding: 100px 16px;
   height: 1000px;
 }
+
 
 @media screen and (max-width: 700px) {
   .sidebar {

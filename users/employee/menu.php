@@ -14,10 +14,16 @@
         <link rel="stylesheet" href="../../CSS/nav.css">   
         <link rel="stylesheet" href="../../CSS/footer.css">
 
+    <style>
+        th:nth-of-type(4),td:nth-of-type(4) {
+        display: none;
+        }
+    </style>
+
 </head>
 
 <body>
-
+    <?php include('../../includes/message.php'); ?>
     <?php include('navigations.php'); ?>
 
     <!-- Start of sidbar -->
@@ -32,21 +38,30 @@
 
 <div class="content"> <!-- To set the 80% size of page -->
 
+                        <!-- To get the item -->
+                            <form action="menu-submit.php" method="POST">
+                            <input type="hidden" id="item_name" name="item_name" required>
+                            <input type="hidden" id="item_avail" name="item_avail" required>
+                            <input type="hidden" id="preorder_avail" name="preorder_avail" required>
+                            <div class="menu-button"><button name="submit" class="emp-button" >Save & update </button></div>
+                            </form>
+                        <!--________________ -->
+
     <div class="employee-container">
         <center><div class="form-btn">
-            <span onclick="menu()">Pre-order Menu</span>
-            <span onclick="pre_menu()">Menu</span>
+            <span onclick="menu()">Menu</span>
+            <span onclick="pre_menu()">Pre-order Menu</span>
             <hr id="Indicator">
         </div></center>
 
-
-        <form id="menu" action="menu-submit.php">
-            <table  class="menu-table">
+            <table  class="menu-table" id="menu">
                 <tr>
-                    <td>Menu</td>
-                    <td>Price</td>
-                    <td>Status</td>
+                    <th>Menu</th>
+                    <th>Price</th>
+                    <th>Availability</th>
+                    <th>Status</th>
                 </tr>
+
                 <?php
                     $sql="SELECT * FROM menu ";
                     // $userquery = mysqli_query($connection,$sql);
@@ -60,25 +75,41 @@
                 ?>
                     <tr>
                         <td><?php echo $menu ; ?></td>
-                        <td><?php echo $price ;?></td>
+                        <td><center><?php echo $price ;?></center></td>
+                        <td>
+                        <center><?php 
+                                if ($status==1){
+                                    echo '<label class="switch">
+                                            <input type="checkbox" name="item_avail" value="1" checked>
+                                            <span class="slider round"></span>
+                                        </label>';
+
+                                } else {
+                                    echo '<label class="switch">
+                                            <input type="checkbox" name="item_avail" value="0">
+                                            <span class="slider round"></span>
+                                        </label>';
+                                }
+                                ?></center>
+                        </td>
                         <td><?php echo $status ;?></td>
                     </tr>
+
 
                 <?php                        }
                     /*freeresultset*/
                     $result->free();
                     }
                 ?>
-
             </table>
-        </form>
 
-        <form id="preorder-menu" action="preorder-menu-submit.php">
-            <table  class="menu-table">
+
+            <table  class="menu-table" id="preorder-menu">
                 <tr>
-                    <td>Menu</td>
-                    <td>Price</td>
-                    <td>Status</td>
+                    <th>Menu</th>
+                    <th>Price</th>
+                    <th>Availability</th>
+                    <th>Status</th>
                 </tr>
                 <?php
                     $sql="SELECT * FROM menu where allow_preorder";
@@ -89,12 +120,31 @@
                         while ($row = $result->fetch_assoc()) {
                             $menu = $row["item_name"];
                             $price = $row["item_price"];
-                            $status = $row["item_avail"];
+                            // $status = $row["item_avail"];
+                            $allow_pre= $row['allow_preorder'];
+                            $preStatus = $row["preorder_avail"];
                 ?>
                     <tr>
                         <td><?php echo $menu ; ?></td>
-                        <td><?php echo $price ;?></td>
-                        <td><?php echo $status ;?></td>
+                        <td><center><?php echo $price ;?></center></td>
+                        <td>
+
+                            <center><?php 
+                                if ($preStatus==1){
+                                    echo '<label class="switch">
+                                            <input type="checkbox" name="allow_preorder" value="1" checked>
+                                            <span class="slider round"></span>
+                                        </label>';
+
+                                } else {
+                                    echo '<label class="switch">
+                                            <input type="checkbox" name="allow_preorder" value="0">
+                                            <span class="slider round"></span>
+                                        </label>';
+                                }
+                                ?></center>
+                        </td>
+                        <td><?php echo $preStatus ;?></td>
                     </tr>
 
                 <?php
@@ -105,33 +155,75 @@
 
                 ?>
 
+
             </table>
-        </form>
 
     </div>
-    <?php include('../../includes/footer.php'); ?>
+
+    
 </div>   
 
+
+
+
+
+
+
+
+<div class="footer"> <?php include('../../includes/footer.php'); ?> </div>
     <!--------js for menu swap-->
-    
+    <!-- Script for slide movement -->
     <script>
         var MenuForm = document.getElementById("menu");
         var PreMenuForm = document.getElementById("preorder-menu");
         var Indicator = document.getElementById("Indicator");
+        
         function menu(){
-                MenuForm.style.transform="translateX(300px)";
-                PreMenuForm.style.transform="translateX(300px)";
+                MenuForm.style.transform="translateX(0px)";
+                PreMenuForm.style.transform="translateX(0px)";
                 Indicator.style.transform="translateX(0px)";
+                
         }
 
         function pre_menu(){
 
-                MenuForm.style.transform="translateX(0px)";
-                PreMenuForm.style.transform="translateX(0px)";
-                Indicator.style.transform="translateX(120px)";
+                MenuForm.style.transform="translateX(-65vw)";
+                PreMenuForm.style.transform="translateX(-65vw)"; 
+                Indicator.style.transform="translateX(140px)";
+                
         }        
     </script>
 
+<!-- Script for select the food menu -->
+
+<script>
+    var table = document.getElementById('menu');
+                
+        for(var i = 1; i < table.rows.length; i++)
+        {
+            table.rows[i].onclick  = function()
+            {
+                // document.getElementById("cus_name").value = this.cells[1].innerHTML;
+                document.getElementById("item_name").value = this.cells[0].innerHTML;
+                document.getElementById("item_avail").value = this.cells[3].innerHTML;
+                document.getElementById("preorder_avail").value = "Book";
+            };
+        }
+
+        var table = document.getElementById('preorder-menu');
+                
+                for(var i = 1; i < table.rows.length; i++)
+                {
+                    table.rows[i].onclick = function()
+                    {
+                        // document.getElementById("cus_name").value = this.cells[1].innerHTML;
+                        document.getElementById("item_name").value = this.cells[0].innerHTML;
+                        document.getElementById("item_avail").value = "Book";
+                        document.getElementById("preorder_avail").value = this.cells[3].innerHTML;
+                    };
+                }
+
+</script>
 
 </body>
 </html>

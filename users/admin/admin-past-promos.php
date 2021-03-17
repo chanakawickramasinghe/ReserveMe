@@ -6,7 +6,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ReserveMe - Admin</title>
-	    <link rel="stylesheet" href="../../CSS/nav.css">
+	    <link rel="stylesheet" href="../../CSS/admin-nav.css">
         <link href="../../images/logo.png" rel="shortcut icon"/>
         <link rel="stylesheet" href="../../CSS/admin-dashboard.css"/>
         <script src="../../js/manage-user-search.js"></script>
@@ -25,7 +25,7 @@
         <h1><font color="black">Past</font> Promotions</h1>
 
         <div class="search-user-container">
-            <!-- <form name="form-display-selected"> -->
+            <form name="form-display-selected">
                 <!--heading-->
 		        <h3>Search From Restaurant Name or ID</h3>
 		        <!--Input-------->
@@ -33,40 +33,50 @@
                     <input type="text" id="myInput" onkeyup="myFunctionPastPromos()" 
                     placeholder="Enter Restaurant Name or ID"/>
                 </div>
-            
+            </form>
         </div>
+        <?php
 
+            //get date to check
+            date_default_timezone_set('Asia/Colombo');
+            $today_date = date("Y-m-d H:i:s");
 
-        <table class="promo" id="myTable" border="1">
+            $promos = "SELECT * FROM promotions WHERE end_date<'$today_date'"; //check with date
+
+            $promo_query = mysqli_query($connection,$promos);
+            $num_promos = mysqli_num_rows($promo_query);
+            
+            if ($num_promos == 0){ //if there are no past promotions
+                echo"<p>No Past Promotions to Display</p>";
+            }
+            else { //to see past promos
+                echo "
+                <table class=\"promo\" id=\"myTable\" border=\"1\">
                 <tr>
+                    <th>Promo ID</th>
                     <th>Promo Image</th>
-                    <th>User ID</th>
-                    <th>Company Name</th>
                     <th>Posted Date & Time</th>
                     <th>Ended Date & Time</th>
-                </tr>
-                <tr>
-                    <td><img class="img-promo" src="../../images/promos/1.jpg"></td>
-                    <td>3</td>
-                    <td>Pizza Hut Colombo</td>
-                    <td>2020-10-15 22:03:02</td>
-                    <td>2020-10-18 22:03:02</td>           
-                </tr>
-                <tr>
-                    <td><img class="img-promo" src="../../images/promos/2.jpg"></td>
-                    <td>5</td>
-                    <td>Burger King Gampaha</td>
-                    <td>2020-10-20 09:00:00</td>
-                    <td>2020-10-22 09:00:00</td>              
-                </tr>
-                <tr>
-                    <td><img class="img-promo" src="../../images/promos/3.jpg"></td>
-                    <td>11</td>
-                    <td>KFC Colombo</td>
-                    <td>2020-11-01 00:00:00</td>
-                    <td>2020-11-08 00:00:00</td>             
-                </tr>
-        </table>
+                    <th>Description</th>
+                </tr> ";
+
+                while($row = mysqli_fetch_assoc($promo_query)){
+                echo"
+                <tr> 
+                    <td>".$row['promo_id']."</td> 
+                    <td><img class=\"img-promo\" src= \"../../images/promos/{$row['image']}\"></td>                     
+                    <td>".$row['start_date']."</td>
+                    <td>".$row['end_date']."</td>
+                    <td>".$row['text']."</td>
+
+                </tr>";
+                }
+                echo"
+                </table> ";
+            }
+
+        ?>
+        
     
     </body>
 </html>

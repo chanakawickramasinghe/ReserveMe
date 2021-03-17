@@ -6,7 +6,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ReserveMe - Admin</title>
-	    <link rel="stylesheet" href="../../CSS/nav.css">
+	    <link rel="stylesheet" href="../../CSS/admin-nav.css">
         <link href="../../images/logo.png" rel="shortcut icon"/>
         <link rel="stylesheet" href="../../CSS/admin-dashboard.css"/>
         <script src="../../js/manage-user-search.js"></script>
@@ -37,7 +37,7 @@
                 <h3>Details of Selected Customer</h3>
                 
                 <div class="update-box">
-
+                    <form method="POST" action="active-suspend.php">
                     <table>
                         <tr>
                             <th>Customer ID :</th>
@@ -74,14 +74,16 @@
                         </tr>
                     </table>
 
-                
+                    
                     <p class="button-box">
                     <button class="btn-blue-l" type="button" name="btn-send-email" onclick="sendEmail()">Send Email</button>
                     <button class="btn-blue-l" type="button" name="btn-view-activity" onclick="viewActivityCus()">View Activity</button>
-                    <button class="btn-red" type="button" name="btn-activate-account" onclick="activateFunCus()">Activate Account</button>
+                    <input type="submit" class="btn-red" value="Activate Account" name="btn-activate-cus-account">
                     <button class="btn-red" type="button" name="btn-suspend-account" onclick="suspendFunction()">Suspend Account</button>
                     <button class="btn-blue" type="reset">Clear</button>
                     </p>
+                    </form>
+                    
 
                 </div>
                 

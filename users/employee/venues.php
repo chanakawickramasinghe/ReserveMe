@@ -57,8 +57,8 @@
             </select>
             <br>
 
-            <input type="button" value="Set to unavailable" class="hero-button">
-
+            <!-- <input type="button" value="Set to unavailable" class="emp-button"> -->
+            <button class="emp-button" >Set to unavailable</button>
         </form>
         </div>
         </div> 
@@ -85,7 +85,7 @@
                 <tr><td>Ball room</td>
                     <td>2020.11.19</td>
                     <td>Day</td>
-                    <td><button class="hero-button">Remove</button></td>
+                    <td><button class="emp-button">Remove</button></td>
                 </tr>
                 <tr>
                     <td colspan="4"><hr></td>
@@ -93,7 +93,7 @@
                 <tr><td>Party pool</td>
                     <td>2020.11.25</td>
                     <td>Night</td>
-                    <td><button class="hero-button">Remove</button></td>
+                    <td><button class="emp-button">Remove</button></td>
                 </tr>
                 <tr>
                     <td colspan="4"><hr></td>
@@ -101,7 +101,7 @@
                 <tr><td>Ball room</td>
                     <td>2020.11.23</td>
                     <td>Day</td>
-                    <td><button class="hero-button">Remove</button></td>
+                    <td><button class="emp-button">Remove</button></td>
                 </tr>
                 <tr>
                     <td colspan="4"><hr></td>
@@ -109,9 +109,10 @@
 
             </table>
          </div>  
-        
-        <?php include('../../includes/footer.php'); ?>       
+   
     </div>   
+        
+    <div class="footer"> <?php include('../../includes/footer.php'); ?> </div>   
      
 </body>
 </html> 

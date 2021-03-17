@@ -5,11 +5,12 @@
   <title>Reset</title>
   <link rel="stylesheet" href="../CSS/forgot-password.css"/>
   <link rel="icon" type="image/png" href="../images/logo.png" />
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="../CSS/nav.css" rel="stylesheet" type="text/css"/>
-<link href="../CSS/footer.css" rel="stylesheet" type="text/css"/>
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../CSS/nav.css" rel="stylesheet" type="text/css"/>
+  <link href="../CSS/footer.css" rel="stylesheet" type="text/css"/>
+  <link href="../CSS/main.css" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 	<!--FontAwesome-------->
 	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
   
@@ -60,6 +61,7 @@
 		<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>    
   </div>
     <!--End of nav-->
+    
   <div class="reset-password">
     <img src="../images/form_icons/change-password.png">
     <h1>Reset Password</h1>        
@@ -78,7 +80,7 @@
   </div>
   
  <!--Include footer.php-->
- <div class="footer-space"><?php include "../includes/footer.php" ?></div>
+ <div ><?php include "../includes/footer.php" ?></div>
     
     <!--script for onClickNav() for the navigation menu-->
     <script src="../js/onClickNav.js"></script>

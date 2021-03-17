@@ -114,7 +114,7 @@
     </div>
 </div>
 
-<?php include('../../includes/footer.php'); ?>
+<div class="footer"> <?php include('../../includes/footer.php'); ?> </div>
    
 </body>
 </html>

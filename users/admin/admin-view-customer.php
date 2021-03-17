@@ -41,7 +41,7 @@
                     <table>
                         <tr>
                             <th>Customer ID :</th>
-                            <td><input class="input-s" type="text" placeholder="ID" id="cus_id" name="id" readonly="true" required></td>
+                            <td><input class="input-s" type="text" placeholder="ID" id="cus_id" name="user_id" readonly="true" required></td>
                             <th>Customer Email :</th>
                             <td><input class="input-l" type="text" placeholder="Customer Email" id="email" readonly="true" required></td>
                             <th>Contact No. :</th>

@@ -23,7 +23,7 @@
         <!-- Admin Sidebar Dashboard -->
         
         <div class="sidebar">
-            </br></br>
+
             <a href="admin-home.php">Home</a>
             <a href="manage-users.php">Manage Users</a>
             <a href="messages.php">Messages</a>

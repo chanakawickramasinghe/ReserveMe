@@ -81,7 +81,7 @@
 			<a class="hero-button" href="users/customer/res_view/search_result.php">Table Reservation</a>
 		</div>
 		<!--img-->
-		<div class="reservation-img"><img src="images/table.jpg" /></div>
+		<div class="reservation-img"><img src="images/hall.jpg" /></div>
 	</section>
 	<!--End of Table reservation-->
 
@@ -222,17 +222,17 @@
 	</section>        
 	<!--End of Gallery section-->
 
-	<!--Start of subscribe-->
+	<!--Start of subscribe
 	<section class="subcribe-container">
-		<!--heading-->
+		//heading
 		<h3>Subcribe For Enjoy Amazing Offers</h3>
-		<!--Input-------->
+		//Input
 		<div class="subcribe-input">
 			<input placeholder="Example@gmail.com" type="email" />
 			<a class="subcribe-btn" href="#">Send</a>
 		</div>
 	</section>
-	<!--Start of subscribe-->
+	Start of subscribe-->
 	
 	<!--Include footer.php-->
     <div><?php include "./includes/footer.php" ?></div>

@@ -20,8 +20,8 @@
    
     <!-- Start of side bar -->
     <div class="sidebar"> 
-      <a href="restaurant-home.php" class="active">Home</a> 
-      <a href="add-preordermenu.php">Pre - Order Menu</a>    
+      <a href="restaurant-home.php">Home</a> 
+      <a href="add-preordermenu.php" class="active">Pre - Order Menu</a>    
       <a href="add-menu.php">Update the Menu</a>
       <a href="res-promo.php">Promotions</a>
       <a href="res-floor-plan.php">Floor Plan</a> 

@@ -70,7 +70,7 @@ document.querySelector(".reviews .write_review form").onsubmit = event => {
 	
 	
 	<!--Include footer.php-->
-    <div><?php include "./includes/footer.php" ?></div>
+    <div><?php include "../../../../includes/footer.php" ?></div>
 	
 	<!--script for slideshow-->
     <script src="js/slideshow.js"></script>

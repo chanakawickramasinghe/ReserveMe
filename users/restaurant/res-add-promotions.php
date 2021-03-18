@@ -50,7 +50,7 @@
         
         <br>
         <div class="centered-view">
-        <form class="add-promo-form" method="post" action="res-promo.php" enctype="multipart/form-data"> <!--SHOULD BE action="res-add-promotion-submit.php"-->
+        <form class="add-promo-form" method="post" action="res-add-promotion-submit.php" enctype="multipart/form-data">
             <table class="add-promo-form">
                 <tr>
                     <th>Starting Date & Time</th>
@@ -62,7 +62,7 @@
                 </tr>
                 <tr>
                     <th>Description (If any)</th>
-                    <td><input class="input-feild"  type="text" name="Category"></td>
+                    <td><input class="input-feild"  type="text" name="desc"></td>
                 </tr>
                 <tr>
                     <th>Add Image</th>
@@ -74,7 +74,6 @@
                 </tr>
 
             </table>
-            <br><br>
         </form>
         </div>
         </div>

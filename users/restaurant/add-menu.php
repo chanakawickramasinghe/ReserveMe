@@ -47,7 +47,7 @@
 
     <form action="add-menu-submit.php" method="post" onsubmit="myFunction()">
 
-        <select name="comment" id="comment" class="type-feild" default="How can we help you">
+        <select name="item_cat" id="item_cat" class="type-feild" default="How can we help you">
         <option value="q0" disabled selected value> -- Select a category -- </option>
         <?php 
             $sql_options= "SELECT cat_name FROM menu_category";
@@ -58,21 +58,22 @@
                 while($row=$results-> fetch_assoc()){
                     $options=$row["cat_name"];
         ?>
-        <option value="<?php $options ?>"><?php echo ("$options"); ?></option>
-         <?php }} ?>
-
         
+        <option value="<?php echo ("$options"); ?>"><?php echo ("$options"); ?></option>
+        
+        <?php }} ?>
 
-        </select><br><br>
+        </select>
 
-        <input class="type-feild" type="text" name="item_name" placeholder="Food Name" required><br><br>
-        <input class="type-feild" type="text" name="price" placeholder="Price" required><br><br>
+        <input class="type-feild" type="text" name="item_name" placeholder="Food Name" required>
+        <input class="type-feild" type="text" name="price" placeholder="Price" required>
         <!-- <input class="type-feild" type="text" name="mobile" placeholder="Mobile Number(Optional)" pattern='^\+?\d{9,11}'><br> -->
         <input type="submit" name="submit"  class="hero-button" value="Add" style="margin-left:30px"  required>
     </form>
+                    <br><hr><br><br>
 
 
-    <table>
+    <table class="promo" id="myTable" border="1">
     <tr>
     <th>Food category</th>
     <th>Food name</th>

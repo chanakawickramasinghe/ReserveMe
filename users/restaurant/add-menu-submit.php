@@ -2,24 +2,45 @@
 include('../../includes/connection.php');
 include('../../includes/message.php');
 $msg = "";
-if(isset($_POST['upload'])){
-    //the path to store the uploaded image
-    $targetDir="menu/" .basename($_FILES['menu_image']['name']);
 
-    //get all the submitted data from form
-    $image = $_FILES['menu_image']['name'];
+if(isset($_POST['submit'])){
+    // //the path to store the uploaded image
+    // $targetDir="menu/" .basename($_FILES['menu_image']['name']);
 
-    $sql = "INSERT INTO menu (menu_image) VALUES ('$image')";
-    mysqli_query($db,$sql);//store the data to the database table
+    // //get all the submitted data from form
+    // $image = $_FILES['menu_image']['name'];
 
-    if (move_upload_file($_FILES['Menu_image']['tmp_name'], $target)){
-        $msg = "Image uploaded successfully.";
-    }else{
-        $msg = "There was an issue when uploading the image.";
+    // $sql = "INSERT INTO menu (menu_image) VALUES ('$image')";
+    // mysqli_query($db,$sql);//store the data to the database table
+
+    // if (move_upload_file($_FILES['Menu_image']['tmp_name'], $target)){
+    //     $msg = "Image uploaded successfully.";
+    // }else{
+    //     $msg = "There was an issue when uploading the image.";
+    // }
+    $item_cat = $_POST['item_cat'];
+    $item_name = $_POST['item_name'];
+    $item_price = $_POST['price'];
+
+    $sql_add_menu="INSERT INTO menu(item_cat,item_name,item_price) VALUES ('$item_cat','$item_name','$item_price')";
+
+    if($results=$connection->query($sql_add_menu)){
+        $message = base64_encode(urlencode("Menu updated successfully"));
+        header('Location:add-menu.php');
+        // header('Location:add-menu.php?msg=' . $message);
+
+        exit();
     }
+
 }
 mysqli_close($connection); 
 ?>
+
+<script>
+function myFunction() {
+confirm("Menu updated successfully");
+}
+</script>
 
     <!--  $allowType = array('jpg','png','jpeg');
     $statusMsg = $errorMsg = $insertValuesSQL = $errorUpload = $errorUploadType = '';
@@ -48,4 +69,5 @@ mysqli_close($connection);
         $image = $_POST['menu_image']
         $registrationQuery = "INSERT INTO menu (menu_image) VALUES ('image')";
     }  -->
+    
     

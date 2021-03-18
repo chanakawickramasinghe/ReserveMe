@@ -1,4 +1,4 @@
-<?php include 'add-menu-submit.php'; ?>
+<?php include('add-menu-submit.php') ?>
 <?php include('../../includes/connection.php') ?>
 <?php include('../../includes/session.php') ?>
 
@@ -42,58 +42,75 @@
     <!-- End of side bar -->
 
     <div class="content">
-    <div style="margin:20px">     
 
-  <!--Start of getting photos-->
-    <div id="content">
-        <form action="add-menu-submit.php" method="post" enctype="multipart/form-data">
-            <h2 class="error-msg" style="font-size:14px"><?php include_once('../../includes/message.php'); ?></h2>
+    <center><h1 style="color:#ffbb01;"><font color="black">Add</font> Menu</h1><center><br>
 
-                <center><h2 style="color:#ffbb01;"><font color="black">Add</font> Menu</h2>
-                <br>
-                <p><h3>Insert images of your Restaurant Menu seperately.</h3></p>
-                <br>
-                <!-- <h3>Rename Image</h3>
-                <br>
-                <input type="text" class="type-feild"   name="item_name" placeholder="RestaurantName_01" required>
-                <br><br> -->
-                <h3>Add Image</h3>
-                <br>
-                <input class="input-file"  type="file" name="promo_image">
-                <div>
-                <br><br>
-                <input type="submit" name="submit" style="margin-left:400px; margin-top:-30px" class="btn-promo" value="Enter" required>   
-                </div>  
-               </center>
-               <br><br>
-               <table class="promo" id="myTable" border="1">
-                <tr>
-                    <th>Image 01</th>
-                    <th>Image 02</th>
-                    <th>Image 03</th>
-                    <th>Image 04</th>
-                    <th>Image 05</th>
-                </tr>
-                <tr>
-                    <td><img class="img-promo" src="../../images/restaurant/P2.jpg" width="150px" height="250px">
-                    <br><button type="button" class="btn-promo-remove">Remove</button>
-                    </td>
-                    <td><img class="img-promo" src="../../images/restaurant/P3.jpg" width="150px" height="250px">
-                    <br><button type="button" class="btn-promo-remove">Remove</button>
-                    </td>
-                    <td><img class="img-promo" src="">
-                    <!-- <br><button type="button" class="btn-promo-remove">Remove</button> -->
-                    </td>  
-                    <td><img class="img-promo" src="">
-                    <!-- <br><button type="button" class="btn-promo-remove">Remove</button> -->
-                    </td> 
-                    <td><img class="img-promo" src="">
-                    <!-- <br><button type="button" class="btn-promo-remove">Remove</button> -->
-                    </td>            
-                </tr>
-            </table>  
-        </form>
+    <form action="add-menu-submit.php" method="post" onsubmit="myFunction()">
+
+        <select name="comment" id="comment" class="type-feild" default="How can we help you">
+        <option value="q0" disabled selected value> -- Select a category -- </option>
+        <?php 
+            $sql_options= "SELECT cat_name FROM menu_category";
+
+            $results= $connection ->query($sql_options);
+
+            if($results==true){
+                while($row=$results-> fetch_assoc()){
+                    $options=$row["cat_name"];
+        ?>
+        <option value="<?php $options ?>"><?php echo ("$options"); ?></option>
+         <?php }} ?>
+
+        
+
+        </select><br><br>
+
+        <input class="type-feild" type="text" name="item_name" placeholder="Food Name" required><br><br>
+        <input class="type-feild" type="text" name="price" placeholder="Price" required><br><br>
+        <!-- <input class="type-feild" type="text" name="mobile" placeholder="Mobile Number(Optional)" pattern='^\+?\d{9,11}'><br> -->
+        <input type="submit" name="submit"  class="hero-button" value="Add" style="margin-left:30px"  required>
+    </form>
+
+
+    <table>
+    <tr>
+    <th>Food category</th>
+    <th>Food name</th>
+    <th>Price </th>
+    <th>Remove</th>
+    </tr>
+    
+    <?php 
+        $sql_menu_table= "SELECT * from menu order by item_cat asc";
+
+        $results2=$connection-> query($sql_menu_table);
+
+        if($results2==true){
+            while($row2=$results2->fetch_assoc()){
+                $item_cat=$row2["item_cat"];
+                $item_name=$row2["item_name"];
+                $item_price=$row2["item_price"];
+                $item_id=$row2["item_id"];
+    ?>
+    <tr>
+    <td><?php echo("$item_cat"); ?></td>
+    <td><?php echo("$item_name"); ?></td>
+    <td><?php echo("$item_price"); ?></td>
+    <td><a href="add-menu.php" style="color:red;text-decoration:underline" >remove</a></td>
+    </tr>
+    <?php
+            }
+        }
+    ?>
+
+    
+    </table>
+
+
+
+
     </div>
+
     
 
 </body>

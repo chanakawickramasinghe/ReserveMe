@@ -32,16 +32,18 @@
    </div>
    <!-- End of side bar -->
 
-   <div class="content">
-    <div style="margin:22px">     
+        <br>
 
-        <div class="content-div">     
-            <center><h1 style="color:#ffbb01;"><font color="black">Ongoing</font> Promotions</h1></center>
+        <div class="content">
+            
 
             <div class="promo-btn-bar">
                 <button type="button" class="btn-promo" onclick="window.location.href='res-add-promotions.php'">Add Promotion</button>
+                <button type="button" class="btn-promo active" onclick="window.location.href='#'">Ongoing Promotion</button>
                 <button type="button" class="btn-promo" onclick="window.location.href='res-past-promo.php'">View Past Promotions</button>
             </div>
+
+            <center><h1 style="color:#ffbb01;"><font color="black">Ongoing</font> Promotions</h1></center>
 
             <table class="promo" id="myTable" border="1">
                 <tr>

@@ -214,11 +214,6 @@ div.content {
     box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
   }
 
-  .login-body{
-    background-image: url(../images/regbg.jpg);
-    background-size: cover;
-  }
-
   .promo{
     width: 90%;
     margin: 0 auto;
@@ -281,5 +276,9 @@ div.content {
   .btn-promo:hover{
     background: black;
     cursor: pointer;
+  }
+
+  .btn-promo.active{
+    background: #000000;
   }
   

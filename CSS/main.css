@@ -725,13 +725,18 @@ ul{
 	margin-top: 10px;
 	border: none;
 	box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
-	border-radius: 15% 15% 15% 15% / 50% 50% 50% 50%;
+	/* border-radius: 15% 15% 15% 15% / 50% 50% 50% 50%; */
+	border-radius: 10px;
 }
 
 .hero-button:hover{
 	background: #202020;
 	color: white;
 	border: none;
+}
+
+.hero-button.active{
+	background-color: #202020;
 }
 /*End of button*/
 

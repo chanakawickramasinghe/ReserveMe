@@ -1,6 +1,6 @@
 <?php
 
-include("../../includes/connection.php");
+include("../../includes/connect2.php");
 include("../../includes/session.php");
 
 if( isset($_REQUEST['action']) ){

@@ -56,7 +56,7 @@ if(isset($_POST['submit'])){
             if (mysqli_query($connection,$registrationQuery) == TRUE) {
                 //echo "inside TRUE";
                 $message = base64_encode(urlencode("Registration Successful"));
-                header('Location:../../includes/login.php?msg=' . $message);
+                header('Location:../../includes/login.php?msg3=' . $message);
         
 				exit();
             } 

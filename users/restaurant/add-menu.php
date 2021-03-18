@@ -18,6 +18,12 @@
     <link rel="stylesheet" href="../../CSS/nav.css">   
     <link rel="stylesheet" href="../../CSS/footer.css">
 
+    <style>
+        th:nth-of-type(5),td:nth-of-type(5) {
+        display: none;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -69,7 +75,16 @@
         <!-- <input class="type-feild" type="text" name="mobile" placeholder="Mobile Number(Optional)" pattern='^\+?\d{9,11}'><br> -->
         <input type="submit" name="submit"  class="hero-button" value="Add" style="margin-left:30px"  required>
     </form>
-                    <br><hr><br><br>
+                    <br><hr>
+
+                            <!-- To get the item -->
+                            <form action="add-menu-submit.php" method="POST">
+                            <input type="hidden" id="item_name" name="item_name" required>
+                            <input type="hidden" id="allow_preorder" name="allow_preorder" required>
+                            <div class="menu-button"><button name="update" class="emp-button" >Save & update </button></div>
+                            </form>
+                            <!--________________ -->
+                        <br>
 
 
     <table class="promo" id="myTable" border="1">
@@ -77,7 +92,9 @@
     <th>Food category</th>
     <th>Food name</th>
     <th>Price </th>
+    <th>Set Preorder</th>
     <th>Remove</th>
+    <th>Status</th>
     </tr>
     
     <?php 
@@ -90,12 +107,32 @@
                 $item_cat=$row2["item_cat"];
                 $item_name=$row2["item_name"];
                 $item_price=$row2["item_price"];
+                $status=$row2["allow_preorder"];
                 $item_id=$row2["item_id"];
     ?>
     <tr>
     <td><?php echo("$item_cat"); ?></td>
     <td><?php echo("$item_name"); ?></td>
     <td><?php echo("$item_price"); ?></td>
+    <td>
+       
+                        <center><?php 
+                                if ($status==1){
+                                    echo '<label class="switch">
+                                            <input type="checkbox" name="item_avail" value="1" checked>
+                                            <span class="slider round"></span>
+                                        </label>';
+
+                                } else {
+                                    echo '<label class="switch">
+                                            <input type="checkbox" name="item_avail" value="0">
+                                            <span class="slider round"></span>
+                                        </label>';
+                                }
+                                ?></center>
+                        </td>
+    <td><?php echo("$status"); ?></td>
+        
     <td><a href="add-menu.php" style="color:red;text-decoration:underline" >remove</a></td>
     </tr>
     <?php
@@ -109,7 +146,23 @@
 
 
 
+
     </div>
+
+<!-- To get the table details to from -->
+<script>
+    var table = document.getElementById('myTable');
+                
+        for(var i = 1; i < table.rows.length; i++)
+        {
+            table.rows[i].onclick  = function()
+            {
+                document.getElementById("item_name").value = this.cells[1].innerHTML;
+                document.getElementById("allow_preorder").value = this.cells[4].innerHTML;
+            };
+        }
+
+</script>
 
     
 

@@ -41,7 +41,7 @@ h1{
 
   .btn-emp-edit {
     margin-right: 2vw;
-    width:17vw;
+    width:12vw;
     height: 5vh;
     background:  rgb(255, 187, 0);
     border: 1px solid  rgb(255, 255, 255);
@@ -76,7 +76,7 @@ h1{
 }
 
 .tab-add-emp{
-    width: 35%;
+    width: 45%;
     margin: 0 auto;
     border: none; 
   }

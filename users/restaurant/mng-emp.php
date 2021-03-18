@@ -35,19 +35,14 @@
     <div class="content">
     <?php
 
-        checkSession();
-        $resId = $_SESSION["resID"];
-        $hall_search = "SELECT * FROM employee WHERE res_id = '$resId'";
+        $emp_search = "SELECT * FROM employee";
 
-        $emp_query = mysqli_query($connection,$hall_search);
+        $emp_query = mysqli_query($connection,$emp_search);
         $num_emp = mysqli_num_rows($emp_query);
 
         if ($num_emp == 0){
             echo "
-            <br><br><br><br>
-            <h1>Manage Employee</h1>
-            <br><br>
-            
+            <h1><font color=\"black\">Manage</font> Employee</h1>            
             <h3>You have no employee added, Please Add an Employee.</h3>
             <div class=\"emp-add-form\">
             <form  method=\"post\" action=\"add-emp-submit.php\">
@@ -74,16 +69,12 @@
                 <button class=\"btn-emp-edit\" type=\"submit\" name=\"btn-add-emp\">Add Employee</button>
                 <button class=\"btn-emp-edit\" type=\"reset\" name=\"btn-clear\">Clear</button>
             </form>
-            </div>
-            
-  
-            
-            
+            </div>           
             ";
         }
         else{
             echo "
-            <h1>Manage Employee</h1>
+            <h1><font color=\"black\">Manage</font> Employee</h1>
             <h3>You have added an Employee and you can edit details.</h3>";
             
             while($row = mysqli_fetch_assoc($emp_query)){
@@ -105,7 +96,7 @@
             </table>";
             
             echo"
-            <br><br><br>
+            <br>
             <center>
             <div class=\"btn-center\">
                 <button class=\"btn-emp-edit\" type=\"button\">Edit Details</button>

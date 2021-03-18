@@ -21,10 +21,14 @@
         }
     </style> 
 </head>
-    <body><center>
+    <body>
+    <!-- nav bar -->
+    <?php include('navigation.php'); ?> 
+    
+    <center>
+        
+        <h1 style="color:#ffbb01;"><font color="black">Add Hall</font> Details</h1>
         <form method="post" action="add-hall-submit.php" enctype="multipart/form-data">
-        <br><br>
-        <h1 style="color:#ffbb01;"> Add Hall Details</h1>
         <br><br>
         <table>
             <tr>

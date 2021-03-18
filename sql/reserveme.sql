@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 07, 2021 at 03:46 PM
+-- Generation Time: Mar 17, 2021 at 05:20 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.33
 
@@ -43,8 +43,8 @@ CREATE TABLE `admins` (
 
 INSERT INTO `admins` (`admin_id`, `admin_name`, `admin_email`, `admin_password`, `contact_no`, `admin_type`) VALUES
 (1, 'Admin', 'admin@123', '202cb962ac59075b964b07152d234b70', '+94771520157', 'admin'),
-(6, 'Nuwan Fernando', 'nuwan.admin@gmail.com', '4de93544234adffbb681ed60ffcfb941', '+94771231234', 'co-admin'),
-(7, 'Chanaka Wickramasinghe', 'admin@gmail.com', '6d40e095b7f43848dc76ec017592da29', '+94771570227', 'co-admin');
+(6, 'Nuwan Fernando', 'nuwan.admin@gmail.com', 'b3534c545e0a544e7b441ff4e7af9362', '+94771231234', 'co-admin'),
+(7, 'Chanaka Wickramasinghe', 'admin@gmail.com', 'b3534c545e0a544e7b441ff4e7af9362', '+94771570227', 'co-admin');
 
 -- --------------------------------------------------------
 
@@ -58,17 +58,18 @@ CREATE TABLE `contact_us` (
   `name` text NOT NULL,
   `email` varchar(255) NOT NULL,
   `mobile` int(15) DEFAULT NULL,
-  `message` varchar(600) DEFAULT NULL
+  `message` varchar(600) DEFAULT NULL,
+  `replied` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `contact_us`
 --
 
-INSERT INTO `contact_us` (`msg_id`, `comment`, `name`, `email`, `mobile`, `message`) VALUES
-(2, 'Photo/Review Report', 'Chanaka Wickramasinghe', 'cmwickramasinghe703@gmail.com', 771570227, '123'),
-(6, 'Incorrect/outdated information on a page.', 'Chanaka Wickramasinghe', '2018is093@stu.ucsc.cmb.ac.lk', 771570227, 'now ok'),
-(7, 'Photo/Review Report', 'Chanaka Wickramasinghe', 'cmwickramasinghe703@gmail.com', 2147483647, 'This is a message');
+INSERT INTO `contact_us` (`msg_id`, `comment`, `name`, `email`, `mobile`, `message`, `replied`) VALUES
+(2, 'Photo/Review Report', 'Chanaka Wickramasinghe', 'cmwickramasinghe703@gmail.com', 771570227, '123', 0),
+(6, 'Incorrect/outdated information on a page.', 'Chanaka Wickramasinghe', '2018is093@stu.ucsc.cmb.ac.lk', 771570227, 'now ok', 0),
+(7, 'Photo/Review Report', 'Chanaka Wickramasinghe', 'cmwickramasinghe703@gmail.com', 2147483647, 'This is a message', 0);
 
 -- --------------------------------------------------------
 
@@ -96,7 +97,7 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`user_id`, `user_name`, `email`, `password`, `contact_no`, `dob`, `postal_number`, `street`, `city`, `rankings`, `no_of_rates`, `active_status`) VALUES
-(2, 'Chanaka Wickramasinghe', 'cmwickramasinghe703@gmail.com', 'fd74a07e77a471c376fc97fb7956937a', '+94771570227', '2002-12-19', '10000', 'Reid Avenue, Colombo', 'Colombo', 0, 0, 1),
+(2, 'Chanaka Wickramasinghe', 'cmwickramasinghe703@gmail.com', '202cb962ac59075b964b07152d234b70', '+94771570227', '2002-12-19', '10000', 'Reid Avenue, Colombo', 'Colombo', 0, 0, 1),
 (13, 'Chanaka Wickramasinghe', '2018is093@stu.ucsc.cmb.ac.lk', '6d40e095b7f43848dc76ec017592da29', '+94771570227', '2002-11-07', '100001', 'Reid Avenue, Colombo', 'Colombo', 0, 0, 0),
 (9, 'John Stewuet', 'john@gmail.com', '52060a990660b4b8bee0327357cfa71a', '2147483647', '1998-06-30', '100', 'Pilimathalawa rd', 'Kandy', 0, 0, 1),
 (12, 'Aamir Ali', 'aamri@gmail.com', 'daf0b78bce81656bfbf5eaaf7470bf2d', '+94111231231', '1998-05-05', '100', 'galle road', 'Colombo', 0, 0, 1);
@@ -189,7 +190,20 @@ INSERT INTO `log` (`log_id`, `user_id`, `user_type`, `date_time`, `activity`) VA
 (21, 2, 'Customer', '2021-02-05 15:57:24', 'Login Successfully'),
 (22, 2, 'Customer', '2021-02-05 16:26:16', 'Login Successfully'),
 (23, 4, 'Restaurant', '2021-02-05 16:29:22', 'Login Successfully'),
-(24, 4, 'Restaurant', '2021-02-05 16:30:02', 'Login Successfully');
+(24, 4, 'Restaurant', '2021-02-05 16:30:02', 'Login Successfully'),
+(25, 2, 'Customer', '2021-02-09 17:45:44', 'Login Successfully'),
+(26, 2, 'Customer', '2021-02-09 17:46:09', 'Login Successfully'),
+(27, 2, 'Customer', '2021-02-09 17:47:50', 'Login Successfully'),
+(28, 4, 'Restaurant', '2021-02-09 18:28:10', 'Login Successfully'),
+(29, 4, 'Restaurant', '2021-02-09 19:27:40', 'Login Successfully'),
+(30, 3001, 'Employee', '2021-02-09 19:30:07', 'Login Successfully'),
+(31, 4, 'Restaurant', '2021-02-09 21:07:57', 'Login Successfully'),
+(32, 3001, 'Employee', '2021-02-09 21:51:36', 'Login Successfully'),
+(33, 4, 'Restaurant', '2021-02-10 18:51:51', 'Login Successfully'),
+(34, 4, 'Restaurant', '2021-02-10 21:50:01', 'Login Successfully'),
+(35, 3001, 'Employee', '2021-03-15 22:32:50', 'Login Successfully'),
+(36, 4, 'Restaurant', '2021-03-15 22:52:21', 'Login Successfully'),
+(37, 4, 'Restaurant', '2021-03-17 12:31:41', 'Login Successfully');
 
 -- --------------------------------------------------------
 
@@ -262,8 +276,8 @@ CREATE TABLE `preorder_menu` (
 
 CREATE TABLE `promotions` (
   `promo_id` int(11) NOT NULL,
-  `start_date` date NOT NULL,
-  `end_date` date NOT NULL,
+  `start_date` datetime NOT NULL,
+  `end_date` datetime NOT NULL,
   `user_id` varchar(10) NOT NULL,
   `company_name` varchar(30) NOT NULL,
   `image` varchar(255) NOT NULL,
@@ -275,8 +289,10 @@ CREATE TABLE `promotions` (
 --
 
 INSERT INTO `promotions` (`promo_id`, `start_date`, `end_date`, `user_id`, `company_name`, `image`, `text`) VALUES
-(6, '2020-11-17', '2020-11-11', '1', 'ReserveMe', 'cinnamon-grand-main-entrance.jpg', ''),
-(7, '2021-02-05', '2021-02-19', '1', 'ReserveMe', 'Capture.PNG', '');
+(6, '2020-11-17 00:00:00', '2021-03-17 09:57:01', '1', 'ReserveMe', '1.jpg', 'Burger week'),
+(7, '2021-02-05 03:15:16', '2021-03-20 21:00:00', '1', 'ReserveMe', 'Capture.PNG', 'In publishing and graphic design, Lorem ipsum is a placeholder text lable. Wi'),
+(8, '2021-03-15 00:00:00', '2021-04-02 09:53:57', '2', 'bla', '2.jpg', 'hello'),
+(9, '2021-03-17 06:00:00', '2021-04-13 09:53:51', '', '', '4.jpg', 'Forth one');
 
 -- --------------------------------------------------------
 
@@ -594,7 +610,7 @@ ALTER TABLE `employee`
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `menu`
@@ -612,7 +628,7 @@ ALTER TABLE `menu_category`
 -- AUTO_INCREMENT for table `promotions`
 --
 ALTER TABLE `promotions`
-  MODIFY `promo_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `promo_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `reception_hall`

@@ -35,11 +35,10 @@
    
     <h1> Hall <span style="color:orange"> Reserved </span> </h1>
     
-    <div class="promo-btn-bar">
-        <button type="button" class="hero-button" onclick="window.location.href='menu-reservation.php'">Pre Orders</button>
-    </div>
-    <div class="promo-btn-bar">
+    <div style="float:right">
+        <button type="button" class="hero-button" onclick="window.location.href='menu-reservation.php'">Pre Orders</button>    
         <button type="button" class="hero-button" onclick="window.location.href='table-reservation.php'">Table Reservation</button>
+        <button type="button" class="hero-button active" onclick="window.location.href='#'">Hall Reservation</button>
     </div>
     <br><br>
 

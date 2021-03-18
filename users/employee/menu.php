@@ -120,7 +120,6 @@
                         while ($row = $result->fetch_assoc()) {
                             $menu = $row["item_name"];
                             $price = $row["item_price"];
-                            // $status = $row["item_avail"];
                             $allow_pre= $row['allow_preorder'];
                             $preStatus = $row["preorder_avail"];
                 ?>

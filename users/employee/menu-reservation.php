@@ -38,10 +38,9 @@
 
     <h1>Pre Orders-<span style="color:orange"> Menu </span> </h1>
     
-    <div class="promo-btn-bar">
+    <div style="float:right">
+        <button type="button" class="hero-button active" onclick="window.location.href='#'">Pre Orders</button>    
         <button type="button" class="hero-button" onclick="window.location.href='table-reservation.php'">Table Reservation</button>
-    </div>
-    <div class="promo-btn-bar">
         <button type="button" class="hero-button" onclick="window.location.href='hall-reservation.php'">Hall Reservation</button>
     </div>
     <br><br>

@@ -26,8 +26,7 @@
       <a href="res-promo.php">Promotions</a>
       <a href="res-floor-plan.php">Floor Plan</a> 
       <a href="res-reservation.php">Reservations</a>
-      <a href="../customer/res_view/review/index.html?res_id=4">View Reviews</a>   
-      <a href="res-contactus.php">Help Desk</a>
+      <a href="res-review.html">View Reviews</a>   
       <br>
       <hr>
       <a href="mng-emp.php">Manage Employee</a>
@@ -37,23 +36,24 @@
 
     <div class="content">
     <div style="margin:20px">   
-
+    <br>
             <form name="formRestSignup" action="add-preordermenu.php" method="post" enctype="multipart/form-data">
                 <h1 class="error-msg" style="font-size:14px"><?php include_once('../../includes/message.php'); ?></h1>
                 <center>
                 <h1 style="color:#ffbb01;"><font color="black">Pre-Order</font> Menu</h1>
-             
-                <h3 align="center">Details regarding the Menu available to place Pre-Orders</h3>
+                <br><br>
+                <h3 align="center">Details regarding the Pre-Orders Menu</h3>
                 <br>
                 <p><h3>Item Name<h3></p>
                 <input type="text" class="type-feild"   name="item_name" placeholder="Item Name" required>
                 <p><h3>Item Price<h3></p>
                 <input type="text"  class="type-feild" name="item_price" placeholder="Price in LKR" required>
-                <br><br><br>
+            <br><br><br>
+            <input type="submit" name="submit" style="margin-left:10px; margin-top:-30px" class="btn-promo" value="Submit" required>
                 </center>
-                <input type="submit" name="submit" style="margin-left:500px; margin-top:-30px" class="btn-promo" value="Submit" required>   
+                   
             </form>
-            <br><br>
+            <br>
             </div>
             <div class="tab" >
             <center>
@@ -68,19 +68,19 @@
                     <td>1</td>
                     <td>Cream of Vegetable Soup</td>
                     <td>180</td>
-                    <td><button type="button" class="btn-promo-remove">X</button></td>                   
+                    <td><button type="button" class="btn-promo-remove">Remove</button></td>                   
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>Fried Rice</td>
                     <td>250</td>  
-                    <td><button type="button" class="btn-promo-remove">X</button></td>           
+                    <td><button type="button" class="btn-promo-remove">Remove</button></td>           
                 </tr>
                 <tr>
                     <td>3</td>
                     <td>Caramel Pudding</td>
                     <td>150</td>   
-                    <td><button type="button" class="btn-promo-remove">X</button></td>                
+                    <td><button type="button" class="btn-promo-remove">Remove</button></td>                
                 </tr>
                 </table>
             </div>

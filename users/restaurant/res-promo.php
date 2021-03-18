@@ -24,8 +24,7 @@
      <a href="res-promo.php" class="active">Promotions</a>
      <a href="res-floor-plan.php">Floor Plan</a> 
      <a href="res-reservation.php">Reservations</a>
-     <a href="../customer/res_view/review/index.html?res_id=4">View Reviews</a>   
-     <a href="res-contactus.php">Help Desk</a>
+     <a href="res-review.html">View Reviews</a>   
      <br>
      <hr>
      <a href="mng-emp.php">Manage Employee</a>
@@ -33,8 +32,7 @@
    </div>
    <!-- End of side bar -->
 
-        <br>
-
+        <br><br>
         <div class="content">
             
         <center><h1 style="color:#ffbb01;"><font color="black">Ongoing</font> Promotions</h1></center>

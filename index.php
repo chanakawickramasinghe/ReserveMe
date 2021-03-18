@@ -33,13 +33,10 @@
 		<div class="m-img">
 			<div class="slideshow-container">
 				<div class="mySlides fade">
-				  	<img src="images/promos/1.jpg" style="width:100%">
+				  	<img src="images/promos/1.jpeg" style="width:100% ; height:60vh">
 				</div>
 				<div class="mySlides fade">
-				  	<img src="images/promos/2.jpg" style="width:100%">
-				</div>
-				<div class="mySlides fade">
-				  	<img src="images/promos/3.jpg" style="width:100%">
+				  	<img src="images/promos/2.jpeg" style="width:100% ; height:60vh">
 				</div>
 			</div>
 
@@ -51,13 +48,13 @@
 		</div>
 		<!--End of img-->
 		
-		<!--Start of text-->
+		<!--Start of text
 		<div class="m-text">
 			<h2>Reserve<font>Me</font></h2>
 			<h4>Reservation at finger tip</h4>
 			<h5>Explore the curated list of top restaurants in your area to make things more and more easier. Place a reservation within few minutes with us.</h5>
 		</div>
-		<!--End of text-->
+		End of text-->
 		
 		<!--Start of social-->
 		<div class="social">
@@ -75,13 +72,13 @@
 		<div class="reservation-text">
 			<!--heading-->
 			<h3>Table Reservation</h3>
-			<h4>Best places to <font>Dine in</font> </h4>
+			<h4>Best places to <font>Dine in</font> with esense of joy</h4>
 			<!--details-->
 			<p>We have brought the fine option of placing a table reservation at your favourite restaurant to your finger tip. Explore more restaurants and place a table reservation in few minutes.</p>
 			<a class="hero-button" href="users/customer/res_view/search_result.php">Table Reservation</a>
 		</div>
 		<!--img-->
-		<div class="reservation-img"><img src="images/table.jpg" /></div>
+		<div class="reservation-img"><img src="images/hall.jpg" /></div>
 	</section>
 	<!--End of Table reservation-->
 
@@ -101,34 +98,6 @@
 		</div>
 		</section>
 	<!--End of Hall reservation-->
-	
-	<!--Start of Services section
-	<div class="serviceh"><h1>Services</h1></div>
-	<section class="service">
-		<div class="flatart"></div>
-		<div class="card">
-			<div class="about-icon">
-				<i class="fas fa-utensils"></i>
-			</div>              
-            <h3>Table Reservation</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus odio sit amet tellus mollis, ut suscipit lectus ornare. Mauris nisi mauris, scelerisque at dictum et, tempus eget erat.</p>
-		</div>
-		<div class="card">
-			<div class="about-icon">
-				<i class="fas fa-hotel"></i>
-			</div>              
-            <h3>Hall Reservation</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus odio sit amet tellus mollis, ut suscipit lectus ornare. Mauris nisi mauris, scelerisque at dictum et, tempus eget erat.</p>
-		</div>
-		<div class="card">
-			<div class="about-icon">
-				<i class="fas fa-concierge-bell"></i>
-			</div>              
-            <h3>Preorder</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus odio sit amet tellus mollis, ut suscipit lectus ornare. Mauris nisi mauris, scelerisque at dictum et, tempus eget erat.</p>
-		</div>
-	</section>             
-	End of Services section-->
 
 	<!--Start of Location section-->
 	<section class="location">
@@ -156,23 +125,6 @@
 	</section>
 	<!--End of Location section-->
 
-	<!--Start of chefs section
-	<section class="chef">
-		<div class="flatart"></div>
-		<div class="discription">
-			//heading
-			<h3>Kitchen Experts</h3>
-			<p>Enlight your special occasion by finding the best place. You can now search and find the best venue to your weddings, birthday parties and more occasion. We provide you the facility to book it before others.</p>
-		</div>
-		<div class="image">
-			<img src="images/chef1.jpg" />
-		</div>
-		<div class="image">
-			<img src="images/chef2.jpg" />
-		</div>
-	</section>             
-	End of chefs section-->
-
 	<!--Start of Reviews section-->
 	<div class="reviewh">
 		<h1>Customers Feedback</h1>
@@ -187,7 +139,7 @@
 		</div>
 		<div class="card2">
 		<img src="images/review.svg" style="height: 200px ; width: 200px"/>
-		<a class="subcribe-btn" href="users/customer/res_view/review/index.html?res_id=4">More</a>
+		<a class="subcribe-btn" href="users/customer/res_view/review/index.php?res_id=4">More</a>
 		</div>
 	</section>   
 	<!--End of Reviews section-->          
@@ -222,17 +174,17 @@
 	</section>        
 	<!--End of Gallery section-->
 
-	<!--Start of subscribe-->
+	<!--Start of subscribe
 	<section class="subcribe-container">
-		<!--heading-->
+		//heading
 		<h3>Subcribe For Enjoy Amazing Offers</h3>
-		<!--Input-------->
+		//Input
 		<div class="subcribe-input">
 			<input placeholder="Example@gmail.com" type="email" />
 			<a class="subcribe-btn" href="#">Send</a>
 		</div>
 	</section>
-	<!--Start of subscribe-->
+	Start of subscribe-->
 	
 	<!--Include footer.php-->
     <div><?php include "./includes/footer.php" ?></div>

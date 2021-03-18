@@ -2,7 +2,6 @@
 <?php include('../../includes/connection.php') ?>
 <?php include('../../includes/session.php') ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +37,7 @@
       <a href="res-promo.php">Promotions</a>
       <a href="res-floor-plan.php">Floor Plan</a> 
       <a href="res-reservation.php">Reservations</a>
-      <a href="../customer/res_view/review/index.html?res_id=4">View Reviews</a>   
+      <a href="res-review.html">View Reviews</a>   
       <br>
       <hr>
       <a href="mng-emp.php">Manage Employee</a>
@@ -47,7 +46,7 @@
     <!-- End of side bar -->
 
     <div class="content">
-
+    <br>
     <center><h1 style="color:#ffbb01;"><font color="black">Add</font> Menu</h1><center><br>
 
     <form action="add-menu-submit.php" method="post" onsubmit="myFunction()">
@@ -89,8 +88,8 @@
 
     <table class="promo" id="myTable" border="1">
     <tr>
-    <th>Food category</th>
-    <th>Food name</th>
+    <th>Food Category</th>
+    <th>Food Name</th>
     <th>Price </th>
     <th>Set Preorder</th>
     <th>Remove</th>
@@ -133,14 +132,13 @@
                         </td>
     <td><?php echo("$status"); ?></td>
         
-    <td><a href="add-menu.php" style="color:red;text-decoration:underline" >remove</a></td>
+    <!-- <td><a href="add-menu.php" style="color:red;text-decoration:underline" >remove</a></td> -->
+    <td><button type="button" class="btn-promo-remove">Remove</button></td>
     </tr>
     <?php
             }
         }
     ?>
-
-    
     </table>
 
 
@@ -163,8 +161,6 @@
         }
 
 </script>
-
-    
 
 </body>
 </html>

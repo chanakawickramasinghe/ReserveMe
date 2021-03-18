@@ -45,18 +45,11 @@
                 <h1 style="color:#ffbb01;"><font color="black">Add</font> Floor Plan</h1>
                 <br>
                 <p><h3>Insert images of your Restaurant Floor seperately.</h3></p>
-                <p>(Only Five images are allowed)</p>
-                <br>
-                <!-- <h3>Rename Image</h3>
-                <br>
-                <input type="text" class="type-feild"   name="item_name" placeholder="RestaurantName_01" required>
-                <br><br> -->
-                <h3>Floor Plan</h3>
-                <br>
+                <br><br>
                 <input class="input-file"  type="file" name="floor-plan">
                 <div>
                 <br><br>
-                <input type="submit" name="submit" style="margin-left:400px; margin-top:-30px" class="btn-promo" value="Enter" required>   
+                <input type="submit" name="submit" style="margin-left:10px; margin-top:-30px" class="btn-promo" value="Enter" required>   
                 </div>  
                </center>
                <br><br>
@@ -69,7 +62,7 @@
                     <th>Image 05</th>
                 </tr>
                 <tr>
-                    <td><img class="img-promo" src="../../images/restaurant/P1.jpg" width="150px" height="250px">
+                    <td><img class="img-promo" src="../../images/restaurant/P1.jpg" width="115px" height="215px">
                     <br><button type="button" class="btn-promo-remove">Remove</button>
                     </td>
                     <td><img class="img-promo" src="" >

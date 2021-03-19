@@ -71,29 +71,29 @@
 
         <input class="type-feild" type="text" name="item_name" placeholder="Food Name" required>
         <input class="type-feild" type="text" name="price" placeholder="Price" required>
-        <!-- <input class="type-feild" type="text" name="mobile" placeholder="Mobile Number(Optional)" pattern='^\+?\d{9,11}'><br> -->
         <input type="submit" name="submit"  class="hero-button" value="Add" style="margin-left:30px"  required>
     </form>
-                    <br><hr>
+    <br><hr>
 
-                            <!-- To get the item -->
-                            <form action="add-menu-submit.php" method="POST">
-                            <input type="hidden" id="item_name" name="item_name" required>
-                            <input type="hidden" id="allow_preorder" name="allow_preorder" required>
-                            <div class="menu-button"><button name="update" class="emp-button" >Save & update </button></div>
-                            </form>
-                            <!--________________ -->
-                        <br>
+    <!-- To get the item -->
+    <form action="add-menu-submit.php" method="POST">
+        <input type="hidden" id="item_name" name="item_name" required>
+        <input type="hidden" id="allow_preorder" name="allow_preorder" required>
+        <div class="menu-button"><button name="update" class="emp-button" >Save & update </button></div>
+    </form>
+    <!--________________ -->
+    <br>
 
 
     <table class="promo" id="myTable" border="1">
     <tr>
+    <!-- <th>Item Id</th> -->
     <th>Food Category</th>
     <th>Food Name</th>
-    <th>Price </th>
+    <th>Price(lkr)</th>
     <th>Set Preorder</th>
     <th>Remove</th>
-    <th>Status</th>
+    <th>Remove</th>
     </tr>
     
     <?php 
@@ -131,9 +131,7 @@
                                 ?></center>
                         </td>
     <td><?php echo("$status"); ?></td>
-        
-    <!-- <td><a href="add-menu.php" style="color:red;text-decoration:underline" >remove</a></td> -->
-    <td><button type="button" class="btn-promo-remove">Remove</button></td>
+    <?php echo "<td><a class=\"btn-item-remove\" href =remove-item.php?id='".$row['item_id']."'> Remove </a> </td>"; ?>
     </tr>
     <?php
             }

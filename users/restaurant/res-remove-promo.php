@@ -13,10 +13,10 @@ mysqli_query($connection, $sql);
 $result = mysqli_query($connection,$sql);
 
 if($result){
-    header("Location:promotions.php");
+    header("Location:res-promo.php");
 }
 else{
-    header("Location:promotions.php");
+    header("Location:res-promo.php");
     }
 }
 ?>

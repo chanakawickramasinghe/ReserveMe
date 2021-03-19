@@ -33,7 +33,7 @@ if(isset($_POST['btn-add-emp'])){
 
         if($num > 0 || $num2 > 0 || $num3 >0 || $num4 >0){
             $message = base64_encode(urlencode("Email already exists"));
-            header('Location:emp-iframe.php?msg=' . $message);
+            header('Location:mng-emp.php?msg=' . $message);
             exit();
         }
 
@@ -43,13 +43,13 @@ if(isset($_POST['btn-add-emp'])){
             
             if (mysqli_query($connection,$add_emp_sql) == TRUE) {
                 $message = base64_encode(urlencode("Added Successful"));
-                header('Location:./emp-iframe.php?msg=' . $message);
+                header('Location:./mng-emp.php?msg=' . $message);
 				exit();
             } 
             
             else {
                  $message = base64_encode(urlencode("SQL Error while Registering"));
-                 header('Location:./emp-iframe.php?msg=' . $message);
+                 header('Location:./mng-emp.php?msg=' . $message);
 				 exit();
             }
         }

@@ -42,9 +42,7 @@
    
     <?php
 
-        checkSession();
-        $resId = $_SESSION["res_id"];
-        $hall_search = "SELECT * FROM reception_hall WHERE res_id = '$resId'";
+        $hall_search = "SELECT * FROM reception_hall";
 
         $hallquery = mysqli_query($connection,$hall_search);
         $num_halls = mysqli_num_rows($hallquery);
@@ -52,10 +50,10 @@
         if ($num_halls == 0){
             echo "
             
-            <h1 align='center' >Reception Halls</h1>
-
+            <h1 align='center'>Reception <font color=\"orange\">Halls</font></h1>
+            <br/>
             <h3 align='center'>No Reception Hall added!</h3>
-            <br><br><br>
+            <br><br>
             <center>
             <button type=\"button\" name=\"btn-promo\" class=\"btn-promo\" onclick=\"window.location.href='add-hall.php'\" align=\"center\">Add Hall</button></center>";
             

@@ -36,44 +36,44 @@
 
     <br><br>
     <div class="content">
+    <center><h1 style="color:#ffbb01;"><font color="black">Add</font> Promotions</h1><center>
+    <br/>
             <div class="promo-btn-bar">
-                <button type="button" class="btn-promo active" onclick="window.location.href='#'">Add Promotion</button>
-                <button type="button" class="btn-promo" onclick="window.location.href='res-promo.php'">Ongoing Promotion</button>
-                <button type="button" class="btn-promo" onclick="window.location.href='res-past-promo.php'">View Past Promotions</button>
+                <button type="button" class="btn-promos" onclick="window.location.href='res-promo.php'">Ongoing Promotion</button>
+                <button type="button" class="btn-promos active" onclick="window.location.href='#'">Add Promotion</button>
+                <button type="button" class="btn-promos" onclick="window.location.href='res-past-promo.php'">View Past Promotions</button>
             </div>
 
-            <center><h1 style="color:#ffbb01;"><font color="black">Add</font> Promotions</h1><center>
-
+    <br/>       
 	<br>
     	<div class="login-box"> 
         
         <br>
         <div class="centered-view">
-        <form class="add-promo-form" method="post" action="res-promo.php" enctype="multipart/form-data"> <!--SHOULD BE action="res-add-promotion-submit.php"-->
+        <form class="add-promo-form" method="post" action="res-add-promotion-submit.php" enctype="multipart/form-data">
             <table class="add-promo-form">
                 <tr>
-                    <th>Starting Date</th>
-                    <td><input class="input-feild" type="date" name="start_date"></td>
+                    <th>Starting Date & Time</th>
+                    <td><input class="input-feild" type="datetime-local" name="start_date" required></td>
                 </tr>
                 <tr>
-                    <th>End Date</th>
-                    <td><input class="input-feild" type="date" name="end_date"></td>
+                    <th>End Date & Time</th>
+                    <td><input class="input-feild" type="datetime-local" name="end_date" required></td>
                 </tr>
                 <tr>
-                    <th>Category (Paid*/Unpaid*)</th>
-                    <td><input class="input-feild"  type="text" name="Category"></td>
+                    <th>Description (If any)</th>
+                    <td><input class="input-feild"  type="text" name="desc"></td>
                 </tr>
                 <tr>
                     <th>Add Image</th>
-                    <td><input class="input-file"  type="file" name="promo_image"></td>
+                    <td><input class="input-file"  type="file" name="promo_image" required></td>
                 </tr>
                 <tr>
                     <td><input class="btn-res" type="submit" value="Add Promo" name="res-add-promo-submit"></td>
-                    <td><input class="btn-res" type="button" value="Back" onclick="window.location.href='res-promo.php'"></td>
+                    <td><input class="btn-res" type="reset" value="Clear"></td>
                 </tr>
 
             </table>
-            <br><br>
         </form>
         </div>
         </div>

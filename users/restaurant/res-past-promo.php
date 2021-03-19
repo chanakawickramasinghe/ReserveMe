@@ -35,28 +35,58 @@
    <br><br>
     <div class="content">
 
+    <center><h1 style="color:#ffbb01;"><font color="black">Past</font> Promotions</h1><center>
+    <br/>
+
             <div class="promo-btn-bar">
-                <button type="button" class="btn-promo" onclick="window.location.href='res-add-promotions.php'">Add Promotion</button>
-                <button type="button" class="btn-promo" onclick="window.location.href='res-promo.php'">Ongoing Promotion</button>
-                <button type="button" class="btn-promo active" onclick="window.location.href='#'">View Past Promotions</button>
+                <button type="button" class="btn-promos" onclick="window.location.href='res-promo.php'">Ongoing Promotion</button>
+                <button type="button" class="btn-promos" onclick="window.location.href='res-add-promotions.php'">Add Promotion</button>
+                <button type="button" class="btn-promos active" onclick="window.location.href='#'">View Past Promotions</button>
             </div>
 
-        <center><h1 style="color:#ffbb01;"><font color="black">Past</font> Promotions</h1><center>
+        
+    <br/>
+    <?php
 
-        <table class="promo" id="myTable" border="1">
-                <tr>
-                    <th>Promo Image</th>
-                    <th>Posted Date & Time</th>
-                    <th>Ended Date & Time</th>
-                    <th>Category</th>
-                </tr>
-                <tr>
-                    <td><img class="img-promo" src="../../images/promos/1.jpg"></td>
-                    <td>2020-10-15 22:03:02</td>
-                    <td>2020-10-18 22:03:02</td> 
-                    <td>Paid</td>          
-                </tr>
-        </table>
+        //get date to check
+        date_default_timezone_set('Asia/Colombo');
+        $today_date = date("Y-m-d H:i:s");
+
+        $promos = "SELECT * FROM promotions WHERE end_date<'$today_date'"; //check with date
+
+        $promo_query = mysqli_query($connection,$promos);
+        $num_promos = mysqli_num_rows($promo_query);
+
+        if ($num_promos == 0){ //if there are no past promotions
+            echo"<p>No Past Promotions to Display</p>";
+        }
+        else { //to see past promos
+            echo "
+            <table class=\"promo\" id=\"myTable\" border=\"1\">
+            <tr>
+                <th>Promo ID</th>
+                <th>Promo Image</th>
+                <th>Posted Date & Time</th>
+                <th>Ended Date & Time</th>
+                <th>Description</th>
+            </tr> ";
+
+            while($row = mysqli_fetch_assoc($promo_query)){
+            echo"
+            <tr> 
+                <td>".$row['promo_id']."</td> 
+                <td><img class=\"img-promo\" src= \"../../images/promos/{$row['image']}\"></td>                     
+                <td>".$row['start_date']."</td>
+                <td>".$row['end_date']."</td>
+                <td>".$row['text']."</td>
+
+            </tr>";
+            }
+            echo"
+            </table> ";
+        }
+
+        ?>
     
     </body>
 </html>

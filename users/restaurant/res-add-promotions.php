@@ -34,7 +34,7 @@
    </div>
    <!-- End of side bar -->
 
-    <br>
+    <br><br>
     <div class="content">
             <div class="promo-btn-bar">
                 <button type="button" class="btn-promo active" onclick="window.location.href='#'">Add Promotion</button>

@@ -19,13 +19,15 @@ if(isset($_POST['submit'])){
                 $menuQuery1 ="UPDATE `menu` SET `item_avail`=0 where item_name='$item_name'";
                 if (mysqli_query($connection,$menuQuery1) === TRUE) {
                     // $message = base64_encode(urlencode("Menu Updated Successful"));
-                    // header('Location:menu.php?menuSubMsg=' . $message);        
+                    // header('Location:menu.php?menuSubMsg=' . $message);
+                    header('Location:menu.php');        
                     exit();
                 } 
                 
                 else {
                     //  $message = base64_encode(urlencode("Menu 1 SQL Error while Registering"));
                     //  header('Location:menu.php?menuSubMsg=' . $message);
+                    header('Location:menu.php');
                     exit();
                 }
 
@@ -34,13 +36,15 @@ if(isset($_POST['submit'])){
 
             if (mysqli_query($connection,$menuQuery2) === TRUE) {
                 // $message = base64_encode(urlencode("Menu Updated Successful"));
-                // header('Location:menu.php?menuSubMsg=' . $message);        
+                // header('Location:menu.php?menuSubMsg=' . $message);
+                header('Location:menu.php');        
                 exit();
             } 
             
             else {
                     // $message = base64_encode(urlencode("Menu 2 SQL Error while Registering"));
                     // header('Location:menu.php?menuSubMsg=' . $message);
+                    header('Location:menu.php');
                 exit();
             }
 
@@ -49,13 +53,15 @@ if(isset($_POST['submit'])){
                 $menuQuery3 = "UPDATE menu SET preorder_avail=0 where item_name='$item_name'";
                 if (mysqli_query($connection,$menuQuery3) === TRUE) {
                     // $message = base64_encode(urlencode("Pre-order Menu Updated Successful"));
-                    // header('Location:menu.php?menuSubMsg=' . $message);        
+                    // header('Location:menu.php?menuSubMsg=' . $message);
+                    header('Location:menu.php');        
                     exit();
                 } 
                 
                 else {
                     //  $message = base64_encode(urlencode("Pre-order Menu 1 SQL Error while Registering"));
                     //  header('Location:menu.php?menuSubMsg=' . $message);
+                    header('Location:menu.php');
                     exit();
                 }
 
@@ -65,13 +71,15 @@ if(isset($_POST['submit'])){
                 $menuQuery4 = "UPDATE menu SET preorder_avail=1 where item_name='$item_name'";
                 if (mysqli_query($connection,$menuQuery4) === TRUE) {
                     // $message = base64_encode(urlencode("Pre-order Menu Updated Successful"));
-                    // header('Location:menu.php?menuSubMsg=' . $message);        
+                    // header('Location:menu.php?menuSubMsg=' . $message);
+                    header('Location:menu.php');        
                     exit();
                 } 
                 
                 else {
                     //  $message = base64_encode(urlencode("Pre-order Menu 2 SQL Error while Registering"));
                     //  header('Location:menu.php?menuSubMsg=' . $message);
+                    header('Location:menu.php');
                     exit();
                 }
         }

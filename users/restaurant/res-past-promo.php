@@ -32,7 +32,7 @@
    </div>
    <!-- End of side bar -->
 
-   <br>
+   <br><br>
     <div class="content">
 
             <div class="promo-btn-bar">

@@ -105,7 +105,7 @@ if(isset($_POST['submit'])){
 
             $execute_querry = mysqli_query($connection, $log_emp_sql);
 
-            header( "Location:../users/employee/employee-home.php"); 
+            header( "Location:../users/employee/venues.php"); 
     }
     else {
         $message = base64_encode(urlencode("Invalid Email or Password"));

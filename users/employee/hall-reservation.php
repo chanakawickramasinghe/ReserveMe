@@ -23,7 +23,7 @@
 
     <!-- Start of sidbar -->
     <div class="sidebar"> 
-      <a href="employee-home.php" >Employee Home</a>
+      <!-- <a href="employee-home.php" >Employee Home</a> -->
       <a href="venues.php">Venues</a>     
       <a href="menu.php">Set Menu</a>
       <a href="queries.php">Queries</a>

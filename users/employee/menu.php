@@ -28,7 +28,7 @@
 
     <!-- Start of sidbar -->
     <div class="sidebar"> 
-      <a href="employee-home.php" >Employee Home</a>
+      <!-- <a href="employee-home.php" >Employee Home</a> -->
       <a href="venues.php">Venues</a>     
       <a href="menu.php" class="active">Set Menu</a>
       <a href="queries.php">Queries</a>
@@ -187,7 +187,7 @@
         function pre_menu(){
 
                 MenuForm.style.transform="translateX(-65vw)";
-                PreMenuForm.style.transform="translateX(-65vw)"; 
+                PreMenuForm.style.transform="translateX(-72vw)"; 
                 Indicator.style.transform="translateX(140px)";
                 
         }        

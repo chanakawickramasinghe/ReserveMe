@@ -98,7 +98,7 @@
                 </div>
                 <div class=\"m-text\">
                   <br>
-                  <h4><i class=\"fas fa-map-marker-alt\"> ". $rowProduct['opening_hour'] ." - ". $rowProduct['closing-hour'] ."</i></h4>
+                  <h4><i class=\"fas fa-clock\"> ". $rowProduct['opening_hour'] ." - ". $rowProduct['closing-hour'] ."</i></h4>
                   <br>
                   <h4><i class=\"fas fa-map-marker-alt\"> ". $rowProduct['city'] ."</i></h4>
                   <br>

@@ -97,24 +97,14 @@
                   <img class=\"food-img\" src= \"../../../images/restaurant/{$rowProduct['res_image']}\">
                 </div>
                 <div class=\"m-text\">
-                  <!--<br>
-                  <h4><i class=\"fas fa-star-half-alt\">". $rowProduct['res_rate'] ."</i></h4>
                   <br>
-                  <h4><i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i></h4>
-                  <button class=\"reserve-button\" type=\"submit\" name=\"submit\" onclick=\"onClickOpenForm()\">Reserve<i class=\"fas fa-search\"></i></button>-->
-	              </div>	
-	            </section>
-         
-          <!--Start of add section-->
-		      <div class=\"add-img\">
-			      <div class=\"slideshow-container\">
-				      <div class=\"mySlides fade\">
-                <p>Opening Hours: 8 a.m - 12 p.m</p>
-                <p>Capacity: 100</p>
-                <p>Special: Ball Room Facilities</p>
-              </div>
-            </div>
-          </div>";
+                  <h4><i class=\"fas fa-map-marker-alt\"> ". $rowProduct['opening_hour'] ." - ". $rowProduct['closing-hour'] ."</i></h4>
+                  <br>
+                  <h4><i class=\"fas fa-map-marker-alt\"> ". $rowProduct['city'] ."</i></h4>
+                  <br>
+                  <h4><i class=\"fas fa-star-half-alt\"> ". $rowProduct['res_rate'] ."</i></h4>
+                </div>	
+	            </section>";
         }
       }
     ?>

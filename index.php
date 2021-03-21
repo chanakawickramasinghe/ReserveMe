@@ -1,3 +1,5 @@
+<?php include('includes/connection.php'); ?>
+<?php include('includes/session.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,7 +77,7 @@
 			<h4>Best places to <font>Dine in</font> with esense of joy</h4>
 			<!--details-->
 			<p>We have brought the fine option of placing a table reservation at your favourite restaurant to your finger tip. Explore more restaurants and place a table reservation in few minutes.</p>
-			<a class="hero-button" href="users/customer/res_view/search_result.php">Table Reservation</a>
+			<a class="hero-button" href="users/customer/res_view/res_view.php?res_id=4">Table Reservation</a>
 		</div>
 		<!--img-->
 		<div class="reservation-img"><img src="images/hall.jpg" /></div>
@@ -129,19 +131,39 @@
 	<div class="reviewh">
 		<h1>Customers Feedback</h1>
 	</div>
-	<section class="review">
-		<div class="flatart"></div>
-		<div class="card1">
-			<h3>Chathu</h3>
-			<p><i class="far fa-comments" id="i1"></i><br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus odio sit amet tellus mollis, ut suscipit lectus ornare. Mauris nisi mauris, scelerisque at dictum et, tempus eget erat. <br>
-			<i class="far fa-star" id="i3"></i><i class="far fa-star" id="i3"></i><i class="far fa-star" id="i3"></i><i class="far fa-star" id="i3"></i><br>
-			<i class="far fa-comments" id="i2"></i></p>
-		</div>
-		<div class="card2">
-		<img src="images/review.svg" style="height: 200px ; width: 200px"/>
-		<a class="subcribe-btn" href="users/customer/res_view/review/index.php?res_id=4">More</a>
-		</div>
-	</section>   
+	<?php 
+        $sql = "SELECT * FROM reviews WHERE res_id = '4' order by rating desc limit 1";
+            $resultProduct = mysqli_query($connection,$sql);
+            while($rowProduct  = mysqli_fetch_assoc($resultProduct)){  
+                echo"<section class=\"review\">
+				<div class=\"flatart\"></div>
+				<div class=\"card1\">
+					<h3>". $rowProduct['customer_name'] ."</h3>
+					<p><i class=\"far fa-comments\" id=\"i1\"></i><br><br>". $rowProduct['content'] ."<br>
+					<i class=\"far fa-star\" id=\"i3\"></i><i class=\"far fa-star\" id=\"i3\"></i><i class=\"far fa-star\" id=\"i3\"></i><i class=\"far fa-star\" id=\"i3\"></i><br>
+					<i class=\"far fa-comments\" id=\"i2\"></i></p>
+				</div>
+				<div class=\"card2\">
+				<img src=\"images/review.svg\" style=\"height: 200px ; width: 200px\"/>
+				<a class=\"subcribe-btn\" href=\"users/customer/res_view/review/index.php?res_id=4\">More</a>
+				</div>
+			</section>   
+				
+			
+			
+			
+			
+			";
+            }
+        
+    ?>
+
+				
+           
+
+
+	
+	
 	<!--End of Reviews section-->          
 
 	<!--Start of Gallery section-->

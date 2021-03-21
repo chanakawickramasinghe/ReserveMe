@@ -2,7 +2,7 @@
 <?php include('../../../includes/session.php') ?>
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8"/>
     <meta content="IE-edge" http-equiv="X-UA-Compatible"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -15,76 +15,130 @@
     <link href="../../../css/footer.css" rel="stylesheet" type="text/css"/>
     <!--FontAwesome-->
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
-</head>
-<body>
+    <style>
+	/* Dropdown Button */
+.dropbtn {
+  background-color: orange;
+  color: white;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius : 30px;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #202020;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: orange;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: grey;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: orange;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+.column1{
+	width: 500px;
+	padding: 10px;
+}
+.column2{
+	width: 400px;
+	padding: 10px;
+}
+
+
+	  </style>
+  </head>
+
+  <body>
     <!--Start of nav-->
     <div class="topnav" id="myTopnav">
-		<a href="../../../index.php"><img class = "logo" src="../../../images/logo.png"></a>
-		<a class="navtab" href="../../user-type.php">Register</a>
-		<a class="navtab" href="../../../includes/login.php">Login</a>
-		<a class="navtab" href="../../../includes/contact.php">Contact</a>
-		<a class="navtab" href="../../../includes/about.php">About</a>
-		<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
-	</div>
+		  <a href="../../../index.php"><img class = "logo" src="../../../images/logo.png"></a>
+		  <a class="navtab" href="../../user-type.php">Register</a>
+		  <a class="navtab" href="../../../includes/login.php">Login</a>
+		  <a class="navtab" href="../../../includes/contact.php">Contact</a>
+		  <a class="navtab" href="../../../includes/about.php">About</a>
+		  <a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
+	  </div>
     <!--End of nav-->
 
     <!--Start of main-section-->
     <?php 
-        if(isset($_GET['res_id'])){
-            $sql = "SELECT * FROM restaurant WHERE res_id = ".$_GET['res_id'];
-            $resultProduct = mysqli_query($connection,$sql);
-            while($rowProduct  = mysqli_fetch_assoc($resultProduct)){  
-                echo"<section class=\"main\">
-                        <div class=\"m-img\">       
-                            <img class=\"food-img\" src= \"../../../images/restaurant/{$rowProduct['res_image']}\">
-                        </div>
-                        <div class=\"m-text\">
-                            <h2>". $rowProduct['res_name'] ."</h2>
-                            <!--<br>
-                            <h4><i class=\"fas fa-star-half-alt\">". $rowProduct['res_rate'] ."</i></h4>
-                            <br>
-                            <h4><i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i></h4>
-                            <button class=\"reserve-button\" type=\"submit\" name=\"submit\" onclick=\"onClickOpenForm()\">Reserve<i class=\"fas fa-search\"></i></button>-->
-	                    </div>	
-	                </section>";
-            }
-        }
-    ?>
-    <!--Start of add section-->
-		<div class="add-img">
-			<div class="slideshow-container">
-				<div class="mySlides fade">
-				   	<img src="../../../images/promos/3.jpg" style="width:100%">
+      if(isset($_GET['res_id'])){
+        $sql = "SELECT * FROM restaurant WHERE res_id = ".$_GET['res_id'];
+        $resultProduct = mysqli_query($connection,$sql);
+        while($rowProduct  = mysqli_fetch_assoc($resultProduct)){  
+          echo"<section class=\"main\">
+                <div class=\"m-img\">       
+                  <img class=\"food-img\" src= \"../../../images/restaurant/{$rowProduct['res_image']}\">
                 </div>
+                <div class=\"m-text\">
+                  <!--<br>
+                  <h4><i class=\"fas fa-star-half-alt\">". $rowProduct['res_rate'] ."</i></h4>
+                  <br>
+                  <h4><i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i></h4>
+                  <button class=\"reserve-button\" type=\"submit\" name=\"submit\" onclick=\"onClickOpenForm()\">Reserve<i class=\"fas fa-search\"></i></button>-->
+	              </div>	
+	            </section>
+         
+          <!--Start of add section-->
+		      <div class=\"add-img\">
+			      <div class=\"slideshow-container\">
+				      <div class=\"mySlides fade\">
+                <p>Opening Hours: 8 a.m - 12 p.m</p>
+                <p>Capacity: 100</p>
+                <p>Special: Ball Room Facilities</p>
+              </div>
             </div>
-
-			<div style="text-align:center">
-			  <span class="dot"></span> 
-			  <span class="dot"></span> 
-			  <span class="dot"></span> 
-			</div>
-		</div>
+          </div>";
+        }
+      }
+    ?>
 		<!--End of add section-->
     <!--End of main-section-->
 
     <!--Start of pop up login page-->
     <div class="form-popup" id="myForm">
-        <form action="../includes/login-submit.php" method="post" class="form-container">
-            <h1>Login</h1>
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="password" required>
-			 <h3 class="error-msg"><?php include_once('../../../includes/message.php'); ?></h3> 
-            <div class="pass">
-                <a href="#">Forgot Password?</a>
-            </div>
-            <button type="submit" class="btn">Login</button>
-            <button type="button" class="btn cancel" onclick="onClickCloseForm()">Close</button>
-            <div class="signup">Don't have account?
-                <a href="#">Signup Now</a>
-            </div>
-        </form>
+      <form action="../includes/login-submit.php" method="post" class="form-container">
+        <h1>Login</h1>
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+			  <h3 class="error-msg"><?php include_once('../../../includes/message.php'); ?></h3> 
+        <div class="pass">
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit" class="btn" style="background-color:orange;">Login</button>
+        <button type="button" class="btn cancel" onclick="onClickCloseForm()">Close</button>
+        <div class="signup">Don't have account?
+          <a href="#">Signup Now</a>
+        </div>
+      </form>
     </div>
 
     <script src="../../../js/onClickOpenForm.js"></script>
@@ -93,27 +147,76 @@
     <!--Start of iframe section-->
     <section class="content">
 	    <div class="content-container">	
-	        <div class="select">
-		        <ul class="select-menu">
-					<?php 
-						if(isset($_GET['res_id'])){
-							$retriewMenu = "SELECT * FROM restaurant WHERE res_id = ".$_GET['res_id'];
-							$resultMenu = mysqli_query($connection,$retriewMenu);
-							while($rowProduct  = mysqli_fetch_assoc($resultMenu)){  
-								echo"<li><a  href=\"menu.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Menu</a></li>
+	      <div class="select">
+		      <ul class="select-menu">
+					  <?php 
+						  if(isset($_GET['res_id'])){
+							  $retriewMenu = "SELECT * FROM restaurant WHERE res_id = ".$_GET['res_id'];
+							  $resultMenu = mysqli_query($connection,$retriewMenu);
+							  while($rowProduct  = mysqli_fetch_assoc($resultMenu)){  
+								  echo"<li><a  href=\"menu.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Menu</a></li>
 									<li><a  href=\"floorplan.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Floorplan</a></li>
 									<!--<li><a  href=\"directions.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Directions</a></li>
 									<li><a  href=\"review/index.html?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Reviews</a></li>-->";
-							}               
-						}
-					?>  
-		        </ul>
-	        </div>
-			<iframe src="menu.php?res_id= <?php echo $_GET['res_id']?>" id="iframeBox" name="iframeBox" class="iframeBox" height="500px" width="100%" title="Iframe Example" frameborder="0" marginwidth="0" marginheight="0"><div></iframe>
+							  }               
+						  }
+					  ?>  
+		      </ul>
+	      </div>
+			  <iframe src="menu.php?res_id= <?php echo $_GET['res_id']?>" id="iframeBox" name="iframeBox" class="iframeBox" height="500px" width="100%" title="Iframe Example" frameborder="0" marginwidth="0" marginheight="0"><div></iframe>
 	    </div>	
-	</section>
+	  </section>
     <!--End of iframe section-->
-    
+
+    <!--start of from section-->
+    <section class="reservation">
+		  <!--Form-->
+		  <div class="col1">
+        <h1>Check Availability</h1>
+			  <hr>
+			  <form>
+			    <div>
+            <select class="dropbtn" name="lounge" id="lounge">
+              <option value="Time">Launge</option>
+              <option value="10.00 a.m">aaa</option>
+              <option value="2.00 p.m">bbb</option>
+              <option value="8.00 p.m">ccc</option>
+            </select>
+			      <select class="dropbtn" name="guests" id="guests">
+              <option value="Guests">Guests</option>
+	            <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="4">4</option>
+              <option value="6">6</option>
+            </select>
+            <select class="dropbtn" name="Time" id="Time">
+              <option value="Time">Time</option>
+              <option value="10.00 a.m">10.00 a.m</option>
+              <option value="2.00 p.m">2.00 p.m</option>
+              <option value="8.00 p.m">8.00 p.m</option>
+            </select>
+	          <input type="date" id="date" name="date">
+	        </div>
+          <br>
+	        <input class="dropbtn" type="submit" id="submit" name="submit" value="Check">
+        </form>
+		  </div>
+
+      <!--Available tables-->
+		  <div class="col2">
+        <h1>Available Tables</h1>
+        <div class="customRadio">
+          <label for="1">1</label><input type="radio" id="1" name="table" value="1">
+          <label for="2">2</label><input type="radio" id="2" name="table" value="2">
+          <label for="3">3</label><input type="radio" id="3" name="table" value="3">
+        </div>
+        <br>
+        <input class="dropbtn" type="submit" id="reserve" name="reserve" value="reserve" onclick="onClickOpenForm()">
+	    </div>
+    </section>
+    <!--end of form section-->
+
+   
     <!--Include footer.php-->
     <div><?php include "../../../includes/footer.php" ?></div>
 
@@ -122,8 +225,30 @@
 
     <!--script for slideshow-->
     <script src="../../../js/onClickNav.js"></script>
-</body>
 
+    <script>/* When the user clicks on the button,toggle between hiding and showing the dropdown content */
+		  function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
 
+      function myFunction2() {
+        document.getElementById("myDropdown2").classList.toggle("show");
+      }
+
+      // Close the dropdown menu if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+    </script>
+  </body>
 </html>
 

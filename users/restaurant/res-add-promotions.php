@@ -34,7 +34,7 @@
    </div>
    <!-- End of side bar -->
 
-    <br>
+    <br><br>
     <div class="content">
     <center><h1 style="color:#ffbb01;"><font color="black">Add</font> Promotions</h1><center>
     <br/>

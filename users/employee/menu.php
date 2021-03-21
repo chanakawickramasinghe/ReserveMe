@@ -27,9 +27,8 @@
     <?php include('navigations.php'); ?>
 
     <!-- Start of sidbar -->
-    <div class="sidebar"> 
-      <a href="employee-home.php" >Employee Home</a>
-      <a href="venues.php">Venues</a>     
+    <div class="sidebar">
+      <a href="venues.php">Reservation Status</a>     
       <a href="menu.php" class="active">Set Menu</a>
       <a href="queries.php">Queries</a>
       <a href="table-reservation.php">Manage Reservation</a>
@@ -64,8 +63,6 @@
 
                 <?php
                     $sql="SELECT * FROM menu ";
-                    // $userquery = mysqli_query($connection,$sql);
-                    // $row = mysqli_fetch_assoc($userquery);
 
                     if ($result = $connection->query($sql)) {
                         while ($row = $result->fetch_assoc()) {
@@ -94,8 +91,6 @@
                         </td>
                         <td><?php echo $status ;?></td>
                     </tr>
-
-
                 <?php                        }
                     /*freeresultset*/
                     $result->free();
@@ -113,8 +108,6 @@
                 </tr>
                 <?php
                     $sql="SELECT * FROM menu where allow_preorder";
-                    // $userquery = mysqli_query($connection,$sql);
-                    // $row = mysqli_fetch_assoc($userquery);
 
                     if ($result = $connection->query($sql)) {
                         while ($row = $result->fetch_assoc()) {
@@ -160,16 +153,11 @@
     </div>
 
     
-</div>   
-
-
-
-
-
-
-
+</div>
 
 <div class="footer"> <?php include('../../includes/footer.php'); ?> </div>
+
+
     <!--------js for menu swap-->
     <!-- Script for slide movement -->
     <script>
@@ -187,7 +175,7 @@
         function pre_menu(){
 
                 MenuForm.style.transform="translateX(-65vw)";
-                PreMenuForm.style.transform="translateX(-65vw)"; 
+                PreMenuForm.style.transform="translateX(-72vw)"; 
                 Indicator.style.transform="translateX(140px)";
                 
         }        

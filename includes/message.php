@@ -11,9 +11,5 @@ if(isset ($_GET['menuSubMsg'])){
     $menuSubMsg=urldecode(base64_decode(($_GET['menuSubMsg'])));
     echo '<script>alert("'.$menuSubMsg.'")</script>';
 }
-if(isset ($_GET['msg3'])){
-    echo urldecode(base64_decode(($_GET['msg3'])));
-    
-}
 
 ?>

@@ -166,68 +166,6 @@
   cursor: pointer;
 }
 
-/* Start of message file */
-
-/* .message-table{ */
-  /* padding-left: 5vw; 
-   padding-right: 5vw; 
-   padding-top: 20px; */
-  /* width: 100%;
-  
-}
-
-.message-table th{
-  font-size: large;
-  float: left;
-  padding-bottom: 5px;
-  color: #5b5377;
-}
-
-.message-table td{
-  font-size: medium;
-  padding-bottom: 5px;
-  color: #494949;
-}
-
-.message-table b{
-  color: #287dec;
-}
-
-.reply-area{
-  width: 50vw;
-  height: 5vw;
-  border-radius: 5px;
-  border: 1px solid orange;
-  font-size: large;
-  color: #287dec;
-}
-
-.txt-area{
-  float: right;
-  padding-top: 0%;
-}
-
-.btn-reply {
-  width:8vw;
-  height: 5vh;
-  background: orange;
-  border: none;
-  border-radius: 25px;
-  color: #fff;
-  font-size: medium;
-  margin-bottom: 5px;
-}
-
-.btn-reply:hover{
-  background: black;
-  cursor: pointer;
-}
-
-.sent-reply{
-  padding-left: 10vw;
-  padding-bottom: 15px;
-} */
-/*  End of massage file*/
 
 /* Check Button */
 .tik-button{
@@ -261,7 +199,7 @@
   display: inline-block;
   text-decoration: none;
   /* text-transform: uppercase; */
-  padding: 10px 15px;
+  padding: 6px 15px;
   font-weight: bold;
   font-size: 18px;
   background: orange;
@@ -271,11 +209,11 @@
   border: none;
   box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
   width: auto;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .emp-button:hover{
-background: rgb(184, 126, 18);
+background: black;
 color: white;
 border: none;
 }
@@ -288,13 +226,13 @@ border: none;
 
 .employee-container{
   margin: auto;
-  margin-top: 40px;
-  width: 80%;
+  margin-top: 25px;
+  width: 90%;
   height: 600px;
   position: relative;
   box-shadow: 0 0 10px 0px #8b8b8b;
   border-radius: 5px;
-  padding: 5%;
+  padding: 2%;
   overflow: hidden;
   
 }
@@ -302,7 +240,7 @@ border: none;
 .employee-container span{
   font-weight: bold;
   font-size: 24px;
-  padding: 0 15px;
+  padding: 0 10px;
   color:#555;
   cursor: pointer;
   width:auto;
@@ -310,13 +248,13 @@ border: none;
 }
 
 .menu-table{
-  width: 55vw;
+  width: 60vw;
   margin: auto;
   margin-left: 3vw;
 }
 
 .menu-table tr th{
-  background-color: rgb(94, 94, 255);
+  background-color: rgb(255, 134, 86);
   /* width:50px; */
   color: whitesmoke;
   padding: 0.5%
@@ -339,34 +277,6 @@ position: absolute;
 top: 130px;
 transition: transform 0.5s;
 }
-
-/* .employee-container form{
-  max-width: 300px;
-  padding: 0 0px;
-  position: absolute;
-  top: 130px;
-  transition: transform 0.5s;
-  }
-
-form input{
-width: 100%;
-height: 30px;
-margin: 10px 0;
-padding: 0 10px;
-border:  1px solid #ccc;
-}
-
-form .btn{
-width:100%;
-border:none;
-cursor: pointer;
-margin:10px 0;
-}
-
-form .btn:focus{
-outline:none;
-} */
-
 
   #menu{
   left: 0;
@@ -433,7 +343,7 @@ outline:none;
 }
 
 input:checked + .slider {
-  background-color: rgb(68, 68, 209);
+  background-color: orange;
 }
 
 input:focus + .slider {
@@ -494,3 +404,78 @@ input:checked + .slider:before {
 	border-bottom:1px solid #b3b3b3;
 }
 /* End of text area */
+
+/* Start of booking form reservation  */
+
+.banner{
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  /* padding-bottom: 20px; */
+}
+.card-container{
+  display: grid;
+  /* grid-template-columns: 420px 500px; */
+}
+.card-img{
+  margin-top: 1cm;
+}
+.banner h2{
+  padding-bottom: 40px;
+  margin-bottom: 20px;
+}
+.card-content{
+  background: #fff;
+  height: 330px;
+}
+.card-content h3{
+  text-align: center;
+  color: #000;
+  padding: 25px 0 10px 0;
+  font-size: 26px;
+  font-weight: 500;
+}
+.form-row{
+  display: flex;
+  /* width: 90%; */
+  margin: 0 auto;
+}
+.reservation_form select, .reservation_form input{
+  display: block;
+  width: 100%;
+  margin: 15px 12px;
+  padding: 5px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #eee;
+  font-weight: 300;
+}
+.reservation_form input[type = text], form input[type = number], form input[type = date], form input::placeholder, select{
+  color: #9a9a9a;
+}
+.reservation_form input[type = submit]{
+  color: #fff;
+  background: #f2745f;
+  padding: 12px 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.reservation_form input[type = submit]:hover{
+  opacity: 0.9;
+}
+@media(max-width: 992px){
+  .card-container{
+      grid-template-columns: 100%;
+      width: 100vw;
+  }
+  .card-img{
+      height: 330px;
+  }
+}
+
+/* End of reservation form CSS */

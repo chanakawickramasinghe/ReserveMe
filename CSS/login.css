@@ -88,19 +88,12 @@ button:hover {
 /* Side details */
 
 .login-side{
-  /* width: 50%;
-  float: left;
-  height: auto; */
   width: 55vw;
   background: none;
   border-radius: 5px;
   display: inline-block;
   overflow: hidden;
   padding: 0vw 2vw 10vw 10vw;
-  /* margin: auto; */
-  /* margin-top: 50px; */
-  /* box-shadow: #aaaaaa 0 0 15px 0px; */
-
 }
 
 .sidelogo{

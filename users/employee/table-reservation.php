@@ -24,8 +24,8 @@
 
     <!-- Start of sidbar -->
     <div class="sidebar"> 
-      <a href="employee-home.php" >Employee Home</a>
-      <a href="venues.php">Venues</a>     
+      <!-- <a href="employee-home.php" >Employee Home</a> -->
+      <a href="venues.php">Reservation Status</a>     
       <a href="menu.php">Set Menu</a>
       <a href="queries.php">Queries</a>
       <a href="table-reservation.php" class="active">Manage Reservation</a>

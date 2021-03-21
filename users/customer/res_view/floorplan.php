@@ -40,13 +40,7 @@
 			</div>
 		</div>
 		
-		<div class="column2">
-			<h1>Restaurant Floorplan</h1>
-			<hr>
-			<p>Here we have given the opportunity to reserve a table on the preference on them before going to the restaurant. So the customer has to select the table number from the floor plan so that they can get their meal at that particular table. It avoids the customer's waiting time at restaurant.</p>
-		</div>
-
-	</div>
+		
 	<!--End of floorplan-->
 
 	<script type="text/javascript">
@@ -80,6 +74,7 @@
 		buttonRight.addEventListener('click', function(){
 			document.getElementById('slider').scrollLeft += 180
 		})
+
 
 
 	</script>

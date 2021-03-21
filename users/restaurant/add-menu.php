@@ -131,17 +131,13 @@
                                 ?></center>
                         </td>
     <td><?php echo("$status"); ?></td>
-    <?php echo "<td><a class=\"btn-item-remove\" href =remove-item.php?id='".$row['item_id']."'> Remove </a> </td>"; ?>
+    <?php echo "<td><a class=\"btn-item-remove\" href =remove-item.php?id='$item_id'> Remove </a> </td>"; ?>
     </tr>
     <?php
             }
         }
     ?>
     </table>
-
-
-
-
 
     </div>
 

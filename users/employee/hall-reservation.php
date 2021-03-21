@@ -23,8 +23,8 @@
 
     <!-- Start of sidbar -->
     <div class="sidebar"> 
-      <a href="employee-home.php" >Employee Home</a>
-      <a href="venues.php">Venues</a>     
+      <!-- <a href="employee-home.php" >Employee Home</a> -->
+      <a href="venues.php">Reservation Status</a>     
       <a href="menu.php">Set Menu</a>
       <a href="queries.php">Queries</a>
       <a href="table-reservation.php" class="active">Manage Reservation</a>
@@ -35,11 +35,10 @@
    
     <h1> Hall <span style="color:orange"> Reserved </span> </h1>
     
-    <div class="promo-btn-bar">
-        <button type="button" class="hero-button" onclick="window.location.href='menu-reservation.php'">Pre Orders</button>
-    </div>
-    <div class="promo-btn-bar">
+    <div style="float:right">
+        <button type="button" class="hero-button" onclick="window.location.href='menu-reservation.php'">Pre Orders</button>    
         <button type="button" class="hero-button" onclick="window.location.href='table-reservation.php'">Table Reservation</button>
+        <button type="button" class="hero-button active" onclick="window.location.href='#'">Hall Reservation</button>
     </div>
     <br><br>
 

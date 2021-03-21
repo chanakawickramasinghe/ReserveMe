@@ -63,8 +63,8 @@
                 <tr>
                     <th>Promo ID</th>
                     <th>Promo Image</th>
-                    <th>Posted Date & Time</th>
-                    <th>Ended Date & Time</th>
+                    <th>Post Date & Time</th>
+                    <th>End Date & Time</th>
                     <th>Description</th>
                     <th>Action</th>
                 </tr> ";

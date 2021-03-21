@@ -1,7 +1,6 @@
-<?php include 'add-menu-submit.php'; ?>
+<?php include('add-menu-submit.php') ?>
 <?php include('../../includes/connection.php') ?>
 <?php include('../../includes/session.php') ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,6 +17,12 @@
     <link rel="stylesheet" href="../../CSS/nav.css">   
     <link rel="stylesheet" href="../../CSS/footer.css">
 
+    <style>
+        th:nth-of-type(5),td:nth-of-type(5) {
+        display: none;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -32,8 +37,7 @@
       <a href="res-promo.php">Promotions</a>
       <a href="res-floor-plan.php">Floor Plan</a> 
       <a href="res-reservation.php">Reservations</a>
-      <a href="../customer/res_view/review/index.html?res_id=4">View Reviews</a>   
-      <a href="res-contactus.php">Help Desk</a>
+      <a href="res-review.html">View Reviews</a>   
       <br>
       <hr>
       <a href="mng-emp.php">Manage Employee</a>
@@ -42,59 +46,119 @@
     <!-- End of side bar -->
 
     <div class="content">
-    <div style="margin:20px">     
+    <br>
+    <center><h1 style="color:#ffbb01;"><font color="black">Add</font> Menu</h1><center><br>
 
-  <!--Start of getting photos-->
-    <div id="content">
-        <form action="add-menu-submit.php" method="post" enctype="multipart/form-data">
-            <h2 class="error-msg" style="font-size:14px"><?php include_once('../../includes/message.php'); ?></h2>
+    <form action="add-menu-submit.php" method="post" onsubmit="myFunction()">
 
-                <center><h2 style="color:#ffbb01;"><font color="black">Add</font> Menu</h2>
-                <br>
-                <p><h3>Insert images of your Restaurant Menu seperately.</h3></p>
-                <br>
-                <!-- <h3>Rename Image</h3>
-                <br>
-                <input type="text" class="type-feild"   name="item_name" placeholder="RestaurantName_01" required>
-                <br><br> -->
-                <h3>Add Image</h3>
-                <br>
-                <input class="input-file"  type="file" name="promo_image">
-                <div>
-                <br><br>
-                <input type="submit" name="submit" style="margin-left:400px; margin-top:-30px" class="btn-promo" value="Enter" required>   
-                </div>  
-               </center>
-               <br><br>
-               <table class="promo" id="myTable" border="1">
-                <tr>
-                    <th>Image 01</th>
-                    <th>Image 02</th>
-                    <th>Image 03</th>
-                    <th>Image 04</th>
-                    <th>Image 05</th>
-                </tr>
-                <tr>
-                    <td><img class="img-promo" src="../../images/restaurant/P2.jpg" width="150px" height="250px">
-                    <br><button type="button" class="btn-promo-remove">Remove</button>
-                    </td>
-                    <td><img class="img-promo" src="../../images/restaurant/P3.jpg" width="150px" height="250px">
-                    <br><button type="button" class="btn-promo-remove">Remove</button>
-                    </td>
-                    <td><img class="img-promo" src="">
-                    <!-- <br><button type="button" class="btn-promo-remove">Remove</button> -->
-                    </td>  
-                    <td><img class="img-promo" src="">
-                    <!-- <br><button type="button" class="btn-promo-remove">Remove</button> -->
-                    </td> 
-                    <td><img class="img-promo" src="">
-                    <!-- <br><button type="button" class="btn-promo-remove">Remove</button> -->
-                    </td>            
-                </tr>
-            </table>  
-        </form>
-    </div>
+        <select name="item_cat" id="item_cat" class="type-feild" default="How can we help you">
+        <option value="q0" disabled selected value> -- Select a category -- </option>
+        <?php 
+            $sql_options= "SELECT cat_name FROM menu_category";
+
+            $results= $connection ->query($sql_options);
+
+            if($results==true){
+                while($row=$results-> fetch_assoc()){
+                    $options=$row["cat_name"];
+        ?>
+        
+        <option value="<?php echo ("$options"); ?>"><?php echo ("$options"); ?></option>
+        
+        <?php }} ?>
+
+        </select>
+
+        <input class="type-feild" type="text" name="item_name" placeholder="Food Name" required>
+        <input class="type-feild" type="text" name="price" placeholder="Price" required>
+        <input type="submit" name="submit"  class="hero-button" value="Add" style="margin-left:30px"  required>
+    </form>
+    <br><hr>
+
+    <!-- To get the item -->
+    <form action="add-menu-submit.php" method="POST">
+        <input type="hidden" id="item_name" name="item_name" required>
+        <input type="hidden" id="allow_preorder" name="allow_preorder" required>
+        <div class="menu-button"><button name="update" class="emp-button" >Save & update </button></div>
+    </form>
+    <!--________________ -->
+    <br>
+
+
+    <table class="promo" id="myTable" border="1">
+    <tr>
+    <!-- <th>Item Id</th> -->
+    <th>Food Category</th>
+    <th>Food Name</th>
+    <th>Price(lkr)</th>
+    <th>Set Preorder</th>
+    <th>Remove</th>
+    <th>Remove</th>
+    </tr>
     
+    <?php 
+        $sql_menu_table= "SELECT * from menu order by item_cat asc";
+
+        $results2=$connection-> query($sql_menu_table);
+
+        if($results2==true){
+            while($row2=$results2->fetch_assoc()){
+                $item_cat=$row2["item_cat"];
+                $item_name=$row2["item_name"];
+                $item_price=$row2["item_price"];
+                $status=$row2["allow_preorder"];
+                $item_id=$row2["item_id"];
+    ?>
+    <tr>
+    <td><?php echo("$item_cat"); ?></td>
+    <td><?php echo("$item_name"); ?></td>
+    <td><?php echo("$item_price"); ?></td>
+    <td>
+       
+                        <center><?php 
+                                if ($status==1){
+                                    echo '<label class="switch">
+                                            <input type="checkbox" name="item_avail" value="1" checked>
+                                            <span class="slider round"></span>
+                                        </label>';
+
+                                } else {
+                                    echo '<label class="switch">
+                                            <input type="checkbox" name="item_avail" value="0">
+                                            <span class="slider round"></span>
+                                        </label>';
+                                }
+                                ?></center>
+                        </td>
+    <td><?php echo("$status"); ?></td>
+    <?php echo "<td><a class=\"btn-item-remove\" href =remove-item.php?id='".$row['item_id']."'> Remove </a> </td>"; ?>
+    </tr>
+    <?php
+            }
+        }
+    ?>
+    </table>
+
+
+
+
+
+    </div>
+
+<!-- To get the table details to from -->
+<script>
+    var table = document.getElementById('myTable');
+                
+        for(var i = 1; i < table.rows.length; i++)
+        {
+            table.rows[i].onclick  = function()
+            {
+                document.getElementById("item_name").value = this.cells[1].innerHTML;
+                document.getElementById("allow_preorder").value = this.cells[4].innerHTML;
+            };
+        }
+
+</script>
 
 </body>
 </html>

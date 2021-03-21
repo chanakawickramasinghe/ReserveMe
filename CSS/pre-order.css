@@ -133,7 +133,7 @@ div.content {
     padding: 0.3vw 1vw 0.3vw 1vw;
   }
 
-  .btn-promo-remove {
+  /* .btn-promo-remove {
     width:5vw;
     height: 5vh;
     background: #d35842;
@@ -146,4 +146,20 @@ div.content {
   .btn-promo-remove:hover{
     background: rgb(160, 0, 0);
     cursor: pointer;
-  }
+  } */
+
+    /* promo remove button */
+    .btn-item-remove {
+      width:8vw;
+      height: 10px;
+      background: #d35842;
+      border: none;
+      color: #fff;
+      font-size: medium;
+      padding: 5px;
+    }
+    
+    .btn-item-remove:hover{
+      background: rgb(160, 0, 0);
+      cursor: pointer;
+    }

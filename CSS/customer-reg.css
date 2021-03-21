@@ -8,18 +8,18 @@
     overflow: hidden;
     padding: 3vh 4vw;
     margin: auto;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     box-shadow: #aaaaaa 0 0 15px 0px;
     
   }
-  
+/*   
   .login-box td{
       padding: 30px;
-  }
+  } */
 
  
 .type-feild{
-    height: 6vh;
+    height: 5vh;
     padding: 0.6vh 1.5vw;
     border-radius:5px;
     width: 25vw;

@@ -122,40 +122,12 @@ div.content {
     padding-bottom: 1vh;
   }
   
-  .btn-promo-remove {
-    width:5vw;
-    height: 5vh;
-    background: #d35842;
-    border: none;
-    border-radius: 20px;
-    color: #fff;
-    font-size: medium;
-  }
-  
-  .btn-promo-remove:hover{
-    background: rgb(160, 0, 0);
-    cursor: pointer;
-  }
+
   
   .promo-btn-bar{
     float: right;
     padding-right: 5vw;
     padding-bottom: 25px;
-  }
-  
-  .btn-promo {
-    width:15vw;
-    height: 5vh;
-    background: #b38900;
-    border: none;
-    border-radius: 25px;
-    color: #fff;
-    font-size: medium;
-  }
-  
-  .btn-promo:hover{
-    background: black;
-    cursor: pointer;
   }
   
   /* add promo page */
@@ -167,9 +139,9 @@ div.content {
   }
   
   .add-promo-form .input-feild{
-    font-size: large;
+    font-size: medium;
     color: rgb(129, 129, 182);
-    width: 12vw;
+    width: 16vw;
     border-radius: 7px;
     border: 2px solid grey;
     float: center;
@@ -194,6 +166,7 @@ div.content {
   .add-promo-form th{
     color: #5e6566;
     padding-top: 0.75vw;
+    padding-right: 3vw;
     padding-left:  2vw;
     align-content: left;
     text-align: left;
@@ -201,22 +174,17 @@ div.content {
   }
 
   .login-box{
-    width: 550px;
-    height: 450px;
-    margin: 30px auto;
+    width: 50vw;
+    height: 52vh;
+    margin: 20px auto;
     background: #ffffffec;
     color: #000000;
     box-sizing: border-box;
-    padding: 30px;
+    padding: 20px;
     position: center;
     border: #a17807 2px solid;
     border-radius: 5px;
     box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
-  }
-
-  .login-body{
-    background-image: url(../images/regbg.jpg);
-    background-size: cover;
   }
 
   .promo{
@@ -246,15 +214,16 @@ div.content {
     padding-top: 1vh;
     padding-bottom: 1vh;
   }
-  
+
+  /* promo remove button */
   .btn-promo-remove {
     width:8vw;
-    height: 5vh;
+    height: 10px;
     background: #d35842;
     border: none;
-    border-radius: 20px;
     color: #fff;
     font-size: medium;
+    padding: 5px;
   }
   
   .btn-promo-remove:hover{
@@ -267,9 +236,11 @@ div.content {
     padding-right: 5vw;
     padding-bottom: 25px;
   }
+
+  /* promo button */
   
-  .btn-promo {
-    width:15vw;
+  .btn-promos {
+    width:12vw;
     height: 5vh;
     background: #ffd104;
     border: none;
@@ -278,8 +249,11 @@ div.content {
     font-size: medium;
   }
   
-  .btn-promo:hover{
+  .btn-promos:hover{
     background: black;
     cursor: pointer;
   }
-  
+
+  .btn-promos.active{
+    background: #000000;
+  }

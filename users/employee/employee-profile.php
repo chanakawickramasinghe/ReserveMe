@@ -1,5 +1,7 @@
 <?php include('../../includes/connection.php') ?>
 <?php include('../../includes/session.php') ?>
+<?php include('emp-session.php') ?>
+
 
 <html>
     <head>
@@ -29,7 +31,6 @@
     <!-- Get data from database -->
     <?php
         checkSession();
-        
         $userName = $_SESSION["emp_name"]; //have to add session id
         $userEmail= $_SESSION["emp_email"];
         $user_mobile=$_SESSION["emp_mobile"];

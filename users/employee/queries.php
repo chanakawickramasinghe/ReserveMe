@@ -1,4 +1,6 @@
 <?php include('../../includes/session.php') ?>
+<?php include('emp-session.php') ?>
+
 
 <html>
     <head>

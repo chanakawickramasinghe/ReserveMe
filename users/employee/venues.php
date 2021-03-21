@@ -11,17 +11,8 @@
         <link rel="stylesheet" href="../../CSS/main.css">
         <link rel="stylesheet" href="../../CSS/nav.css">   
         <link rel="stylesheet" href="../../CSS/footer.css">
-
-        <style>
-            table{
-                /* border:1px solid black; */
-                width:100%;
-                justify-content: center;
-                align-items: center;
-            }
-        </style>
-
     </head>
+    
     <body>  
         
     <?php include('navigations.php'); ?>
@@ -38,7 +29,7 @@
     
     <div class="content">
 
-    <table>
+    <table style="width:100%">
     <tr>
     <td>
         <!--Start of reservationform section-->
@@ -128,12 +119,6 @@
     
     
     </table>
-
-
-
-
-
-
    
     </div>   
         

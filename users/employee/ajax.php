@@ -7,8 +7,6 @@ if( isset($_REQUEST['action']) ){
 	switch( $_REQUEST['action'] ){
 		case "SendMessage":
 			checkSession();
-			// $userName =$_SESSION['emp_name'];//have to add the user name
-
 			$query = $connection->prepare("INSERT INTO chat SET user=?, message=?");
 			$query->execute([$_SESSION["emp_name"], $_REQUEST['message']]);
 			echo 1;

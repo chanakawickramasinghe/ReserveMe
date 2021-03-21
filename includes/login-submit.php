@@ -98,6 +98,8 @@ if(isset($_POST['submit'])){
         $_SESSION["emp_name"] = $userRow['emp_name'];
         $_SESSION["emp_id"] = $userRow['emp_id'];
         $_SESSION["res_id"] = $userRow['res_id'];
+        $_SESSION['emp_email']= $userRow['emp_email'];
+        $_SESSION["emp_mobile"]= $userRow['emp_mobile'];
         $_SESSION["userType"] = 'Employee';
 
             $log_emp_sql = "INSERT INTO log (user_id, user_type, date_time, activity) 

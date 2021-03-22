@@ -726,7 +726,7 @@ ul{
 	border: none;
 	box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
 	/* border-radius: 15% 15% 15% 15% / 50% 50% 50% 50%; */
-	border-radius: 10px;
+	border-radius: 30px;
 }
 
 .hero-button:hover{
@@ -1003,31 +1003,35 @@ ul{
 
 .review {
 	display: inline-grid;
-	grid-template-columns: 0.3fr 2fr 1fr;
+	grid-template-columns: 1fr 2fr 1fr;
 	grid-column-gap: 30px;
 	font-family: 'Baloo Chettan 2', cursive;
 	margin-left:50px;
 	margin-right: 40px;
 	margin-bottom: 80px;
 	text-align: center;
-	width:80%;
-	
+	width:600px;
 	}
 
 	.review .card1{
-		margin-left:auto;
+		margin-left:100px;
 		padding: 10px;
 		z-index: 1;
 		background-image: url(../images/Eclipse1.svg);
 		background-size: auto ;
 		overflow: auto;
 		background-repeat: no-repeat;
+		width: 550px;
+		
 	}
 
 	.review .card2{
 		margin-left:auto;
 		padding: 10px;
 		z-index: 1;
+		width: 200px;
+		left:80%;
+		
 	}
 
 	.review .card1 i{

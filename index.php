@@ -131,12 +131,13 @@
 					<div class=\"card1\">
 						<h3>". $rowProduct['customer_name'] ."</h3>
 						<p><i class=\"far fa-comments\" id=\"i1\"></i><br><br>". $rowProduct['content'] ."<br>
-						<i class=\"far fa-star\" id=\"i3\"></i><i class=\"far fa-star\" id=\"i3\"></i><i class=\"far fa-star\" id=\"i3\"></i><i class=\"far fa-star\" id=\"i3\"></i><br>
+						<i class=\"far fa-star\" id=\"i3\"></i><i class=\"far fa-star\" id=\"i3\"></i><i class=\"far fa-star\" id=\"i3\"></i><i class=\"far fa-star\" id=\"i3\"></i><i class=\"far fa-star\" id=\"i3\"></i><br>
 						<i class=\"far fa-comments\" id=\"i2\"></i></p>
 					</div>
 					<div class=\"card2\">
 						<img src=\"images/review.svg\" style=\"height: 200px ; width: 200px\"/>
 						<a class=\"subcribe-btn\" href=\"users/customer/res_view/review/index.php?res_id=4\">More</a>
+					</div>
 					</div>
 				</section>";
 			}

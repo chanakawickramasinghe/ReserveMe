@@ -16,8 +16,8 @@
 	<!--FontAwesome-------->
 	<script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
 </head>
-<body>
 
+<body>
 	<!--main-section--------------->
 	<section class="main">
 		<!--Start of nav-->
@@ -50,14 +50,6 @@
 		</div>
 		<!--End of img-->
 		
-		<!--Start of text
-		<div class="m-text">
-			<h2>Reserve<font>Me</font></h2>
-			<h4>Reservation at finger tip</h4>
-			<h5>Explore the curated list of top restaurants in your area to make things more and more easier. Place a reservation within few minutes with us.</h5>
-		</div>
-		End of text-->
-		
 		<!--Start of social-->
 		<div class="social">
 			<a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -84,7 +76,6 @@
 	</section>
 	<!--End of Table reservation-->
 
-	
 	<!--Start of Hall reservation-->
 	<section class="reservation">
 		<!--img-->
@@ -113,17 +104,17 @@
 		</div>
 		<!--Start of Map-->
 		<section class="content">
-        <section id="gallery">    
-            <div id="gallery-center">
-                <div class="mapouter">
-            		<div class="gmap_canvas">
-                        <iframe width="400vh" height="300vw" id="gmap_canvas" src="https://maps.google.com/maps?q=topaz%20kandy&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>                           
-                    </div>
-                </div>
-            </div>
-        </section>   
-    </section>
-	<!--End of Map-->
+        	<section id="gallery">    
+            	<div id="gallery-center">
+                	<div class="mapouter">
+            			<div class="gmap_canvas">
+                        	<iframe width="400vh" height="300vw" id="gmap_canvas" src="https://maps.google.com/maps?q=topaz%20kandy&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>                           
+                    	</div>
+                	</div>
+            	</div>
+        	</section>   
+    	</section>
+		<!--End of Map-->
 	</section>
 	<!--End of Location section-->
 
@@ -136,34 +127,20 @@
             $resultProduct = mysqli_query($connection,$sql);
             while($rowProduct  = mysqli_fetch_assoc($resultProduct)){  
                 echo"<section class=\"review\">
-				<div class=\"flatart\"></div>
-				<div class=\"card1\">
-					<h3>". $rowProduct['customer_name'] ."</h3>
-					<p><i class=\"far fa-comments\" id=\"i1\"></i><br><br>". $rowProduct['content'] ."<br>
-					<i class=\"far fa-star\" id=\"i3\"></i><i class=\"far fa-star\" id=\"i3\"></i><i class=\"far fa-star\" id=\"i3\"></i><i class=\"far fa-star\" id=\"i3\"></i><br>
-					<i class=\"far fa-comments\" id=\"i2\"></i></p>
-				</div>
-				<div class=\"card2\">
-				<img src=\"images/review.svg\" style=\"height: 200px ; width: 200px\"/>
-				<a class=\"subcribe-btn\" href=\"users/customer/res_view/review/index.php?res_id=4\">More</a>
-				</div>
-			</section>   
-				
-			
-			
-			
-			
-			";
-            }
-        
+					<div class=\"flatart\"></div>
+					<div class=\"card1\">
+						<h3>". $rowProduct['customer_name'] ."</h3>
+						<p><i class=\"far fa-comments\" id=\"i1\"></i><br><br>". $rowProduct['content'] ."<br>
+						<i class=\"far fa-star\" id=\"i3\"></i><i class=\"far fa-star\" id=\"i3\"></i><i class=\"far fa-star\" id=\"i3\"></i><i class=\"far fa-star\" id=\"i3\"></i><br>
+						<i class=\"far fa-comments\" id=\"i2\"></i></p>
+					</div>
+					<div class=\"card2\">
+						<img src=\"images/review.svg\" style=\"height: 200px ; width: 200px\"/>
+						<a class=\"subcribe-btn\" href=\"users/customer/res_view/review/index.php?res_id=4\">More</a>
+					</div>
+				</section>";
+			}
     ?>
-
-				
-           
-
-
-	
-	
 	<!--End of Reviews section-->          
 
 	<!--Start of Gallery section-->
@@ -196,18 +173,6 @@
 	</section>        
 	<!--End of Gallery section-->
 
-	<!--Start of subscribe
-	<section class="subcribe-container">
-		//heading
-		<h3>Subcribe For Enjoy Amazing Offers</h3>
-		//Input
-		<div class="subcribe-input">
-			<input placeholder="Example@gmail.com" type="email" />
-			<a class="subcribe-btn" href="#">Send</a>
-		</div>
-	</section>
-	Start of subscribe-->
-	
 	<!--Include footer.php-->
     <div><?php include "./includes/footer.php" ?></div>
 	

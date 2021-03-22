@@ -17,6 +17,7 @@
     <!--FontAwesome-->
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
 </head>
+
 <body>
     <!--Start of nav-->
     <div class="topnav" id="myTopnav">
@@ -52,21 +53,6 @@
             }
         }
     ?>
-    <!--Start of add section-->
-    <div class="add-img">
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                   <img src="../../../images/promos/3.jpg" style="width:100%">
-            </div>
-        </div>
-
-        <div style="text-align:center">
-          <span class="dot"></span> 
-          <span class="dot"></span> 
-          <span class="dot"></span> 
-        </div>
-    </div>
-    <!--End of add section-->
     <!--End of main-section-->
 
     <!--Start of iframe section-->
@@ -80,9 +66,7 @@
 							$resultMenu = mysqli_query($connection,$retriewMenu);
 							while($rowProduct  = mysqli_fetch_assoc($resultMenu)){  
 								echo"<li><a  href=\"menu.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Menu</a></li>
-									<li><a  href=\"floorplan.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Floorplan</a></li>
-									<li><a  href=\"directions.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Directions</a></li>
-									<li><a  href=\"review/logged_index.html?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Reviews</a></li>";
+									<li><a  href=\"floorplan.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Floorplan</a></li>";
 							}               
 						}
 					?>  
@@ -93,53 +77,65 @@
 	</section>
 	<!--End of iframe section-->
 
-    <!--Start of reservationform section-->
-    <section class = "banner">
-            <h2>BOOK YOUR TABLE NOW</h2>
-            <div class = "card-container">
-                <div class = "card-img">
-                    <img src="../../../images/table.jpg" style="width:100%">
-                </div>
+    <!--start of from section-->
+    <section class="reservation">
+		<!--Form-->
+		<div class="col1">
+            <h1>Check Availability</h1>
+			<hr>
+			<form>
+			    <div>
+                    <select class="dropbtn" name="lounge" id="lounge" required>
+                        <option value="">Launge</option>
+                        <option value="10.00 a.m">aaa</option>
+                        <option value="2.00 p.m">bbb</option>
+                        <option value="8.00 p.m">ccc</option>
+                    </select>
+			        <select class="dropbtn" name="guests" id="guests" required>
+                        <option value="">Guests</option>
+	                    <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="4">4</option>
+                        <option value="6">6</option>
+                    </select>
+                    <select class="dropbtn" name="Time" id="Time" required>
+                        <option value="">Time</option>
+                        <option value="10.00 a.m">10.00 a.m</option>
+                        <option value="2.00 p.m">2.00 p.m</option>
+                        <option value="8.00 p.m">8.00 p.m</option>
+                    </select>
+	                <input type="date" id="date" name="date" required>
+	            </div>
+                <br>
+	            <input class="dropbtn" type="submit" id="submit" name="submit" value="Check">
+            </form>
+		</div>
 
-                <div class = "card-content">
-                    <h3>Reservation</h3>
-                    <div class="reservation_form">
-                        <div class = "form-row">
-                            <input type = "date" placeholder="Select Date">
-
-                            <select name = "hours">
-                                <option value = "session-select">Select Session</option>
-                                <option value = "1">Breakfast</option>
-                                <option value = "1">Lunch</option>
-                                <option value = "1">Dinner</option>
-                            </select>
-                        </div>
-
-                        <div class = "form-row">
-                            <input type = "number" placeholder="How Many Persons?" min = "1">
-                            <input type = "time" placeholder="Arrival time?">
-                        </div>
-                        <div class = "form-row">
-                            <button onclick="onClickOpenForm()"  class="reserve-button pulsate" type=""  name="submit">Reserve</button>
-                            <button   class="reserve-button pulsate" type=""  name="submit">Check Availability</button>
-                        </div>
-                    </div>
-                </div>
+        <!--Available tables-->
+		<div class="col2">
+            <h1>Available Tables</h1>
+            <div class="customRadio">
+                <label for="1">1</label><input type="radio" id="1" name="table" value="1">
+                <label for="2">2</label><input type="radio" id="2" name="table" value="2">
+                <label for="3">3</label><input type="radio" id="3" name="table" value="3">
             </div>
-        </section>
-        <!--Start of reservationform section-->
+            <br>
+            <input class="dropbtn" type="submit" id="reserve" name="reserve" value="reserve" onclick="onClickOpenForm()">
+	    </div>
+    </section>
+    <!--End of form section-->
 
-        <!--Start of pop up login page-->
+    <!--Start of pop up login page-->
     <div class="form-popup" id="myForm">
         <div class="form-container">
             <h1>Do you want to Preorder?</h1>
             <div class="left"><button type="submit" class="food-btn" onclick="window.location.href='preorder.php'">Yes</button></div>
             <div class="right"><button type="submit" class="food-btn" onclick="window.location.href='../success.php'">No</button></div>
             <button type="button" class="btn cancel" onclick="onClickCloseForm()">Close</button>
-
-                    </div>
+        </div>
     </div>
-
+    <!--End of pop up login page-->
+    
     <script src="../../../js/onClickOpenForm.js"></script>
     <!--End of pop up login page-->
 

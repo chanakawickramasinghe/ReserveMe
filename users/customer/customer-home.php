@@ -16,9 +16,9 @@
 	<!--FontAwesome-------->
 	<script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
 </head>
-<body>
 
-	<!--main-section--------------->
+<body>
+	<!--Start of main section-->
 	<section class="main">
 		<!--Start of nav-->
 		<div class="topnav" id="myTopnav">
@@ -36,18 +36,10 @@
 		<div class="m-img">
 			<div class="slideshow-container">
 				<div class="mySlides fade">
-				  	<img src="../../images/promos/1.jpg" style="width:100%">
-				  	<div class="text"><a class="hero-button pulsate" href="res_view/res_view.php?res_id=10">Visit</a></div>
+				  	<img src="../../images/promos/1.jpeg" style="width:100% ; height:60vh">
 				</div>
-
 				<div class="mySlides fade">
-				  	<img src="../../images/promos/2.jpg" style="width:100%">
-				  	<div class="text"><a class="hero-button pulsate" href="res_view/res_view.php?res_id=8">Visit</a></div>
-				</div>
-
-				<div class="mySlides fade">
-				  	<img src="../../images/promos/3.jpg" style="width:100%">
-				  	<div class="text"><a class="hero-button pulsate" href="res_view/res_view.php?res_id=4">Visit</a></div>
+				  	<img src="../../images/promos/2.jpeg" style="width:100% ; height:60vh">
 				</div>
 			</div>
 
@@ -59,14 +51,6 @@
 		</div>
 		<!--End of img-->
 		
-		<!--Start of text-->
-		<div class="m-text">
-			<h2>Reserve<font>Me</font></h2>
-			<h4>Reservation at finger tip</h4>
-			<h5>Explore the curated list of top restaurants in your area to make things more and more easier. Place a reservation within few minutes with us.</h5>
-		</div>
-		<!--End of text-->
-		
 		<!--Start of social-->
 		<div class="social">
 			<a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -76,87 +60,25 @@
 		</div>
 		<!--End of social-->
 	</section>
+	<!--End of main section-->
 
-	<!--Start of our-brand-section 1-->
+	<!--Start of Table reservation-->
 	<section class="reservation">
 		<!--text-->
 		<div class="reservation-text">
 			<!--heading-->
 			<h3>Table Reservation</h3>
-			<h4>Best places to <font>Dine in</font> </h4>
+			<h4>Best places to <font>Dine in</font> with esense of joy</h4>
 			<!--details-->
 			<p>We have brought the fine option of placing a table reservation at your favourite restaurant to your finger tip. Explore more restaurants and place a table reservation in few minutes.</p>
-			<a class="hero-button pulsate" href="res_view/logged_search_result.php">Table Reservation</a>
+			<a class="hero-button" href="res_view/logged_res_view.php?res_id=4">Table Reservation</a>
 		</div>
 		<!--img-->
-		<div class="reservation-img"><img src="../../images/table.jpg" /></div>
+		<div class="reservation-img"><img src="../../images/hall.jpg" /></div>
 	</section>
-	<!--End of our-brand-section 1-->
-	
-	<!--Start of About-->
-    <section id="about">
-        <div class="about-center">
-            <!--Start of the article1-->
-            <article class="about">
-                <div class="about-icon">
-					<i class="fas fa-mug-hot"></i>
-					<h2 class="about-subtitle"><a href="category/logged_category.php">Sri Lankan</a></h2>
-                </div>              
-            </article>
-            <!--End of the article1-->
-            <!--Start of the article2-->
-            <article class="about">
-                <div class="about-icon">
-					<i class="fas fa-hamburger"></i>
-					<h2 class="about-subtitle"><a href="category/logged_category.php">Street Food</a></h2>
-                </div>
-            </article>
-            <!--End of the article2-->
-            <!--Start of the article3-->
-            <article class="about">
-                <div class="about-icon">
-					<i class="fas fa-mortar-pestle"></i>
-					<h2 class="about-subtitle"><a href="category/logged_category.php">Chinese</a></h2>
-                </div>
-            </article>
-            <!--End of the article3-->
-            <!--Start of the article4-->
-            <article class="about">
-                <div class="about-icon">
-					<i class="fas fa-pizza-slice"></i>
-					<h2 class="about-subtitle"><a href="category/logged_category.php">Italian</a></h2>
-                </div>
-            </article>
-            <!--End of the article4-->
-            <!--Start of the article5-->
-            <article class="about">
-                <div class="about-icon">
-					<i class="fas fa-fish"></i>
-					<h2 class="about-subtitle"><a href="category/logged_category.php">Mongolian</a></h2>
-                </div>
-            </article>
-            <!--End of the article5-->
-            <!--Start of the article6-->
-            <article class="about">
-                <div class="about-icon">
-					<i class="fas fa-pepper-hot"></i>
-					<h2 class="about-subtitle"><a href="category/logged_category.php">Arabic</a></h2>
-                </div>
-            </article>
-            <!--End of the article6-->
-			<!--Start of the article7-->
-            <article class="about">
-                <div class="about-icon">
-					<i class="fas fa-fish"></i>
-					<h2 class="about-subtitle"><a href="category/logged_category.php">Thai</a></h2>
-                </div>
-            </article>
-            <!--End of the article7-->
-        </div>
-    </section>
-	<!--End of About-->
+	<!--End of Table reservation-->
 
-	<!--Start of our-brand-section 2-->
+	<!--Start of Hall reservation-->
 	<section class="reservation">
 		<!--img-->
 		<div class="reservation-img"><img src="../../images/hall.jpg" /></div>
@@ -167,24 +89,93 @@
 			<h4>Best places to <font>Enlight</font> your occasion</h4>
 			<!--details-->
 			<p>Enlight your special occasion by finding the best place. You can now search and find the best venue to your weddings, birthday parties and more occasion. We provide you the facility to book it before others.</p>
-			<a class="hero-button pulsate" href="hall_view/logged_hall_search_result.php">Hall Reservation</a>
+			<a class="hero-button" href="hall_view/logged_hall_search_result.php">Hall Reservation</a>
 		</div>
 		</section>
-	<!--End of our-brand-section 2-->
-	
-	
-	<!--Start of subscribe-->
-	<section class="subcribe-container">
-		<!--heading-->
-		<h3>Subcribe For Enjoy Amazing Offers</h3>
-		<!--Input-------->
-		<div class="subcribe-input">
-			<input placeholder="Example@gmail.com" type="email" />
-			<a class="subcribe-btn" href="#">Send</a>
+	<!--End of Hall reservation-->
+
+	<!--Start of Location section-->
+	<section class="location">
+		<!--text-->
+		<div class="location-text">
+			<!--heading-->
+			<h3>Our Location</h3>
+			<h4>Best place to <font>Enjoy</font> </h4>
+			<!--details-->
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus odio sit amet tellus mollis, ut suscipit lectus ornare. Mauris nisi mauris, scelerisque at dictum et, tempus eget erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent tristique accumsan massa. Nullam eu ante lorem. In hac habitasse platea dictumst. Pellentesque quis rutrum nisl.</p>
 		</div>
+
+		<!--Start of Map-->
+		<section class="content">
+        	<section id="gallery">    
+            	<div id="gallery-center">
+                	<div class="mapouter">
+            			<div class="gmap_canvas">
+                        	<iframe width="400vh" height="300vw" id="gmap_canvas" src="https://maps.google.com/maps?q=topaz%20kandy&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>                           
+                    	</div>
+                	</div>
+            	</div>
+        	</section>   
+    	</section>
+		<!--End of Map-->
 	</section>
-	<!--Start of subscribe-->
-	
+	<!--End of Location section-->
+
+	<!--Start of Reviews section-->
+	<div class="reviewh">
+		<h1>Customers Feedback</h1>
+	</div>
+	<?php 
+        $sql = "SELECT * FROM reviews WHERE res_id = '4' order by rating desc limit 1";
+            $resultProduct = mysqli_query($connection,$sql);
+            while($rowProduct  = mysqli_fetch_assoc($resultProduct)){  
+                echo"<section class=\"review\">
+					<div class=\"flatart\"></div>
+					<div class=\"card1\">
+						<h3>". $rowProduct['customer_name'] ."</h3>
+						<p><i class=\"far fa-comments\" id=\"i1\"></i><br><br>". $rowProduct['content'] ."<br>
+						<i class=\"far fa-star\" id=\"i3\"></i><i class=\"far fa-star\" id=\"i3\"></i><i class=\"far fa-star\" id=\"i3\"></i><i class=\"far fa-star\" id=\"i3\"></i><br>
+						<i class=\"far fa-comments\" id=\"i2\"></i></p>
+					</div>
+					<div class=\"card2\">
+						<img src=\"../../images/review.svg\" style=\"height: 200px ; width: 200px\"/>
+						<a class=\"subcribe-btn\" href=\"res_view/review/logged_index.html?res_id=4\">More</a>
+					</div>
+				</section>";
+            	}
+    ?>
+	<!--End of Reviews section-->          
+
+	<!--Start of Gallery section-->
+	<section clss="Gallerysection">
+		<div class="container">
+            <div class="gallery">
+                <figure class="gallery__item gallery__item--1">
+                    <img src="../../images/gallery2.jpg" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--2">
+                    <img src="../../images/gallery5.jpg" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--3">
+                    <img src="../../images/gallery4.jpg" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--4">
+                    <img src="../../images/gallery6.jpg" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--5">
+                    <img src="../../images/gallery1.jpg" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--6">
+                    <img src="../../images/gallery3.jpg" class="gallery__img">
+				</figure>
+				<figure class="gallery__item gallery__item--7">
+                    <img src="../../images/gallery7.jpg" class="gallery__img">
+                </figure>
+            </div>
+        </div>
+	</section>        
+	<!--End of Gallery section-->
+
 	<!--Include footer.php-->
     <div><?php include "../../includes/footer.php" ?></div>
 	

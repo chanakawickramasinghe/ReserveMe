@@ -9,21 +9,19 @@
     <link href="../../../css/menu_floorplan.css" rel="stylesheet" type="text/css"/>
 	<link rel="stylesheet" href="../../../CSS/preorder.css">
 </head>
+
 <body>
     <!--Start of menu-->
-
 	<div class="title_text">
-            <h3>Me<font>nu</font></h3>
-        </div>
-        <form method="post" action="checkout.php">  
+        <h3>Me<font>nu</font></h3>
+    </div>
+    <form method="post" action="checkout.php">  
         <table class="preorder" id="" border="0">
 			<!-- <tr>
 				<th>Item</th>
 				<th>Price (Rs.)</th>
 			</tr> -->
-                
         <?php
-
             $search_cat = "SELECT * FROM menu_category WHERE cat_avail='1' ORDER BY cat_name ASC";
             $result_cat = mysqli_query($connection,$search_cat);
             while($row = mysqli_fetch_assoc($result_cat)){
@@ -39,11 +37,9 @@
                     <tr>
                         <td>".$row['item_name']."</td>
                         <td>".$row['item_price']."</td> 
-                    </tr>
-                    ";
+                    </tr>";
                 }
             }
-
 		?>
 
 
@@ -85,22 +81,11 @@
 	</div> -->*/
 	?> -->
 
-	
-
-	
-	
-	
-	
-
-    
-
 	<script type="text/javascript">
 		let thumbnails = document.getElementsByClassName('thumbnail')
-
 		let activeImages = document.getElementsByClassName('active')
 
 		for (var i=0; i < thumbnails.length; i++){
-
 			thumbnails[i].addEventListener('mouseover', function(){
 				console.log(activeImages)
 				
@@ -108,12 +93,10 @@
 					activeImages[0].classList.remove('active')
 				}
 				
-
 				this.classList.add('active')
 				document.getElementById('featured').src = this.src
 			})
 		}
-
 
 		let buttonRight = document.getElementById('slideRight');
 		let buttonLeft = document.getElementById('slideLeft');
@@ -125,10 +108,7 @@
 		buttonRight.addEventListener('click', function(){
 			document.getElementById('slider').scrollLeft += 180
 		})
-
-
 	</script>
-		
-	
+			
 </body>
 </html>

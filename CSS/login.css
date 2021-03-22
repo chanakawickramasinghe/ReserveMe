@@ -138,7 +138,7 @@ button:hover {
   height: 40px;
   background: transparent;
   padding: 0 7px 0 43px;
-  box-shadow: #b3b3b3 0 0 8px 0px;
+  box-shadow: #b3b3b3 0 0 0px 0px;
   border-radius: 5px;
 }
 

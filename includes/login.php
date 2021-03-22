@@ -44,17 +44,12 @@
                 <h1 style="display: inline-block;color:green">Login</h1>
                 <h3 class="error-msg"><?php include_once('message.php'); ?></h3> 
 
-                    <div class="wrap-input100 validate-input" style="padding-top: 20px;" data-validate="Username is reauired">
-                        
-                        <!-- <img src="../images/form_icons/user.png" alt="user" class="icons"> Username  -->
-                    
-                        <input class="input100" type="email" name="email" placeholder="Type your username" required>
+                    <div class="wrap-input100 validate-input" style="padding-top: 20px;" data-validate="Username is reauired">                    
+                        <input class="input100" type="email" name="email" placeholder="Type your Email" required>
                         <span class="focus-input100"></span>
                     </div><br>
 
                     <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        
-                        <!-- <img src="../images/form_icons/password.png" alt="user" class="icons">Password -->
                         <input class="input100" type="password" name="password" placeholder="Type your password" required>
                         <span class="focus-input100"></span>
                     </div>

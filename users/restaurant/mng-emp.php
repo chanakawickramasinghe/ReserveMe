@@ -63,6 +63,10 @@
                     <th>Password</th>
                     <td><input type=\"password\" name=\"password\" placeholder=\"Password\" required></td>
                 </tr>
+                <tr>
+                    <th>Confirm Password</th>
+                    <td><input type=\"password\" name=\"password2\" placeholder=\"Re-enter Password\" required></td>
+                </tr>
         
                 </table>
                 <br>

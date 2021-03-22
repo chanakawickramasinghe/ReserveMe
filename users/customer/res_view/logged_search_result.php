@@ -77,7 +77,7 @@
                                 </div>
                             </div>";
                         }       
-                    echo"</section>";
+                echo"</section>";
             }           
             else{
                 $retrieveProduct = "SELECT * FROM `restaurant` WHERE res_name LIKE '$search%' AND city LIKE '$location%'";

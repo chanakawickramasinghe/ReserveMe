@@ -15,64 +15,7 @@
     <link href="../../../css/footer.css" rel="stylesheet" type="text/css"/>
     <!--FontAwesome-->
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
-    <style>
-	/* Dropdown Button */
-.dropbtn {
-  background-color: orange;
-  color: white;
-  padding: 8px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  border-radius : 30px;
-}
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #202020;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: orange;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: grey;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: orange;}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
-.column1{
-	width: 500px;
-	padding: 10px;
-}
-.column2{
-	width: 400px;
-	padding: 10px;
-}
-
-
-	  </style>
-  </head>
+ </head>
 
   <body>
     <!--Start of nav-->
@@ -164,28 +107,28 @@
 		  <div class="col1">
         <h1>Check Availability</h1>
 			  <hr>
-			  <form>
+			  <form action="">
 			    <div>
-            <select class="dropbtn" name="lounge" id="lounge">
-              <option value="Time">Launge</option>
+            <select class="dropbtn" name="lounge" id="lounge" required>
+              <option value="">Launge</option>
               <option value="10.00 a.m">aaa</option>
               <option value="2.00 p.m">bbb</option>
               <option value="8.00 p.m">ccc</option>
             </select>
-			      <select class="dropbtn" name="guests" id="guests">
-              <option value="Guests">Guests</option>
+			      <select class="dropbtn" name="guests" id="guests" required>
+              <option value="">Guests</option>
 	            <option value="1">1</option>
               <option value="2">2</option>
               <option value="4">4</option>
               <option value="6">6</option>
             </select>
-            <select class="dropbtn" name="Time" id="Time">
-              <option value="Time">Time</option>
+            <select class="dropbtn" name="Time" id="Time" required>
+              <option value="">Time</option>
               <option value="10.00 a.m">10.00 a.m</option>
               <option value="2.00 p.m">2.00 p.m</option>
               <option value="8.00 p.m">8.00 p.m</option>
             </select>
-	          <input type="date" id="date" name="date">
+	          <input type="date" id="date" name="date" required>
 	        </div>
           <br>
 	        <input class="dropbtn" type="submit" id="submit" name="submit" value="Check">
@@ -206,7 +149,6 @@
     </section>
     <!--end of form section-->
 
-   
     <!--Include footer.php-->
     <div><?php include "../../../includes/footer.php" ?></div>
 

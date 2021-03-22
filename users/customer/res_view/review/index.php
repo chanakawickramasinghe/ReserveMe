@@ -16,9 +16,9 @@
 	<!--FontAwesome-------->
 	<script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
 </head>
-<body>
 
-	<!--main-section--------------->
+<body>
+	<!--Start of main section-->
 	<section class="main">
 		<!--Start of nav-->
 		<div class="topnav" id="myTopnav">
@@ -32,38 +32,37 @@
 		<!--End of nav-->
 	</section>
 
-	
 	<div class="content home">
-			
 		<div class="reviews"></div>
-<script>
-function getUrlVars() {
-var vars = {};
-var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-	vars[key] = value;
-});
-return vars;
-}
-var reviews_res_id = getUrlVars()["res_id"];
-fetch("reviews.php?res_id=" + reviews_res_id).then(response => response.text()).then(data => {
-document.querySelector(".reviews").innerHTML = data;
-document.querySelector(".reviews .write_review_btn").onclick = event => {
-	event.preventDefault();
-	document.querySelector(".reviews .write_review").style.display = 'block';
-	document.querySelector(".reviews .write_review input[name='customer_name']").focus();
-};
-document.querySelector(".reviews .write_review form").onsubmit = event => {
-	event.preventDefault();
-	fetch("reviews.php?res_id=" + reviews_res_id, {
-		method: 'POST',
-		body: new FormData(document.querySelector(".reviews .write_review form"))
-	}).then(response => response.text()).then(data => {
-		document.querySelector(".reviews .write_review").innerHTML = data;
-	});
-};
-});
-</script>
-	</div>
+			<script>
+				function getUrlVars() {
+					var vars = {};
+					var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+						vars[key] = value;
+					});
+					return vars;
+				}
+
+				var reviews_res_id = getUrlVars()["res_id"];
+				fetch("reviews.php?res_id=" + reviews_res_id).then(response => response.text()).then(data => {
+					document.querySelector(".reviews").innerHTML = data;
+					document.querySelector(".reviews .write_review_btn").onclick = event => {
+						event.preventDefault();
+						document.querySelector(".reviews .write_review").style.display = 'block';
+						document.querySelector(".reviews .write_review input[name='customer_name']").focus();
+					};
+				document.querySelector(".reviews .write_review form").onsubmit = event => {
+					event.preventDefault();
+					fetch("reviews.php?res_id=" + reviews_res_id, {
+						method: 'POST',
+						body: new FormData(document.querySelector(".reviews .write_review form"))
+					}).then(response => response.text()).then(data => {
+					document.querySelector(".reviews .write_review").innerHTML = data;
+				});
+				};
+				});
+			</script>
+		</div>
 	
 	       
 

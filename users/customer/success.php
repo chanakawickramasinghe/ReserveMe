@@ -1,7 +1,6 @@
 <?php include('../../includes/connection.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,14 +18,14 @@
 <body>
     <!--Start of nav-->
     <div class="topnav" id="myTopnav">
-            <a href="customer-home.php"><img class = "logo" src="../../images/logo.png"></a>
-			<a class="navtab" href="../../index.php">Logout</a>
-			<a class="navtab" href="customer-profile.php">Profile</a>
-			<a class="navtab" href="reservation_details.php">Reservations</a>
-			<a class="navtab" href="../../includes/logged_contact.php">Contact</a>
-			<a class="navtab" href="../../includes/logged_about.php">About</a>
-			<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
-		</div>
+        <a href="customer-home.php"><img class = "logo" src="../../images/logo.png"></a>
+		<a class="navtab" href="../../index.php">Logout</a>
+		<a class="navtab" href="customer-profile.php">Profile</a>
+		<a class="navtab" href="reservation_details.php">Reservations</a>
+		<a class="navtab" href="../../includes/logged_contact.php">Contact</a>
+		<a class="navtab" href="../../includes/logged_about.php">About</a>
+		<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
+	</div>
     <!--End of nav-->
     
     <!--Start of Ongoing Card Section-->
@@ -39,6 +38,7 @@
         <div class="title_text">
             <h3>Ongoing <font>Reservaions</font></h3>
         </div>
+
         <section class="food">
             <div class="food-container">
                 <div class="food-box">
@@ -54,6 +54,7 @@
                     <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Cancel</button>  
                 </div>
             </div>
+
             <div class="food-container">
                 <div class="food-box">
                     <h3 class="name">KFC</h3> 
@@ -68,6 +69,7 @@
                     <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Cancel</button>  
                 </div>
             </div>
+
             <div class="food-container">
                 <div class="food-box">
                     <h3 class="name">Fab</h3> 
@@ -83,12 +85,8 @@
                 </div>
             </div>
         </section>           
+        <!--End of Ongoing Card Section-->
     <!--End of Ongoing Card Section-->
-
-              
-    <!--End of Ongoing Card Section-->
-
-    
 
     <!--Include footer.php-->
     <div><?php include "../../includes/footer.php" ?></div>

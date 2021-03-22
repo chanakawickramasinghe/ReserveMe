@@ -27,6 +27,7 @@
 		<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
     </div>
     <!--End of nav-->
+	
     <!--Start of Hall1-->
 	<section class="reservation">
 		<!--text-->

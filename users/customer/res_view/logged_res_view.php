@@ -33,25 +33,39 @@
 
     <!--Start of main-section-->
     <?php 
-        if(isset($_GET['res_id'])){
-            $sql = "SELECT * FROM restaurant WHERE res_id = ".$_GET['res_id'];
-            $resultProduct = mysqli_query($connection,$sql);
-            while($rowProduct  = mysqli_fetch_assoc($resultProduct)){  
-                echo"<section class=\"main\">
-                        <div class=\"m-img\">       
-                            <img class=\"food-img\" src= \"../../../images/restaurant/{$rowProduct['res_image']}\">
-                        </div>
-                        <div class=\"m-text\">
-                            <h2>". $rowProduct['res_name'] ."</h2>
-                            <br>
-                            <h4><i class=\"fas fa-star-half-alt\">". $rowProduct['res_rate'] ."</i></h4>
-                            <br>
-                            <h4><i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i></h4>
-                            <!--<button class=\"reserve-button pulsate\" type=\"submit\" name=\"submit\" onclick=\"onClickOpenForm()\">Reserve<i class=\"fas fa-search\"></i></button>-->
-	                    </div>	
-	                </section>";
-            }
+      if(isset($_GET['res_id'])){
+        $sql = "SELECT * FROM restaurant WHERE res_id = ".$_GET['res_id'];
+        $resultProduct = mysqli_query($connection,$sql);
+        while($rowProduct  = mysqli_fetch_assoc($resultProduct)){  
+          $preorder_available=$rowProduct['preorder_available'];
+          echo"<section class=\"main\">
+                <div class=\"m-img\">       
+                  <img class=\"food-img\" src= \"../../../images/restaurant/{$rowProduct['res_image']}\">
+                </div>
+                <div class=\"m-text\">
+                <br>
+                  <h4><i class=\"fas fa-map-marker-alt\"> ". $rowProduct['res_add_line1'] ."". $rowProduct['res_add_line2'] ." ". $rowProduct['city'] ."</i></h4>
+                  <br>
+                  <h4><i class=\"fas fa-clock\"> ". $rowProduct['opening_hour'] ." - ". $rowProduct['closing-hour'] ."</i></h4>                  
+                  <br>
+                  <h4><i class=\"fas fa-star-half-alt\"> ". $rowProduct['res_rate'] ."</i></h4>
+                </div>	
+                <div class=\"m-text2\">
+                  <br>
+                  <h4><i class=\"fas fa-at\"> ". $rowProduct['res_email'] ."</i></h4>
+                  <br>
+                  <h4><i class=\"fas fa-phone\"> ". $rowProduct['res_tel'] ."</i></h4>
+                  <br>";
+                  if($preorder_available == 1){
+                    echo "<h4><i class=\"fas fa-utensils\"> Preorder Available </i></h4>";
+                  }else{
+                    echo "<h4><i class=\"fas fa-utensils\"> Preorder Unavailable </i></h4>";
+                  }
+                  
+                echo"</div>	
+	            </section>";
         }
+      }
     ?>
     <!--End of main-section-->
 

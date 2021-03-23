@@ -108,8 +108,14 @@
             	<div id="gallery-center">
                 	<div class="mapouter">
             			<div class="gmap_canvas">
-                        	<iframe width="400vh" height="300vw" id="gmap_canvas" src="https://maps.google.com/maps?q=topaz%20kandy&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>                           
-                    	</div>
+							<?php 
+        						$sql = "SELECT * FROM restaurant WHERE res_id = '4'";
+            					$resultProduct = mysqli_query($connection,$sql);
+            					while($rowProduct  = mysqli_fetch_assoc($resultProduct)){ 
+									echo"<iframe width=\"400vh\" height=\"300vw\" id=\"gmap_canvas\" src=\"".$rowProduct['res_location']."\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\"></iframe>";
+								}
+    						?>
+                        </div>
                 	</div>
             	</div>
         	</section>   
@@ -125,14 +131,18 @@
 	<?php 
         $sql = "SELECT * FROM reviews WHERE res_id = '4' order by rating desc limit 1";
             $resultProduct = mysqli_query($connection,$sql);
-            while($rowProduct  = mysqli_fetch_assoc($resultProduct)){  
-                echo"<section class=\"review\">
+            while($rowProduct  = mysqli_fetch_assoc($resultProduct)){ 
+				$stars=$rowProduct['rating']; 
+				echo"<section class=\"review\">
 					<div class=\"flatart\"></div>
 					<div class=\"card1\">
 						<h3>". $rowProduct['customer_name'] ."</h3>
-						<p><i class=\"far fa-comments\" id=\"i1\"></i><br><br>". $rowProduct['content'] ."<br>
-						<i class=\"far fa-star\" id=\"i3\"></i><i class=\"far fa-star\" id=\"i3\"></i><i class=\"far fa-star\" id=\"i3\"></i><i class=\"far fa-star\" id=\"i3\"></i><i class=\"far fa-star\" id=\"i3\"></i><br>
-						<i class=\"far fa-comments\" id=\"i2\"></i></p>
+						<p><i class=\"far fa-comments\" id=\"i1\"></i><br><br>". $rowProduct['content'] ."<br>";
+						if($stars<5){
+							echo"<i class=\"far fa-star\" id=\"i3\"></i><br>";
+						}
+						
+						echo"<i class=\"far fa-comments\" id=\"i2\"></i></p>
 					</div>
 					<div class=\"card2\">
 						<img src=\"images/review.svg\" style=\"height: 200px ; width: 200px\"/>

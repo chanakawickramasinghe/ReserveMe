@@ -1,6 +1,7 @@
 /* Alignments*/
 .div-c{
-    text-align: center;    
+    text-align: center;  
+    margin-top: 40px;  
 }
 
 .div-l{
@@ -125,7 +126,7 @@
 
 .user-new{
     width: 600px;
-    margin: 0 auto;
+    margin: auto auto;
     table-layout: auto;
     border: none;
     

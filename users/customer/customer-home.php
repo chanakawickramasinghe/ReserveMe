@@ -111,8 +111,14 @@
             	<div id="gallery-center">
                 	<div class="mapouter">
             			<div class="gmap_canvas">
-                        	<iframe width="400vh" height="300vw" id="gmap_canvas" src="https://maps.google.com/maps?q=topaz%20kandy&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>                           
-                    	</div>
+							<?php 
+        						$sql = "SELECT * FROM restaurant WHERE res_id = '4'";
+            					$resultProduct = mysqli_query($connection,$sql);
+            					while($rowProduct  = mysqli_fetch_assoc($resultProduct)){ 
+									echo"<iframe width=\"400vh\" height=\"300vw\" id=\"gmap_canvas\" src=\"".$rowProduct['res_location']."\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\"></iframe>";
+								}
+    						?>
+                        </div>
                 	</div>
             	</div>
         	</section>   

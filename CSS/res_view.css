@@ -62,13 +62,32 @@ ul{
 	color: black;
 }
 
+.m-text2{
+	position: absolute;
+	top: 25%;
+	left:80%; /*80*/
+	transform: translate(-90%,-50%);
+	color: black;
+	margin-left: 20px;
+}
+
+.m-text2 h4{
+	font-family:Roboto;
+	font-weight: bold;
+	margin: 0px;
+    line-height: 40px;
+	letter-spacing: 3px;
+    color:#202020;
+}
+
+
 .m-text h2{
 	font-family:Roboto;
 	font-weight: bold;
 	margin: 0px;
     line-height: 30px;
 	letter-spacing: 3px;
-    color:#000;
+    color:#202020;
     text-transform: uppercase;
 }
 
@@ -78,7 +97,7 @@ ul{
 	margin: 0px;
     line-height: 40px;
 	letter-spacing: 3px;
-    color:#000;
+    color:#202020;
 }
 
 .content{
@@ -143,6 +162,7 @@ ul{
 	margin: 10px;
 	display: flex;
 	color:#202020;
+	font-weight: bold;
 }
 
 .select-menu li a:hover{

@@ -35,7 +35,7 @@
             <img class="success-img" src= "../../images/success.png">
         </div>
             
-        <div class="title_text">
+        <div class="title_text2">
             <h3>Ongoing <font>Reservaions</font></h3>
         </div>
 

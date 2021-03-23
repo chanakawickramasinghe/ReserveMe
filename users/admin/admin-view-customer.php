@@ -65,8 +65,6 @@
                         <tr>
                             <th>Active Status :</th>
                             <td><input class="input-s" type="text" id="active_status" placeholder="Status" readonly="true" required></td>
-                            <!-- <td></td> -->
-                            
                         </tr>
                     </table>
 
@@ -91,7 +89,6 @@
         <div>
         
         <!-- Adding the table with customer details -->
-        
         <table class="user" id="myTable" border="1">
             <tr>
                 <th>Customer ID</th>

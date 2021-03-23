@@ -34,7 +34,6 @@
         </div>
 
         <div class="content-div">
-            <br><br>
             <h1><font color="black">New</font> Messages</h1>
 
             <div class="promo-btn-bar">

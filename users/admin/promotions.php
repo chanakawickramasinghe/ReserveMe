@@ -33,8 +33,7 @@
             <a href="coadmins.php">Manage Co-Admins</a>
         </div>
 
-        <div class="content-div">
-            <br><br>        
+        <div class="content-div">   
             <h1><font color="black">Ongoing</font> Promotions</h1>
 
             <div class="promo-btn-bar">

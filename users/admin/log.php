@@ -35,7 +35,6 @@
         <!-- Admin Sidebar Dashboard -->
         
         <div class="sidebar">
-            </br></br>
             <a href="admin-home.php">Home</a>
             <a href="manage-users.php">Manage Users</a>
             <a href="messages.php">Messages</a>
@@ -45,8 +44,7 @@
             <a href="coadmins.php">Manage Co-Admins</a>
         </div>
 
-        <div class="content-div">
-            <br><br>   
+        <div class="content-div">  
             <h1><font color="black">Application</font> Log</h1>
             <div class="search-user-container">
             <form name="form-display-selected">

@@ -57,15 +57,16 @@ ul{
 .m-text{
 	position: absolute;
 	top: 25%;
-	left:60%; /*80*/
+	left:80%; /*80*/
 	transform: translate(-90%,-50%);
 	color: black;
+	width: 500px;
 }
 
 .m-text2{
 	position: absolute;
 	top: 25%;
-	left:80%; /*80*/
+	left:85%; /*80*/
 	transform: translate(-90%,-50%);
 	color: black;
 	margin-left: 20px;

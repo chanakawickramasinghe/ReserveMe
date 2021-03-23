@@ -2,12 +2,29 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<!--web-icon------------------->
+	<link href="../../../../images/logo.png" rel="shortcut icon"/>
+	<!--stylesheet-------------------->
 	<title>Reviews System</title>
 	<link href="../../../../CSS/reviews.css" rel="stylesheet" type="text/css">
 	<link href="../../../../CSS/review.css" rel="stylesheet" type="text/css">
+	<link href="../../../../CSS/nav.css" rel="stylesheet" type="text/css">
+	<link href="../../../../CSS/footer.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+	<!--Start of nav-->
+    <div class="topnav" id="myTopnav">
+		<a href="../../customer-home.php"><img class = "logo" src="../../../../images/logo.png"></a>
+		<a class="navtab" href="../../../../index.php">Logout</a>
+		<a class="navtab" href="../../customer-profile.php">Profile</a>
+		<a class="navtab" href="../../reservation_details.php">Reservations</a>
+		<a class="navtab" href="../../../../includes/logged_contact.php">Contact</a>
+		<a class="navtab" href="../../../../includes/logged_about.php">About</a>
+		<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
+	</div>
+    <!--End of nav-->
+
 	<div class="content home">
 		<div class="reviews"></div>
 			<script>
@@ -39,5 +56,13 @@
 				});
 			</script>
 		</div>
+		</div>
+
+		<!--Include footer.php-->
+		<div><?php include "../../../../includes/footer.php" ?></div>
+
+		<!--script for slideshow-->
+		<script src="../../../../js/onClickNav.js"></script>
+		
 </body>
 </html>

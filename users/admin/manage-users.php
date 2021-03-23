@@ -8,6 +8,7 @@
 	    <link rel="stylesheet" href="../../CSS/admin-nav.css">
         <link href="../../images/logo.png" rel="shortcut icon"/>
         <link rel="stylesheet" href="../../CSS/admin-dashboard.css"/>
+        <link rel="stylesheet" href="../../CSS/footer.css">
     </head>
     <body>
 
@@ -45,12 +46,9 @@
             <button class="btn-users" type="button" name="view-employees" onclick="window.location.href='admin-view-employee.php'">Employees</button>
             </div>
 
-            <br/><br><br/><br/><br><br/><br/><br><br/>
-
-            <!--Start of search user-->
-	        <div class="search-user-container">
-           
-            </div>
+            <br/><br><br/><br/><br><br/><br/><br><br/><br/><br><br/>
+            <span><?php include('../../includes/footer.php'); ?></span>
+            
         </div>
 
 

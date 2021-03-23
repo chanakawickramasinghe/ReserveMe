@@ -63,15 +63,6 @@
 
                         </tr>
                         <tr>
-                            <th>Postbox No. :</th>
-                            <td><input class="input-m" type="text" placeholder="Postbox" id="postal_number" readonly="true" required></td>
-                            <th>Street Name :</th>
-                            <td><input class="input-l" type="text" placeholder="Street" id="street" readonly="true" required></td>
-                            <th>City :</th>
-                            <td><input class="input-m" type="text" placeholder="City" id="city" readonly="true" required></td>
-
-                        </tr>
-                        <tr>
                             <th>Active Status :</th>
                             <td><input class="input-s" type="text" id="active_status" placeholder="Status" readonly="true" required></td>
                             <!-- <td></td> -->
@@ -108,9 +99,6 @@
                 <th>Customer Email</th>
                 <th>Contact No.</th>
                 <th>DoB</th>
-                <th>Postbox</th>
-                <th>Street</th>
-                <th>City</th>
                 <th>Ranking</th>
                 <th>Status</th>
             </tr>
@@ -129,9 +117,6 @@
                     <td>".$row['email']."</td>
                     <td>".$row['contact_no']."</td>
                     <td>".$row['dob']."</td>
-                    <td>".$row['postal_number']."</td>
-                    <td>".$row['street']."</td>
-                    <td>".$row['city']."</td>
                     <td>".$row['rankings']."</td>
                     <td>".$row['active_status']."</td>
                 </tr>";
@@ -155,11 +140,8 @@
                 document.getElementById("email").value = this.cells[2].innerHTML;
                 document.getElementById("dob").value = this.cells[4].innerHTML;
                 document.getElementById("contact_number").value = this.cells[3].innerHTML;
-                document.getElementById("street").value = this.cells[6].innerHTML;
-                document.getElementById("postal_number").value = this.cells[5].innerHTML;
-                document.getElementById("city").value = this.cells[7].innerHTML;
-                document.getElementById("active_status").value = this.cells[9].innerHTML;
-                document.getElementById("ratings").value = this.cells[8].innerHTML;
+                document.getElementById("active_status").value = this.cells[6].innerHTML;
+                document.getElementById("ratings").value = this.cells[5].innerHTML;
             };
         }
 

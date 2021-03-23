@@ -84,7 +84,41 @@
                 
             </div>
             <div class = "admin-home">
-                <button class="btn-change" type="button" onclick="window.location.href='admin-change-password.php'">Change Paasword</button>
+                <!-- <button class="btn-change" type="button" onclick="window.location.href='admin-change-password.php'">Change Password</button> -->
+            
+                <button type="button" class="collapsible">Change password</button>
+
+                <div class="content-collapse">
+                    
+                    <form method="POST" action="admin-change-password-submit.php">
+                        <h3>Are you sure want to change your password?</h3>
+                        <h2 class="error-msg"><?php include_once('../../includes/message.php'); ?></h2>
+                            <div class="form-change">
+                                <table>
+                                    <tr>
+                                        <th>Current Password : </th>
+                                        <td><input type="password" name="cur_pword" placeholder="Current Password" required></p></td>
+                                    </tr>
+                                    <tr>
+                                        <th>New Password : </th>
+                                        <td><input type="password" name="new_pword1" placeholder="New Password" id="pword1" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Confirm Password : </th>
+                                        <td><input type="password" name="new_pword2" placeholder="Re-Enter Password" id="pword2" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" onkeyup='check()' required></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><P align="center" id='message' ></P></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><center><button type="submit" class="btn-change-blue" name="change-pword">Change Password</button>
+                                        <button type="reset" class="btn-change-normal">Clear</button></center></td>
+                                    </tr>
+                                </table>
+                                
+                            </div>
+                    </form>                    
+                </div>
             </div>
 
             <span><?php include('../../includes/footer.php'); ?></span>
@@ -94,6 +128,35 @@
 
     <!--script for onClickNav() for the navigation menu-->
     <script src="../../js/onClickNav.js"></script>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+            });
+        }
+    </script>
+
+    <script>
+        var check = function() {
+            if (document.getElementById('pword1').value == document.getElementById('pword2').value){
+                    document.getElementById('message').style.color = 'green';
+                    document.getElementById('message').innerHTML = 'Passwords are matching';
+            } 
+            else{
+                document.getElementById('message').style.color = 'red';
+                document.getElementById('message').innerHTML = 'Passwords does not match';
+            }
+        }
+    </script>
     
     </body>
 </html>

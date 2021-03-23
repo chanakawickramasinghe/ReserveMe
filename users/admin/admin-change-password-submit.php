@@ -17,7 +17,7 @@ if (mysqli_num_rows($result_old_pword) == 1) {
      if ($new_pword1 != $new_pword2){
         echo '
         <script>
-        window.location.href = "admin-change-password.php";
+        window.location.href = "admin-home.php";
         alert("New passwords Do Not Match!");
         </script>'; 
         exit();
@@ -26,7 +26,7 @@ if (mysqli_num_rows($result_old_pword) == 1) {
     elseif ($old_pword != $cur_pword) {
         echo '
         <script>
-        window.location.href = "admin-change-password.php";
+        window.location.href = "admin-home.php";
         alert("Current Password is Incorrect!");
         </script>';
         exit();
@@ -47,7 +47,7 @@ if (mysqli_num_rows($result_old_pword) == 1) {
         else {
             echo '
             <script>
-            window.location.href = "admin-change-password.php";
+            window.location.href = "admin-home.php";
             alert("Password Changed Unsuccessful!");
             </script>';
 			exit();

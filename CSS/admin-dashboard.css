@@ -339,23 +339,6 @@
   text-align: center;
 }
 
-.btn-change {
-  width:15vw;
-  margin-left: 1.5vw;
-  margin-top: 2vw;
-  height: 5vh;
-  background: orange;
-  border: none;
-  border-radius: 25px;
-  color: #fff;
-  font-size: medium;
-}
-
-.btn-change:hover{
-  background: black;
-  cursor: pointer;
-}
-
 .flex-container {
   display: flex;
   flex-wrap: nowrap;
@@ -375,6 +358,33 @@
 
 .flex-container :hover{
   background-color: #333333;
+}
+
+/* for collapsible content */
+.collapsible {
+  margin-left: 1.5vw;
+  margin-top: 2vw;
+  height: 5vh;
+  width:12vw;
+  background: orange;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  font-size: medium;
+}
+
+.active, .collapsible:hover {
+  background: black;
+}
+
+.content-collapse {
+  color:#333333;
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #ffffff;
 }
 
 /* admin-home end */
@@ -398,7 +408,7 @@
 }
 
 .form-change{
-  float: center;
+  float: left;
 }
 
 .form-change input{

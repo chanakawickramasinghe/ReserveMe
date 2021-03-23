@@ -9,6 +9,7 @@
 	    <link rel="stylesheet" href="../../CSS/admin-nav.css">
         <link href="../../images/logo.png" rel="shortcut icon"/>
         <link rel="stylesheet" href="../../CSS/admin-dashboard.css"/>
+        <link rel="stylesheet" href="../../CSS/footer.css">
     </head>
     <body>
 
@@ -84,6 +85,7 @@
                 </table> ";
             }
         ?>
+        <?php include('../../includes/footer.php'); ?>
         </div>
 
 

@@ -76,3 +76,6 @@
 .reviews .review:last-child {
     border-bottom: 0;
 }
+.reviews{
+    padding-top: 90px;
+}

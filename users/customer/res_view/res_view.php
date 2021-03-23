@@ -42,7 +42,7 @@
                 </div>
                 <div class=\"m-text\">
                 <br>
-                  <h4><i class=\"fas fa-map-marker-alt\"> ". $rowProduct['res_add_line1'] ."". $rowProduct['res_add_line2'] ." ". $rowProduct['city'] ."</i></h4>
+                  <h4><i class=\"fas fa-map-marker-alt\"> ". $rowProduct['res_add_line1'] ." ". $rowProduct['res_add_line2'] ." ". $rowProduct['city'] ."</i></h4>
                   <br>
                   <h4><i class=\"fas fa-clock\"> ". $rowProduct['opening_hour'] ." - ". $rowProduct['closing-hour'] ."</i></h4>                  
                   <br>

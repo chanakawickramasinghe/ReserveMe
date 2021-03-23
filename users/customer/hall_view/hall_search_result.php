@@ -20,7 +20,7 @@
     <!--Start of nav-->
     <div class="topnav" id="myTopnav">
         <a href="../../../index.php"><img class = "logo" src="../../../images/logo.png"></a>
-		<a class="navtab" href="../../user-type.php">Register</a>
+		<a class="navtab" href="../customerReg.php">Register</a>
 		<a class="navtab" href="../../../includes/login.php">Login</a>
 		<a class="navtab" href="../../../includes/contact.php">Contact</a>
 		<a class="navtab" href="../../../includes/about.php">About</a>    
@@ -57,6 +57,22 @@
 		</div>
 		</section>
 	<!--End of Hall2-->
+
+	<!--Start of Hall2-->
+	<section class="reservation">
+		<!--img-->
+		<div class="reservation-img"><img src="../../../images/gallery4.jpg" /></div>
+		<!--text-->
+		<div class="reservation-text">
+			<!--heading-->
+			<h3>Oak Room</h3>
+			<!--details-->
+			<p>Enlight your special occasion by finding the best place. You can now search and find the best venue to your weddings, birthday parties and more occasion. We provide you the facility to book it before others.</p>
+			<a class="hero-button" href="hall_view.php" >Find Out More</a>
+		</div>
+		</section>
+	<!--End of Hall2-->
+
 
     <!--Include footer.php-->
     <div><?php include "../../../includes/footer.php" ?></div>

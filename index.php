@@ -31,22 +31,29 @@
 		</div>
 		<!--End of nav-->
 	
-		<!--Start of img-->
-		<div class="m-img">
-			<div class="slideshow-container">
-				<div class="mySlides fade">
-				  	<img src="images/promos/1.jpeg" style="width:100% ; height:60vh">
-				</div>
-				<div class="mySlides fade">
-				  	<img src="images/promos/2.jpeg" style="width:100% ; height:60vh">
-				</div>
-			</div>
+		<!--Start of img-->	
+		<div class="m-img">			
+			<?php 
+        		$sql = "SELECT * FROM promotions ";
+            	$resultProduct = mysqli_query($connection,$sql);
+            	while($rowProduct  = mysqli_fetch_assoc($resultProduct)){ 
+					$end_date=$rowProduct['end_date'];
+					$date_now = new DateTime();
+ 					$date2    = new DateTime($end_date);
 
-			<div style="text-align:center">
-			  <span class="dot"></span> 
-			  <span class="dot"></span> 
-			  <span class="dot"></span> 
-			</div>
+					if($date_now < $date2 ) {
+    					echo"<div class=\"slideshow-container\">
+							<div class=\"mySlides fade\">
+								<img src= \"images/promos/{$rowProduct['image']}.jpeg\" style=\"width:100% ; height:60vh\">
+							</div>
+						</div>
+						<div style=\"text-align:center\">
+							<span class=\"dot\"></span> 
+						</div>";
+					}
+					
+				}
+    		?>
 		</div>
 		<!--End of img-->
 		
@@ -132,17 +139,20 @@
         $sql = "SELECT * FROM reviews WHERE res_id = '4' order by rating desc limit 1";
             $resultProduct = mysqli_query($connection,$sql);
             while($rowProduct  = mysqli_fetch_assoc($resultProduct)){ 
-				$stars=$rowProduct['rating']; 
 				echo"<section class=\"review\">
 					<div class=\"flatart\"></div>
 					<div class=\"card1\">
 						<h3>". $rowProduct['customer_name'] ."</h3>
-						<p><i class=\"far fa-comments\" id=\"i1\"></i><br><br>". $rowProduct['content'] ."<br>";
-						if($stars<5){
-							echo"<i class=\"far fa-star\" id=\"i3\"></i><br>";
-						}
+						<p><i class=\"far fa-comments\" id=\"i1\"></i><br><br>". $rowProduct['content'] ."<br><br>
+						<div>";
 						
-						echo"<i class=\"far fa-comments\" id=\"i2\"></i></p>
+							$stars=$rowProduct['rating'];
+							for($count=0;$count< $stars;$count++ ) {
+    							echo"<i class=\"far fa-star\" id=\"i3\"></i>";
+							}
+
+						echo"</div>
+						<i class=\"far fa-comments\" id=\"i2\"></i></p>
 					</div>
 					<div class=\"card2\">
 						<img src=\"images/review.svg\" style=\"height: 200px ; width: 200px\"/>

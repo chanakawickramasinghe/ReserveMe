@@ -38,11 +38,11 @@
         </div>
 
         <div class="wrap-login100" style="display:inline-block">            
-
+            <!-- form to get data -->
             <form action="login-submit.php" method="post">
                 <img src="../images/form_icons/vector-users.png" alt="usericon" class="userIcon">
                 <h1 style="display: inline-block;color:green">Login</h1>
-                <h3 class="error-msg"><?php include_once('message.php'); ?></h3> 
+                <h2 class="error-msg"><?php include_once('message.php'); ?></h2>
 
                     <div class="wrap-input100 validate-input" style="padding-top: 20px;" data-validate="Username is reauired">                    
                         <input class="input100" type="email" name="email" placeholder="Type your Email" required>
@@ -55,7 +55,7 @@
                     </div>
 
                     <div class="text-right" style="color:blue; padding-top:8px; padding-bottom: 15px">
-                        <a href="../reset/email_verify.php"> Forgot password..! </a>
+                        <a href="../reset/email_verify.php" style="color:blue"> Forgot password! </a>
                     </div>
 
                     <div class="container-login100-form-btn">
@@ -65,34 +65,15 @@
                         </div>
                     </div>
 
-                    <div class="txt1 text-center" style="padding-top: 30px;padding-bottom: 15px;" >
-                        <span> or sign up using </span>
-                    </div>
-
-                    <div class="flex-c-m">
-                        <a href="#" class="login100-social-item bg1">
-                        <i class="fa fa-facebook"></i>
-                        </a>
-                        <a href="#" class="login100-social-item bg2">
-                        <i class="fa fa-twitter"></i>
-                        </a>
-                        <a href="#" class="login100-social-item bg3">
-                        <i class="fa fa-google"></i>
-                        </a>
-                    </div>
                     <br>
                     <div class="txt1 text-center">
-                        for create a new account <a href="../users/customer/customerReg.php" class="txt2"> Click here..! </a>
+                        for create a new account <a href="../users/customer/customerReg.php" class="txt2"> Click here! </a>
                     </div>
             </form>            
         </div>
-
+         <!--Include footer.php-->
         <div><?php include "footer.php" ?></div>
     </div>
-    
-
- <!--Include footer.php-->
- 
     
     <!--script for onClickNav() for the navigation menu-->
     <script src="../js/onClickNav.js"></script>

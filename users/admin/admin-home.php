@@ -23,7 +23,6 @@
 		    <a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
         </div>
         </span>
-        
         <!--End of nav-->
 
         <!-- Admin Sidebar Dashboard -->
@@ -44,7 +43,7 @@
                 echo "
                     <h1><font color=\"black\">Welcome</font> ".$_SESSION["name"]."!</h1>";    
             ?>  
-            
+            <br/>
             
             <div class="admin-home">
             <?php
@@ -88,21 +87,10 @@
                 <button class="btn-change" type="button" onclick="window.location.href='admin-change-password.php'">Change Paasword</button>
             </div>
 
-            <!-- adding container to input data -->
-            <!-- <div class="flex-container">
-                <div>Total Users</div>
-                <div>Upcoming Reservations</div>
-                <div>Past Reservations</div>  
-            </div>             -->
-
-            <div class="stats">
-                
-            </div>
+            <span><?php include('../../includes/footer.php'); ?></span>
              
         </div> 
-
-        <!-- <br>
-        <span><?php //include('../../includes/footer.php'); ?></span> -->
+        
 
     <!--script for onClickNav() for the navigation menu-->
     <script src="../../js/onClickNav.js"></script>

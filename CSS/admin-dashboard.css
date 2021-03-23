@@ -2,8 +2,8 @@
     margin-top: 50px;
     padding-top: 50px;
     padding-bottom: 50px;
-    width: 20%;
-    height: 400px;
+    width: 18%;
+    height: 100%;
     background-color: #f1f1f1;
     float: left;
     position: fixed;
@@ -18,7 +18,7 @@
   }
    
   .sidebar a.active {
-    background-color: #00b3b3;
+    background-color: orange;
     color: white;
     font-weight: bold
   }
@@ -57,12 +57,12 @@
   .content-div{
     margin-top: 50px;
     padding-top: 20px;
-    padding-bottom: 50px;
-    margin-bottom: 30px;
-    width: 78%;
+    /* padding-bottom: 50px; */
+    /* margin-bottom: 30px; */
+    width: 82%;
     background-color: #ffffff;
     position: relative;
-    height: 580px;
+    height: 100%;
     overflow:auto;
     float: right;
     top:15px;
@@ -71,7 +71,7 @@
   /* welcome message */
   h1{
       text-align: center;
-      color:#00b3b3;
+      color:orange;
     }
 
 
@@ -91,7 +91,7 @@
 .btn-users {
   width:15vw;
   height: 10vh;
-  background: #00b3b3;
+  background: orange;
   border: none;
   border-radius: 25px;
   color: #fff;
@@ -144,7 +144,7 @@
 .search-btn{
 	width:120px;
 	height: 5vh;
-  background-color:#00b3b3;
+  background-color:orange;
   border: none;
 	border-radius: 20px;
 	color: #fff;
@@ -344,7 +344,7 @@
   margin-left: 1.5vw;
   margin-top: 2vw;
   height: 5vh;
-  background: #00b3b3;
+  background: orange;
   border: none;
   border-radius: 25px;
   color: #fff;
@@ -618,7 +618,7 @@
 .btn-promo {
   width:15vw;
   height: 5vh;
-  background: #00b3b3;
+  background: orange;
   border: none;
   border-radius: 25px;
   color: #fff;
@@ -715,7 +715,7 @@
 .btn-reply {
   width:8vw;
   height: 5vh;
-  background: #00b3b3;
+  background: orange;
   border: none;
   border-radius: 25px;
   color: #fff;

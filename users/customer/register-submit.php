@@ -11,10 +11,6 @@ if(isset($_POST['submit'])){
 	$password2 = md5($_POST['password2']);
     $contact = $_POST['contact'];
     $dob = $_POST['dob'];
-    $pnumber = $_POST['pnumber'];
-    $street = $_POST['street'];
-    $city = $_POST['city'];
-    
     
     
         //Check if email already exists in both tables
@@ -41,38 +37,35 @@ if(isset($_POST['submit'])){
         exit();
         }
         
+        // check whether passwords match
         else if($password != $password2){
             $message = base64_encode(urlencode("Passwords do not match!"));
             header('Location:customerReg.php?msg=' . $message);
             exit();
         }
         
-        //Insert to Database
+        //If no error, then Insert to Database
         else {
 
-            $registrationQuery = "INSERT INTO customer (user_id,user_name,email,password,contact_no,dob,postal_number,street,city,active_status) 
-            VALUES (NULL,'$name', '$email', '$password','$contact', '$dob', '$pnumber','$street','$city',1)";
-            // $registrationQuery = "INSERT INTO customer (user_name, email, password, contact_no, no) VALUES ('$name', '$email', '$password', '$contact', '$no')";
+            $registrationQuery = "INSERT INTO customer (user_id,user_name,email,password,contact_no,dob,active_status) 
+            VALUES (NULL,'$name', '$email', '$password','$contact', '$dob', 1)";
+            
             if (mysqli_query($connection,$registrationQuery) == TRUE) {
                 //echo "inside TRUE";
-                $message = base64_encode(urlencode("Registration Successful"));
-                header('Location:../../includes/login.php?msg3=' . $message);
+                $message = base64_encode(urlencode("Registration Successful!"));
+                header('Location:../../includes/login.php?msg=' . $message);
         
 				exit();
             } 
-            
+            //if there is a sql error
             else {
-                 $message = base64_encode(urlencode("SQL Error while Registering"));
+                 $message = base64_encode(urlencode("Error while Registering!"));
                  header('Location:customerReg.php?msg=' . $message);
 				exit();
             }
         }
-
 }
-
 
 mysqli_close($connection);
    
-
-
 ?>

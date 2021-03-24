@@ -1,4 +1,5 @@
 <?php include('../../includes/session.php') ?>
+<?php include('../../includes/connection.php') ?>
 
 <html>
     <head>
@@ -45,14 +46,45 @@
             <div class="row-33">
             <button class="btn-users" type="button" name="view-employees" onclick="window.location.href='admin-view-employee.php'">Employees</button>
             </div>
-
-            <br/><br><br/><br/><br><br/><br/><br><br/><br/><br><br/>
+            <br><br/><br><br/><br/><br><br/>
+            <div class="row-b">
+                <div class="b b3">
+                    <div class="num">
+                        <?php 
+                            $tot_cus_sql = "SELECT COUNT(user_id) AS TotCus FROM customer";
+                            $tot_query = mysqli_query($connection,$tot_cus_sql);
+                            $row_count = mysqli_fetch_assoc($tot_query);
+                            $tot_cus = $row_count['TotCus'];
+                            echo $tot_cus;
+                        ?>
+                    </div>
+                    <div>TOTAL CUSTOMERS</div>
+                </div>
+                <div class="b b4">
+                    <div class="num">
+                        <?php 
+                            $tot_res_sql = "SELECT COUNT(reservation_id) AS TotRes FROM reservation";
+                            $tot_query = mysqli_query($connection,$tot_res_sql);
+                            $row_count = mysqli_fetch_assoc($tot_query);
+                            $tot_res = $row_count['TotRes'];
+                            echo $tot_res;
+                        ?>
+                        </div>
+                    <div>TOTAL RESERVATIONS</div>
+                </div>
+                <div class="b b3">
+                    <div class="num"><?=$data2['count2']?></div>
+                    <div>New Bookings</div>
+                </div>
+                <div class="b b4">
+                    <div class="num"><?=$data3['count3']?></div>
+                    <div>New Property</div>
+                </div>
+            </div>
             <span><?php include('../../includes/footer.php'); ?></span>
             
         </div>
 
-
-      
     <!--script for onClickNav() for the navigation menu-->
     <script src="../../js/onClickNav.js"></script>
     

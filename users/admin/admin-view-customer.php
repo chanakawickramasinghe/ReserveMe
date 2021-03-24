@@ -2,7 +2,7 @@
 <?php include('../../includes/connection.php') ?>
 
 <?php
-    $user_id = "";
+    $cus_id = "";
      
 ?>
 
@@ -42,43 +42,40 @@
                 <h3>Details of Selected Customer</h3>
                 
                 <div class="update-box">
-                    <form method="POST" action="active-suspend.php">
+                    <form method="POST" action="admin-cus-operations.php">
                     <table>
                         <tr>
                             <th>Customer ID :</th>
                             <td><input class="input-s" type="text" placeholder="ID" id="cus_id" name="user_id" readonly="true" required></td>
                             <th>Customer Email :</th>
-                            <td><input class="input-l" type="text" placeholder="Customer Email" id="email" readonly="true" required></td>
+                            <td><input class="input-l" type="text" placeholder="Customer Email" id="email" name="cus_email" readonly="true" required></td>
                             <th>Contact No. :</th>
-                            <td><input class="input-m" type="text" placeholder="Contact" id="contact_number" readonly="true" required></td>
+                            <td><input class="input-m" type="text" placeholder="Contact" id="contact_number" readonly="true" name="contact_no" required></td>
 
                         </tr>
                         <tr>
                             <th>Customer Name :</th>
-                            <td><input width="50px" class="input-l" type="text" placeholder="Customer Name" id="cus_name" readonly="true" required></td>
+                            <td><input width="50px" class="input-l" type="text" placeholder="Customer Name" id="cus_name" name="cus_name" readonly="true" required></td>
                             <th>Date of Birth :</th>
-                            <td><input class="input-m" type="text" placeholder="yyyy-mm-dd" id="dob" readonly="true" required></td>
+                            <td><input class="input-m" type="text" placeholder="yyyy-mm-dd" id="dob" readonly="true" name="cus_dob" required></td>
                             <th>Rating :</th>
-                            <td><input class="input-s" type="text" id="ratings" placeholder="Rating" readonly="true" required></td>
+                            <td><input class="input-s" type="text" id="ratings" placeholder="Rating" readonly="true" name="cus_rating" required></td>
 
                         </tr>
                         <tr>
                             <th>Active Status :</th>
-                            <td><input class="input-s" type="text" id="active_status" placeholder="Status" readonly="true" required></td>
+                            <td><input class="input-s" type="text" id="active_status" placeholder="Status" readonly="true" name="cus_status" required></td>
                         </tr>
                     </table>
 
                     
                     <p class="button-box">
-                    <button class="btn-blue-l" type="button" name="btn-send-email" onclick="sendEmail()">Send Email</button>
-                    <?php 
-                        echo "<td><a class=\"btn-blue-l\" href =admin-view-customer-activity.php?id='cus_id' > View Activity </a> </td>";
-                    ?>
-                
+                    <button class="btn-blue-l" type="button" name="btn-send-email" onclick="admin-cus-operations.php">Send Email</button>
+                    <input type="submit" class="btn-blue-l" name="btn" value="View Activity">
                     <!-- <button class="btn-blue-l" type="button" name="btn-view-activity" onclick="viewActivityCus()">View Activity</button> -->
-                    <input type="submit" class="btn-red" value="Activate Account" name="btn-activate-cus-account">
+                    <!-- <input type="submit" class="btn-red" value="Activate Account" name="btn-activate-cus-account">
                     <button class="btn-red" type="button" name="btn-suspend-account" onclick="suspendFunction()">Suspend Account</button>
-                    <button class="btn-blue" type="reset">Clear</button>
+                    <button class="btn-blue" type="reset">Clear</button> -->
                     </p>
                     </form>
                     

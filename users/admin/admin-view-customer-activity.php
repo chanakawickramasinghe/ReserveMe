@@ -37,6 +37,10 @@
             </form>
         </div>
             <h2>Activity of User</h2>
+            <?php
+    $cus_id = $_GET['id'];
+    echo $cus_id;
+?>
         <div>
 
         <table class="user" id="myTable" border="1">

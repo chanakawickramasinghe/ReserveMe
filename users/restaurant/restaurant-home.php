@@ -55,46 +55,29 @@
             }
 
             else { //to see res details
-                echo "
-                <table border=\"1\">
-                <tr>
-                    <th>Restaurant Name</th>
-                    <th>Restaurant Email</th>
-                    <th>Address</th>
-                    <th>City</th>
-                    <th>Restaurant location</th>
-                    <th>Telephone Number</th>
-                    <th>Image</th>
-                    <th>Rating</th>
-                    <th>No. of Rates</th>
-                    <th>Opening time</th>
-                    <th>Closing time</th>
-                </tr> ";
+               
 
                 $row = mysqli_fetch_assoc($res_query);
                 echo"
-                <tr> 
-                    <td>".$row['res_name']."</td> 
-                    <td>".$row['res_email']."</td> 
-                    <td>".$row['res_add_line1']."</td> 
-                    <td>".$row['city']."</td> 
-                    <td>".$row['res_location']."</td> 
-                    <td>".$row['res_tel']."</td> 
-                    <td><img class=\"img-promo\" src= \"../../images/restaurant/{$row['res_image']}\"></td>                     
-                    <td>".$row['res_rate']."</td>
-                    <td>".$row['no_of_rates']."</td>
-                    <td>".$row['opening_hour']."</td>
-                    <td>".$row['closing-hour']."</td>
-
+                <center><img class=\"img-promo\" src= \"../../images/restaurant/{$row['res_image']}\"><center>
+                <br>
+                <tr>  
+                    <b>Address:</b>  <td>".$row['res_add_line1']."</td>, <td>".$row['city']."</td><br>
+                    <b>Email:</b>  <td>".$row['res_email']."</td> <br>
+                    <b>Telphone No:</b> <td>".$row['res_tel']."</td><br>
+                    <b>Location:</b> <td>".$row['res_location']."</td> <br>
+                    <b>Office Hours:</b> <td>".$row['opening_hour']."</td> till <td>".$row['closing-hour']."</td><br>
+                    <b>Ratting:</b> <td>".$row['res_rate']."</td> | 
+                    <b>No. of Rates:</b> <td>".$row['no_of_rates']."</td><br><br>
                 </tr>";
-                
                 echo"
                 </table> ";
+                
             }
         ?>
-          
-
-    <?php include('../../includes/footer.php'); ?>
+        <div class=\"btn-center\">
+                <button class=\"btn-emp-edit\" type=\"button\">Edit Details</button>
+        </div>
   </div>  
 </body>
 

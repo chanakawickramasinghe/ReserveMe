@@ -71,7 +71,11 @@
                     
                     <p class="button-box">
                     <button class="btn-blue-l" type="button" name="btn-send-email" onclick="sendEmail()">Send Email</button>
-                    <button class="btn-blue-l" type="button" name="btn-view-activity" onclick="viewActivityCus()">View Activity</button>
+                    <?php 
+                        echo "<td><a class=\"btn-blue-l\" href =admin-view-customer-activity.php?id='cus_id' > View Activity </a> </td>";
+                    ?>
+                
+                    <!-- <button class="btn-blue-l" type="button" name="btn-view-activity" onclick="viewActivityCus()">View Activity</button> -->
                     <input type="submit" class="btn-red" value="Activate Account" name="btn-activate-cus-account">
                     <button class="btn-red" type="button" name="btn-suspend-account" onclick="suspendFunction()">Suspend Account</button>
                     <button class="btn-blue" type="reset">Clear</button>

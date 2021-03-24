@@ -43,9 +43,55 @@
     <div style="margin:20px">      
        
         <center><h2><span style="color:black">Reserve</span><span style="color:orange">Me</span></h2></center>
-        <center><h5> Reide Avenue, Colombo 07</h5></center>
-        <br><br> 
-        <center><img src="../../images/topaz.jpg" width="600" hight="584"></center>
+        <?php
+
+            $res_sql = "SELECT * FROM restaurant"; //get all data from restaurant table
+
+            $res_query = mysqli_query($connection,$res_sql);
+            $num_res = mysqli_num_rows($res_query);
+
+            if ($num_res == 0){ //if no data in table
+                echo"<p>No Data on Resataurant</p>";
+            }
+
+            else { //to see res details
+                echo "
+                <table border=\"1\">
+                <tr>
+                    <th>Restaurant Name</th>
+                    <th>Restaurant Email</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Restaurant location</th>
+                    <th>Telephone Number</th>
+                    <th>Image</th>
+                    <th>Rating</th>
+                    <th>No. of Rates</th>
+                    <th>Opening time</th>
+                    <th>Closing time</th>
+                </tr> ";
+
+                $row = mysqli_fetch_assoc($res_query);
+                echo"
+                <tr> 
+                    <td>".$row['res_name']."</td> 
+                    <td>".$row['res_email']."</td> 
+                    <td>".$row['res_add_line1']."</td> 
+                    <td>".$row['city']."</td> 
+                    <td>".$row['res_location']."</td> 
+                    <td>".$row['res_tel']."</td> 
+                    <td><img class=\"img-promo\" src= \"../../images/restaurant/{$row['res_image']}\"></td>                     
+                    <td>".$row['res_rate']."</td>
+                    <td>".$row['no_of_rates']."</td>
+                    <td>".$row['opening_hour']."</td>
+                    <td>".$row['closing-hour']."</td>
+
+                </tr>";
+                
+                echo"
+                </table> ";
+            }
+        ?>
           
 
     <?php include('../../includes/footer.php'); ?>

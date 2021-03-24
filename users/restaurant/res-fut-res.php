@@ -11,7 +11,28 @@
         <link rel="stylesheet" href="../../CSS/res-promo.css"/>
     </head>
     <body>
-        <div class="content-div">
+        <!-- nav bar -->
+        <?php include('navigation.php'); ?>  
+   
+        <!-- Start of side bar -->
+        <div class="sidebar"> 
+        <a href="restaurant-home.php">Home</a> 
+        <a href="add-preordermenu.php">Pre - Order Menu</a>    
+        <a href="add-menu.php">Update the Menu</a>
+        <a href="res-promo.php">Promotions</a>
+        <a href="res-floor-plan.php">Floor Plan</a> 
+        <a href="res-reservation.php" class="active">Reservations</a>
+        <a href="res-review.html">View Reviews</a>   
+        <br>
+        <hr>
+        <a href="mng-emp.php">Manage Employee</a>
+        <a href="hall-details.php">Reception Hall</a>
+        </div>
+        <!-- End of side bar -->
+
+        <div class="content">
+        <div style="margin:20px"> 
+         
             <br><br>        
             <center><h1 style="color:#ffbb01;">Up Comming Reservations</h1></center>
             <br><br>

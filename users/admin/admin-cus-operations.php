@@ -10,7 +10,7 @@ include('../../includes/connection.php');
     // $type = $_POST['type'];
     // $password = md5($_POST['password']);
 
-if(isset($_POST['btn'])){
+if(isset($_POST['submit'])){
 
     // $_SESSION["cur_cus_id"] = $cus_id;
     header('Location:./admin-view-customer-activity.php?id='.$cus_id);

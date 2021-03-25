@@ -49,7 +49,8 @@
             <br><br/><br><br/><br/><br><br/>
             <div class="row-b">
                 <div class="b b3">
-                    <div class="num">
+                    <div class="num"> 
+                        <!-- to show total number of registered customers -->
                         <?php 
                             $tot_cus_sql = "SELECT COUNT(user_id) AS TotCus FROM customer";
                             $tot_query = mysqli_query($connection,$tot_cus_sql);
@@ -58,10 +59,11 @@
                             echo $tot_cus;
                         ?>
                     </div>
-                    <div>TOTAL CUSTOMERS</div>
+                    <div>REGISTERED CUSTOMERS</div>
                 </div>
                 <div class="b b4">
                     <div class="num">
+                        <!-- to show total number of reservations done -->
                         <?php 
                             $tot_res_sql = "SELECT COUNT(reservation_id) AS TotRes FROM reservation";
                             $tot_query = mysqli_query($connection,$tot_res_sql);
@@ -73,8 +75,16 @@
                     <div>TOTAL RESERVATIONS</div>
                 </div>
                 <div class="b b3">
-                    <div class="num"><?=$data2['count2']?></div>
-                    <div>New Bookings</div>
+                    <div class="num"><!-- to show total number of promotions -->
+                        <?php 
+                            $tot_promo_sql = "SELECT COUNT(promo_id) AS TotPromo FROM promotions";
+                            $tot_query = mysqli_query($connection,$tot_promo_sql);
+                            $row_count = mysqli_fetch_assoc($tot_query);
+                            $tot_promo = $row_count['TotPromo'];
+                            echo $tot_promo;
+                        ?>
+                        </div>
+                    <div>TOTAL PROMOTIONS</div>
                 </div>
                 <div class="b b4">
                     <div class="num"><?=$data3['count3']?></div>

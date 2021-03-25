@@ -42,7 +42,7 @@
                 <h3>Details of Selected Customer</h3>
                 
                 <div class="update-box">
-                    <form method="POST" action="admin-cus-operations.php">
+                    <form method="POST" action="./admin-cus-operations.php">
                     <table>
                         <tr>
                             <th>Customer ID :</th>
@@ -68,10 +68,15 @@
                         </tr>
                     </table>
 
-                    
+                    <input type="submit" class="btn-blue-l" value="View Activity">
                     <p class="button-box">
-                    <button class="btn-blue-l" type="button" name="btn-send-email" onclick="admin-cus-operations.php">Send Email</button>
-                    <input type="submit" class="btn-blue-l" name="btn" value="View Activity">
+                    <!-- <button class="btn-blue-l" type="button" name="btn-send-email" onclick="admin-cus-operations.php">Send Email</button> -->
+                    <?php
+                    echo"
+                    <button class=\"btn-blue-l\" name=\"btn\" href=\"admin-view-customer-activity.php\" >View</button>
+                    ";
+                    ?>
+                    <!-- <input type="submit" class="btn-blue-l" name="btn" value="View Activity"> -->
                     <!-- <button class="btn-blue-l" type="button" name="btn-view-activity" onclick="viewActivityCus()">View Activity</button> -->
                     <!-- <input type="submit" class="btn-red" value="Activate Account" name="btn-activate-cus-account">
                     <button class="btn-red" type="button" name="btn-suspend-account" onclick="suspendFunction()">Suspend Account</button>

@@ -353,7 +353,7 @@
 .b4{
   /* background-color: #E792B0; */
   background: rgb(235,38,158);
-  background: linear-gradient(90deg, rgba(235,38,158,1) 0%, rgba(227,75,75,1) 100%);
+  background: linear-gradient(90deg,  rgba(222,13,217,1) 0%, rgba(227,75,75,1) 100%);
 }
 
 .num{
@@ -740,6 +740,7 @@
   padding-left: 5vw;
   padding-right: 5vw;
   padding-top: 20px;
+  overflow: hidden;
   
 }
 

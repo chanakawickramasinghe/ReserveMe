@@ -3,6 +3,7 @@
 <?php include('emp-session.php') ?>
 
 
+
 <html>
     <head>
         <title>Employee Profile</title>
@@ -93,14 +94,13 @@
                             <input type = "time" placeholder="Arrival time?">
                         </div>
                         <div class = "form-row">
-                            <button onclick="onClickOpenForm()"  class="emp-button" type=""  name="submit">Reserve</button>
+                            <button id="myBtn" class="emp-button" type=""  name="submit">Reserve</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--Start of reservationform section-->
-    
+        <!--Start of reservationform section-->    
     
     </td>
     </tr>
@@ -124,7 +124,7 @@
    
     </div>   
         
-    <div class="footer"> <?php include('../../includes/footer.php'); ?> </div>   
-     
+    <div class="footer"> <?php include('../../includes/footer.php'); ?> </div> 
+
 </body>
 </html> 

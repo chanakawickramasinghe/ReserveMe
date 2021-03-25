@@ -1,4 +1,5 @@
 <?php include('../../includes/session.php') ?>
+<?php include('../../includes/connection.php') ?>
 
 <html>
     <head>
@@ -8,6 +9,7 @@
 	    <link rel="stylesheet" href="../../CSS/admin-nav.css">
         <link href="../../images/logo.png" rel="shortcut icon"/>
         <link rel="stylesheet" href="../../CSS/admin-dashboard.css"/>
+        <link rel="stylesheet" href="../../CSS/footer.css">
     </head>
     <body>
 
@@ -41,22 +43,40 @@
                 <button type="button" class="btn-promo" onclick="window.location.href='admin-past-messages.php'">View Past Messages</button>
             </div>
 
-            <table class="message-table">
-                <tr><th>I faced difficulties while login</th></tr>
-                <tr><td>When I try to login to the system, a message was shown as my account has been suspended and contact an admin to re-activate my account.</td></tr>
-                <tr><td>from <b>John Henricks</b> on <b>2020-11-16 12:23:42</b></td></tr>
-                <tr><td class="txt-area"><textarea placeholder="Enter Your Reply..." class="reply-area"></textarea></td></tr>
-                <tr><td class="txt-area"><button type="submit" class="btn-reply">Send</button></td></tr>
+            <?php
 
-                <td><hr></td>
+            $new_msg_sql = "SELECT * FROM contact_us WHERE replied='0'"; //check whether replied
 
-                <tr><th>Complaint</th></tr>
-                <tr><td>I have made a reservation in CingZhang Chinese restaurant but when I went to the restaurant on time I had to wait for few minutes in the lobby. I was very unsatisfied by the service at this restaurant as the reservation was placed but the table was not cleaned and it took them some time to do it. </td></tr>
-                <tr><td>from <b>Carl Johnson</b> on <b>2020-11-10 13:20:01</b></td></tr>
-                <tr><td class="txt-area"><textarea placeholder="Enter Your Reply..." class="reply-area"></textarea></td></tr>
-                <tr><td class="txt-area"><button type="submit" class="btn-reply">Send</button></td></tr>
+            $new_msg_query = mysqli_query($connection,$new_msg_sql);
+            $num_msg = mysqli_num_rows($new_msg_query);
+            
+            if ($num_msg == 0){ //if there are no messages
+                echo"<br/><br/><br/>
+                <h1><font color=\"grey\">No New Messages to Display</font></h1>
+                <center><img class=\"img-promo\" src=\"../../images/zero-messages.jpg\" alt=\"zero messages image\"></center>";
+            }
+            else { //to see new messages
+                while($row = mysqli_fetch_assoc($new_msg_query)){  
+                echo"
+                    <form method=\"POST\" action=\"message-submit.php\"> 
+                        <table class=\"message-table\">
+                            <tr><th>".$row['comment']."</th></tr>
+                            <tr><td>".$row['message']."</td></tr>
+                            <tr><td>from <b>".$row['name']."</b> (".$row['email'].") on <b>".$row['date_time']."</b> (Message Id = ".$row['msg_id'].")</td></tr>
 
-            </table>
+                            <input type=\"hidden\" id=\"msg_id\" name=\"msg_id\" value=".$row['msg_id'].">
+                            <tr><td class=\"txt-area\"><textarea placeholder=\"Enter Your Reply...\" name=\"reply\" class=\"reply-area\"></textarea></td></tr>
+                            <tr><td class=\"txt-area\"><input type=\"submit\" name=\"submit\"  class=\"btn-reply\" value=\"Send\" required></td></tr>
+                    </form>
+                    
+                    <td><hr></td>
+                ";
+                }
+                echo "</table>";
+            }
+            ?>
+
+        <span><?php include('../../includes/footer.php'); ?></span>
         </div>
 
 

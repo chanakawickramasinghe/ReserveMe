@@ -309,6 +309,58 @@
   padding-right: 12vw;
 }
 
+/* data in boxes */
+
+.row-b{
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width:90%;
+  padding: 20px 50px;
+  display:flex;
+  justify-content: space-between;
+}
+
+.b{
+  width: 12vw;
+  height: 11vh;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: large;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+}
+
+.b1{
+
+  /* background-color: #6BE6C1; */
+  background: rgb(57, 4, 181);
+  background: linear-gradient(90deg, rgb(51, 4, 181) 0%, rgb(39, 140, 255) 100%);
+}
+
+.b2{
+  /* background-color: #4AB1EB; */
+  background: rgb(37,142,236);
+  background: linear-gradient(90deg, rgba(37,142,236,1) 0%, rgba(13,222,212,1) 100%);
+}
+
+.b3{
+  /* background-color: #DFA3FB; */
+  background: rgb(120,37,236);
+  background: linear-gradient(90deg, rgba(120,37,236,1) 0%, rgba(222,13,217,1) 100%);
+}
+
+.b4{
+  /* background-color: #E792B0; */
+  background: rgb(235,38,158);
+  background: linear-gradient(90deg,  rgba(222,13,217,1) 0%, rgba(227,75,75,1) 100%);
+}
+
+.num{
+  font-size: 3rem;
+  font-weight: bold;
+}
+
 /* manage user end */
 
 /* admin home */
@@ -688,6 +740,8 @@
   padding-left: 5vw;
   padding-right: 5vw;
   padding-top: 20px;
+  overflow: hidden;
+  width: 100%;
   
 }
 
@@ -719,6 +773,7 @@
 
 .txt-area{
   float: right;
+  position:relative;
   padding-top: 0%;
 }
 
@@ -829,4 +884,3 @@ h2{
   padding:20px;
   box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
 }
-

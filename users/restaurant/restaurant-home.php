@@ -43,12 +43,41 @@
     <div style="margin:20px">      
        
         <center><h2><span style="color:black">Reserve</span><span style="color:orange">Me</span></h2></center>
-        <center><h5> Reide Avenue, Colombo 07</h5></center>
-        <br><br> 
-        <center><img src="../../images/topaz.jpg" width="600" hight="584"></center>
-          
+        <?php
 
-    <?php include('../../includes/footer.php'); ?>
+            $res_sql = "SELECT * FROM restaurant"; //get all data from restaurant table
+
+            $res_query = mysqli_query($connection,$res_sql);
+            $num_res = mysqli_num_rows($res_query);
+
+            if ($num_res == 0){ //if no data in table
+                echo"<p>No Data on Resataurant</p>";
+            }
+
+            else { //to see res details
+               
+
+                $row = mysqli_fetch_assoc($res_query);
+                echo"
+                <center><img class=\"img-promo\" src= \"../../images/restaurant/{$row['res_image']}\"><center>
+                <br>
+                <tr>  
+                    <b>Address:</b>  <td>".$row['res_add_line1']."</td>, <td>".$row['city']."</td><br>
+                    <b>Email:</b>  <td>".$row['res_email']."</td> <br>
+                    <b>Telphone No:</b> <td>".$row['res_tel']."</td><br>
+                    <b>Location:</b> <td>".$row['res_location']."</td> <br>
+                    <b>Office Hours:</b> <td>".$row['opening_hour']."</td> till <td>".$row['closing-hour']."</td><br>
+                    <b>Ratting:</b> <td>".$row['res_rate']."</td> | 
+                    <b>No. of Rates:</b> <td>".$row['no_of_rates']."</td><br><br>
+                </tr>";
+                echo"
+                </table> ";
+                
+            }
+        ?>
+        <div class=\"btn-center\">
+                <button class=\"btn-emp-edit\" type=\"button\">Edit Details</button>
+        </div>
   </div>  
 </body>
 

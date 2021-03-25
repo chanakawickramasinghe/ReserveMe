@@ -6,10 +6,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ReserveMe - Admin</title>
-	    <link rel="stylesheet" href="../../CSS/nav.css">
+	    <link rel="stylesheet" href="../../CSS/admin-nav.css">
         <link href="../../images/logo.png" rel="shortcut icon"/>
         <link rel="stylesheet" href="../../CSS/admin-dashboard.css"/>
         <script src="../../js/manage-user-search.js"></script>
+        <link rel="stylesheet" href="../../CSS/footer.css">
     </head>
     <body>
 
@@ -36,27 +37,46 @@
                 </div>    
         </div>
 
-        <table class="message-table">
-                <tr><th>I faced difficulties while login</th></tr>
-                <tr><td>When I try to login to the system, a message was shown as my account has been suspended and contact an admin to re-activate my account.</td></tr>
-                <tr><td>from <b>John Henricks</b> on <b>2020-11-16 12:23:42</b></td></tr>
-                <tr><td class="sent-reply">You have violated the terms and conditions of the system so we are sorry to say that the account has been suspended by the administration. It is clearly specified in the Terms and Conditions that any violation can cause upto gettoing suspended your account.</td></tr>
-                <tr><td class="sent-reply">Reply sent on <b>2020-11-16 13:00:00</b> by <b>Co-admin Chanaka</b>
-                <tr><td class="txt-area"><textarea placeholder="Enter Your Reply..." class="reply-area"></textarea></td></tr>
-                <tr><td class="txt-area"><button type="submit" class="btn-reply">Send</button></td></tr>
+        <?php
 
-                <td><hr></td>
+        $past_msg_sql = "SELECT contact_us.comment, contact_us.message, contact_us.name, 
+        contact_us.email, contact_us.date_time, contact_us.msg_id, 
+        replies.reply, replies.date_time_sent, replies.reply_id
+        FROM contact_us INNER JOIN replies ON contact_us.msg_id=replies.msg_id WHERE replied='1'"; //check whether replied
 
-                <tr><th>I faced difficulties while login</th></tr>
-                <tr><td>When I try to login to the system, a message was shown as my account has been suspended and contact an admin to re-activate my account.
-                When I try to login to the system, a message was shown as my account has been suspended and contact an admin to re-activate my account.</td></tr>
-                <tr><td>from <b>Carl Johnson</b> on <b>2020-11-10 13:20:01</b></td></tr>
-                <tr><td class="sent-reply">You have violated the terms and conditions of the system so we are sorry to say that the account has been suspended by the administration. It is clearly specified in the Terms and Conditions that any violation can cause upto gettoing suspended your account.</td></tr>
-                <tr><td class="sent-reply">Reply sent on <b>2020-11-16 13:00:00</b> by <b>Co-admin Chanaka</b>
-                <tr><td class="txt-area"><textarea placeholder="Enter Your Reply..." class="reply-area"></textarea></td></tr>
-                <tr><td class="txt-area"><button type="submit" class="btn-reply">Send</button></td></tr>
+        $past_msg_query = mysqli_query($connection,$past_msg_sql);
+        $num_msg = mysqli_num_rows($past_msg_query);
 
-            </table>
+        if ($num_msg == 0){ //if there are no messages
+            echo"<br/><br/><br/>
+            <h1><font color=\"grey\">No Past Messages to Display</font></h1>
+            <center><img class=\"img-promo\" src=\"../../images/zero-messages.jpg\" alt=\"zero messages image\"></center>";
+        }
+        else { //to see new messages
+            while($row = mysqli_fetch_assoc($past_msg_query)){  
+            echo"
+
+                <table class=\"message-table\">
+                <tr><th>".$row['comment']."</th></tr>
+                <tr><td>".$row['message']."</td></tr>
+                <tr><td>from <b>".$row['name']."</b> (".$row['email'].") on <b>".$row['date_time']."</b> (Message Id = ".$row['msg_id'].")<br/><br/></td></tr>
+                <tr><td class=\"sent-reply\">".$row['reply']."</td></tr>
+                <tr><td class=\"sent-reply\">Reply sent on <b>".$row['date_time_sent']."</b> by <b>Admin</b> (Reply Id = ".$row['reply_id'].")
+                
+                <tr><td><br/><hr></td></tr>
+
+            ";
+
+            // in case replying is needed here
+            // <tr><td class=\"txt-area\"><textarea placeholder=\"Enter Your Reply...\" class=\"reply-area\"></textarea></td></tr>
+            // <tr><td class=\"txt-area\"><button type=\"submit\" class=\"btn-reply\">Send</button></td></tr>
+
+            }
+        }
+            echo "</table>";
+        ?>
+
+        <span><?php include('../../includes/footer.php'); ?></span>
 
     </body>
 </html>

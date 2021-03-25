@@ -2,37 +2,55 @@
 <?php
     require '../../includes/connection.php';
     $alert='';
-    $msg=$_POST['reply'];
-    $email=$_POST['cus_email'];
+    $reply=$_POST['reply'];
+    $msg_id=$_POST['msg_id'];
+
+    date_default_timezone_set('Asia/Colombo');
+    $today_date = date("Y-m-d H:i:s");
+
+    $get_msg_details_sql = "SELECT * FROM contact_us WHERE msg_id = '$msg_id'";
+    $get_msg_details_query = mysqli_query($connection,$get_msg_details_sql);
+
+    $row = mysqli_fetch_assoc($get_msg_details_query);
+        
+        $email=$row['email'];
+        $comment=$row['comment'];
+        $msg=$row['message'];
+        $name=$row['name'];
+
+    //echo "hello $email";
 
     if(isset($_POST['submit'])){
         //echo "hello $email";
-        $query="SELECT email FROM customer WHERE email='$email'";
-        $result=mysqli_query($connection,$query);
-        if(mysqli_num_rows($result)>0){
-            $token=uniqid(md5(time()));
-            $query="INSERT INTO tokens (email,token) VALUES ('$email','$token')";
-            $insert_result=mysqli_query($connection,$query);
             
             //send token to the email
             $to=$email;
             $from='info.reserve.lk@gmail.com';
-            $subject="Password reset token";
-            $message='We have got your request to reset your password.<br>';
-            $message.='Please follow the url and reset your password.The link will only be valid for one time use only.<br>';
-            $message.='http://localhost/ReserveMe/reset/password_reset.php?token='.$token;
+            $subject="Reply : $comment";
+            $message='Dear '.$name.', <br><br> We have got your message: <br>'.$msg;
+            $message.='<br><br>';
+            $message.='Reply from admin : <br>'.$reply;
             $header="From: {$from}\r\nContent-Type: text/html;";
 
             $send_result=mail($to,$subject,$message,$header);
-            if($send_result)
-            echo "<script>alert('Reset Link is sent to the email');
-                  window.location = '../includes/login.php';
-                  </script>";             
-            else
+            if($send_result){
+                echo "<script>
+                alert('Message sent as an Email!');
+                window.location = 'messages.php';
+                </script>"; 
+                $replied_sql="UPDATE contact_us SET replied='1' WHERE msg_id='$msg_id'";
+                mysqli_query($connection,$replied_sql);
+
+                $update_reply_sql = "INSERT INTO replies (reply_id, msg_id, reply, date_time_sent)
+                VALUES (NULL, '$msg_id' , '$reply', '$today_date')";
+                mysqli_query($connection,$update_reply_sql);
+            }
+           
+            else {
+                echo "failed";
                 $alert="<div class='failed'>Failed to send the mail!</div>";
-        }
-        else 
-        $alert="<p class='error'>The entered email is not a registerd email address!Please try with a valid email address.</p>";
+            }
+                
     }
 
 ?>

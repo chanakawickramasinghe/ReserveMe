@@ -56,14 +56,15 @@
                 <center><img class=\"img-promo\" src=\"../../images/zero-messages.jpg\" alt=\"zero messages image\"></center>";
             }
             else { //to see new messages
-                while($row = mysqli_fetch_assoc($new_msg_query)){  //?cus_email={$row['email']}
+                while($row = mysqli_fetch_assoc($new_msg_query)){  
                 echo"
                     <form method=\"POST\" action=\"message-submit.php\"> 
                         <table class=\"message-table\">
                             <tr><th>".$row['comment']."</th></tr>
                             <tr><td>".$row['message']."</td></tr>
                             <tr><td>from <b>".$row['name']."</b> (".$row['email'].") on <b>".$row['date_time']."</b> (Message Id = ".$row['msg_id'].")</td></tr>
-                            <input type=\"hidden\" id=\"cus_email\" name=\"cus_email\" value=".$row['email'].">
+
+                            <input type=\"hidden\" id=\"msg_id\" name=\"msg_id\" value=".$row['msg_id'].">
                             <tr><td class=\"txt-area\"><textarea placeholder=\"Enter Your Reply...\" name=\"reply\" class=\"reply-area\"></textarea></td></tr>
                             <tr><td class=\"txt-area\"><input type=\"submit\" name=\"submit\"  class=\"btn-reply\" value=\"Send\" required></td></tr>
                     </form>

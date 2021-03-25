@@ -741,6 +741,7 @@
   padding-right: 5vw;
   padding-top: 20px;
   overflow: hidden;
+  width: 100%;
   
 }
 
@@ -772,6 +773,7 @@
 
 .txt-area{
   float: right;
+  position:relative;
   padding-top: 0%;
 }
 

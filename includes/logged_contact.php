@@ -46,9 +46,8 @@
 		</div>
 		<!--End of nav-->
         <br>
-        <div class="container">
-        <img src="../images/Contact-us.jpg" alt="Contact-Us image" style="height:200px;width:100%">
-        <h1 class="centered"> We would love to hear from you..!</h1>
+        <div class="container"><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <h1 class="centered"> <font color=black>We would <font color=orange>love</font> to hear from <font color=orange>you</font>..!</font></h1>
         </div>
 
         <div style="margin-left:10%">
@@ -67,9 +66,6 @@
         <option value="Other">Other</option>
         </select><br>
       
-        <!-- <input class="type-feild" type="text" name="fname" value="Chanaka" placeholder="Full Name" required><br> -->
-        <!-- <input class="type-feild" type="email" name="email" placeholder="Email Address" required><br> -->
-        <input class="type-feild-comment" type="tel" name="mobile" placeholder="Mobile Number(Optional)" pattern='^\+?\d{11}'><br>
         <textarea class="type-feild-comment"  style="height:200px;overflow:auto" scrolling="yes" type="text" name="msg" placeholder="Type message......" ></textarea><br>
         <input type="submit" name="submit"  class="hero-button" value="Post" style="margin-left:30px"  required>
         </form>
@@ -77,7 +73,7 @@
         </td>
 
         <td>
-        <img src="../images/contact-us-woman.jpg" alt="">
+        <img src="../images/contact-us-woman.jpg" height="450px" width="450px" alt="">
         
         
         
@@ -95,18 +91,20 @@
 
     <?php
      
+     date_default_timezone_set('Asia/Colombo');
+     $today_date = date("Y-m-d H:i:s");
+
     if(isset($_POST['submit'])){
         //Assign input data from form to variables
         checkSession();
         $comment=$_POST['comment'];
         $name= $_SESSION["name"];
         $email= $_SESSION["email"];
-        $mobile= $_POST['mobile'];
         $msg= $_POST['msg'];
 
         //Insert into database
 
-        $commentQuery="INSERT INTO contact_us(comment,name,email,mobile,message) VALUES('$comment','$name','$email','$mobile','$msg')" ;
+        $commentQuery="INSERT INTO contact_us(comment,name,email,message,date_time) VALUES('$comment','$name','$email','$msg','$today_date')" ;
         if (mysqli_query($connection,$commentQuery) == TRUE) {
             // $message = base64_encode(urlencode("Message Sent Successfully"));
             // header('Location:contact.php?msg=' . $message);

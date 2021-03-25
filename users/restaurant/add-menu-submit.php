@@ -1,6 +1,10 @@
 <?php
 include('../../includes/connection.php');
 include('../../includes/message.php');
+?>
+
+<!-- Database update for insert a new menu -->
+<?php
 $msg = "";
 
 if(isset($_POST['submit'])){
@@ -22,16 +26,10 @@ if(isset($_POST['submit'])){
 // mysqli_close($connection); 
 ?>
 
-<!-- <script>
-function myFunction() {
-confirm("Menu updated successfully");
-}
-</script> -->
-
-    
+<!-- Database update for set menu for preorders -->
 <?php
 
-    if(isset($_POST['update'])){
+    if(isset($_POST['pre_update'])){
         $allow_preorder = $_POST['allow_preorder'];
         $item_name= $_POST['item_name'];
 
@@ -46,13 +44,32 @@ confirm("Menu updated successfully");
         }
 
         if($allow_preorder==0){
-            echo 'set2';
             $sql_add_menu2="UPDATE menu SET allow_preorder=1 WHERE item_name='$item_name'";    
             if($results2=$connection->query($sql_add_menu2)){
                 header('Location:add-menu.php');
                 exit();
                 }  
         }
+    }
+?>
+
+<!-- Database update for menu details changes -->
+<?php
+
+    if(isset($_POST['update'])){
+        $item_cat = $_POST['item_cat'];
+        $item_name = $_POST['item_name'];
+        $price= $_POST['price'];
+        $item_id= $_POST['item_id'];
+
+        $sql = "UPDATE menu SET item_cat='$item_cat', item_name='$item_name', item_price='$price' where item_id='$item_id'";
+        if($results=$connection->query($sql)){
+            header('Location:add-menu.php');
+            exit();
+            }  else {
+                echo "SQL Syntex error";
+            }
+
     }
 ?>
 

@@ -51,9 +51,9 @@
         <option value="Other">Other</option>
         </select><br>
       
-        <input class="type-feild" type="text" name="fname" placeholder="Full Name" required><br>
-        <input class="type-feild" type="email" name="email" placeholder="Email Address" required><br>
-        <input class="type-feild" type="tel" name="mobile" placeholder="Mobile Number(Optional)" pattern='^\+?\d{9,11}'><br>
+        <input class="type-feild-comment" type="text" name="fname" placeholder="Full Name" required><br>
+        <input class="type-feild-comment" type="email" name="email" placeholder="Email Address" required><br>
+        <input class="type-feild-comment" type="tel" name="mobile" placeholder="Mobile Number(Optional)" pattern='^\+?\d{9,11}'><br>
         <textarea class="type-feild-comment"  style="height:200px;overflow:auto" scrolling="yes" type="text" name="msg" placeholder="Type message......" ></textarea><br>
         <input type="submit" name="submit"  class="hero-button" value="Post" style="margin-left:30px"  required>
         </form>

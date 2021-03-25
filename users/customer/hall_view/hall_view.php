@@ -20,7 +20,7 @@
     <!--Start of nav-->
     <div class="topnav" id="myTopnav">
         <a href="../../../index.php"><img class = "logo" src="../../../images/logo.png"></a>
-		<a class="navtab" href="../../user-type.php">Register</a>
+		<a class="navtab" href="../customerReg.php">Register</a>
 		<a class="navtab" href="../../../includes/login.php">Login</a>
 		<a class="navtab" href="../../../includes/contact.php">Contact</a>
 		<a class="navtab" href="../../../includes/about.php">About</a>
@@ -29,7 +29,7 @@
     <!--End of nav-->
 
     <!--Start of main-section-->
-    <section class="reservation">
+    <section class="reservation" style="padding-top:38px; margin:auto;">
 		<!--img-->
 		<div class="reservation-img"><img src="../../../images/gallery4.jpg" /></div>
 		<!--text-->

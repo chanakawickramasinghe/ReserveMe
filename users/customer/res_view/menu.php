@@ -29,8 +29,8 @@
                 <tr>
                     <th>".$row['cat_name']."</th>               
                 </tr>";
-                //make this item avail and should add another one for update menu
-                $search_menu = "SELECT * FROM menu WHERE allow_preorder='1' AND item_cat='$row[cat_name]'";
+				
+                $search_menu = "SELECT * FROM menu WHERE item_avail='1' AND item_cat='$row[cat_name]'";
                 $result_menu = mysqli_query($connection,$search_menu);
                 while($row = mysqli_fetch_assoc($result_menu)){
                     echo "

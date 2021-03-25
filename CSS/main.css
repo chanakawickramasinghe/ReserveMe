@@ -1022,7 +1022,6 @@ ul{
 		overflow: auto;
 		background-repeat: no-repeat;
 		width: 550px;
-		
 	}
 
 	.review .card2{
@@ -1031,12 +1030,10 @@ ul{
 		z-index: 1;
 		width: 200px;
 		left:80%;
-		
+		text-align: center;
 	}
 
-	.review .card1 i{
-		margin: auto;
-	}
+	
 
 	.review .card1 h3{
 		color: orange;

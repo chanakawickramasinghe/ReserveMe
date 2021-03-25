@@ -67,7 +67,7 @@
         
 
 
-        <!--Include footer.php-->
+    <!--Include footer.php-->
    <div><?php include "../../includes/footer.php" ?></div>
    </div>
     <!--script for onClickNav() for the navigation menu-->
@@ -77,12 +77,11 @@
         var check = function() {
             if (document.getElementById('password').value == document.getElementById('confirm_password').value){
                     document.getElementById('message').style.color = 'green';
-                    document.getElementById('message').innerHTML = 'Password is matching';
+                    document.getElementById('message').innerHTML = 'Passwords are matching';
             } 
             else{
                 document.getElementById('message').style.color = 'red';
-                // document.getElementById('message').style.backgroundColor = 'initial';
-                document.getElementById('message').innerHTML = 'Password does not match';
+                document.getElementById('message').innerHTML = 'Passwords does not match';
             }
         }
 

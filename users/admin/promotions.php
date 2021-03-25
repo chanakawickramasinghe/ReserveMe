@@ -9,6 +9,7 @@
 	    <link rel="stylesheet" href="../../CSS/admin-nav.css">
         <link href="../../images/logo.png" rel="shortcut icon"/>
         <link rel="stylesheet" href="../../CSS/admin-dashboard.css"/>
+        <link rel="stylesheet" href="../../CSS/footer.css">
     </head>
     <body>
 
@@ -33,8 +34,7 @@
             <a href="coadmins.php">Manage Co-Admins</a>
         </div>
 
-        <div class="content-div">
-            <br><br>        
+        <div class="content-div">   
             <h1><font color="black">Ongoing</font> Promotions</h1>
 
             <div class="promo-btn-bar">
@@ -85,6 +85,7 @@
                 </table> ";
             }
         ?>
+        <?php include('../../includes/footer.php'); ?>
         </div>
 
 

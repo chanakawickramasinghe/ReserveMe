@@ -5,14 +5,14 @@
 	<meta content="IE-edge" http-equiv="X-UA-Compatible"/>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 	<title>Reviews System</title>
-		<link href="../../../../CSS/reviews.css" rel="stylesheet" type="text/css">
-		<link href="../../../../CSS/review.css" rel="stylesheet" type="text/css">
 	<!--web-icon------------------->
-	<link href="images/logo.png" rel="shortcut icon"/>
+	<link href="../../../../images/logo.png" rel="shortcut icon"/>
 	<!--stylesheet-------------------->
 	<link href="CSS/main.css" rel="stylesheet" type="text/css"/>
 	<link href="../../../../CSS/nav.css" rel="stylesheet" type="text/css"/>
 	<link href="../../../../CSS/footer.css" rel="stylesheet" type="text/css"/>
+	<link href="../../../../CSS/reviews.css" rel="stylesheet" type="text/css">
+	<link href="../../../../CSS/review.css" rel="stylesheet" type="text/css">
 	<!--FontAwesome-------->
 	<script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
 </head>
@@ -22,11 +22,11 @@
 	<section class="main">
 		<!--Start of nav-->
 		<div class="topnav" id="myTopnav">
-			<img class = "logo" src="images/logo.png">
-			<a class="navtab" href="users/customer/customerReg.php">Register</a>
-			<a class="navtab" href="includes/login.php">Login</a>
-			<a class="navtab" href="includes/contact.php">Contact</a>
-			<a class="navtab" href="includes/about.php">About</a>
+			<a href="../../../../index.php"><img class = "logo" src="../../../../images/logo.png"></a>
+			<a class="navtab" href="../../../../users/customer/customerReg.php">Register</a>
+			<a class="navtab" href="../../../../includes/login.php">Login</a>
+			<a class="navtab" href="../../../../includes/contact.php">Contact</a>
+			<a class="navtab" href="../../../../includes/about.php">About</a>
 			<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
 		</div>
 		<!--End of nav-->

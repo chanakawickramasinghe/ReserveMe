@@ -2,7 +2,7 @@
 <?php include('../../includes/connection.php') ?>
 
 <?php
-    $user_id = "";
+    $cus_id = "";
      
 ?>
 
@@ -42,50 +42,45 @@
                 <h3>Details of Selected Customer</h3>
                 
                 <div class="update-box">
-                    <form method="POST" action="active-suspend.php">
+                    <form method="POST" action="./admin-cus-operations.php">
                     <table>
                         <tr>
                             <th>Customer ID :</th>
                             <td><input class="input-s" type="text" placeholder="ID" id="cus_id" name="user_id" readonly="true" required></td>
                             <th>Customer Email :</th>
-                            <td><input class="input-l" type="text" placeholder="Customer Email" id="email" readonly="true" required></td>
+                            <td><input class="input-l" type="text" placeholder="Customer Email" id="email" name="cus_email" readonly="true" required></td>
                             <th>Contact No. :</th>
-                            <td><input class="input-m" type="text" placeholder="Contact" id="contact_number" readonly="true" required></td>
+                            <td><input class="input-m" type="text" placeholder="Contact" id="contact_number" readonly="true" name="contact_no" required></td>
 
                         </tr>
                         <tr>
                             <th>Customer Name :</th>
-                            <td><input width="50px" class="input-l" type="text" placeholder="Customer Name" id="cus_name" readonly="true" required></td>
+                            <td><input width="50px" class="input-l" type="text" placeholder="Customer Name" id="cus_name" name="cus_name" readonly="true" required></td>
                             <th>Date of Birth :</th>
-                            <td><input class="input-m" type="text" placeholder="yyyy-mm-dd" id="dob" readonly="true" required></td>
+                            <td><input class="input-m" type="text" placeholder="yyyy-mm-dd" id="dob" readonly="true" name="cus_dob" required></td>
                             <th>Rating :</th>
-                            <td><input class="input-s" type="text" id="ratings" placeholder="Rating" readonly="true" required></td>
-
-                        </tr>
-                        <tr>
-                            <th>Postbox No. :</th>
-                            <td><input class="input-m" type="text" placeholder="Postbox" id="postal_number" readonly="true" required></td>
-                            <th>Street Name :</th>
-                            <td><input class="input-l" type="text" placeholder="Street" id="street" readonly="true" required></td>
-                            <th>City :</th>
-                            <td><input class="input-m" type="text" placeholder="City" id="city" readonly="true" required></td>
+                            <td><input class="input-s" type="text" id="ratings" placeholder="Rating" readonly="true" name="cus_rating" required></td>
 
                         </tr>
                         <tr>
                             <th>Active Status :</th>
-                            <td><input class="input-s" type="text" id="active_status" placeholder="Status" readonly="true" required></td>
-                            <!-- <td></td> -->
-                            
+                            <td><input class="input-s" type="text" id="active_status" placeholder="Status" readonly="true" name="cus_status" required></td>
                         </tr>
                     </table>
 
-                    
+                    <input type="submit" class="btn-blue-l" value="View Activity">
                     <p class="button-box">
-                    <button class="btn-blue-l" type="button" name="btn-send-email" onclick="sendEmail()">Send Email</button>
-                    <button class="btn-blue-l" type="button" name="btn-view-activity" onclick="viewActivityCus()">View Activity</button>
-                    <input type="submit" class="btn-red" value="Activate Account" name="btn-activate-cus-account">
+                    <!-- <button class="btn-blue-l" type="button" name="btn-send-email" onclick="admin-cus-operations.php">Send Email</button> -->
+                    <?php
+                    echo"
+                    <button class=\"btn-blue-l\" name=\"btn\" href=\"admin-view-customer-activity.php\" >View</button>
+                    ";
+                    ?>
+                    <!-- <input type="submit" class="btn-blue-l" name="btn" value="View Activity"> -->
+                    <!-- <button class="btn-blue-l" type="button" name="btn-view-activity" onclick="viewActivityCus()">View Activity</button> -->
+                    <!-- <input type="submit" class="btn-red" value="Activate Account" name="btn-activate-cus-account">
                     <button class="btn-red" type="button" name="btn-suspend-account" onclick="suspendFunction()">Suspend Account</button>
-                    <button class="btn-blue" type="reset">Clear</button>
+                    <button class="btn-blue" type="reset">Clear</button> -->
                     </p>
                     </form>
                     
@@ -100,7 +95,6 @@
         <div>
         
         <!-- Adding the table with customer details -->
-        
         <table class="user" id="myTable" border="1">
             <tr>
                 <th>Customer ID</th>
@@ -108,9 +102,6 @@
                 <th>Customer Email</th>
                 <th>Contact No.</th>
                 <th>DoB</th>
-                <th>Postbox</th>
-                <th>Street</th>
-                <th>City</th>
                 <th>Ranking</th>
                 <th>Status</th>
             </tr>
@@ -129,9 +120,6 @@
                     <td>".$row['email']."</td>
                     <td>".$row['contact_no']."</td>
                     <td>".$row['dob']."</td>
-                    <td>".$row['postal_number']."</td>
-                    <td>".$row['street']."</td>
-                    <td>".$row['city']."</td>
                     <td>".$row['rankings']."</td>
                     <td>".$row['active_status']."</td>
                 </tr>";
@@ -155,11 +143,8 @@
                 document.getElementById("email").value = this.cells[2].innerHTML;
                 document.getElementById("dob").value = this.cells[4].innerHTML;
                 document.getElementById("contact_number").value = this.cells[3].innerHTML;
-                document.getElementById("street").value = this.cells[6].innerHTML;
-                document.getElementById("postal_number").value = this.cells[5].innerHTML;
-                document.getElementById("city").value = this.cells[7].innerHTML;
-                document.getElementById("active_status").value = this.cells[9].innerHTML;
-                document.getElementById("ratings").value = this.cells[8].innerHTML;
+                document.getElementById("active_status").value = this.cells[6].innerHTML;
+                document.getElementById("ratings").value = this.cells[5].innerHTML;
             };
         }
 

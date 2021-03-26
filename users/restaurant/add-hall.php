@@ -49,7 +49,7 @@
             </tr>
             <tr>
                 <th>Image 2</th>
-                <td><input type="file" name="image2" placeholder="Image 1"></td>
+                <td><input type="file" name="image2" placeholder="Image 2"></td>
             </tr>
             <tr>
                 <th>Address</th>

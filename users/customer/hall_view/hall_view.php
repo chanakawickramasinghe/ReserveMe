@@ -20,7 +20,7 @@
     <!--Start of nav-->
     <div class="topnav" id="myTopnav">
         <a href="../../../index.php"><img class = "logo" src="../../../images/logo.png"></a>
-		<a class="navtab" href="../../user-type.php">Register</a>
+		<a class="navtab" href="../customerReg.php">Register</a>
 		<a class="navtab" href="../../../includes/login.php">Login</a>
 		<a class="navtab" href="../../../includes/contact.php">Contact</a>
 		<a class="navtab" href="../../../includes/about.php">About</a>
@@ -29,21 +29,61 @@
     <!--End of nav-->
 
     <!--Start of main-section-->
-    <section class="reservation">
-		<!--img-->
-		<div class="reservation-img"><img src="../../../images/gallery4.jpg" /></div>
-		<!--text-->
-		<div class="reservation-text">
-			<!--heading-->
-			<h3>Oak Room</h3>
-			<!--details-->
-            <p>Opening Hours: 8 a.m - 12 p.m</p>
-            <p>Capacity: 100</p>
-            <p>Special: Ball Room Facilities</p>
-            <a class="hero-button"  onclick="onClickOpenForm()">Reserve</a>
-		</div>
-		</section>
-    <!--End of main-section-->
+    <?php 
+      if(isset($_GET['hall_id'])){
+        $sql = "SELECT * FROM reception_hall WHERE hall_id = ".$_GET['hall_id'];
+        $resultProduct = mysqli_query($connection,$sql);
+        while($rowProduct  = mysqli_fetch_assoc($resultProduct)){  
+          $preorder_available=$rowProduct['preorder_available'];
+          echo"<!--Start of main-section-->
+          <section class=\"reservation\" style=\"padding-top:38px; margin:auto;\">
+              <!--img-->
+              <div class=\"reservation-img\"><img src=\"../../../images/halls/{$rowProduct['main_image']}\" /></div>
+              <!--text-->
+              <div class=\"reservation-text\">
+                  <!--heading-->
+                  <h3> ". $rowProduct['hall_name'] ."</h3>
+                  <!--details-->
+                  <p>Opening Hours: 8 a.m - 12 p.m</p>
+                  <p>Capacity:  ". $rowProduct['capacity'] ."</p>
+                  <p>Contact: ". $rowProduct['contact_no'] ."</p>
+                  <p>Advance: ". $rowProduct['advance_fee'] ." LKR</p>
+                  <a class=\"hero-button\"  onclick=\"onClickOpenForm()\">Reserve</a>
+              </div>
+              </section>
+          <!--End of main-section-->
+
+
+          <!--Start of Description section-->
+	<div class=\"description\">
+		<h1>Make the best memories with us</h1>
+        <p>". $rowProduct['description'] ."</p>
+	</div>   
+	<!--End of Description section--> 
+
+    <!--Start of Gallery section-->
+	<section clss=\"Gallerysection\">
+		<div class=\"gallery-container\">
+            <div class=\"gallery\">
+                <figure class=\"gallery__item gallery__item--1\">
+                    <img src=\"../../../images/halls/{$rowProduct['main_image']}\" class=\"gallery__img\">
+                </figure>
+                <figure class=\"gallery__item gallery__item--2\">
+                    <img src=\"../../../images/halls/{$rowProduct['image1']}\" class=\"gallery__img\">
+                </figure>
+                <figure class=\"gallery__item gallery__item--3\">
+                    <img src=\"../../../images/halls/{$rowProduct['image2']}\" class=\"gallery__img\">
+                </figure>
+             </div>
+        </div>
+	</section>        
+	<!--End of Gallery section-->
+    
+          
+          ";
+        }
+      }
+    ?>
 
     <!--Start of pop up login page-->
     <div class="form-popup" id="myForm">
@@ -66,34 +106,6 @@
 
     <script src="../../../js/onClickOpenForm.js"></script>
     <!--End of pop up login page-->
-
-    <!--Start of Description section-->
-	<div class="description">
-		<h1>Make the best memories with us</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus odio sit amet tellus mollis, ut suscipit lectus ornare. Mauris nisi mauris, scelerisque at dictum et, tempus eget erat. </p>
-	</div>   
-	<!--End of Description section--> 
-
-    <!--Start of Gallery section-->
-	<section clss="Gallerysection">
-		<div class="gallery-container">
-            <div class="gallery">
-                <figure class="gallery__item gallery__item--1">
-                    <img src="../../../images/gallery2.jpg" class="gallery__img">
-                </figure>
-                <figure class="gallery__item gallery__item--2">
-                    <img src="../../../images/gallery5.jpg" class="gallery__img">
-                </figure>
-                <figure class="gallery__item gallery__item--3">
-                    <img src="../../../images/gallery4.jpg" class="gallery__img">
-                </figure>
-                <figure class="gallery__item gallery__item--4">
-                    <img src="../../../images/gallery6.jpg" class="gallery__img">
-                </figure>
-            </div>
-        </div>
-	</section>        
-	<!--End of Gallery section-->
 
     <!--Include footer.php-->
     <div><?php include "../../../includes/footer.php" ?></div>

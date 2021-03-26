@@ -1,15 +1,15 @@
-.search-feild{
+.form-box .search-feild{
     height: 30px;
     padding: 8px;
     border:none;
     border-radius:20px;
     outline:none;
-    width: 300px;
+    width: 210px;
     margin-bottom: auto;
 }
 
 .location{
-    width: 110px;/*100px*/
+    width: 100px;/*100px*/
 }
 
 .search-type{
@@ -21,8 +21,8 @@
     background: rgba(0,0,0,0.5);
     padding:10px;
     border-radius: 200px;
-    width: 545px;
-    height: 50px;
+    width: 1000px;
+    
 }
 
 @media(max-width:600px){

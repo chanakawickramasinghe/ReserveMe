@@ -81,7 +81,7 @@ div.content {
     margin-left: 1.5vw;
     margin-top: 2vw;
     height: 5vh;
-    background: #ffbb01;
+    background: orange;
     border: none;
     border-radius: 25px;
     color: #fff;
@@ -236,7 +236,7 @@ div.content {
   .btn-promos {
     width:12vw;
     height: 5vh;
-    background: #ffd104;
+    background: orange;
     border: none;
     border-radius: 25px;
     color: #fff;

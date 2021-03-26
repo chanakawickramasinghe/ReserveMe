@@ -25,6 +25,7 @@
     text-align: center;
   }
 
+/* for the table in hall-details.php */
   .hall-add{
     width: 100%;
   }
@@ -92,3 +93,65 @@
     padding: 0.3vw 1vw 0.3vw 1vw;
   }
 
+  /* for the hidden table in add-hall.php */
+  .add-hall{
+      margin: auto;
+    position: center;
+    align-items: center;
+  }
+  
+  .add-hall th {
+    font-size: large;
+    text-align: left;
+    padding-right: 2vw;
+  }
+  
+  .add-hall td{
+    padding-bottom: 5px;
+  }
+
+  /* box around the form */
+
+  .add-hall-box{
+    width: 45vw;
+    height: 75vh;
+    margin: 20px auto;
+    background: #ffffffec;
+    color: #000000;
+    box-sizing: border-box;
+    padding: 20px;
+    position: center;
+    border: #a17807 2px solid;
+    border-radius: 5px;
+    box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
+  }
+
+  .btn-add-hall-s {
+    width:7vw;
+    height: 5vh;
+    background: orange;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: medium;
+  }
+  
+  .btn-add-hall-s:hover{
+    background: black;
+    cursor: pointer;
+  }
+
+  .btn-add-hall-l {
+    width:12vw;
+    height: 5vh;
+    background: orange;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: medium;
+  }
+  
+  .btn-add-hall-l:hover{
+    background: black;
+    cursor: pointer;
+  }

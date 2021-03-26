@@ -1,0 +1,32 @@
+  /* hall table */
+  .hall{
+    width: 100%;
+    margin: 0 auto;
+    table-layout: auto;
+    border-collapse: collapse; 
+  }
+  
+  .hall th {
+    background-color: #e9dfb2;
+    border: 1px solid rgb(43, 106, 189);
+    padding-top: 5px; 
+    padding-bottom: 5px;  
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+  
+  .hall td{
+    border: 1px solid rgb(160, 154, 154);
+    padding-top: 5px; 
+    padding-bottom: 5px;  
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .hall-img{
+    width: 10vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+  }

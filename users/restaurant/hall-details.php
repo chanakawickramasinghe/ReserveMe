@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../../CSS/main.css">
     <link rel="stylesheet" href="../../CSS/nav.css">   
     <link rel="stylesheet" href="../../CSS/footer.css">
+    <link rel="stylesheet" href="../../CSS/hall.css">
  
 </head>
 <body>
@@ -60,9 +61,27 @@
         }
         else{
             echo "
-            <h2 align='center' color:'black'>Reception Hall Details</h2>
-            
-            <table class=\"promo\" id=\"myTable\" border=\"1\" align=\"center\">
+            <center><h1 style=\"color:orange;\"><font color=\"black\">Reception</font> Halls</h1></center>
+            <br/><br/>";
+            ?>
+            <form action="add-menu-submit.php" method="post" >
+            <table>
+                <tr>
+                    <td><input class="type-feild" type="text" id="in" name="item_name" placeholder="Food Name" required></td>
+                    <td><input class="type-feild" type="text" id="in" name="item_name" placeholder="Food Name" required></td>
+                </tr>
+            </table>
+            <input class="type-feild" type="text" id="in" name="item_name" placeholder="Food Name" required>
+            <input class="type-feild" type="text" id="price" name="price" placeholder="Price" required><br>
+            <input type="hidden" id="item_id" name="item_id">        
+            <input type="submit" name="submit"  class="hero-button" value="Add" required>
+            <input type="submit" name="update"  class="hero-button" value="Update" required>
+
+            </form>
+            <br><hr><br/>
+            <?php
+            echo"
+            <table class=\"hall\" id=\"myTable\" border=\"1\" align=\"center\">
             <tr>
                 <th>Hall Main Image</th>
                 <th>Image 1</th>

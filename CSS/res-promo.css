@@ -208,12 +208,6 @@ div.content {
     padding-bottom: 5px;  
     text-align: center;
   }
-  
-  .img-promo{
-    width: 10vw;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-  }
 
   /* promo remove button */
   .btn-promo-remove {

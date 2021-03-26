@@ -35,7 +35,7 @@
         <div style="margin:20px"> 
 
             <br><br>        
-            <center><h1 style="color:#ffbb01;"><font color="black">Completed</font> Reservations</h1></center>
+            <center><h1 style="color:orange;"><font color="black">Completed</font> Reservations</h1></center>
             <br><br>
             <div class="promo-btn-bar">
                 <button type="button" class="btn-promo" onclick="window.location.href='res-reservation.php'">Back</button>

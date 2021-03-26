@@ -81,7 +81,7 @@
             if($capacity=="" && $advance_fee=="" && $reservation_date!=="" && $reservation_time!==""){
                 $retrieveProduct = "SELECT reception_hall.main_image, hall_reservation.hall_id, reception_hall.description, reception_hall.hall_name
                 FROM reception_hall
-                INNER JOIN hall_reservation ON reception_hall.hall_id=hall_reservation.hall_id WHERE reservation_time not LIKE '$reservation_time' AND reservation_date  not LIKE '$reservation_date' "; 
+                left JOIN hall_reservation ON reception_hall.hall_id=hall_reservation.hall_id and reservation_time == '$reservation_time' AND reservation_date == '$reservation_date' "; 
                 $resultProduct = mysqli_query($connection, $retrieveProduct); 
                 while($rowProduct  = mysqli_fetch_assoc($resultProduct)){                        
                     echo"<!--Start of Hall-->
@@ -102,8 +102,8 @@
                     
             }else if($capacity=="Capacity" && $advance_fee!=="" && $date!=="" && $time!==""){
                 $retrieveProduct = "SELECT reception_hall.main_image, reception_hall.hall_id, reception_hall.description, reception_hall.hall_name
-                FROM reception_hall
-                INNER JOIN hall_reservation ON reception_hall.hall_id=hall_reservation.hall_id WHERE time LIKE '$time%' AND date LIKE '$date%' AND capacity LIKE '$date%' "; 
+                FROM reception_hall INNER JOIN hall_reservation ON reception_hall.hall_id=hall_reservation.hall_id 
+                WHERE time LIKE '$time%' AND date LIKE '$date%' AND capacity LIKE '$date%' "; 
                 $resultProduct = mysqli_query($connection, $retrieveProduct); 
                 while($rowProduct  = mysqli_fetch_assoc($resultProduct)){                        
                             echo"<!--Start of Hall-->

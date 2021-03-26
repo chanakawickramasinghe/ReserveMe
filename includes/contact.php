@@ -30,9 +30,8 @@
 		<!--End of nav-->
         
         <br>
-        <div class="contact-container">
-        <img src="../images/Contact-us.jpg" alt="Contact-Us image" style="height:230px;width:100%">
-        <h1 class="centered"> We would love to hear from you..!</h1>
+        <div class="contact-container"><br/><br/><br/>
+        <h1 class="centered"> <font color=black>We would <font color=orange>love</font> to hear from <font color=orange>you</font>..!</font></h1>
         </div>
 
         <div style="margin-left:10%">
@@ -53,7 +52,6 @@
       
         <input class="type-feild-comment" type="text" name="fname" placeholder="Full Name" required><br>
         <input class="type-feild-comment" type="email" name="email" placeholder="Email Address" required><br>
-        <input class="type-feild-comment" type="tel" name="mobile" placeholder="Mobile Number(Optional)" pattern='^\+?\d{9,11}'><br>
         <textarea class="type-feild-comment"  style="height:200px;overflow:auto" scrolling="yes" type="text" name="msg" placeholder="Type message......" ></textarea><br>
         <input type="submit" name="submit"  class="hero-button" value="Post" style="margin-left:30px"  required>
         </form>
@@ -77,18 +75,20 @@
     <?php include('connection.php'); ?>
 
     <?php
+
+    date_default_timezone_set('Asia/Colombo');
+    $today_date = date("Y-m-d H:i:s");
      
     if(isset($_POST['submit'])){
         //Assign input data from form to variables
         $comment=$_POST['comment'];
         $name= $_POST['fname'];
         $email= $_POST['email'];
-        $mobile= $_POST['mobile'];
         $msg= $_POST['msg'];
 
         //Insert into database
 
-        $commentQuery="INSERT INTO contact_us(comment,name,email,mobile,message) VALUES('$comment','$name','$email','$mobile','$msg')" ;
+        $commentQuery="INSERT INTO contact_us(comment,name,email,message,date_time) VALUES('$comment','$name','$email','$msg','$today_date')" ;
         mysqli_query($connection,$commentQuery);
         exit(); 
     }

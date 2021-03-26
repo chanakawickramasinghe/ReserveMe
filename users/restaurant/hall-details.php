@@ -22,12 +22,12 @@
 
 <!-- Start of side bar -->
  <div class="sidebar"> 
- <a href="restaurant-home.php">Home</a> 
- <a href="add-preordermenu.php">Pre - Order Menu</a>    
+ <a href="restaurant-home.php">Home</a>     
  <a href="add-menu.php">Update the Menu</a>
  <a href="res-promo.php" >Promotions</a>
  <a href="res-floor-plan.php" >Floor Plan</a> 
  <a href="res-reservation.php">Reservations</a>
+ <a href="hall-reservation.php">Hall Reservations</a>
  <a href="res-review.html">View Reviews</a>   
  <br>
  <hr>

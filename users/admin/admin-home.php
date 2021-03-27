@@ -16,13 +16,13 @@
     <body>
 
         <!--Start of nav-->
-        <span>
+
         <div class="topnav" id="myTopnav">
             <a href="admin-home.php"><img class = "logo" src="../../images/logo.png"></a>
             <a class="navtab" href="../../index.php">Logout</a>
 		    <a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
         </div>
-        </span>
+
         <!--End of nav-->
 
         <!-- Admin Sidebar Dashboard -->
@@ -33,8 +33,8 @@
             <a href="messages.php">Messages</a>
             <a href="promotions.php">Promotions</a>
             <a href="log.php">Application Log</a>
-            <hr>
-            <a href="coadmins.php">Manage Co-Admins</a>
+            <!-- <hr>
+            <a href="coadmins.php">Manage Co-Admins</a> -->
 
         </div>
         <div class="content-div"> 

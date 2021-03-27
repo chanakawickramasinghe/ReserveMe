@@ -1,4 +1,18 @@
 .topnav {
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right:0;
+  background-color: #fff;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.466);
+  height: 60px;
+  position: fixed;
+  z-index: 1;
+  padding-left: 1.75vw;
+  padding-right: 2vw;
+}
+
+/* .topnav {
     overflow: hidden;
     top: 0;
     width: 100%;
@@ -7,7 +21,7 @@
     background-color: #fff;
     box-shadow: 2px 5px 30px rgba(0,0,0,0.1);
     border-radius: 5px;
-  }
+  } */
   
   .topnav .navtab{
     float: right;
@@ -16,22 +30,43 @@
     text-align: center;
     padding: 15px 16px;
     text-decoration: none;
+    font-size: 15px;
+    /* text-transform: uppercase; */
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  /* .topnav .navtab{
+    float: right;
+    display: block;
+    color: #000;
+    text-align: center;
+    padding: 15px 16px;
+    text-decoration: none;
     font-size: 17px;
     text-transform: uppercase;
-  }
+  } */
+
   .logo{
     height:50px;
     width: 50px;
-    margin-left: 5px;
+    margin: 5px;
     align-items:left;
-  }
-  
+  }  
   
   .topnav .navtab:hover{
+    color: orange;
+    /* font-weight: bold; */
+    border-radius: 3px;
+    text-shadow:0 0 2px 2px #000;
+  }
+  
+  /* .topnav .navtab:hover{
       background-color: orange;
     color: black;
     border-radius: 3px;
-  }
+  } */
+
   .topnav #icon {
     display: none;
     color: orange;
@@ -47,6 +82,22 @@
     color: #fff;
     border-radius: 5px;
   }
+
+  /* .topnav #icon {
+    display: none;
+    color: orange;
+    font-weight: bold;
+    align-content: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav #icon:hover{
+    background: orange;
+    color: #fff;
+    border-radius: 5px;
+  } */
   
   @media screen and (max-width: 600px){
       .topnav .navtab:not(:first-child){display: none;}

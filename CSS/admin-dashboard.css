@@ -1,34 +1,78 @@
-   .sidebar {
-    margin-top: 50px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    width: 18%;
-    height: 100%;
-    background-color: #f1f1f1;
-    float: left;
-    position: fixed;
-  }
-  
-  .sidebar a {
-    display: block;
-    color: black;
-    padding: 16px;
-    text-decoration: none;
-    font-weight: bold
-  }
-   
-  .sidebar a.active {
-    background-color: orange;
-    color: white;
-    font-weight: bold
-  }
-  
-  .sidebar a:hover:not(.active) {
-    background-color: black;
-    color: #e6e6e6;
-    font-weight: bold
-  }
-  
+/* Style of sidebar */
+.sidebar {
+  padding: 2%;
+  width: 20%;
+  background-color: #f3f3f3;
+  position: fixed;
+  float: left;
+  height: 100%;
+  margin-top: 60px;
+  font-family: sans-serif; 
+  /* make this as the same font as others */
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  font-size: large;
+}
+
+/* .sidebar a:focus{
+  background-color:black;
+  color: honeydew;
+} */
+ 
+.sidebar a.active {
+  color: orange;
+  background-color: #f1f1f1;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* .sidebar a.active:hover {
+  background-color: black;
+  color: honeydew;
+  font-weight: bold;
+} */
+
+.sidebar a:hover:not(.active) {
+  font-weight: bold;
+  color: orange;
+}
+
+/* .sidebar {
+  margin-top: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 18%;
+  height: 100%;
+  background-color: #f1f1f1;
+  float: left;
+  position: fixed;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  font-weight: bold
+}
+ 
+.sidebar a.active {
+  background-color: orange;
+  color: white;
+  font-weight: bold
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: black;
+  color: #e6e6e6;
+  font-weight: bold
+} */
+
   div.content {
     margin-top: 80px;
     margin-left: 200px;
@@ -55,11 +99,11 @@
   }
 
   .content-div{
-    margin-top: 50px;
+    margin-top: 45px;
     padding-top: 20px;
     /* padding-bottom: 50px; */
     /* margin-bottom: 30px; */
-    width: 82%;
+    width: 80%;
     background-color: #ffffff;
     position: relative;
     height: 100%;

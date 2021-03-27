@@ -5,7 +5,7 @@
 }
 
 body{
-	/* font-family: 'Baloo Chettan 2', cursive; */
+	font-family: 'Baloo Chettan 2', cursive;
 	line-height: 1.5;
 }
 
@@ -270,7 +270,7 @@ body{
 
 *{
 	box-sizing: border-box;
-	/* font-family: myriad pro; */
+	font-family: myriad pro;
 }
 
 a{

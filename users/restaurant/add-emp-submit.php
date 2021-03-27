@@ -8,6 +8,7 @@ include('../../includes/message.php');?>
     $email = $_POST['emp_email'];
     $contact = $_POST['contact_no'];
     $password = md5($_POST['password']);
+    $nic_no = $_POST['nic_no'];
 
     checkSession();
     $resId = $_SESSION["resID"];
@@ -38,8 +39,8 @@ if(isset($_POST['btn-add-emp'])){
         }
 
         else {
-            $add_emp_sql = "INSERT INTO employee (emp_name, emp_email, emp_mobile, emp_password, res_id) 
-            VALUES ('$name','$email','$contact','$password','$resId')";
+            $add_emp_sql = "INSERT INTO employee (emp_name, emp_email, emp_nic, emp_mobile, emp_password, res_id) 
+            VALUES ('$name','$email', '$nic_no', '$contact','$password','$resId')";
             
             if (mysqli_query($connection,$add_emp_sql) == TRUE) {
                 $message = base64_encode(urlencode("Added Successful"));

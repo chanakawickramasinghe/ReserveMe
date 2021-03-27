@@ -684,10 +684,6 @@ ul{
 	width:90%;
 }
 
-.about_logo{
-	width:90%;
-	height:50%;
-}
 @media screen and (min-width: 576px){
     .about-center{
         display: flex;
@@ -745,11 +741,11 @@ ul{
 /* contact page */
 
 .contact-container {
-	margin-top: 50px;
+	margin-top: 35px;
 	position: relative;
 	text-align: center;
 	color: white;
-	font-family:Times;
+	/* font-family:Times; */
   }
   .centered {
 	position: absolute;

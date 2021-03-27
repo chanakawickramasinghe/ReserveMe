@@ -36,6 +36,10 @@
   text-shadow:0 0 2px 2px #000;
 }
 
+.topnav .active{
+  color:orange;
+}
+
 .topnav #icon {
   display: none;
   color: orange;

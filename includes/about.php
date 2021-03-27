@@ -26,33 +26,32 @@
 		<a class="navtab" href="../users/customer/customerReg.php">Register</a>
 		<a class="navtab" href="login.php">Login</a>
 		<a class="navtab" href="contact.php">Contact</a>
+        <a class="navtab active" href="about.php">About</a>
 		<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
     </div><br>
     <!-- End of nav tab -->
     
     <div class="about-body"> 
-        <img src="../images/aboutupdated.jpg" alt="about us picture" style="height:230px;width:100%">
+        <img src="../images/aboutupdated.jpg" alt="about us picture" style="height:80%;width:100%">
         
         
         
         <table class="table_about">
             <tr>
                 <td colspan=2>
-                <img src="../images/logo.png" alt="Website logo" class="about_logo">                
+                <img src="../images/logo.png" alt="Website logo">                
                 </td>
                 <td colspan=2>
 
                 <h1>Who we are?</h1>
-                    <p calss="about-p">We are undergradute students of UCSC. <br>
-                    This is our 2 <sup> nd </sup> Group project. We choose a web page Solution for restaurant reservation, Which you can view the restaurent details and menu
-                    and the meals, Hall reservations.
+                    <p calss="about-p">ReserveMe is one of the most atractive five-star hotel situated in Kandy, the last kingdom of Sri Lanka.<br>
+                    It is one of the main hotels situated in the heart of Kandy which has been very famous amoung the turists as well. Also it is one of the restaurants which provides the service of online reserving tables and halls though it's web based system.<br>
         
         
         
                  </p><br>
                 <p calss="about-p">
-                A product description is the marketing copy that explains what a product is and why it’s worth purchasing. <br>
-		        The purpose of a product description is to supply customers with important information about the features and benefits of the product so they’re compelled to buy.
+                This is a service providing platform which serves the customers and the interested parties by giving the opportunity of reserving the tables, reserving halls for their occassions and also preordering food if they are willing to order food before arriving the retaurant. Which will avoid wasting time searching for a table and of avoiding the unpleasent times faced by the customer.
                 </p>
 
                 </td>
@@ -145,21 +144,21 @@
 				<i class="fas fa-utensils"></i>
 			</div>              
             <h3>Table Reservation</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus odio sit amet tellus mollis, ut suscipit lectus ornare. Mauris nisi mauris, scelerisque at dictum et, tempus eget erat.</p>
+			<p>This facilitates the customer to reserve a table beforehand. The customer can select the table based on the number of people and the place which they prefer. </p>
 		</div>
 		<div class="card">
 			<div class="about-icon">
 				<i class="fas fa-hotel"></i>
 			</div>              
             <h3>Hall Reservation</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus odio sit amet tellus mollis, ut suscipit lectus ornare. Mauris nisi mauris, scelerisque at dictum et, tempus eget erat.</p>
+			<p>This facilitates customers who are willing to book halls for the events they will organizing which allows booking them before hand and also to check the details of the venue through the system.</p>
 		</div>
 		<div class="card">
 			<div class="about-icon">
 				<i class="fas fa-concierge-bell"></i>
 			</div>              
             <h3>Preorder</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus odio sit amet tellus mollis, ut suscipit lectus ornare. Mauris nisi mauris, scelerisque at dictum et, tempus eget erat.</p>
+			<p>At the same time the system provide the additional opportunity to pre-order the meals if they are willing to and it will be benificial for the users since it will avoid waiting time at the restaurant.</p>
 		</div>
 	</section>             
 	<!--End of Services section-->
@@ -172,7 +171,7 @@
 			<h3>Our Location</h3>
 			<h4>Best place to <font>Enjoy</font> </h4>
 			<!--details-->
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus odio sit amet tellus mollis, ut suscipit lectus ornare. Mauris nisi mauris, scelerisque at dictum et, tempus eget erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent tristique accumsan massa. Nullam eu ante lorem. In hac habitasse platea dictumst. Pellentesque quis rutrum nisl.</p>
+			<p>The ReserveMe is located in Kandy which is the most significant and hloiest city in Sri Lanka. Here you will get the opportunity to experiance the fresh wind of the Nuwara Lake and to feel the cold and mist in the mornings. Which add the freshness of Sri Lankan breath. </p>
 		</div>
 		<!--Start of Map-->
 		<section class="content">

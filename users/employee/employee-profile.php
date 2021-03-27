@@ -21,10 +21,10 @@
 
     <!-- Start of sidbar -->
     <div class="sidebar"> 
-      <a href="venues.php">Reservation Status</a>     
-      <a href="menu.php">Set Menu</a>
-      <a href="queries.php">Queries</a>
-      <a href="table-reservation.php">Manage Reservation</a>
+      <a href="venues.php">Reservation Status</a><hr>    
+      <a href="menu.php">Set Menu</a><hr>
+      <a href="queries.php">Queries</a><hr>
+      <a href="table-reservation.php">Manage Reservation</a><hr>
     </div>
     <!-- End of sidebar -->
 

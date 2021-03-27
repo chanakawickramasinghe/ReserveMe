@@ -73,6 +73,28 @@ if(isset($_POST['submit'])){
     }
 ?>
 
+<!-- Database update for delete the menu -->
+<?php
+
+if(isset($_POST['remove'])){
+    // echo $_GET['id']; 
+    $item_id= $_POST['item_id'];
+    
+$remove_sql = "DELETE FROM menu WHERE item_id ='$item_id'";
+mysqli_query($connection, $remove_sql);
+
+$result = mysqli_query($connection,$remove_sql);
+
+if($result){
+    header("Location:add-menu.php");
+}
+else{
+    echo "SQL syntex Error";
+    }
+}
+
+?>
+
 
     <!--  $allowType = array('jpg','png','jpeg');
     $statusMsg = $errorMsg = $insertValuesSQL = $errorUpload = $errorUploadType = '';

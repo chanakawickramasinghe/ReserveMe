@@ -44,7 +44,7 @@
 					if($date_now < $date2 ) {
     					echo"<div class=\"slideshow-container\">
 							<div class=\"mySlides fade\">
-							<img src=\"images/promos/{$rowProduct['image']}\" style=\"width:100% ; height:60vh\"/>
+								<img src= \"images/promos/{$rowProduct['image']}\" style=\"width:100% ; height:60vh\">
 							</div>
 						</div>
 						<div style=\"text-align:center\">

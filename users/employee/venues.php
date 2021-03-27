@@ -23,10 +23,10 @@
     <!-- Start of sidbar -->
     <div class="sidebar"> 
       <!-- <a href="employee-home.php" >Employee Home</a> -->
-      <a href="venues.php" class="active">Reservation status</a>     
-      <a href="menu.php">Set Menu</a>
-      <a href="queries.php">Queries</a>
-      <a href="table-reservation.php">Manage Reservation</a>
+      <a href="venues.php" class="active">Reservation status</a><hr>   
+      <a href="menu.php">Set Menu</a><hr>
+      <a href="queries.php">Queries</a><hr>
+      <a href="table-reservation.php">Manage Reservation</a><hr>
     </div>
     <!-- End of sidebar -->
     

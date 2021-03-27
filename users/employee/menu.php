@@ -10,11 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pre-Order Menu</title>
     <link href="../../images/logo.png" rel="shortcut icon"/> 
-        <!-- Link the style sheets -->
-        <link rel="stylesheet" href="../../CSS/employee.css">
-        <link rel="stylesheet" href="../../CSS/main.css">
-        <link rel="stylesheet" href="../../CSS/nav.css">   
-        <link rel="stylesheet" href="../../CSS/footer.css">
+    <!-- Link the style sheets -->
+    <link rel="stylesheet" href="../../CSS/employee.css">
+    <link rel="stylesheet" href="../../CSS/main.css">
+    <link rel="stylesheet" href="../../CSS/nav.css">   
+    <link rel="stylesheet" href="../../CSS/footer.css">
 
     <style>
         th:nth-of-type(4),td:nth-of-type(4) {
@@ -30,10 +30,10 @@
 
     <!-- Start of sidbar -->
     <div class="sidebar">
-      <a href="venues.php">Reservation Status</a>     
-      <a href="menu.php" class="active">Set Menu</a>
-      <a href="queries.php">Queries</a>
-      <a href="table-reservation.php">Manage Reservation</a>
+      <a href="venues.php">Reservation Status</a><hr>    
+      <a href="menu.php" class="active">Set Menu</a><hr>
+      <a href="queries.php">Queries</a><hr>
+      <a href="table-reservation.php">Manage Reservation</a><hr>
     </div>
     <!-- End of sidebar -->
 
@@ -53,7 +53,7 @@
             <span onclick="menu()">Menu</span>
             <span onclick="pre_menu()">Pre-order Menu</span>
             <hr id="Indicator">
-        </div></center>
+        </div></center>  
 
             <table  class="menu-table" id="menu">
                 <tr>
@@ -151,7 +151,7 @@
 
 
             </table>
-
+        
     </div>
 
     

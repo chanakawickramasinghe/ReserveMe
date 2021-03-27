@@ -31,8 +31,8 @@
             <a href="messages.php" class="active">Messages</a>
             <a href="promotions.php">Promotions</a>
             <a href="log.php">Application Log</a>
-            <hr>
-            <a href="coadmins.php">Manage Co-Admins</a>
+            <!-- <hr>
+            <a href="coadmins.php">Manage Co-Admins</a> -->
         </div>
 
         <div class="content-div">

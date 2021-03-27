@@ -11,7 +11,8 @@
     <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
     <!--stylesheet-------------------->
 	<link rel="stylesheet" type="text/css" href="../../CSS/nav.css">
-    <link rel="stylesheet" href="../../CSS/footer.css">   
+    <link rel="stylesheet" href="../../CSS/footer.css">
+    <link rel="stylesheet" href="../../CSS/main.css">
     <link rel="stylesheet" href="../../CSS/reservation_details.css">
 </head>
 
@@ -21,7 +22,7 @@
         <a href="customer-home.php"><img class = "logo" src="../../images/logo.png"></a>
 		<a class="navtab" href="../../index.php">Logout</a>
 		<a class="navtab" href="customer-profile.php">Profile</a>
-		<a class="navtab" href="reservation_details.php">Reservations</a>
+		<a class="navtab active" href="reservation_details.php">Reservations</a>
 		<a class="navtab" href="../../includes/logged_contact.php">Contact</a>
 		<a class="navtab" href="../../includes/logged_about.php">About</a>
 		<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>

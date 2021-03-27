@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="../../CSS/main.css">
     <link rel="stylesheet" href="../../CSS/nav.css">   
     <link rel="stylesheet" href="../../CSS/footer.css">
+    <link rel="stylesheet" href="../../CSS/hall.css">
+
  
 </head>
 <body>
@@ -60,9 +62,44 @@
         }
         else{
             echo "
-            <h2 align='center' color:'black'>Reception Hall Details</h2>
+            <center><h1 style=\"color:orange;\"><font color=\"black\">Reception</font> Halls</h1></center>
+            <br/>";
+            ?>
+            <form action="add-hall-submit.php" method="post" enctype="multipart/form-data">
+            <table class="hall-add">
+                <tr>
+                    <td><input class="type-feild-l" type="text" id="h_name" name="hall_name" placeholder="Hall Name" required></td>
+                    <td><input class="type-feild-l" type="text" id="addr" name="address" placeholder="Hall Address" required></td>
+                    <td><input class="type-feild-l" type="text" id="c_no" name="contact_no" placeholder="Contact No." required></td> 
+                    <td><input class="type-feild-s" type="text" id="cap" name="capacity" placeholder="Capacity" required></td>  
+                </tr>
+                <tr>
+                    
+                    <td colspan="3"><input class="type-feild-xl" type="text" id="desc" name="description" placeholder="Description" required></td>
+                    <td><input class="type-feild-s" type="text" id="adv" name="advance" placeholder="Advance Fee (lkr)" required></td>
+                </tr>    
+                <tr>
+                    <td><input class="type-feild-l" type="file" name="main_image" placeholder="Select Profile Image"></td>
+                    <td><input class="type-feild-l" type="file" name="image1" placeholder="Image 1"></td>
+                    <td><input class="type-feild-l" type="file" name="image2" placeholder="Image 2"></td>
+                </tr>
+                <tr>
+                    <input type="hidden" id="h_id" name="hall_id">
+                    <td></td><td></td>        
+                    <td><input type="submit" name="btn-add-hall"  class="hero-button" value="Add" required>
+                    <input type="submit" name="update"  class="hero-button" value="Update" required>
+                    <input type="submit" name="delete"  class="hero-button" value="Remove" required>
+                    </td>
+
+                </tr>
+
+            </table>
             
-            <table class=\"promo\" id=\"myTable\" border=\"1\" align=\"center\">
+            </form>
+            <br><hr><br/>
+            <?php
+            echo"
+            <table class=\"hall\" id=\"myTable\" border=\"1\" align=\"center\">
             <tr>
                 <th>Hall Main Image</th>
                 <th>Image 1</th>
@@ -73,7 +110,7 @@
                 <th>Capacity</th>
                 <th>Description</th>
                 <th>Advance Fee</th>
-                <th>Remove</th>
+                <th style=\"display:none\">hall id</th>
             </tr>";
             while($row = mysqli_fetch_assoc($hallquery)){
             echo"
@@ -86,14 +123,35 @@
                 <td>".$row['address']."</td>
                 <td>".$row['capacity']."</td>
                 <td>".$row['description']."</td> 
-                <td>".$row['advance_fee']."</td> 
-                <td><button type=\"button\" class=\"btn-promo-remove\">X</button></td>           
+                <td>".$row['advance_fee']."</td>   
+                <td style=\"display:none\">".$row['hall_id']."</td>          
             </tr>
             ";
             }
         }
 
     ?>
+
+<!-- To get the table details to from -->
+<script>
+    var table = document.getElementById('myTable');
+                
+        for(var i = 1; i < table.rows.length; i++)
+        {
+            table.rows[i].onclick  = function()
+            {
+                document.getElementById("h_name").value = this.cells[3].innerHTML;
+                document.getElementById("addr").value = this.cells[5].innerHTML;
+                document.getElementById("c_no").value = this.cells[4].innerHTML;
+                document.getElementById("cap").value = this.cells[6].innerHTML;
+                document.getElementById("desc").value = this.cells[7].innerHTML;
+                document.getElementById("adv").value = this.cells[8].innerHTML;
+                document.getElementById("h_id").value = this.cells[9].innerHTML;
+
+            };
+        }
+
+</script>
 
     </body>
 </html>

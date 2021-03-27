@@ -121,12 +121,12 @@
 	                <input type="date" id="date" name="date" required>
 	            </div>
                 <br>
-	            <input class="dropbtn" type="submit" id="submit" name="submit" value="Check">
+	            <input class="dropbtn" type="submit" id="submit" name="submit" value="Check" onclick="toggleSection()">
             </form>
 		</div>
 
         <!--Available tables-->
-		<div class="col2">
+		<div class="col2" style="display:none" id="availableSection">
             <h1>Available Tables</h1>
             <div class="customRadio">
                 <label for="1">1</label><input type="radio" id="1" name="table" value="1">
@@ -139,8 +139,8 @@
     </section>
     <!--End of form section-->
 
-    <!--Start of pop up login page-->
-    <div class="form-popup" id="myForm">
+    <!--Start of pop up preorder selection page-->
+    <div class="form-popup" id="myForm" >
         <div class="form-container">
             <h1>Do you want to Preorder?</h1>
             <div class="left"><button type="submit" class="food-btn" onclick="window.location.href='preorder.php'">Yes</button></div>
@@ -158,5 +158,25 @@
 
     <!--script for slideshow-->
     <script src="../../../js/onClickNav.js"></script>
+
+    <script>
+      function toggleSection() {
+    // get the availableSection
+    var mySection = document.getElementById('availableSection');
+
+    // get the current value of the availableSection's display property
+    var displaySetting = mySection.style.display;
+
+    
+    // now display availableSection
+    if (displaySetting == 'none') {
+      // availableSection is visible.
+      mySection.style.display = 'block';
+      
+    }
+    
+  }
+
+    </script>
 </body>
 </html>

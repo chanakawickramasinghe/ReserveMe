@@ -87,7 +87,7 @@
 
     <!--Start of pop up login page-->
     <div class="form-popup" id="myForm">
-        <form action="login_submit.php" method="post" class="form-container">
+        <form action="../../../includes/login-submit.php" method="post" class="form-container">
             <h1>Login</h1>
             <label for="email"><b>Email</b></label>
             <input type="text" placeholder="Enter Email" name="email" required>
@@ -96,10 +96,10 @@
             <div class="pass">
                 <a href="#">Forgot Password?</a>
             </div>
-            <button type="submit" class="btn" style="background:orange;">Login</button>
+            <button type="submit" class="btn" style="background:orange;" >Login</button>
             <button type="button" class="btn cancel" onclick="onClickCloseForm()">Close</button>
             <div class="signup">Don't have account?
-                <a href="../../user-type.php">Signup Now</a>
+                <a href="../../../user-type.php">Signup Now</a>
             </div>
         </form>
     </div>

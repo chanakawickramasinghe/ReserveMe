@@ -34,55 +34,75 @@
             <h3>Bo<font>ok</font></h3>
         </div>
         <form method="post" action="https://sandbox.payhere.lk/pay/checkout">  
-            <table class="preorder" id="" border="0">
+            <?php 
+      if(isset($_GET['hall_id'])){
+        $reservation_date = $_GET['reservation_date'];
+        $reservation_time = $_GET['reservation_time'];
+        $hall_id = $_GET['hall_id'];
+        $sql = "SELECT * FROM reception_hall WHERE hall_id = ".$_GET['hall_id'];
+        $resultProduct = mysqli_query($connection,$sql);
+        while($rowProduct  = mysqli_fetch_assoc($resultProduct)){  
+            echo"<!--Start of main-section-->
+            <table class=\"preorder\" id=\"\" style=\"border:0\">
                 <tr>
                     <th>Hall Name</th>
-                    <td>Avenra</td>
+                    <td>". $rowProduct['hall_name'] ."</td>
                 </tr>
                 <tr>
                     <th>Guests</th>
-                    <td>100</td>
+                    <td>". $rowProduct['capacity'] ."</td>
                 </tr>
                 <tr>
                     <th>Date</th>
-                    <td>04/12/2020</td>
+                    <td>$reservation_date</td>
                 </tr>
                 <tr>
-                    <th>From</th>
-                    <td>8.00AM</td>
-                </tr>
-                <tr>
-                    <th>To</th>
-                    <td>3.00PM</td>
+                    <th>Time</th>
+                    <td>$reservation_time</td>
                 </tr>
                 <tr>
                     <th>Advance Payment</th>
-                    <td>100 000.00 LKR</td>
+                    <td>". $rowProduct['advance_fee'] ."</td>
                 </tr>
                 <tr></tr>
                 <tr>
-                    <td><input class="food-btn" type="submit" value="Book"></td>                
+                    <td><input class=\"food-btn\" type=\"submit\" value=\"Checkout\"></td>                
                 </tr>
                
             </table>
-    <div class="hidden">
-    <input type="hidden" name="merchant_id" value="1215949">    <!-- Replace your Merchant ID -->
-    <input type="hidden" name="return_url" value="http://localhost/ReserveMe/users/customer/success.php">
-    <input type="hidden" name="cancel_url" value="preorder.php">
-    <input type="hidden" name="notify_url" value="info.reserve.lk@gmail.com">  
-    <br><br><br>
-    <input type="hidden" name="order_id" value="1">
-    <input type="hidden" name="items" value="Reservation"><br>
-    <input type="hidden" name="currency" value="LKR">
-    <input type="hidden" name="amount" value="1000">  
-    <br><br><br>
-    <input type="hidden" name="first_name" value="Saman">
-    <input type="hidden" name="last_name" value="Perera"><br>
-    <input type="hidden" name="email" value="samanp@gmail.com">
-    <input type="hidden" name="phone" value="0771234567"><br>
-    <input type="hidden" name="address" value="No.1, Galle Road">
-    <input type="hidden" name="city" value="Colombo">
-    <input type="hidden" name="country" value="Sri Lanka"><br><br> 
+          <!--End of main-section-->
+
+          <div class=\"hidden\">
+            <input type=\"hidden\" name=\"merchant_id\" value=\"1215949\">    <!-- Replace your Merchant ID -->
+            <input type=\"hidden\" name=\"return_url\" value=\"http://localhost/ReserveMe/users/customer/success.php\">
+            <input type=\"hidden\" name=\"cancel_url\" value=\"preorder.php\">
+            <input type=\"hidden\" name=\"notify_url\" value=\"info.reserve.lk@gmail.com\">  
+            <br><br><br>
+            <input type=\"hidden\" name=\"order_id\" value=\"1\">
+            <input type=\"hidden\" name=\"items\" value=\"". $rowProduct['hall_name'] ."\"><br>
+            <input type=\"hidden\" name=\"currency\" value=\"LKR\">
+            <input type=\"hidden\" name=\"amount\" value=\"". $rowProduct['advance_fee'] ."\">  
+            <br><br><br>
+            <input type=\"hidden\" name=\"first_name\" value=\"Saman\">
+            <input type=\"hidden\" name=\"last_name\" value=\"Perera\"><br>
+            <input type=\"hidden\" name=\"email\" value=\"samanp@gmail.com\">
+            <input type=\"hidden\" name=\"phone\" value=\"0771234567\"><br>
+            <input type=\"hidden\" name=\"address\" value=\"No.1, Galle Road\">
+            <input type=\"hidden\" name=\"city\" value=\"Colombo\">
+            <input type=\"hidden\" name=\"country\" value=\"Sri Lanka\"><br><br> 
+    
+          
+          ";
+        }
+      }
+
+
+
+      //add a sql to add the temporary reservation details to the data table to grab the reservation id and by a select query grab the reservation id and pass it to the item id in the required data set for he payhere 
+      //updtae the customers table as the data required in the data set
+      //add session grab customer data
+    ?>
+    
         </div>
 </form> 
 <!--Include footer.php-->

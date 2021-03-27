@@ -34,7 +34,7 @@
    </div>
    <!-- End of side bar -->
 
-    <br><br>
+    <br/>
     <div class="content">
     <center><h1 style="color:#ffbb01;"><font color="black">Add</font> Promotions</h1><center>
     <br/>
@@ -52,9 +52,13 @@
         <div class="centered-view">
         <form class="add-promo-form" method="post" action="res-add-promotion-submit.php" enctype="multipart/form-data">
             <table class="add-promo-form">
+               <?php
+               date_default_timezone_set('Asia/Colombo');
+               $today_date = date("Y-m-d H:i:s");
+               ?> 
                 <tr>
                     <th>Starting Date & Time</th>
-                    <td><input class="input-feild" type="datetime-local" name="start_date" required></td>
+                    <td><input class="input-feild" type="datetime-local" id="sDate" name="start_date" required></td>
                 </tr>
                 <tr>
                     <th>End Date & Time</th>
@@ -79,6 +83,23 @@
         </div>
 
         </div>
+
+<script>
+	//for setting the current day as the minimum date for the time being
+	var today = new Date()
+	var dd = today.getDate() + 1;
+	var mm = today.getMonth() + 1;
+	var yy = today.getFullYear();
+	if (dd < 10) {
+		dd = '0' + dd;
+	}
+	if (mm < 10) {
+		mm = '0' + mm;
+	}
+	today = yy + '-' + mm + '-' + dd;
+	document.getElementById("sDate").setAttribute("min", today);
+	// document.getElementById("endfield").setAttribute("min", today);
+</script>
     
     </body>
 </html>

@@ -18,12 +18,12 @@
 
 <!-- Start of side bar -->
  <div class="sidebar"> 
- <a href="restaurant-home.php">Home</a> 
- <a href="add-preordermenu.php">Pre - Order Menu</a>    
+ <a href="restaurant-home.php">Home</a>     
  <a href="add-menu.php">Update the Menu</a>
  <a href="res-promo.php" >Promotions</a>
  <a href="res-floor-plan.php" >Floor Plan</a> 
  <a href="res-reservation.php">Reservations</a>
+ <a href="hall-reservation.php">Hall Reservations</a>
  <a href="res-review.html">View Reviews</a>   
  <br>
  <hr>
@@ -58,6 +58,10 @@
                 <tr>
                     <th>Contact No.</th>
                     <td><input type=\"text\" name=\"contact_no\" placeholder=\"Contact No.\" pattern='^\+?\d{0,13}' required></td>
+                </tr>
+                <tr>
+                    <th>NIC No.</th>
+                    <td><input type=\"text\" name=\"nic_no\" placeholder=\"NIC No.\" required></td>
                 </tr>
                 <tr>
                     <th>Password</th>
@@ -96,6 +100,10 @@
             <tr>
                 <th>Contact No. :</th>
                 <td>".$row['emp_mobile']."</td>
+            </tr>
+            <tr>
+                <th>NIC No. :</th>
+                <td>".$row['emp_nic']."</td>
             </tr>
             </table>";
             

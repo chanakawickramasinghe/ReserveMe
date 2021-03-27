@@ -17,12 +17,12 @@
    
         <!-- Start of side bar -->
         <div class="sidebar"> 
-        <a href="restaurant-home.php">Home</a> 
-        <a href="add-preordermenu.php">Pre - Order Menu</a>    
+        <a href="restaurant-home.php">Home</a>     
         <a href="add-menu.php">Update the Menu</a>
         <a href="res-promo.php">Promotions</a>
         <a href="res-floor-plan.php">Floor Plan</a> 
         <a href="res-reservation.php" class="active">Reservations</a>
+        <a href="hall-reservation.php">Hall Reservations</a>
         <a href="res-review.html">View Reviews</a>   
         <br>
         <hr>
@@ -35,7 +35,7 @@
         <div style="margin:20px"> 
 
             <br><br>        
-            <center><h1 style="color:#ffbb01;"><font color="black">Completed</font> Reservations</h1></center>
+            <center><h1 style="color:orange;"><font color="black">Completed</font> Reservations</h1></center>
             <br><br>
             <div class="promo-btn-bar">
                 <button type="button" class="btn-promo" onclick="window.location.href='res-reservation.php'">Back</button>

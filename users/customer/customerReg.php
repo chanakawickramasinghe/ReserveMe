@@ -15,8 +15,9 @@
     
 <body>
 <!--Start of nav-->
-    <div class="topnav">
+    <div class="topnav" id="myTopnav">
         <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
+        <a class="navtab active" href="../users/customer/customerReg.php">Register</a>
         <a class="navtab" href="../../includes/login.php">Login</a>
 		<a class="navtab" href="../../includes/contact.php">Contact</a>
 		<a class="navtab" href="../../includes/about.php">About</a>

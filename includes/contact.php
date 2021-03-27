@@ -24,6 +24,7 @@
 			<a href="../index.php"><img class = "logo" src="../images/logo.png"></a>
 		    <a class="navtab" href="../users/customer/customerReg.php">Register</a>
 		    <a class="navtab" href="login.php">Login</a>
+            <a class="navtab active" href="contact.php">Contact</a>
 		    <a class="navtab" href="about.php">About</a>
 		    <a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a> 
 		</div>

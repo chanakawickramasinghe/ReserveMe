@@ -21,7 +21,7 @@
         th:nth-of-type(5),td:nth-of-type(5) {
         display: none;
         }
-        th:nth-of-type(7),td:nth-of-type(7) {
+        th:nth-of-type(6),td:nth-of-type(6) {
         display: none;
         }
     </style>
@@ -76,6 +76,8 @@
         <input type="hidden" id="item_id" name="item_id">        
         <input type="submit" name="submit"  class="hero-button" value="Add" required>
         <input type="submit" name="update"  class="hero-button" value="Update" required>
+        <input type="submit" name="remove"  class="hero-button" value="Remove" onclick="myFunction()" required>
+
 
     </form>
     <br><hr>
@@ -90,7 +92,7 @@
     <br>
 
 
-    <table class="promo" id="myTable" border="1">
+    <table class="promo" id="myTable" >
     <tr>
     
     <th>Food Category</th>
@@ -98,7 +100,7 @@
     <th>Price(lkr)</th>
     <th>Set Preorder</th>
     <th>Status</th>
-    <th>Remove</th>
+    <!-- <th>Remove</th> -->
     <th>Item Id</th>
     </tr>
     
@@ -138,7 +140,7 @@
                                 ?></center>
                         </td>
     <td><?php echo("$status"); ?></td>
-    <td><a class="btn-item-remove" onclick="myFunction()" href ="remove-item.php?id=<?php echo $item_id ?>"> Remove </a> </td>
+    <!-- <td><a class="btn-item-remove" onclick="myFunction()" href ="remove-item.php?id=<?php //echo $item_id ?>"> Remove </a> </td> -->
     <td><?php echo("$item_id"); ?></td>
     </tr>
     <?php
@@ -223,7 +225,7 @@ function myFunction() {
                 document.getElementById("in").value = this.cells[1].innerHTML;
                 document.getElementById("price").value = this.cells[2].innerHTML;
                 document.getElementById("allow_preorder").value = this.cells[4].innerHTML;
-                document.getElementById("item_id").value = this.cells[6].innerHTML;
+                document.getElementById("item_id").value = this.cells[5].innerHTML;
 
             };
         }

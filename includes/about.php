@@ -26,19 +26,20 @@
 		<a class="navtab" href="../users/customer/customerReg.php">Register</a>
 		<a class="navtab" href="login.php">Login</a>
 		<a class="navtab" href="contact.php">Contact</a>
+        <a class="navtab active" href="about.php">About</a>
 		<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
     </div><br>
     <!-- End of nav tab -->
     
     <div class="about-body"> 
-        <img src="../images/aboutupdated.jpg" alt="about us picture" style="height:230px;width:100%">
+        <img src="../images/aboutupdated.jpg" alt="about us picture" style="height:80%;width:100%">
         
         
         
         <table class="table_about">
             <tr>
                 <td colspan=2>
-                <img src="../images/logo.png" alt="Website logo" class="about_logo">                
+                <img src="../images/logo.png" alt="Website logo">                
                 </td>
                 <td colspan=2>
 

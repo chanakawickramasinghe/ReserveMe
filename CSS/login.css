@@ -77,11 +77,11 @@ button:hover {
   width: 60vh;
   background: rgb(255, 255, 255);
   border-radius: 10px;
-  display: block;
+  /* display: block; */
   overflow: hidden;
   padding: 15px 55px;
-  margin: auto;
-  margin-top: 50px;
+  /* margin: auto; */
+  /* margin-top: 30px; */
   box-shadow: #aaaaaa 0 0 15px 0px;
 }
 
@@ -90,10 +90,11 @@ button:hover {
 .login-side{
   width: 55vw;
   background: none;
-  border-radius: 5px;
+  /* border: #0b0ff3 solid 2px; */
+  /* border-radius: 5px; */
   display: inline-block;
   overflow: hidden;
-  padding: 0vw 2vw 10vw 10vw;
+  padding: 5vw 5vw 4vw 10vw;
 }
 
 .sidelogo{

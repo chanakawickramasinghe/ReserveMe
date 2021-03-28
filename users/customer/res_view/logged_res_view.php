@@ -13,7 +13,6 @@
     <link href="../../../css/res_view.css" rel="stylesheet" type="text/css"/>
     <link href="../../../css/nav.css" rel="stylesheet" type="text/css"/>
     <link href="../../../css/footer.css" rel="stylesheet" type="text/css"/>
-    <link href="../../../css/reservation_form.css" rel="stylesheet" type="text/css"/>
     <!--FontAwesome-->
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
 </head>
@@ -33,8 +32,12 @@
 
     <!--Start of main-section-->
     <?php 
-      if(isset($_GET['res_id'])){
-        $sql = "SELECT * FROM restaurant WHERE res_id = ".$_GET['res_id'];
+        // GET the user id
+        checkSession();
+        $cus_id=$_SESSION["userID"];
+
+        // TO display the restaurent details
+        $sql = "SELECT * FROM restaurant WHERE res_id ='4'";
         $resultProduct = mysqli_query($connection,$sql);
         while($rowProduct  = mysqli_fetch_assoc($resultProduct)){  
           $preorder_available=$rowProduct['preorder_available'];
@@ -64,8 +67,7 @@
                   
                 echo"</div>	
 	            </section>";
-        }
-      }
+          }
     ?>
     <!--End of main-section-->
 
@@ -75,21 +77,22 @@
 	        <div class="select">
 		        <ul class="select-menu">
 					<?php 
-						if(isset($_GET['res_id'])){
-							$retriewMenu = "SELECT * FROM restaurant WHERE res_id = ".$_GET['res_id'];
+						
+							$retriewMenu = "SELECT * FROM restaurant WHERE res_id ='4'";
 							$resultMenu = mysqli_query($connection,$retriewMenu);
 							while($rowProduct  = mysqli_fetch_assoc($resultMenu)){  
-								echo"<li><a  href=\"menu.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Menu</a></li>
-									<li><a  href=\"floorplan.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Floorplan</a></li>";
-							}               
-						}
+								echo"<li><a  href=\"menu.php\" target=\"iframeBox\">Menu</a></li>
+									<li><a  href=\"floorplan.php\" target=\"iframeBox\">Floorplan</a></li>";
+              
+						  }
 					?>  
 		        </ul>
 	        </div>
-			<iframe src="menu.php?res_id= <?php echo $_GET['res_id']?>" id="iframeBox" name="iframeBox" class="iframeBox" height="500px" width="100%" title="Iframe Example" frameborder="0" marginwidth="0" marginheight="0"><div></iframe>
+			<iframe src="menu.php" id="iframeBox" name="iframeBox" class="iframeBox" height="500px" width="100%" title="Iframe Example" frameborder="0" marginwidth="0" marginheight="0"><div></iframe>
 	    </div>	
 	</section>
 	<!--End of iframe section-->
+
 
     <!--start of from section-->
     <section class="reservation">
@@ -97,58 +100,132 @@
 		<div class="col1">
             <h1>Check Availability</h1>
 			<hr>
-			<form>
+			<form method="POST">
 			    <div>
-                    <select class="dropbtn" name="lounge" id="lounge" required>
-                        <option value="">Launge</option>
-                        <option value="10.00 a.m">aaa</option>
-                        <option value="2.00 p.m">bbb</option>
-                        <option value="8.00 p.m">ccc</option>
+                    <select class="dropbtn" name="floor" id="floor" required>
+                        <option value="">Floor</option>
+                        <option value="1">Ground Floor</option>
+                        <option value="2">1st Floor</option>
                     </select>
-			        <select class="dropbtn" name="guests" id="guests" required>
+			              <select class="dropbtn" name="guests" id="guests" required>
                         <option value="">Guests</option>
-	                    <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="4">4</option>
-                        <option value="6">6</option>
+                        <?php 
+                        $x=1;
+                        while ($x<=12){
+                          echo "<option value=\"$x\">$x</option>";
+                          $x++;
+                        }
+                        ?>
                     </select>
-                    <select class="dropbtn" name="Time" id="Time" required>
-                        <option value="">Time</option>
-                        <option value="10.00 a.m">10.00 a.m</option>
-                        <option value="2.00 p.m">2.00 p.m</option>
-                        <option value="8.00 p.m">8.00 p.m</option>
-                    </select>
-	                <input type="date" id="date" name="date" required>
-	            </div>
+
+	                <input type="date" class="dropbtn" id="date" name="date" min="<?php echo date("Y-m-d"); ?>" required>
+
+                  <select class="dropbtn" name="time" id="time" required>
+                      <option value="">Time</option>
+                      <option value="08:00">8.00 a.m</option>
+                      <option value="10:00">10.00 a.m</option>
+                      <option value="12:00">12.00 p.m</option>
+                      <option value="14:00">2.00 p.m</option>
+                      <option value="20:00">8.00 p.m</option>
+                      <option value="22:00">10.00 p.m</option>
+                  </select>
+	          </div>
                 <br>
-	            <input class="dropbtn" type="submit" id="submit" name="submit" value="Check">
-            </form>
+                  <!-- <input type="time" name="time" > -->
+	                <input class="dropbtn" type="submit" id="submit" name="submit" value="check" onclick="onClickOpenAvailTab()">
+        </form>
 		</div>
 
-        <!--Available tables-->
-		<div class="col2">
-            <h1>Available Tables</h1>
-            <div class="customRadio">
-                <label for="1">1</label><input type="radio" id="1" name="table" value="1">
-                <label for="2">2</label><input type="radio" id="2" name="table" value="2">
-                <label for="3">3</label><input type="radio" id="3" name="table" value="3">
-            </div>
-            <br>
-            <input class="dropbtn" type="submit" id="reserve" name="reserve" value="reserve" onclick="onClickOpenForm()">
+
+       <!--Available tables-->
+		<div class="col2" id="avail_tab">
+        <h1>Available Tables</h1>
+      
+              <?php
+
+                if(isset($_POST['submit'])){
+                  $floor=$_POST['floor'];
+                  $guests=$_POST['guests'];
+                  $time=$_POST['time'];
+                  $date=$_POST['date'];
+
+
+                  // echo $floor."<br>";
+                  // echo $guests."<br>";
+                  // echo $time."<br>";
+                  // echo $date."<br>";
+
+                // $sql = "INSERT INTO `reservation`(`cus_id`, `table_id`, `no_of_guests`, `date`, `time`) VALUES (2,'GT04',2,'$date','$time')";
+                // $result2 = ($connection->query($sql));
+
+                // if($result2){
+                //   echo "Hello";
+                // } else {
+                //   echo "Please check your code";
+                // }      
+
+                $sql_select_table= "SELECT table_id FROM res_table WHERE floor_no=$floor AND min_cap<=$guests AND max_cap>=$guests";
+                $result=($connection->query($sql_select_table));
+
+                if($result){
+                  while($row = $result->fetch_assoc()){
+                    $table_id=$row['table_id'];
+                    // echo $table_id;
+
+                    $sql_check_table_avail="SELECT table_id FROM reservation WHERE table_id='$table_id' AND date='$date' AND time='$time'";
+                    $result1=($connection->query($sql_check_table_avail));
+                    $no_rows = mysqli_num_rows($result1);
+
+                    if($no_rows==1){
+                      // echo $table_id;
+                    } else {
+                    
+
+                      echo "<form action=\"reservation_submit.php\" method=\"POST\" > ";
+                      echo "<label for=\"$table_id\" class=\"container\">$table_id
+                      <input type=\"radio\" id=\"$table_id\" name=\"table_id\" value=\"$table_id\" required>
+                      <span class=\"checkmark\"> </span>
+                      </label>
+                      <br>";
+
+                      // echo $table_id;
+                      }
+                  }
+                } else {
+                  echo "SQL syntex error";
+                }
+              }
+              
+              ?>         
+            
+        <input class="dropbtn"  id="reserve" name="reserve" value="Reserve" onclick="onClickOpenForm()">
+        <input type="hidden" name="cus_id" value="<?php echo $cus_id;?>" required>
+        <input type="hidden" name="guests2" value="<?php echo $guests;?>" required>
+        <input type="hidden" name="date2" value="<?php echo $date;?>" required>
+        <input type="hidden" name="time2" value="<?php echo $time;?>" required>
+
+            
 	    </div>
+
     </section>
     <!--End of form section-->
+
+
+
 
     <!--Start of pop up login page-->
     <div class="form-popup" id="myForm">
         <div class="form-container">
-            <h1>Do you want to Preorder?</h1>
-            <div class="left"><button type="submit" class="food-btn" onclick="window.location.href='preorder.php'">Yes</button></div>
-            <div class="right"><button type="submit" class="food-btn" onclick="window.location.href='../success.php'">No</button></div>
+            <h2>Do you want to Preorder?</h2>
+            <h4>If you press "NO" your reservation will be done</h4>
+            <div class="left"><button type="submit" class="food-btn" name="yes" value="yes">Yes</button></div>
+            <div class="right"><button type="submit" class="food-btn" name="no" value="no">No</button></div><br>
             <button type="button" class="btn cancel" onclick="onClickCloseForm()">Close</button>
         </div>
     </div>
     <!--End of pop up login page-->
+
+    </form>
     
     <script src="../../../js/onClickOpenForm.js"></script>
     <!--End of pop up login page-->

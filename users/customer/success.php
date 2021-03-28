@@ -1,4 +1,6 @@
 <?php include('../../includes/connection.php'); ?>
+<?php include('../../includes/session.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +13,8 @@
     <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
     <!--stylesheet-------------------->
 	<link rel="stylesheet" type="text/css" href="../../CSS/nav.css">
-    <link rel="stylesheet" href="../../CSS/footer.css">   
+    <link rel="stylesheet" href="../../CSS/footer.css">
+    <link rel="stylesheet" href="../../CSS/main.css">
     <link rel="stylesheet" href="../../CSS/preorder.css">
 </head>
 
@@ -43,7 +46,7 @@
             <div class="food-container">
                 <div class="food-box">
                     <h3 class="name">KFC</h3> 
-                    <img class="food-img" src= "../../images/4.jpg">
+                    <img class="food-img" src= "../../images/2.jpg">
                     <br>
                     <i class="fas fa-map-marker-alt">Colombo</i>
                     <br>

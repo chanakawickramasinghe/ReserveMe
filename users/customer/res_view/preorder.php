@@ -11,6 +11,7 @@
     <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
     <!--stylesheet-------------------->
 	<link rel="stylesheet" type="text/css" href="../../../CSS/nav.css">
+	<link rel="stylesheet" type="text/css" href="../../../CSS/main.css">
     <link rel="stylesheet" href="../../../CSS/footer.css">   
     <link rel="stylesheet" href="../../../CSS/preorder.css">
 </head>

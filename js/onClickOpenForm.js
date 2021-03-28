@@ -5,3 +5,7 @@ function onClickOpenForm() {
 function onClickCloseForm() {
   document.getElementById("myForm").style.display = "none";
 }
+
+function onClickOpenAvailTab() {
+  document.getElementById("avail_tab").style.display = "block";
+}

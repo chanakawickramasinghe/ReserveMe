@@ -13,26 +13,22 @@
 	<div id="content-wrapper">
 		<div class="column1">
 			<?php 
-				if(isset($_GET['res_id'])){
-					$sql = "SELECT * FROM restaurant WHERE res_id = ".$_GET['res_id'];
+					$sql = "SELECT * FROM restaurant WHERE res_id = 4";
 					$resultProduct = mysqli_query($connection,$sql);
 					while($rowProduct  = mysqli_fetch_assoc($resultProduct)){  
 						echo"<img id=\"featured\" class=\"thumbnail active\" src= \"../../../images/restaurant/{$rowProduct['res_id']}/floorplan/1.jpg\">";
 					}
-				}
 			?>
 
 			<div id="slide-wrapper" >
 				<img id="slideLeft" class="arrow" src="../../../images/arrow-left.png">
 				<div id="slider">
-					<?php 
-						if(isset($_GET['res_id'])){							
-							$retriewMenu = "SELECT * FROM floorplan WHERE res_id = ".$_GET['res_id'];
+					<?php 						
+							$retriewMenu = "SELECT * FROM floorplan WHERE res_id = 4";
 							$resultMenu = mysqli_query($connection,$retriewMenu);
 							while($rowProduct  = mysqli_fetch_assoc($resultMenu)){  
 								echo"<img class=\"thumbnail\" src= \"../../../images/restaurant/{$rowProduct['res_id']}/floorplan/{$rowProduct['floorplan_id']}.jpg\">";
 							}						  
-						}
 					?>					
 				</div>
 

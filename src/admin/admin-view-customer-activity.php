@@ -38,7 +38,7 @@
         </div>
             <h2>Activity of User</h2>
             <?php
-    $cus_id = $_GET['id'];
+    $cus_id = $_POST['user_id'];
     echo $cus_id;
 ?>
         <div>
@@ -59,7 +59,7 @@
         
         $activity_sql = "SELECT cus_activity.act_date, cus_activity.act_time, cus_activity.activity, cus_activity.reservation_type, cus_activity.reservation_id,
         reservation.no_of_guests, reservation.date, reservation.time
-        FROM cus_activity INNER JOIN reservation ON cus_activity.reservation_id=reservation.reservation_id;";
+        FROM cus_activity INNER JOIN reservation ON cus_activity.reservation_id=reservation.reservation_id WHERE cus_activity.cus_id='$cus_id';";
 
         $activity_query = mysqli_query($connection,$activity_sql);
         while($row = mysqli_fetch_assoc($activity_query)){

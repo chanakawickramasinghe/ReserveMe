@@ -42,7 +42,7 @@
                 <h3>Details of Selected Customer</h3>
                 
                 <div class="update-box">
-                    <form method="POST" action="./admin-cus-operations.php">
+                    <form method="POST" action="admin-view-customer-activity.php">
                     <table>
                         <tr>
                             <th>Customer ID :</th>
@@ -67,23 +67,21 @@
                             <td><input class="input-s" type="text" id="active_status" placeholder="Status" readonly="true" name="cus_status" required></td>
                         </tr>
                     </table>
-
-                    <input type="submit" class="btn-blue-l" value="View Activity">
-                    <p class="button-box">
-                    <!-- <button class="btn-blue-l" type="button" name="btn-send-email" onclick="admin-cus-operations.php">Send Email</button> -->
-                    <?php
-                    echo"
-                    <button class=\"btn-blue-l\" name=\"btn\" href=\"admin-view-customer-activity.php\" >View</button>
-                    ";
-                    ?>
-                    <!-- <input type="submit" class="btn-blue-l" name="btn" value="View Activity"> -->
-                    <!-- <button class="btn-blue-l" type="button" name="btn-view-activity" onclick="viewActivityCus()">View Activity</button> -->
-                    <!-- <input type="submit" class="btn-red" value="Activate Account" name="btn-activate-cus-account">
-                    <button class="btn-red" type="button" name="btn-suspend-account" onclick="suspendFunction()">Suspend Account</button>
-                    <button class="btn-blue" type="reset">Clear</button> -->
-                    </p>
                     </form>
+                    <p class="button-box">
+                    <form method="POST" action="admin-view-customer-activity.php">
+                        <br/><br/>
+                        <input type="hidden" placeholder="ID" id="test_cus_id" name="user_id" readonly="true" required>
+
+                        <input type="submit" class="btn-blue-l" name="send" value="View Activity">
+                        <button class="btn-blue-l" type="button" name="btn-send-email" onclick="admin-cus-operations.php">Send Email</button>
+                        <input type="submit" class="btn-red" value="Activate Account" name="btn-activate-cus-account">
+                        <button class="btn-red" type="button" name="btn-suspend-account" onclick="suspendFunction()">Suspend Account</button>
+                        <button class="btn-blue" type="reset">Clear</button>
+                    </form> 
+
                     
+                    </p>      
 
                 </div>
                 
@@ -145,6 +143,8 @@
                 document.getElementById("contact_number").value = this.cells[3].innerHTML;
                 document.getElementById("active_status").value = this.cells[6].innerHTML;
                 document.getElementById("ratings").value = this.cells[5].innerHTML;
+
+                document.getElementById("test_cus_id").value = this.cells[0].innerHTML;
             };
         }
 

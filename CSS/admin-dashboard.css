@@ -106,10 +106,11 @@
     width: 80%;
     background-color: #ffffff;
     position: relative;
-    height: 100%;
-    overflow:auto;
+    height:100%;
+    overflow:hidden;
     float: right;
     top:15px;
+    
   }
 
   /* welcome message */
@@ -411,6 +412,8 @@
 .admin-home{
   padding-left : 7vw;
   padding-bottom: 10px;
+  height: 50vh;
+  overflow-y: hidden;
 }
 
 /*Detail table */
@@ -483,6 +486,21 @@
   background-color: #ffffff;
 }
 
+/* table in admin home */
+.tbl-admin-home{
+  float: left;
+  
+}
+.tbl-admin-home th {
+  float: left;
+  color: grey;
+}
+
+.tbl-admin-home td{
+  float: left;
+  
+}
+
 /* admin-home end */
 
 /* admin-change password */
@@ -509,7 +527,7 @@
 
 .form-change input{
   font-size: medium;
-  color: rgb(129, 129, 182);
+  color: rgb(74, 74, 82);
   width: 14vw;
   border-radius: 7px;
   border: 2px solid grey;
@@ -517,41 +535,6 @@
   padding: 0.3vw 1vw 0.3vw 1vw;
 }
 
-.btn-change-blue{
-  width:12vw;
-  margin-top: 10px;
-  height: 5vh;
-  background: rgb(255, 255, 255);
-  border: 1px solid  #287dec;
-  border-radius: 25px;
-  color: rgb(0, 11, 165);
-  font-size: medium;
-}
-
-.btn-change-blue:hover{
-  border: 1px solid rgb(0, 11, 165);
-  background: #287dec;
-  cursor: pointer;
-  color: #fff;
-}
-
-.btn-change-normal{
-  width:5vw;
-  margin-top: 10px;
-  height: 5vh;
-  background: rgb(255, 255, 255);
-  border: 1px solid  #287dec;
-  border-radius: 25px;
-  color: rgb(0, 11, 165);
-  font-size: medium;
-}
-
-.btn-change-normal:hover{
-  background: #f6f7f8;
-  border: 1px solid rgb(0, 11, 165);
-  cursor: pointer;
-  color:rgb(0, 11, 165);
-}
 
 /* co-admin page */
 

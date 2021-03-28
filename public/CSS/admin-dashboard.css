@@ -517,40 +517,36 @@
   padding: 0.3vw 1vw 0.3vw 1vw;
 }
 
-.btn-change-blue{
-  width:12vw;
-  margin-top: 10px;
-  height: 5vh;
-  background: rgb(255, 255, 255);
-  border: 1px solid  #287dec;
+.btn-change-s {
+  width:8vw;
+  height: 4vh;
+  background: orange;
+  border: none;
   border-radius: 25px;
-  color: rgb(0, 11, 165);
-  font-size: medium;
-}
-
-.btn-change-blue:hover{
-  border: 1px solid rgb(0, 11, 165);
-  background: #287dec;
-  cursor: pointer;
   color: #fff;
-}
-
-.btn-change-normal{
-  width:5vw;
-  margin-top: 10px;
-  height: 5vh;
-  background: rgb(255, 255, 255);
-  border: 1px solid  #287dec;
-  border-radius: 25px;
-  color: rgb(0, 11, 165);
   font-size: medium;
+  margin-bottom: 5px;
 }
 
-.btn-change-normal:hover{
-  background: #f6f7f8;
-  border: 1px solid rgb(0, 11, 165);
+.btn-change-s:hover{
+  background: black;
   cursor: pointer;
-  color:rgb(0, 11, 165);
+}
+
+.btn-change-m {
+  width:12vw;
+  height: 4vh;
+  background: orange;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: medium;
+  margin-bottom: 5px;
+}
+
+.btn-change-m:hover{
+  background: black;
+  cursor: pointer;
 }
 
 /* co-admin page */

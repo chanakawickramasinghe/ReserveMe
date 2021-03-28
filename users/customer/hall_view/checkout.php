@@ -31,7 +31,7 @@
     
     <!--Start of Ongoing Card Section-->
         <div class="title_text">
-            <h3>Bo<font>ok</font></h3>
+            <h3>Reservation <font>Details</font></h3>
         </div>
         <form method="post" action="https://sandbox.payhere.lk/pay/checkout">  
             <?php 
@@ -62,11 +62,12 @@
                 </tr>
                 <tr>
                     <th>Advance Payment</th>
-                    <td>". $rowProduct['advance_fee'] ."</td>
+                    <td>". $rowProduct['advance_fee'] ." LKR</td>
                 </tr>
                 <tr></tr>
                 <tr>
-                    <td><input class=\"food-btn\" type=\"submit\" value=\"Checkout\"></td>                
+                    <th></th>
+                    <td><input class=\"food-btn\" type=\"submit\" value=\"Checkout\" style=\"margin-left:40px\"></td>                
                 </tr>
                
             </table>

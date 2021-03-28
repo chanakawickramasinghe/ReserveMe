@@ -12,7 +12,6 @@
     <link href="../../../css/res_view.css" rel="stylesheet" type="text/css"/>
     <link href="../../../css/nav.css" rel="stylesheet" type="text/css"/>
     <link href="../../../css/footer.css" rel="stylesheet" type="text/css"/>
-    <link href="../../../css/reservation_form.css" rel="stylesheet" type="text/css"/>
     <!--FontAwesome-->
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
 </head>
@@ -31,110 +30,63 @@
 
     <!--Start of main-section-->
     <?php 
-        if(isset($_GET['res_id'])){
-            $sql = "SELECT * FROM restaurant WHERE res_id = ".$_GET['res_id'];
-            $resultProduct = mysqli_query($connection,$sql);
-            while($rowProduct  = mysqli_fetch_assoc($resultProduct)){  
-                echo"<section class=\"main\">
-                        <div class=\"m-img\">       
-                            <img class=\"food-img\" src= \"../../../images/restaurant/{$rowProduct['res_image']}\">
-                        </div>
-                        <div class=\"m-text\">
-                            <h2>". $rowProduct['res_name'] ."</h2>
-                            <br>
-                            <h4><i class=\"fas fa-map-marker-alt\">". $rowProduct['city'] ."</i></h4>
-                            <br>
-                            <h4><i class=\"fas fa-phone-alt\">". $rowProduct['res_tel'] ."</i></h4>
-                            <br>
-                            <h4><i class=\"fas fa-star-half-alt\">". $rowProduct['res_rate'] ."</i></h4>
-                            <!--<button class=\"reserve-button pulsate\" type=\"submit\" name=\"submit\" onclick=\"onClickOpenForm()\">Reserve</button>-->
-	                    </div>	
-	                </section>";
-            }
-        }
-    ?>
+      if(isset($_GET['hall_id'])){
+        $reservation_date = $_GET['reservation_date'];
+        $reservation_time = $_GET['reservation_time'];
+        $hall_id = $_GET['hall_id'];
+        $sql = "SELECT * FROM reception_hall WHERE hall_id = ".$_GET['hall_id'];
+        $resultProduct = mysqli_query($connection,$sql);
+        while($rowProduct  = mysqli_fetch_assoc($resultProduct)){  
+          $preorder_available=$rowProduct['preorder_available'];
+          echo"<!--Start of main-section-->
+          <section class=\"reservation\" style=\"padding-top:38px; margin:auto;\">
+              <!--img-->
+              <div class=\"reservation-img\"><img src=\"../../../images/halls/{$rowProduct['main_image']}\" /></div>
+              <!--text-->
+              <div class=\"reservation-text\">
+                  <!--heading-->
+                  <h3> ". $rowProduct['hall_name'] ."</h3>
+                  <!--details-->
+                  <p>Opening Hours: 8 a.m - 12 p.m</p>
+                  <p>Capacity:  ". $rowProduct['capacity'] ."</p>
+                  <p>Contact: ". $rowProduct['contact_no'] ."</p>
+                  <p>Advance: ". $rowProduct['advance_fee'] ." LKR</p>
+                  <a class=\"hero-button\" onclick=\"location.href='checkout.php?hall_id={$rowProduct['hall_id']}&reservation_date=$reservation_date&reservation_time=$reservation_time';\" >Reserve</a>
+              </div>
+              </section>
+          <!--End of main-section-->
+
+
+          <!--Start of Description section-->
+	<div class=\"description\">
+		<h1>Make the best memories with us</h1>
+        <p>". $rowProduct['description'] ."</p>
+	</div>   
+	<!--End of Description section--> 
+
+    <!--Start of Gallery section-->
+	<section clss=\"Gallerysection\">
+		<div class=\"gallery-container\">
+            <div class=\"gallery\">
+                <figure class=\"gallery__item gallery__item--1\">
+                    <img src=\"../../../images/halls/{$rowProduct['main_image']}\" class=\"gallery__img\">
+                </figure>
+                <figure class=\"gallery__item gallery__item--2\">
+                    <img src=\"../../../images/halls/{$rowProduct['image1']}\" class=\"gallery__img\">
+                </figure>
+                <figure class=\"gallery__item gallery__item--3\">
+                    <img src=\"../../../images/halls/{$rowProduct['image2']}\" class=\"gallery__img\">
+                </figure>
+             </div>
+        </div>
+	</section>        
+	<!--End of Gallery section-->
     
-    <!--End of main-section-->
-
-    <!--Start of pop up login page-->
-    <div class="form-popup" id="myForm">
-        <form action="login_submit.php" method="post" class="form-container">
-            <h1>Login</h1>
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="password" required>
-            <div class="pass">
-                <a href="#">Forgot Password?</a>
-            </div>
-            <button type="submit" class="btn">Login</button>
-            <button type="button" class="btn cancel" onclick="onClickCloseForm()">Close</button>
-            <div class="signup">Don't have account?
-                <a href="#">Signup Now</a>
-            </div>
-        </form>
-    </div>
-
-    <script src="../../../js/onClickOpenForm.js"></script>
-    <!--End of pop up login page-->
-
-    <!--Start of iframe section-->
-    <section class="content">
-	    <div class="content-container">	
-	        <div class="select">
-		        <ul class="select-menu">
-					<?php 
-						if(isset($_GET['res_id'])){
-							$retriewMenu = "SELECT * FROM restaurant WHERE res_id = ".$_GET['res_id'];
-							$resultMenu = mysqli_query($connection,$retriewMenu);
-							while($rowProduct  = mysqli_fetch_assoc($resultMenu)){  
-                                echo"<li><a  href=\"hall_discription.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">About</a></li>
-                                    <li><a  href=\"menu.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Menu</a></li>
-									<li><a  href=\"directions.php?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Directions</a></li>
-									<li><a  href=\"review/logged_index.html?res_id={$rowProduct['res_id']}\" target=\"iframeBox\">Reviews</a></li>";
-							}               
-						}
-					?>  
-		        </ul>
-	        </div>
-			<iframe src="hall_discription.php?res_id= <?php echo $_GET['res_id']?>" id="iframeBox" name="iframeBox" class="iframeBox" height="500px" width="100%" title="Iframe Example" frameborder="0" marginwidth="0" marginheight="0"><div></iframe>
-	    </div>	
-	</section>
-	<!--End of iframe section-->
-
-    <!--Start of reservationform section-->
-    <section class = "banner">
-            <h2>BOOK YOUR TABLE NOW</h2>
-            <div class = "card-container">
-                <div class = "card-img">
-                <img src="../../../images/hall.jpg" style="width:100%">
-                </div>
-
-                <div class = "card-content">
-                    <h3>Book</h3>
-                    <form class="reservation_form" action="checkout.php">
-                        <div class = "form-row">
-                            <input type = "text" placeholder="Hall Name">
-                            <input type = "date" placeholder="Select Date">
-                        </div>
-
-                        <div class = "form-row">
-                            <input type = "number" placeholder="How Many Persons?" min = "1">
-                            <select name = "hours">
-                                <option value = "session-select">Select Session</option>
-                                <option value = "1">Morning</option>
-                                <option value = "1">Evening</option>
-                            </select>
-                        </div>
-                        <div class = "form-row">
-                            <button href="checkout.php" class="reserve-button" type=""  name="submit">Book</button>
-                        </div>
-                    </form>
-                    <div class="check"><button   class="food-btn" type=""  name="submit">Check Availability</button></div>
-                </div>
-            </div>
-        </section>
-        <!--Start of reservationform section-->
+          
+          ";
+        }
+      }
+    ?>
 
 	<!--Include footer.php-->
     <div><?php include "../../../includes/footer.php" ?></div>

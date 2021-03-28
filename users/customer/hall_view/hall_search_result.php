@@ -79,9 +79,9 @@
             $reservation_time = $_POST["reservation_time"];
 
             if($capacity=="" && $advance_fee=="" && $reservation_date!=="" && $reservation_time!==""){
-                $retrieveProduct = "SELECT reception_hall.main_image, hall_reservation.hall_id, reception_hall.description, reception_hall.hall_name
-                FROM reception_hall
-                left JOIN hall_reservation ON reception_hall.hall_id=hall_reservation.hall_id and reservation_time == '$reservation_time' AND reservation_date == '$reservation_date' "; 
+                $retrieveProduct = "SELECT  reception_hall.main_image, reception_hall.hall_id, reception_hall.description, reception_hall.hall_name
+                FROM reception_hall LEFT JOIN hall_reservation ON reception_hall.hall_id=hall_reservation.hall_id 
+                WHERE reservation_time  LIKE '$reservation_time%' AND reservation_date NOT LIKE '$reservation_date%'";
                 $resultProduct = mysqli_query($connection, $retrieveProduct); 
                 while($rowProduct  = mysqli_fetch_assoc($resultProduct)){                        
                     echo"<!--Start of Hall-->
@@ -98,7 +98,7 @@
                         </div>
                         </section>
                     <!--End of Hall2-->";
-                        }       
+                    }       
                     
             }else if($capacity=="Capacity" && $advance_fee!=="" && $date!=="" && $time!==""){
                 $retrieveProduct = "SELECT reception_hall.main_image, reception_hall.hall_id, reception_hall.description, reception_hall.hall_name

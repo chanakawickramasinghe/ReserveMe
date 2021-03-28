@@ -235,5 +235,25 @@
 
     <!--script for slideshow-->
     <script src="../../../js/onClickNav.js"></script>
+
+    <script>
+      function toggleSection() {
+    // get the availableSection
+    var mySection = document.getElementById('availableSection');
+
+    // get the current value of the availableSection's display property
+    var displaySetting = mySection.style.display;
+
+    
+    // now display availableSection
+    if (displaySetting == 'none') {
+      // availableSection is visible.
+      mySection.style.display = 'block';
+      
+    }
+    
+  }
+
+    </script>
 </body>
 </html>

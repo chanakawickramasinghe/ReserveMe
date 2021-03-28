@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+    font-size: 16px;
+    padding:0;
+}
+body {
+    background-color: #FFFFFF;
+    margin: 0;
+    margin-top: 0; 
+}
+.content {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.content h2 {
+    top:70px;
+    margin: 0;
+    padding: 25px 0;
+    font-size: 22px;
+    border-bottom: 1px solid #ebebeb;
+    color: #666666;
+}

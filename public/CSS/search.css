@@ -1,0 +1,41 @@
+.form-box .search-feild{
+    height: 30px;
+    padding: 8px;
+    border:none;
+    border-radius:20px;
+    outline:none;
+    width: 210px;
+    margin-bottom: auto;
+}
+
+.location{
+    width: 100px;/*100px*/
+}
+
+.search-type{
+    width: 110px;/*110px*/
+}
+
+
+.form-box{
+    background: rgba(0,0,0,0.5);
+    padding:10px;
+    border-radius: 200px;
+    width: 1000px;
+    
+}
+
+@media(max-width:600px){
+	.form-box{
+        width: 380px;
+    }
+    .search-feild{
+        width: 150px;
+    }
+    .location{
+        width: 90px;
+    }
+    .search-button{
+        width: 110px;
+    }
+}

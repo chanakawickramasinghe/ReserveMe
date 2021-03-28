@@ -1,0 +1,194 @@
+  
+  .login-box{
+    width: 34vw;
+    height: auto;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: block;
+    overflow: hidden;
+    padding: 3vh 4vw;
+    margin: auto;
+    /* margin-top: 50px; */
+    box-shadow: #aaaaaa 0 0 15px 0px;
+    text-align: center;
+    
+  }
+/*   
+  .login-box td{
+      padding: 30px;
+  } */
+
+ 
+.type-feild{
+    /* height: 5vh;
+    padding: 0.6vh 1.5vw;
+    border-radius:5px;
+    width: 25vw;
+    margin: 10px;
+    /* box-shadow: 0 0  8px 2px rgba(175, 175, 175, 0.26); */
+    /* background-color: #ecececc0; */ 
+    font-size: medium;
+    height: 5.8vh;
+    padding: 0.6vh;
+    border-color:rgb(100, 103, 107);
+    border-radius:5px;
+    outline:none;
+    width: 25vw;
+    margin: 1vh;
+    box-shadow: inset 0px 0px  3px 2px rgba(0, 0, 0, 0.26);
+    
+}
+
+  .h6{
+      margin-top: 0px;
+      padding-top: 0px;
+  }
+
+.type-feild-comment{
+    font-size: medium;
+    height: 6vh;
+    padding: 0.6vh;
+    border-color:rgb(100, 103, 107);
+    border-radius:3px;
+    outline:none;
+    width: 500px;
+    margin: 1vh;
+    box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
+    
+}
+
+/*Start of button*/
+.hero-button{
+    display: inline-block;
+    text-decoration: none;
+    padding: 13px 20px;
+    font-weight: bold;
+    background: rgb(216, 152, 34);
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    border: none;
+	box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    width: auto;
+}
+
+.hero-button:hover{
+	background: rgb(156, 106, 13);
+	color: white;
+	border: none;
+}
+/*End of button*/
+
+.avatar{
+    width: 90px;
+    height: 90px;
+    display: block;
+    margin: auto;  
+  }
+
+.icons{
+    width: 30px;
+    height: 30px;
+}
+
+.error-msg{
+    font-size: 18px;
+    color: #F00;
+    text-align: center;
+    background-color: initial;
+}    
+
+/* Logged in Message */
+.logged-in-msg{
+    font-size: 18px;
+    color: #30b441;
+    text-align: center;
+    margin: 0;
+}
+
+.search-btn{
+    width:100px;
+    height: 30px;
+    background: #ffeb3b;
+    border: none;
+    color:rgb(0, 0, 0);
+    border-radius: 10px;
+    font-size: large;
+    
+}
+
+.search-btn:hover{
+    background: #ffc107;
+    cursor: pointer;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+#regForm {
+    background-color: #ffffff;
+    margin: 100px auto;
+    padding: 40px;
+    width: 70%;
+    min-width: 300px;
+    }
+
+/* Font sizes */
+p{ 
+    font-size: 14px;
+}
+h1{
+    font-size: 32px;
+}
+h2{
+    font-size: 22px;
+}
+td{
+    padding: 10px;
+}
+
+/* Style of the input fields */
+input {
+	padding: 10px;
+	width: 100%;
+	font-size: 14px;
+	font-family: sans-serif;
+	border: 1px solid #aaaaaa;
+}
+  
+/* Mark input boxes that gets an error at validation */
+input.invalid {
+    background-color: #ffdddd;
+    background-color: #e9bc5c;
+}
+  
+/* Hide all steps by default */
+.tab {
+	display: none;
+}
+  
+/* Make those dots which indicate the steps */
+.step {
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbbbbb;
+	border: none;
+	border-radius: 50%;
+	display: inline-block;
+	opacity: 0.5;
+}
+  
+/* Mark the active step */
+.step.active {
+	opacity: 1;
+}
+  
+/* Mark the steps that are finished */
+.step.finish {
+	background-color: #4CAF50;
+}
+

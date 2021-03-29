@@ -334,18 +334,27 @@
 }
 
 .btn-red{
-  width:14vw;
+  /* width:14vw;
   height: 4vh;
   background: #f36a48;
   border: none;
   border-radius: 10px;
-  color:rgb(0, 0, 0);
-}
+  color:rgb(0, 0, 0); */
 
-.btn-red:hover{
-  background: #ca4c2d;
-  cursor: pointer;
-}
+    width:12vw;
+    height: 4vh;
+    background: #f36a48;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: medium;
+    margin-bottom: 5px;
+  }
+  
+  .btn-red:hover{
+    background: #000000;
+    cursor: pointer;
+  }
 
 /* button box */
 .button-box{
@@ -404,6 +413,19 @@
   font-size: 3rem;
   font-weight: bold;
 }
+
+.form-15{
+  width: 15%;
+  position: relative;
+  float: left;
+}
+
+.form-40{
+  width: 40%;
+  position: relative;
+  float: left;
+}
+
 
 /* manage user end */
 
@@ -913,7 +935,7 @@ h2{
   box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
 }
 
-.txtarea{
+.txtarea-email{
   font-size: medium;
 	background-color: white;
 	border-radius:5px;
@@ -923,4 +945,10 @@ h2{
 	align-items: center;
   padding:20px;
   box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+
+  height:20vh;
+  width:30vw;
+  overflow:auto;
+  font-size:large;
 }
+

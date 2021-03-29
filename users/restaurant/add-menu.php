@@ -205,7 +205,10 @@ window.onclick = function(event) {
 }
 
 function myFunction() {
-  confirm("Are you sure want to delete...!");
+  var x = confirm("Are you sure want to delete...!");
+  if (x){
+    
+  }
 }
 
 </script>

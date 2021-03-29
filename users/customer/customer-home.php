@@ -73,11 +73,6 @@
 		<!--text-->
 		<div class="reservation-text">
 			<!--heading-->
-			<?php 
-			checkSession();
-			echo $_SESSION["userID"];
-			
-			?>
 			<h3>Table Reservation</h3>
 			<h4>Best places to <font>Dine in</font> with esense of joy</h4>
 			<!--details-->

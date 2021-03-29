@@ -56,28 +56,31 @@ ul{
 
 .m-img img{
 	height:250px;
-	width:300px;
+	width:250px;
+	border-radius: 50%;
 }
 
 .m-text{
 	position: absolute;
-	top: 25%;
-	left:80%; /*80*/
+	top: 30%;
+	left:70%; /*80*/
 	transform: translate(-90%,-50%);
 	color: black;
 	width: 500px;
+	font-weight: bold;
+	font-size: 18px;
 }
 
 .m-text2{
 	position: absolute;
 	top: 25%;
-	left:85%; /*80*/
+	left:75%; /*80*/
 	transform: translate(-90%,-50%);
 	color: black;
 	margin-left: 20px;
 }
 
-.m-text2 h4{
+/* .m-text2 h4{
 	font-family:Roboto;
 	font-weight: bold;
 	margin: 0px;
@@ -104,12 +107,12 @@ ul{
     line-height: 40px;
 	letter-spacing: 3px;
     color:#202020;
-}
+} */
 
 .content{
 	width: 85%;
 	background-color: #FFFFFF;
-	box-shadow: 2px 2px 30px rgba(167, 158, 245, 0.2);
+	box-shadow: 0px 0px 20px 0px rgb(207, 207, 207);
 	display: flex;
 	margin: 5px auto;
 	flex-direction: column;
@@ -201,7 +204,7 @@ ul{
 		display: none;
 	}
 	.m-img{
-		align: center;
+		align-items: center;
 		display: relative;
 	}
 }
@@ -412,7 +415,7 @@ ul{
 .reservation{
 	display: flex;
 	width: 85%;
-	margin: 60px auto;
+	margin: auto;
 	justify-content: space-around;
 	align-items: center;
 	padding:30px;

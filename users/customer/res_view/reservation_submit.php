@@ -28,6 +28,12 @@
 <?php
 
     if(isset($_POST['yes'])){
-        header("Location:preorder.php");
+        $table_id=$_POST['table_id'];
+        $cus_id =$_POST['cus_id'];
+        $guests = $_POST['guests2'];
+        $date = $_POST['date2'];
+        $time = $_POST['time2'];
+
+        header("Location:preorder.php?table=$table_id&cus_id=$cus_id&guests=$guests&date=$date&time=$time");
     }
 ?>

@@ -67,20 +67,20 @@
 
     <!--Start of pop up login page-->
     <div class="form-popup" id="myForm">
-      <form action="../includes/login-submit.php" method="post" class="form-container">
+      <form action="../../../includes/login-submit.php" method="post" class="form-container">
         <h1>Login</h1>
         <label for="email"><b>Email</b></label>
         <input type="text" placeholder="Enter Email" name="email" required>
-        <label for="psw"><b>Password</b></label>
+        <label for="password"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="password" required>
 			  <h3 class="error-msg"><?php include_once('../../../includes/message.php'); ?></h3> 
         <div class="pass">
-          <a href="#">Forgot Password?</a>
+          <a href="../../../reset/email_verify.php">Forgot Password?</a>
         </div>
-        <button type="submit" class="btn" style="background-color:orange;">Login</button>
+        <button type="submit" class="btn" style="background-color:orange;" name="submit">Login</button>
         <button type="button" class="btn cancel" onclick="onClickCloseForm()">Close</button>
         <div class="signup">Don't have account?
-          <a href="#">Signup Now</a>
+          <a href="../../../users/customer/customerReg.php">Signup Now</a>
         </div>
       </form>
     </div>

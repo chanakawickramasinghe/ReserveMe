@@ -76,7 +76,7 @@
             }
             ?>
 
-        <span><?php include('../../public/includes/footer.php'); ?></span>
+        <!-- <span><?php //include('../../public/includes/footer.php'); ?></span> -->
         </div>
 
 

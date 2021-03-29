@@ -46,7 +46,7 @@
             <div class="row-33">
             <button class="btn-users" type="button" name="view-employees" onclick="window.location.href='admin-view-employee.php'">Employees</button>
             </div>
-            <br><br/><br><br/><br/><br><br/>
+            <br><br/><br><br/><br/><br><br/><br/>
             <div class="row-b">
                 <div class="b b3">
                     <div class="num"> 
@@ -87,11 +87,19 @@
                     <div>TOTAL PROMOTIONS</div>
                 </div>
                 <div class="b b4">
-                    <div class="num"><?=$data3['count3']?></div>
-                    <div>New Property</div>
+                <div class="num"><!-- to show total number of promotions -->
+                        <?php 
+                            $tot_msg_sql = "SELECT COUNT(msg_id) AS TotMsg FROM contact_us";
+                            $tot_query = mysqli_query($connection,$tot_msg_sql);
+                            $row_count = mysqli_fetch_assoc($tot_query);
+                            $tot_msg = $row_count['TotMsg'];
+                            echo $tot_msg;
+                        ?>
+                        </div>
+                    <div>TOTAL MESSAGES</div>
                 </div>
             </div>
-            <span><?php include('../../public/includes/footer.php'); ?></span>
+            <!-- <span><?php //include('../../public/includes/footer.php'); ?></span> -->
             
         </div>
 

@@ -22,16 +22,16 @@
         </div>
         <!--End of nav-->
 
-        <h1><font color="black">Past</font> Promotions</h1>
+        <h1><br/><br/><font color="black">Past</font> Promotions</h1>
 
         <div class="search-user-container">
             <form name="form-display-selected">
                 <!--heading-->
-		        <h3>Search From Restaurant Name or ID</h3>
+		        <h3>Search From Posted Date, Ended Date or Description</h3>
 		        <!--Input-------->
 		        <div class="search-input">
                     <input type="text" id="myInput" onkeyup="myFunctionPastPromos()" 
-                    placeholder="Enter Restaurant Name or ID"/>
+                    placeholder="Enter Posted Date or Ended Date or Description"/>
                 </div>
             </form>
         </div>

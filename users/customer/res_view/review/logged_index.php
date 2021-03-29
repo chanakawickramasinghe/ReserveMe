@@ -36,7 +36,7 @@
     				return vars;
 				}
 
-				var reviews_res_id = getUrlVars()["res_id"];
+				var reviews_res_id = 4;
 				fetch("logged_reviews.php?res_id=" + reviews_res_id).then(response => response.text()).then(data => {
 					document.querySelector(".reviews").innerHTML = data;
 					document.querySelector(".reviews .write_review_btn").onclick = event => {

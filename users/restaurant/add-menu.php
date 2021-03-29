@@ -33,14 +33,13 @@
    
     <!-- Start of side bar -->
     <div class="sidebar"> 
-      <a href="restaurant-home.php">Home</a> 
-      <a href="add-preordermenu.php">Pre - Order Menu</a>    
-      <a href="add-menu.php" class="active">Update the Menu</a>
+      <a href="restaurant-home.php">Home</a>     
+      <a href="add-menu.php" class="active">Update Menu</a>
       <a href="res-promo.php">Promotions</a>
       <a href="res-floor-plan.php">Floor Plan</a> 
-      <a href="res-reservation.php">Reservations</a>
-      <a href="res-review.html">View Reviews</a>   
-      <br>
+      <a href="res-reservation.php">Table Reservations</a>
+      <a href="hall-reservation.php">Hall Reservations</a>
+      <a href="res-review.php">View Reviews</a>    
       <hr>
       <a href="mng-emp.php">Manage Employee</a>
       <a href="hall-details.php">Reception Hall</a>
@@ -205,7 +204,10 @@ window.onclick = function(event) {
 }
 
 function myFunction() {
-  confirm("Are you sure want to delete...!");
+  var x = confirm("Are you sure want to delete...!");
+  if (x){
+    
+  }
 }
 
 </script>

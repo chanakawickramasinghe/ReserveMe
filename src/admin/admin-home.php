@@ -49,11 +49,14 @@
             <?php
                 echo "<table border=1 class=\"detail-admin\">";
         
-        $email = $_SESSION["email"]; 
-        $admin_sql = "SELECT * FROM admins WHERE admin_email='$email'";
+        $admin_sql = "SELECT * FROM admins";
         
         $userquery = mysqli_query($connection,$admin_sql);
         while($row = mysqli_fetch_assoc($userquery)){
+
+        $name = $row['admin_name'];
+        $email = $row['admin_email'];
+        $cNo = $row['contact_no'];
 
             echo "
                 <tr>
@@ -85,9 +88,42 @@
             </div>
             <div class = "admin-home">
                 <!-- <button class="btn-change" type="button" onclick="window.location.href='admin-change-password.php'">Change Password</button> -->
-            
-                <button type="button" class="collapsible">Change password</button>
 
+                <button type="button" class="collapsible">Edit Details</button>
+                <div class="content-collapse">
+                    
+                    <form method="POST" action="admin-edit-details-submit.php">
+                        <h3>Change your details below</h3>
+                        <h2 class="error-msg"><?php include_once('../../public/includes/message.php'); ?></h2>
+                            <div class="form-change">
+                                <table class="tbl-admin-home">
+                                    <tr>
+                                        <th>Admin Name : </th>
+                                        <td><input type="text" name="name" placeholder="Admin Name" id="name" value="<?php echo $name; ?>" required></p></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Admin Email : </th>
+                                        <td><input type="email" name="email" placeholder="Admin Email" id="email" value="<?php echo $email; ?>" required></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Contact No : </th>
+                                        <td><input type="tel" name="contact" placeholder="Contact No." id="c_no" value="<?php echo $cNo; ?>" required></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><center><br><button type="submit" class="btn-change-m" name="edit_details">Save Details</button>
+                                    </tr>
+                                    <tr>
+                                        <td colspan = "2"><br><hr></td>
+                                    </tr>
+                                </table>  
+                            </div>
+                    </form>  
+                                    
+                </div>
+                
+                <br/>
+                <button type="button" class="collapsible">Change password</button>
                 <div class="content-collapse">
                     
                     <form method="POST" action="admin-change-password-submit.php">
@@ -111,8 +147,8 @@
                                         <td colspan="2"><P align="center" id='message' ></P></td>
                                     </tr>
                                     <tr>
-                                        <td colspan="2"><center><button type="submit" class="btn-change-blue" name="change-pword">Change Password</button>
-                                        <button type="reset" class="btn-change-normal">Clear</button></center></td>
+                                        <td colspan="2"><center><br><button type="submit" class="btn-change-m" name="change-pword">Change Password</button>
+                                        <button type="reset" class="btn-change-s">Clear</button></center></td>
                                     </tr>
                                 </table>
                                 
@@ -121,7 +157,8 @@
                 </div>
             </div>
 
-            <span><?php include('../../public/includes/footer.php'); ?></span>
+            <!-- removed footer -->
+            <!-- <span><?php //include('../../public/includes/footer.php'); ?></span> -->
              
         </div> 
         
@@ -144,7 +181,7 @@
             });
         }
     </script>
-
+    <!-- script to check passwords -->
     <script>
         var check = function() {
             if (document.getElementById('pword1').value == document.getElementById('pword2').value){
@@ -157,6 +194,24 @@
             }
         }
     </script>
+
+<!-- script to get values from the table to input feilds -->
+<script>
+    var table = document.getElementById('myTable');
+                
+        for(var i = 2; i < table.rows.length; i++)
+        {
+            table.rows[i].onclick = function()
+            {
+                document.getElementById("admin_name").value = this.cells[0].innerHTML;
+                document.getElementById("admin_email").value = this.cells[1].innerHTML;
+                document.getElementById("contact_no").value = this.cells[2].innerHTML;
+                document.getElementById("admin_type").value = this.cells[3].innerHTML;
+                
+            };
+        }
+
+</script>
     
     </body>
 </html>

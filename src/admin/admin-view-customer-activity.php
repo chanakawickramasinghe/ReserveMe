@@ -27,6 +27,7 @@
         <div class="search-user-container">
             <form name="form-display-selected">
                 <!--heading-->
+                <br/><br/><br/>
 		        <h3>Search From Date</h3>
 		        <!--Input-------->
 		        <div class="search-input-activity">
@@ -36,11 +37,19 @@
                 <br/>   
             </form>
         </div>
-            <h2>Activity of User</h2>
+            
             <?php
-    $cus_id = $_GET['id'];
-    echo $cus_id;
+    $cus_id = $_POST['user_id'];
+    // echo $cus_id;
+
+    $sql = "SELECT * FROM customer WHERE user_id='$cus_id'";
+    $sql_query = mysqli_query($connection,$sql);
+    $row = mysqli_fetch_assoc($sql_query);
+
+    $cus_name = $row['user_name'];
+   
 ?>
+            <h2>Activity of User : <font color="orange"><?php echo $cus_name; ?> </font>(Id = <font color="orange"> <?php echo $cus_id; ?></font>)</h2>
         <div>
 
         <table class="user" id="myTable" border="1">
@@ -59,7 +68,7 @@
         
         $activity_sql = "SELECT cus_activity.act_date, cus_activity.act_time, cus_activity.activity, cus_activity.reservation_type, cus_activity.reservation_id,
         reservation.no_of_guests, reservation.date, reservation.time
-        FROM cus_activity INNER JOIN reservation ON cus_activity.reservation_id=reservation.reservation_id;";
+        FROM cus_activity INNER JOIN reservation ON cus_activity.reservation_id=reservation.reservation_id WHERE cus_activity.cus_id='$cus_id';";
 
         $activity_query = mysqli_query($connection,$activity_sql);
         while($row = mysqli_fetch_assoc($activity_query)){

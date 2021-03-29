@@ -77,7 +77,7 @@
 			<h4>Best places to <font>Dine in</font> with esense of joy</h4>
 			<!--details-->
 			<p>We have brought the fine option of placing a table reservation at your favourite restaurant to your finger tip. Explore more restaurants and place a table reservation in few minutes.</p>
-			<a class="hero-button" href="res_view/logged_res_view.php?res_id=4">Table Reservation</a>
+			<a class="hero-button" href="res_view/logged_res_view.php">Table Reservation</a>
 		</div>
 		<!--img-->
 		<div class="reservation-img"><img src="../../images/hall.jpg" /></div>
@@ -158,7 +158,7 @@
 					</div>
 					<div class=\"card2\">
 						<img src=\"../../images/review.svg\" style=\"height: 200px ; width: 200px\"/>
-						<a class=\"subcribe-btn\" href=\"res_view/review/logged_index.php?res_id=4\">More</a>
+						<a class=\"subcribe-btn\" href=\"res_view/review/logged_index.php\">More</a>
 					</div>
 				</section>";
             	}

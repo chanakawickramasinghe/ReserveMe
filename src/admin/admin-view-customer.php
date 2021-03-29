@@ -15,6 +15,7 @@
         <link href="../../public/images/logo.png" rel="shortcut icon"/>
         <link rel="stylesheet" href="../../public/CSS/admin-dashboard.css"/>
         <script src="../../public/js/manage-user-search.js"></script>
+
     </head>
     <body>
 
@@ -90,12 +91,12 @@
                     </div>
                     <div class="form-40">
                         <form method="POST" action="admin-cus-operations.php">
-                        <br>
-                        <input type="hidden" placeholder="ID" id="test_cus_id3" name="user_id" readonly="true" required>
-                        <input type="submit" class="btn-red" value="Activate Account" name="btn-activate-cus-account">
-                        <input type="submit" class="btn-red" value="Suspend Account" name="btn-suspend-cus-account">
-                        <h4><font color="red"><?php include_once('../../public/includes/message.php'); ?></font></h4>
-                    </form>
+                            <br>
+                            <input type="hidden" placeholder="ID" id="test_cus_id3" name="user_id" readonly="true" required>
+                            <input type="submit" class="btn-red" value="Activate Account" name="btn-activate-cus-account">
+                            <input type="submit" class="btn-red" value="Suspend Account" name="btn-suspend-cus-account">
+                            <h4><font color="red"><?php include_once('../../public/includes/message.php'); ?></font></h4>
+                        </form>
                     
                     </div> 
                          
@@ -106,7 +107,8 @@
             </form>
         </div>
         <br/>
-         
+
+
         
         <div>
         
@@ -169,10 +171,10 @@
         }
 
 </script>
-        
-                  
-       <!--script for onClickNav() for the navigation menu-->
-    <script src="../../public/js/onClickNav.js"></script>
 
-    </body>
+
+<!--script for onClickNav() for the navigation menu-->
+<script src="../../public/js/onClickNav.js"></script>
+
+</body>
 </html>

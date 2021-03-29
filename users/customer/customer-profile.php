@@ -44,6 +44,12 @@
                 <th>Customer ID</th><td>".$row['user_id']."</td>
                 </tr>
                 <tr>                  
+                <th>Customer Name</th><td>".$row['first_name']."</td>
+                </tr>
+                <tr>                  
+                <th>Customer Name</th><td>".$row['last_name']."</td>
+                </tr>
+                <tr>                  
                 <th>Customer Name</th><td>".$row['user_name']."</td>
                 </tr>
                 <tr>

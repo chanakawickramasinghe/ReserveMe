@@ -33,10 +33,14 @@
 
                     <h2 class="error-msg"><?php include_once('../../includes/message.php'); ?></h2>
 
-                <form action="register-submit.php" method="post">                   
+                <form action="register-submit.php" method="post"> 
 
-                    <input type="text"  name="name" class="type-feild" placeholder="Your Name" pattern="[a-zA-Z][a-zA-Z ]{2,}" required>    
-                    
+                    <input type="text"  name="firstname" class="type-feild" placeholder="Your First Name" pattern="[a-zA-Z][a-zA-Z ]{2,}" required>    
+
+                    <input type="text"  name="lastname" class="type-feild" placeholder="Your Last Name" pattern="[a-zA-Z][a-zA-Z ]{2,}" required>       
+
+                    <input type="text"  name="name" class="type-feild" placeholder="Full Name" pattern="[a-zA-Z][a-zA-Z ]{2,}" required>   
+
                     <input type="email" name="email" class="type-feild" placeholder="Email address" required="">
       
                     <input type="password" name="password" class="type-feild" placeholder="New password" id="password" minlength="8" 

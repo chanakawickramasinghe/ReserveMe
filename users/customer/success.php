@@ -1,4 +1,3 @@
-<?php include('../../includes/connection.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -88,6 +87,36 @@
         <!--End of Ongoing Card Section-->
     <!--End of Ongoing Card Section-->
 
+    <?php
+
+include('../../includes/connection.php');
+include('../../includes/session.php');
+
+if(isset($_GET['order_id'])){
+    $order_id = $_GET['order_id'];
+    $reservation_sql = "SELECT * from temp_hall_reservation WHERE temp_reservation_id = $order_id ";
+    $reservation_result  = mysqli_fetch_assoc(mysqli_query($connection,$reservation_sql));
+	checkSession();
+    $userID = $_SESSION["userID"]; //session id
+    $capacity = $reservation_result['capacity'];
+    $advance_fee = $reservation_result['advance_fee'];
+	
+    $reservation_insert_sql = "INSERT INTO hall_reservation(hall_id,customer_id,capacity,reservation_date,reservation_time,advance_fee,status_code) 
+    VALUES ('". $reservation_result['hall_id'] ."','$userID','$capacity','". $reservation_result['reservation_date'] ."','". $reservation_result['reservation_time'] ."','$advance_fee','1')";
+  
+
+    if (mysqli_query($connection,$reservation_insert_sql) == TRUE) {
+        $temp_delete_sql = "DELETE from temp_hall_reservation WHERE temp_reservation_id = $order_id ";
+        $temp_delete_query  = mysqli_fetch_assoc(mysqli_query($connection,$temp_delete_sql));
+        
+        
+    }else{
+            //need to show error message
+        }
+     
+}
+?>  
+
     <!--Include footer.php-->
     <div><?php include "../../includes/footer.php" ?></div>
 
@@ -95,4 +124,5 @@
     <script src="../../js/onClickNav.js"></script>
 </body>
 </html>
+
 

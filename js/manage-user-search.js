@@ -1,5 +1,3 @@
-
-
 function myFunctionCustomer() {
     var input, filter, table, tr, td, i;
       input = document.getElementById("myInput");
@@ -119,9 +117,10 @@ function myFunctionCustomer() {
             tr = table.getElementsByTagName("tr");
             for (i = 0; i < tr.length; i++) {
               td = tr[i].getElementsByTagName("td")[0]; // for column one
+              td1 = tr[i].getElementsByTagName("td")[2];
           /* ADD columns here that you want you to filter to be used on */
               if (td) {
-                if ( (td.innerHTML.toUpperCase().indexOf(filter) > -1)  )  {            
+                if ( td.innerHTML.toUpperCase().indexOf(filter) > -1 || td1.innerHTML.toUpperCase().indexOf(filter) > -1)    {            
                   tr[i].style.display = "";
                 } else {
                   tr[i].style.display = "none";
@@ -137,11 +136,12 @@ function myFunctionCustomer() {
               table = document.getElementById("myTable");
               tr = table.getElementsByTagName("tr");
               for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[1]; // for column one
-                td1 = tr[i].getElementsByTagName("td")[2]; // for column one
+                td = tr[i].getElementsByTagName("td")[2]; 
+                td1 = tr[i].getElementsByTagName("td")[3];
+                td2 = tr[i].getElementsByTagName("td")[4];
             /* ADD columns here that you want you to filter to be used on */
                 if (td) {
-                  if ( (td.innerHTML.toUpperCase().indexOf(filter) > -1) || (td1.innerHTML.toUpperCase().indexOf(filter) > -1) )  {            
+                  if ( (td.innerHTML.toUpperCase().indexOf(filter) > -1) || (td1.innerHTML.toUpperCase().indexOf(filter) > -1)  ||  (td2.innerHTML.toUpperCase().indexOf(filter) > -1) )  {            
                     tr[i].style.display = "";
                   } else {
                     tr[i].style.display = "none";
@@ -224,3 +224,24 @@ function myFunctionCustomer() {
 
               }
             }
+
+// for past messages search
+
+// function searchPastMessages() {
+//   var input, filter, table, tr, td, i;
+//     input = document.getElementById("myInput");
+//     filter = input.value.toUpperCase();
+//     table = document.getElementById("myTableMsg");
+//     tr = table.getElementsByTagName("tr");
+//     for (i = 0; i < tr.length; i++) {
+//       td = tr[i].getElementsByTagName("td")[1]; // for column one
+//   /* ADD columns here that you want you to filter to be used on */
+//       if (td) {
+//         if (td.innerHTML.toUpperCase().indexOf(filter) > -1)  {            
+//           tr[i].style.display = "";
+//         } else {
+//           tr[i].style.display = "none";
+//         }
+//       }
+//     }
+//   } 

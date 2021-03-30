@@ -23,15 +23,17 @@
     <div class="sidebar"> 
       <!-- <a href="venues.php">Reservation Status</a><hr>     -->
       <a href="menu.php">Set Menu</a><hr>
-      <a href="queries.php">Queries</a><hr>
-      <a href="table-reservation.php">Manage Reservation</a><hr>
+      <a href="chat.php">Chat</a><hr>
+      <a href="table-reservation.php" >Table Reservation</a><hr>
+      <a href="menu-reservation.php" >Pre Orders</a><hr>
+      <a href="hall-reservation.php" >Hall Reservation</a><hr>
     </div>
     <!-- End of sidebar -->
 
     <!-- Get data from database -->
     <?php
         checkSession();
-        $userName = $_SESSION["emp_name"]; //have to add session id
+        $userName = $_SESSION["name"]; //have to add session id
         $userEmail= $_SESSION["emp_email"];
         $user_mobile=$_SESSION["emp_mobile"];
 

@@ -32,8 +32,10 @@
     <div class="sidebar">
       <!-- <a href="venues.php">Reservation Status</a><hr>     -->
       <a href="menu.php" class="active">Set Menu</a><hr>
-      <a href="queries.php">Queries</a><hr>
-      <a href="table-reservation.php">Manage Reservation</a><hr>
+      <a href="chat.php">Chat</a><hr>
+      <a href="table-reservation.php" >Table Reservation</a><hr>
+      <a href="menu-reservation.php" >Pre Orders</a><hr>
+      <a href="hall-reservation.php" >Hall Reservation</a><hr>
     </div>
     <!-- End of sidebar -->
 

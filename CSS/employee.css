@@ -491,6 +491,7 @@ input:checked + .slider:before {
   transition: transform 0.5s;
   margin-left: 5vw;
   border-collapse: collapse; 
+  border: #000 solid;
 
 
 }
@@ -505,6 +506,7 @@ input:checked + .slider:before {
 .res-table td , .res-table th {
   /* border: 1px solid rgb(160, 154, 154); */
   border-bottom-style: solid;
+  padding-left: 5%;
 }
 
 .res-table tr:nth-child(even){background-color: rgb(255, 236, 200);}

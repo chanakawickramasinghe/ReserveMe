@@ -96,7 +96,7 @@ if(isset($_POST['submit'])){
         $userRow = mysqli_fetch_array($userResult4);
         // session_start();
         checkSession();  //create sessions
-        $_SESSION["emp_name"] = $userRow['emp_name'];
+        $_SESSION["name"] = $userRow['emp_name'];
         $_SESSION["emp_id"] = $userRow['emp_id'];
         $_SESSION["res_id"] = $userRow['res_id'];
         $_SESSION['emp_email']= $userRow['emp_email'];

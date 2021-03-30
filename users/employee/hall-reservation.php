@@ -27,8 +27,11 @@
     <div class="sidebar"> 
       <!-- <a href="venues.php">Reservation Status</a><hr>      -->
       <a href="menu.php">Set Menu</a><hr>
-      <a href="queries.php">Queries</a><hr>
-      <a href="table-reservation.php" class="active">Manage Reservation</a><hr>
+      <a href="chat.php">Chat</a><hr>
+      <a href="table-reservation.php" >Table Reservation</a><hr>
+      <a href="menu-reservation.php" >Pre Orders</a><hr>
+      <a href="#" class="active">Hall Reservation</a><hr>
+
     </div>
     <!-- End of sidebar -->
 
@@ -36,12 +39,12 @@
    
     <h1> Hall <span style="color:orange"> Reserved </span> </h1>
     
-    <div style="float:right">
+    <!-- <div style="float:right">
         <button type="button" class="hero-button" onclick="window.location.href='table-reservation.php'">Table Reservation</button>
         <button type="button" class="hero-button" onclick="window.location.href='menu-reservation.php'">Pre Orders</button>    
         <button type="button" class="hero-button active" onclick="window.location.href='#'">Hall Reservation</button>
     </div>
-    <br><br>
+    <br><br> -->
 
     <div class="employee-container">
         <table class="res-table">

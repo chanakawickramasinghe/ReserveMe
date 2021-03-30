@@ -45,6 +45,14 @@
                     <center>
                         <table class=\"form-edit-profile\">
                             <tr>
+                                <th>First Name :</th>
+                                <td><input type=\"text\" name=\"EditName\" placeholder=\"ex: John Shelby\" value=\"{$row['first_name']}\" required pattern=\"[a-zA-Z][a-zA-Z ]{2,}\"></td>
+                            </tr>
+                            <tr>
+                                <th>Last Name :</th>
+                                <td><input type=\"text\" name=\"EditName\" placeholder=\"ex: John Shelby\" value=\"{$row['last_name']}\" required pattern=\"[a-zA-Z][a-zA-Z ]{2,}\"></td>
+                            </tr>
+                            <tr style=\"hidden\">
                                 <th>Your Name :</th>
                                 <td><input type=\"text\" name=\"EditName\" placeholder=\"ex: John Shelby\" value=\"{$row['user_name']}\" required pattern=\"[a-zA-Z][a-zA-Z ]{2,}\"></td>
                             </tr>
@@ -60,18 +68,6 @@
                                 <th>Date of Birth : </th>
                                 <td><input type=\"date\" name=\"EditDOB\" value=\"{$row['dob']}\" min=\"1930-01-01\" max=\"2002-12-31\" required>
                                 </td>
-                            </tr>
-                            <tr>
-                                <th>Postal Number :</th>
-                                <td><input type=\"text\" name=\"EditPostalNumber\" placeholder=\"ex : No. 120\" value=\"{$row['postal_number']}\" required></td>
-                            </tr>
-                            <tr>
-                                <th>Street Name : </th>
-                                <td><input type=\"text\" name=\"EditStreet\" placeholder=\"ex: Wall Street\" value=\"{$row['street']}\" required></td>
-                            </tr>
-                            <tr>
-                                <th>Living City : </th>
-                                <td><input type=\"text\" name=\"EditCity\" placeholder=\"ex: Colombo\" value=\"{$row['city']}\" required></td>
                             </tr>
                             <tr>
                                 <th>Password :</th>

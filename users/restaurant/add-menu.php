@@ -76,7 +76,7 @@
         <input type="hidden" id="item_id" name="item_id">        
         <input type="submit" name="submit"  class="hero-button" value="Add" required>
         <input type="submit" name="update"  class="hero-button" value="Update" required>
-        <input type="submit" name="remove"  class="hero-button" value="Remove" onclick="myFunction()" required>
+        <input type="submit" name="remove"  class="hero-button" value="Remove" onclick="return myFunction()" required>
 
 
     </form>
@@ -207,7 +207,9 @@ window.onclick = function(event) {
 function myFunction() {
   var x = confirm("Are you sure want to delete...!");
   if (x){
-    
+    return true;
+  } else {
+    return false;
   }
 }
 

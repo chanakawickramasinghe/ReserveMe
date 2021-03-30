@@ -177,7 +177,7 @@
                       // echo $table_id;
                     } else {
 
-                      echo "<form action=\"reservation_submit.php\" method=\"POST\" > ";
+                      echo "<form action=\"reservation-submit.php\" method=\"POST\" > ";
                       echo "<label for=\"$table_id\" class=\"container\">$table_id
                       <input type=\"radio\" id=\"$table_id\" name=\"table_id\" value=\"$table_id\" required>
                       <span class=\"checkmark\"> </span>
@@ -195,10 +195,10 @@
               ?>         
             
         <input type="button" class="dropbtn"  id="reserve" name="reserve" value="Reserve" onclick="onClickOpenForm()">
-        <input type="hidden" name="cus_id" value="<?php echo $cus_id;?>" required>
-        <input type="hidden" name="guests2" value="<?php echo $guests;?>" required>
-        <input type="hidden" name="date2" value="<?php echo $date;?>" required>
-        <input type="hidden" name="time2" value="<?php echo $time;?>" required>
+        <input type="hidden" id="cus_id" name="cus_id" value="<?php echo $cus_id;?>" required>
+        <input type="hidden" id="guests2" name="guests2" value="<?php echo $guests;?>" required>
+        <input type="hidden" id="date2" name="date2" value="<?php echo $date;?>" required>
+        <input type="hidden" id="time2" name="time2" value="<?php echo $time;?>" required>
 
             
 	    </div>
@@ -214,7 +214,7 @@
         <div class="form-container">
             <h2>Do you want to Preorder?</h2>
             <h4>If you press "NO" your reservation will be done</h4>
-            <div class="left"><button type="submit" class="food-btn" name="yes" value="yes">Yes</button></div>
+            <div class="left"><button type="submit" class="food-btn" name="yes" value="yes" onclick="setDetails()">Yes</button></div>
             <div class="right"><button type="submit" class="food-btn" name="no" value="no">No</button></div><br>
             <button type="button" class="btn cancel" onclick="onClickCloseForm()">Close</button>
         </div>
@@ -250,6 +250,21 @@
     
   }
 
+    </script>
+    <script>
+
+function setDetails() {
+    var cus_id = document.getElementById("cus_id").value;
+    localStorage.setItem("cus_id", cus_id);
+    var table_id=document.querySelector('input[name="table_id"]:checked').value;
+    localStorage.setItem("table_id", table_id)
+    var guests2 = document.getElementById("guests2").value;
+    localStorage.setItem("guests2", guests2);
+    var date2 = document.getElementById("date2").value;
+    localStorage.setItem("date2", date2);
+    var time2 = document.getElementById("time2").value;
+    localStorage.setItem("time2", time2);    
+}
     </script>
 </body>
 </html>

@@ -85,7 +85,7 @@
                 </table> ";
             }
         ?>
-        <?php include('../../public/includes/footer.php'); ?>
+        <?php //include('../../public/includes/footer.php'); ?>
         </div>
 
 

@@ -43,6 +43,7 @@
               <!--img-->
               <div class=\"reservation-img\"><img src=\"../../../images/halls/{$rowProduct['main_image']}\" /></div>
               <!--text-->
+
               <div class=\"reservation-text\">
                   <!--heading-->
                   <h3> ". $rowProduct['hall_name'] ."</h3>
@@ -51,8 +52,8 @@
                   <p>Capacity:  ". $rowProduct['capacity'] ."</p>
                   <p>Contact: ". $rowProduct['contact_no'] ."</p>
                   <p>Advance: ". $rowProduct['advance_fee'] ." LKR</p>
-                  <a class=\"hero-button\" onclick=\"location.href='checkout.php?hall_id={$rowProduct['hall_id']}&reservation_date=$reservation_date&reservation_time=$reservation_time';\" >Reserve</a>
-              </div>
+                  <a class=\"hero-button\" onclick=\"location.href='temp_hall_reservation.php?hall_id={$rowProduct['hall_id']}&reservation_date=$reservation_date&reservation_time=$reservation_time';\" >Reserve</a>
+              </div><form>
               </section>
           <!--End of main-section-->
 

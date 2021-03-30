@@ -24,35 +24,42 @@
         </div>
         <!--End of nav-->
             <br><br><br>
+
+        <?php
+        $cus_id = $_POST['user_id'];
+        // echo $cus_id;
+
+        $sql = "SELECT * FROM customer WHERE user_id='$cus_id'";
+        $sql_query = mysqli_query($connection,$sql);
+        $row = mysqli_fetch_assoc($sql_query);
+
+        $cus_name = $row['user_name'];
+        $cus_email = $row['email'];
+
+        ?>
             <h1><font color="black">Send </font>Email</h2>
             <div >
-                <center><form>
+                <center><form method="POST" action="admin-send-email-submit.php">
                 <table class="send-msg">
                     <tr>
                         <th>To :<br></th>
-                        <td><input type="email" placeholder="Receiver's Email" Value="example@reserveme.lk"><br></td>
-                        
+                        <td><input type="email" name="cus_email" placeholder="Receiver's Email" Value="<?php echo $cus_email;?>"><br></td>
+                        <input type="hidden" name="cus_name" value="<?php echo $cus_name; ?>">
                     </tr>
                     <tr>
                         <th>Subject :<br></th>
-                        <td><input type="text" placeholder="Subject"><br></td>
+                        <td><input type="text" name="subject" placeholder="Subject"><br></td>
                     </tr>
                     <tr>
                         <th>Message :</th>
-                        <td><textarea style="height:15vh;width:30vw;overflow:autofont-size:large;
-	background-color: white;
-	border-radius:5px;
-  border: none;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-  padding:20px;
-  box-shadow: 2px 2px 30px rgba(0,0,0,0.1);" scrolling="yes" placeholder="Enter message..."></textarea></td>
+                        <td><textarea class="txtarea-email" name="msg" scrolling="yes" placeholder="Enter message..."></textarea></td>
                     </tr>
+              
                 </table>
-                <br>
-                <button type="button" class="search-btn">Send</button><br>
-                <button type="reset" class="btn-change-normal">Clear</button>
+                <br/>
+                        <input type="submit" class="btn-change-s" name="send-email" value="Send">
+                        <button type="reset" class="btn-change-s">Clear</button>
+                
                 </form></center>
                 
             </div>

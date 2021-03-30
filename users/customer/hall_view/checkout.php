@@ -1,4 +1,7 @@
-<?php include('../../../includes/connection.php'); ?>
+<?php
+include('../../../includes/connection.php');
+include('../../../includes/session.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,9 +41,21 @@
       if(isset($_GET['hall_id'])){
         $reservation_date = $_GET['reservation_date'];
         $reservation_time = $_GET['reservation_time'];
+        $tem_orderid = $_GET['temp_orderid'];
         $hall_id = $_GET['hall_id'];
         $sql = "SELECT * FROM reception_hall WHERE hall_id = ".$_GET['hall_id'];
         $resultProduct = mysqli_query($connection,$sql);
+
+       
+        checkSession();
+        
+        
+        $userID = $_SESSION["userID"]; //session id
+
+        $customerdetailssql = "SELECT * FROM customer WHERE user_id='$userID'";
+       
+        $orderdetailssql = "SELECT * FROM temp_hall_reservation where hall_id = $hall_id and reservation_date=$reservation_date and reservation_time=$reservation_time";
+
         while($rowProduct  = mysqli_fetch_assoc($resultProduct)){  
             echo"<!--Start of main-section-->
             <table class=\"preorder\" id=\"\" style=\"border:0\">
@@ -79,22 +94,29 @@
             <input type=\"hidden\" name=\"cancel_url\" value=\"preorder.php\">
             <input type=\"hidden\" name=\"notify_url\" value=\"info.reserve.lk@gmail.com\">  
             <br><br><br>
-            <input type=\"hidden\" name=\"order_id\" value=\"1\">
             <input type=\"hidden\" name=\"items\" value=\"". $rowProduct['hall_name'] ."\"><br>
             <input type=\"hidden\" name=\"currency\" value=\"LKR\">
-            <input type=\"hidden\" name=\"amount\" value=\"". $rowProduct['advance_fee'] ."\">  
-            <br><br><br>
-            <input type=\"hidden\" name=\"first_name\" value=\"Saman\">
-            <input type=\"hidden\" name=\"last_name\" value=\"Perera\"><br>
-            <input type=\"hidden\" name=\"email\" value=\"samanp@gmail.com\">
-            <input type=\"hidden\" name=\"phone\" value=\"0771234567\"><br>
-            <input type=\"hidden\" name=\"address\" value=\"No.1, Galle Road\">
-            <input type=\"hidden\" name=\"city\" value=\"Colombo\">
+            <input type=\"hidden\" name=\"amount\" value=\"". $rowProduct['advance_fee'] ."\"> 
+            <input type=\"hidden\" name=\"order_id\" value=\"$tem_orderid\"> 
+            <br><br><br>";}
+
+            
+                
+            
+            
+
+            $userresultquery = mysqli_query($connection,$customerdetailssql);
+        while($row = mysqli_fetch_assoc($userresultquery)){
+        echo "
+            <input type=\"hidden\" name=\"first_name\" value=\"".$row['first_name']."\">
+            <input type=\"hidden\" name=\"last_name\" value=\"".$row['last_name']."\"><br>
+            <input type=\"hidden\" name=\"email\" value=\"".$row['email']."\">
+            <input type=\"hidden\" name=\"phone\" value=\"".$row['contact_no']."\"><br>
+            <input type=\"hidden\" name=\"address\" value=\"".$row['postal_number'].",".$row['street'].",".$row['city']."\">
+            <input type=\"hidden\" name=\"city\" value=\"".$row['city']."\">
             <input type=\"hidden\" name=\"country\" value=\"Sri Lanka\"><br><br> 
-    
-          
-          ";
-        }
+               ";
+        } 
       }
 
 
@@ -114,21 +136,3 @@
 </body>
 </html>
 
-<?php
-
-$merchant_id         = $_POST['merchant_id'];
-$order_id             = $_POST['order_id'];
-$payhere_amount     = $_POST['payhere_amount'];
-$payhere_currency    = $_POST['payhere_currency'];
-$status_code         = $_POST['status_code'];
-$md5sig                = $_POST['md5sig'];
-
-$merchant_secret = '4pAh4a0MJW84eZRsXC9nTN4jx508Tc7454Dx4iWtUEVf'; // Replace with your Merchant Secret (Can be found on your PayHere account's Settings page)
-
-$local_md5sig = strtoupper (md5 ( $merchant_id . $order_id . $payhere_amount . $payhere_currency . $status_code . strtoupper(md5($merchant_secret)) ) );
-
-if (($local_md5sig === $md5sig) AND ($status_code == 2) ){
-        //TODO: Update your database as payment success
-}
-
-?>

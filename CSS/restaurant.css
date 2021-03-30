@@ -1,0 +1,20 @@
+.res-home-tbl{
+    text-align: left;
+    width: 45%;
+    padding-left: 5vw;
+    font-size: large;
+}
+
+.res-home-tbl th{
+    padding-bottom: 8px;
+}
+
+.res-home-tbl td{
+    padding-bottom: 8px;
+    padding-left: 10px;
+}
+
+.img-res-home{
+    width: 30vw;
+    padding-right: 5vw;
+}

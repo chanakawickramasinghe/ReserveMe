@@ -23,26 +23,26 @@
         </div>
         <!--End of nav-->
 
-        <h1><font color="black">Past</font> Messages</h1>
-
-        <div class="search-user-container">
-            <!-- <form name="form-display-selected"> -->
-                <!--heading-->
+        <h1><br/><br/><font color="black">Past</font> Messages</h1>
+        <br/>
+        <!-- <div class="search-user-container">
+            <form name="form-display-selected">
+    
 		        <h3>Search From Name</h3>
-		        <!--Input-------->
+	
 		        <div class="search-input">
-                    <input type="text" id="myInput" onkeyup="myFunctionPastPromos()" 
+                    <input type="text" id="myInput" onkeyup="searchPastMessages()" 
                     placeholder="Enter Name"/>
-                    <br>
-                </div>    
-        </div>
+                </div> 
+                <br/>   
+        </div> -->
 
         <?php
 
         $past_msg_sql = "SELECT contact_us.comment, contact_us.message, contact_us.name, 
         contact_us.email, contact_us.date_time, contact_us.msg_id, 
         replies.reply, replies.date_time_sent, replies.reply_id
-        FROM contact_us INNER JOIN replies ON contact_us.msg_id=replies.msg_id WHERE replied='1'"; //check whether replied
+        FROM contact_us INNER JOIN replies ON contact_us.msg_id=replies.msg_id WHERE replied='1' ORDER BY replies.date_time_sent"; //check whether replied
 
         $past_msg_query = mysqli_query($connection,$past_msg_sql);
         $num_msg = mysqli_num_rows($past_msg_query);
@@ -56,7 +56,7 @@
             while($row = mysqli_fetch_assoc($past_msg_query)){  
             echo"
 
-                <table class=\"message-table\">
+                <table class=\"message-table\" id=\"myTableMsg\">
                 <tr><th>".$row['comment']."</th></tr>
                 <tr><td>".$row['message']."</td></tr>
                 <tr><td>from <b>".$row['name']."</b> (".$row['email'].") on <b>".$row['date_time']."</b> (Message Id = ".$row['msg_id'].")<br/><br/></td></tr>
@@ -76,7 +76,7 @@
             echo "</table>";
         ?>
 
-        <span><?php include('../../public/includes/footer.php'); ?></span>
+        <!-- <span><?php //include('../../public/includes/footer.php'); ?></span> -->
 
     </body>
 </html>

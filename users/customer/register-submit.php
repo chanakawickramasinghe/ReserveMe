@@ -6,6 +6,8 @@ if(isset($_POST['submit'])){
 	
     // Assign input data from form to variables
 	$name = $_POST['name'];
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
 	$email = $_POST['email'];
     $password = md5($_POST['password']);
 	$password2 = md5($_POST['password2']);
@@ -47,8 +49,8 @@ if(isset($_POST['submit'])){
         //If no error, then Insert to Database
         else {
 
-            $registrationQuery = "INSERT INTO customer (user_id,user_name,email,password,contact_no,dob,active_status) 
-            VALUES (NULL,'$name', '$email', '$password','$contact', '$dob', 1)";
+            $registrationQuery = "INSERT INTO customer (user_id,user_name,first_name,last_name,email,password,contact_no,dob,active_status) 
+            VALUES (NULL,'$name', '$firstname', '$lastname', '$email', '$password','$contact', '$dob', 1)";
             
             if (mysqli_query($connection,$registrationQuery) == TRUE) {
                 //echo "inside TRUE";

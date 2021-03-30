@@ -15,6 +15,7 @@
         <link href="../../public/images/logo.png" rel="shortcut icon"/>
         <link rel="stylesheet" href="../../public/CSS/admin-dashboard.css"/>
         <script src="../../public/js/manage-user-search.js"></script>
+
     </head>
     <body>
 
@@ -31,6 +32,7 @@
         <div class="search-user-container">
             <form name="form-display-selected">
                 <!--heading-->
+                <br/><br/><br/>
 		        <h3>Search From Name , Email or ID</h3>
 		        <!--Input-------->
 		        <div class="search-input">
@@ -65,22 +67,39 @@
                         <tr>
                             <th>Active Status :</th>
                             <td><input class="input-s" type="text" id="active_status" placeholder="Status" readonly="true" name="cus_status" required></td>
+                            <th colspan="3"></th>
+                            <td><button class="btn-change-s" type="reset">Clear</button></td>
+                        </tr>
+                        <tr> 
                         </tr>
                     </table>
                     </form>
                     <p class="button-box">
-                    <form method="POST" action="admin-view-customer-activity.php">
-                        <br/><br/>
-                        <input type="hidden" placeholder="ID" id="test_cus_id" name="user_id" readonly="true" required>
-
-                        <input type="submit" class="btn-blue-l" name="send" value="View Activity">
-                        <button class="btn-blue-l" type="button" name="btn-send-email" onclick="admin-cus-operations.php">Send Email</button>
-                        <input type="submit" class="btn-red" value="Activate Account" name="btn-activate-cus-account">
-                        <button class="btn-red" type="button" name="btn-suspend-account" onclick="suspendFunction()">Suspend Account</button>
-                        <button class="btn-blue" type="reset">Clear</button>
-                    </form> 
-
+                    <div class="form-15">
+                        <form method="POST" action="admin-view-customer-activity.php">
+                            <br/>
+                            <input type="hidden" placeholder="ID" id="test_cus_id" name="user_id" readonly="true" required>
+                            <input type="submit" class="btn-change-m" name="send" value="View Activity">
+                        </form>
+                    </div>
+                    <div class="form-15">
+                        <form method="POST" action="admin-send-email.php">
+                            <br/>
+                            <input type="hidden" placeholder="ID" id="test_cus_id2" name="user_id" readonly="true" required>
+                            <input type="submit" class="btn-change-m" name="send-email" value="Send Email">
+                        </form>
+                    </div>
+                    <div class="form-40">
+                        <form method="POST" action="admin-cus-operations.php">
+                            <br>
+                            <input type="hidden" placeholder="ID" id="test_cus_id3" name="user_id" readonly="true" required>
+                            <input type="submit" class="btn-red" value="Activate Account" name="btn-activate-cus-account">
+                            <input type="submit" class="btn-red" value="Suspend Account" name="btn-suspend-cus-account">
+                            <h4><font color="red"><?php include_once('../../public/includes/message.php'); ?></font></h4>
+                        </form>
                     
+                    </div> 
+                         
                     </p>      
 
                 </div>
@@ -88,7 +107,8 @@
             </form>
         </div>
         <br/>
-         
+
+
         
         <div>
         
@@ -145,14 +165,16 @@
                 document.getElementById("ratings").value = this.cells[5].innerHTML;
 
                 document.getElementById("test_cus_id").value = this.cells[0].innerHTML;
+                document.getElementById("test_cus_id2").value = this.cells[0].innerHTML;
+                document.getElementById("test_cus_id3").value = this.cells[0].innerHTML;
             };
         }
 
 </script>
-        
-                  
-       <!--script for onClickNav() for the navigation menu-->
-    <script src="../../public/js/onClickNav.js"></script>
 
-    </body>
+
+<!--script for onClickNav() for the navigation menu-->
+<script src="../../public/js/onClickNav.js"></script>
+
+</body>
 </html>

@@ -27,6 +27,7 @@
         <div class="search-user-container">
             <form name="form-display-selected">
                 <!--heading-->
+                <br/><br/><br/>
 		        <h3>Search From Date</h3>
 		        <!--Input-------->
 		        <div class="search-input-activity">
@@ -36,11 +37,19 @@
                 <br/>   
             </form>
         </div>
-            <h2>Activity of User</h2>
+            
             <?php
     $cus_id = $_POST['user_id'];
-    echo $cus_id;
+    // echo $cus_id;
+
+    $sql = "SELECT * FROM customer WHERE user_id='$cus_id'";
+    $sql_query = mysqli_query($connection,$sql);
+    $row = mysqli_fetch_assoc($sql_query);
+
+    $cus_name = $row['user_name'];
+   
 ?>
+            <h2>Activity of User : <font color="orange"><?php echo $cus_name; ?> </font>(Id = <font color="orange"> <?php echo $cus_id; ?></font>)</h2>
         <div>
 
         <table class="user" id="myTable" border="1">

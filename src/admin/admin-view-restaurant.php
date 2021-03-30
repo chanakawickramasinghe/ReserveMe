@@ -10,6 +10,8 @@
         <link href="../../public/images/logo.png" rel="shortcut icon"/>
         <link rel="stylesheet" href="../../public/CSS/admin-dashboard.css"/>
         <script src="../../public/js/manage-user-search.js"></script>
+
+        <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
     </head>
     <body>
 
@@ -37,23 +39,40 @@
         
                 $res_query= mysqli_query($connection,$restaurant_sql);
                 $row = mysqli_fetch_assoc($res_query);
-        
+                
+                $preorder_available = $row['preorder_available'];
                 echo "
-                    <img class=\"img-promo\" src= \"../../public/images/restaurant/{$row['res_image']}\">                 
-                    ".$row['res_name']."
-                    <td>".$row['res_email']."</td>
-                    <td>".$row['res_add_line1']."</td>
-                    <td>".$row['city']."</td>
-                    <td>".$row['res_location']."</td>
-                    <td>".$row['res_tel']."</td>
-                    <td>".$row['preorder_available']."</td>
-                    <td>".$row['res_rate']."</td>
-                    <td>".$row['opening_hour']."</td>
-                    <td>".$row['closing-hour']."</td>"; 
+                    <table class=\"admin-res-tbl\">
+                        <tr>
+                            <td rowspan=\"4\"><img class=\"img-admin-res-tbl\" src= \"../../public/images/restaurant/{$row['res_image']}\"></td>
+                            <td><i class=\"fas fa-utensils\"> &nbsp;&nbsp;" .$row['res_name']."</i></td>
+                            <td><i class=\"fas fa-at\"> &nbsp;&nbsp; ".$row['res_email']."</i></td>
+                        </tr>
+                        <tr>
+                            <td><i class=\"fas fa-map-marker-alt\"> &nbsp;&nbsp; ".$row['res_add_line1'].", ".$row['city']."</i></td>
+                            <td><i class=\"fas fa-map-marker-alt\"> &nbsp;&nbsp; <a href=".$row['res_location'].">Click here for Location</a></i></td>
+                        </tr>
+                        <tr>
+                            <td><i class=\"fas fa-phone\"> &nbsp;&nbsp; ".$row['res_tel']."</i></td>
+                            <td><i class=\"fas fa-star-half-alt\"> &nbsp;&nbsp; ".$row['res_rate']."</i></td>
+                        </tr>
+                        <tr>
+                            <td><i class=\"fas fa-clock\"> &nbsp;&nbsp; ".$row['opening_hour']." - ".$row['closing-hour']."</i></td>
+                            <td>"; 
+                            if($preorder_available == 1){
+                                echo "<i class=\"fas fa-utensils\"> &nbsp;&nbsp; Preorder Available </i></p>";
+                            }else{
+                                echo "<i class=\"fas fa-utensils\"> &nbsp;&nbsp; Preorder Unavailable </i></p>";
+                            }
+                            echo "</td>
+                        </tr>
+                    </table>";
 
-        ?>
+                ?>
                     <p class="button-box">
-                    <button class="btn-blue-l" type="button" name="btn-view-reservations" onclick="viewActivityRes()">View Reservations</button>
+                    <br/>
+                    <button class="btn-admin-res-view" type="button" name="btn-view-reservations" onClick="window.location='admin-view-res-reservations.php';">View Table Reservations</button>
+                    <button class="btn-admin-res-view" type="button" name="btn-view-reservations">View Hall Reservations</button>
                     </p>
 
                 </div>

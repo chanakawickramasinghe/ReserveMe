@@ -64,7 +64,7 @@
         </table>
        
         
-        <img src="../../images/deco/restaurant-staff.jpg" alt="feedback" class="resimage">
+        <img src="../../images/restaurant/restaurant-staff.jpg" alt="feedback" class="resimage">
 
     </div>
 

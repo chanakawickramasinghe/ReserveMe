@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 25, 2021 at 07:07 PM
+-- Generation Time: Mar 30, 2021 at 07:22 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.33
 
@@ -42,7 +42,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`admin_id`, `admin_name`, `admin_email`, `admin_password`, `contact_no`, `admin_type`) VALUES
-(1, 'Admin', 'admin@123', '202cb962ac59075b964b07152d234b70', '+94771520157', 'admin');
+(1, 'Chanaka Admin', 'admin@123', '202cb962ac59075b964b07152d234b70', '+94771520157', 'admin');
 
 -- --------------------------------------------------------
 
@@ -110,18 +110,25 @@ CREATE TABLE `customer` (
   `password` varchar(255) NOT NULL,
   `contact_no` varchar(12) NOT NULL,
   `dob` date DEFAULT NULL,
+  `postal_number` varchar(10) NOT NULL,
+  `street` varchar(30) NOT NULL,
+  `city` varchar(20) NOT NULL,
   `rankings` int(11) NOT NULL,
   `no_of_rates` int(11) NOT NULL,
-  `active_status` int(1) NOT NULL DEFAULT 0
+  `active_status` int(1) NOT NULL DEFAULT 0,
+  `first_name` varchar(20) NOT NULL DEFAULT '0',
+  `last_name` varchar(20) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `customer`
 --
 
-INSERT INTO `customer` (`user_id`, `user_name`, `email`, `password`, `contact_no`, `dob`, `rankings`, `no_of_rates`, `active_status`) VALUES
-(1, 'Chanaka', 'cmwickramasinghe703@gmail.com', '202cb962ac59075b964b07152d234b70', '+94771570227', '2002-12-29', 0, 0, 1),
-(2, 'Nuwan Fernando', 'nuwan@123', 'b3534c545e0a544e7b441ff4e7af9362', '+94771570227', '2002-12-04', 0, 0, 1);
+INSERT INTO `customer` (`user_id`, `user_name`, `email`, `password`, `contact_no`, `dob`, `postal_number`, `street`, `city`, `rankings`, `no_of_rates`, `active_status`, `first_name`, `last_name`) VALUES
+(2, 'Chanaka Wickramasinghe', 'cmwickramasinghe703@gmail.com', '202cb962ac59075b964b07152d234b70', '+94771570227', '2002-12-19', '10000', 'Reid Avenue, Colombo', 'Colombo', 0, 0, 1, 'Chanaka', 'Wickramasinghe'),
+(8, 'Chahuranga Priyadarshani', 'chathuranga@gmail.com', '202cb962ac59075b964b07152d234b70', '+94771570227', '2002-11-07', '100001', 'Reid Avenue, Colombo', 'Colombo', 0, 0, 1, 'Chathu', 'Priya'),
+(9, 'John Stewuet', 'john@gmail.com', '52060a990660b4b8bee0327357cfa71a', '2147483647', '1998-06-30', '100', 'Pilimathalawa rd', 'Kandy', 0, 0, 1, '0', '0'),
+(12, 'Aamir Ali', 'aamri@gmail.com', 'daf0b78bce81656bfbf5eaaf7470bf2d', '+94111231231', '1998-05-05', '100', 'galle road', 'Colombo', 0, 0, 1, '0', '0');
 
 -- --------------------------------------------------------
 
@@ -144,8 +151,9 @@ CREATE TABLE `cus_activity` (
 --
 
 INSERT INTO `cus_activity` (`activity_id`, `cus_id`, `reservation_id`, `reservation_type`, `activity`, `act_date`, `act_time`) VALUES
-(1, 1, 1, 'table', 'Booked table G03 for 4 guests', '2021-03-25', '19:00:00'),
-(2, 1, 2, 'table', 'Booked table G05 for 3 guests', '2021-03-27', '19:30:00');
+(1, 1, 3, 'table', 'Booked table G03 for 4 guests', '2021-03-25', '19:00:00'),
+(2, 1, 4, 'table', 'Booked table G05 for 3 guests', '2021-03-27', '19:30:00'),
+(3, 2, 5, 'table', 'Booked table G05 for 2 guests', '2021-03-03', '22:00:00');
 
 -- --------------------------------------------------------
 
@@ -158,6 +166,7 @@ CREATE TABLE `employee` (
   `res_id` int(10) NOT NULL,
   `emp_name` varchar(255) NOT NULL,
   `emp_email` varchar(255) NOT NULL,
+  `emp_nic` varchar(12) NOT NULL,
   `emp_mobile` varchar(12) NOT NULL,
   `emp_password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -166,8 +175,8 @@ CREATE TABLE `employee` (
 -- Dumping data for table `employee`
 --
 
-INSERT INTO `employee` (`emp_id`, `res_id`, `emp_name`, `emp_email`, `emp_mobile`, `emp_password`) VALUES
-(3015, 4, 'Shelby John', 'emp@gmail.com', '+94771570227', '202cb962ac59075b964b07152d234b70');
+INSERT INTO `employee` (`emp_id`, `res_id`, `emp_name`, `emp_email`, `emp_nic`, `emp_mobile`, `emp_password`) VALUES
+(3015, 4, 'Shelby John', 'emp@gmail.com', '199812121212', '+94771570227', '202cb962ac59075b964b07152d234b70');
 
 -- --------------------------------------------------------
 
@@ -309,7 +318,11 @@ INSERT INTO `log` (`log_id`, `user_id`, `user_type`, `date_time`, `activity`) VA
 (68, 3015, 'Employee', '2021-03-25 22:26:46', 'Login Successfully'),
 (69, 4, 'Restaurant', '2021-03-25 22:27:26', 'Login Successfully'),
 (70, 3015, 'Employee', '2021-03-25 22:55:18', 'Login Successfully'),
-(71, 4, 'Restaurant', '2021-03-25 23:13:03', 'Login Successfully');
+(71, 4, 'Restaurant', '2021-03-25 23:13:03', 'Login Successfully'),
+(72, 1, 'Customer', '2021-03-29 13:59:29', 'Login Successfully'),
+(73, 4, 'Restaurant', '2021-03-29 23:07:14', 'Login Successfully'),
+(74, 1, 'Customer', '2021-03-30 10:03:39', 'Login Successfully'),
+(75, 2, 'Customer', '2021-03-30 10:27:36', 'Login Successfully');
 
 -- --------------------------------------------------------
 
@@ -341,7 +354,6 @@ INSERT INTO `menu` (`item_id`, `item_name`, `item_price`, `item_cat`, `item_avai
 (15, 'Egg FR', 150, 'Fried Rice', 0, 1, 0),
 (16, 'Orange juice', 55, 'Soft Drinks', 1, 1, 0),
 (17, 'Cake', 600, 'Appetizers', 0, 0, 0),
-(18, 'Milo', 65, 'Soft Drinks', 0, 0, 0),
 (19, 'Fish Koththu', 320, 'Fried Rice', 0, 0, 0);
 
 -- --------------------------------------------------------
@@ -402,7 +414,7 @@ CREATE TABLE `promotions` (
 --
 
 INSERT INTO `promotions` (`promo_id`, `start_date`, `end_date`, `user_id`, `company_name`, `image`, `text`) VALUES
-(6, '2020-11-17 00:00:00', '2021-03-17 09:57:01', '1', 'ReserveMe', '1.png', 'Burger week'),
+(6, '2020-11-17 00:00:00', '2021-04-02 09:57:01', '1', 'ReserveMe', '1.png', 'Burger week'),
 (7, '2021-02-05 03:15:16', '2021-03-20 21:00:00', '1', 'ReserveMe', '1.png', 'In publishing and graphic design'),
 (8, '2021-03-15 00:00:00', '2021-03-18 23:20:24', '2', 'bla', '2.png', 'hello'),
 (9, '2021-03-17 06:00:00', '2021-03-31 19:57:39', '', '', '2.png', 'Forth one'),
@@ -433,7 +445,7 @@ CREATE TABLE `reception_hall` (
 --
 
 INSERT INTO `reception_hall` (`hall_id`, `res_id`, `hall_name`, `contact_no`, `main_image`, `image1`, `image2`, `address`, `capacity`, `description`, `advance_fee`) VALUES
-(8, 0, 'Grand Ball', '+94771570227', '1.png', '2.png', '3.jpeg', 'Reid Avenue, Colombo', 100, 'Hello', 12000);
+(9, 4, 'Grand Ball 2', '+94771570227', 'hall1.jpg', 'hall2.webp', 'main.jpg', 'Reid Avenue, Colombo', 100, 'Hello this is another one', 12000);
 
 -- --------------------------------------------------------
 
@@ -465,9 +477,9 @@ INSERT INTO `replies` (`reply_id`, `msg_id`, `reply`, `date_time_sent`) VALUES
 
 CREATE TABLE `reservation` (
   `reservation_id` int(11) NOT NULL,
-  `no_of_guests` int(11) NOT NULL,
   `cus_id` int(11) NOT NULL,
-  `table_id` int(11) NOT NULL,
+  `table_id` varchar(10) NOT NULL,
+  `no_of_guests` int(255) NOT NULL,
   `date` date NOT NULL,
   `time` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -476,9 +488,17 @@ CREATE TABLE `reservation` (
 -- Dumping data for table `reservation`
 --
 
-INSERT INTO `reservation` (`reservation_id`, `no_of_guests`, `cus_id`, `table_id`, `date`, `time`) VALUES
-(1, 4, 1, 4, '2021-04-02', '16:00:00'),
-(2, 3, 1, 3, '2021-04-08', '19:00:00');
+INSERT INTO `reservation` (`reservation_id`, `cus_id`, `table_id`, `no_of_guests`, `date`, `time`) VALUES
+(3, 1, 'GT04', 2, '2021-03-28', '08:00:00'),
+(4, 2, 'GT05', 4, '2021-03-28', '00:10:00'),
+(5, 2, 'GT05', 2, '2021-03-28', '10:00:00'),
+(6, 2, 'GT04', 2, '2021-03-28', '10:00:00'),
+(7, 2, 'GT06', 3, '2021-03-28', '10:00:00'),
+(8, 1, 'GT07', 3, '2021-03-28', '10:00:00'),
+(9, 1, 'GT06', 4, '2021-03-28', '14:00:00'),
+(10, 1, 'GT09', 4, '2021-03-28', '10:00:00'),
+(11, 1, 'GT07', 3, '2021-03-28', '20:00:00'),
+(12, 1, 'GT02', 6, '2021-03-28', '14:00:00');
 
 -- --------------------------------------------------------
 
@@ -510,7 +530,7 @@ CREATE TABLE `restaurant` (
 --
 
 INSERT INTO `restaurant` (`res_id`, `res_name`, `res_email`, `res_add_line1`, `res_add_line2`, `city`, `res_location`, `res_tel`, `res_image`, `res_password`, `preorder_available`, `res_rate`, `no_of_rates`, `active_status`, `opening_hour`, `closing-hour`) VALUES
-(4, 'Pool Side', 'cg@gmail.com', 'Reid Avenue, Colombo', 'Reid Avenue, Colombo', 'Colombo', 'https://maps.google.com/maps?q=cinnomon%20grand%20colombo&t=&z=13&ie=UTF8&iwloc=&output=embed\r\n', '+94112271227', 'topaz.jpg', '202cb962ac59075b964b07152d234b70', '', 4.2, 11, 1, '08:16:56', '22:28:03');
+(4, 'Pool Side', 'cg@gmail.com', 'Reid Avenue, Colombo', 'Reid Avenue, Colombo', 'Colombo', 'https://maps.google.com/maps?q=cinnomon%20grand%20colombo&t=&z=13&ie=UTF8&iwloc=&output=embed\r\n', '+94112271227', 'topaz.jpg', '202cb962ac59075b964b07152d234b70', '', 4.2, 11, 1, '07:00:00', '23:00:00');
 
 -- --------------------------------------------------------
 
@@ -522,8 +542,24 @@ CREATE TABLE `res_table` (
   `table_id` varchar(10) NOT NULL,
   `min_cap` int(11) NOT NULL,
   `max_cap` int(11) NOT NULL,
-  `avail` int(11) NOT NULL
+  `floor_no` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `res_table`
+--
+
+INSERT INTO `res_table` (`table_id`, `min_cap`, `max_cap`, `floor_no`) VALUES
+('GT01', 8, 12, 1),
+('GT02', 5, 6, 1),
+('GT03', 5, 6, 1),
+('GT04', 1, 2, 1),
+('GT05', 1, 2, 1),
+('GT06', 3, 4, 1),
+('GT07', 3, 4, 1),
+('GT08', 3, 4, 1),
+('GT09', 2, 4, 1),
+('GT10', 2, 4, 1);
 
 -- --------------------------------------------------------
 
@@ -565,6 +601,22 @@ INSERT INTO `reviews` (`review_id`, `res_id`, `customer_name`, `content`, `ratin
 (18, 8, 'Chathu Priya', 'Not satisfied with the service.', 3, '2020-11-18 20:24:15'),
 (19, 22, 'Chathuranha', 'Review', 3, '2020-11-19 14:16:01'),
 (20, 4, 'John', 'Nice', 3, '2021-03-22 12:28:29');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `temp_hall_reservation`
+--
+
+CREATE TABLE `temp_hall_reservation` (
+  `temp_reservation_id` int(11) NOT NULL,
+  `hall_id` int(11) DEFAULT NULL,
+  `customer_id` int(11) DEFAULT NULL,
+  `capacity` int(11) DEFAULT NULL,
+  `reservation_date` date DEFAULT NULL,
+  `reservation_time` varchar(10) DEFAULT NULL,
+  `advance_fee` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -720,7 +772,9 @@ ALTER TABLE `replies`
 -- Indexes for table `reservation`
 --
 ALTER TABLE `reservation`
-  ADD PRIMARY KEY (`reservation_id`);
+  ADD PRIMARY KEY (`reservation_id`),
+  ADD KEY `cus_id` (`cus_id`),
+  ADD KEY `table_id` (`table_id`);
 
 --
 -- Indexes for table `restaurant`
@@ -739,6 +793,12 @@ ALTER TABLE `res_table`
 --
 ALTER TABLE `reviews`
   ADD PRIMARY KEY (`review_id`);
+
+--
+-- Indexes for table `temp_hall_reservation`
+--
+ALTER TABLE `temp_hall_reservation`
+  ADD PRIMARY KEY (`temp_reservation_id`);
 
 --
 -- Indexes for table `tokens`
@@ -772,13 +832,13 @@ ALTER TABLE `contact_us`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `cus_activity`
 --
 ALTER TABLE `cus_activity`
-  MODIFY `activity_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `activity_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `employee`
@@ -796,7 +856,7 @@ ALTER TABLE `hall_reservation`
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
 -- AUTO_INCREMENT for table `menu`
@@ -820,7 +880,7 @@ ALTER TABLE `promotions`
 -- AUTO_INCREMENT for table `reception_hall`
 --
 ALTER TABLE `reception_hall`
-  MODIFY `hall_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `hall_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `replies`
@@ -832,7 +892,7 @@ ALTER TABLE `replies`
 -- AUTO_INCREMENT for table `reservation`
 --
 ALTER TABLE `reservation`
-  MODIFY `reservation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `reservation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `restaurant`
@@ -845,6 +905,12 @@ ALTER TABLE `restaurant`
 --
 ALTER TABLE `reviews`
   MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT for table `temp_hall_reservation`
+--
+ALTER TABLE `temp_hall_reservation`
+  MODIFY `temp_reservation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tokens`

@@ -431,6 +431,33 @@
   float: left;
 }
 
+/* admin-view-restaurant */
+
+.admin-res-tbl{
+  width: 80%;
+  align-items: center;
+  position: relative;
+}
+
+.img-admin-res-tbl{
+  width: 20vw;
+}
+
+.btn-admin-res-view {
+  width:15vw;
+  height: 5vh;
+  background: orange;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: medium;
+  margin-bottom: 5px;
+}
+
+.btn-admin-res-view:hover{
+  background: black;
+  cursor: pointer;
+}
 
 /* manage user end */
 

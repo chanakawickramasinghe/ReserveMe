@@ -6,7 +6,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ReserveMe - Admin</title>
-	    <link rel="stylesheet" href="../../public/CSS/nav.css">
+	    <link rel="stylesheet" href="../../public/CSS/admin-nav.css">
         <link href="../../public/images/logo.png" rel="shortcut icon"/>
         <link rel="stylesheet" href="../../public/CSS/admin-dashboard.css"/>
         <script src="../../public/js/manage-user-search.js"></script>
@@ -27,6 +27,7 @@
         <div class="search-user-container">
             <form name="form-display-selected">
                 <!--heading-->
+                <br/><br/><br/>
 		        <h3>Search From Date</h3>
 		        <!--Input-------->
 		        <div class="search-input-activity">
@@ -36,63 +37,39 @@
                 <br/>   
             </form>
         </div>
-            <h2>Activity of User</h2>
+            <h2>Table <font color="orange">Reservations</font></h2>
         <div>
         <table class="user" id="myTable" border="1">
             <tr>
                 <th>Reservation ID</th>
-                <th>Date</th>
-                <th>Time</th>
                 <th>Customer ID</th>
                 <th>Customer Name</th>
+                <th>Table ID</th>
+                <th>Reservation Date</th>
+                <th>Reservation Time</th>
                 <th>No. of Guests</th>
-                <th>Status</th>
             </tr>
-            <tr>
-                <td>4</td>
-                <td>2020-10-29</td>
-                <td>13:56:20</td>
-                <td>9</td>
-                <td>Ted Mosby</td>
-                <td>5</td>
-                <td>Placed Reservation</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>2020-11-03</td>
-                <td>08:15:26</td>
-                <td>23</td>
-                <td>Holland Price</td>
-                <td>3</td>
-                <td>Cancelled</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>2020-10-25</td>
-                <td>08:00:50</td>
-                <td>12</td>
-                <td>Jeromy Carmel</td>
-                <td>2</td>
-                <td>Placed Reservation</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>2020-10-24</td>
-                <td>17:15:36</td>
-                <td>23</td>
-                <td>Holland Price</td>
-                <td>3</td>
-                <td>Placed Reservation</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>2020-10-15</td>
-                <td>18:00:03</td>
-                <td>16</td>
-                <td>Jacob Lotarace</td>
-                <td>2</td>
-                <td>Placed Reservation</td>
-            </tr>
+            <?php
+                $sql = "SELECT reservation.* , customer.user_name FROM reservation INNER JOIN customer
+                ON reservation.cus_id = customer.user_id";
+        
+                $sql_query = mysqli_query($connection,$sql);
+                while($row = mysqli_fetch_assoc($sql_query)){
+                
+                    echo "
+                        <tr>                  
+                            <td>".$row['reservation_id']."</td>
+                            <td>".$row['cus_id']."</td>
+                            <td>".$row['user_name']."</td>
+                            <td>".$row['table_id']."</td>
+                            <td>".$row['date']."</td>
+                            <td>".$row['time']."</td>
+                            <td>".$row['no_of_guests']."</td>
+                        </tr>";
+                        
+                } 
+                echo "</table>";
+                ?>
         </table>
         </div>
         </div>

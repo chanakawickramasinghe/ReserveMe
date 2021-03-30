@@ -37,37 +37,32 @@
           $preorder_available=$rowProduct['preorder_available'];
           echo"<section class=\"main\">
                 <div class=\"m-img\">       
-                  <img class=\"food-img\" src= \"../../../images/restaurant/{$rowProduct['res_image']}\">
+                  <img src= \"../../../images/restaurant/{$rowProduct['res_image']}\">
                 </div>
                 <div class=\"m-text\">
-                <br>
-                  <h4><i class=\"fas fa-map-marker-alt\"> ". $rowProduct['res_add_line1'] ." ". $rowProduct['res_add_line2'] ." ". $rowProduct['city'] ."</i></h4>
-                  <br>
-                  <h4><i class=\"fas fa-clock\"> ". $rowProduct['opening_hour'] ." - ". $rowProduct['closing-hour'] ."</i></h4>                  
-                  <br>
-                  <h4><i class=\"fas fa-star-half-alt\"> ". $rowProduct['res_rate'] ."</i></h4>
-                </div>	
-                <div class=\"m-text2\">
-                  <br>
-                  <h4><i class=\"fas fa-at\"> ". $rowProduct['res_email'] ."</i></h4>
-                  <br>
-                  <h4><i class=\"fas fa-phone\"> ". $rowProduct['res_tel'] ."</i></h4>
-                  <br>";
+                  <p><i class=\"fas fa-map-marker-alt\"> ". $rowProduct['res_add_line1'] ."". $rowProduct['res_add_line2'] ." ". $rowProduct['city'] ."</i></p>
+                  <p><i class=\"fas fa-clock\"> ". $rowProduct['opening_hour'] ." - ". $rowProduct['closing-hour'] ."</i></p>                  
+                  <p><i class=\"fas fa-star-half-alt\"> ". $rowProduct['res_rate'] ."</i></p>
+                  <p><i class=\"fas fa-at\"> ". $rowProduct['res_email'] ."</i></p>
+                  <p><i class=\"fas fa-phone\"> ". $rowProduct['res_tel'] ."</i></p>";
                   if($preorder_available == 1){
-                    echo "<h4><i class=\"fas fa-utensils\"> Preorder Available </i></h4>";
+                    echo "<p><i class=\"fas fa-utensils\"> Preorder Available </i></p>";
                   }else{
-                    echo "<h4><i class=\"fas fa-utensils\"> Preorder Unavailable </i></h4>";
+                    echo "<p><i class=\"fas fa-utensils\"> Preorder Unavailable </i></p>";
                   }
+
+                echo "</div>";	
+                // <div class=\"m-text2\">
                   
-                echo"</div>	
-	            </section>";
+                //   </div>;        	
+	            echo "</section>";
           }
     ?>
 		<!--End of main-section-->
 
     <!--Start of pop up login page-->
     <div class="form-popup" id="myForm">
-      <form action="../../../includes/login-submit.php" method="post" class="form-container">
+      <form action="../../../includes/login-submit-cus.php" method="post" class="form-container">
         <h1>Login</h1>
         <label for="email"><b>Email</b></label>
         <input type="text" placeholder="Enter Email" name="email" required>
@@ -213,7 +208,7 @@
               
               ?>         
             
-        <input class="dropbtn"  id="reserve" name="reserve" value="Reserve" onclick="onClickOpenForm()">
+        <input type="button" class="dropbtn"  id="reserve" name="reserve" value="Reserve" onclick="onClickOpenForm()">
         <input type="hidden" name="cus_id" value="<?php echo $cus_id;?>" required>
         <input type="hidden" name="guests2" value="<?php echo $guests;?>" required>
         <input type="hidden" name="date2" value="<?php echo $date;?>" required>

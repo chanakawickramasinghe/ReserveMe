@@ -30,11 +30,11 @@
 
 
         <div class="content">
-            <h1><font color="black">New</font> Messages</h1>
+            <h1><font color="black">New</font> Queries</h1>
 
             <div class="promo-btn-bar">
                 <!-- <button type="button" class="btn-promo" onclick="window.location.href='send-new-message.php'">Send Message</button> -->
-                <button type="button" class="btn-promo" onclick="window.location.href='admin-past-messages.php'">View Past Messages</button>
+                <button type="button" class="btn-promo" onclick="window.location.href='emp-past-queries.php'">View Past Queries</button>
             </div>
 
             <?php

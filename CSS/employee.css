@@ -450,7 +450,7 @@ input:checked + .slider:before {
   margin: 15px 12px;
   padding: 5px;
   font-size: 15px;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
   outline: none;
   border: none;
   border-bottom: 1px solid #eee;

@@ -24,12 +24,13 @@
         <!--End of nav-->
 
         <div class="search-user-container">
-            <form name="form-display-selected">
                 <br/><br/><br/>
-                
+                <center>
                 <h3>Details of Employee</h3>
                 
                 <div class="update-box">
+
+                <img src = "../../public/images/restaurant/emp.jpg" class="img-admin-emp-view" alt="emp image">
                     
                 <?php
         
@@ -39,14 +40,29 @@
                 $row = mysqli_fetch_assoc($emp_query);
 
                 echo "
-                    ".$row['emp_name']."
-                    <td>".$row['emp_email']."</td>
-                    <td>".$row['emp_mobile']."</td>"
+                    <table>
+                        <tr>
+                            <th>Employee Name : </th>
+                            <td>".$row['emp_name']."</td>
+                        </tr>
+                        <tr>
+                            <th>Employee Email : </th>
+                            <td>".$row['emp_email']."</td>
+                        </tr>
+                        <tr>
+                            <th>Contact Number : </th>
+                            <td>".$row['emp_mobile']."</td>
+                        </tr>
+                        <tr>
+                            <th>Employee Nic : </th>
+                            <td>".$row['emp_nic']."</td>
+                        </tr>
+                    </table>";
                 ?>
       
                 </div>
                 
-            </form>
+                </center>
         </div>
         <br/>
                     

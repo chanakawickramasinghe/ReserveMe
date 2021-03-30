@@ -64,30 +64,8 @@
 	            echo "</section>";
           }
     ?>
+
     <!--End of main-section-->
-
-    <!--Start of iframe section-->
-    <section class="content">
-	    <div class="content-container">	
-	        <div class="select">
-		        <ul class="select-menu">
-					<?php 
-						
-							$retriewMenu = "SELECT * FROM restaurant WHERE res_id ='4'";
-							$resultMenu = mysqli_query($connection,$retriewMenu);
-							while($rowProduct  = mysqli_fetch_assoc($resultMenu)){  
-								echo"<li><a  href=\"menu.php\" target=\"iframeBox\">Menu</a></li>
-									<li><a  href=\"floorplan.php\" target=\"iframeBox\">Floorplan</a></li>";
-              
-						  }
-					?>  
-		        </ul>
-	        </div>
-			<iframe src="menu.php" id="iframeBox" name="iframeBox" class="iframeBox" height="500px" width="100%" title="Iframe Example" frameborder="0" marginwidth="0" marginheight="0"><div></iframe>
-	    </div>	
-	</section>
-	<!--End of iframe section-->
-
 
     <!--start of from section-->
     <section class="reservation">
@@ -142,22 +120,7 @@
                   $floor=$_POST['floor'];
                   $guests=$_POST['guests'];
                   $time=$_POST['time'];
-                  $date=$_POST['date'];
-
-
-                  // echo $floor."<br>";
-                  // echo $guests."<br>";
-                  // echo $time."<br>";
-                  // echo $date."<br>";
-
-                // $sql = "INSERT INTO `reservation`(`cus_id`, `table_id`, `no_of_guests`, `date`, `time`) VALUES (2,'GT04',2,'$date','$time')";
-                // $result2 = ($connection->query($sql));
-
-                // if($result2){
-                //   echo "Hello";
-                // } else {
-                //   echo "Please check your code";
-                // }     
+                  $date=$_POST['date'];  
                 
                 echo "<p> Number of Person : <span style=\"color:blue\">$guests </span> <br> @ Date : <span style=\"color:blue\"> $date </span> <br> @ Time : <span style=\"color:blue\"> $time </span>";
 
@@ -205,6 +168,30 @@
 
     </section>
     <!--End of form section-->
+
+        
+
+    <!--Start of iframe section-->
+    <section class="content">
+	    <div class="content-container">	
+	        <div class="select">
+		        <ul class="select-menu">
+					<?php 
+						
+							$retriewMenu = "SELECT * FROM restaurant WHERE res_id ='4'";
+							$resultMenu = mysqli_query($connection,$retriewMenu);
+							while($rowProduct  = mysqli_fetch_assoc($resultMenu)){  
+								echo"<li><a  href=\"menu.php\" target=\"iframeBox\">Menu</a></li>
+									<li><a  href=\"floorplan.php\" target=\"iframeBox\">Floorplan</a></li>";
+              
+						  }
+					?>  
+		        </ul>
+	        </div>
+			<iframe src="menu.php" id="iframeBox" name="iframeBox" class="iframeBox" height="500px" width="100%" title="Iframe Example" frameborder="0" marginwidth="0" marginheight="0"><div></iframe>
+	    </div>	
+	</section>
+	<!--End of iframe section-->
 
 
 

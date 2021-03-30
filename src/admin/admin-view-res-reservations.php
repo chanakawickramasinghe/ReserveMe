@@ -25,17 +25,16 @@
         <!--End of nav-->
 
         <div class="search-user-container">
-            <form name="form-display-selected">
+        <form name="form-display-selected">
                 <!--heading-->
                 <br/><br/><br/>
-		        <h3>Search From Date</h3>
+		        <h3>Search From Reservation ID, Customer ID or Table ID</h3>
 		        <!--Input-------->
-		        <div class="search-input-activity">
-                    <input type="date" id="date-activity"/>
-                    <button type="button" class="search-btn">Search</button>
+		        <div class="search-input">
+                    <input type="text" id="myInput" onkeyup="myFunctionReservations()" 
+                    placeholder="Enter ID"/>
                 </div>
-                <br/>   
-            </form>
+                <br/>
         </div>
             <h2>Table <font color="orange">Reservations</font></h2>
         <div>

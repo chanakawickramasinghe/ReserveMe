@@ -459,6 +459,12 @@
   cursor: pointer;
 }
 
+/* admin view employee */
+
+.img-admin-emp-view{
+  width: 25vw;
+}
+
 /* manage user end */
 
 /* admin home */

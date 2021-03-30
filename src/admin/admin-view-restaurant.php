@@ -27,7 +27,7 @@
 
         <div class="search-user-container">
             <form name="form-display-selected">
-                <br/><br/><br/>
+                <br/><br/><br/><br/><br/>
 
                 <h3>Details of the Restaurant</h3>
                 
@@ -42,6 +42,7 @@
                 
                 $preorder_available = $row['preorder_available'];
                 echo "
+                    <br/>
                     <table class=\"admin-res-tbl\">
                         <tr>
                             <td rowspan=\"4\"><img class=\"img-admin-res-tbl\" src= \"../../public/images/restaurant/{$row['res_image']}\"></td>
@@ -70,8 +71,9 @@
 
                 ?>
                     <p class="button-box">
-                    <br/>
+                    <br/><br/>
                     <button class="btn-admin-res-view" type="button" name="btn-view-reservations" onClick="window.location='admin-view-res-reservations.php';">View Table Reservations</button>
+                    <button class="btn-admin-res-view" type="button" name="btn-view-reservations">View Pre-order Reservations</button>
                     <button class="btn-admin-res-view" type="button" name="btn-view-reservations">View Hall Reservations</button>
                     </p>
 

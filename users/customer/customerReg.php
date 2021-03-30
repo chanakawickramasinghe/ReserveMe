@@ -24,6 +24,8 @@
 		<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>   
     </div>
     <!--End of nav--> 
+
+    <?php $d = date('m-d-Y',strtotime('+5 years ')) ?>
  
     <div class="loginbg">
         
@@ -35,11 +37,11 @@
 
                 <form action="register-submit.php" method="post"> 
 
-                    <input type="text"  name="firstname" class="type-feild" placeholder="Your First Name" pattern="[a-zA-Z][a-zA-Z ]{2,}" required>    
+                    <input type="text"  name="firstname" class="type-feild" placeholder="Your First Name" pattern="[A-Za-z]+" required>    
 
-                    <input type="text"  name="lastname" class="type-feild" placeholder="Your Last Name" pattern="[a-zA-Z][a-zA-Z ]{2,}" required>       
+                    <input type="text"  name="lastname" class="type-feild" placeholder="Your Last Name" pattern="[A-Za-z]+" required>       
 
-                    <input type="text"  name="name" class="type-feild" placeholder="Full Name" pattern="[a-zA-Z][a-zA-Z ]{2,}" required>   
+                    <input type="hidden"  name="name" class="type-feild" placeholder="Full Name" pattern="[A-Za-z]+" required>   
 
                     <input type="email" name="email" class="type-feild" placeholder="Email address" required="">
       
@@ -51,9 +53,9 @@
                     pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" onkeyup='check()' required>
                     <P id='message' ></P>
 
-                    <input type="tel" name="contact" class="type-feild" placeholder="Mobile Number(With country code)" pattern='^\+?\d{11}' required> 
+                    <input type="tel" name="contact" class="type-feild" placeholder="Mobile Number(With country code)" pattern="[0][1-9][0-9]{8}" required> 
 
-                    <input type="date" name="dob" id='dob' class="type-feild" onkeyup='getAge(dob)' placeholder="Date of Birth" min="1930-01-01" max="2002-12-31"> 
+                    <input type="date" name="dob" id='dob' class="type-feild" onkeyup='getAge(dob)' placeholder="Date of Birth" min="<?php echo $d ?>" max="2002-12-31"> 
                     <P id='message2' ></P>
                
                     <p>By creating an account you agree to our <a href="#" style="color:blue">Terms & Privacy</a>.</p>

@@ -13,7 +13,7 @@ if(isset($_POST['submit'])){
 	$password2 = md5($_POST['password2']);
     $contact = $_POST['contact'];
     $dob = $_POST['dob'];
-    
+    $fullname = $firstname . $lastname;
     
         //Check if email already exists in both tables
         $selectmail= "SELECT * FROM customer WHERE email ='$email' " ;
@@ -50,7 +50,7 @@ if(isset($_POST['submit'])){
         else {
 
             $registrationQuery = "INSERT INTO customer (user_id,user_name,first_name,last_name,email,password,contact_no,dob,active_status) 
-            VALUES (NULL,'$name', '$firstname', '$lastname', '$email', '$password','$contact', '$dob', 1)";
+            VALUES (NULL,'$fullname', '$firstname', '$lastname', '$email', '$password','$contact', '$dob', 1)";
             
             if (mysqli_query($connection,$registrationQuery) == TRUE) {
                 //echo "inside TRUE";

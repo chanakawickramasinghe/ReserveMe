@@ -10,8 +10,7 @@
     <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
     <!--stylesheet-------------------->
 	<link rel="stylesheet" type="text/css" href="../../CSS/nav.css">
-    <link rel="stylesheet" href="../../CSS/footer.css">
-    <link rel="stylesheet" href="../../CSS/main.css">
+    <link rel="stylesheet" href="../../CSS/footer.css">   
     <link rel="stylesheet" href="../../CSS/preorder.css">
 </head>
 
@@ -43,7 +42,7 @@
             <div class="food-container">
                 <div class="food-box">
                     <h3 class="name">KFC</h3> 
-                    <img class="food-img" src= "../../images/2.jpg">
+                    <img class="food-img" src= "../../images/4.jpg">
                     <br>
                     <i class="fas fa-map-marker-alt">Colombo</i>
                     <br>
@@ -99,16 +98,14 @@ if(isset($_GET['order_id'])){
     $reservation_result  = mysqli_fetch_assoc(mysqli_query($connection,$reservation_sql));
 	checkSession();
     $userID = $_SESSION["userID"]; //session id
-    $capacity = $reservation_result['capacity'];
-    $advance_fee = $reservation_result['advance_fee'];
 	
     $reservation_insert_sql = "INSERT INTO hall_reservation(hall_id,customer_id,capacity,reservation_date,reservation_time,advance_fee,status_code) 
-    VALUES ('". $reservation_result['hall_id'] ."','$userID','$capacity','". $reservation_result['reservation_date'] ."','". $reservation_result['reservation_time'] ."','$advance_fee','1')";
+    VALUES ('". $reservation_result['hall_id'] ."','$userID','". $reservation_result['capacity'] ."','". $reservation_result['reservation_date'] ."','". $reservation_result['reservation_time'] ."','". $reservation_result['advance_fee'] ."','1')";
   
 
     if (mysqli_query($connection,$reservation_insert_sql) == TRUE) {
-        $temp_delete_sql = "DELETE from temp_hall_reservation WHERE temp_reservation_id = $order_id ";
-        $temp_delete_query  = mysqli_fetch_assoc(mysqli_query($connection,$temp_delete_sql));
+        $delete_temp_reservation_sql = "DELETE from temp_hall_reservation WHERE temp_reservation_id = $order_id ";
+        $delete_reservation_query  = mysqli_fetch_assoc(mysqli_query($connection,$delete_temp_reservation_sql));
         
         
     }else{

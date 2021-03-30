@@ -717,7 +717,7 @@ ul{
     padding: 13px 20px;
     font-weight: bold;
     background: orange;
-    color: #fff;
+    color: black;
     cursor: pointer;
 	margin-top: 10px;
 	border: none;
@@ -734,6 +734,7 @@ ul{
 
 .hero-button.active{
 	background-color: #202020;
+	color: white;
 }
 /*End of button*/
 

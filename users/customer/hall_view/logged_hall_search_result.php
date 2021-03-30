@@ -63,7 +63,7 @@
                         <option value="Day"> Day </option>
                         <option value="Evening"> Evening </option>
                     </select>
-                    <input type="date" id="reservation_date" name="reservation_date" required style="width:200px; borger-radius: 20px">
+                    <input type="date" id="reservation_date" name="reservation_date" min="<?php echo date("Y-m-d"); ?>" required style="width:200px; borger-radius: 20px">
 					<button class="search-button" type="submit" name="submit">Search<i class="fas fa-search"></i></button>
                 </div>
             </form>            
@@ -80,33 +80,27 @@
             $reservation_time = $_POST["reservation_time"];
 
             if($capacity=="" && $advance_fee=="" && $reservation_date!=="" && $reservation_time!==""){
-                $retrieveProduct = "SELECT * FROM hall_reservation WHERE reservation_time  LIKE '$reservation_time%' AND reservation_date LIKE '$reservation_date%' AND status_code LIKE '1' ";
+                $retrieveProduct = "SELECT  reception_hall.main_image, reception_hall.hall_id, reception_hall.description, reception_hall.hall_name
+                FROM reception_hall LEFT JOIN hall_reservation ON reception_hall.hall_id=hall_reservation.hall_id 
+                WHERE reservation_time  LIKE '$reservation_time%' AND reservation_date NOT LIKE '$reservation_date%'";
                 $resultProduct = mysqli_query($connection, $retrieveProduct); 
-                while($rowProduct  = mysqli_fetch_assoc($resultProduct)){ 
-                    $hall_id =  $rowProduct['hall_id']; 
-                    $relatedHallSql = "SELECT * FROM reception_hall WHERE hall_id not like '$hall_id'";
-                    $relatedHallResult  = mysqli_query($connection, $relatedHallSql);
-                    $no_rows = mysqli_num_rows($relatedHallResult);
-                    $relatedHallResult = mysqli_fetch_assoc($relatedHallResult);
-                    if($no_rows==0)   {                
-                    
-                    }  else{
-                        echo"<!--Start of Hall-->
+                while($rowProduct  = mysqli_fetch_assoc($resultProduct)){                        
+                    echo"<!--Start of Hall-->
                     <section class=\"reservation\" style=\"padding-top:5px; margin:auto;\">
                         <!--img-->
-                        <div class=\"reservation-img\"><img src=\"../../../images/halls/{$relatedHallResult['main_image']}\" /></div>
+                        <div class=\"reservation-img\"><img src=\"../../../images/halls/{$rowProduct['main_image']}\" /></div>
                         <!--text-->
                         <div class=\"reservation-text\">
                             <!--heading-->
-                            <h3>". $relatedHallResult['hall_name'] ."</h3>
+                            <h3>". $rowProduct['hall_name'] ."</h3>
                             <!--details-->
-                            <p>". $relatedHallResult['description'] ."</p>
-                            <a class=\"hero-button\" onclick=\"location.href='logged_hall_view.php?hall_id={$relatedHallResult['hall_id']}&reservation_date=$reservation_date&reservation_time=$reservation_time';\" >Find Out More</a>
+                            <p>". $rowProduct['description'] ."</p>
+                            <a class=\"hero-button\" onclick=\"location.href='logged_hall_view.php?hall_id={$rowProduct['hall_id']}&reservation_date=$reservation_date&reservation_time=$reservation_time';\" >Find Out More</a>
                         </div>
                         </section>
                     <!--End of Hall2-->";
-                    }     
-                }
+                    }       
+                    
             }else if($capacity=="Capacity" && $advance_fee!=="" && $date!=="" && $time!==""){
                 $retrieveProduct = "SELECT reception_hall.main_image, reception_hall.hall_id, reception_hall.description, reception_hall.hall_name
                 FROM reception_hall INNER JOIN hall_reservation ON reception_hall.hall_id=hall_reservation.hall_id 
@@ -171,6 +165,7 @@
                     <h3>". $rowProduct['hall_name'] ."</h3>
                     <!--details-->
                     <p>". $rowProduct['description'] ."</p>
+                    <a class=\"hero-button\" onclick=\"location.href='logged_hall_view.php?hall_id={$rowProduct['hall_id']}';\" >Find Out More</a>
                 </div>
                 </section>
             <!--End of Hall2-->";

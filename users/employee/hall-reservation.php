@@ -25,7 +25,7 @@
 
     <!-- Start of sidbar -->
     <div class="sidebar"> 
-      <a href="venues.php">Reservation Status</a><hr>     
+      <!-- <a href="venues.php">Reservation Status</a><hr>      -->
       <a href="menu.php">Set Menu</a><hr>
       <a href="queries.php">Queries</a><hr>
       <a href="table-reservation.php" class="active">Manage Reservation</a><hr>
@@ -37,66 +37,49 @@
     <h1> Hall <span style="color:orange"> Reserved </span> </h1>
     
     <div style="float:right">
-        <button type="button" class="hero-button" onclick="window.location.href='menu-reservation.php'">Pre Orders</button>    
         <button type="button" class="hero-button" onclick="window.location.href='table-reservation.php'">Table Reservation</button>
+        <button type="button" class="hero-button" onclick="window.location.href='menu-reservation.php'">Pre Orders</button>    
         <button type="button" class="hero-button active" onclick="window.location.href='#'">Hall Reservation</button>
     </div>
     <br><br>
 
-    <div style="padding:5vw;padding-top:1vw">
-    <div class="contentbox">
-        <table width="100%">
+    <div class="employee-container">
+        <table class="res-table">
             <tr>
-                <th width=".8vw">Reservation id.</th>
+                <!-- <th width=".8vw">Reservation id.</th> -->
                 <th>Name</th>
-                <th>Email</th>
-                <th>Date & Time</th>
+                <!-- <th>Email</th> -->
                 <th>Mobile No</th>
+                <th>Hall Name</th>
+                <th>Date </th>
                 <th>Session</th>
                 <th>Participants(Avg)</th>
-                <th>Event Type</th>
+                <!-- <th>Event Type</th> -->
             </tr>
-            <tr><td colspan="9"><hr></td></tr>
+            <?php
+                $sql = "SELECT hall_reservation.* , customer.user_name, customer.contact_no, reception_hall.hall_name FROM ((hall_reservation INNER JOIN customer ON hall_reservation.customer_id = customer.user_id) INNER JOIN reception_hall ON hall_reservation.hall_id= reception_hall.hall_id)" ;
+        
+                $sql_query = mysqli_query($connection,$sql);
+                while($row = mysqli_fetch_assoc($sql_query)){
+                    // $date = $row['reservation_date'];
+                    // if($date>= date("Y-m-d")){
+                        echo "
+                        <tr>             
+                            <td>".$row['user_name']."</td>
+                            <td>".$row['contact_no']."</td>
+                            <td>".$row['hall_name']."</td>
+                            <td>".$row['reservation_date']."</td>
+                            <td>".$row['reservation_time']."</td>
+                            <td>".$row['capacity']."</td>
+                        </tr>";
 
-            <tr><td>01.</td>
-                <td >Chanaka</td>
-                <td>chanaka@gmail.com</td>
-                <td>2020-12-03 05:30</td>
-                <td>+94775623845</td>
-                <td>Night</td>
-                <td>200</td>
-                <td>Office party</td>
+                    // }
+                                        
+                } 
                 
-            </tr>
-            <tr><td colspan="9"><hr></td></tr>
+                ?>
 
-            <tr><td>02.</td>
-                <td >Aamir</td>
-                <td>aamirali@gmail.com</td>
-                <td>2020-11-02 08:25</td>
-                <td>+94768921288</td>
-                <td>Day</td>
-                <td>500</td>
-                <td>Reception</td>
-                
-            </tr>
-            <tr><td colspan="9"><hr></td></tr>
-
-            <tr><td>03.</td>
-                <td >Nuwan</td>
-                <td>nuwan@gamail.com</td>
-                <td>2020-11-06 12:15</td>
-                <td>+9475452356</td>
-                <td>Night</td>
-                <td>700</td>
-                <td>Wedding</td>
-                
-            </tr>
-            <tr><td colspan="9"><hr></td></tr>  
         </table>
-
-
-    </div>
     </div>
 </div>
 <div class="footer"> <?php include('../../includes/footer.php'); ?> </div>

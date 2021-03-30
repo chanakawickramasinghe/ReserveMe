@@ -99,6 +99,8 @@
         height: 100%;
         width: 100%;
         border-radius: 5px;
+        overflow: hidden;
+        /* position: absolute; */
     }
 
 
@@ -232,7 +234,7 @@ border: none;
   position: relative;
   box-shadow: 0 0 5px 0px #8b8b8b;
   border-radius: 2px;
-  padding: 2vh;
+  padding-top: 2vh;
   overflow: hidden;
   
 }
@@ -481,3 +483,28 @@ input:checked + .slider:before {
 
 /* End of reservation form CSS */
 
+.res-table{
+  width: 60vw;
+  padding: 0 0px;
+  position: absolute;
+  top: 15vh;
+  transition: transform 0.5s;
+  margin-left: 5vw;
+  border-collapse: collapse; 
+
+
+}
+
+.res-table tr th{
+  background-color: rgb(255, 207, 118);
+  color: black;
+  padding: 0.5%;  
+  
+}
+
+.res-table td , .res-table th {
+  /* border: 1px solid rgb(160, 154, 154); */
+  border-bottom-style: solid;
+}
+
+.res-table tr:nth-child(even){background-color: rgb(255, 236, 200);}

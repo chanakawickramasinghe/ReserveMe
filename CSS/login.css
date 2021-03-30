@@ -402,7 +402,9 @@ button:hover {
 }
 
 .error-msg{
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: myriad pro;
   color: #F00;
   text-align: center;
   background-color: initial;

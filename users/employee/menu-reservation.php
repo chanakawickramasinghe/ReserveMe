@@ -28,7 +28,7 @@
     <!-- Start of sidbar -->
     <div class="sidebar"> 
       <!-- <a href="employee-home.php" >Employee Home</a> -->
-      <a href="venues.php">Reservation Status</a><hr>   
+      <!-- <a href="venues.php">Reservation Status</a><hr>    -->
       <a href="menu.php">Set Menu</a><hr>
       <a href="queries.php">Queries</a><hr>
       <a href="table-reservation.php" class="active">Manage Reservation</a><hr>
@@ -41,8 +41,8 @@
     <h1>Pre Orders-<span style="color:orange"> Menu </span> </h1>
     
     <div style="float:right">
-        <button type="button" class="hero-button active" onclick="window.location.href='#'">Pre Orders</button>    
         <button type="button" class="hero-button" onclick="window.location.href='table-reservation.php'">Table Reservation</button>
+        <button type="button" class="hero-button active" onclick="window.location.href='#'">Pre Orders</button>    
         <button type="button" class="hero-button" onclick="window.location.href='hall-reservation.php'">Hall Reservation</button>
     </div>
     <br><br>

@@ -30,7 +30,7 @@
 
     <!-- Start of sidbar -->
     <div class="sidebar">
-      <a href="venues.php">Reservation Status</a><hr>    
+      <!-- <a href="venues.php">Reservation Status</a><hr>     -->
       <a href="menu.php" class="active">Set Menu</a><hr>
       <a href="queries.php">Queries</a><hr>
       <a href="table-reservation.php">Manage Reservation</a><hr>

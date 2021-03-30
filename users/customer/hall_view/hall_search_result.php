@@ -28,7 +28,7 @@
     </div>
     <!--End of nav-->
 
-	<!--Start of Header-->
+	<!--Start of Header
     <header class="header">
         <div class="search">
             <form action="" method="post">
@@ -68,7 +68,7 @@
             </form>            
         </div>		
     </header>
-    <!--End of Header-->
+    End of Header-->
 
     <!--Start of HAll Section-->
     <?php 

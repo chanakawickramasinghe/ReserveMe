@@ -87,7 +87,6 @@
                 
             </div>
             <div class = "admin-home">
-                <!-- <button class="btn-change" type="button" onclick="window.location.href='admin-change-password.php'">Change Password</button> -->
 
                 <button type="button" class="collapsible">Edit Details</button>
                 <div class="content-collapse">
@@ -99,7 +98,7 @@
                                 <table class="tbl-admin-home">
                                     <tr>
                                         <th>Admin Name : </th>
-                                        <td><input type="text" name="name" placeholder="Admin Name" id="name" value="<?php echo $name; ?>" required></p></td>
+                                        <td><input type="text" name="name" placeholder="Admin Name" id="name" pattern="^[A-Za-z ]+$" value="<?php echo $name; ?>" required></p></td>
                                     </tr>
                                     <tr>
                                         <th>Admin Email : </th>
@@ -107,7 +106,7 @@
                                     </tr>
                                     <tr>
                                         <th>Contact No : </th>
-                                        <td><input type="tel" name="contact" placeholder="Contact No." id="c_no" value="<?php echo $cNo; ?>" required></td>
+                                        <td><input type="tel" name="contact" placeholder="Contact No." id="c_no" input type="tel" pattern="[0][1-9][0-9]{8}" value="<?php echo $cNo; ?>" required></td>
                                     </tr>
                                     <tr>
                                         <td></td>

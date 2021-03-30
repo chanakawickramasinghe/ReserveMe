@@ -94,7 +94,7 @@ include('../../includes/session.php');
 
 if(isset($_GET['order_id'])){
     $order_id = $_GET['order_id'];
-    $reservation_sql = "SELECT * from temp_hall_reservation WHERE temp_reservation_id = $order_id ";
+    $reservation_sql = "SELECT * from temp_hall_reservation WHERE temp_reservation_id = '$order_id' ";
     $reservation_result  = mysqli_fetch_assoc(mysqli_query($connection,$reservation_sql));
 	checkSession();
     $userID = $_SESSION["userID"]; //session id

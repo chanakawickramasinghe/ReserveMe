@@ -61,15 +61,7 @@
                 <tr>
                 <th>Date of Birth</th><td>".$row['dob']."</td>
                 </tr>
-                <tr>
-                <th>Postal Number</th><td>".$row['postal_number']."</td>
-                </tr>
-                <tr>
-                <th>Street Name</th><td>".$row['street']."</td>
-                </tr>
-                <tr>
-                <th>Living City</th><td>".$row['city']."</td>
-                </tr>";
+                ";
         } 
         echo "</table>";
         ?>

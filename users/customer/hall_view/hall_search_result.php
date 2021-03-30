@@ -28,7 +28,7 @@
     </div>
     <!--End of nav-->
 
-	<!--Start of Header-->
+	<!--Start of Header
     <header class="header">
         <div class="search">
             <form action="" method="post">
@@ -68,7 +68,7 @@
             </form>            
         </div>		
     </header>
-    <!--End of Header-->
+    End of Header-->
 
     <!--Start of HAll Section-->
     <?php 
@@ -78,78 +78,6 @@
             $reservation_date = $_POST["reservation_date"];
             $reservation_time = $_POST["reservation_time"];
 
-            if($capacity=="" && $advance_fee=="" && $reservation_date!=="" && $reservation_time!==""){
-                $retrieveProduct = "SELECT  reception_hall.main_image, reception_hall.hall_id, reception_hall.description, reception_hall.hall_name
-                FROM reception_hall LEFT JOIN hall_reservation ON reception_hall.hall_id=hall_reservation.hall_id 
-                WHERE reservation_time  LIKE '$reservation_time%' AND reservation_date NOT LIKE '$reservation_date%'";
-                $resultProduct = mysqli_query($connection, $retrieveProduct); 
-                while($rowProduct  = mysqli_fetch_assoc($resultProduct)){                        
-                    echo"<!--Start of Hall-->
-                    <section class=\"reservation\" style=\"padding-top:5px; margin:auto;\">
-                        <!--img-->
-                        <div class=\"reservation-img\"><img src=\"../../../images/halls/{$rowProduct['main_image']}\" /></div>
-                        <!--text-->
-                        <div class=\"reservation-text\">
-                            <!--heading-->
-                            <h3>". $rowProduct['hall_name'] ."</h3>
-                            <!--details-->
-                            <p>". $rowProduct['description'] ."</p>
-                            <a class=\"hero-button\" onclick=\"location.href='hall_view.php?hall_id={$rowProduct['hall_id']}';\" >Find Out More</a>
-                        </div>
-                        </section>
-                    <!--End of Hall2-->";
-                    }       
-                    
-            }else if($capacity=="Capacity" && $advance_fee!=="" && $date!=="" && $time!==""){
-                $retrieveProduct = "SELECT reception_hall.main_image, reception_hall.hall_id, reception_hall.description, reception_hall.hall_name
-                FROM reception_hall INNER JOIN hall_reservation ON reception_hall.hall_id=hall_reservation.hall_id 
-                WHERE time LIKE '$time%' AND date LIKE '$date%' AND capacity LIKE '$date%' "; 
-                $resultProduct = mysqli_query($connection, $retrieveProduct); 
-                while($rowProduct  = mysqli_fetch_assoc($resultProduct)){                        
-                            echo"<!--Start of Hall-->
-                            <section class=\"reservation\" style=\"padding-top:5px; margin:auto;\">
-                                <!--img-->
-                                <div class=\"reservation-img\"><img src=\"../../../images/halls/{$rowProduct['main_image']}\" /></div>
-                                <!--text-->
-                                <div class=\"reservation-text\">
-                                    <!--heading-->
-                                    <h3>". $rowProduct['hall_name'] ."</h3>
-                                    <!--details-->
-                                    <p>". $rowProduct['description'] ."</p>
-                                    <a class=\"hero-button\" onclick=\"location.href='hall_view.php?hall_id={$rowProduct['hall_id']}';\" >Find Out More</a>
-                                </div>
-                                </section>
-                            <!--End of Hall2-->div>
-                            </div>";
-                        }       
-                    
-            }else if($capacity!=="" && $advance_fee=="Advance_Fee" && $date!=="" && $time!==""){
-                $retrieveProduct = "SELECT reception_hall.main_image, reception_hall.hall_id, reception_hall.description, reception_hall.hall_name
-                FROM reception_hall
-                INNER JOIN hall_reservation ON reception_hall.hall_id=hall_reservation.hall_id WHERE time LIKE '$time%' AND date LIKE '$date%' "; 
-                $resultProduct = mysqli_query($connection, $retrieveProduct); 
-                while($rowProduct  = mysqli_fetch_assoc($resultProduct)){                        
-                            echo"<!--Start of Hall-->
-                            <section class=\"reservation\" style=\"padding-top:5px; margin:auto;\">
-                                <!--img-->
-                                <div class=\"reservation-img\"><img src=\"../../../images/halls/{$rowProduct['main_image']}\" /></div>
-                                <!--text-->
-                                <div class=\"reservation-text\">
-                                    <!--heading-->
-                                    <h3>". $rowProduct['hall_name'] ."</h3>
-                                    <!--details-->
-                                    <p>". $rowProduct['description'] ."</p>
-                                    <a class=\"hero-button\" onclick=\"location.href='hall_view.php?hall_id={$rowProduct['hall_id']}';\" >Find Out More</a>
-                                </div>
-                                </section>
-                            <!--End of Hall2-->div>
-                            </div>";
-                        }       
-                    
-            }      
-                               
-                                 
-                      
         }else{
             $retrieveProduct = "SELECT * FROM `reception_hall`";
             $resultProduct = mysqli_query($connection, $retrieveProduct);

@@ -31,7 +31,10 @@
     
     <!--Start of Ongoing Card Section-->
     <div class="title_text">
-        <h3>Ongoing <font color="orange">Reservaions</font></h3>
+        <h3>Hall <font color="orange">Reservations</font></h3>
+    </div>
+    <div class="title_text">
+        <h3>Ongoing <font color="orange">Reservations</font></h3>
     </div>
     <section class="food">
         <div class="food-container">
@@ -75,12 +78,58 @@
                 <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Cancel</button>  
             </div>
         </div>
-    </section>           
+    </section>      
+    <div class="title_text">
+        <h3>Past <font color="orange">Reservations</font></h3>
+    </div>
+    <section class="food">
+        <div class="food-container">
+            <div class="food-box">
+                <h3 class="name">Cinnamon Grand</h3> 
+                <img class="food-img" src= "../../images/restaurant/cinnamon-grand-main-entrance.jpg">
+                <br>
+                <i class="fas fa-map-marker-alt">Colombo</i>
+                <br>
+                <h4 class="">2020 Dec 04</h4>
+                <h4 class="">8.00pm</h4>
+                <h4 class="">Table</h4>
+                <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Cancel</button>  
+            </div>
+        </div>
+        
+        <div class="food-container">
+            <div class="food-box">
+                <h3 class="name">Topaz Hotel</h3> 
+                <img class="food-img" src= "../../images/restaurant/topaz.jpg">
+                <br>
+                <i class="fas fa-map-marker-alt">Kandy</i>
+                <br>
+                <h4 class="">2021 Feb 19</h4>
+                <h4 class="">8.00pm</h4>
+                <h4 class="">Hall</h4>
+                <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Cancel</button>  
+            </div>
+        </div>
+
+        <div class="food-container">
+            <div class="food-box">
+                <h3 class="name">Hilton Hotel</h3> 
+                <img class="food-img" src= "../../images/restaurant/hilton.jpg">
+                <br>
+                <i class="fas fa-map-marker-alt">Colombo</i>
+                <br>
+                <h4 class="">2020 Apr 14</h4>
+                <h4 class="">10.00am</h4>
+                <h4 class="">Hall</h4>
+                <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Cancel</button>  
+            </div>
+        </div>
+    </section>       
     <!--End of Ongoing Card Section-->
 
     <!--Start of Past Card Section-->
     <div class="title_text">
-        <h3>Past <font color="orange">Reservaions</font></h3>
+        <h3>Table <font color="orange">Reservaions</font></h3>
     </div>
     <section class="food">
         <div class="food-container">

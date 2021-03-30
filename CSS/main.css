@@ -1044,6 +1044,7 @@ ul{
 		  grid-template-columns: 1fr;
 		  grid-column-gap: 3px;
 		  font-family: 'Baloo Chettan 2', cursive;
+		  text-align: center;
 	  }
 
 	  .review img{
@@ -1051,6 +1052,12 @@ ul{
 	  }
 	  .review .card1 img{
 		background-size: 40%;
+
+	}
+
+	.review .card1{
+		margin-left: auto%;
+		max-width: 300px;
 	}
 	  
 } 

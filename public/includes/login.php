@@ -57,7 +57,7 @@
                     </div>
 
                     <div class="text-right" style="color:blue; padding-top:8px; padding-bottom: 15px">
-                        <a href="../reset/email_verify.php" style="color:blue"> Forgot password! </a>
+                        <a href="../../src/customer/reset/email_verify.php" style="color:blue"> Forgot password! </a>
                     </div>
 
                     <div class="container-login100-form-btn">

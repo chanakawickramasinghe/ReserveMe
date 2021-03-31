@@ -68,7 +68,7 @@
     <!--End of main-section-->
 
     <!--start of from section-->
-    <section class="reservation">
+  <section class="reservation">
 		<!--Form-->
 		<div class="col1">
             <h1>Check Availability</h1>
@@ -111,7 +111,7 @@
                       
                       ?>
                   </select>
-	          </div>
+	         </div>
                 <br>
                   <!-- <input type="time" name="time" > -->
 	                <input class="dropbtn" type="submit" id="submit" name="submit" value="check" onclick="onClickOpenAvailTab()">
@@ -159,6 +159,7 @@
                       // echo $table_id;
                       }
                   }
+                echo "<input type=\"button\" class=\"dropbtn\"  id=\"reserve\" name=\"reserve\" value=\"Reserve\" onclick=\"onClickOpenForm()\">";
                 } else {
                   echo "SQL syntex error";
                 }
@@ -166,7 +167,7 @@
               
               ?>         
             
-        <input type="button" class="dropbtn"  id="reserve" name="reserve" value="Reserve" onclick="onClickOpenForm()">
+        
         <input type="hidden" id="cus_id" name="cus_id" value="<?php echo $cus_id;?>" required>
         <input type="hidden" id="guests2" name="guests2" value="<?php echo $guests;?>" required>
         <input type="hidden" id="date2" name="date2" value="<?php echo $date;?>" required>

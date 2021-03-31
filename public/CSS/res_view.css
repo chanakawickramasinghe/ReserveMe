@@ -631,7 +631,7 @@ ul{
 
 
   /* Default Hidden Available table details */
-  /* .col2 {
-	display: none;
-	position: fixed;
-  } */
+  .col2 {
+	/* display: none; */
+	/* position: fixed; */
+  }

@@ -113,15 +113,18 @@
                   <option value="">Time</option>
                       <?php $setTime = time() + (3.5 * 60 * 60);
                           $currTime = date("h:i",$setTime);
-                          $currhr = date("h",$setTime);?>
+                          $currhr = date("H",$setTime);
+                          $currDate =date("Y-m-d");
+                          ?>
                       <?php
                         $x=8;                       
                         while($x<=22){
-                          if($x>$currhr && $x>12){                      
-                            echo "<option value=\"$x.':00'\">$x:00 pm</option>";
-                          } elseif($x>$currhr && $x<12) {
-                            echo "<option value=\"$x.':00'\">$x:00 am</option>";
-                          }
+                            if($x>$currhr && $x>12){                      
+                              echo "<option value=\"$x\">$x:00 pm</option>";
+                            } elseif($x>$currhr && $x<12) {
+                              echo "<option value=\"$x\">$x:00 am</option>";
+                            }
+             
                           $x=$x+2;
                         }
                       
@@ -139,46 +142,47 @@
 		<div class="col2" id="avail_tab">
         <h1>Available Tables</h1>
       
-              <?php
+        <?php
 
-                if(isset($_POST['submit'])){
-                  $floor=$_POST['floor'];
-                  $guests=$_POST['guests'];
-                  $time=$_POST['time'];
-                  $date=$_POST['date'];  
+              if(isset($_POST['submit'])){
+                $floor=$_POST['floor'];
+                $guests=$_POST['guests'];
+                $time=$_POST['time'];
+                $date=$_POST['date'];  
 
-                $sql_select_table= "SELECT table_id FROM res_table WHERE floor_no=$floor AND min_cap<=$guests AND max_cap>=$guests";
-                $result=($connection->query($sql_select_table));
+              echo "<p> Number of Person : <span style=\"color:blue\">$guests </span> <br> @ Date : <span style=\"color:blue\"> $date </span> <br> @ Time : <span style=\"color:blue\"> $time </span>";
 
-                if($result){
-                  while($row = $result->fetch_assoc()){
-                    $table_id=$row['table_id'];
+              $sql_select_table= "SELECT table_id FROM res_table WHERE floor_no=$floor AND min_cap<=$guests AND max_cap>=$guests";
+              $result=($connection->query($sql_select_table));
+
+              if($result){
+                while($row = $result->fetch_assoc()){
+                  $table_id=$row['table_id'];
+                  // echo $table_id;
+
+                  $sql_check_table_avail="SELECT table_id FROM reservation WHERE table_id='$table_id' AND date='$date' AND time='$time'";
+                  $result1=($connection->query($sql_check_table_avail));
+                  $no_rows = mysqli_num_rows($result1);
+
+                  if($no_rows==1){
                     // echo $table_id;
+                  } else {
 
-                    $sql_check_table_avail="SELECT table_id FROM reservation WHERE table_id='$table_id' AND date='$date' AND time='$time'";
-                    $result1=($connection->query($sql_check_table_avail));
-                    $no_rows = mysqli_num_rows($result1);
+                    echo "<form action=\"reservation-submit.php\" method=\"POST\" > ";
+                    echo "<label for=\"$table_id\" class=\"container\">$table_id
+                    <input type=\"radio\" id=\"$table_id\" name=\"table_id\" value=\"$table_id\" required>
+                    <span class=\"checkmark\"> </span>
+                    </label>
+                    <br>";
 
-                    if($no_rows==1){
-                      // echo $table_id;
-                    } else {
-                    
-
-                      echo "<form action=\"reservation_submit.php\" method=\"POST\" > ";
-                      echo "<label for=\"$table_id\" class=\"container\">$table_id
-                      <input type=\"radio\" id=\"$table_id\" name=\"table_id\" value=\"$table_id\">
-                      <span class=\"checkmark\"> </span>
-                      </label>
-                      <br>";
-
-                      // echo $table_id;
-                      }
-                  }
-                } else {
-                  echo "SQL syntex error";
+                    // echo $table_id;
+                    }
                 }
+              } else {
+                echo "SQL syntex error";
               }
-              
+              }
+
               ?>         
             
         <input type="button" class="dropbtn"  id="reserve" name="reserve" value="Reserve" onclick="onClickOpenForm()">

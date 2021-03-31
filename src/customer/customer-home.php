@@ -80,7 +80,7 @@
 			<a class="hero-button" href="res_view/logged_res_view.php">Table Reservation</a>
 		</div>
 		<!--img-->
-		<div class="reservation-img"><img src="../../public/images/hall.jpg" /></div>
+		<div class="reservation-img"><img src="../../public/images/table.jpeg" /></div>
 	</section>
 	<!--End of Table reservation-->
 
@@ -170,25 +170,25 @@
 		<div class="container">
             <div class="gallery">
                 <figure class="gallery__item gallery__item--1">
-                    <img src="../../public/images/gallery2.jpg" class="gallery__img">
+                    <img src="../../public/images/gallery3.jpeg" class="gallery__img">
                 </figure>
                 <figure class="gallery__item gallery__item--2">
-                    <img src="../../public/images/gallery5.jpg" class="gallery__img">
+                    <img src="../../public/images/gallery4.jpeg" class="gallery__img">
                 </figure>
                 <figure class="gallery__item gallery__item--3">
-                    <img src="../../public/images/gallery4.jpg" class="gallery__img">
+                    <img src="../../public/images/table.jpeg" class="gallery__img">
                 </figure>
                 <figure class="gallery__item gallery__item--4">
-                    <img src="../../public/images/gallery6.jpg" class="gallery__img">
+                    <img src="../../public/images/gallery5.jpeg" class="gallery__img">
                 </figure>
                 <figure class="gallery__item gallery__item--5">
-                    <img src="../../public/images/gallery1.jpg" class="gallery__img">
+                    <img src="../../public/images/gallery6.jpeg" class="gallery__img">
                 </figure>
                 <figure class="gallery__item gallery__item--6">
-                    <img src="../../public/images/gallery3.jpg" class="gallery__img">
+                    <img src="../../public/images/gallery1.jpeg" class="gallery__img">
 				</figure>
 				<figure class="gallery__item gallery__item--7">
-                    <img src="../../public/images/gallery7.jpg" class="gallery__img">
+                    <img src="../../public/images/gallery2.jpeg" class="gallery__img">
                 </figure>
             </div>
         </div>

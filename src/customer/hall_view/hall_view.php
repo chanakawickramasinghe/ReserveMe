@@ -48,7 +48,6 @@
                   <p>Capacity:  ". $rowProduct['capacity'] ."</p>
                   <p>Contact: ". $rowProduct['contact_no'] ."</p>
                   <p>Advance: ". $rowProduct['advance_fee'] ." LKR</p>
-                  <a class=\"hero-button\"  onclick=\"onClickOpenForm()\">Reserve</a>
               </div>
               </section>
           <!--End of main-section-->

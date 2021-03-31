@@ -1,5 +1,7 @@
 <?php include('connection.php') ?>
 <?php include('session.php') ?>
+<?php include('message.php') ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +22,7 @@
 
 </head>
 
-<body>
+<body onload="clearUrlPara()">
 	<!--Start of nav-->
     <div class="topnav">
         <a href="../index.php"><img class = "logo" src="../images/logo.png"></a>
@@ -43,7 +45,7 @@
             <form action="login-submit.php" method="post">
                 <center><img src="../images/form_icons/vector-users.png" alt="usericon" class="userIcon">
                 <h1 style="display: inline-block;color:green">Login</h1></center>
-                <p class="error-msg"><?php include_once('message.php'); ?></p>
+                <h3 class="error-msg"><?php include_once('message.php'); ?></h3>
 
                     <div class="wrap-input100 validate-input" style="padding-top: 20px;" data-validate="Username is required">                    
                         <input class="input100" type="email" name="email" placeholder="Type your Email" required>
@@ -78,6 +80,12 @@
     
     <!--script for onClickNav() for the navigation menu-->
     <script src="../js/onClickNav.js"></script>
+    <script>
+        function clearUrlPara(){
+            history.replaceState(null, "", location.href.split("?")[0]);
+        }
+
+    </script>
 
 </body>
 </html>

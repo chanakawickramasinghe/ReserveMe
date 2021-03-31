@@ -1,19 +1,18 @@
-<?php include('../../includes/connection.php') ?>
-<?php //include('../../includes/session.php') ?>
+<?php include('../../config/connection.php') ?>
 <?php include('emp-session.php') ?>
 
 
 <html>
     <head>
         <title>Employee Profile</title>
-        <link href="../../images/logo.png" rel="shortcut icon"/> 
+        <link href="../../public/images/logo.png" rel="shortcut icon"/> 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Link the style sheets -->
-        <link rel="stylesheet" href="../../CSS/employee.css">
-        <link rel="stylesheet" href="../../CSS/main.css">
-        <link rel="stylesheet" href="../../CSS/nav.css">   
-        <link rel="stylesheet" href="../../CSS/footer.css">   
+        <link rel="stylesheet" href="../../public/CSS/employee.css">
+        <link rel="stylesheet" href="../../public/CSS/main.css">
+        <link rel="stylesheet" href="../../public/CSS/nav.css">   
+        <link rel="stylesheet" href="../../public/CSS/footer.css">   
     </head>
     <body>    
         
@@ -66,10 +65,10 @@
         </table>
        
         
-        <img src="../../images/restaurant/restaurant-staff.jpg" alt="feedback" class="resimage">
+        <img src="../../public/images/restaurant/restaurant-staff.jpg" alt="feedback" class="resimage">
 
     </div>
 
-    <div class="footer"> <?php include('../../includes/footer.php'); ?> </div>
+    <div class="footer"> <?php include('../../public/includes/footer.php'); ?> </div>
     </body>
 </html> 

@@ -1,5 +1,4 @@
-<?php include('../../includes/connection.php') ?>
-<?php //include('../../includes/session.php') ?>
+<?php include('../../config/connection.php') ?>
 <?php include('emp-session.php') ?>
 
 
@@ -9,12 +8,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pre-Order Menu</title>
-    <link href="../../images/logo.png" rel="shortcut icon"/> 
+    <link href="../../public/images/logo.png" rel="shortcut icon"/> 
         <!-- Link the style sheets -->
-        <link rel="stylesheet" href="../../CSS/employee.css">
-        <link rel="stylesheet" href="../../CSS/main.css">
-        <link rel="stylesheet" href="../../CSS/nav.css">   
-        <link rel="stylesheet" href="../../CSS/footer.css">
+        <link rel="stylesheet" href="../../public/CSS/employee.css">
+        <link rel="stylesheet" href="../../public/CSS/main.css">
+        <link rel="stylesheet" href="../../public/CSS/nav.css">   
+        <link rel="stylesheet" href="../../public/CSS/footer.css">
         <!-- Link the icon style -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -27,27 +26,17 @@
 
     <!-- Start of sidbar -->
     <div class="sidebar"> 
-      <!-- <a href="employee-home.php" >Employee Home</a> -->
-      <!-- <a href="venues.php">Reservation Status</a><hr>    -->
       <a href="menu.php">Set Menu</a><hr>
       <a href="chat.php">Chat</a><hr>
       <a href="table-reservation.php" >Table Reservation</a><hr>
       <a href="#" class="active">Pre Orders</a><hr>
-      <a href="hall-reservation.php" >Hall Reservation</a><hr>
-      
+      <a href="hall-reservation.php" >Hall Reservation</a><hr>      
     </div>
     <!-- End of sidebar -->
 
 <div class="content">
 
     <h1>Pre Orders-<span style="color:orange"> Menu </span> </h1>
-    
-    <!-- <div style="float:right">
-        <button type="button" class="hero-button" onclick="window.location.href='table-reservation.php'">Table Reservation</button>
-        <button type="button" class="hero-button active" onclick="window.location.href='#'">Pre Orders</button>    
-        <button type="button" class="hero-button" onclick="window.location.href='hall-reservation.php'">Hall Reservation</button>
-    </div>
-    <br><br> -->
 
     <div style="padding:5vw;padding-top:1vw">
     <div class="contentbox">
@@ -117,7 +106,7 @@
     </div>
 </div>
 
-<div class="footer"> <?php include('../../includes/footer.php'); ?> </div>
+<div class="footer"> <?php include('../../public/includes/footer.php'); ?> </div>
    
 </body>
 </html>

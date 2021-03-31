@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
 
     //print_r($userResult);
     
-    //User Exists
+    //Customer Login
     if (mysqli_num_rows($userResult1) == 1) {
         $userRow = mysqli_fetch_array($userResult1);
         
@@ -60,14 +60,17 @@ if(isset($_POST['submit'])){
         $active_status= $userRow['active_status'];
         $_SESSION["email"] = $email;
 
+        if($active_status == 1){
             $log_res_sql = "INSERT INTO log (user_id, user_type, date_time, activity) 
             VALUES ('".$_SESSION["resID"]."','".$_SESSION["userType"]."',NOW(),'Login Successfully')";
 
             $execute_querry = mysqli_query($connection, $log_res_sql);
 
-            header( "Location:../../users/restaurant/restaurant-home.php" ); // <----- need to change -->
-
-
+            header( "Location:../users/restaurant/restaurant-home.php" );
+        }
+        else{
+            header("Location:../users/activate-account.php");
+        }    
     }
      
     // Admin login
@@ -86,7 +89,7 @@ if(isset($_POST['submit'])){
 
         // $execute_querry = mysqli_query($connection, $log_admin_sql);
 
-        header( "Location:../../src/admin/admin-home.php");
+        header( "Location:../users/admin/admin-home.php");
 
     }
 
@@ -96,7 +99,7 @@ if(isset($_POST['submit'])){
         $userRow = mysqli_fetch_array($userResult4);
         // session_start();
         checkSession();  //create sessions
-        $_SESSION["emp_name"] = $userRow['emp_name'];
+        $_SESSION["name"] = $userRow['emp_name'];
         $_SESSION["emp_id"] = $userRow['emp_id'];
         $_SESSION["res_id"] = $userRow['res_id'];
         $_SESSION['emp_email']= $userRow['emp_email'];
@@ -109,7 +112,7 @@ if(isset($_POST['submit'])){
 
             $execute_querry = mysqli_query($connection, $log_emp_sql);
 
-            header( "Location:../../users/employee/venues.php");  // <----- need to change -->
+            header( "Location:../../src/employee/employee-profile.php"); 
     }
     else {
         $message = base64_encode(urlencode("Invalid Email or Password"));

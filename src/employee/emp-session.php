@@ -11,6 +11,7 @@ function checkSession(){
 	if(isset($_SESSION['login']) && $_SESSION['login'] == true && $_SESSION['userType'] == 'Employee') {
 	
 	} else {
-		header("Location:../../includes/login.php");
+		$message = base64_encode(urlencode("Please Login As a employee"));
+		header('Location:../../public/includes/login.php?msg'.$message);
 	}
 ?>

@@ -22,8 +22,8 @@
 <body>
     <!-- Start of nav tab -->
     <div class="topnav" id="myTopnav">
-        <a href="../../src/customer/index.php"><img class = "logo" src="../images/logo.png"></a>
-		<a class="navtab" href="../../users/customer/customerReg.php">Register</a> <!--  <----- need to change -->
+        <a href="../../index.php"><img class = "logo" src="../images/logo.png"></a>
+		<a class="navtab" href="../../src/customer/customerReg.php">Register</a>
 		<a class="navtab" href="login.php">Login</a>
 		<a class="navtab" href="contact.php">Contact</a>
         <a class="navtab active" href="about.php">About</a>
@@ -35,103 +35,22 @@
         <img src="../images/aboutupdated.jpg" alt="about us picture" style="height:80%;width:100%">
         
         
-        
-        <table class="table_about">
-            <tr>
-                <td colspan=2>
-                <img src="../images/logo.png" alt="Website logo">                
-                </td>
-                <td colspan=2>
-
-                <h1>Who we are?</h1>
-                    <p calss="about-p">ReserveMe is one of the most atractive five-star hotel situated in Kandy, the last kingdom of Sri Lanka.<br>
-                    It is one of the main hotels situated in the heart of Kandy which has been very famous amoung the turists as well. Also it is one of the restaurants which provides the service of online reserving tables and halls though it's web based system.<br>
-        
-        
-        
-                 </p><br>
-                <p calss="about-p">
-                This is a service providing platform which serves the customers and the interested parties by giving the opportunity of reserving the tables, reserving halls for their occassions and also preordering food if they are willing to order food before arriving the retaurant. Which will avoid wasting time searching for a table and of avoiding the unpleasent times faced by the customer.
-                </p>
-
-                </td>
-
-            </tr>
-      <!--<tr>
-
-        <td>
-        <div class="content-box"> 
-                    <img src="../images/us/chanaka.jpg" style="height:200px;width:200px;border-radius:10px">
-                    <h3>Chanaka</h3>
-                    <p>Back-end/Ux developer</p>
-                    <div class="flex-c-m">
-                    
-                        <a href="#" class="login100-social-item bg1">
-                        <i class="fa fa-facebook"></i>
-                        </a>
-                        <a href="#" class="login100-social-item bg2">
-                        <i class="fa fa-twitter"></i>
-                        </a>
-                    </div>
-        </div>
-        </td>
-
-        <td>
-        <div class="content-box">       
-                    <img src="../images/us/chathuranga.jpg" style="height:200px;width:200px;border-radius:10px">
-                    <h3>Chathuranga</h3>
-                    <p>Back-end/Ux developer</p>
-                    <div class="flex-c-m">
-                    
-                        <a href="#" class="login100-social-item bg1">
-                        <i class="fa fa-facebook"></i>
-                        </a>
-                        <a href="#" class="login100-social-item bg2">
-                        <i class="fa fa-twitter"></i>
-                        </a>
-                    </div>
-
-        </div> 
-        </td>
-
-        <td>
-        <div class="content-box">         
-                    <img src="../images/us/Aamir.jpg" style="height:200px;width:200px;border-radius:10px">
-                    <h3>Aamir</h3>
-                    <p>Back-end developer</p>
-                    <div class="flex-c-m">
-                    
-                        <a href="https://www.facebook.com/profile.php?id=100010438563417" class="login100-social-item bg1">
-                        <i class="fa fa-facebook"></i>
-                        </a>
-                        <a href="#" class="login100-social-item bg2">
-                        <i class="fa fa-twitter"></i>
-                        </a>
-                    </div>
-        </div>
-        </td>
-
-        <td>
-        <div class="content-box">      
-                 <img src="../images/us/nuwan.jpg" style="height:200px;width:200px;border-radius:10px">
-                    <h3>Nuwan</h3>
-                    <p>Designer</p>
-                    <div class="flex-c-m">
-                    
-                        <a href="#" class="login100-social-item bg1">
-                        <i class="fa fa-facebook"></i>
-                        </a>
-                        <a href="#" class="login100-social-item bg2">
-                        <i class="fa fa-twitter"></i>
-                        </a>
-                    </div>
-               
-        </div>        
-        
-        </td>
-      </tr>-->
-        </table>
-        
+        <!--Start of Hall reservation-->
+	<section class="reservation">
+		<!--img-->
+		<div class="reservation-img"><img src="../images/logo.png"" /></div>
+		<!--text-->
+		<div class="reservation-text">
+			<!--heading-->
+			<h3>Who we are?</h3>
+			<!--details-->
+			<p>ReserveMe is one of the most atractive five-star hotel situated in Kandy, the last kingdom of Sri Lanka.<br>
+            It is one of the main hotels situated in the heart of Kandy which has been very famous amoung the turists as well. Also it is one of the restaurants which provides the service of online reserving tables and halls though it's web based system.</p>
+			<br>
+            <p>This is a service providing platform which serves the customers and the interested parties by giving the opportunity of reserving the tables, reserving halls for their occassions and also preordering food if they are willing to order food before arriving the retaurant. Which will avoid wasting time searching for a table and of avoiding the unpleasent times faced by the customer.</p>
+		</div>
+		</section>
+	<!--End of Hall reservation-->    
     </div>
 
 
@@ -210,6 +129,9 @@
      
     <!--script for slideshow-->
     <script src="../js/onClickNav.js"></script>
+   
+    
+
 
 </body>
     

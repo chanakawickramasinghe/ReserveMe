@@ -17,31 +17,31 @@
     <!--web-icon-->
     <link href="../images/logo.png" rel="shortcut icon"/>
     <style>
-.container {
-  position: relative;
-  text-align: center;
-  color: white;
-  font-family:Times;
-}
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size:50px;
-}
-</style>
+        .container {
+        position: relative;
+        text-align: center;
+        color: white;
+        font-family:Times;
+        }
+        .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size:50px;
+        }
+    </style>
 </head>
 <body>
 <!-- main-section-------------
 <section class="main"> -->
 		<!--Start of nav-->
 		<div class="topnav" id="myTopnav">
-			<a href="../../users/customer/customer-home.php"><img class = "logo" src="../images/logo.png"></a> <!--  <----- need to change -->
-		    <a class="navtab" href="../../src/customer/index.php">Logout</a>
-            <a class="navtab" href="../../users/customer/customer-profile.php">Profile</a>
-            <a class="navtab" href="../../users/customer/reservation_details.php">Reservations</a>
-		    <a class="navtab active" href="logged_contact.php">Contact</a>
+			<a href="../../src/customer/customer-home.php"><img class = "logo" src="../images/logo.png"></a>
+		    <a class="navtab" href="logout.php">Logout</a>
+            <a class="navtab" href="../../src/customer/customer-profile.php">Profile</a>
+            <a class="navtab" href="../../src/customer/reservation_details.php">Reservations</a>
+		    <a class="navtab active" href="#">Contact</a>
 		    <a class="navtab" href="logged_about.php">About</a>
 		    <a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
 		</div>
@@ -85,7 +85,7 @@
         </div>
 
         <!--Include footer.php-->
-    <div><?php include "./footer.php" ?></div>
+    <div><?php include "footer.php" ?></div>
 
     <?php include('../../config/connection.php'); ?>
     <?php include('session.php'); ?>
@@ -125,11 +125,11 @@
     mysqli_close($connection);
     
     ?>
-<script>
-function myFunction() {
-confirm("The form was submitted");
-}
-</script>
+        <script>
+            function myFunction() {
+            confirm("The form was submitted");
+            }
+        </script>
 
 <!--script for slideshow-->
 <script src="../js/onClickNav.js"></script>

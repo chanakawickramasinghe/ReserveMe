@@ -17,7 +17,7 @@
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
 </head>
 
-<body>
+<body onload="clearUrlPara()">
     <!--Start of nav-->
     <div class="topnav" id="myTopnav">
 		<a href="../customer-home.php"><img class = "logo" src="../../../public/images/logo.png"></a>
@@ -102,9 +102,9 @@
                         $x=8;                       
                         while($x<=22){
                           if($x>$currhr && $x>12){                      
-                            echo "<option value=\"$x\">$x:00 pm</option>";
+                            echo "<option value=\"$x:00\">$x:00 pm</option>";
                           } elseif($x>$currhr && $x<12) {
-                            echo "<option value=\"$x\">$x:00 am</option>";
+                            echo "<option value=\"$x:00\">$x:00 am</option>";
                           }
                           $x=$x+2;
                         }
@@ -262,5 +262,14 @@ function setDetails() {
     localStorage.setItem("time2", time2);    
 }
     </script>
+
+  <!-- Clear all Url paased parameters -->
+    <script>
+        function clearUrlPara(){
+            history.replaceState(null, "", location.href.split("?")[0]);
+        }
+
+    </script>
+
 </body>
 </html>

@@ -62,9 +62,9 @@ include('../../public/includes/message.php');?>
             
     </div>
     
-    <div class="footer"> <?php include('../../includes/footer.php'); ?> </div>
+    <!-- <div class="footer"> <?php //include('../../includes/footer.php'); ?> </div> -->
     <!--script for onClickNav() for the navigation menu-->
-    <script src="../../js/onClickNav.js"></script>
+    <script src="../../public/js/onClickNav.js"></script>
 
     <script>
         $(document).ready(function(){

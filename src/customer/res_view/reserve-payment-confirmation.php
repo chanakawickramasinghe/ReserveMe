@@ -26,10 +26,10 @@
      if (resp) {
         localStorage.clear();
         alert("Your reservation succesfull!!! You will recive an email with payment details!!!");
-        window.location.href ='../customer-home.php';
+        window.location.href ='../reservation_details.php';
      } else {
        alert("Error in Reservation..! please Contact our support Team");
-       window.location.href = "../customer-home.php";
+       window.location.href = "../reservation_details.php";
      }
      });
 

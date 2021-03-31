@@ -39,7 +39,7 @@
     </div>
     <section class="food">
             <?php
-                include('../../public/includes/connection.php');
+                include('../../config/connection.php');
                 include('../../public/includes/session.php'); 
 
                 checkSession();

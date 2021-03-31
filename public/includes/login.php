@@ -21,7 +21,7 @@
 
 </head>
 
-<body>
+<body onload="clearUrlPara()">
 	<!--Start of nav-->
     <div class="topnav">
         <a href="../../index.php"><img class = "logo" src="../images/logo.png"></a>
@@ -79,6 +79,13 @@
     
     <!--script for onClickNav() for the navigation menu-->
     <script src="../js/onClickNav.js"></script>
+
+    <script>
+        function clearUrlPara(){
+            history.replaceState(null, "", location.href.split("?")[0]);
+        }
+
+    </script>
 
 </body>
 </html>

@@ -66,7 +66,7 @@ if(isset($_POST['submit'])){
 
             $execute_querry = mysqli_query($connection, $log_res_sql);
 
-            header( "Location:../users/restaurant/restaurant-home.php" );
+            header( "Location:../src/restaurant/restaurant-home.php" );
         }
         else{
             header("Location:../users/activate-account.php");

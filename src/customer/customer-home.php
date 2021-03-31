@@ -1,5 +1,5 @@
-<?php include('../../config/session.php') ?>
-<?php include('../../public/includes/connection.php'); ?>
+<?php include('../../config/connection.php') ?>
+<?php include('../../public/includes/session.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

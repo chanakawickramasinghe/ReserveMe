@@ -113,19 +113,19 @@
                   <option value="">Time</option>
                       <?php $setTime = time() + (3.5 * 60 * 60);
                           $currTime = date("h:i",$setTime);
-                          $currhr = date("h",$setTime);?>
-                      <?php
+                          $currhr = date("H",$setTime);
                         $x=8;                       
                         while($x<=22){
                           if($x>$currhr && $x>12){                      
-                            echo "<option value=\"$x.':00'\">$x:00 pm</option>";
+                            echo "<option value=\"$x:00\">$x:00 pm</option>";
                           } elseif($x>$currhr && $x<12) {
-                            echo "<option value=\"$x.':00'\">$x:00 am</option>";
+                            echo "<option value=\"$x:00\">$x:00 am</option>";
                           }
                           $x=$x+2;
                         }
                       
                       ?>
+                  </select>
                   </select>
 	          </div>
                 <br>

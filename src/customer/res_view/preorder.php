@@ -18,7 +18,7 @@
 
 </head>
 
-<body>
+<body onload="clearUrlPara()">
     <!--Start of nav-->
     <div class="topnav" id="myTopnav">
         <a href="../customer-home.php"><img class = "logo" src="../../../public/images/logo.png"></a>
@@ -196,6 +196,15 @@
     <!--script for onClickNav() for the navigation menu-->
     <script src="../../../public/js/onClickNav.js"></script>
     <script src="../../../public/js/onClickOpenForm.js"></script>
+    
+    <!-- Clear all Url paased parameters -->
+    <script>
+        function clearUrlPara(){
+            history.replaceState(null, "", location.href.split("?")[0]);
+        }
+
+    </script>
+    
 
 </body>
 

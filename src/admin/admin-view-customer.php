@@ -1,4 +1,4 @@
-<?php include('../../public/includes/session.php') ?>
+<?php include('admin-session.php') ?>
 <?php include('../../config/connection.php') ?>
 
 <?php
@@ -22,7 +22,7 @@
         <!--Start of nav-->
         <div class="topnav" id="myTopnav">
         <a href="admin-home.php"><img class = "logo" src="../../public/images/logo.png"></a>
-            <a class="navtab" href="../../src/customer/index.php">Logout</a>
+            <a class="navtab" href="../../public/includes/logout.php">Logout</a>
             <a class="navtab" href="admin-home.php">Home</a>
             <a class="navtab" href="manage-users.php">Manage Users</a>
 		    <a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
@@ -60,17 +60,12 @@
                             <td><input width="50px" class="input-l" type="text" placeholder="Customer Name" id="cus_name" name="cus_name" readonly="true" required></td>
                             <th>Date of Birth :</th>
                             <td><input class="input-m" type="text" placeholder="yyyy-mm-dd" id="dob" readonly="true" name="cus_dob" required></td>
-                            <th>Rating :</th>
-                            <td><input class="input-s" type="text" id="ratings" placeholder="Rating" readonly="true" name="cus_rating" required></td>
-
-                        </tr>
-                        <tr>
                             <th>Active Status :</th>
                             <td><input class="input-s" type="text" id="active_status" placeholder="Status" readonly="true" name="cus_status" required></td>
-                            <th colspan="3"></th>
-                            <td><button class="btn-change-s" type="reset">Clear</button></td>
                         </tr>
-                        <tr> 
+                        <tr>
+                            <th colspan="5"></th>
+                            <td><button class="btn-change-s" type="reset">Clear</button></td>
                         </tr>
                     </table>
                     </form>
@@ -120,7 +115,6 @@
                 <th>Customer Email</th>
                 <th>Contact No.</th>
                 <th>DoB</th>
-                <th>Ranking</th>
                 <th>Status</th>
             </tr>
         
@@ -138,7 +132,6 @@
                     <td>".$row['email']."</td>
                     <td>".$row['contact_no']."</td>
                     <td>".$row['dob']."</td>
-                    <td>".$row['rankings']."</td>
                     <td>".$row['active_status']."</td>
                 </tr>";
                 
@@ -161,8 +154,7 @@
                 document.getElementById("email").value = this.cells[2].innerHTML;
                 document.getElementById("dob").value = this.cells[4].innerHTML;
                 document.getElementById("contact_number").value = this.cells[3].innerHTML;
-                document.getElementById("active_status").value = this.cells[6].innerHTML;
-                document.getElementById("ratings").value = this.cells[5].innerHTML;
+                document.getElementById("active_status").value = this.cells[5].innerHTML;
 
                 document.getElementById("test_cus_id").value = this.cells[0].innerHTML;
                 document.getElementById("test_cus_id2").value = this.cells[0].innerHTML;

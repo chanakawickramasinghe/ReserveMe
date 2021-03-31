@@ -1,4 +1,6 @@
-<?php include('../../includes/connection.php') ?>
+<?php include('res-session.php'); ?>
+<?php include('../../config/connection.php'); 
+include('../../public/includes/message.php');?>
 
 <?php
 
@@ -13,10 +15,10 @@ mysqli_query($connection, $sql);
 $result = mysqli_query($connection,$sql);
 
 if($result){
-    header("Location:promotions.php");
+    header("Location:res-promo.php");
 }
 else{
-    header("Location:promotions.php");
+    header("Location:res-promo.php");
     }
 }
 ?>

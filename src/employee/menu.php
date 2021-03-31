@@ -44,7 +44,7 @@
                             <input type="hidden" id="item_name" name="item_name" required>
                             <input type="hidden" id="item_avail" name="item_avail" required>
                             <input type="hidden" id="preorder_avail" name="preorder_avail" required>
-                            <div class="menu-button"><button name="submit" class="emp-button" >Save & update </button></div>
+                            <div class="menu-button"><button name="submit" class="emp-button" > update </button></div>
                             </form>
                         <!--________________ -->
 
@@ -53,7 +53,9 @@
             <span onclick="menu()">Menu</span>
             <span onclick="pre_menu()">Pre-order Menu</span>
             <hr id="Indicator">
-        </div></center>  
+            <p style="color:red"> Please Select One at a time and Update </p>
+        </div></center> 
+        
 
             <table  class="menu-table" id="menu">
                 <tr>

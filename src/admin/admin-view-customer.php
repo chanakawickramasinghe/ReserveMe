@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="../../public/CSS/admin-dashboard.css"/>
         <script src="../../public/js/manage-user-search.js"></script>
 
+
     </head>
     <body>
 
@@ -71,9 +72,9 @@
                     </form>
                     <p class="button-box">
                     <div class="form-15">
-                        <form method="POST" action="admin-view-customer-activity.php">
+                        <form method="POST" name="view" action="admin-view-customer-activity.php">
                             <br/>
-                            <input type="hidden" placeholder="ID" id="test_cus_id" name="user_id" readonly="true" required>
+                            <input type="hidden" placeholder="ID" id="test_cus_id" name="user_id" required>
                             <input type="submit" class="btn-change-m" name="send" value="View Activity">
                         </form>
                     </div>
@@ -88,8 +89,8 @@
                         <form method="POST" action="admin-cus-operations.php">
                             <br>
                             <input type="hidden" placeholder="ID" id="test_cus_id3" name="user_id" readonly="true" required>
-                            <input type="submit" class="btn-red" value="Activate Account" name="btn-activate-cus-account">
-                            <input type="submit" class="btn-red" value="Suspend Account" name="btn-suspend-cus-account">
+                            <input type="submit" class="btn-red" value="Activate Account" onClick='return confirmSubmit()' name="btn-activate-cus-account">
+                            <input type="submit" class="btn-red" value="Suspend Account" onClick='return confirmSubmit()' name="btn-suspend-cus-account">
                             <h4><font color="red"><?php include_once('../../public/includes/message.php'); ?></font></h4>
                         </form>
                     
@@ -163,6 +164,19 @@
         }
 
 </script>
+
+<!-- CONFIRM Box -->
+<script LANGUAGE="JavaScript">
+function confirmSubmit()
+{
+var agree=confirm("Are you sure you wish to continue?");
+    if (agree)
+        return true ;
+    else
+        return false ;
+    }
+</script>
+
 
 
 <!--script for onClickNav() for the navigation menu-->

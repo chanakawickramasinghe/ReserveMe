@@ -98,6 +98,28 @@ function myFunctionCustomer() {
           }
         } 
 
+        function myFunctionHallReservations() {
+          var input, filter, table, tr, td, i;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+              td = tr[i].getElementsByTagName("td")[0]; // for column one
+               td1 = tr[i].getElementsByTagName("td")[2]; 
+              //  td3 = tr[i].getElementsByTagName("td")[4]; // FOR DATE
+               td2 = tr[i].getElementsByTagName("td")[1];
+          /* ADD columns here that you want you to filter to be used on */
+              if (td) {
+                if ( (td.innerHTML.toUpperCase().indexOf(filter) > -1) || (td1.innerHTML.toUpperCase().indexOf(filter) > -1) || (td2.innerHTML.toUpperCase().indexOf(filter) > -1) )  {            
+                  tr[i].style.display = "";
+                } else {
+                  tr[i].style.display = "none";
+                }
+              }
+            }
+          } 
+
 
       function myFunctionEmployee() {
         var input, filter, table, tr, td, i;
@@ -237,7 +259,7 @@ function myFunctionCustomer() {
 
             function sendEmail() {
               var txt;
-              var x = document.forms["form-display-selected"]["id"].value;
+              var x = document.forms["view-activity"]["user_id"].value;
               if (x == "") {
                 alert("No ID Selected!");
                 return false;
@@ -247,3 +269,5 @@ function myFunctionCustomer() {
 
               }
             }
+
+

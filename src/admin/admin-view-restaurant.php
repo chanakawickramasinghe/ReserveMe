@@ -73,8 +73,8 @@
                     <p class="button-box">
                     <br/><br/>
                     <button class="btn-admin-res-view" type="button" name="btn-view-reservations" onClick="window.location='admin-view-res-reservations.php';">View Table Reservations</button>
-                    <button class="btn-admin-res-view" type="button" name="btn-view-reservations">View Pre-order Reservations</button>
-                    <button class="btn-admin-res-view" type="button" name="btn-view-reservations">View Hall Reservations</button>
+                    <!-- <button class="btn-admin-res-view" type="button" name="btn-view-reservations" onClick="window.location='admin-view-pre-reservations.php';">View Pre-order Reservations</button> -->
+                    <button class="btn-admin-res-view" type="button" name="btn-view-reservations" onClick="window.location='admin-view-hall-reservations.php';">View Hall Reservations</button>
                     </p>
 
                 </div>

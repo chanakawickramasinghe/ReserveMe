@@ -1,5 +1,5 @@
-<?php include('includes/connection.php'); ?>
-<?php include('includes/session.php') ?>
+<?php include('config/connection.php'); ?>
+<?php include('public/includes/session.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,11 +8,11 @@
 	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 	<title>ReserveMe</title>
 	<!--web-icon------------------->
-	<link href="images/logo.png" rel="shortcut icon"/>
+	<link href="public/images/logo.png" rel="shortcut icon"/>
 	<!--stylesheet-------------------->
-	<link href="CSS/main.css" rel="stylesheet" type="text/css"/>
-	<link href="CSS/nav.css" rel="stylesheet" type="text/css"/>
-	<link href="CSS/footer.css" rel="stylesheet" type="text/css"/>
+	<link href="public/CSS/main.css" rel="stylesheet" type="text/css"/>
+	<link href="public/CSS/nav.css" rel="stylesheet" type="text/css"/>
+	<link href="public/CSS/footer.css" rel="stylesheet" type="text/css"/>
 	<!--FontAwesome-------->
 	<script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
 </head>
@@ -23,10 +23,10 @@
 		<!--Start of nav-->
 		<div class="topnav" id="myTopnav">
 			<img class = "logo" src="images/logo.png">
-			<a class="navtab" href="users/customer/customerReg.php">Register</a>
-			<a class="navtab" href="includes/login.php">Login</a>
-			<a class="navtab" href="includes/contact.php">Contact</a>
-			<a class="navtab" href="includes/about.php">About</a>
+			<a class="navtab" href="src/customer/customerReg.php">Register</a>
+			<a class="navtab" href="public/includes/login.php">Login</a>
+			<a class="navtab" href="public/includes/contact.php">Contact</a>
+			<a class="navtab" href="public/includes/about.php">About</a>
 			<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
 		</div>
 		<!--End of nav-->
@@ -44,7 +44,7 @@
 					if($date_now < $date2 ) {
     					echo"<div class=\"slideshow-container\">
 							<div class=\"mySlides fade\">
-								<img src= \"images/promos/{$rowProduct['image']}\" style=\"width:100% ; height:60vh\">
+								<img src= \"public/images/promos/{$rowProduct['image']}\" style=\"width:100% ; height:60vh\">
 							</div>
 						</div>
 						<div style=\"text-align:center\">
@@ -76,17 +76,17 @@
 			<h4>Best places to <font>Dine in</font> with esense of joy</h4>
 			<!--details-->
 			<p>We have brought the fine option of placing a table reservation at your favourite restaurant to your finger tip. Explore more restaurants and place a table reservation in few minutes.</p>
-			<a class="hero-button" href="users/customer/res_view/res_view.php">Table Reservation</a>
+			<a class="hero-button" href="src/customer/res_view/res_view.php">Table Reservation</a>
 		</div>
 		<!--img-->
-		<div class="reservation-img"><img src="images/hall.jpg" /></div>
+		<div class="reservation-img"><img src="public/images/hall.jpg" /></div>
 	</section>
 	<!--End of Table reservation-->
 
 	<!--Start of Hall reservation-->
 	<section class="reservation">
 		<!--img-->
-		<div class="reservation-img"><img src="images/hall.jpg" /></div>
+		<div class="reservation-img"><img src="public/images/hall.jpg" /></div>
 		<!--text-->
 		<div class="reservation-text">
 			<!--heading-->
@@ -94,7 +94,7 @@
 			<h4>Best places to <font>Enlight</font> your occasion</h4>
 			<!--details-->
 			<p>Enlight your special occasion by finding the best place. You can now search and find the best venue to your weddings, birthday parties and more occasion. We provide you the facility to book it before others.</p>
-			<a class="hero-button" href="users/customer/hall_view/hall_search_result.php">Hall Reservation</a>
+			<a class="hero-button" href="src/customer/hall_view/hall_search_result.php">Hall Reservation</a>
 		</div>
 		</section>
 	<!--End of Hall reservation-->
@@ -155,8 +155,8 @@
 						<i class=\"far fa-comments\" id=\"i2\"></i></p>
 					</div>
 					<div class=\"card2\">
-						<img src=\"images/review.svg\" style=\"height: 200px ; width: 200px\"/>
-						<a class=\"subcribe-btn\" href=\"users/customer/res_view/review/index.php\">More</a>
+						<img src=\"public/images/review.svg\" style=\"height: 200px ; width: 200px\"/>
+						<a class=\"subcribe-btn\" href=\"src/customer/res_view/review/index.php\">More</a>
 					</div>
 					</div>
 				</section>";
@@ -169,25 +169,25 @@
 		<div class="container">
             <div class="gallery">
                 <figure class="gallery__item gallery__item--1">
-                    <img src="images/gallery2.jpg" class="gallery__img">
+                    <img src="public/images/gallery2.jpg" class="gallery__img">
                 </figure>
                 <figure class="gallery__item gallery__item--2">
-                    <img src="images/gallery5.jpg" class="gallery__img">
+                    <img src="public/images/gallery5.jpg" class="gallery__img">
                 </figure>
                 <figure class="gallery__item gallery__item--3">
-                    <img src="images/gallery4.jpg" class="gallery__img">
+                    <img src="public/images/gallery4.jpg" class="gallery__img">
                 </figure>
                 <figure class="gallery__item gallery__item--4">
-                    <img src="images/gallery6.jpg" class="gallery__img">
+                    <img src="public/images/gallery6.jpg" class="gallery__img">
                 </figure>
                 <figure class="gallery__item gallery__item--5">
-                    <img src="images/gallery1.jpg" class="gallery__img">
+                    <img src="public/images/gallery1.jpg" class="gallery__img">
                 </figure>
                 <figure class="gallery__item gallery__item--6">
-                    <img src="images/gallery3.jpg" class="gallery__img">
+                    <img src="public/images/gallery3.jpg" class="gallery__img">
 				</figure>
 				<figure class="gallery__item gallery__item--7">
-                    <img src="images/gallery7.jpg" class="gallery__img">
+                    <img src="public/images/gallery7.jpg" class="gallery__img">
                 </figure>
             </div>
         </div>
@@ -195,12 +195,12 @@
 	<!--End of Gallery section-->
 
 	<!--Include footer.php-->
-    <div><?php include "./includes/footer.php" ?></div>
+    <div><?php include "public/includes/footer.php" ?></div>
 	
 	<!--script for slideshow-->
-    <script src="js/slideshow.js"></script>
+    <script src="public/js/slideshow.js"></script>
 	
 	<!--script for onClickNav() for the navigation menu-->
-    <script src="js/onClickNav.js"></script>
+    <script src="public/js/onClickNav.js"></script>
 </body>
 </html>

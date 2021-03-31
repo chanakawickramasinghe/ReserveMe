@@ -41,7 +41,7 @@
 
                     <input type="text"  name="lastname" class="type-feild" placeholder="Your Last Name" pattern="[A-Za-z]+" required>       
 
-                    <input type="hidden"  name="name" class="type-feild" placeholder="Full Name" pattern="[A-Za-z]+" required>   
+                    <input type="hidden"  name="name" class="type-feild" placeholder="Full Name" required>   
 
                     <input type="email" name="email" class="type-feild" placeholder="Email address" required="">
       

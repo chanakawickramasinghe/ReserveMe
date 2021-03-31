@@ -59,8 +59,8 @@
 	/* margin:auto;  */
 	text-shadow: 2px 2px 10px rgba(0,0,0,0.05);
 	text-align: center;
-	/* position: relative; */
-	/* padding-top: 80px; */
+	position: relative; 
+	 padding-top: 80px;
 }
 
 .title_text h2{

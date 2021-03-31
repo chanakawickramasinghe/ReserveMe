@@ -16,7 +16,7 @@
 					$sql = "SELECT * FROM restaurant WHERE res_id = 4";
 					$resultProduct = mysqli_query($connection,$sql);
 					while($rowProduct  = mysqli_fetch_assoc($resultProduct)){  
-						echo"<img id=\"featured\" class=\"thumbnail active\" src= \"../../../images/restaurant/{$rowProduct['res_id']}/floorplan/1.jpg\">";
+						echo"<img id=\"featured\" class=\"thumbnail active\" src= \"../../../images/restaurant/{$rowProduct['res_id']}/floorplan/1.jpeg\">";
 					}
 			?>
 
@@ -27,7 +27,7 @@
 							$retriewMenu = "SELECT * FROM floorplan WHERE res_id = 4";
 							$resultMenu = mysqli_query($connection,$retriewMenu);
 							while($rowProduct  = mysqli_fetch_assoc($resultMenu)){  
-								echo"<img class=\"thumbnail\" src= \"../../../images/restaurant/{$rowProduct['res_id']}/floorplan/{$rowProduct['floorplan_id']}.jpg\">";
+								echo"<img class=\"thumbnail\" src= \"../../../images/restaurant/{$rowProduct['res_id']}/floorplan/{$rowProduct['floorplan_id']}.jpeg\">";
 							}						  
 					?>					
 				</div>

@@ -6,20 +6,22 @@
     <meta content="IE-edge" http-equiv="X-UA-Compatible"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <!--stylesheet-->
-    <link href="../../../public/css/menu_floorplan.css" rel="stylesheet" type="text/css"/>
-	<link rel="stylesheet" href="../../../public/CSS/preorder.css">
+    <link rel="stylesheet" type="text/css" href="../../../public/css/menu_floorplan.css">
+	<link rel="stylesheet" type="text/css" href="../../../public/CSS/preorder.css">
 </head>
 
 <body>
     <!--Start of menu-->
-	<div class="title_text">
-        <h2>Me<font>nu</font></h2>
-    </div>
+	<center>
+    <h2>Me<span style="color:orange">nu</span></h2><br>
+    </center>
+        
+    
     <form method="post" action="checkout.php">  
         <table class="preorder" id="" border="0px" >
 			<tr >
-				<th style="width:60%">Item</th>
-				<th style="width:40%">Price (Rs.)</th>
+				<th >Item</th>
+				<th >Price (Rs.)</th>
 			</tr>
         <?php
             $search_cat = "SELECT * FROM menu_category WHERE cat_avail='1' ORDER BY cat_name ASC";
@@ -28,6 +30,7 @@
                 echo "
                 <tr>
                     <th>".$row['cat_name']."</th>
+                    <th></th>
                 </tr>";
 				
                 $search_menu = "SELECT * FROM menu WHERE item_avail='1' AND item_cat='$row[cat_name]'";

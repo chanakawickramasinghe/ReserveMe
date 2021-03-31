@@ -1,4 +1,4 @@
-<?php include('connection.php') ?>
+<?php include('../../config/connection.php') ?>
 <?php include('session.php') ?>
 <?php include('message.php') ?>
 
@@ -25,9 +25,9 @@
 <body>
 	<!--Start of nav-->
     <div class="topnav">
-        <a href="../index.php"><img class = "logo" src="../images/logo.png"></a>
-		<a class="navtab" href="../users/customer/customerReg.php">Register</a>
-        <a class="navtab active" href="login.php">Login</a>
+        <a href="../../index.php"><img class = "logo" src="../images/logo.png"></a>
+		<a class="navtab" href="../../src/customer/customerReg.php">Register</a>
+        <a class="navtab active" href="#">Login</a>
 		<a class="navtab" href="contact.php">Contact</a>
 		<a class="navtab" href="about.php">About</a>
         <a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>   
@@ -70,7 +70,7 @@
 
                     <br>
                     <div class="txt1 text-center">
-                        for create a new account <a href="../users/customer/customerReg.php" class="txt2"> Click here! </a>
+                        for create a new account <a href="../../src/customer/customerReg.php" class="txt2"> Click here! </a>
                     </div>
             </form>            
         </div>

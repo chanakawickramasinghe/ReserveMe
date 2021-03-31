@@ -1,6 +1,6 @@
 <?php
 
-include('connection.php');
+include('../../config/connection.php');
 include('session.php');
 
 if(isset($_POST['submit'])){

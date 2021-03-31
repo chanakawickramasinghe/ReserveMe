@@ -22,12 +22,12 @@
 <body>
 		<!--Start of nav-->
 		<div class="topnav" id="myTopnav">
-			<a href="../users/customer/customer-home.php"><img class = "logo" src="../images/logo.png"></a>
-		    <a class="navtab" href="../index.php">Logout</a>
-            <a class="navtab" href="../users/customer/customer-profile.php">Profile</a>
-            <a class="navtab" href="../users/customer/reservation_details.php">Reservations</a>
+			<a href="../../src/customer/customer-home.php"><img class = "logo" src="../images/logo.png"></a>
+		    <a class="navtab" href="logout.php">Logout</a>
+            <a class="navtab" href="../../src/customer/customer-profile.php">Profile</a>
+            <a class="navtab" href="../../src/customer/reservation_details.php">Reservations</a>
 		    <a class="navtab" href="logged_contact.php">Contact</a>
-		    <a class="navtab active" href="logged_about.php">About</a>
+		    <a class="navtab active" href="#">About</a>
 		    <a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
 		</div><br><br>
 		<!--End of nav-->

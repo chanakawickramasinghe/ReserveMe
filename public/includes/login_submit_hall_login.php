@@ -1,6 +1,6 @@
 <?php
 
-include('connection.php');
+include('../../config/connection.php');
 include('session.php');
 
 if(isset($_POST['submit'])){
@@ -36,10 +36,10 @@ if(isset($_POST['submit'])){
 
             $execute_querry = mysqli_query($connection, $log_customer_sql);
 
-            header( "Location:../users/customer/hall_view/logged_hall_view.php?hall_id=$hall_id" );
+            header( "Location:../../src/customer/hall_view/logged_hall_view.php?hall_id=$hall_id" );
         }
         else{
-            header("Location:../users/activate-account.php");
+            header("Location:../../src/customer/activate-account.php");
         }      
     }
 }

@@ -21,8 +21,8 @@
 
 		<!--Start of nav-->
 		<div class="topnav" id="myTopnav">
-			<a href="../index.php"><img class = "logo" src="../images/logo.png"></a>
-		    <a class="navtab" href="../users/customer/customerReg.php">Register</a>
+			<a href="../../index.php"><img class = "logo" src="../images/logo.png"></a>
+		    <a class="navtab" href="../../src/customer/customerReg.php">Register</a>
 		    <a class="navtab" href="login.php">Login</a>
             <a class="navtab active" href="contact.php">Contact</a>
 		    <a class="navtab" href="about.php">About</a>
@@ -71,9 +71,9 @@
         </div>
 
         <!--Include footer.php-->
-    <div><?php include "../includes/footer.php" ?></div>
+    <div><?php include('footer.php'); ?></div>
 
-    <?php include('connection.php'); ?>
+    <?php include('../../config/connection.php'); ?>
 
     <?php
 
@@ -99,11 +99,12 @@
     mysqli_close($connection);
     
     ?>
-<script>
-function myFunction() {
-confirm("The form was submitted.");
-}
-</script>
+
+    <script>
+        function myFunction() {
+        confirm("The form was submitted.");
+        }
+    </script>
 
 <!--script for slideshow-->
 <script src="../js/onClickNav.js"></script>

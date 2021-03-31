@@ -48,7 +48,6 @@
                   <p>Capacity:  ". $rowProduct['capacity'] ."</p>
                   <p>Contact: ". $rowProduct['contact_no'] ."</p>
                   <p>Advance: ". $rowProduct['advance_fee'] ." LKR</p>
-                  <a class=\"hero-button\"  onclick=\"onClickOpenForm()\">Reserve</a>
               </div>
               </section>
           <!--End of main-section-->
@@ -136,33 +135,27 @@
 		<div class="col2" id="avail_tab">
         <h1>Availability</h1>
       
-              <?php
+        <?php
 
-                if(isset($_POST['submit'])){
-                  $time=$_POST['time'];
-                  $date=$_POST['date'];
-                  $hall_id=$_GET['hall_id'];
-
-                $sql_select_table= "SELECT * FROM hall_reservation WHERE hall_id = '$hall_id' AND reservation_date = '$date' AND reservation_time = '$time' AND status_code='1'";
-                $result=($connection->query($sql_select_table));
-                $no_rows = mysqli_num_rows($result);
+        if(isset($_POST['submit'])){
+          $time=$_POST['time'];
+          $date=$_POST['date'];
+          $hall_id=$_GET['hall_id'];
+                  $sql_select_hall= "SELECT * FROM hall_reservation WHERE hall_id = '$hall_id' AND reservation_date = '$date' AND reservation_time = '$time' AND status_code='1'";
+                  $result=($connection->query($sql_select_hall));
+                  $no_rows = mysqli_num_rows($result);
+  
 
                 if($no_rows==1){
-                    echo "Sorry! Already Booked";
-                } else {
-                  echo "Available
-                  <input type=\"button\" class=\"dropbtn\"  id=\"reserve\" name=\"reserve\" value=\"Reserve\" onclick=\"onClickOpenForm()\">";
-                }
+                  echo "Sorry! Already Booked";
+              } else {
+                echo "Available
+                <input type=\"button\" class=\"dropbtn\"  id=\"reserve\" name=\"reserve\" value=\"Reserve\" onclick=\"onClickOpenForm()\">";
               }
-              
-              ?>         
-            
-        
-        
+            }
 
-            
-	    </div>
-
+            ?>   
+      </div>
     </section>
     <!--End of form section-->
 

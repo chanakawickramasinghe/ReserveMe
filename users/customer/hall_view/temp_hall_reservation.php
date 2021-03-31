@@ -14,7 +14,7 @@ if(isset($_GET['hall_id'])){
     $userID = $_SESSION["userID"]; //session id
 	
     $temp_insert_sql = "INSERT INTO temp_hall_reservation(hall_id,customer_id,capacity,reservation_date,reservation_time,advance_fee) 
-    VALUES ('$hall_id','$userID','". $rowProduct['capacity'] ."','$reservation_date','$reservation_time','". $rowProduct['advance_fee'] ."')";
+    VALUES ('$hall_id','$userID','". $rowhall['capacity'] ."','$reservation_date','$reservation_time','". $rowhall['advance_fee'] ."')";
   
 
     if (mysqli_query($connection,$temp_insert_sql) == TRUE) {

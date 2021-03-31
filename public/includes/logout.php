@@ -6,6 +6,6 @@ session_destroy();
 unset($_SESSION['login']);
 $_SESSION['login'] = false;
 
-header('Location: /ReserveMe/index.php');
+header('Location:../../index.php');
 
 ?>

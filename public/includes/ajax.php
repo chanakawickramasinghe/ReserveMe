@@ -1,7 +1,7 @@
 <?php
 
-include("connect2.php");
-include("session.php");
+include("../../config/connect2.php");
+include("../../src/employee/emp-session.php");
 
 if( isset($_REQUEST['action']) ){
 	switch( $_REQUEST['action'] ){

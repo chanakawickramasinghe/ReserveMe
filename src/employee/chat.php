@@ -1,4 +1,3 @@
-<?php //include('../../includes/session.php') ?>
 <?php include('emp-session.php') ?>
 
 
@@ -7,12 +6,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Queries</title>  
-        <link href="../../images/logo.png" rel="shortcut icon"/> 
+        <link href="../../public/images/logo.png" rel="shortcut icon"/> 
         <!-- Link the style sheets -->
-        <link rel="stylesheet" href="../../CSS/employee.css">
-        <link rel="stylesheet" href="../../CSS/main.css">
-        <link rel="stylesheet" href="../../CSS/nav.css">   
-        <link rel="stylesheet" href="../../CSS/footer.css">
+        <link rel="stylesheet" href="../../public/CSS/employee.css">
+        <link rel="stylesheet" href="../../public/CSS/main.css">
+        <link rel="stylesheet" href="../../public/CSS/nav.css">   
+        <link rel="stylesheet" href="../../public/CSS/footer.css">
 
         <!-- jquery for message -->
         <script
@@ -56,9 +55,9 @@
             
     </div>
     
-    <div class="footer"> <?php include('../../includes/footer.php'); ?> </div>
+    <div class="footer"> <?php include('../../public/includes/footer.php'); ?> </div>
     <!--script for onClickNav() for the navigation menu-->
-    <script src="../../js/onClickNav.js"></script>
+    <script src="../../public/js/onClickNav.js"></script>
 
     <script>
         $(document).ready(function(){
@@ -67,7 +66,7 @@
         $('#message').keyup(function(e){
             var message = $(this).val();
             if( e.which == 13 ){
-                $.post('../../includes/ajax.php?action=SendMessage&message='+message, function(response){                    
+                $.post('../../public/includes/ajax.php?action=SendMessage&message='+message, function(response){                    
                     loadChat();
                     $('#message').val('');
                 });
@@ -75,7 +74,7 @@
         });
 
         function loadChat(){
-            $.post('../../includes/ajax.php?action=getChat', function(response){                
+            $.post('../../public/includes/ajax.php?action=getChat', function(response){                
                 $('.chathistory').html(response);
             });
         }

@@ -1,5 +1,4 @@
-<?php include('../../includes/connection.php') ?>
-<?php //include('../../includes/session.php') ?>
+<?php include('../../config/connection.php') ?>
 <?php include('emp-session.php') ?>
 
 
@@ -11,12 +10,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pre-Order Menu</title>
-    <link href="../../images/logo.png" rel="shortcut icon"/> 
+    <link href="../../public/images/logo.png" rel="shortcut icon"/> 
         <!-- Link the style sheets -->
-        <link rel="stylesheet" href="../../CSS/employee.css">
-        <link rel="stylesheet" href="../../CSS/main.css">
-        <link rel="stylesheet" href="../../CSS/nav.css">   
-        <link rel="stylesheet" href="../../CSS/footer.css">
+        <link rel="stylesheet" href="../../public/CSS/employee.css">
+        <link rel="stylesheet" href="../../public/CSS/main.css">
+        <link rel="stylesheet" href="../../public/CSS/nav.css">   
+        <link rel="stylesheet" href="../../public/CSS/footer.css">
         
 </head>
 
@@ -26,8 +25,6 @@
 
     <!-- Start of sidbar -->
     <div class="sidebar"> 
-      <!-- <a href="employee-home.php" >Employee Home</a> -->
-      <!-- <a href="venues.php">Reservation Status</a><hr>      -->
       <a href="menu.php">Set Menu</a><hr>
       <a href="chat.php">Chat</a><hr>
       <a href="#" class="active" >Table Reservation</a><hr>
@@ -39,14 +36,6 @@
 <div class="content">
 
     <h1>Table <span style="color:orange"> Reservations </span> </h1>
-    
-    <!-- <div style="float:right">
-        <button type="button" class="hero-button active" onclick="window.location.href='#'">Table Reservation</button>
-        <button type="button" class="hero-button" onclick="window.location.href='menu-reservation.php'">Pre Orders</button>    
-        <button type="button" class="hero-button" onclick="window.location.href='hall-reservation.php'">Hall Reservation</button>
-    </div>
-    <br><br> -->
-
     
     <div class="employee-container">
     <table class="res-table">
@@ -87,7 +76,7 @@
 
 </div>
 
-<div class="footer"> <?php include('../../includes/footer.php'); ?> </div>
+<div class="footer"> <?php include('../../public/includes/footer.php'); ?> </div>
 
 </body>
 </html>

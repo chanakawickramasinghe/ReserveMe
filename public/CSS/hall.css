@@ -1,0 +1,157 @@
+  /* hall table */
+  .hall{
+    width: 100%;
+    margin: 0 auto;
+    table-layout: auto;
+    border-collapse: collapse; 
+  }
+  
+  .hall th {
+    background-color: #e9dfb2;
+    border: 1px solid rgb(43, 106, 189);
+    padding-top: 5px; 
+    padding-bottom: 5px;  
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+  
+  .hall td{
+    border: 1px solid rgb(160, 154, 154);
+    padding-top: 5px; 
+    padding-bottom: 5px;  
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+
+/* for the table in hall-details.php */
+  .hall-add{
+    width: 100%;
+  }
+  
+  .hall-add th {
+    padding-top: 5px; 
+    padding-bottom: 5px;  
+    padding-left: 0;
+    padding-right: 10px;
+  }
+  
+  .hall-add td{
+    padding-top: 5px; 
+    padding-bottom: 5px;  
+    padding-left: 0;
+    padding-right: 10px;
+    text-align: left;
+  }
+
+
+  .hall-img{
+    width: 10vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+  }
+
+  .type-feild-l{
+    font-size: medium;
+    color: rgb(129, 129, 182);
+    width: 20vw;
+    border-radius: 7px;
+    border: 2px solid grey;
+    float: center;
+    padding: 0.3vw 1vw 0.3vw 1vw;
+  }
+
+  .type-feild-m{
+    font-size: medium;
+    color: rgb(129, 129, 182);
+    width: 16vw;
+    border-radius: 7px;
+    border: 2px solid grey;
+    float: center;
+    padding: 0.3vw 1vw 0.3vw 1vw;
+  }
+
+
+  .type-feild-s{
+    font-size: medium;
+    color: rgb(129, 129, 182);
+    width: 10vw;
+    border-radius: 7px;
+    border: 2px solid grey;
+    float: center;
+    padding: 0.3vw 1vw 0.3vw 1vw;
+  }
+
+  .type-feild-xl{
+    font-size: medium;
+    color: rgb(129, 129, 182);
+    width: 63vw;
+    border-radius: 7px;
+    border: 2px solid grey;
+    float: center;
+    padding: 0.3vw 1vw 0.3vw 1vw;
+  }
+
+  /* for the hidden table in add-hall.php */
+  .add-hall{
+      margin: auto;
+    position: center;
+    align-items: center;
+  }
+  
+  .add-hall th {
+    font-size: large;
+    text-align: left;
+    padding-right: 2vw;
+  }
+  
+  .add-hall td{
+    padding-bottom: 5px;
+  }
+
+  /* box around the form */
+
+  .add-hall-box{
+    width: 45vw;
+    height: 75vh;
+    margin: 20px auto;
+    background: #ffffffec;
+    color: #000000;
+    box-sizing: border-box;
+    padding: 20px;
+    position: center;
+    border: #a17807 2px solid;
+    border-radius: 5px;
+    box-shadow: 2px 2px  5px rgba(0, 0, 0, 0.26);
+  }
+
+  .btn-add-hall-s {
+    width:7vw;
+    height: 5vh;
+    background: orange;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: medium;
+  }
+  
+  .btn-add-hall-s:hover{
+    background: black;
+    cursor: pointer;
+  }
+
+  .btn-add-hall-l {
+    width:12vw;
+    height: 5vh;
+    background: orange;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: medium;
+  }
+  
+  .btn-add-hall-l:hover{
+    background: black;
+    cursor: pointer;
+  }

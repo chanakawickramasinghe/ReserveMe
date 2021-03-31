@@ -17,20 +17,20 @@
     <!--web-icon-->
     <link href="../images/logo.png" rel="shortcut icon"/>
     <style>
-.container {
-  position: relative;
-  text-align: center;
-  color: white;
-  font-family:Times;
-}
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size:50px;
-}
-</style>
+        .container {
+        position: relative;
+        text-align: center;
+        color: white;
+        font-family:Times;
+        }
+        .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size:50px;
+        }
+    </style>
 </head>
 <body>
 <!-- main-section-------------

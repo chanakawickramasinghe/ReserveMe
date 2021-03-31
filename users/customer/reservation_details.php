@@ -60,11 +60,11 @@
 
                         echo "<div class=\"food-container\">
                         <div class=\"food-box\">
-                            <i class=\"fas fa-map-marker-alt\">$table_id</i>
+                            <i class=\"fas fa-map-marker-alt\"> $table_id</i>
                             <br>
-                            <h4 class=\"\"><i class=\"far fa-calendar\"></i>$date</h4>
-                            <h4 class=\"\"><i class=\"far fa-clock\"></i>$time</h4>
-                            <h4 class=\"\"><i class=\"fas fa-users\"></i>$no_of_guests</h4>";
+                            <h4 class=\"\"><i class=\"far fa-calendar\"></i> $date</h4>
+                            <h4 class=\"\"><i class=\"far fa-clock\"></i> $time</h4>
+                            <h4 class=\"\"><i class=\"fas fa-users\"></i> $no_of_guests</h4>";
                         if($date>= date("Y-m-d")){
                             echo "
                             <form action=\"reservation-cancel.php\" method=\"POST\">
@@ -108,10 +108,10 @@
                         <div class=\"food-box\">
                             <i class=\"fas fa-map-marker-alt\">$hall_id</i>
                             <br>
-                            <h4 class=\"\"><i class=\"far fa-calendar\"></i>$reservation_date</h4>
-                            <h4 class=\"\"><i class=\"far fa-clock\"></i>$reservation_time</h4>
-                            <h4 class=\"\"><i class=\"fas fa-users\"></i>$capacity</h4>
-                            <h4 class=\"\"><i class=\"far fa-money-bill-alt\"></i>$payment</h4>";
+                            <h4 class=\"\"><i class=\"far fa-calendar\"></i> $reservation_date</h4>
+                            <h4 class=\"\"><i class=\"far fa-clock\"></i> $reservation_time</h4>
+                            <h4 class=\"\"><i class=\"fas fa-users\"></i> $capacity</h4>
+                            <h4 class=\"\"><i class=\"far fa-money-bill-alt\"></i> $payment</h4>";
                             
                         if($reservation_date>= date("Y-m-d")){
                             echo "

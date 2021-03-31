@@ -14,7 +14,7 @@
     <script>
     function required()
     {
-        var empt = document.forms["form1"]["text1"].value;
+        var empt = document.forms["send-reply"]["submit"].value;
         if (empt == "")
         {
             alert("Please input a Value");
@@ -69,7 +69,7 @@
             else { //to see new messages
                 while($row = mysqli_fetch_assoc($new_msg_query)){  
                 echo"
-                    <form method=\"POST\" action=\"message-submit.php\"> 
+                    <form method=\"POST\" name\"send-reply\"  action=\"message-submit.php\"> 
                         <table class=\"message-table\">
                             <tr><th>".$row['comment']."</th></tr>
                             <tr><td>".$row['message']."</td></tr>
@@ -77,7 +77,7 @@
 
                             <input type=\"hidden\" id=\"msg_id\" name=\"msg_id\" value=".$row['msg_id'].">
                             <tr><td class=\"txt-area\"><textarea placeholder=\"Enter Your Reply...\" name=\"reply\" class=\"reply-area\"></textarea></td></tr>
-                            <tr><td class=\"txt-area\"><input type=\"submit\" name=\"submit\"  class=\"btn-reply\" value=\"Send\" required></td></tr>
+                            <tr><td class=\"txt-area\"><input type=\"submit\" name=\"submit\" onClick='return confirmSubmit()'  class=\"btn-reply\" value=\"Send\" required></td></tr>
                     </form>
                     
                     <td><hr></td>
@@ -95,5 +95,16 @@
     <!--script for onClickNav() for the navigation menu-->
     <script src="../../public/js/onClickNav.js"></script>
 
+<!-- CONFIRM Box -->
+<script LANGUAGE="JavaScript">
+function confirmSubmit()
+{
+var agree=confirm("Are you sure you wish to continue?");
+    if (agree)
+        return true ;
+    else
+        return false ;
+    }
+</script>
     </body>
 </html>

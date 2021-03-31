@@ -73,7 +73,7 @@
                     <td>".$row['start_date']."</td>
                     <td>".$row['end_date']."</td>
                     <td>".$row['text']."</td>
-                    <td><a class=\"btn-promo-remove\" href =remove-promo.php?id='".$row['promo_id']."' > Remove </a> </td>
+                    <td><a class=\"btn-promo-remove\" onClick='return confirmSubmit()' href =remove-promo.php?id='".$row['promo_id']."' > Remove </a> </td>
 
                 </tr>";
                 }
@@ -88,6 +88,18 @@
 
     <!--script for onClickNav() for the navigation menu-->
     <script src="../../public/js/onClickNav.js"></script>
+
+<!-- CONFIRM Box -->
+<script LANGUAGE="JavaScript">
+function confirmSubmit()
+{
+var agree=confirm("Are you sure you wish to continue?");
+    if (agree)
+        return true ;
+    else
+        return false ;
+    }
+</script>
 
     </body>
 </html>

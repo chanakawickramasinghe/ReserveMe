@@ -139,7 +139,7 @@
                   $date=$_POST['date'];
                   $hall_id=$_GET['hall_id'];
 
-                $sql_select_table= "SELECT * FROM hall_reservation WHERE hall_id = '$hall_id' AND reservation_date = '$date' AND reservation_time = '$time' AND status_code='1'";
+                $sql_select_table= "SELECT * FROM hall_reservation WHERE hall_id = '$hall_id' AND reservation_date = '$date' AND reservation_time = '$time'";
                 $result=($connection->query($sql_select_table));
                 $no_rows = mysqli_num_rows($result);
 

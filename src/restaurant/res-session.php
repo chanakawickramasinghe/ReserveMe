@@ -12,6 +12,6 @@ function checkSession(){
 	
 	} else {
 		$message = base64_encode(urlencode("Please Login As a Restaurant"));
-		header('Location:../../public/includes/login.php?msg'.$message);
+		header('Location:../../public/includes/login.php?msg='.$message);
 	}
 ?>

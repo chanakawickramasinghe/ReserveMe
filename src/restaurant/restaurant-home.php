@@ -1,6 +1,5 @@
 <?php include('res-session.php'); ?>
-<?php include('../../config/connection.php'); 
-include('../../public/includes/message.php');?>
+<?php include('../../config/connection.php'); ?>
 
 
 <!DOCTYPE html>
@@ -90,7 +89,7 @@ include('../../public/includes/message.php');?>
                 </tr>
                 <tr>
                     <th></th>
-                    <td><button class=\"emp-button\" onclick=\"window.location.href='restaurant-edit-profile.php'\">Edit Details</button></td> 
+                    <td><button class=\"btn-edit\" onclick=\"window.location.href='restaurant-edit-profile.php'\">Edit Details</button></td> 
                 </tr>
            
                 </table> ";  
@@ -98,12 +97,10 @@ include('../../public/includes/message.php');?>
             }
             ?>
                 <br/>
-                <center><h3><?php include_once('../../public/includes/message.php'); ?></h3></center>
+                <center><h3><?php include_once('../../includes/message.php'); ?></h3></center>
                 
             </div>
   </div>  
-  <!--Include footer.php-->
-  <div class="footer"><?php include "../../public/includes/footer.php" ?></div>
 </body>
 
 </html>

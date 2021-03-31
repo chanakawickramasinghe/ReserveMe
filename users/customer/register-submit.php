@@ -13,7 +13,7 @@ if(isset($_POST['submit'])){
 	$password2 = md5($_POST['password2']);
     $contact = $_POST['contact'];
     $dob = $_POST['dob'];
-    $fullname = $firstname . $lastname;
+    $fullname = $firstname." ".$lastname;
     
         //Check if email already exists in both tables
         $selectmail= "SELECT * FROM customer WHERE email ='$email' " ;

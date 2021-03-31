@@ -41,8 +41,11 @@ if(isset($_POST['submit'])){
 
             header( "Location:../users/customer/customer-home.php" );
         }
+        elseif ($active_status == 2){
+            header("Location:../users/customer/request-activate-account.php");
+        }
         else{
-            header("Location:../users/activate-account.php");
+            header("Location:../users/customer/activate-account.php");  // <----- need to change -->
         }      
     }
     

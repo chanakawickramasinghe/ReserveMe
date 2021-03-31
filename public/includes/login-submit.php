@@ -79,9 +79,10 @@ if(isset($_POST['submit'])){
         $userRow = mysqli_fetch_array($userResult3);
         checkSession();  //create sessions
         $_SESSION["name"] = $userRow['admin_name'];
-        $_SESSION["type"] = $userRow['admin_type'];
         $_SESSION["id"] = $userRow['admin_id'];
         $_SESSION["email"] = $email;
+        $_SESSION["userType"] = 'admin';
+        $_SESSION['login'] = true;
         // $_SESSION["last_login"] = SELECT NOW();
 
         // $log_admin_sql = "INSERT INTO log (user_id, user_type, date_time) 
@@ -89,7 +90,7 @@ if(isset($_POST['submit'])){
 
         // $execute_querry = mysqli_query($connection, $log_admin_sql);
 
-        header( "Location:../users/admin/admin-home.php");
+        header( "Location:../../src/admin/admin-home.php");
 
     }
 

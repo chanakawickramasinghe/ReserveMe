@@ -1,6 +1,5 @@
 <?php include('../../config/connection.php') ?>
 <?php include('session.php') ?>
-<?php include('message.php') ?>
 
 
 <!DOCTYPE html>
@@ -45,7 +44,7 @@
             <form action="login-submit.php" method="post">
                 <center><img src="../images/form_icons/vector-users.png" alt="usericon" class="userIcon">
                 <h1 style="display: inline-block;color:green">Login</h1></center>
-                <h3 class="error-msg"><?php include_once('message.php'); ?></h3>
+                <p class="error-msg"><?php include_once('message.php'); ?></p>
 
                     <div class="wrap-input100 validate-input" style="padding-top: 20px;" data-validate="Username is required">                    
                         <input class="input100" type="email" name="email" placeholder="Type your Email" required>

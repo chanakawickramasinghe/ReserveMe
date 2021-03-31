@@ -22,8 +22,8 @@
     <div class="topnav" id="myTopnav">
 		<a href="../customer-home.php"><img class = "logo" src="../../../public/images/logo.png"></a>
 		<a class="navtab" href="../../../index.php">Logout</a>
-        <a class="navtab" href="../customer-profile.php">Profile</a>
-        <a class="navtab" href="../reservation_details.php">Reservations</a>
+    <a class="navtab" href="../customer-profile.php">Profile</a>
+    <a class="navtab" href="../reservation_details.php">Reservations</a>
 		<a class="navtab" href="../../../public/includes/logged_contact.php">Contact</a>
 		<a class="navtab" href="../../../public/includes/logged_about.php">About</a>
 		<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
@@ -97,14 +97,14 @@
                   <option value="">Time</option>
                       <?php $setTime = time() + (3.5 * 60 * 60);
                           $currTime = date("h:i",$setTime);
-                          $currhr = date("h",$setTime);?>
+                          $currhr = date("H",$setTime);?>
                       <?php
                         $x=8;                       
                         while($x<=22){
                           if($x>$currhr && $x>12){                      
-                            echo "<option value=\"$x.':00'\">$x:00 pm</option>";
+                            echo "<option value=\"$x\">$x:00 pm</option>";
                           } elseif($x>$currhr && $x<12) {
-                            echo "<option value=\"$x.':00'\">$x:00 am</option>";
+                            echo "<option value=\"$x\">$x:00 am</option>";
                           }
                           $x=$x+2;
                         }

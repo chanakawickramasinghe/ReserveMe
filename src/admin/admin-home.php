@@ -105,7 +105,7 @@
                                     </tr>
                                     <tr>
                                         <td></td>
-                                        <td><center><br><button type="submit" class="btn-change-m" name="edit_details">Save Details</button>
+                                        <td><center><br><button type="submit" class="btn-change-m" onClick='return confirmSubmit()' name="edit_details">Save Details</button>
                                     </tr>
                                     <tr>
                                         <td colspan = "2"><br><hr></td>
@@ -141,7 +141,7 @@
                                         <td colspan="2"><P align="center" id='message' ></P></td>
                                     </tr>
                                     <tr>
-                                        <td colspan="2"><center><br><button type="submit" class="btn-change-m" name="change-pword">Change Password</button>
+                                        <td colspan="2"><center><br><button type="submit" class="btn-change-m" onClick='return confirmSubmit()' name="change-pword">Change Password</button>
                                         <button type="reset" class="btn-change-s">Clear</button></center></td>
                                     </tr>
                                 </table>
@@ -153,7 +153,7 @@
 
             <!-- removed footer -->
             <!-- <span><?php //include('../../public/includes/footer.php'); ?></span> -->
-             
+      
         </div> 
         
 
@@ -206,6 +206,18 @@
         }
 
 </script>
-    
+
+<!-- CONFIRM Box -->
+<script LANGUAGE="JavaScript">
+function confirmSubmit()
+{
+var agree=confirm("Are you sure you wish to continue?");
+    if (agree)
+        return true ;
+    else
+        return false ;
+    }
+</script>
+
     </body>
 </html>

@@ -66,12 +66,9 @@
 		<div class=\"gallery-container\">
             <div class=\"gallery\">
                 <figure class=\"gallery__item gallery__item--1\">
-                    <img src=\"../../../public/images/halls/{$rowProduct['main_image']}\" class=\"gallery__img\">
-                </figure>
-                <figure class=\"gallery__item gallery__item--2\">
                     <img src=\"../../../public/images/halls/{$rowProduct['image1']}\" class=\"gallery__img\">
                 </figure>
-                <figure class=\"gallery__item gallery__item--3\">
+                <figure class=\"gallery__item gallery__item--2\">
                     <img src=\"../../../public/images/halls/{$rowProduct['image2']}\" class=\"gallery__img\">
                 </figure>
              </div>
@@ -156,12 +153,7 @@
               }
               
               ?>         
-            
-        
-        
-
-            
-	    </div>
+     </div>
 
     </section>
     <!--End of form section-->

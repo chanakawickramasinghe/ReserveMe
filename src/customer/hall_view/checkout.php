@@ -1,6 +1,6 @@
 <?php
-include('../../../includes/connection.php');
-include('../../../includes/session.php');
+include('../../../config/connection.php');
+include('../../../public/includes/session.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,24 +10,24 @@ include('../../../includes/session.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReserveMe</title>
     <!--web-icon-->
-    <link href="../../../images/logo.png" rel="shortcut icon"/>
+    <link href="../../../public/images/logo.png" rel="shortcut icon"/>
     <!--fontawesome-------------------->
     <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
     <!--stylesheet-------------------->
-	<link rel="stylesheet" type="text/css" href="../../../CSS/nav.css">
-    <link rel="stylesheet" href="../../../CSS/footer.css">   
-    <link rel="stylesheet" href="../../../CSS/preorder.css">
+	<link rel="stylesheet" type="text/css" href="../../../public/CSS/nav.css">
+    <link rel="stylesheet" href="../../..public/CSS/footer.css">   
+    <link rel="stylesheet" href="../../../public/CSS/preorder.css">
 </head>
 
 <body>
     <!--Start of nav-->
     <div class="topnav" id="myTopnav">
-            <a href="../customer-home.php"><img class = "logo" src="../../../images/logo.png"></a>
+            <a href="../customer-home.php"><img class = "logo" src="../../../public/images/logo.png"></a>
 			<a class="navtab" href="../../../index.php">Logout</a>
 			<a class="navtab" href="../customer-profile.php">Profile</a>
 			<a class="navtab" href="../reservation_details.php">Reservations</a>
-			<a class="navtab" href="../../../includes/logged_contact.php">Contact</a>
-			<a class="navtab" href="../../../includes/logged_about.php">About</a>
+			<a class="navtab" href="../../../public/includes/logged_contact.php">Contact</a>
+			<a class="navtab" href="../../../public/includes/logged_about.php">About</a>
 			<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
 		</div>
     <!--End of nav-->
@@ -90,7 +90,7 @@ include('../../../includes/session.php');
 
           <div class=\"hidden\">
             <input type=\"hidden\" name=\"merchant_id\" value=\"1215949\">    <!-- Replace your Merchant ID -->
-            <input type=\"hidden\" name=\"return_url\" value=\"http://localhost/ReserveMe/users/customer/reservation_details.php\">
+            <input type=\"hidden\" name=\"return_url\" value=\"http://localhost/ReserveMe/users/customer/success.php\">
             <input type=\"hidden\" name=\"cancel_url\" value=\"preorder.php\">
             <input type=\"hidden\" name=\"notify_url\" value=\"info.reserve.lk@gmail.com\">  
             <br><br><br>
@@ -129,10 +129,10 @@ include('../../../includes/session.php');
         </div>
 </form> 
 <!--Include footer.php-->
-<div><?php include "../../../includes/footer.php" ?></div>
+<div><?php include "../../../public/includes/footer.php" ?></div>
 
 <!--script for onClickNav() for the navigation menu-->
-<script src="../../../js/onClickNav.js"></script>
+<script src="../../../public/js/onClickNav.js"></script>
 </body>
 </html>
 

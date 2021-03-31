@@ -1,6 +1,5 @@
-<?php include('../../public/includes/session.php') ?>
-<?php include('../../config/connection.php') ?>
-
+<?php include('../../config/session.php') ?>
+<?php include('../../public/includes/connection.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,20 +18,21 @@
 </head>
 
 <body>
-	<!--main-section--------------->
+	<!--Start of main section-->
 	<section class="main">
 		<!--Start of nav-->
 		<div class="topnav" id="myTopnav">
 			<img class = "logo" src="../../public/images/logo.png">
-			<a class="navtab" href="../../users/customer/customerReg.php">Register</a>  <!-- <----------have to change here -->
-			<a class="navtab" href="../../public/includes/login.php">Login</a>
-			<a class="navtab" href="../../public/includes/contact.php">Contact</a>
-			<a class="navtab" href="../../public/includes/about.php">About</a>
+			<a class="navtab" href="../../index.php">Logout</a>
+			<a class="navtab" href="customer-profile.php">Profile</a>
+			<a class="navtab" href="reservation_details.php">Reservations</a>
+			<a class="navtab" href="../../public/includes/logged_contact.php">Contact</a>
+			<a class="navtab" href="../../public/includes/logged_about.php">About</a>
 			<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
 		</div>
 		<!--End of nav-->
 	
-		<!--Start of img-->	
+		<!--Start of img-->
 		<div class="m-img">			
 			<?php 
         		$sql = "SELECT * FROM promotions ";
@@ -55,7 +55,6 @@
 					
 				}
     		?>
-		</div>
 		<!--End of img-->
 		
 		<!--Start of social-->
@@ -67,6 +66,7 @@
 		</div>
 		<!--End of social-->
 	</section>
+	<!--End of main section-->
 
 	<!--Start of Table reservation-->
 	<section class="reservation">
@@ -77,7 +77,7 @@
 			<h4>Best places to <font>Dine in</font> with esense of joy</h4>
 			<!--details-->
 			<p>We have brought the fine option of placing a table reservation at your favourite restaurant to your finger tip. Explore more restaurants and place a table reservation in few minutes.</p>
-			<a class="hero-button" href="../../users/customer/res_view/res_view.php?res_id=4"><!-- <----------have to change here -->Table Reservation</a>
+			<a class="hero-button" href="res_view/logged_res_view.php">Table Reservation</a>
 		</div>
 		<!--img-->
 		<div class="reservation-img"><img src="../../public/images/hall.jpg" /></div>
@@ -95,7 +95,7 @@
 			<h4>Best places to <font>Enlight</font> your occasion</h4>
 			<!--details-->
 			<p>Enlight your special occasion by finding the best place. You can now search and find the best venue to your weddings, birthday parties and more occasion. We provide you the facility to book it before others.</p>
-			<a class="hero-button" href="../../users/customer/hall_view/hall_search_result.php"><!-- <----------have to change here -->Hall Reservation</a>
+			<a class="hero-button" href="hall_view/logged_hall_search_result.php">Hall Reservation</a>
 		</div>
 		</section>
 	<!--End of Hall reservation-->
@@ -110,6 +110,7 @@
 			<!--details-->
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus odio sit amet tellus mollis, ut suscipit lectus ornare. Mauris nisi mauris, scelerisque at dictum et, tempus eget erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent tristique accumsan massa. Nullam eu ante lorem. In hac habitasse platea dictumst. Pellentesque quis rutrum nisl.</p>
 		</div>
+
 		<!--Start of Map-->
 		<section class="content">
         	<section id="gallery">    
@@ -139,8 +140,8 @@
 	<?php 
         $sql = "SELECT * FROM reviews WHERE res_id = '4' order by rating desc limit 1";
             $resultProduct = mysqli_query($connection,$sql);
-            while($rowProduct  = mysqli_fetch_assoc($resultProduct)){ 
-				echo"<section class=\"review\">
+            while($rowProduct  = mysqli_fetch_assoc($resultProduct)){  
+                echo"<section class=\"review\">
 					<div class=\"flatart\"></div>
 					<div class=\"card1\">
 						<h3>". $rowProduct['customer_name'] ."</h3>
@@ -152,18 +153,15 @@
     							echo"<i class=\"far fa-star\" id=\"i3\"></i>";
 							}
 
-							// have to change here --> line 162
-
 						echo"</div>
 						<i class=\"far fa-comments\" id=\"i2\"></i></p>
 					</div>
 					<div class=\"card2\">
 						<img src=\"../../public/images/review.svg\" style=\"height: 200px ; width: 200px\"/>
-						<a class=\"subcribe-btn\" href=\"../../users/customer/res_view/review/index.php?res_id=4\">More</a>
-					</div>
+						<a class=\"subcribe-btn\" href=\"res_view/review/logged_index.php\">More</a>
 					</div>
 				</section>";
-			}
+            	}
     ?>
 	<!--End of Reviews section-->          
 

@@ -87,7 +87,7 @@
 	<!--Start of Hall reservation-->
 	<section class="reservation">
 		<!--img-->
-		<div class="reservation-img"><img src="../../public/images/hall.jpg" /></div>
+		<div class="reservation-img"><img src="../../public/images/new.jpg" /></div>
 		<!--text-->
 		<div class="reservation-text">
 			<!--heading-->

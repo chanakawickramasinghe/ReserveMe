@@ -83,7 +83,7 @@
             $resultProduct = mysqli_query($connection, $retrieveProduct);
             while($rowProduct  = mysqli_fetch_assoc($resultProduct)){  
             echo"<!--Start of Hall-->
-            <section class=\"reservation\" style=\"padding-top:5px; margin:auto;\">
+            <section class=\"reservation\" style=\"padding-top:60px; margin:auto;\">
                 <!--img-->
                 <div class=\"reservation-img\"><img src=\"../../../public/images/halls/{$rowProduct['main_image']}\" /></div>
                 <!--text-->

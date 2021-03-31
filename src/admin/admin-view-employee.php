@@ -1,4 +1,4 @@
-<?php include('../../public/includes/session.php') ?>
+<?php include('admin-session.php') ?>
 <?php include('../../config/connection.php') ?>
 
 <html>
@@ -16,7 +16,7 @@
         <!--Start of nav-->
         <div class="topnav" id="myTopnav">
         <a href="admin-home.php"><img class = "logo" src="../../public/images/logo.png"></a>
-        <a class="navtab" href="../../src/customer/index.php">Logout</a>
+        <a class="navtab" href="../../public/includes/logout.php">Logout</a>
             <a class="navtab" href="admin-home.php">Home</a>
             <a class="navtab" href="manage-users.php">Manage Users</a>
 		    <a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>

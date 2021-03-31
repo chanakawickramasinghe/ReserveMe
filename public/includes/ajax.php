@@ -1,6 +1,7 @@
 <?php
 
 include("../../config/connect2.php");
+include("../../public/includes/session.php");
 
 if( isset($_REQUEST['action']) ){
 	switch( $_REQUEST['action'] ){

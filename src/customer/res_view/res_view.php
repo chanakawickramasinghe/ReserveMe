@@ -17,7 +17,7 @@
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
  </head>
 
-  <body>
+  <body onload="clearUrlPara()">
     <!--Start of nav-->
     <div class="topnav" id="myTopnav">
 		  <a href="../../../index.php"><img class = "logo" src="../../../public/images/logo.png"></a>
@@ -178,14 +178,16 @@
                     // echo $table_id;
                     }
                 }
+
+                echo "<input type=\"button\" class=\"dropbtn\"  id=\"reserve\" name=\"reserve\" value=\"Reserve\" onclick=\"onClickOpenForm()\">";
+
               } else {
                 echo "SQL syntex error";
               }
               }
 
               ?>         
-            
-        <input type="button" class="dropbtn"  id="reserve" name="reserve" value="Reserve" onclick="onClickOpenForm()">
+              
         <input type="hidden" name="cus_id" value="<?php echo $cus_id;?>" required>
         <input type="hidden" name="guests2" value="<?php echo $guests;?>" required>
         <input type="hidden" name="date2" value="<?php echo $date;?>" required>
@@ -249,6 +251,13 @@
           }
         }
       }
+    </script>
+    <!-- Clear all Url paased parameters -->
+    <script>
+        function clearUrlPara(){
+            history.replaceState(null, "", location.href.split("?")[0]);
+        }
+
     </script>
 
   </body>

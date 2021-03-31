@@ -30,13 +30,14 @@ if(isset($_POST['submit'])){
         $_SESSION["email"] = $email;
         $hall_id=$_GET['hall_id'];
 
+
         if($active_status == 1){
             $log_customer_sql = "INSERT INTO log (user_id, user_type, date_time, activity) 
             VALUES ('".$_SESSION["userID"]."','".$_SESSION["userType"]."',NOW(),'Login Successfully')";
 
             $execute_querry = mysqli_query($connection, $log_customer_sql);
 
-            header( "Location:../../src/customer/hall_view/logged_hall_view.php?hall_id=".$hall_id);
+            header( "Location:../../src/customer/hall_view/logged_hall_view.php?hall_id=".$_GET['var1']."");
         }
         else{
             header("Location:../../src/customer/activate-account.php");

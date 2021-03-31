@@ -97,7 +97,7 @@
 
                 if($result){
                     while($row= mysqli_fetch_assoc($result)){
-                        $reservation_id = $row['reservation_id'];
+                        $hall_reservation_id = $row['reservation_id'];
                         $hall_id = $row['hall_id'];
                         $capacity = $row['capacity'];
                         $payment = $row['payment'];
@@ -106,7 +106,7 @@
 
                         echo "<div class=\"food-container\">
                         <div class=\"food-box\">
-                            <i class=\"fas fa-map-marker-alt\">$hall_id</i>
+                            <i class=\"fas fa-map-marker-alt\">Hall No : $hall_id</i>
                             <br>
                             <h4 class=\"\"><i class=\"far fa-calendar\"></i>$reservation_date</h4>
                             <h4 class=\"\"><i class=\"far fa-clock\"></i>$reservation_time</h4>
@@ -116,8 +116,8 @@
                         if($reservation_date>= date("Y-m-d")){
                             echo "
                             <form action=\"reservation-cancel.php\" method=\"POST\">
-                            <input type=\"hidden\" id=\"\" name=\"reservation_id\" value=\"$reservation_id\" required>
-                            <button type=\"submit\" name=\"cancel\" class=\"food-btn\" onclick=\"return myFunction()\" style=\"cursor: pointer;\">Cancel</button>
+                            <input type=\"hidden\" id=\"\" name=\"hall_reservation_id\" value=\"$hall_reservation_id\" required>
+                            <button type=\"submit\" name=\"cancel_hall\" class=\"food-btn\" onclick=\"return myFunction()\" style=\"cursor: pointer;\">Cancel</button>
                             </form> ";
                         }   else {
                             echo "<br><p>Done </p>";

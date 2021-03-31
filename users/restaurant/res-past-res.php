@@ -1,4 +1,6 @@
 <?php include('../../includes/session.php') ?>
+<?php include('../../includes/connection.php') ?>
+
 
 <html>
     <head>
@@ -33,45 +35,50 @@
         <!-- End of side bar -->
 
         <div class="content">
-        <div style="margin:20px"> 
+        <!-- <div style="margin:20px">  -->
 
             <br><br>        
             <center><h1 style="color:orange;"><font color="black">Completed</font> Reservations</h1></center>
             <br><br>
             <div class="promo-btn-bar">
-                <button type="button" class="btn-promo" onclick="window.location.href='res-reservation.php'">Back</button>
+                <button type="button" class="btn-promos" onclick="window.location.href='res-reservation.php'">Ongoing Reservations</button>
+                <button type="button" class="btn-promos" onclick="window.location.href='res-fut-res.php'">Future Reservations</button>
+                <button type="button" class="btn-promos active" onclick="window.location.href='#'">Past Reservation</button>
             </div>
-            <br><br><br><br><br>
-            <table class="promo" id="myTable" border="1">
-                <tr>
-                    <th>Reservation ID</th>
-                    <th>Customer Name</th>
-                    <th>Meal</th>
-                    <th>Date & Time</th>
-                    <th>No. of Guests</th>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>C. Priyadarshani</td>
-                    <td>Lunch</td>
-                    <td>15th October 13:30:00</td>       
-                    <td>04</td>         
-                </tr>
-                <tr>
-                    <td>002</td>
-                    <td>C. Wickramasingha</td>
-                    <td>Dinner</td>
-                    <td>02nd November 19:30:00</td>       
-                    <td>02</td>         
-                </tr>
-                <tr>
-                    <td>005</td>
-                    <td>A. Ananda</td>
-                    <td>Lunch</td>
-                    <td>14th November 14:00:00</td>       
-                    <td>07</td>         
-                </tr>  
-            </table>
+            <br><br><br>
+            <table class="promo" id="ongoing">
+                    <tr>
+                        <th>Name</th>
+                        <th>Date </th>
+                        <th>Time</th> 
+                        <th>Mobile No</th>
+                        <th>Table Id</th>
+                        <th>Members</th>
+                    </tr>
+        
+        <?php
+                $sql = "SELECT reservation.* , customer.user_name, customer.contact_no FROM reservation INNER JOIN customer
+                ON reservation.cus_id = customer.user_id" ;
+        
+                $sql_query = mysqli_query($connection,$sql);
+                while($row = mysqli_fetch_assoc($sql_query)){
+                    $date = $row['date'];
+                    if($date< date("Y-m-d")){
+                        echo "
+                        <tr>             
+                            <td>".$row['user_name']."</td>
+                            <td>".$row['date']."</td>
+                            <td>".$row['time']."</td>
+                            <td>".$row['contact_no']."</td>
+                            <td>".$row['table_id']."</td>
+                            <td>".$row['no_of_guests']."</td>
+                        </tr>";
+
+                    }                    
+                } 
+                
+                ?>
+    </table>
         </div>
     <!--script for onClickNav() for the navigation menu-->
     <script src="../../js/onClickNav.js"></script>

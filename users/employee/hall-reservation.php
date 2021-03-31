@@ -1,5 +1,5 @@
 <?php include('../../includes/connection.php') ?>
-<?php include('../../includes/session.php') ?>
+<?php //include('../../includes/session.php') ?>
 <?php include('emp-session.php') ?>
 
 

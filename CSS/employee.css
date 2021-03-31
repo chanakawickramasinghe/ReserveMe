@@ -385,17 +385,21 @@ input:checked + .slider:before {
 }
 
 .chathistory{
-	min-height:600px;
+	min-height:400px;
+  max-height: auto;
 	width:600px;
 	margin:10px auto;
 	padding:10px;
-	background:#f1f1f1;
+	background: rgba(255, 248, 232, 0.884);
 	text-align:left;
+  /* border-radius: 5px; */
+  /* border: #000 solid; */
+  box-shadow: rgb(143, 143, 143) 0 0 10px ;
 }
-
 
 .txtarea{
 	min-height:100px;
+  scroll-behavior: auto;
 	width:600px;
 	margin:10px auto;
 	padding:10px;
@@ -491,7 +495,7 @@ input:checked + .slider:before {
   transition: transform 0.5s;
   margin-left: 5vw;
   border-collapse: collapse; 
-  border: #000 solid;
+  /* border: #000 solid; */
 
 
 }

@@ -93,8 +93,11 @@
                 </tr>
            
                 </table> ";  
+                
             }
             ?>
+                <br/>
+                <center><h3><?php include_once('../../includes/message.php'); ?></h3></center>
                 
             </div>
   </div>  

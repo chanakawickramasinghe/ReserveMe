@@ -19,16 +19,6 @@
         } else {
             echo "SQL Syntex error";
         }
-
-        // $sql_cart_table= "SELECT * FROM cart WHERE ";
-        // $result=($connection->query($sql_cart_table));
-
-        // if($result){
-        //   while($row = $result->fetch_assoc()){
-        //     $table_id=$row['table_id'];
-        //   }
-        // }
-
         
  
  ?>

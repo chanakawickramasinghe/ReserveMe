@@ -7,94 +7,145 @@
         <link rel="stylesheet" href="../../CSS/style.css">
         <link rel="stylesheet" href="../../CSS/nav.css">
         <link rel="stylesheet" href="../../CSS/main.css">
+        <link rel="stylesheet" href="../../CSS/restaurant.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <!--web-icon-->
         <link href="../../images/logo.png" rel="shortcut icon"/>
     </head>
     <body>
-        <!--Start of nav-->
-        <div class="topnav" id="myTopnav">
-            <a href="../../index.php"><img class = "logo" src="../../images/logo.png"></a>
-            <a class="navtab" href="../../index.php">Logout</a>
-		    <a class="navtab" href="restaurant-profile.php">My Profile</a>
-		    <a class="navtab" href="../../includes/contact.php">Contact</a>
-		    <a class="navtab" href="../../includes/about.php">About</a>
-		    <a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>    
-        </div>
-        <!--End of nav-->
-                
-        <!-- Adding the table with current user details -->
-        <?php
-        echo "<table border=1 class=\"user\">";
-    
-        $res_id = "111"; 
-        //have to add session id
-        echo"<h1 class = div-c> ".$res_id."</h1>";
-        $sql = "SELECT * FROM restaurant WHERE res_id='$res_id'";
-        $userquery = mysqli_query($connection,$sql);
-            while($row = mysqli_fetch_assoc($userquery)){
-
-                </br>
-                <tr>
-                <th>Res ID</th><td>".$row['res_id']."</td>
-                </tr>
-                <tr>                  
-                <th>Name</th><td>".$row['res_name']."</td>
-                </tr>
-                <tr>
-                <th>Email</th><td>".$row['res_email']."</td>
-                </tr>
-                <tr>
-                <th>ContactNo</th><td>".$row['res_tel']."</td>
-                </tr>
-                <tr>
-                <th>Postal Number</th><td>".$row['pnumber']."</td>
-                </tr>
-                <tr>
-                <th>Street</th><td>".$row['street']."</td>
-                </tr>
-                <tr>
-                <th>City</th><td>".$row['city']."</td>
-                </tr>
-                <tr>
-                <th>Location</th><td>".$row['res_location']."</td>
-                </tr>
-                <tr>
-                <th>Floor Plan</th><td>".$row['res_floor']."</td>
-                </tr>
-                <tr>
-                <th>Menu</th><td>".$row['res_menu']."</td>
-                </tr>
-                <tr>
-                <th>Preorder Availability</th><td>".$row['preorder_available']."</td>
-                </tr>;
-            } 
-
-        //    $sql = "SELECT * FROM restaurant_category WHERE res_id='$res_id'";
-        //    $userquery = mysqli_query($connection,$sql);
-        //         while($row = mysqli_fetch_assoc($userquery)){
-    
-        //             //should include the db connecting row
-        //             echo "<tr>
-        //             <th> Restaurant Category </th><td>".$row['']." </td> 
-        //             </tr>";
-        //         }    
+       <!-- nav bar -->
+  <?php include('navigation.php'); ?>
+   
+   <!-- Start of side bar -->
+   <div class="sidebar"> 
+     <a href="restaurant-home.php" class="active">Home</a>     
+     <a href="add-menu.php">Update Menu</a>
+     <a href="res-promo.php">Promotions</a>
+     <a href="res-floor-plan.php">Floor Plan</a> 
+     <a href="res-reservation.php">Table Reservations</a>
+     <a href="hall-reservation.php">Hall Reservations</a>
+     <a href="res-review.php">View Reviews</a>   
+     <hr>
+     <a href="mng-emp.php">Manage Employee</a>
+     <a href="chat.php">Chat</a>
+     <a href="hall-details.php">Reception Hall</a>
+   </div>
+   <!-- End of side bar -->
+   <div class="content">
+    <div style="margin:20px">      
+       
+        <center><h3><?php include_once('../../includes/message.php'); ?></h3></center>
+        <center><h1><span style="color:black">Edit </span><span style="color:orange">Details</span></h1></center>
         
-        echo "</table>";
+        <?php
+
+        $sql =  "SELECT * FROM restaurant";
+        $sql_query = mysqli_query($connection, $sql);
+        $row = mysqli_fetch_assoc($sql_query);
+
+        echo "
+        <form method=\"POST\" action=\"restaurant-edit-profile-submit.php\" enctype=\"multipart/form-data\">
+            <BR/>
+            <table class=\"res-edit-tbl\">
+                <tr>
+                    <th>Restaurant Name :</th>
+                    <td><input class=\"type-feild-edit\" name=\"name\" type=\"text\" value=".$row['res_name']." required></td>
+                </tr>
+                <tr>
+                    <th>Restaurant Email :</th>
+                    <td><input class=\"type-feild-edit\" name=\"email\" type=\"email\" value=".$row['res_email']." required></td>
+                </tr>
+                <tr>
+                    <th>Restaurant Address :</th>
+                    <td><input class=\"type-feild-edit\" name=\"address\" type=\"text\" value=".$row['res_add_line1']." required></td>
+                </tr>
+                <tr>
+                    <th>Located City :</th>
+                    <td><input class=\"type-feild-edit\" name=\"city\" type=\"text\" value=".$row['city']." required></td>
+                </tr>
+                <tr>
+                    <th>Restaurant Location Url :</th>
+                    <td><input class=\"type-feild-edit\" name=\"location\" type=\"url\" value=".$row['res_location']." required></td>
+                </tr>
+                <tr>
+                    <th>Restaurant Contact :</th>
+                    <td><input class=\"type-feild-edit\" name=\"tel\" type=\"tel\" value=".$row['res_tel']." required></td>
+                </tr>
+                <tr>
+                    <th>Opening Time :</th>
+                    <td><input class=\"type-feild-edit\" name=\"open\" type=\"time\" value=".$row['opening_hour']." required></td>
+                </tr>
+                <tr>
+                    <th>Closing Time :</th>
+                    <td><input class=\"type-feild-edit\" name=\"close\" type=\"time\" value=".$row['closing-hour']." required></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><br/><input class=\"btn-edit\" type=\"submit\" value=\"Save Changes\" name=\"edit-details\"></td>
+                </tr>
+            </table>
+        ";
         ?>
-        </br>
-        <!-- edit details button -->
-        <div class="btn-header">
-            <form>
-                <div class="form-box">
-                    <button type="button" name="edit" class="btn" onclick="window.location.href='restaurant-profile-edit.php'">Edit Details</button>
-                    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                    <button type="button" name="deactivate" class="btn" >Deactivate Account</button>
-                </div>
-            </form>
-        </div>
+        <br/><hr><br/>
+
+        <center><h1><span style="color:black">Change </span><span style="color:orange">Password</span></h1></center>
+        <br/>
+        
+            <table class="res-edit-tbl">
+                <tr>
+                    <th>Current Password : </th>
+                    <td><input type="password" name="old-pword" class="type-feild-edit" placeholder="Enter Current Password"></td>
+                </tr>
+                <tr>
+                    <th>New Password : </th>
+                    <td><input type="password" id="new-pword" name="new-pword" class="type-feild-edit" placeholder="Enter New Password"></td>
+                </tr>
+                <tr>
+                    <th>Confirm Password : </th>
+                    <td><input type="password" id="confirm-pword" name="confirm-pword" class="type-feild-edit" onkeyup='check()' placeholder="Confirm New Password"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><P align="center" id='message' ></P></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><br/><input class="btn-edit" type="submit" value="Change Password" name="change-pword"></td>
+                </tr>
+            </table>
+        
+
+        <br/><hr><br/>
+        
+        <center><h1><span style="color:black">Change </span><span style="color:orange">Image</span></h1></center>
+        <br/>
+        
+            <table class="res-edit-tbl">
+                <tr>
+                    <th>Add New Image : </th>
+                    <td><input type="file" name="image" class="type-feild-edit" placeholder="Add New Image"></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><br/><input class="btn-edit" type="submit" value="Change Image" name="change-img"></td>
+                </tr>
+            </table>
+        </form>
+        <br/>
 
         <!--script for onClickNav() for the navigation menu-->
         <script src="../../js/onClickNav.js"></script>
     </body>
+
+    <script>
+        var check = function() {
+            if (document.getElementById('new-pword').value == document.getElementById('confirm-pword').value){
+                    document.getElementById('message').style.color = 'green';
+                    document.getElementById('message').innerHTML = 'Passwords are matching';
+            } 
+            else{
+                document.getElementById('message').style.color = 'red';
+                document.getElementById('message').innerHTML = 'Passwords does not match';
+            }
+        }
+    </script>
 </html> 

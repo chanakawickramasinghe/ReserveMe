@@ -41,8 +41,11 @@ if(isset($_POST['submit'])){
 
             header( "Location:../users/customer/customer-home.php" );
         }
+        elseif ($active_status == 2){
+            header("Location:../users/customer/request-activate-account.php");
+        }
         else{
-            header("Location:../users/activate-account.php");
+            header("Location:../users/customer/activate-account.php");  // <----- need to change -->
         }      
     }
     
@@ -96,7 +99,7 @@ if(isset($_POST['submit'])){
         $userRow = mysqli_fetch_array($userResult4);
         // session_start();
         checkSession();  //create sessions
-        $_SESSION["emp_name"] = $userRow['emp_name'];
+        $_SESSION["name"] = $userRow['emp_name'];
         $_SESSION["emp_id"] = $userRow['emp_id'];
         $_SESSION["res_id"] = $userRow['res_id'];
         $_SESSION['emp_email']= $userRow['emp_email'];

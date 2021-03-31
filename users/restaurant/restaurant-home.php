@@ -34,6 +34,7 @@
       <a href="res-review.php">View Reviews</a>   
       <hr>
       <a href="mng-emp.php">Manage Employee</a>
+      <a href="chat.php">Chat</a>
       <a href="hall-details.php">Reception Hall</a>
     </div>
     <!-- End of side bar -->
@@ -58,7 +59,7 @@
 
                 $row = mysqli_fetch_assoc($res_query);
                 echo"
-                <br><br/><br/>
+                <br><br/>
                 <img class=\"img-res-home\" src= \"../../images/restaurant/{$row['res_image']}\" style=\"float:right\">
                 
                 <table class=\"res-home-tbl\">
@@ -88,14 +89,17 @@
                 </tr>
                 <tr>
                     <th></th>
-                    <td><button class=\"emp-button\">Edit Details</button></td> 
+                    <td><button class=\"emp-button\" onclick=\"window.location.href='restaurant-edit-profile.php'\">Edit Details</button></td> 
                 </tr>
            
-                </table> ";
+                </table> ";  
                 
             }
-        ?>
-        <div></div>
+            ?>
+                <br/>
+                <center><h3><?php include_once('../../includes/message.php'); ?></h3></center>
+                
+            </div>
   </div>  
 </body>
 

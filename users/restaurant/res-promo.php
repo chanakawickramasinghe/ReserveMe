@@ -27,6 +27,7 @@
       <a href="res-review.php">View Reviews</a>      
       <hr>
       <a href="mng-emp.php">Manage Employee</a>
+      <a href="chat.php">Chat</a>
       <a href="hall-details.php">Reception Hall</a>
     </div>
    <!-- End of side bar -->

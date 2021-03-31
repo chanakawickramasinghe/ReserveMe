@@ -31,179 +31,127 @@
     
     <!--Start of Ongoing Card Section-->
     <div class="title_text">
+        <p class="success-msg"><?php include_once('../../includes/message.php'); ?></p>            
+    </div>
+
+    <div class="title_text">
+        <h3>Table <font color="orange">Reservations</font></h3>
+    </div>
+    <section class="food">
+            <?php
+                include('../../includes/connection.php');
+                include('../../includes/session.php'); 
+
+                checkSession();
+                $cus_id= $_SESSION["userID"];
+                
+
+                $sql = "SELECT * FROM reservation WHERE cus_id=$cus_id ORDER BY date";
+                $result = ($connection->query($sql));
+
+                if($result){
+                    while($row= mysqli_fetch_assoc($result)){
+                        $reservation_id = $row['reservation_id'];
+                        $table_id = $row['table_id'];
+                        $no_of_guests = $row['no_of_guests'];
+                        $date = $row['date'];
+                        $time = $row['time'];
+                        $reservation_date = $row['reservation_date'];
+
+                        echo "<div class=\"food-container\">
+                        <div class=\"food-box\">
+                            <i class=\"fas fa-map-marker-alt\">$table_id</i>
+                            <br>
+                            <h4 class=\"\"><i class=\"far fa-calendar\"></i>$date</h4>
+                            <h4 class=\"\"><i class=\"far fa-clock\"></i>$time</h4>
+                            <h4 class=\"\"><i class=\"fas fa-users\"></i>$no_of_guests</h4>";
+                        if($date>= date("Y-m-d")){
+                            echo "
+                            <form action=\"reservation-cancel.php\" method=\"POST\">
+                            <input type=\"hidden\" id=\"\" name=\"reservation_id\" value=\"$reservation_id\" required>
+                            <button type=\"submit\" name=\"cancel\" class=\"food-btn\" onclick=\"return myFunction()\" style=\"cursor: pointer;\">Cancel</button>
+                            </form> ";
+                        }   else {
+                            echo "<br><p>Done </p>";
+                        }                    
+                        echo "    
+                        </div>
+                    </div>";            
+                    }
+                } else {
+                    echo "SQL syntex Error..!";
+                }
+
+
+            ?>
+    </section> 
+
+    <div class="title_text">
         <h3>Hall <font color="orange">Reservations</font></h3>
     </div>
-    <div class="title_text">
-        <h3>Ongoing <font color="orange">Reservations</font></h3>
-    </div>
     <section class="food">
-        <div class="food-container">
-            <div class="food-box">
-                <h3 class="name">Cinnamon Grand</h3> 
-                <img class="food-img" src= "../../images/restaurant/cinnamon-grand-main-entrance.jpg">
-                <br>
-                <i class="fas fa-map-marker-alt">Colombo</i>
-                <br>
-                <h4 class="">2020 Dec 04</h4>
-                <h4 class="">8.00pm</h4>
-                <h4 class="">Table</h4>
-                <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Cancel</button>  
-            </div>
-        </div>
-        
-        <div class="food-container">
-            <div class="food-box">
-                <h3 class="name">Topaz Hotel</h3> 
-                <img class="food-img" src= "../../images/restaurant/topaz.jpg">
-                <br>
-                <i class="fas fa-map-marker-alt">Kandy</i>
-                <br>
-                <h4 class="">2021 Feb 19</h4>
-                <h4 class="">8.00pm</h4>
-                <h4 class="">Hall</h4>
-                <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Cancel</button>  
-            </div>
-        </div>
+            <?php                
 
-        <div class="food-container">
-            <div class="food-box">
-                <h3 class="name">Hilton Hotel</h3> 
-                <img class="food-img" src= "../../images/restaurant/hilton.jpg">
-                <br>
-                <i class="fas fa-map-marker-alt">Colombo</i>
-                <br>
-                <h4 class="">2020 Apr 14</h4>
-                <h4 class="">10.00am</h4>
-                <h4 class="">Hall</h4>
-                <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Cancel</button>  
-            </div>
-        </div>
-    </section>      
-    <div class="title_text">
-        <h3>Past <font color="orange">Reservations</font></h3>
-    </div>
-    <section class="food">
-        <div class="food-container">
-            <div class="food-box">
-                <h3 class="name">Cinnamon Grand</h3> 
-                <img class="food-img" src= "../../images/restaurant/cinnamon-grand-main-entrance.jpg">
-                <br>
-                <i class="fas fa-map-marker-alt">Colombo</i>
-                <br>
-                <h4 class="">2020 Dec 04</h4>
-                <h4 class="">8.00pm</h4>
-                <h4 class="">Table</h4>
-                <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Cancel</button>  
-            </div>
-        </div>
-        
-        <div class="food-container">
-            <div class="food-box">
-                <h3 class="name">Topaz Hotel</h3> 
-                <img class="food-img" src= "../../images/restaurant/topaz.jpg">
-                <br>
-                <i class="fas fa-map-marker-alt">Kandy</i>
-                <br>
-                <h4 class="">2021 Feb 19</h4>
-                <h4 class="">8.00pm</h4>
-                <h4 class="">Hall</h4>
-                <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Cancel</button>  
-            </div>
-        </div>
+                $sql = "SELECT * FROM hall_reservation WHERE customer_id=$cus_id ORDER BY reservation_date";
+                $result = ($connection->query($sql));
 
-        <div class="food-container">
-            <div class="food-box">
-                <h3 class="name">Hilton Hotel</h3> 
-                <img class="food-img" src= "../../images/restaurant/hilton.jpg">
-                <br>
-                <i class="fas fa-map-marker-alt">Colombo</i>
-                <br>
-                <h4 class="">2020 Apr 14</h4>
-                <h4 class="">10.00am</h4>
-                <h4 class="">Hall</h4>
-                <button type="button" class="food-btn" onclick="" style="cursor: pointer;">Cancel</button>  
-            </div>
-        </div>
-    </section>       
+                if($result){
+                    while($row= mysqli_fetch_assoc($result)){
+                        $reservation_id = $row['reservation_id'];
+                        $hall_id = $row['hall_id'];
+                        $capacity = $row['capacity'];
+                        $payment = $row['payment'];
+                        $reservation_date = $row['reservation_date'];
+                        $reservation_time = $row['reservation_time'];
+
+                        echo "<div class=\"food-container\">
+                        <div class=\"food-box\">
+                            <i class=\"fas fa-map-marker-alt\">$hall_id</i>
+                            <br>
+                            <h4 class=\"\"><i class=\"far fa-calendar\"></i>$reservation_date</h4>
+                            <h4 class=\"\"><i class=\"far fa-clock\"></i>$reservation_time</h4>
+                            <h4 class=\"\"><i class=\"fas fa-users\"></i>$capacity</h4>
+                            <h4 class=\"\"><i class=\"far fa-money-bill-alt\"></i>$payment</h4>";
+                            
+                        if($reservation_date>= date("Y-m-d")){
+                            echo "
+                            <form action=\"reservation-cancel.php\" method=\"POST\">
+                            <input type=\"hidden\" id=\"\" name=\"reservation_id\" value=\"$reservation_id\" required>
+                            <button type=\"submit\" name=\"cancel\" class=\"food-btn\" onclick=\"return myFunction()\" style=\"cursor: pointer;\">Cancel</button>
+                            </form> ";
+                        }   else {
+                            echo "<br><p>Done </p>";
+                        }                    
+                        echo "    
+                        </div>
+                    </div>";            
+                    }
+                } else {
+                    echo "SQL syntex Error..!";
+                }
+
+
+            ?>
+   </section>       
     <!--End of Ongoing Card Section-->
 
-    <!--Start of Past Card Section-->
-    <div class="title_text">
-        <h3>Table <font color="orange">Reservaions</font></h3>
-    </div>
-    <section class="food">
-        <div class="food-container">
-            <div class="food-box">
-                <h3 class="name">Topaz Hotel</h3> 
-                <img class="food-img" src= "../../images/restaurant/topaz.jpg">
-                <br>
-                <i class="fas fa-map-marker-alt">Kandy</i>
-                <br>
-                <h4 class="">2020 Sep 14</h4>
-                <h4 class="">6.00pm</h4>
-                <h4 class="">Table</h4>
-            </div>
-        </div>
-
-        <div class="food-container">
-            <div class="food-box">
-                <h3 class="name">Cinnamon Grand</h3> 
-                <img class="food-img" src= "../../images/restaurant/cinnamon-grand-main-entrance.jpg">
-                <br>
-                <i class="fas fa-map-marker-alt">Colombo</i>
-                <br>
-                <h4 class="">2020 Jul 18</h4>
-                <h4 class="">4.00pm</h4>
-                <h4 class="">Hall</h4>
-            </div>
-        </div>
-
-        <div class="food-container">
-            <div class="food-box">
-                <h3 class="name">Topaz Hotel</h3> 
-                <img class="food-img" src= "../../images/restaurant/topaz.jpg">
-                <br>
-                <i class="fas fa-map-marker-alt">Kandy</i>
-                <br>
-                <h4 class="">2020 Apr 14</h4>
-                <h4 class="">10.00am</h4>
-                <h4 class="">Hall</h4>
-            </div>
-        </div>
-
-        <div class="food-container">
-            <div class="food-box">
-                <h3 class="name">Hilton Hotel</h3> 
-                <img class="food-img" src= "../../images/restaurant/hilton.jpg">
-                <br>
-                <i class="fas fa-map-marker-alt">Colombo</i>
-                <br>
-                <h4 class="">2020 Jul 18</h4>
-                <h4 class="">4.00pm</h4>
-                <h4 class="">Table</h4>
-            </div>
-        </div>
-
-        <div class="food-container">
-            <div class="food-box">
-                <h3 class="name">Cinnamon Grand</h3> 
-                <img class="food-img" src= "../../images/restaurant/cinnamon-grand-main-entrance.jpg">
-                <br>
-                <i class="fas fa-map-marker-alt">Colombo</i>
-                <br>
-                <h4 class="">2020 Apr 14</h4>
-                <h4 class="">10.00am</h4>
-                <h4 class="">For 6</h4>
-                <h4 class="">Table</h4>
-            </div>
-        </div>
-    </section>
-    <!--End of Past Card Section-->
 
     <!--Include footer.php-->
     <div><?php include "../../includes/footer.php" ?></div>
 
     <!--script for onClickNav() for the navigation menu-->
     <script src="../../js/onClickNav.js"></script>
+    
+    <script>
+        function myFunction() {
+        var x = confirm("Are you sure want to cancel...!");
+        if (x){
+            return true;
+        } else {
+            return false;
+        }
+        }
+
+</script>
 </body>
 </html>

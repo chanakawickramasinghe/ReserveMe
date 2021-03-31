@@ -44,13 +44,10 @@
                 <th>Customer ID</th><td>".$row['user_id']."</td>
                 </tr>
                 <tr>                  
-                <th>Customer Name</th><td>".$row['first_name']."</td>
+                <th>First Name</th><td>".$row['first_name']."</td>
                 </tr>
                 <tr>                  
-                <th>Customer Name</th><td>".$row['last_name']."</td>
-                </tr>
-                <tr>                  
-                <th>Customer Name</th><td>".$row['user_name']."</td>
+                <th>Last Name</th><td>".$row['last_name']."</td>
                 </tr>
                 <tr>
                 <th>Customer Email</th><td>".$row['email']."</td>
@@ -69,10 +66,8 @@
         <!-- edit details button -->
         <div class="btn-header">
             <form>
-                <div class="form-box">
                     <button name="edit" class="btn" type="button" onclick="window.location.href='customer-profile-edit.php'">Edit Details</button>
                     <button name="deactivate" class="btn" type="button" onclick="window.location.href='customer-confirm-deactivate.php'">Deactivate Account</button>
-                </div>
             </form>
         </div>
         <!--Include footer.php-->

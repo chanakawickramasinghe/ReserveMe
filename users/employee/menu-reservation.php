@@ -1,5 +1,5 @@
 <?php include('../../includes/connection.php') ?>
-<?php include('../../includes/session.php') ?>
+<?php //include('../../includes/session.php') ?>
 <?php include('emp-session.php') ?>
 
 
@@ -30,8 +30,10 @@
       <!-- <a href="employee-home.php" >Employee Home</a> -->
       <!-- <a href="venues.php">Reservation Status</a><hr>    -->
       <a href="menu.php">Set Menu</a><hr>
-      <a href="queries.php">Queries</a><hr>
-      <a href="table-reservation.php" class="active">Manage Reservation</a><hr>
+      <a href="chat.php">Chat</a><hr>
+      <a href="table-reservation.php" >Table Reservation</a><hr>
+      <a href="#" class="active">Pre Orders</a><hr>
+      <a href="hall-reservation.php" >Hall Reservation</a><hr>
       
     </div>
     <!-- End of sidebar -->
@@ -40,12 +42,12 @@
 
     <h1>Pre Orders-<span style="color:orange"> Menu </span> </h1>
     
-    <div style="float:right">
+    <!-- <div style="float:right">
         <button type="button" class="hero-button" onclick="window.location.href='table-reservation.php'">Table Reservation</button>
         <button type="button" class="hero-button active" onclick="window.location.href='#'">Pre Orders</button>    
         <button type="button" class="hero-button" onclick="window.location.href='hall-reservation.php'">Hall Reservation</button>
     </div>
-    <br><br>
+    <br><br> -->
 
     <div style="padding:5vw;padding-top:1vw">
     <div class="contentbox">

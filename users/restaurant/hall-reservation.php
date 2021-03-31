@@ -1,4 +1,6 @@
 <?php include('../../includes/session.php') ?>
+<?php include('../../includes/connection.php') ?>
+
 
 <html>
     <head>
@@ -25,58 +27,64 @@
       <a href="res-review.php">View Reviews</a>   
       <hr>
       <a href="mng-emp.php">Manage Employee</a>
+      <a href="chat.php">Chat</a>
       <a href="hall-details.php">Reception Hall</a>
     </div>
    <!-- End of side bar -->
    <div class="content">
-    <div style="margin:20px">      
+    <!-- <div style="margin:20px">       -->
 
-        <div class="content-div">
+        <!-- <div class="content-div"> -->
             <br><br>        
             <center><h1 style="color:#ffbb01;"><font color="black">Ongoing</font> Reservations</h1></center>
             <br><br>
-            <div class="promo-btn-bar">
+            <!-- <div class="promo-btn-bar">
                 <button type="button" class="btn-promo" onclick="window.location.href='res-fut-res.php'">Future Reservations</button>
                 <button type="button" class="btn-promo" onclick="window.location.href='res-past-res.php'">Past Reservation</button>
             </div>
-            <br><br><br><br><br>
-            <table class="promo" id="myTable" border="1">
-                <tr>
-                    <th>Reservation ID</th>
-                    <th>Customer Name</th>
-                    <th>Meal</th>
-                    <th>Date & Time</th>
-                    <th>No. of Guests</th>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>C. Priyadarshani</td>
-                    <td>Lunch</td>
-                    <td>19th November 13:30:00</td>       
-                    <td>04</td>         
-                </tr>
-                <tr>
-                    <td>002</td>
-                    <td>C. Wickramasingha</td>
-                    <td>Dinner</td>
-                    <td>19th November 19:30:00</td>       
-                    <td>02</td>         
-                </tr>
-                <tr>
-                    <td>003</td>
-                    <td>A. Ali</td>
-                    <td>Lunch</td>
-                    <td>19th November 12:00:00</td>       
-                    <td>06</td>         
-                </tr> 
-                <tr>
-                    <td>005</td>
-                    <td>A. Ananda</td>
-                    <td>Lunch</td>
-                    <td>19thth November 14:00:00</td>       
-                    <td>07</td>         
-                </tr>  
-            </table>
+            <br><br><br><br><br> -->
+
+            <table class="promo" id="myTable">
+            <tr>
+                <!-- <th width=".8vw">Reservation id.</th> -->
+                <th>Name</th>
+                <!-- <th>Email</th> -->
+                <th>Mobile No</th>
+                <th>Hall Name</th>
+                <th>Date </th>
+                <th>Session</th>
+                <th>Participants(Avg)</th>
+                <th>Status</th>
+            </tr>
+            <?php
+                $sql = "SELECT hall_reservation.* , customer.user_name, customer.contact_no, reception_hall.hall_name FROM ((hall_reservation INNER JOIN customer ON hall_reservation.customer_id = customer.user_id) INNER JOIN reception_hall ON hall_reservation.hall_id= reception_hall.hall_id) ORDER BY reservation_date" ;
+        
+                $sql_query = mysqli_query($connection,$sql);
+                while($row = mysqli_fetch_assoc($sql_query)){
+                        echo "
+                        <tr>             
+                            <td>".$row['user_name']."</td>
+                            <td>".$row['contact_no']."</td>
+                            <td>".$row['hall_name']."</td>
+                            <td>".$row['reservation_date']."</td>
+                            <td>".$row['reservation_time']."</td>
+                            <td>".$row['capacity']."</td>";
+                            $date = $row['reservation_date'];
+                            if($date> date("Y-m-d")){
+                                echo "<td> In future</td>";
+                            } elseif ($date== date("Y-m-d")){
+                                echo "<td>Today</td>";
+                            } else {
+                                echo "<td>Past</td>";
+                            }
+
+
+                        echo "</tr>";                                        
+                } 
+                
+                ?>
+
+        </table>
         </div>
     <!--script for onClickNav() for the navigation menu-->
     <script src="../../js/onClickNav.js"></script>

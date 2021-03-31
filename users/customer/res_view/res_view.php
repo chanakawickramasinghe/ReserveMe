@@ -110,13 +110,22 @@
 	                <input type="date" class="dropbtn" id="date" name="date" min="<?php echo date("Y-m-d"); ?>" required>
 
                   <select class="dropbtn" name="time" id="time" required>
-                      <option value="">Time</option>
-                      <option value="08:00">8.00 a.m</option>
-                      <option value="10:00">10.00 a.m</option>
-                      <option value="12:00">12.00 p.m</option>
-                      <option value="14:00">2.00 p.m</option>
-                      <option value="20:00">8.00 p.m</option>
-                      <option value="22:00">10.00 p.m</option>
+                  <option value="">Time</option>
+                      <?php $setTime = time() + (3.5 * 60 * 60);
+                          $currTime = date("h:i",$setTime);
+                          $currhr = date("h",$setTime);?>
+                      <?php
+                        $x=8;                       
+                        while($x<=22){
+                          if($x>$currhr && $x>12){                      
+                            echo "<option value=\"$x.':00'\">$x:00 pm</option>";
+                          } elseif($x>$currhr && $x<12) {
+                            echo "<option value=\"$x.':00'\">$x:00 am</option>";
+                          }
+                          $x=$x+2;
+                        }
+                      
+                      ?>
                   </select>
 	          </div>
                 <br>

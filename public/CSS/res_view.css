@@ -393,7 +393,7 @@ ul{
 	grid-column-start: 1;
 	grid-column-end: 5;
 	grid-row-start: 1;
-	grid-row-end: 3;
+	grid-row-end: 6;
   }
   
   .gallery__item--2 {
@@ -403,12 +403,6 @@ ul{
 	grid-row-end: 6;
   }
   
-  .gallery__item--3 {
-	grid-column-start: 1;
-	grid-column-end: 5;
-	grid-row-start: 3;
-	grid-row-end: 6;
-}
 
 /*Gallery section */
 
@@ -631,7 +625,7 @@ ul{
 
 
   /* Default Hidden Available table details */
-  /* .col2 {
-	display: none;
-	position: fixed;
-  } */
+  .col2 {
+	/* display: none; */
+	/* position: fixed; */
+  }

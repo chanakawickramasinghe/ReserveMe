@@ -15,14 +15,14 @@ include('../../../public/includes/session.php');
     <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
     <!--stylesheet-------------------->
 	<link rel="stylesheet" type="text/css" href="../../../public/CSS/nav.css">
-    <link rel="stylesheet" href="../../..public/CSS/footer.css">   
+    <link rel="stylesheet" href="../../../public/CSS/footer.css">   
     <link rel="stylesheet" href="../../../public/CSS/preorder.css">
 </head>
 
 <body>
     <!--Start of nav-->
     <div class="topnav" id="myTopnav">
-            <a href="../customer-home.php"><img class = "logo" src="../../../public/images/logo.png"></a>
+            <a href="../customer-home.php"><img class = "logo" src="../../../images/logo.png"></a>
 			<a class="navtab" href="../../../index.php">Logout</a>
 			<a class="navtab" href="../customer-profile.php">Profile</a>
 			<a class="navtab" href="../reservation_details.php">Reservations</a>
@@ -90,7 +90,7 @@ include('../../../public/includes/session.php');
 
           <div class=\"hidden\">
             <input type=\"hidden\" name=\"merchant_id\" value=\"1215949\">    <!-- Replace your Merchant ID -->
-            <input type=\"hidden\" name=\"return_url\" value=\"http://localhost/ReserveMe/users/customer/success.php\">
+            <input type=\"hidden\" name=\"return_url\" value=\"http://localhost/ReserveMe/src/customer/success.php\">
             <input type=\"hidden\" name=\"cancel_url\" value=\"preorder.php\">
             <input type=\"hidden\" name=\"notify_url\" value=\"info.reserve.lk@gmail.com\">  
             <br><br><br>

@@ -21,7 +21,7 @@ if(isset($_GET['hall_id'])){
         $temp_reserve_id = "SELECT * from temp_hall_reservation WHERE hall_id = $hall_id";
         $temp_hall  = mysqli_fetch_assoc(mysqli_query($connection,$temp_reserve_id));
         $temp_id = $temp_hall['temp_reservation_id'];
-            header( "Location:checkout.php?hall_id=$hall_id&reservation_date=$reservation_date&reservation_time=$reservation_time&temp_orderid=$temp_id");
+            header( "Location:checkout.php?hall_id='$hall_id'&reservation_date=$reservation_date&reservation_time=$reservation_time&temp_orderid=$temp_id");
         
     }else{
             //need to show error message

@@ -36,7 +36,7 @@ if(isset($_POST['submit'])){
 
             $execute_querry = mysqli_query($connection, $log_customer_sql);
 
-            header( "Location:../../src/customer/hall_view/logged_hall_view.php?hall_id=$hall_id" );
+            header( "Location:../../src/customer/hall_view/logged_hall_view.php?hall_id=".$hall_id);
         }
         else{
             header("Location:../../src/customer/activate-account.php");

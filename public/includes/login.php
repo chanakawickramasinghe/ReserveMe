@@ -1,4 +1,4 @@
-<?php include('../../config/connection.php') ?>
+<?php include('connection.php') ?>
 <?php include('session.php') ?>
 
 <!DOCTYPE html>
@@ -23,8 +23,8 @@
 <body>
 	<!--Start of nav-->
     <div class="topnav">
-        <a href="../../src/customer/index.php"><img class = "logo" src="../images/logo.png"></a>
-		<a class="navtab" href="../../users/customer/customerReg.php">Register</a>  <!--  <----- need to change -->
+        <a href="../index.php"><img class = "logo" src="../images/logo.png"></a>
+		<a class="navtab" href="../users/customer/customerReg.php">Register</a>
         <a class="navtab active" href="login.php">Login</a>
 		<a class="navtab" href="contact.php">Contact</a>
 		<a class="navtab" href="about.php">About</a>
@@ -43,7 +43,7 @@
             <form action="login-submit.php" method="post">
                 <center><img src="../images/form_icons/vector-users.png" alt="usericon" class="userIcon">
                 <h1 style="display: inline-block;color:green">Login</h1></center>
-                <h2 class="error-msg"><?php include_once('message.php'); ?></h2>
+                <p class="error-msg"><?php include_once('message.php'); ?></p>
 
                     <div class="wrap-input100 validate-input" style="padding-top: 20px;" data-validate="Username is required">                    
                         <input class="input100" type="email" name="email" placeholder="Type your Email" required>
@@ -56,7 +56,7 @@
                     </div>
 
                     <div class="text-right" style="color:blue; padding-top:8px; padding-bottom: 15px">
-                        <a href="../../src/customer/reset/email_verify.php" style="color:blue"> Forgot password! </a>
+                        <a href="../reset/email_verify.php" style="color:blue"> Forgot password! </a>
                     </div>
 
                     <div class="container-login100-form-btn">
@@ -68,7 +68,7 @@
 
                     <br>
                     <div class="txt1 text-center">
-                        for create a new account <a href="../../users/customer/customerReg.php" class="txt2"> Click here! </a>  <!--  <----- need to change -->
+                        for create a new account <a href="../users/customer/customerReg.php" class="txt2"> Click here! </a>
                     </div>
             </form>            
         </div>

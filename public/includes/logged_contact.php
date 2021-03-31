@@ -37,10 +37,10 @@
 <section class="main"> -->
 		<!--Start of nav-->
 		<div class="topnav" id="myTopnav">
-			<a href="../../users/customer/customer-home.php"><img class = "logo" src="../images/logo.png"></a> <!--  <----- need to change -->
-		    <a class="navtab" href="../../src/customer/index.php">Logout</a>
-            <a class="navtab" href="../../users/customer/customer-profile.php">Profile</a>
-            <a class="navtab" href="../../users/customer/reservation_details.php">Reservations</a>
+			<a href="../users/customer/customer-home.php"><img class = "logo" src="../images/logo.png"></a>
+		    <a class="navtab" href="../index.php">Logout</a>
+            <a class="navtab" href="../users/customer/customer-profile.php">Profile</a>
+            <a class="navtab" href="../users/customer/reservation_details.php">Reservations</a>
 		    <a class="navtab active" href="logged_contact.php">Contact</a>
 		    <a class="navtab" href="logged_about.php">About</a>
 		    <a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
@@ -85,9 +85,9 @@
         </div>
 
         <!--Include footer.php-->
-    <div><?php include "./footer.php" ?></div>
+    <div><?php include "../includes/footer.php" ?></div>
 
-    <?php include('../../config/connection.php'); ?>
+    <?php include('connection.php'); ?>
     <?php include('session.php'); ?>
 
     <?php

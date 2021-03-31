@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../../CSS/main.css">
         <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
-	    <link rel="stylesheet" href="../../CSS/nav.css">
+	    <link rel="stylesheet" href="../../public/CSS/admin-nav.css">
         <link rel="stylesheet" href="../../CSS/search.css">
         <link rel="stylesheet" href="../../CSS/footer.css">
         <link rel="stylesheet" href="../../CSS/style.css">
@@ -29,14 +29,14 @@
 
         <div>
             <form class="div-c" method='POST' action='customer-confirm-deactivate-submit.php' name="form-confirm-deactive">
-                </br></br></br></br>
+                </br></br></br></br><br/><br/><br/>
                 <h3>Deactivate <font color="orange">Account</font></h3>
                 <p>We are sorry to see you go, you can always re-activate your account</p></br>
                 <button name="btn-cancel" type="button" class="btn-grey" onclick="window.location.href='customer-profile.php'"> Cancel </button>
                 <button type="submit" name="btn-Delete" class="btn-red" > Deactivate </button>
             </form>
         </div>
-
+        <br/><br/><br/>
         <?php include('../../includes/footer.php') ?>
 
         <!--script for slideshow-->

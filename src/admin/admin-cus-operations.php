@@ -27,7 +27,7 @@ if(isset($_POST['btn-activate-cus-account'])){
 if(isset($_POST['btn-suspend-cus-account'])){
 
 
-    $sql = "UPDATE customer SET active_status='0' WHERE user_id='$cus_id'";
+    $sql = "UPDATE customer SET active_status='2' WHERE user_id='$cus_id'";
 
     if (mysqli_query($connection,$sql) == TRUE) {
         $message = base64_encode(urlencode("Account Suspended"));

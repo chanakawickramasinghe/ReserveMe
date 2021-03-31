@@ -12,11 +12,7 @@
     <title>Restaurant Home</title>  
     <link href="../../images/logo.png" rel="shortcut icon"/> 
     <!-- Link the style sheets -->
-    <link rel="stylesheet" href="../../CSS/pre-order.css">
-    <link rel="stylesheet" href="../../CSS/main.css">
-    <link rel="stylesheet" href="../../CSS/nav.css">   
-    <link rel="stylesheet" href="../../CSS/footer.css">
-    <link rel="stylesheet" href="../../CSS/restaurant.css">
+   
     <link href="../../CSS/reviews.css" rel="stylesheet" type="text/css">
 	<link href="../../CSS/review.css" rel="stylesheet" type="text/css">
 
@@ -43,42 +39,14 @@
     </div>
     <!-- End of side bar -->
 
-    <div class="content">   
-        <center><h1 class="h1-for-test" style="color:#ffbb01;"><font color="black">Customer</font> Ratings</h1></center>   
-        <div class="content home">
-		<div class="reviews"></div>
-            
-			<script>
-				function getUrlVars() {
-					var vars = {};
-					var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-						vars[key] = value;
-					});
-					return vars;
-				}
+    <!--Start of iframe section-->
+    <section>
+	    <div >	
+	      <iframe src="review/index.php" id="iframeBox" name="iframeBox" class="iframeBox" height="500px" width="80%" title="Iframe Example" frameborder="0" marginwidth="0" marginheight="0" style="margin-left:250px"><div></iframe>
+	    </div>	
+	  </section>
+    <!--End of iframe section-->
 
-				var reviews_res_id = 4;
-				fetch("../customer/res_view/review/reviews.php?res_id=" + reviews_res_id).then(response => response.text()).then(data => {
-					document.querySelector(".reviews").innerHTML = data;
-					document.querySelector(".reviews .write_review_btn").onclick = event => {
-						event.preventDefault();
-						document.querySelector(".reviews .write_review").style.display = 'block';
-						document.querySelector(".reviews .write_review input[name='customer_name']").focus();
-					};
-				document.querySelector(".reviews .write_review form").onsubmit = event => {
-					event.preventDefault();
-					fetch("reviews.php?res_id=" + reviews_res_id, {
-						method: 'POST',
-						body: new FormData(document.querySelector(".reviews .write_review form"))
-					}).then(response => response.text()).then(data => {
-					document.querySelector(".reviews .write_review").innerHTML = data;
-				});
-				};
-				});
-			</script>
-		</div>
-
-    </div>  
 </body>
 
 </html>

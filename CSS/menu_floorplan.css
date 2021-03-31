@@ -27,7 +27,7 @@
 
 .thumbnail{
 	object-fit: cover;
-	max-width: 180px;
+	max-width: auto;
 	max-height: 100px;
 	cursor: pointer;
 	opacity: 0.5;

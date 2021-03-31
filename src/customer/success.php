@@ -11,15 +11,9 @@
     $reservation_date= $reservation_result['reservation_date'];
     $reservation_time= $reservation_result['reservation_time'];
     $advacefee= $reservation_result['advance_fee'];
+
 	checkSession();
     $userID = $_SESSION["userID"]; //session id
-    echo $userID;
-    echo $order_id;
-    echo $hall_id;
-    echo $capacity;
-    echo $reservation_date;
-    echo $reservation_time;
-    echo $advacefee;
     
     $reservation_insert_sql = "INSERT INTO hall_reservation(hall_id,customer_id,capacity,payment,reservation_date,reservation_time) 
     VALUES ('$hall_id','$userID','$capacity','$advacefee','$reservation_date','$reservation_time')";
@@ -37,6 +31,6 @@
     
      
 }
-// echo "order_id not set";
+
 ?>  
 

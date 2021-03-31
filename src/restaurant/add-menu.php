@@ -1,7 +1,5 @@
-<?php //include('add-menu-submit.php') ?>
-<?php include('res-session.php'); ?>
-<?php include('../../config/connection.php'); 
-include('../../public/includes/message.php');?>
+<?php include('../../config/connection.php') ?>
+<?php include('res-session.php') ?>
 
 <!DOCTYPE html>
 <html lang="en">

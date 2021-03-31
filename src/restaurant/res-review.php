@@ -46,8 +46,7 @@ include('../../public/includes/message.php');?>
     <!--Start of iframe section-->
     <section>
 	    <div >	
-        <!-- <?php include('review/index.php');?> -->
-	      <iframe src="review/index.php" id="iframeBox" name="iframeBox" class="iframeBox" height="auto" width="80%" title="Iframe Example" frameborder="0" marginwidth="0" marginheight="0" style="margin-left:250px"><div></iframe>
+	      <iframe src="review/index.php" id="iframeBox" name="iframeBox" class="iframeBox" height="800px" width="80%" title="Iframe Example" frameborder="0" marginwidth="0" marginheight="0" style="margin-left:250px"><div></iframe>
 	    </div>	
 	  </section>
     <!--End of iframe section-->

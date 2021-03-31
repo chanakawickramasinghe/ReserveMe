@@ -41,8 +41,8 @@
 
     <!--Start of iframe section-->
     <section>
-	    <div >	
-	      <iframe src="review/index.php" id="iframeBox" name="iframeBox" class="iframeBox" height="500px" width="80%" title="Iframe Example" frameborder="0" marginwidth="0" marginheight="0" style="margin-left:250px"><div></iframe>
+	    <div style="overflow-x: auto;">	
+	      <iframe scrolling="no" src="review/index.php" id="iframeBox" name="iframeBox" class="iframeBox" height="600px" width="100%" title="Iframe Example" frameborder="0" marginwidth="0" marginheight="0" style="margin-left:250px"><div></iframe>
 	    </div>	
 	  </section>
     <!--End of iframe section-->

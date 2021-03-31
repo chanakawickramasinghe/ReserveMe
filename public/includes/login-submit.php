@@ -39,13 +39,13 @@ if(isset($_POST['submit'])){
 
             $execute_querry = mysqli_query($connection, $log_customer_sql);
 
-            header( "Location:../../users/customer/customer-home.php" );  //  <----- need to change -->
+            header( "Location:../../src/customer/customer-home.php" );  //  <----- need to change -->
         }
         elseif ($active_status == 2){
-            header("../../users/customer/request-activate-account.php");
+            header("../../src/customer/request-activate-account.php");
         }
         else{
-            header("Location:../../users/customer/activate-account.php");  // <----- need to change -->
+            header("Location:../../src/customer/activate-account.php");  // <----- need to change -->
         }      
     }
     

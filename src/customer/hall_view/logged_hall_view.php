@@ -49,22 +49,23 @@
                   <p>Opening Hours: 8 a.m - 12 p.m</p>
                   <p>Capacity:  ". $rowProduct['capacity'] ."</p>
                   <p>Contact: ". $rowProduct['contact_no'] ."</p>
-                  <p>Advance: ". $rowProduct['advance_fee'] ." LKR</p>
+                  <p>Advance: ". $rowProduct['advance_fee'] ." LKR  NON-REFUNDABLE</p>
+                  <p>Total Payment: Depends on customer requirement. Please feel free to contact us</p> 
               </div><form>
               </section>
           <!--End of main-section-->
 
 
           <!--Start of Description section-->
-	<div class=\"description\">
-		<h1>Make the best memories with us</h1>
-        <p>". $rowProduct['description'] ."</p>
-	</div>   
-	<!--End of Description section--> 
+	        <div class=\"description\">
+		        <h1>Make the best memories with us</h1>
+            <p>". $rowProduct['description'] ."</p>
+	        </div>   
+	        <!--End of Description section--> 
 
-    <!--Start of Gallery section-->
-	<section clss=\"Gallerysection\">
-		<div class=\"gallery-container\">
+          <!--Start of Gallery section-->
+	        <section clss=\"Gallerysection\">
+		      <div class=\"gallery-container\">
             <div class=\"gallery\">
                 <figure class=\"gallery__item gallery__item--1\">
                     <img src=\"../../../public/images/halls/{$rowProduct['image1']}\" class=\"gallery__img\">
@@ -73,11 +74,9 @@
                     <img src=\"../../../public/images/halls/{$rowProduct['image2']}\" class=\"gallery__img\">
                 </figure>
               </div>
-        </div>
-	</section>        
-	<!--End of Gallery section-->
-    
-          
+          </div>
+	      </section>        
+	      <!--End of Gallery section-->
           ";
         }
       }
@@ -110,56 +109,47 @@
     <section class="reservation">
 		<!--Form-->
 		<div class="col1">
-            <h1>Check Availability</h1>
+      <h1>Check Availability</h1>
 			<hr>
 			<form method="POST">
-			    <div>
-                    <input type="date" class="dropbtn" id="date" name="date" min="<?php echo date("Y-m-d"); ?>" required>
+			  <div>
+          <input type="date" class="dropbtn" id="date" name="date" min="<?php echo date("Y-m-d"); ?>" required>
 
-                  <select class="dropbtn" name="time" id="time" required>
-                      <option value="">Time</option>
-                      <option value="Day">Day</option>
-                      <option value="Evening">Evening</option>
-                   </select>
-	          </div>
-                <br>
-                  <!-- <input type="time" name="time" > -->
-	                <input class="dropbtn" type="submit" id="submit" name="submit" value="Check" onclick="onClickOpenAvailTab()">
-        </form>
-		</div>
+          <select class="dropbtn" name="time" id="time" required>
+            <option value="">Time</option>
+            <option value="Day">Day</option>
+            <option value="Evening">Evening</option>
+          </select>
+	      </div>
+        <br>
+        <!-- <input type="time" name="time" > -->
+	      <input class="dropbtn" type="submit" id="submit" name="submit" value="Check" onclick="onClickOpenAvailTab()">
+      </form>
+	  </div>
 
 
-       <!--Available tables-->
+    <!--Available tables-->
 		<div class="col2" id="avail_tab">
         <h1>Availability</h1>
-      
-              <?php
+        <?php
+          if(isset($_POST['submit'])){
+            $time=$_POST['time'];
+            $date=$_POST['date'];
+            $hall_id=$_GET['hall_id'];
 
-                if(isset($_POST['submit'])){
-                  $time=$_POST['time'];
-                  $date=$_POST['date'];
-                  $hall_id=$_GET['hall_id'];
+            $sql_select_table= "SELECT * FROM hall_reservation WHERE hall_id = '$hall_id' AND reservation_date = '$date' AND reservation_time = '$time'";
+            $result=($connection->query($sql_select_table));
+            $no_rows = mysqli_num_rows($result);
 
-                $sql_select_table= "SELECT * FROM hall_reservation WHERE hall_id = '$hall_id' AND reservation_date = '$date' AND reservation_time = '$time'";
-                $result=($connection->query($sql_select_table));
-                $no_rows = mysqli_num_rows($result);
-
-                if($no_rows==1){
-                    echo "Sorry! Already Booked";
-                } else {
-                  echo "Available
-                  <input type=\"button\" class=\"dropbtn\"  id=\"reserve\" name=\"reserve\" value=\"Reserve\" onclick=\"location.href='temp_hall_reservation.php?hall_id=$hall_id&reservation_date=$date&reservation_time=$time';\" >";
-                }
-              }
-              
-              ?>         
-            
-        
-        
-
-            
-	    </div>
-
+            if($no_rows==1){
+              echo "Sorry! Already Booked";
+            }else {
+              echo "Available
+              <input type=\"button\" class=\"dropbtn\"  id=\"reserve\" name=\"reserve\" value=\"Reserve\" onclick=\"location.href='temp_hall_reservation.php?hall_id=$hall_id&reservation_date=$date&reservation_time=$time';\" >";
+            }
+          }
+        ?>         
+      </div>
     </section>
     <!--End of form section-->
 

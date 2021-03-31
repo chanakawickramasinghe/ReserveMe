@@ -15,7 +15,7 @@
     <body>
 		<!--Start of nav-->
 		<div class="topnav" id="myTopnav">
-			<img class = "logo" src="../../public/images/logo.png">
+            <a href="../../index.php"><img class = "logo" src="../../public/images/logo.png"></a>
 			<a class="navtab" href="../../index.php">Logout</a>
 			<a class="navtab active" href="customer-profile.php">Profile</a>
 			<a class="navtab" href="reservation_details.php">Reservations</a>
@@ -66,8 +66,8 @@
         <!-- edit details button -->
         <div class="btn-header">
             <form>
-                    <button name="edit" class="btn" type="button" onclick="window.location.href='customer-profile-edit.php'">Edit Details</button>
-                    <button name="deactivate" class="btn" type="button" onclick="window.location.href='customer-confirm-deactivate.php'">Deactivate Account</button>
+                    <button name="edit" class="hero-button" type="button" onclick="window.location.href='customer-profile-edit.php'">Edit Details</button>
+                    <button name="deactivate" class="hero-button" type="button" onclick="window.location.href='customer-confirm-deactivate.php'">Deactivate Account</button>
             </form>
         </div>
         <!--Include footer.php-->

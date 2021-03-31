@@ -1,50 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReserveMe</title>
-    <!--web-icon-->
-    <link href="../../images/logo.png" rel="shortcut icon"/>
-    <!--fontawesome-------------------->
-    <script src="https://kit.fontawesome.com/20026fc328.js" crossorigin="anonymous"></script>
-    <!--stylesheet-------------------->
-	<link rel="stylesheet" type="text/css" href="../../CSS/nav.css">
-    <link rel="stylesheet" href="../../CSS/footer.css">   
-    <link rel="stylesheet" href="../../CSS/preorder.css">
-</head>
+<?php
+    include('../../config/connection.php');
+    include('../../public/includes/session.php');
 
-<body>
-    <!--Start of nav-->
-    <div class="topnav" id="myTopnav">
-        <a href="customer-home.php"><img class = "logo" src="../../images/logo.png"></a>
-		<a class="navtab" href="../../index.php">Logout</a>
-		<a class="navtab" href="customer-profile.php">Profile</a>
-		<a class="navtab" href="reservation_details.php">Reservations</a>
-		<a class="navtab" href="../../includes/logged_contact.php">Contact</a>
-		<a class="navtab" href="../../includes/logged_about.php">About</a>
-		<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
-	</div>
-    <!--End of nav-->
-    
-    <!--Start of Ongoing Card Section-->
-        <div class="title_text" style="text-align:center">
-            <h3>Reservation successfull!</h3>
-            <img class="success-img" src= "../../images/success.png">
-        </div>
-    <!--End of Ongoing Card Section-->
-    <?php
-include('../../includes/connection.php');
-include('../../includes/session.php');
-if(isset($_GET['order_id'])){
+    if(isset($_GET['order_id'])){
     $order_id = $_GET['order_id'];
-    $reservation_sql = "SELECT * from temp_hall_reservation WHERE temp_reservation_id = '$order_id' ";
+    $reservation_sql = "SELECT * from temp_hall_reservation WHERE temp_reservation_id = $order_id ";
     $reservation_result  = mysqli_fetch_assoc(mysqli_query($connection,$reservation_sql));
+    $hall_id = $reservation_result['hall_id'];
+    $capacity = $reservation_result['capacity'];
+    $reservation_date= $reservation_result['reservation_date'];
+    $reservation_time= $reservation_result['reservation_time'];
+    $advacefee= $reservation_result['advance_fee'];
 	checkSession();
     $userID = $_SESSION["userID"]; //session id
+    echo $userID;
+    echo $order_id;
+    echo $hall_id;
+    echo $capacity;
+    echo $reservation_date;
+    echo $reservation_time;
+    echo $advacefee;
     
-    $reservation_insert_sql = "INSERT INTO hall_reservation(hall_id,customer_id,capacity,reservation_date,reservation_time,advance_fee,status_code) 
-    VALUES ('". $reservation_result['hall_id'] ."','$userID','". $reservation_result['capacity'] ."','". $reservation_result['reservation_date'] ."','". $reservation_result['reservation_time'] ."','". $reservation_result['advance_fee'] ."','1')";
+    $reservation_insert_sql = "INSERT INTO hall_reservation(hall_id,customer_id,capacity,payment,reservation_date,reservation_time) 
+    VALUES ('$hall_id','$userID','$capacity','$advacefee','$reservation_date','$reservation_time')";
 
 
     if (mysqli_query($connection,$reservation_insert_sql) == TRUE) {
@@ -53,14 +31,12 @@ if(isset($_GET['order_id'])){
 
 
     }else{
-            //need to show error message
+            echo "Page error";//need to show error message
         }
+    header('Location:reservation_details.php');
+    
      
 }
+// echo "order_id not set";
 ?>  
-    <!--Include footer.php-->
-    <div><?php include "../../includes/footer.php" ?></div>
-    <!--script for onClickNav() for the navigation menu-->
-    <script src="../../js/onClickNav.js"></script>
-</body>
-</html>
+

@@ -56,6 +56,7 @@
     </div>
     
     <div class="footer"> <?php include('../../public/includes/footer.php'); ?> </div>
+    
     <!--script for onClickNav() for the navigation menu-->
     <script src="../../public/js/onClickNav.js"></script>
 

@@ -79,6 +79,7 @@ include('../../../public/includes/session.php');
                     <th>Advance Payment</th>
                     <td>". $rowProduct['advance_fee'] ." LKR</td>
                 </tr>
+                <tr>
                 <tr></tr>
                 <tr>
                     <th></th>

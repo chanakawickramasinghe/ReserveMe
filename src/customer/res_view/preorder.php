@@ -111,7 +111,7 @@
             $cart_total=0;
             $search_menu = "SELECT menu.item_name, menu.item_price, cart.quantity, cart.cart_id, (menu.item_price*cart.quantity) as sub_total
             FROM cart
-            INNER JOIN menu ON cart.item_id=menu.item_id;";
+            INNER JOIN menu ON cart.item_id=menu.item_id WHERE cus_id=$user_id";
             $result_menu = mysqli_query($connection,$search_menu);
             while($row = mysqli_fetch_assoc($result_menu)){
                 $cart_id = $row['cart_id'];

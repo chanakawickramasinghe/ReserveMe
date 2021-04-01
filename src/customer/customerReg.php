@@ -33,7 +33,7 @@
                     <img src="../../public/images/form_icons/vector-users.png" alt="usericon" class="userIcon">
                     <h1 style="display: inline-block;color:green">Register Here...!</h1>
 
-                    <h2 class="error-msg"><?php include_once('../../includes/message.php'); ?></h2>
+                    <h2 class="error-msg"><?php include_once('../../public/includes/message.php'); ?></h2>
 
                 <form action="register-submit.php" method="post"> 
 

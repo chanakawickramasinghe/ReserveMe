@@ -64,7 +64,7 @@
                 echo"
                 <tr> 
                     <td>".$row['promo_id']."</td> 
-                    <td><img class=\"img-promo\" src= \"../../images/promos/{$row['image']}\"></td>                     
+                    <td><img class=\"img-promo\" src= \"../../public/images/promos/{$row['image']}\"></td>                     
                     <td>".$row['start_date']."</td>
                     <td>".$row['end_date']."</td>
                     <td>".$row['text']."</td>

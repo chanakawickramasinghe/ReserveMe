@@ -24,6 +24,9 @@
         $getCart_sql = "SELECT * from cart WHERE cus_id = $cus_id";
         $reservation_result = ($connection->query($getCart_sql));
 
+        $sql_for_cus_act= "INSERT INTO cus_activity(cus_id, reservation_id, reservation_type, activity) VALUES ('$cus_id',' $sql_get_reservation_id','table','Booked Table $table_id For $guests2')";
+        $result_cus_activity = ($connection->query($sql_for_cus_act));
+
         while($row=$reservation_result->fetch_assoc()){
             $item_id= $row['item_id'];
             $quantity = $row['quantity'];

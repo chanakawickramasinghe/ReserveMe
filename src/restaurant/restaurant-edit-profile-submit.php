@@ -1,6 +1,6 @@
-<?php include('../../includes/session.php'); ?>
-<?php include('../../includes/connection.php'); 
-include('../../includes/message.php');?>
+<?php include('../../public/includes/session.php'); ?>
+<?php include('../../config/connection.php'); 
+include('../../public/includes/message.php');?>
 
 <?php
 

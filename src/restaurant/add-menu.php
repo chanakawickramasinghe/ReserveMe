@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="../../public/CSS/main.css">
     <link rel="stylesheet" href="../../public/CSS/nav.css">   
     <link rel="stylesheet" href="../../public/CSS/footer.css">
+    <link rel="stylesheet" href="../../public/CSS/employee.css">
+
 
     <style>
         th:nth-of-type(5),td:nth-of-type(5) {

@@ -13,8 +13,9 @@ include('../../public/includes/message.php');?>
     <!-- Link the style sheets -->
     <link rel="stylesheet" href="../../public/CSS/pre-order.css">
     <link rel="stylesheet" href="../../public/CSS/main.css">
-    <link rel="stylesheet" href="../../public/CSS/nav.css">   
-    <link rel="stylesheet" href="../../public/CSS/footer.css">
+    <link rel="stylesheet" href="../../public/CSS/add-hall.css">
+     <link rel="stylesheet" href="../../public/CSS/nav.css"> 
+    
     
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/70a642cd7c.js"></script>
  
@@ -116,15 +117,23 @@ include('../../public/includes/message.php');?>
             echo"
             <br>
             <center>
+            <form action=\"\" method=\"POST\">
             <div class=\"btn-center\">
-                <button class=\"btn-emp-edit\" type=\"button\">Edit Details</button>
+                <input type=\"submit\" name=\"emp\" class=\"btn-emp-edit\" value=\"Remove\">
             </div>
+            <form>
             </center>";
             
         }
     }
 
+    if(isset($_POST['emp'])){
+        $sql_dlt_emp = "DELETE FROM employee";
+        $result=($connection->query($sql_dlt_emp));
+    }
+
     ?>
+
 
 </div>
 

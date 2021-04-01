@@ -52,8 +52,8 @@
 
         <table class="user" id="myTable" border="1">
             <tr>
-                <th>Date</th>
-                <th>Time</th>
+                <th>Date & Time</th>
+                <!-- <th>Time</th> -->
                 <th>Activity</th>
                 <th>Reservation Type</th>
                 <th>Reservation Id</th>
@@ -64,7 +64,7 @@
         
         <?php
         
-        $activity_sql = "SELECT cus_activity.act_date, cus_activity.act_time, cus_activity.activity, cus_activity.reservation_type, cus_activity.reservation_id,
+        $activity_sql = "SELECT cus_activity.act_date_time, cus_activity.activity, cus_activity.reservation_type, cus_activity.reservation_id,
         reservation.no_of_guests, reservation.date, reservation.time
         FROM cus_activity INNER JOIN reservation ON cus_activity.reservation_id=reservation.reservation_id WHERE cus_activity.cus_id='$cus_id';";
 
@@ -73,8 +73,7 @@
         
             echo "
                 <tr>                  
-                    <td>".$row['act_date']."</td>
-                    <td>".$row['act_time']."</td>
+                    <td>".$row['act_date_time']."</td>
                     <td>".$row['activity']."</td>
                     <td>".$row['reservation_type']."</td>
                     <td>".$row['reservation_id']."</td>

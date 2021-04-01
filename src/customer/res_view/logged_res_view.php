@@ -43,7 +43,7 @@
           $preorder_available=$rowProduct['preorder_available'];
           echo"<section class=\"main\">
                 <div class=\"m-img\">       
-                  <img src= \"../../../public/images/restaurant/{$rowProduct['res_image']}\">
+                  <img src= \"../../../public/images/{$rowProduct['res_image']}\">
                 </div>
                 <div class=\"m-text\">
                   <p><i class=\"fas fa-map-marker-alt\"> ". $rowProduct['res_add_line1'] ."". $rowProduct['res_add_line2'] ." ". $rowProduct['city'] ."</i></p>

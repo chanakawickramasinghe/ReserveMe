@@ -17,6 +17,12 @@
     
     $reservation_insert_sql = "INSERT INTO hall_reservation(hall_id,customer_id,capacity,payment,reservation_date,reservation_time) 
     VALUES ('$hall_id','$userID','$capacity','$advacefee','$reservation_date','$reservation_time')";
+    
+    $sql_get_reservation_id=mysqli_insert_id($connection);
+
+    $sql_for_cus_act= "INSERT INTO cus_activity(cus_id, reservation_id, reservation_type, activity) VALUES ('$userID','$sql_get_reservation_id','Hall','Booked Hall $hall_id For $capacity')";
+    $result_cus_activity = ($connection->query($sql_for_cus_act));
+
 
 
     if (mysqli_query($connection,$reservation_insert_sql) == TRUE) {

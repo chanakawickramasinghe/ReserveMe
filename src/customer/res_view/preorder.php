@@ -148,7 +148,7 @@
 
         <div class="hidden">
             <input type="hidden" name="merchant_id" value="1215949">    <!-- Replace your Merchant ID -->
-            <input type="hidden" name="return_url" value="http://localhost/ReserveMe/users/customer/res_view/reserve-payment-confirmation.php">
+            <input type="hidden" name="return_url" value="http://localhost/ReserveMe/src/customer/res_view/reserve-payment-confirmation.php">
             <input type="hidden" name="cancel_url" value="preorder.php">
             <input type="hidden" name="notify_url" value="info.reserve.lk@gmail.com">  
             <br><br><br>

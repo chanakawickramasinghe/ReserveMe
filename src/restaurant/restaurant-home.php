@@ -60,7 +60,7 @@
                 $row = mysqli_fetch_assoc($res_query);
                 echo"
                 <br><br/>
-                <img class=\"img-res-home\" src= \"../../images/restaurant/{$row['res_image']}\" style=\"float:right\">
+                <img class=\"img-res-home\" src= \"../../images/{$row['res_image']}\" style=\"float:right\">
                 
                 <table class=\"res-home-tbl\">
                 <tr>
@@ -97,7 +97,7 @@
             }
             ?>
                 <br/>
-                <center><h3><?php include_once('../../includes/message.php'); ?></h3></center>
+                <center><h3><?php include_once('../../public/includes/message.php'); ?></h3></center>
                 
             </div>
   </div>  

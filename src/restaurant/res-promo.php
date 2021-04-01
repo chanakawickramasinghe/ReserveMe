@@ -25,7 +25,6 @@ include('../../public/includes/message.php');?>
       <a href="restaurant-home.php">Home</a>     
       <a href="add-menu.php">Update Menu</a>
       <a href="res-promo.php"  class="active">Promotions</a>
-      <a href="res-floor-plan.php">Floor Plan</a> 
       <a href="res-reservation.php">Table Reservations</a>
       <a href="hall-reservation.php">Hall Reservations</a>
       <a href="res-review.php">View Reviews</a>      
@@ -79,7 +78,7 @@ include('../../public/includes/message.php');?>
             echo"
             <tr> 
                 <td>".$row['promo_id']."</td> 
-                <td><img class=\"img-promo\" src= \"../../images/promos/{$row['image']}\" alt=\"image not found\"></td>                     
+                <td><img class=\"img-promo\" src= \"../../public/images/promos/{$row['image']}\" alt=\"image not found\"></td>                     
                 <td>".$row['start_date']."</td>
                 <td>".$row['end_date']."</td>
                 <td>".$row['text']."</td>

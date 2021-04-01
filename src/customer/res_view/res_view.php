@@ -37,7 +37,7 @@
           $preorder_available=$rowProduct['preorder_available'];
           echo"<section class=\"main\">
                 <div class=\"m-img\">       
-                  <img src= \"../../../public/images/restaurant/{$rowProduct['res_image']}\">
+                  <img src= \"../../../public/images/{$rowProduct['res_image']}\">
                 </div>
                 <div class=\"m-text\">
                   <p><i class=\"fas fa-map-marker-alt\"> ". $rowProduct['res_add_line1'] ."". $rowProduct['res_add_line2'] ." ". $rowProduct['city'] ."</i></p>
@@ -111,22 +111,26 @@
 
                   <select class="dropbtn" name="time" id="time" required>
                   <option value="">Time</option>
-                      <?php $setTime = time() + (3.5 * 60 * 60);
-                          $currTime = date("h:i",$setTime);
-                          $currhr = date("H",$setTime);
-                          $currDate =date("Y-m-d");
-                          ?>
-                      <?php
+                      <?php 
                         $x=8;                       
-                        while($x<=22){
-                            if($x>$currhr && $x>12){                      
-                              echo "<option value=\"$x\">$x:00 pm</option>";
-                            } elseif($x>$currhr && $x<12) {
-                              echo "<option value=\"$x\">$x:00 am</option>";
-                            }
+                        while($x<=22){                    
+                            echo "<option value=\"$x:00\">$x:00 pm</option>";
+                            $x=$x+2;
+                          }
+                        //   $setTime = time() + (3.5 * 60 * 60);
+                        //   $currTime = date("h:i",$setTime);
+                        //   $currhr = date("H",$setTime);
+                        //   $currDate =date("Y-m-d");
+                        // $x=8;                       
+                        // while($x<=22){
+                        //     if($x>$currhr && $x>12){                      
+                        //       echo "<option value=\"$x\">$x:00 pm</option>";
+                        //     } elseif($x>$currhr && $x<12) {
+                        //       echo "<option value=\"$x\">$x:00 am</option>";
+                        //     }
              
-                          $x=$x+2;
-                        }
+                        //   $x=$x+2;
+                        // }
                       
                       ?>
                   </select>
@@ -187,7 +191,7 @@
               }
 
               ?>         
-              
+
         <input type="hidden" name="cus_id" value="<?php echo $cus_id;?>" required>
         <input type="hidden" name="guests2" value="<?php echo $guests;?>" required>
         <input type="hidden" name="date2" value="<?php echo $date;?>" required>

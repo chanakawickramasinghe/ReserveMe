@@ -37,73 +37,71 @@
 <div class="content">
 
     <h1>Pre Orders-<span style="color:orange"> Menu </span> </h1>
-
-    <div style="padding:5vw;padding-top:1vw">
-    <div class="contentbox">
-    <table width="100%">
+    <div class="employee-container">
+    <table class="res-table">
         <tr>
-            <th width=".8vw">Reservation id.</th>
             <th>Name</th>
-            <th>Email</th>
-            <th>Date & Time</th>
+            <th>Date </th>
+            <th>Time</th> 
             <th>Mobile No</th>
-            <th>Meal</th>
-            <th>Menus</th>
-            <th>Accept</th>
-            <th>Reject</th>
+            <th>Table Id</th>
+            <th>Members</th>
+            <th>Menues</th>
         </tr>
-        <tr><td colspan="9"><hr></td></tr>
+        
+        <?php
 
-        <tr><td>01.</td>
-            <td >Chanaka</td>
-            <td>chanaka@gmail.com</td>
-            <td>2020-12-03 05:30</td>
-            <td>+94775623845</td>
-            <td>Breakfast</td>
-            <td>Kottu  -   2 <br>
-                Fried rice  -  1 <br>
-                Chicken Devel  -  1
-            </td>
-            <td><input type="button" value="Ok" class="hero-button" name="submit" href=""></td>
-            <td><input type="button" value="Reject" class="hero-button" name="submit" href=""></td>
-        </tr>
-        <tr><td colspan="9"><hr></td></tr>
+                $sql2 = "SELECT menu_reservation.* FROM menu_reservation INNER JOIN reservation
+                ON reservation.reservation_id = menu_reservation.reservation_id" ;
 
-        <tr><td>02.</td>
-            <td >Aamir</td>
-            <td>aamirali@gmail.com</td>
-            <td>2020-11-02 08:25</td>
-            <td>+94768921288</td>
-            <td>Lunch</td>
-            <td>Chicken -   2 <br>
-                Noodles  -  1 <br>
-                Beef Soup  -  1
-            </td>
-            <td><input type="button" value="Ok" class="hero-button" name="submit" href=""></td>
-            <td><input type="button" value="Reject" class="hero-button" name="submit" href=""></td>
-        </tr>
-        <tr><td colspan="9"><hr></td></tr>
+                
+                $sql_query2 = mysqli_query($connection,$sql2);
+                while($row2 = mysqli_fetch_assoc($sql_query2)){
+                    $menu_res_id= $row2['menu_res_id'];
+                    $reservation_id= $row2['reservation_id'];
 
-        <tr><td>03.</td>
-            <td >Nuwan</td>
-            <td>nuwan@gamail.com</td>
-            <td>2020-11-06 12:15</td>
-            <td>+9475452356</td>
-            <td>Dinner</td>
-            <td>Chiken burger  -   2 <br>
-                Naugets -  1 <br>
-                Nan Rotty  -  1
-            </td>
-            <td><input type="button" value="Ok" class="hero-button" name="submit" href=""></td>
-            <td><input type="button" value="Reject" class="hero-button" name="submit" href=""></td>
-        </tr>
-        <tr><td colspan="9"><hr></td></tr>
-      
+                    $sql = "SELECT reservation.* , customer.user_name, customer.contact_no FROM reservation INNER JOIN customer
+                    ON reservation.cus_id = customer.user_id WHERE reservation_id= $reservation_id order by date " ;
+            
+                    $sql_query = mysqli_query($connection,$sql);
+                    while($row = mysqli_fetch_assoc($sql_query)){
+                        $date = $row['date'];
+                        if($date>= date("Y-m-d")){                
+                                    echo "
+                                        <tr>             
+                                            <td>".$row['user_name']."</td>
+                                            <td>".$row['date']."</td>
+                                            <td>".$row['time']."</td>
+                                            <td>".$row['contact_no']."</td>
+                                            <td>".$row['table_id']."</td>
+                                            <td>".$row['no_of_guests']."</td>
+                                            <td>";
+                                            $sql_menu ="SELECT temp_pre_menus.* , menu.item_name FROM temp_pre_menus INNER JOIN menu
+                                            ON temp_pre_menus.item_id = menu.item_id WHERE menu_res_id= $menu_res_id";
+                                            $sql_get_menu = mysqli_query($connection,$sql_menu);
+                                            while($row3 = mysqli_fetch_assoc($sql_get_menu)){
+                                                echo $row3['item_name']."-";
+                                                echo $row3['quantity']."<br>";
+                                            }
 
+                                    echo "
+                                            </td>
+                                        </tr>";
+    
+    
+                        }                    
+                    } 
+
+
+                }
+
+
+
+                
+                ?>
     </table>
+    </div>
 
-    </div>
-    </div>
 </div>
 
 <div class="footer"> <?php include('../../public/includes/footer.php'); ?> </div>

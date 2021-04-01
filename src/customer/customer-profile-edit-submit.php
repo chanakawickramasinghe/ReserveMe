@@ -4,14 +4,14 @@ include('../../config/connection.php');
 
 $id= $_POST['EditID'];
 $newName = $_POST['EditName'];
+$newFirstName = $_POST['EditFirstName'];
+$newLastName = $_POST['EditLastName'];
 $newEmail = $_POST['EditEmail'];
 $newPassword = md5($_POST['EditPassword']);
 $newPassword2 = md5($_POST['EditPassword2']);
 $newContact = $_POST['EditContact'];
 $newDOB = $_POST['EditDOB'];
-$newPNo = $_POST['EditPostalNumber'];
-$newStreet = $_POST['EditStreet'];
-$newCity = $_POST['EditCity'];
+$fullname = $newFirstName." ".$newLastName;
 
      if ($newPassword != $newPassword2){
         $message = base64_encode(urlencode("Passwords Do Not Match"));
@@ -19,7 +19,7 @@ $newCity = $_POST['EditCity'];
         exit();
     }
     else{
-        $EditQuery= "UPDATE customer SET user_name = '$newName', email ='$newEmail', password = '$newPassword', contact_no = '$newContact', dob ='$newDOB', postal_number = '$newPNo', street = '$newStreet', city = '$newCity' WHERE user_id = '$id' ";
+        $EditQuery= "UPDATE customer SET user_name = '$fullname', first_name ='$newFirstName', last_name ='$newLastName', email ='$newEmail', password = '$newPassword', contact_no = '$newContact', dob ='$newDOB' WHERE user_id = '$id' ";
         
         if (mysqli_query($connection,$EditQuery) === TRUE) {
                 $_SESSION["name"] = $newName;

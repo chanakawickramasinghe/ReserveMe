@@ -94,7 +94,7 @@
                 
                                  
                                     <input type=\"hidden\" value=" .$row['user_id']. " name=\"EditID\">  
-                                    <button type=\"submit\" name=\"btn-Update\" class=\"btn\" required > Update Details </button>
+                                    <button type=\"submit\" name=\"btn-Update\" class=\"hero-button\" required > Update Details </button>
                                 </center>
                                 
                             </form>

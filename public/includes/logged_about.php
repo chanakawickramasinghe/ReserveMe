@@ -44,10 +44,10 @@
 			<!--heading-->
 			<h3>Who we are?</h3>
 			<!--details-->
-			<p>ReserveMe is one of the most atractive five-star hotel situated in Kandy, the last kingdom of Sri Lanka.<br>
+			<p style="color:#181616">ReserveMe is one of the most atractive five-star hotel situated in Kandy, the last kingdom of Sri Lanka.<br>
             It is one of the main hotels situated in the heart of Kandy which has been very famous amoung the turists as well. Also it is one of the restaurants which provides the service of online reserving tables and halls though it's web based system.</p>
 			<br>
-            <p>This is a service providing platform which serves the customers and the interested parties by giving the opportunity of reserving the tables, reserving halls for their occassions and also preordering food if they are willing to order food before arriving the retaurant. Which will avoid wasting time searching for a table and of avoiding the unpleasent times faced by the customer.</p>
+            <p style="color:#181616">This is a service providing platform which serves the customers and the interested parties by giving the opportunity of reserving the tables, reserving halls for their occassions and also preordering food if they are willing to order food before arriving the retaurant. Which will avoid wasting time searching for a table and of avoiding the unpleasent times faced by the customer.</p>
 		</div>
 		</section>
 	<!--End of Hall reservation-->    
@@ -116,7 +116,7 @@
 		<div class="discription">
 			<!--heading-->
 			<h3>Kitchen Experts</h3>
-			<p>Enlight your special occasion by finding the best place. You can now search and find the best venue to your weddings, birthday parties and more occasion. We provide you the facility to book it before others.</p>
+			<p style="color:#181616">Enlight your special occasion by finding the best place. You can now search and find the best venue to your weddings, birthday parties and more occasion. We provide you the facility to book it before others.</p>
 		</div>
 		<div class="image">
 			<img src="../images/chef1.jpg" />

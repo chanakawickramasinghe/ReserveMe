@@ -28,8 +28,7 @@ include('../../public/includes/message.php');?>
    <div class="sidebar"> 
       <a href="restaurant-home.php">Home</a>     
       <a href="add-menu.php">Update Menu</a>
-      <a href="res-promo.php">Promotions</a>
-      <a href="res-floor-plan.php">Floor Plan</a> 
+      <a href="res-promo.php">Promotions</a> 
       <a href="res-reservation.php">Table Reservations</a>
       <a href="hall-reservation.php">Hall Reservations</a>
       <a href="res-review.php">View Reviews</a>     

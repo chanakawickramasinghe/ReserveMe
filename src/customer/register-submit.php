@@ -5,8 +5,7 @@ include('../../config/connection.php');
 if(isset($_POST['submit'])){
 	
     // Assign input data from form to variables
-	$name = $_POST['name'];
-    $firstname = $_POST['firstname'];
+	$firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
 	$email = $_POST['email'];
     $password = md5($_POST['password']);

@@ -24,11 +24,9 @@
 				<a href="#"><i class="fa fa-youtube"></i></a>
 			</div>
 			<p class="footer-links">
-				<a href="../../index.php">Home</a>
+				<a onclick="openNewPrivacy()" href="">Privacy Policy</a>
 				|
-				<a href="privacy_policy.php">Privacy Policy</a>
-				|
-				<a href="t&c.php">T & C</a>
+				<a onclick="openNewTC()" href="">T & C</a>
 			</p>
 		</div>
 		<!--End of footer left-->
@@ -49,6 +47,17 @@
 			<p class="footer-company-about"><span>About</span>We offer amazing user experience through digitalization of reservation. <br>Place your Reservation at your fingertip</p>
 			<br>
 			<p class="footer-company-name">© 2020 | ReserveMe.lk</p>
+			
+
+<script>
+function openNewPrivacy() {
+  window.open("/ReserveMe/public/includes/Privacy.php");
+}
+function openNewTC() {
+  window.open("/ReserveMe/public/includes/TermsAndConditions.php");
+}
+</script>
+
 		</div>
 		<!--Start of footer center-->
 	</footer>

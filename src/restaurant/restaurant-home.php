@@ -28,7 +28,7 @@
       <a href="restaurant-home.php" class="active">Home</a>     
       <a href="add-menu.php">Update Menu</a>
       <a href="res-promo.php">Promotions</a>
-      <a href="res-floor-plan.php">Floor Plan</a> 
+      <!-- <a href="res-floor-plan.php">Floor Plan</a>  -->
       <a href="res-reservation.php">Table Reservations</a>
       <a href="hall-reservation.php">Hall Reservations</a>
       <a href="res-review.php">View Reviews</a>   
@@ -60,7 +60,7 @@
                 $row = mysqli_fetch_assoc($res_query);
                 echo"
                 <br><br/>
-                <img class=\"img-res-home\" src= \"../../images/{$row['res_image']}\" style=\"float:right\">
+                <img class=\"img-res-home\" src= \"../../public/images/{$row['res_image']}\" style=\"float:right\">
                 
                 <table class=\"res-home-tbl\">
                 <tr>

@@ -32,6 +32,7 @@
      
 
     <!--Start of HAll Section-->
+    <br><br><br>
     <?php 
         $retrieveProduct = "SELECT * FROM `reception_hall`";
             $resultProduct = mysqli_query($connection, $retrieveProduct);

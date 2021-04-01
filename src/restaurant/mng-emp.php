@@ -1,6 +1,6 @@
 <?php include('res-session.php'); ?>
-<?php include('../../config/connection.php'); 
-include('../../public/includes/message.php');?>
+<?php include('../../config/connection.php'); ?>
+
 
 <html>  
 <head>
@@ -91,6 +91,8 @@ include('../../public/includes/message.php');?>
             echo "
             <h1><font color=\"black\">Manage</font> Employee</h1>
             <h3>You have added an Employee and you can edit details.</h3>";
+
+            echo "<p class=\"error-msg\">"; include_once('../../public/includes/message.php'); echo "</p>";
             
             while($row = mysqli_fetch_assoc($emp_query)){
 
@@ -123,6 +125,7 @@ include('../../public/includes/message.php');?>
             </div>
             <form>
             </center>";
+
             
         }
     }

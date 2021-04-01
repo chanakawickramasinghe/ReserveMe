@@ -22,7 +22,7 @@
 	<section class="main">
 		<!--Start of nav-->
 		<div class="topnav" id="myTopnav">
-			<img class = "logo" src="images/logo.png">
+			<img class = "logo" src="public/images/logo.png">
 			<a class="navtab" href="src/customer/customerReg.php">Register</a>
 			<a class="navtab" href="public/includes/login.php">Login</a>
 			<a class="navtab" href="public/includes/contact.php">Contact</a>

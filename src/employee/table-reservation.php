@@ -50,7 +50,7 @@
         
         <?php
                 $sql = "SELECT reservation.* , customer.user_name, customer.contact_no FROM reservation INNER JOIN customer
-                ON reservation.cus_id = customer.user_id" ;
+                ON reservation.cus_id = customer.user_id ORDER BY date" ;
         
                 $sql_query = mysqli_query($connection,$sql);
                 while($row = mysqli_fetch_assoc($sql_query)){

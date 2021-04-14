@@ -27,7 +27,7 @@
 		<a class="navtab" href="javascript:void(0);" id="icon" onclick="onClickNav()"><i class="fa fa-bars"></i></a>
     </div>
     <!--End of nav-->
-
+    <br><br><br>
 	<!--Start of Header
     <header class="header">
         <div class="search">
